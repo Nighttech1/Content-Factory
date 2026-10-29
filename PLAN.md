@@ -13,8 +13,8 @@
 - [x] Создать `ACTIVE_PROJECT` = `vernatun`
 - [x] Написать `ARCHITECTURE.md`
 - [x] Написать `PLAN.md` (этот файл)
-- [ ] Написать корневой `CLAUDE.md` (общие правила)
-- [ ] Починить доступ к GitHub и сделать первый `push`
+- [x] Написать корневой `CLAUDE.md` (общие правила)
+- [x] Починить доступ к GitHub и сделать первый `push`
 
 **✅ Критерий прохождения:** репозиторий запушен в GitHub; структура и 4 базовых файла (`ARCHITECTURE.md`, `PLAN.md`, `CLAUDE.md`, `ACTIVE_PROJECT`) видны на `github.com/Alkarahanyan/Content-Factory` и открываются с телефона.
 
