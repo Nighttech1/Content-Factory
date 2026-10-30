@@ -9,6 +9,8 @@ import { KpiCardsRow } from "@/components/analytics/KpiCardsRow";
 import { OutliersVault } from "@/components/analytics/OutliersVault";
 import { ScoutSection } from "@/components/analytics/ScoutSection";
 import { TelemetryMatrix } from "@/components/analytics/TelemetryMatrix";
+import { InsightsFeed } from "@/components/analytics/InsightsFeed";
+import { PublishedPostsTable } from "@/components/analytics/PublishedPostsTable";
 import { findStudioModule } from "@/components/studio/modules";
 import { getSelfLearningDashboard } from "@/lib/analytics/self-learning-mock";
 import { useStudioStore } from "@/lib/studio-store";
@@ -45,7 +47,20 @@ type AnalyticsShellProps = {
 export function AnalyticsShell({ initialModuleId }: AnalyticsShellProps = {}) {
   const reduceMotion = useReducedMotion();
   const dashboard = useMemo(() => getSelfLearningDashboard(), []);
-  const kpis = useMemo(() => mergeKpis(dashboard.kpis), [dashboard.kpis]);
+  // KPI №1 Вернатуна — люди на живых встречах (воронка). Значение приходит из
+  // ingest воронки (клики бот/регистрация, заходы /campus); до подключения — «—».
+  const kpis = useMemo(() => {
+    const funnel: TopKpiMetric = {
+      id: "meetings-funnel",
+      label: "Люди на встречах",
+      value: "—",
+      delta: "",
+      isPositive: true,
+      subtext: "KPI №1 · воронка (ждёт данных)",
+      accentColor: "cyan",
+    };
+    return [funnel, ...mergeKpis(dashboard.kpis)];
+  }, [dashboard.kpis]);
   const [contentTypeId, setContentTypeId] = useState("all");
   const [platformId, setPlatformId] = useState("all");
   const [view, setView] = useState<AnalyticsView>(
@@ -141,6 +156,16 @@ export function AnalyticsShell({ initialModuleId }: AnalyticsShellProps = {}) {
             rlFeed={dashboard.rlFeed}
           />
           <TelemetryMatrix telemetry={dashboard.telemetry} />
+
+          {/* C-A1 — реальный путь данных на экране: ingest → API → store.
+              Показывает живые данные при наличии ключей/ингеста, иначе seed-fallback. */}
+          <div className="flex flex-col gap-2">
+            <p className="font-[family-name:var(--font-mono-jb)] text-[11px] uppercase tracking-wider text-[var(--accent-gold)]">
+              Реальные данные (API) · источник помечен в блоке · seed-демо пока нет ключей/ингеста
+            </p>
+            <InsightsFeed />
+          </div>
+          <PublishedPostsTable />
         </div>
       )}
     </motion.div>
