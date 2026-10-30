@@ -96,7 +96,7 @@ function buildFallbackScript(
       composition_hint:
         "poster-typo viral hook on-photo bare logo, vocab chip same series style",
       image_need: {
-        kind: "photo_generic",
+        kind: "photo_generic" as const,
         must_be_photographic: true,
         forbid_ai_if_possible: true,
       },
@@ -112,7 +112,7 @@ function buildFallbackScript(
       composition_hint: "split-contrast + vocab chip same series style",
       must_not_repeat: "cover poster",
       image_need: {
-        kind: "photo_generic",
+        kind: "photo_generic" as const,
         must_be_photographic: true,
         forbid_ai_if_possible: true,
       },
@@ -128,7 +128,7 @@ function buildFallbackScript(
       composition_hint: "cards-trio + vocab chip same series style",
       must_not_repeat: "split",
       image_need: {
-        kind: "photo_generic",
+        kind: "photo_generic" as const,
         must_be_photographic: true,
         forbid_ai_if_possible: true,
       },
@@ -145,7 +145,7 @@ function buildFallbackScript(
       composition_hint: "door-invite + CTA + vocab chip same series style",
       must_not_repeat: "cards",
       image_need: {
-        kind: "photo_real_place",
+        kind: "photo_real_place" as const,
         place_query: "community club entrance doorway people welcome",
         must_be_photographic: true,
         forbid_ai_if_possible: true,
@@ -165,7 +165,7 @@ function buildFallbackScript(
       visual_intent: "people talking community natural light",
       composition_hint: "statement on-photo + vocab chip same series style",
       image_need: {
-        kind: "photo_generic",
+        kind: "photo_generic" as const,
         must_be_photographic: true,
         forbid_ai_if_possible: true,
       },

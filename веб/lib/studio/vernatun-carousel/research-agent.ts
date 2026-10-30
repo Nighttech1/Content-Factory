@@ -76,7 +76,7 @@ function parseClaims(raw: unknown, checkedAt: string): ResearchClaim[] {
           sourceType === "official" ||
           sourceType === "primary" ||
           sourceType === "reputable_media"
-            ? sourceType
+            ? (sourceType as ResearchClaim["source_type"])
             : "other",
         supporting_excerpt: String(o.supporting_excerpt ?? "").trim(),
         published_or_updated_at:

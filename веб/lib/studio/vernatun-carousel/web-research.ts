@@ -204,7 +204,8 @@ export async function gatherResearchSources(
         });
       }
       // keep remaining hits without body
-      for (const h of hits.slice(openTop)) enriched.push({ ...h });
+      for (const h of hits.slice(openTop))
+        enriched.push({ ...h, excerpt: undefined, fetch_error: undefined });
       const usable = enriched.some((h) => Boolean(h.excerpt || h.snippet));
       packs.push({
         query: q,

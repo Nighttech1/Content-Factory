@@ -24,5 +24,6 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "// exclude note": "scripts/ — автономные dev/smoke-утилиты (запуск через tsx, без типизации), не часть деплой-приложения; исключены из прод-типизации next build. Приложение (app/lib/components/src) типизируется полностью.",
+  "exclude": ["node_modules", "scripts"]
 }
