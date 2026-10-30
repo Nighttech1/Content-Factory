@@ -14,7 +14,7 @@ tools: Read, Write, Edit, Grep, Glob, Bash, WebFetch
 ## Источники данных
 - **YouTube:** Data API v3 через скилл `shared/skills/scout-youtube` (ключ `YOUTUBE_API_KEY`, есть).
 - **IG/TikTok:** Apify через `shared/skills/scout-apify` (ключ в новой сессии) — экономно.
-- **Свои IG/TikTok:** офиц. API аккаунтов при доступе.
+- **Свои IG/TikTok:** по умолчанию — **scraping через Apify** (свой @mosarmclub как публичный профиль; IG Graph API не настраиваем пока). Из scraping есть: подписчики, лайки/комменты, просмотры рилсов, частота. **НЕТ:** saves, reach, шеры, демография — помечай «нет данных», не выдумывай; при нужде этих метрик — позже IG Graph API.
 - **Веб-аналитика** (`веб/`, `/analytics`): когда реальный пайплайн подключат к экрану (сейчас — моки, см. `brand/web-analytics-spec.md`).
 
 ## Что выдаёшь (отчёт директору)
