@@ -9,7 +9,7 @@
 |---|---|---|---|
 | `YOUTUBE_API_KEY` | YouTube Data API: свой канал + конкуренты (Разведчик/Аналитик) | Google Cloud → YouTube Data API v3 | ✅ в окружении |
 | `OPENAI_API_KEY` | генерация картинок (gpt-image) для каруселей/статей | platform.openai.com | ☐ нужен для Фазы 4 |
-| `APIFY_TOKEN` | скрапинг IG/TikTok трендов и конкурентов (Разведчик) | apify.com (free-план) | ☐ нужен для Фазы 2 |
+| `APIFY_TOKEN` | скрапинг IG/TikTok трендов и конкурентов (Разведчик) | apify.com (free-план) | ✅ добавлен владельцем 2026-10-30 (вступит в силу в НОВОЙ сессии — секреты подхватываются на старте) |
 | `ELEVENLABS_API_KEY` | озвучка/голос для «обезличенных» роликов | elevenlabs.io | ☐ позже (Фаза 5/6) |
 
 > Картинки: если вместо OpenAI выберем Ideogram/Flux — добавить `IDEOGRAM_API_KEY` / провайдера Flux (напр. `REPLICATE_API_TOKEN`).
