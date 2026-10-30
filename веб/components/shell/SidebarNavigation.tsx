@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, useReducedMotion } from "framer-motion";
-import { Briefcase, Calendar, Rocket, Settings } from "lucide-react";
+import { Briefcase, Calendar, LayoutGrid, Rocket, Settings } from "lucide-react";
 import {
   MenuVertical,
   type MenuVerticalItem,
@@ -39,6 +39,16 @@ const NAV_ITEMS: NavItem[] = [
     icon: Briefcase,
     testId: "nav-director",
   },
+];
+
+/** Разделы по модулям контента (канонические id Studio). Группа в левом меню. */
+const MODULE_ITEMS: { id: string; label: string }[] = [
+  { id: "carousel-engine", label: "Карусели" },
+  { id: "aesthetic-graphics", label: "Графика" },
+  { id: "cartoon-reels", label: "Мультрилсы" },
+  { id: "heygen-reels", label: "HeyGen-рилсы" },
+  { id: "site-articles", label: "Статьи · сайт" },
+  { id: "tg-articles", label: "Статьи · TG" },
 ];
 
 /** C-68 / S48 — warm critical routes after idle (prod + warm turbopack). */
@@ -115,6 +125,18 @@ export function SidebarNavigation({
     };
   });
 
+  // Разделы по модулям контента — отдельная группа «Модули контента».
+  const moduleItems: MenuVerticalItem[] = MODULE_ITEMS.map((m) => {
+    const href = `/studio/${m.id}`;
+    return {
+      href,
+      label: m.label,
+      icon: LayoutGrid,
+      testId: `nav-module-${m.id}`,
+      active: pathname === href || pathname.startsWith(`${href}/`),
+    };
+  });
+
   const finishDrag = (event: React.PointerEvent<HTMLButtonElement>) => {
     setDragging(false);
     try {
@@ -161,10 +183,18 @@ export function SidebarNavigation({
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col gap-1 overflow-y-auto px-3 py-4">
-        <nav className="flex flex-col">
+      <div className="flex flex-1 flex-col gap-4 overflow-y-auto px-3 py-4">
+        <nav className="flex flex-col" aria-label="Разделы">
           <MenuVertical items={menuItems} />
         </nav>
+        <div className="flex flex-col">
+          <p className="mb-1 px-2 font-[family-name:var(--font-mono-jb)] text-[9px] uppercase tracking-wider text-[var(--text-mono)]">
+            Модули контента
+          </p>
+          <nav className="flex flex-col" aria-label="Модули контента">
+            <MenuVertical items={moduleItems} />
+          </nav>
+        </div>
       </div>
 
       <div className="space-y-3 border-t border-[var(--border-glass)] px-3 py-4">
