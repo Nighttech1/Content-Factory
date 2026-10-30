@@ -348,7 +348,7 @@ export async function runProgrammaticLayoutQa(input: {
     ];
     for (const b of bands) {
       // Right/top bands overlap logo zone — skip logo pocket for those edges
-      let left = b.left;
+      const left = b.left;
       let top = b.top;
       let w = b.w;
       let h = b.h;

@@ -11,6 +11,8 @@ import { ScoutSection } from "@/components/analytics/ScoutSection";
 import { TelemetryMatrix } from "@/components/analytics/TelemetryMatrix";
 import { InsightsFeed } from "@/components/analytics/InsightsFeed";
 import { PublishedPostsTable } from "@/components/analytics/PublishedPostsTable";
+import { FunnelChart } from "@/components/analytics/FunnelChart";
+import { getContentFunnelSeed } from "@/lib/analytics/funnel";
 import { findStudioModule } from "@/components/studio/modules";
 import { getSelfLearningDashboard } from "@/lib/analytics/self-learning-mock";
 import { useStudioStore } from "@/lib/studio-store";
@@ -61,6 +63,7 @@ export function AnalyticsShell({ initialModuleId }: AnalyticsShellProps = {}) {
     };
     return [funnel, ...mergeKpis(dashboard.kpis)];
   }, [dashboard.kpis]);
+  const contentFunnel = useMemo(() => getContentFunnelSeed(), []);
   const [contentTypeId, setContentTypeId] = useState("all");
   const [platformId, setPlatformId] = useState("all");
   const [view, setView] = useState<AnalyticsView>(
@@ -153,6 +156,7 @@ export function AnalyticsShell({ initialModuleId }: AnalyticsShellProps = {}) {
           </div>
 
           <KpiCardsRow kpis={kpis} />
+          <FunnelChart funnel={contentFunnel} />
           <ScoutSection />
           <OutliersVault
             outliers={dashboard.outliers}
