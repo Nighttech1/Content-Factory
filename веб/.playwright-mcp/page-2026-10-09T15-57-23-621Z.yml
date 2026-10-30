@@ -1,0 +1,82 @@
+- generic [ref=e2]:
+  - complementary "Главная навигация" [ref=e3]:
+    - generic [ref=e11]:
+      - generic [ref=e12]: VERN·ATUN
+      - generic [ref=e13]: Content Factory
+    - navigation [ref=e15]:
+      - generic [ref=e16]:
+        - link "Студия" [ref=e19] [cursor=pointer]:
+          - /url: /studio
+        - link "Команда выпуска" [ref=e32] [cursor=pointer]:
+          - /url: /admin/mesh
+        - link "Расписание" [ref=e45] [cursor=pointer]:
+          - /url: /schedule
+        - link "Аналитика" [ref=e55] [cursor=pointer]:
+          - /url: /analytics
+        - link "Настройки" [ref=e68] [cursor=pointer]:
+          - /url: /settings
+    - generic [ref=e78]:
+      - paragraph [ref=e79]: Роль QA (локально)
+      - generic [ref=e80]:
+        - button "OWNER" [ref=e81]
+        - button "ADMIN" [ref=e82]
+    - button "Изменить ширину боковой панели" [ref=e83]
+  - main [ref=e85]:
+    - generic [ref=e86]:
+      - generic [ref=e88]:
+        - heading "Карусели Instagram (4:5)" [level=1] [ref=e89]
+        - button "Создать карусель" [ref=e90]
+      - generic [ref=e93]:
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - heading "Наши" [level=2] [ref=e98]
+            - generic [ref=e99]: "0"
+          - tablist "Вкладки нашей ленты" [ref=e101]:
+            - tab "Опубликовано" [selected] [ref=e102]
+            - tab "Черновики" [ref=e104]
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - heading "Конкуренты" [level=2] [ref=e113]
+            - generic [ref=e114]: "0"
+          - searchbox "Поиск конкурентов" [ref=e120]
+    - button "Закрыть панель генерации"
+    - complementary [aria-hidden] [ref=e125]:
+      - generic [ref=e126]:
+        - generic [ref=e127]:
+          - paragraph [ref=e128]: Журнал генерации
+          - heading [level=2] [ref=e129]: Конвейер агентов
+        - button [ref=e130]: Закрыть
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - generic [ref=e133]: Прогресс
+          - generic [ref=e134]: 0%
+        - progressbar [ref=e135]
+      - list [ref=e136]:
+        - listitem [ref=e137]:
+          - generic [ref=e140]:
+            - generic [ref=e141]: Исследователь
+            - generic [ref=e142]: Ожидание...
+        - listitem [ref=e143]:
+          - generic [ref=e146]:
+            - generic [ref=e147]: Автор хуков
+            - generic [ref=e148]: Ожидание...
+        - listitem [ref=e149]:
+          - generic [ref=e152]:
+            - generic [ref=e153]: Сценарист
+            - generic [ref=e154]: Ожидание...
+        - listitem [ref=e155]:
+          - generic [ref=e158]:
+            - generic [ref=e159]: Дизайнер
+            - generic [ref=e160]: Ожидание...
+        - listitem [ref=e161]:
+          - generic [ref=e164]:
+            - generic [ref=e165]: Конвейер
+            - generic [ref=e166]: Ожидание...
+      - generic [ref=e167]:
+        - generic [ref=e168]:
+          - textbox [disabled] [ref=e169]:
+            - /placeholder: Заметка активному шагу…
+          - group [ref=e170]:
+            - button [disabled] [ref=e171]
+            - button [disabled] [ref=e176]
+        - paragraph [ref=e181]: Голос недоступен — введите правку текстом

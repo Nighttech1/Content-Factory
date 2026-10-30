@@ -1,0 +1,46 @@
+{
+  "contentType": "carousel",
+  "requested_slide_count": 3,
+  "idea": "Утренний кофе-ритуал Vernatun — постерная ясность",
+  "hook": "Кофе пахнет *домом*?",
+  "tone": "vernatun",
+  "cta_type": 4,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Кофе пахнет *домом*?",
+      "secondary_copy": "Утро Vernatun — полная чашка, не иконка",
+      "swipe_trigger": "META: curiosity gap — swipe to see the ritual value beat",
+      "visual_prompt": "FULL-BLEED photoreal hero photograph ONLY — ceramic Vernatun coffee cup with rich crema filling most of the 4:5 frame, steam rising, soft daylight, orange-white color grade. Premium real-estate marketing poster craft: one hero object huge in frame, generous crop, luxury product photography. ABSOLUTELY FORBIDDEN: line-art coffee icon, coffee-product UI plate, glass bento cards, clocks, timers, telemetry gauges, marble texture collage, tiny icon in a tile. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, the word HTML, ESPRESSO, CTA, TIP, HOOK, stacked placeholder digits 1/2/CTA, UI chips, watermarks. Photoreal or clean graphic only. No purple.",
+      "alt_text": "Крупное hero-фото чашки кофе Vernatun"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "body_slide",
+      "primary_copy": "Ритуал, не *спешка*",
+      "secondary_copy": "Один стол. Один разговор. Корни в аромате.",
+      "swipe_trigger": "META: after value, swipe for like+save CTA",
+      "visual_prompt": "Clean orange-white poster mid-slide FULL-BLEED photo: warm cafe table edge with steaming cup filling left half, pure white negative space right for overlay typography. Soft daylight, high-key, airy. FORBIDDEN: line icons, coffee-product plate, ritual clocks, to-go rush timers, glass telemetry, marble+gauges. Photoreal only. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, the word HTML, ESPRESSO, CTA, TIP, HOOK, stacked placeholder digits 1/2/CTA, UI chips, watermarks. Photoreal or clean graphic only. No purple.",
+      "alt_text": "Постерный mid: стол и пар — без UI-шума"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta_slide",
+      "primary_copy": "Сохрани утро *Vernatun*",
+      "secondary_copy": "Лайк + сохранить — ритуал рядом",
+      "swipe_trigger": "META: soft end after engagement CTA",
+      "visual_prompt": "Clean orange-white CTA poster background: bold safety-orange lower third meeting bright white upper field, empty ceramic cup from above as soft hero photo OR generous empty white space (both OK), airy composition for a marketing button overlay. Soft product photography, no chrome plates. FORBIDDEN: coffee-product plate, clocks, gauges, line-art cup, any letters or acronyms painted in the photo. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, the word HTML, ESPRESSO, CTA, TIP, HOOK, stacked placeholder digits 1/2/CTA, UI chips, watermarks. Photoreal or clean graphic only. No purple.",
+      "alt_text": "CTA-постер: сохранить кофе-ритуал",
+      "cta_type": 4
+    }
+  ],
+  "caption": "Утро Vernatun — чашка, стол, разговор. Сохрани ритуал ☕",
+  "hashtags": [
+    "#Vernatun",
+    "#АрмянскийКлуб",
+    "#КофеРитуал",
+    "#Сообщество"
+  ],
+  "promptForDesigner": "REF-A clean_poster R3: full-bleed hero photo, accent word, CTA every slide, ZERO baked HTML / coffee-plate / clocks."
+}

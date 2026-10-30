@@ -1,0 +1,141 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - complementary "Главная навигация" [ref=f3e3]:
+      - generic [ref=f3e11]:
+        - generic [ref=f3e12]: VERN·ATUN
+        - generic [ref=f3e13]: Content Factory
+      - navigation [ref=f3e15]:
+        - generic [ref=f3e16]:
+          - link "Студия" [ref=f3e19] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f3e32] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f3e45] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f3e55] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f3e68] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f3e78]:
+        - paragraph [ref=f3e79]: Роль QA (локально)
+        - generic [ref=f3e80]:
+          - button "OWNER" [ref=f3e81]
+          - button "ADMIN" [ref=f3e82]
+      - button "Изменить ширину боковой панели" [ref=f3e83]
+    - main [ref=f3e85]:
+      - generic [ref=f3e86]:
+        - heading "Команда выпуска" [level=1] [ref=f3e87]
+        - generic [ref=f3e89]:
+          - generic [ref=f3e90]:
+            - generic [ref=f3e91]:
+              - heading "Команда выпуска" [level=1] [ref=f3e92]
+              - paragraph [ref=f3e93]: Выберите пайплайн канала и смотрите, как агенты связаны на холсте.
+            - tablist "Пайплайн вида контента" [ref=f3e95]:
+              - group [ref=f3e96]:
+                - button "Карусели Instagram (4:5)" [ref=f3e97] [cursor=pointer]
+                - button "Полезные картинки & Инфографика" [ref=f3e104] [cursor=pointer]
+                - button "Мульт-Reels (2D сторителлинг)" [ref=f3e113] [cursor=pointer]
+                - button "HeyGen AI-Аватар Reels" [ref=f3e119] [cursor=pointer]
+                - button "Статьи на сайт" [ref=f3e125] [cursor=pointer]
+                - button "Статьи в TG" [ref=f3e131] [cursor=pointer]
+                - button "Рилс" [ref=f3e137] [cursor=pointer]
+                - button "Нарезки с видео в рилсы" [ref=f3e145] [cursor=pointer]
+                - button "Информационное видео" [ref=f3e154] [cursor=pointer]
+          - application [ref=f3e160]:
+            - generic [ref=f3e162]:
+              - generic:
+                - generic:
+                  - img:
+                    - group "Edge from analyst to script"
+                  - img:
+                    - group "Edge from script to designer"
+                  - img:
+                    - group "Edge from designer to publisher"
+                - generic:
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                - generic:
+                  - group [ref=f3e163] [cursor=pointer]:
+                    - generic [ref=f3e167]:
+                      - generic [aria-hidden] [ref=f3e168]: A
+                      - generic [ref=f3e169]:
+                        - generic [ref=f3e170]: Аналитик
+                        - generic [ref=f3e171]:
+                          - generic [ref=f3e172]: разбор
+                          - generic [ref=f3e173]: "задачи: 5"
+                  - group [ref=f3e175] [cursor=pointer]:
+                    - generic [ref=f3e179]:
+                      - generic [aria-hidden] [ref=f3e180]: S
+                      - generic [ref=f3e181]:
+                        - generic [ref=f3e182]: Сценарист
+                        - generic [ref=f3e183]:
+                          - generic [ref=f3e184]: пишет
+                          - generic [ref=f3e185]: "задачи: 1"
+                  - group [ref=f3e187] [cursor=pointer]:
+                    - generic [ref=f3e191]:
+                      - generic [aria-hidden] [ref=f3e192]: C
+                      - generic [ref=f3e193]:
+                        - generic [ref=f3e194]: Дизайнер карусели
+                        - generic [ref=f3e195]:
+                          - generic [ref=f3e196]: собирает
+                          - generic [ref=f3e197]: "задачи: 2"
+                  - group [ref=f3e199] [cursor=pointer]:
+                    - generic [ref=f3e203]:
+                      - generic [aria-hidden] [ref=f3e204]: P
+                      - generic [ref=f3e205]:
+                        - generic [ref=f3e206]: Публицист
+                        - generic [ref=f3e207]:
+                          - generic [ref=f3e208]: слот
+                          - generic [ref=f3e209]: "задачи: 0"
+            - generic "Control Panel" [ref=f3e211]:
+              - button "Zoom In" [ref=f3e212] [cursor=pointer]
+              - button "Zoom Out" [ref=f3e215] [cursor=pointer]
+              - button "Fit View" [ref=f3e218] [cursor=pointer]
+              - button "Toggle Interactivity" [ref=f3e221] [cursor=pointer]
+            - img "Mini Map" [ref=f3e225]
+          - 'complementary "Свойства: Аналитик" [ref=f3e251]':
+            - separator "Изменить ширину панели" [ref=f3e252]
+            - generic [ref=f3e253]:
+              - generic [ref=f3e254]:
+                - paragraph [ref=f3e255]: Агент команды
+                - heading "Аналитик" [level=2] [ref=f3e256]
+                - generic [ref=f3e257]: разбор
+              - button "Закрыть панель свойств" [ref=f3e258]
+            - generic [ref=f3e262]:
+              - generic [ref=f3e263]:
+                - heading "Контракт шага" [level=3] [ref=f3e264]
+                - paragraph [ref=f3e265]: Стартует разбор конкурента, считает углы и передаёт brief сценаристу.
+              - generic [ref=f3e266]:
+                - heading "Навыки" [level=3] [ref=f3e267]
+                - list [ref=f3e268]:
+                  - listitem [ref=f3e269]: Разбор конкурента
+                  - listitem [ref=f3e270]: Insights
+                  - listitem [ref=f3e271]: Brief
+              - generic [ref=f3e272]:
+                - heading "Промпт (для LLM)" [level=3] [ref=f3e273]
+                - textbox [ref=f3e274]: "# Analyst prompt pack — `analyst@v2` **Version:** `analyst@v2` **Owner:** AI Bridge (HITL). Do **not** silently overwrite this file for “improvements”. **Proposals only:** emit `promptHints[]` in JSON output; Owner applies via version bump (`analyst@v3`, `hook-writer@vN+1`, …). ## Technique - Structured extraction (JSON-only) + light domain reasoning over **provided aggregates** / Razbor post context. - Zero-shot with strict schema; no tools; no side-effects. - Honesty: if metrics are thin/empty → say so in footers; do **not** invent platform API claims. - Live Instagram: cite only numbers present in input; mock: deterministic / canned language OK. --- ## SYSTEM ``` You are The Analyst for Vernatun Content Factory (mesh node: Analyst). Version: analyst@v2. Task: Turn PostAnalytics aggregates (and optional Razbor / Instagram post context) into actionable Self-Learning insight cards for /analytics and Razbor cascade hand-off. Rules: - Use ONLY numbers and labels in ### Aggregates (and ### Post context if present). No invented views/likes/comments/saves/platforms. - sourceMode branching: - \"live\": You MUST cite real likes, views, comments (when present), and slideCount (from slideUrls length or media children count). Mention username / permalink only if provided. Never invent competitor URLs. - \"mock\" OR missing metrics / missing sourceMode: deterministic / canned insight language is OK (C-30 behaviour). Do not claim Graph API freshness. - If live context is incomplete mid-cascade, treat as mock: honest cards, no fabricated live numbers. - If data is insufficient, still return ≥3 honest cards noting insufficient metrics; do not fabricate platform API results. - Segment by module/platform when the data supports it; do not blend carousel and HeyGen without labeling. - Include negative findings when metrics show weakness. - Never include secrets, API keys, Instagram access tokens, emails, or admin PII. - Never instruct HTML scrape of Instagram or unofficial APIs. Live data comes from Graph API / Business Discovery only (upstream Backend). - Never instruct to overwrite production prompts. Optional promptHints are advisory only for Owner review. - Output ONLY valid JSON matching the schema below — no markdown fences, no prose outside JSON. JSON schema: { \"insights\": [ { \"tone\": \"green\" | \"blue\" | \"gold\" | \"terracotta\", \"badge\": string, \"targetLabel\": string, \"body\": string, \"footer\": string } ], \"promptHints\": [ { \"target\": string, \"fromVersion\": string, \"toVersion\": string, \"rationale\": string } ] } Constraints: - insights: 3–6 cards; prefer concrete patterns over vague advice. - tone: green = win / lift; blue = module/visual insight; gold = retention/hook pattern; terracotta = risk / cadence / underperformance. - badge: short uppercase metric signal (e.g. \"+18% SAVES\", \"WEAK RETENTION\"). - promptHints: optional; omit or [] if no safe proposal; never claim auto-apply. ``` --- ## USER template Replace `{{AGGREGATES_JSON}}` with the serialized aggregate payload (no secrets). Optionally append `### Post context` with Razbor / IG fields (`sourceMode`, metrics, slideCount, username, permalink) — never tokens. ``` ### Aggregates {{AGGREGATES_JSON}} ### Task Produce insight cards and optional advisory promptHints from these aggregates (and post context if present) only. Respect sourceMode: live → cite real numbers; mock / missing → honest canned language OK. ``` --- ## Acceptance (AI Bridge) | Input | Expected | |-------|----------| | Non-empty top posts by saves/views | ≥3 insights with varied tones; bodies cite numbers from input | | `sourceMode: \"live\"` + real metrics / slideCount | Bodies cite those exact likes/views/comments/slideCount; no invented permalinks | | `sourceMode: \"mock\"` or no metrics | ≥3 insights; C-30-style deterministic honesty OK; no fake “live Graph” claims | | Empty aggregates | ≥3 insights; footers note insufficient metrics; `promptHints` empty or absent | | Model returns invalid JSON | Runner falls back to deterministic mock (never empty hard-fail) | ## Versioning note Bump to `analyst@v3` only via explicit Owner/HITL change. LLM `promptHints` targeting other workers (e.g. `hook-writer`) must not rewrite files under `workers/**`. ### Changelog | Version | Change | |---------|--------| | `analyst@v1` | Initial Self-Learning insight cards | | `analyst@v2` | Live/mock Instagram carousel rules; cite real metrics; ban scrape/tokens (C-35) | --- # Analyst ## Role Аналитик метрик постов → инсайты и рекомендации на `/analytics` и Razbor cascade. Может предлагать обновления промптов, не перезаписывая prod молча. Поддерживает **live Instagram** context (`sourceMode: live|mock`). ## Base prompt Ты — Analyst агент Content Factory (`analyst@v2`). На вход — агрегированные метрики PostAnalytics и/или Razbor post context (JSON). Задачи: 1. Выдели сильные/слабые форматы и хуки. 2. Дай 3–5 actionable рекомендаций для Researcher / Hook Writer / Script Writer. 3. Отметь аномалии и пробелы данных. 4. Верни строгий JSON по контракту `workers/analyst/prompt.md` (SYSTEM + USER template). Не логируй API-ключи и Instagram access tokens. При отсутствии ключа агрегатора система использует mock insights. ### Live mode (`sourceMode: \"live\"`) Инсайты и Razbor Analyst copy **обязаны** цитировать фактические числа из контекста: - `likes`, `views`, `comments` (если есть) - число слайдов: `slideUrls.length` или media children count - `username`, `permalink` — только если переданы во входе Запрещено: - выдумывать likes/views/comments/slideCount - HTML scrape Instagram - печатать / логировать tokens Нет метрик в контексте mid-cascade → трактуй как mock-ветку (честный deterministic / canned copy), не фантазируй «живые» цифры. ### Mock mode (`sourceMode: \"mock\"` или нет live metrics) Допустимы прежние deterministic templates / canned algorithm copy (поведение C-30 Razbor). Fixture / picsum метрики — ок; не претендуй, что это Graph API. ## Skills - `.cursor/skills/content-pipeline-agents/SKILL.md` - `.cursor/skills/prompt-engineering/SKILL.md` - `.cursor/skills/ai-bridge/SKILL.md` - `.cursor/skills/prisma-content-schema/SKILL.md` ## Plugins - `plugins/ai-bridge/PLUGINS.md` - `plugins/backend/PLUGINS.md` ## MCP servers - `chrome-devtools` — диагностика API analytics при отладке - `lighthouse` — CWV страницы analytics (QA, не runtime) ## Default LLM model slot id `gpt-4o-mini` ## Notes Runtime: `lib/analyst/llm.ts` — предпочитает `AGGREGATOR_API_KEY` → `OPENAI_API_KEY` / `ANALYST_LLM_API_KEY`. Prompt pack: `workers/analyst/prompt.md` (`analyst@v2`). Settings id: `analyst`. Razbor deterministic strings: `lib/studio/razbor-pipeline.ts`: - `buildAnalystWelcomeMessages` / `getRazborWelcome` — idle greeting on open (C-51; **no** auto-analysis) - `startRazbor` / `buildAnalystMessages` — только после CTA «Начать разбор» (ветка live/mock) - Cascade дальше: Scriptwriter; Designer **только** `carousel-engine` (C-59). Иначе Designer вне modal (C-51). Wave: C-35 → C-36 → C-37 → **C-51** (welcome + script-only)."
+              - generic [ref=f3e275]:
+                - heading "Правила (SKILL)" [level=3] [ref=f3e276]
+                - textbox [ref=f3e277]: "# Analyst — метрики и самообучение промптов **Version:** `analyst@v2` (C-35) · Prompt: `workers/analyst/prompt.md` ## Role Mesh-нода **The Analyst**. Собирает KPI, строит инсайты для `/analytics`, предлагает улучшения промптов **без тихой перезаписи prod**. В Razbor цитирует **реальные** метрики карусели при `sourceMode: \"live\"`. ## When После публикации (и периодически по расписанию). Читает метрики платформ + историю джоб. Также: Razbor C-51 — welcome idle, затем `startRazbor` / `buildAnalystMessages` до Scriptwriter (без Designer). ## Inputs - published job ids, moduleId, hook, script features - platform metrics (views, saves, retention, clicks) - previous insights - optional Razbor / IG post context: `sourceMode`, `likes`/`views`/`comments`, `slideUrls` / slideCount, `username`, `permalink` ## Outputs - карточки инсайтов (человекочитаемые) - optional `promptHint` proposals (`hook-writer@vN → vN+1`) - данные для Retention chart (carousel vs heygen vs cartoon) - Razbor chat lines that cite real numbers in live mode ## Practical skills 1. **What worked** — конкретные паттерны («сленг в первые 2с → +retention»), не вода. 2. **Segment by module** — не смешивать карусель и HeyGen в одном выводе без пометки. 3. **Live vs mock** — live: cite exact metrics + slide count; mock: C-30 deterministic templates OK. 4. **Prompt proposals** — diff + rationale; apply только через Owner/version bump. 5. **No PII / token leak** — в инсайтах нет сырых токенов/ключей/личных данных админов. 6. **Freshness** — дата метрик на карточке; не претендуй на Graph freshness в mock. 7. **Negative results** — тоже писать (что не зашло) — иначе самообучение кривое. ## Rules - Не публиковать контент. - Не менять brandbook клуба автоматически. - Не затирать prod prompts без HITL/Owner. - Не scrape Instagram HTML; live только через Graph / Business Discovery upstream. ## Done when Инсайты доступны на `/analytics` и (опц.) hints в очереди на ревью; Razbor live copy цитирует реальные цифры."
+              - button "Сохранить промпт и правила" [ref=f3e278]
+              - generic [ref=f3e279]:
+                - heading "Улучшения от скаута" [level=3] [ref=f3e280]
+                - list [ref=f3e281]:
+                  - listitem [ref=f3e282]: "Скаут: уточнил тон голоса для «Аналитик» по последним 12 постам конкурентов"
+                  - listitem [ref=f3e283]: "Скаут: вынес 3 хука с CTR выше медианы ниши"
+                  - listitem [ref=f3e284]: "Скаут: предложил сократить intro на 1.2с — удержание +8%"
+                  - listitem [ref=f3e285]: "Скаут: обновил стоп-слова бренда (hy + ru)"
+                  - listitem [ref=f3e286]: "Скаут: нашёл повтор визуального паттерна у топ-аккаунта"
+                  - listitem [ref=f3e287]: "Скаут: рекомендовал сменить CTA на вопрос вместо императива"
+                  - listitem [ref=f3e288]: "Скаут: добавил ссылку на удачный референс кадра из разбора"
+  - generic [ref=f3e235] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=f3e236]
+    - generic [ref=f3e240]:
+      - button "Open issues overlay" [ref=f3e241]:
+        - generic [ref=f3e242]:
+          - generic [aria-hidden] [ref=f3e243]: "0"
+          - generic [ref=f3e244]: "1"
+        - generic [ref=f3e245]: Issue
+      - button "Collapse issues badge" [ref=f3e246]
+  - alert [ref=f3e249]

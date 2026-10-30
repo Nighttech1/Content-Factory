@@ -1,0 +1,179 @@
+- generic [ref=f6e1]:
+  - generic [ref=f6e2]:
+    - complementary "Главная навигация" [ref=f6e3]:
+      - generic [ref=f6e11]:
+        - generic [ref=f6e12]: VERN·ATUN
+        - generic [ref=f6e13]: Content Factory
+      - navigation [ref=f6e15]:
+        - generic [ref=f6e16]:
+          - link "Студия" [ref=f6e19] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f6e32] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f6e45] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f6e55] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f6e68] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f6e78]:
+        - paragraph [ref=f6e79]: Роль QA (локально)
+        - generic [ref=f6e80]:
+          - button "OWNER" [ref=f6e81]
+          - button "ADMIN" [ref=f6e82]
+      - button "Изменить ширину боковой панели" [ref=f6e83]
+    - main [ref=f6e85]:
+      - generic [ref=f6e86]:
+        - generic [ref=f6e87]:
+          - heading "Настройки" [level=1] [ref=f6e88]
+          - paragraph [ref=f6e89]:
+            - text: Модели LLM, дизайн (DESIGN.md), правила и промпты агентов, рилсы. Правки хранятся в браузере (localStorage). Ключ агрегатора — только в
+            - code [ref=f6e90]: .env
+            - text: .
+        - region [ref=f6e91]:
+          - generic [ref=f6e92]:
+            - heading "Дизайн" [level=2] [ref=f6e93]
+            - paragraph [ref=f6e94]:
+              - text: Файл
+              - code [ref=f6e95]: docs/DESIGN.md
+              - text: — его читает дизайнер вместо раздела «Бренд-кит».
+          - textbox [ref=f6e96]: "--- name: Atelier Synth colors: surface: '#111317' surface-dim: '#111317' surface-bright: '#37393d' surface-container-lowest: '#0c0e11' surface-container-low: '#1a1c1f' surface-container: '#1e2023' surface-container-high: '#282a2d' surface-container-highest: '#333538' on-surface: '#e2e2e6' on-surface-variant: '#ddc1b5' inverse-surface: '#e2e2e6' inverse-on-surface: '#2f3034' outline: '#a48c81' outline-variant: '#56423a' surface-tint: '#ffb694' primary: '#ffb694' on-primary: '#561f00' primary-container: '#de733c' on-primary-container: '#4c1a00' inverse-primary: '#9d430c' secondary: '#f3be64' on-secondary: '#432c00' secondary-container: '#7e5700' on-secondary-container: '#ffd28a' tertiary: '#9ecbfb' on-tertiary: '#003355' tertiary-container: '#6894c2' on-tertiary-container: '#002c4a' error: '#ffb4ab' on-error: '#690005' error-container: '#93000a' on-error-container: '#ffdad6' primary-fixed: '#ffdbcc' primary-fixed-dim: '#ffb694' on-primary-fixed: '#351000' on-primary-fixed-variant: '#7b2f00' secondary-fixed: '#ffdeac' secondary-fixed-dim: '#f3be64' on-secondary-fixed: '#281900' on-secondary-fixed-variant: '#604100' tertiary-fixed: '#cfe5ff' tertiary-fixed-dim: '#9ecbfb' on-tertiary-fixed: '#001d34' on-tertiary-fixed-variant: '#154a73' background: '#111317' on-background: '#e2e2e6' surface-variant: '#333538' typography: headline-xl: fontFamily: Plus Jakarta Sans fontSize: 40px fontWeight: '700' lineHeight: 48px letterSpacing: -0.03em headline-xl-mobile: fontFamily: Plus Jakarta Sans fontSize: 30px fontWeight: '700' lineHeight: 38px letterSpacing: -0.02em headline-lg: fontFamily: Plus Jakarta Sans fontSize: 28px fontWeight: '600' lineHeight: 36px letterSpacing: -0.025em headline-lg-mobile: fontFamily: Plus Jakarta Sans fontSize: 22px fontWeight: '600' lineHeight: 30px letterSpacing: -0.02em headline-md: fontFamily: Plus Jakarta Sans fontSize: 20px fontWeight: '600' lineHeight: 28px letterSpacing: -0.015em body-lg: fontFamily: Plus Jakarta Sans fontSize: 16px fontWeight: '400' lineHeight: 26px letterSpacing: -0.01em body-md: fontFamily: Plus Jakarta Sans fontSize: 14px fontWeight: '400' lineHeight: 22px letterSpacing: -0.005em body-sm: fontFamily: Plus Jakarta Sans fontSize: 12px fontWeight: '400' lineHeight: 18px letterSpacing: 0em label-md: fontFamily: JetBrains Mono fontSize: 12px fontWeight: '500' lineHeight: 16px letterSpacing: 0.02em label-sm: fontFamily: JetBrains Mono fontSize: 11px fontWeight: '500' lineHeight: 14px letterSpacing: 0.04em code-sm: fontFamily: JetBrains Mono fontSize: 12px fontWeight: '400' lineHeight: 18px letterSpacing: 0em rounded: sm: 0.125rem DEFAULT: 0.25rem md: 0.375rem lg: 0.5rem xl: 0.75rem full: 9999px spacing: gutter: 1rem gutter-mobile: 0.75rem margin: 1.5rem margin-mobile: 1rem space-xs: 0.25rem space-sm: 0.5rem space-md: 0.75rem space-lg: 1.25rem space-xl: 2rem --- ## Brand & Style This design system establishes a high-density, technical-atelier environment for generative pipelines, multi-modal workflows, and prompt engineering networks. The aesthetic synthesizes the structured rigor of developer toolchains (Raycast, Linear) with the cinematic restraint and spatial discipline of luxury editorial publications and high-end hardware interfaces. ### Brand Personality & Core Audience - **The Audience:** Technical creatives, lead AI strategists, prompt architects, and content engineering teams orchestrating multi-agent media pipelines. - **The Impression:** Sovereign, razor-sharp, disciplined, and deliberately bespoke. It discards playful consumer-AI clichés in favor of instrument-grade precision, deep obsidian negative space, and warm tactile illumination. ### Visual Architecture - **Obsidian Architectural Base:** A foundational spectrum of calibrated charcoal, carbon, and slate-black planes that isolate content and generative nodes without muddy visual noise. - **Cognac & Sun Gold Embers:** Focal energy is directed strictly via an incandescent terracotta/cognac core (`#C25E28`), activated by microscopic amber highlights (`#E6B25A`) to denote real-time synthesis, pipeline velocity, and active tokens. - **Technical Azure Utility:** Subdued cold slate-azure tones (`#2A5A84`) govern telemetry, data ingress/egress, branch states, and node connections, balancing warm creative drivers with mechanical clarity. - **Crisp Structural Grid:** Sharp 1px hairline borders (`rgba(255, 255, 255, 0.08)`) frame the canvas, creating modular bays and dockable inspector panels with absolute geometric certainty. ## Colors The system uses a dark palette defined by an obsidian-to-slate continuum, balanced against high-chroma terracotta, ambient amber, and technical cold azure. ### Palette Architecture - **Primary (`#C25E28` - Cognac / Terracotta):** Represents pipeline catalysts, execution triggers, active node states, and dominant calls to action. - **Secondary (`#E6B25A` - Sun Gold / Amber):** Reserved for telemetry alerts, node activity indicators, token burn rates, and selective micro-focus indicators. - **Tertiary (`#2A5A84` - Deep Slate Azure):** Governs system signals, payload status, cold metadata tags, model routing nodes, and syntax identifiers. - **Neutral (`#0D0F12` - Raw Obsidian Canvas):** Provides the foundational canvas depth, stepping up through neutral slate tonal stops to construct layer stratification. ### Surface Tiers & Token Relationships - **Surface Canvas (`#08090B`):** Global viewport background, workspace matrix, and infinite canvas backing. - **Surface Layer 1 (`#0D0F12`):** Primary dock panels, pinned lateral rails, and utility bars. - **Surface Layer 2 (`#14171C`):** Cards, pipeline module containers, contextual inspectors, and dialog wrappers. - **Surface Layer 3 (`#1C2027`):** Elevated dropdowns, active item selections, hover states, and floating command palettes. - **Hairline Strokes (`rgba(255, 255, 255, 0.08)`): Global structural boundary for all panes, card frames, and cell delimiters. - **Hairline Active (`rgba(194, 94, 40, 0.40)`): Focused containers and running pipeline runs. ## Typography The typography strategy pairs a geometric neo-grotesque with an engineer-grade monospace typeface, establishing clear separation between creative workflow controls and system execution telemetry. ### Typographic Roles - **Headlines & Editorial Context (Plus Jakarta Sans):** Crafted with tight tracking (`-0.03em` to `-0.015em`) and deliberate line heights to provide the punchy authority of a high-end technical publication. - **Interface & Operational Text (Plus Jakarta Sans):** Delivers clean readability inside data grids, attribute forms, prompt configurations, and property sheets. - **Telemetry, System Metrics & Node Logs (JetBrains Mono):** Dedicated to technical metadata: execution timestamps, token consumption rates, model latency (`ms`), vector dimensions, schema definitions, and input/output payload buffers. Always rendered with micro letter-spacing (`0.02em` to `0.04em`) to maintain legibility at compact display sizes. ## Layout & Spacing The canvas is driven by an instrument-dense workbench methodology: high information availability, collapsible side rails, contextual inspectors, and fluid workflow bays. ### Grid & Workbench Model - **The Master Workbench:** Structured around an edge-to-edge modular layout anchored by fixed top utility navigation (48px height), dynamic secondary toolbars (40px height), and collapsible lateral sidebars (280px left asset rail, 340px right parameter inspector). - **Workspace Canvases:** The node graph, orchestration timelines, and run consoles utilize fluid container grids that adapt to custom split-pane ratios. - **Standard Layout Mode:** For tabular records, analytics dashboards, and prompt libraries, a 12-column fluid grid system operates inside bounds using 16px (`1rem`) gutters and 24px (`1.5rem`) outer canvas margins. ### Breakpoints & Adaptability - **Desktop (>= 1280px):** Full multi-pane workflow visible simultaneously (Navigation, Flow Canvas, Inspector Deck, System Log Console). - **Tablet (768px - 1279px):** Lateral rails collapse into sliding side drawers triggered by shortcut icons; the primary canvas retains priority with an overlay inspector. - **Mobile (< 768px):** Structural panels transform into stacked sheet interfaces. Workspaces default to sequential card lists with full-width bottom action sheets for prompt runs and node edits. ## Elevation & Depth Visual hierarchy uses crisp surface-layer tiering and razor-thin borders rather than diffuse drop shadows, preserving clarity on high-resolution displays. ### Layer Stacking Structure - **Level 0 (Canvas Matrix - `#08090B`):** The infinite plane beneath graphs, pipelines, and grid backdrops. - **Level 1 (Grounded Architecture - `#0D0F12`):** Primary docks, static sidebars, and structural splitters. Bound by hairline edge strokes: `1px solid rgba(255, 255, 255, 0.07)`. - **Level 2 (Active Modules & Workspace Cards - `#14171C`):** Pipeline nodes, content generation blocks, parameter tables. Outlined by `1px solid rgba(255, 255, 255, 0.09)`. - **Level 3 (Overlays & Command Flyouts - `#1C2027`):** Command bars (`Cmd+K`), dropdown menus, contextual node connectors, and toast dialogs. Framed by `1px solid rgba(255, 255, 255, 0.14)` and a concentrated directional shadow: `0 12px 32px -4px rgba(0, 0, 0, 0.65), 0 2px 6px 0 rgba(0, 0, 0, 0.40)`. ### Technical Glow & State Illumination - Hovering interactive nodes or engaged focus rings triggers an ambient cognac perimeter highlight (`0 0 0 1px #C25E28, 0 0 16px -2px rgba(194, 94, 40, 0.25)`). - Critical system alerts and processing queues utilize an amber back-glow (`0 0 12px -2px rgba(230, 178, 90, 0.20)`). ## Shapes The design system maintains a refined, mechanical geometry. Roundedness is kept disciplined (`0.25rem` / `4px` base) to avoid childish softness and ensure dense data grids snap cleanly along structural 1px guidelines. ### Corner Curvature Scale - **Micro UI & Form Controls (`0.25rem` / `4px`):** Input fields, inline code snippets, contextual action buttons, status pills, and list row selectors. - **Containers & Modules (`rounded-lg` - `0.5rem` / `8px`):** Node canvas containers, configuration cards, modal surfaces, preview panels, and prompt edit zones. - **Flyouts & Command Decks (`rounded-xl` - `0.75rem` / `12px`):** Quick-switcher dialogs, master search dialogs, and workspace creation overlays. - **Strict Exceptions:** Circular components (`9999px`) are restricted exclusively to user avatars, active pipeline execution spinner tracks, and micro status pips. ## Components ### Buttons & Trigger Controls - **Primary Catalyst Button:** Solid cognac background (`#C25E28`), crisp `1px solid rgba(255, 255, 255, 0.15)` border, text in absolute white, font-weight 600. Active state shifts to `#A94E1E`. Focused state adds an amber ambient ring (`#E6B25A`). - **Secondary Ghost Button:** Translucent background (`rgba(255, 255, 255, 0.03)`), border `1px solid rgba(255, 255, 255, 0.10)`, text in slate-100 (`#E2E8F0`). On hover, background elevates to `rgba(255, 255, 255, 0.07)` with border `rgba(255, 255, 255, 0.18)`. - **Destructive/Abort Button:** Translucent crimson wash (`rgba(220, 38, 38, 0.08)`), border `1px solid rgba(220, 38, 38, 0.30)`, label in `#FCA5A5`. ### Chips & Telemetry Badges - Constructed exclusively with `JetBrains Mono` at `label-sm` (`11px`). - **Model Node Chip:** Azure tone (`rgba(42, 90, 132, 0.18)`), border `1px solid rgba(42, 90, 132, 0.40)`, text `#89B4DB`. - **Execution / Cost Chip:** Obsidian tint (`#14171C`), border `1px solid rgba(255, 255, 255, 0.08)`, text in slate-400 (`#94A3B8`). Contains monospaced token counts (`\"420 t/s\"`). - **Amber Warning / Queue Chip:** Amber tint (`rgba(230, 178, 90, 0.12)`), border `1px solid rgba(230, 178, 90, 0.35)`, text `#F4D38C`. ### Cards & Pipeline Node Containers - **Default State:** Background `#14171C`, border `1px solid rgba(255, 255, 255, 0.08)`, corner radius `0.5rem`. Header features a dedicated metadata line with mono labels and execution drag handles. - **Node Active / Synthesizing:** Border switches to `1px solid #C25E28`, anchored by an ambient corner glow. - **Node Selected:** Border `1px solid #E6B25A`, displaying real-time parameter handles at input/output connection edges. ### Inputs & Prompt Editor Fields - **Background:** Inset charcoal (`#090B0D`), hairline border `1px solid rgba(255, 255, 255, 0.08)`, border radius `0.25rem`. - **Typographic Treatment:** Large prompt entry fields use `Plus Jakarta Sans` regular; code parameters, regex filters, and system directives run `JetBrains Mono`. - **Focus State:** Background remains `#090B0D`, border illuminates to `#C25E28` with zero blur, accompanied by an absolute high-contrast caret in `#E6B25A`. ### Lists & Key-Value Inspection Tables - Dense tabular rows with height fixed at `32px` or `36px`. - Alternating subtle rows (`rgba(255, 255, 255, 0.01)`) with hairline bottom separators (`rgba(255, 255, 255, 0.04)`). - Keys styled in muted slate (`#64748B`), values right-aligned in `JetBrains Mono` (`#E2E8F0`). ### Checkboxes & Toggle Switches - **Checkboxes:** Square with `2px` micro-radius, `14px x 14px` boundary, background `#0D0F12`, border `1px solid rgba(255, 255, 255, 0.18)`. When checked: background `#C25E28`, checkmark rendered in pure white. - **Toggle Switches:** Segmented pill track (`32px x 18px`), background `#1C2027`, hairline border `1px solid rgba(255, 255, 255, 0.10)`. Actuated knob (`14px x 14px`) shifts to pure white on active states with track tint transitioning to `#C25E28`. ### Specialized Domain Components - **Token Velocity Meter:** Linear progress bar (height `2px`) built on `#1C2027` track with a segmented glowing fill in `#E6B25A` to visualize real-time context window capacity. - **Agent Connection Wire:** High-precision canvas vectors (`1.5px`), color-coded according to payload: Stream (`#C25E28`), Condition (`#2A5A84`), Complete/Verified (`#E6B25A`)."
+          - generic [ref=f6e97]:
+            - button "Сохранить в браузере" [ref=f6e98]
+            - button "Сбросить к файлу" [ref=f6e99]
+        - region [ref=f6e100]:
+          - generic [ref=f6e101]:
+            - 'heading "Агенты: промпты и правила" [level=2] [ref=f6e102]'
+            - paragraph [ref=f6e103]:
+              - text: Skills / prompt.md / agents/*.md. Промпты разные по типу контента (ключ
+              - code [ref=f6e104]: agentId::contentType
+              - text: ). Правки — в localStorage; ими же пользуется панель «Команда выпуска».
+          - group "Тип контента" [ref=f6e105]:
+            - button "Общий" [ref=f6e106]
+            - button "Карусели" [active] [ref=f6e107]
+            - button "HeyGen Reels" [ref=f6e108]
+            - button "Instagram Reels" [ref=f6e109]
+          - generic [ref=f6e110]:
+            - button "Исследователь · Карусели" [ref=f6e212]
+            - button "Хук-райтер · Карусели" [ref=f6e213]
+            - button "Сценарист · Карусели" [ref=f6e214]
+            - button "Аналитик · Карусели" [ref=f6e215]
+            - button "Дизайнер · Карусели" [ref=f6e216]
+            - button "Публицист · Карусели" [ref=f6e217]
+          - paragraph [ref=f6e137]: agents/researcher.md · workers/researcher/SKILL.md
+          - generic [ref=f6e119]:
+            - generic [ref=f6e120]: Промпт
+            - textbox "Промпт" [ref=f6e121]: "Ищи референсы каруселей 9:16: структура слайдов, хуки cover, CTA finale. --- # Researcher ## Role Сбор трендов, источников и нишевого контекста для контент-пайплайна Vernatun Content Factory. Пишет краткие findings в `feedbackLogs` до Hook Writer. Поддерживает **live Instagram carousel** context (`sourceMode: live|mock`) без самостоятельного fetch. **Primary competitor discovery (C-38):** хэштеги из темы → Hashtag Search + `top_media` (Backend C-39). Ручной список ников конкурентов — только optional fallback. ## Base prompt Ты — Researcher агент Content Factory. На вход получаешь бриф ниши/темы и (опционально) live/mock посты (наш аккаунт + карусели по хэштегам / fallback BD). Задачи: 1. Выдели 3–5 актуальных углов и трендов по теме. 2. Укажи источники/сигналы (без выдуманных URL, если неизвестны — пометь «гипотеза»). 3. Сформулируй аудиторию и tone of voice для следующих агентов. 4. Верни структурированный JSON (см. Output ниже), включая **`instagramHashtags`** (контракт topic → hashtags). Пиши на русском, кратко, без воды. Не публикуй контент. Не запрашивай и не логируй секреты / access tokens. **Не проси** пользователя вводить competitor usernames / URLs — конкуренты находятся по хэштегам темы (Backend). ### Topic → hashtags (`instagramHashtags`) Контракт заполняет **детерминированный** mapper (Backend util, C-39; без LLM-ключа). Researcher **документирует и отражает** тот же JSON в выводе. `source` всегда `\"deterministic_mapper\"` в этой волне. ```json { \"topic\": \"гостевой вечер\", \"hashtags\": [\"guestnight\", \"armenianclub\", \"yerevan\"], \"source\": \"deterministic_mapper\", \"emptyTopic\": false } ``` | Field | Rule | |-------|------| | `topic` | Строка как на входе (trim); пустая → `\"\"` | | `hashtags` | 1–5 lowercase, без `#`, без пробелов; Backend в Graph берёт **первые 3** (rate limit) | | `source` | Всегда `\"deterministic_mapper\"` (LLM `\"llm_mapper\"` — future, out of scope) | | `emptyTopic` | `true` если topic после trim пустой | **Empty topic:** 1. Prefer env `IG_DEFAULT_HASHTAGS` (comma-separated, bare names). 2. Else niche defaults: `armenianclub`, `yerevan`, `armenianfood`, `guestnight`. **Non-empty (semantics for Backend parity):** normalize trim/lowercase/collapse spaces → keyword/alias table (RU/EN) → dedupe, stable order, cap ≤5; unknown topic → slugify + niche anchors `armenianclub`, `yerevan`. Exact alias table lives in Backend (C-39). ### Live Instagram rules (`sourceMode: \"live\"`) Когда во входе есть live feed / hashtag `top_media` / optional BD posts с полями `externalId`, `permalink`, `username`, `slideUrls`, `metrics`: - Используй их **как факты**: likes, views, comments, число слайдов (`slideUrls.length` или media children count), handle, permalink. - **Не выдумывай** URL и метрики. Нет permalink → пометь источник как «гипотеза», не подставляй фейковый link. - **Запрещён** HTML scrape Instagram и любые неофициальные API. Live-данные приходят только из Instagram Graph API: **Hashtag Search + `top_media` (primary)** и optional Business Discovery fallback (Backend, C-39). Soft-fail → mock — это нормально; не пытайся «добыть» посты сам. - Токены (`INSTAGRAM_ACCESS_TOKEN` / `INSTAGRAM_GRAPH_TOKEN` / `IG_ACCESS_TOKEN`) **никогда** не интерполируй в ответ, `feedbackLogs` или рассуждения. ### Mock / missing metrics (`sourceMode: \"mock\"` или нет live-полей) Работай как раньше: тренды и углы по брифу; источники без выдуманных URL. Опциональные live-поля (`liveHandles`, `observedPosts`) **не** обязательны. Поле `instagramHashtags` **всё равно обязательно** на carousel researcher path. ### Handle / hashtag config (имена env, не значения) | Key | Role | |-----|------| | `IG_OURS_USERNAME` | Our handle; default `mosarmclub` | | `IG_DEFAULT_HASHTAGS` | Optional override when topic empty (comma-separated bare names) | | `IG_COMPETITOR_USERNAMES` | **Optional fallback only** (Business Discovery). Не primary discovery | Primary discovery = hashtags from topic → Hashtag `top_media`. Секреты токена **не** документируй значениями и не читай в промпт. ### Output Базовый контракт + **required** `instagramHashtags` (carousel path): ```json { \"trends\": [\"…\"], \"audience\": \"…\", \"sources\": [{ \"label\": \"…\", \"url\": \"…\", \"hypothesis\": false }], \"briefForHookWriter\": \"…\", \"instagramHashtags\": { \"topic\": \"\", \"hashtags\": [\"armenianclub\", \"yerevan\", \"armenianfood\", \"guestnight\"], \"source\": \"deterministic_mapper\", \"emptyTopic\": true } } ``` Пример непустой темы: ```json { \"instagramHashtags\": { \"topic\": \"гостевой вечер\", \"hashtags\": [\"guestnight\", \"armenianclub\", \"yerevan\"], \"source\": \"deterministic_mapper\", \"emptyTopic\": false } } ``` Опционально при live context: ```json { \"liveHandles\": { \"ours\": \"mosarmclub\", \"competitors\": [\"…\"] }, \"observedPosts\": [ { \"username\": \"…\", \"permalink\": \"https://…\", \"likes\": 0, \"views\": 0, \"slideCount\": 1 } ] } ``` `observedPosts` — только посты из входа; числа копируй из `metrics` / `slideUrls`, не округляй «на глаз». `liveHandles.competitors` может быть пустым: primary discovery — hashtags, не ручной список. ## Skills - `.cursor/skills/content-pipeline-agents/SKILL.md` - `.cursor/skills/prompt-engineering/SKILL.md` - `.cursor/skills/ai-bridge/SKILL.md` - `.cursor/skills/rag-stack/SKILL.md` (если нужен retrieval) ## Plugins - `plugins/ai-bridge/PLUGINS.md` - `plugins/ai-bridge/cortana_retrieval_contract.py` (при Cortana/retrieval) ## MCP servers - `chrome-devtools` — проверка живых страниц/сети при исследовании (опционально; **не** для scrape IG) - `playwright` — снимки UI Studio / конкурентных сайтов (опционально; **не** для неофициального IG scrape) ## Default LLM model slot id `gpt-4o-mini` ## Notes Mock pipeline: `lib/jobs/mock-emitter.ts` agent `researcher`. Settings id: `researcher`. Worker skill: `workers/researcher/SKILL.md` (`researcher@v3`). Wave: C-38 (topic→hashtags packs) → C-39 (Graph hashtag feed) → C-40 (Studio UI)."
+          - generic [ref=f6e122]:
+            - generic [ref=f6e123]: Правила (SKILL)
+            - textbox "Правила (SKILL)" [ref=f6e124]: "# Researcher — разведка темы и источников **Version:** `researcher@v3` (C-38) ## Role Mesh-нода **The Researcher**. Собирает факты, тренды и углы подачи **до** хуков и сценария. Не рисует медиа, не публикует. Опирается на **live Instagram carousel** context, когда Backend передаёт посты с `sourceMode: \"live\"`. **Primary discovery (C-38):** topic → hashtags → Hashtag Search + `top_media` (реализация fetch — C-39). `IG_COMPETITOR_USERNAMES` / Business Discovery — **optional fallback only**. ## When Статус джобы `RESEARCHING`. Вход: `topic`, теги Launchpad (`В тренде`, сленг, спор…), язык клуба; опционально live/mock IG posts. ## Inputs | Поле | Обязательно | |------|-------------| | `topic` / URL | да (может быть пустой строкой → niche default hashtags) | | `locale` (`hy`/`ru`/`en`) | да | | `audience` / club context | желательно | | запреты из brandbook §1 | если загружен | | live/mock post context (`sourceMode`, metrics, handles, `slideUrls`) | опц. (C-39 hashtag feed) | Не запрашивай у админа competitor usernames/URLs — discovery по хэштегам темы. ## Handle / hashtag env (имена ключей) | Key | Role | |-----|------| | `IG_OURS_USERNAME` | Our handle; default `mosarmclub` | | `IG_DEFAULT_HASHTAGS` | Optional empty-topic override (comma-separated bare names) | | `IG_COMPETITOR_USERNAMES` | **Optional BD fallback only** — не primary | Token keys exist upstream (`INSTAGRAM_ACCESS_TOKEN` \\| `INSTAGRAM_GRAPH_TOKEN` \\| `IG_ACCESS_TOKEN`) — **never** read into skill output or logs. ## Topic → hashtags contract Deterministic mapper (Backend C-39; document parity here). `source` always `\"deterministic_mapper\"`. | Field | Rule | |-------|------| | `topic` | Input as trimmed string; empty → `\"\"` | | `hashtags` | 1–5 lowercase, no `#`, no spaces; Backend Graph uses **first 3** | | `source` | `\"deterministic_mapper\"` | | `emptyTopic` | `true` iff topic trim empty | **Empty topic defaults:** env `IG_DEFAULT_HASHTAGS` else `armenianclub`, `yerevan`, `armenianfood`, `guestnight`. **Non-empty:** normalize → alias/keyword map (RU/EN) → dedupe/stable order/cap ≤5; unknown → slugify + anchors `armenianclub`, `yerevan`. Alias table owns Backend (C-39). ## Outputs → `feedbackLogs.researcher` Compat (mock / legacy): ```json { \"summary\": \"2–4 предложения\", \"angles\": [\"угол 1\", \"угол 2\", \"угол 3\"], \"sources\": [{\"title\": \"\", \"url\": \"\", \"note\": \"\"}], \"keywords\": [], \"risks\": [\"спорные утверждения / нужна проверка\"], \"freshness\": \"ISO date or unknown\" } ``` Agent-pack JSON (mesh) — existing fields **plus required** `instagramHashtags` on carousel path: ```json { \"trends\": [], \"audience\": \"\", \"sources\": [], \"briefForHookWriter\": \"\", \"instagramHashtags\": { \"topic\": \"\", \"hashtags\": [\"armenianclub\", \"yerevan\", \"armenianfood\", \"guestnight\"], \"source\": \"deterministic_mapper\", \"emptyTopic\": true } } ``` Optional live fields: ```json { \"liveHandles\": { \"ours\": \"mosarmclub\", \"competitors\": [] }, \"observedPosts\": [ { \"username\": \"\", \"permalink\": \"\", \"likes\": 0, \"views\": 0, \"slideCount\": 1 } ] } ``` `competitors` may be empty — primary path is hashtag `top_media`, not the manual list. ## Practical skills 1. **Filter-first:** сначала явные факты и даты, потом «мнение». 2. **Нишевые углы:** минимум 3 разных угла (новичок / спор / локальный Ереван / тренд). 3. **Source hygiene:** без выдуманных URL; если источник не подтверждён — в `risks` / `hypothesis: true`. 4. **Hashtag hand-off:** отрази `instagramHashtags` по контракту; не выдумывай Graph fetch — Backend C-39. 5. **Live IG facts:** при `sourceMode: \"live\"` копируй likes/views/comments/slideCount/permalink из входа; не scrape HTML. 6. **Club voice prep:** отметить сленг/табу из brandbook, не генерировать оскорбления. 7. **Hand-off:** краткий brief для Hook Writer (не готовый пост). Script Writer later may receive real metrics context via cascade — do not invent them here. ## Rules - Не писать финальный хук или полный сценарий. - Не вызывать Designer / Publisher. - Писать только в `feedbackLogs`, не в `generatedMedia`. - При недостатке данных — `SufficiencySignal: insufficient` + что дозапросить у админа (не competitor nicknames). - Soft-fail live → mock: работай без `observedPosts`; не пытайся «добрать» IG неофициально. - **Forbidden:** Instagram HTML scrape / unofficial parsers. - Никаких access tokens в логах. ## Done when Hook Writer может выбрать угол без повторного поиска; `instagramHashtags` заполнен по контракту; при live — brief опирается на реальные observed posts (hashtag feed ± BD fallback)."
+          - button "Сохранить пакет агента" [ref=f6e125]
+        - region [ref=f6e126]:
+          - generic [ref=f6e127]:
+            - heading "LLM по агентам" [level=2] [ref=f6e128]
+            - paragraph [ref=f6e129]:
+              - text: Слоты соответствуют папке
+              - code [ref=f6e130]: agents/
+              - text: .
+          - list [ref=f6e138]:
+            - listitem [ref=f6e139]:
+              - generic [ref=f6e140]:
+                - paragraph [ref=f6e141]: Исследователь
+                - paragraph [ref=f6e142]: Тренды, источники, ниша
+              - generic [ref=f6e143]:
+                - generic [ref=f6e144]: Модель
+                - combobox "Модель для Исследователь" [ref=f6e145]:
+                  - option "GPT-4o mini" [selected]
+                  - option "GPT-4o"
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash"
+            - listitem [ref=f6e146]:
+              - generic [ref=f6e147]:
+                - paragraph [ref=f6e148]: Автор хуков
+                - paragraph [ref=f6e149]: Хуки и оценка вирусности
+              - generic [ref=f6e150]:
+                - generic [ref=f6e151]: Модель
+                - combobox "Модель для Автор хуков" [ref=f6e152]:
+                  - option "GPT-4o mini"
+                  - option "GPT-4o" [selected]
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash"
+            - listitem [ref=f6e153]:
+              - generic [ref=f6e154]:
+                - paragraph [ref=f6e155]: Сценарист
+                - paragraph [ref=f6e156]: Таймлайн / слайды сценария
+              - generic [ref=f6e157]:
+                - generic [ref=f6e158]: Модель
+                - combobox "Модель для Сценарист" [ref=f6e159]:
+                  - option "GPT-4o mini"
+                  - option "GPT-4o" [selected]
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash"
+            - listitem [ref=f6e160]:
+              - generic [ref=f6e161]:
+                - paragraph [ref=f6e162]: Аналитик
+                - paragraph [ref=f6e163]: Метрики → инсайты
+              - generic [ref=f6e164]:
+                - generic [ref=f6e165]: Модель
+                - combobox "Модель для Аналитик" [ref=f6e166]:
+                  - option "GPT-4o mini" [selected]
+                  - option "GPT-4o"
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash"
+            - listitem [ref=f6e167]:
+              - generic [ref=f6e168]:
+                - paragraph [ref=f6e169]: Дизайнер
+                - paragraph [ref=f6e170]: Визуал / бренд-кит
+              - generic [ref=f6e171]:
+                - generic [ref=f6e172]: Модель
+                - combobox "Модель для Дизайнер" [ref=f6e173]:
+                  - option "GPT-4o mini"
+                  - option "GPT-4o"
+                  - option "Claude Sonnet" [selected]
+                  - option "Gemini Flash"
+            - listitem [ref=f6e174]:
+              - generic [ref=f6e175]:
+                - paragraph [ref=f6e176]: Рендерер
+                - paragraph [ref=f6e177]: Remotion / HeyGen / Satori
+              - generic [ref=f6e178]:
+                - generic [ref=f6e179]: Модель
+                - combobox "Модель для Рендерер" [ref=f6e180]:
+                  - option "GPT-4o mini" [selected]
+                  - option "GPT-4o"
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash"
+            - listitem [ref=f6e181]:
+              - generic [ref=f6e182]:
+                - paragraph [ref=f6e183]: Издатель
+                - paragraph [ref=f6e184]: Публикация после HITL
+              - generic [ref=f6e185]:
+                - generic [ref=f6e186]: Модель
+                - combobox "Модель для Издатель" [ref=f6e187]:
+                  - option "GPT-4o mini" [selected]
+                  - option "GPT-4o"
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash"
+            - listitem [ref=f6e188]:
+              - generic [ref=f6e189]:
+                - paragraph [ref=f6e190]: Маршрутизатор
+                - paragraph [ref=f6e191]: Выбор модуля пайплайна
+              - generic [ref=f6e192]:
+                - generic [ref=f6e193]: Модель
+                - combobox "Модель для Маршрутизатор" [ref=f6e194]:
+                  - option "GPT-4o mini"
+                  - option "GPT-4o"
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash" [selected]
+        - region [ref=f6e132]:
+          - generic [ref=f6e133]:
+            - heading "Рилсы" [level=2] [ref=f6e134]
+            - paragraph [ref=f6e135]: Сколько карточек в dual-feed (Наши и Конкуренты).
+          - generic [ref=f6e195]:
+            - generic [ref=f6e196]:
+              - paragraph [ref=f6e197]: Отображение рилсов (количество на странице)
+              - paragraph [ref=f6e198]: От 4 до 48. По умолчанию 12.
+            - generic [ref=f6e199]:
+              - generic [ref=f6e200]: На странице
+              - spinbutton "Отображение рилсов (количество на странице)" [ref=f6e201]: "12"
+  - button "Open Next.js Dev Tools" [ref=f6e207] [cursor=pointer]
+  - alert [ref=f6e211]

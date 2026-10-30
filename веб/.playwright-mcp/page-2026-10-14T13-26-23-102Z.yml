@@ -1,0 +1,282 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary "Главная навигация" [ref=f1e3]:
+      - generic [ref=f1e6]:
+        - generic [ref=f1e7]: VERNATUN
+        - generic [ref=f1e8]: ARMENIAN CLUB
+      - navigation [ref=f1e10]:
+        - generic [ref=f1e11]:
+          - link "Студия" [ref=f1e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f1e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f1e37] [cursor=pointer]:
+            - /url: /settings
+          - link "Директор" [ref=f1e48] [cursor=pointer]:
+            - /url: /marketing
+      - generic [ref=f1e58]:
+        - paragraph [ref=f1e59]: Роль QA (локально)
+        - generic [ref=f1e60]:
+          - button "OWNER" [ref=f1e61]
+          - button "ADMIN" [ref=f1e62]
+      - button "Изменить ширину боковой панели" [ref=f1e63]
+    - main [ref=f1e65]:
+      - generic [ref=f1e66]:
+        - generic [ref=f1e67]:
+          - heading "Настройки" [level=1] [ref=f1e68]
+          - paragraph [ref=f1e69]: Дизайн, площадки, расписание и рилсы. Параметры разведки и модели агентов — в «Команда выпуска».
+        - complementary [ref=f1e70]:
+          - navigation [ref=f1e71]:
+            - generic [ref=f1e72]: Навигация
+            - list [ref=f1e73]:
+              - listitem [ref=f1e74]:
+                - button "Дизайн" [ref=f1e75]
+              - listitem [ref=f1e81]:
+                - button "Площадки" [ref=f1e82]
+              - listitem [ref=f1e87]:
+                - button "Расписание" [ref=f1e88]
+              - listitem [ref=f1e92]:
+                - button "Рилсы" [ref=f1e93]
+        - region [ref=f1e97]:
+          - heading "Дизайн" [level=2] [ref=f1e99]
+          - generic [ref=f1e126]:
+            - region [ref=f1e128]:
+              - generic [ref=f1e130]:
+                - group [ref=f1e131]:
+                  - button [ref=f1e132] [cursor=pointer]:
+                    - 'button "Accent #fbedaa #f9e584 #f7dd5e #F5D742 #c4ac35 #938128 #62561a #F5D742 Surface #989898 #6a6a6a #3c3c3c #1A1A1A #151515 #101010 #0a0a0a #1A1A1A Text #ffffff #ffffff #ffffff #FFFFFF #cccccc #999999 #666666 #FFFFFF Display Aa Heritage Geist Sans, Manrope, system-ui, sans-serif Body Aa Community Aa Geist Mono, ui-monospace, monospace Buttons Primary Ghost CTA Bars Icons" [active] [ref=f1e133]':
+                      - generic [ref=f1e134]:
+                        - generic [ref=f1e135]:
+                          - paragraph [ref=f1e136]: Accent
+                          - generic [ref=f1e137]:
+                            - generic "#fbedaa" [ref=f1e138]
+                            - generic "#f9e584" [ref=f1e139]
+                            - generic "#f7dd5e" [ref=f1e140]
+                            - generic "#F5D742" [ref=f1e141]
+                            - generic "#c4ac35" [ref=f1e142]
+                            - generic "#938128" [ref=f1e143]
+                            - generic "#62561a" [ref=f1e144]
+                          - paragraph [ref=f1e145]: "#F5D742"
+                        - generic [ref=f1e146]:
+                          - paragraph [ref=f1e147]: Surface
+                          - generic [ref=f1e148]:
+                            - generic "#989898" [ref=f1e149]
+                            - generic "#6a6a6a" [ref=f1e150]
+                            - generic "#3c3c3c" [ref=f1e151]
+                            - generic "#1A1A1A" [ref=f1e152]
+                            - generic "#151515" [ref=f1e153]
+                            - generic "#101010" [ref=f1e154]
+                            - generic "#0a0a0a" [ref=f1e155]
+                          - paragraph [ref=f1e156]: "#1A1A1A"
+                        - generic [ref=f1e157]:
+                          - paragraph [ref=f1e158]: Text
+                          - generic [ref=f1e159]:
+                            - generic "#ffffff" [ref=f1e160]
+                            - generic "#ffffff" [ref=f1e161]
+                            - generic "#ffffff" [ref=f1e162]
+                            - generic "#FFFFFF" [ref=f1e163]
+                            - generic "#cccccc" [ref=f1e164]
+                            - generic "#999999" [ref=f1e165]
+                            - generic "#666666" [ref=f1e166]
+                          - paragraph [ref=f1e167]: "#FFFFFF"
+                        - generic [ref=f1e168]:
+                          - paragraph [ref=f1e169]: Display
+                          - paragraph [ref=f1e170]: Aa
+                          - paragraph [ref=f1e171]: Heritage
+                          - paragraph [ref=f1e172]: Geist Sans, Manrope, system-ui, sans-serif
+                        - generic [ref=f1e173]:
+                          - paragraph [ref=f1e174]: Body
+                          - paragraph [ref=f1e175]: Aa
+                          - paragraph [ref=f1e176]: Community Aa
+                          - paragraph [ref=f1e177]: Geist Mono, ui-monospace, monospace
+                        - generic [ref=f1e178]:
+                          - paragraph [ref=f1e179]: Buttons
+                          - generic [ref=f1e180]:
+                            - generic [ref=f1e181]: Primary
+                            - generic [ref=f1e182]: Ghost
+                            - generic [ref=f1e183]: CTA
+                        - paragraph [ref=f1e187]: Bars
+                        - paragraph [ref=f1e202]: Icons
+                    - generic: Активный
+                - group [ref=f1e224]:
+                  - button [ref=f1e225] [cursor=pointer]:
+                    - 'button "Accent #fbd391 #f9c060 #f7ad30 #F59E0B #c47e09 #935f07 #623f04 #F59E0B Surface #96979a #68696d #393b41 #16181F #121319 #0d0e13 #090a0c #16181F Text #ffffff #ffffff #ffffff #FFFFFF #cccccc #999999 #666666 #FFFFFF Display Aa Heritage Geist Sans, Manrope, system-ui, sans-serif Body Aa Community Aa Manrope, system-ui, sans-serif Buttons Primary Ghost CTA Bars Icons" [ref=f1e226]':
+                      - generic [ref=f1e227]:
+                        - generic [ref=f1e228]:
+                          - paragraph [ref=f1e229]: Accent
+                          - generic [ref=f1e230]:
+                            - generic "#fbd391" [ref=f1e231]
+                            - generic "#f9c060" [ref=f1e232]
+                            - generic "#f7ad30" [ref=f1e233]
+                            - generic "#F59E0B" [ref=f1e234]
+                            - generic "#c47e09" [ref=f1e235]
+                            - generic "#935f07" [ref=f1e236]
+                            - generic "#623f04" [ref=f1e237]
+                          - paragraph [ref=f1e238]: "#F59E0B"
+                        - generic [ref=f1e239]:
+                          - paragraph [ref=f1e240]: Surface
+                          - generic [ref=f1e241]:
+                            - generic "#96979a" [ref=f1e242]
+                            - generic "#68696d" [ref=f1e243]
+                            - generic "#393b41" [ref=f1e244]
+                            - generic "#16181F" [ref=f1e245]
+                            - generic "#121319" [ref=f1e246]
+                            - generic "#0d0e13" [ref=f1e247]
+                            - generic "#090a0c" [ref=f1e248]
+                          - paragraph [ref=f1e249]: "#16181F"
+                        - generic [ref=f1e250]:
+                          - paragraph [ref=f1e251]: Text
+                          - generic [ref=f1e252]:
+                            - generic "#ffffff" [ref=f1e253]
+                            - generic "#ffffff" [ref=f1e254]
+                            - generic "#ffffff" [ref=f1e255]
+                            - generic "#FFFFFF" [ref=f1e256]
+                            - generic "#cccccc" [ref=f1e257]
+                            - generic "#999999" [ref=f1e258]
+                            - generic "#666666" [ref=f1e259]
+                          - paragraph [ref=f1e260]: "#FFFFFF"
+                        - generic [ref=f1e261]:
+                          - paragraph [ref=f1e262]: Display
+                          - paragraph [ref=f1e263]: Aa
+                          - paragraph [ref=f1e264]: Heritage
+                          - paragraph [ref=f1e265]: Geist Sans, Manrope, system-ui, sans-serif
+                        - generic [ref=f1e266]:
+                          - paragraph [ref=f1e267]: Body
+                          - paragraph [ref=f1e268]: Aa
+                          - paragraph [ref=f1e269]: Community Aa
+                          - paragraph [ref=f1e270]: Manrope, system-ui, sans-serif
+                        - generic [ref=f1e271]:
+                          - paragraph [ref=f1e272]: Buttons
+                          - generic [ref=f1e273]:
+                            - generic [ref=f1e274]: Primary
+                            - generic [ref=f1e275]: Ghost
+                            - generic [ref=f1e276]: CTA
+                        - paragraph [ref=f1e280]: Bars
+                        - paragraph [ref=f1e295]: Icons
+              - button "Предыдущий дизайн" [disabled]
+              - button "Следующий дизайн" [disabled]
+            - generic [ref=f1e317]:
+              - generic [ref=f1e318] [cursor=pointer]:
+                - generic [ref=f1e319]: дизайн.md
+                - button "дизайн.md" [ref=f1e323]
+              - generic [ref=f1e324] [cursor=pointer]:
+                - generic [ref=f1e325]: референс
+                - button "референс" [ref=f1e329]
+              - generic [ref=f1e330] [cursor=pointer]:
+                - generic [ref=f1e331]: новый дизайн
+                - button "новый дизайн" [ref=f1e336]
+              - button "Превью design.md" [ref=f1e337]
+            - generic [ref=f1e382]:
+              - button "Закрыть тюнер" [ref=f1e383]
+              - dialog "Quick Theme Tuner" [ref=f1e384]:
+                - generic [ref=f1e385]:
+                  - generic [ref=f1e386]:
+                    - heading "Quick Theme Tuner" [level=3] [ref=f1e387]
+                    - paragraph [ref=f1e388]: Dark Notes · live CSS vars
+                  - button "Закрыть" [ref=f1e389]
+                - generic [ref=f1e393]:
+                  - generic [ref=f1e395]:
+                    - generic [ref=f1e396]: cover
+                    - generic [ref=f1e397]: ՍՈՒՐՃԻ ԴՈԿՏՐԻՆԱ
+                    - paragraph [ref=f1e398]: Кофе на бегу — капитуляция
+                  - generic [ref=f1e410]:
+                    - generic [ref=f1e411]: body
+                    - generic [ref=f1e412]: 1. Ռիտուալը
+                    - paragraph [ref=f1e413]: паузы в реальности
+                    - generic [ref=f1e414]:
+                      - generic [ref=f1e415]: ✕
+                      - generic [ref=f1e416]: пауза
+                  - generic [ref=f1e420]:
+                    - generic [ref=f1e421]: cta
+                    - paragraph [ref=f1e422]: Готов замедлиться?
+                    - generic [ref=f1e423]: CTA
+                    - generic [ref=f1e424]: VERNATUN
+                - generic [ref=f1e429]:
+                  - generic [ref=f1e430] [cursor=pointer]:
+                    - generic [ref=f1e431]: Accent
+                    - textbox "Accent" [ref=f1e432]: "#f5d742"
+                  - generic [ref=f1e433] [cursor=pointer]:
+                    - generic [ref=f1e434]: Background
+                    - textbox "Background" [ref=f1e435]: "#121212"
+                  - generic [ref=f1e436] [cursor=pointer]:
+                    - generic [ref=f1e437]: Surface
+                    - textbox "Surface" [ref=f1e438]: "#1a1a1a"
+                  - generic [ref=f1e439] [cursor=pointer]:
+                    - generic [ref=f1e440]: Text
+                    - textbox "Text" [ref=f1e441]: "#ffffff"
+                - generic [ref=f1e442]:
+                  - generic [ref=f1e443]:
+                    - text: Accent
+                    - textbox "Accent" [ref=f1e444]: "#F5D742"
+                  - generic [ref=f1e445]:
+                    - text: Background
+                    - textbox "Background" [ref=f1e446]: "#121212"
+                  - generic [ref=f1e447]:
+                    - text: Surface
+                    - textbox "Surface" [ref=f1e448]: "#1A1A1A"
+                  - generic [ref=f1e449]:
+                    - text: Text
+                    - textbox "Text" [ref=f1e450]: "#FFFFFF"
+                - generic [ref=f1e451]:
+                  - button "Отмена" [ref=f1e452]
+                  - button "Сохранить" [ref=f1e453]
+          - button "Превью design.md" [ref=f1e101]
+        - region [ref=f1e105]:
+          - generic [ref=f1e106]:
+            - generic [ref=f1e107]:
+              - heading "Площадки публикации" [level=2] [ref=f1e108]
+              - paragraph [ref=f1e109]: Ключи API только в браузере. Зелёный блок — публицист может публиковать; красный — подключение не подтверждено.
+            - button "Добавить площадку" [ref=f1e110]
+          - list [ref=f1e341]:
+            - listitem [ref=f1e342]:
+              - generic [ref=f1e343]:
+                - paragraph [ref=f1e344]: Instagram · основной
+                - paragraph [ref=f1e345]: Instagram · нет связи · без ключа
+              - generic [ref=f1e346]:
+                - button "Проверить подключение" [ref=f1e347]
+                - button "Изменить" [ref=f1e348]
+                - button "Удалить" [ref=f1e349]
+            - listitem [ref=f1e350]:
+              - generic [ref=f1e351]:
+                - paragraph [ref=f1e352]: Telegram · канал
+                - paragraph [ref=f1e353]: Telegram · нет связи · без ключа
+              - generic [ref=f1e354]:
+                - button "Проверить подключение" [ref=f1e355]
+                - button "Изменить" [ref=f1e356]
+                - button "Удалить" [ref=f1e357]
+            - listitem [ref=f1e358]:
+              - generic [ref=f1e359]:
+                - paragraph [ref=f1e360]: YouTube
+                - paragraph [ref=f1e361]: YouTube · нет связи · без ключа
+              - generic [ref=f1e362]:
+                - button "Проверить подключение" [ref=f1e363]
+                - button "Изменить" [ref=f1e364]
+                - button "Удалить" [ref=f1e365]
+            - listitem [ref=f1e366]:
+              - generic [ref=f1e367]:
+                - paragraph [ref=f1e368]: Сайт Vernatun
+                - paragraph [ref=f1e369]: Сайт · нет связи · без ключа
+              - generic [ref=f1e370]:
+                - button "Проверить подключение" [ref=f1e371]
+                - button "Изменить" [ref=f1e372]
+                - button "Удалить" [ref=f1e373]
+        - generic [ref=f1e112]:
+          - generic [ref=f1e113]:
+            - generic [ref=f1e114]:
+              - heading "Расписание" [level=2] [ref=f1e115]
+              - paragraph [ref=f1e116]: Правила автозаполнения календаря публициста. Готовый контент встаёт в слоты по правилам; ручной перенос в календаре важнее правила.
+            - button "Создать правило" [ref=f1e117]
+          - list [ref=f1e118]:
+            - listitem [ref=f1e119]: Правил пока нет.
+        - region [ref=f1e120]:
+          - generic [ref=f1e121]:
+            - heading "Рилсы" [level=2] [ref=f1e122]
+            - paragraph [ref=f1e123]: Сколько карточек в dual-feed (Наши и Конкуренты).
+          - generic [ref=f1e374]:
+            - generic [ref=f1e375]:
+              - paragraph [ref=f1e376]: Отображение рилсов (количество на странице)
+              - paragraph [ref=f1e377]: От 4 до 48. По умолчанию 12.
+            - generic [ref=f1e378]:
+              - generic [ref=f1e379]: На странице
+              - spinbutton "Отображение рилсов (количество на странице)" [ref=f1e380]: "12"
+  - alert [ref=f1e381]

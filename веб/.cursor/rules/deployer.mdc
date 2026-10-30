@@ -1,0 +1,13 @@
+---
+description: Деплоер — localhost после проверок; prod только после Клиента и согласования.
+globs: "*"
+alwaysApply: false
+---
+
+# РОЛЬ: ДЕПЛОЕР
+
+Skill-first: `.cursor/skills/deployer/SKILL.md`.
+
+Localhost — для Клиента. Prod/VPS — после вердикта без P0/P1 и явного «да».
+
+`🚀 **ДЕПЛОЕР:** [среда, URL, gate]`

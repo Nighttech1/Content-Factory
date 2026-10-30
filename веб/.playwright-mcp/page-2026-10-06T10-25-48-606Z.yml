@@ -1,0 +1,95 @@
+- generic [ref=f5e2]:
+  - complementary "Главная навигация" [ref=f5e3]:
+    - generic [ref=f5e11]:
+      - generic [ref=f5e12]: VERN·ATUN
+      - generic [ref=f5e13]: Content Factory
+    - generic [ref=f5e14]:
+      - paragraph [ref=f5e15]: Пайплайны и ноды
+      - navigation [ref=f5e16]:
+        - generic [ref=f5e17]:
+          - generic [ref=f5e18]:
+            - link "Студия" [ref=f5e19] [cursor=pointer]:
+              - /url: /studio
+            - button "Свернуть модули Студии" [expanded] [ref=f5e26]
+          - list [ref=f5e30]:
+            - listitem [ref=f5e31]:
+              - link "Карусели Instagram (4:5)" [ref=f5e32] [cursor=pointer]:
+                - /url: /studio/carousel-engine
+            - listitem [ref=f5e33]:
+              - link "Полезные картинки & Инфографика" [ref=f5e34] [cursor=pointer]:
+                - /url: /studio/aesthetic-graphics
+            - listitem [ref=f5e35]:
+              - link "Мульт-Reels (2D сторителлинг)" [ref=f5e36] [cursor=pointer]:
+                - /url: /studio/cartoon-reels
+            - listitem [ref=f5e37]:
+              - link "HeyGen AI-Аватар Reels" [ref=f5e38] [cursor=pointer]:
+                - /url: /studio/heygen-reels
+        - link "Холст" [ref=f5e40] [cursor=pointer]:
+          - /url: /admin/mesh
+        - link "Расписание" [ref=f5e48] [cursor=pointer]:
+          - /url: /schedule
+        - link "Аналитика" [ref=f5e53] [cursor=pointer]:
+          - /url: /analytics
+        - link "Бренд-кит" [ref=f5e61] [cursor=pointer]:
+          - /url: /brand-kit
+        - link "Настройки" [ref=f5e70] [cursor=pointer]:
+          - /url: /settings
+    - generic [ref=f5e75]:
+      - paragraph [ref=f5e76]: Բարև · Vernatun
+      - generic [ref=f5e77]:
+        - paragraph [ref=f5e78]: Роль QA (локально)
+        - generic [ref=f5e79]:
+          - button "OWNER" [ref=f5e80]
+          - button "ADMIN" [ref=f5e81]
+  - main [ref=f5e83]:
+    - generic [ref=f5e84]:
+      - generic [ref=f5e85]:
+        - paragraph [ref=f5e86]: // Рабочая страница модуля
+        - heading "Полезные картинки & Инфографика" [level=1] [ref=f5e87]
+        - paragraph [ref=f5e88]: Читы, таблицы и quote-тайлы для Telegram и LinkedIn.
+      - generic [ref=f5e90]:
+        - generic [ref=f5e92]:
+          - generic [ref=f5e93]:
+            - heading "Наши" [level=2] [ref=f5e95]
+            - generic [ref=f5e96]: …
+          - tablist "Вкладки нашей ленты" [ref=f5e98]:
+            - tab "Опубликовано" [selected] [ref=f5e99]
+            - tab "Черновики" [ref=f5e101]
+        - generic [ref=f5e107]:
+          - generic [ref=f5e108]:
+            - heading "Конкуренты" [level=2] [ref=f5e110]
+            - generic [ref=f5e111]: …
+          - searchbox "Поиск каруселей конкурентов" [ref=f5e117]
+    - button "Закрыть панель генерации"
+    - complementary [aria-hidden] [ref=f5e122]:
+      - generic [ref=f5e123]:
+        - generic [ref=f5e124]:
+          - paragraph [ref=f5e125]: Generation Log
+          - heading [level=2] [ref=f5e126]: Agent Pipeline
+        - button [ref=f5e127]: Close
+      - generic [ref=f5e128]:
+        - generic [ref=f5e129]:
+          - generic [ref=f5e130]: Progress
+          - generic [ref=f5e131]: 0%
+        - progressbar [ref=f5e132]
+      - list [ref=f5e133]:
+        - listitem [ref=f5e134]:
+          - generic [ref=f5e137]:
+            - generic [ref=f5e138]: The Researcher
+            - generic [ref=f5e139]: Ожидание...
+        - listitem [ref=f5e140]:
+          - generic [ref=f5e143]:
+            - generic [ref=f5e144]: The Hook Writer
+            - generic [ref=f5e145]: Ожидание...
+        - listitem [ref=f5e146]:
+          - generic [ref=f5e149]:
+            - generic [ref=f5e150]: The Script Writer
+            - generic [ref=f5e151]: Ожидание...
+        - listitem [ref=f5e152]:
+          - generic [ref=f5e155]:
+            - generic [ref=f5e156]: The Designer
+            - generic [ref=f5e157]: Ожидание...
+        - listitem [ref=f5e158]:
+          - generic [ref=f5e161]:
+            - generic [ref=f5e162]: Pipeline
+            - generic [ref=f5e163]: Ожидание...

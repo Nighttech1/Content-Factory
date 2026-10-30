@@ -1,0 +1,21 @@
+---
+description: Backend — Next.js API, Prisma, BullMQ, SSE для Content Factory.
+globs: "**/*.{ts,tsx,prisma,sql,env*}"
+alwaysApply: false
+---
+
+# ROLE: Backend — Content Factory
+
+Skill-first:
+1. `.cursor/skills/backend/SKILL.md`
+2. `.cursor/skills/prisma-content-schema/SKILL.md`
+3. `.cursor/skills/safe-db-migrations/SKILL.md`
+4. `.cursor/skills/bullmq-job-queue/SKILL.md`
+5. `.cursor/skills/sse-job-stream/SKILL.md`
+6. Module workers → `content-module-sdk`
+7. `plugins/backend/PLUGINS.md`
+
+RBAC: `OWNER` vs `ADMIN` на API `/admin/mesh` и связанных telemetry endpoints.
+Тяжёлый рендер — только через очередь, не в request thread.
+
+`⚙️ **BACKEND:** [API/queue/schema; как проверить]`

@@ -1,0 +1,49 @@
+{
+  "project": "vernatun",
+  "content_id": "golden-armenian-language-city",
+  "contentType": "carousel",
+  "requested_slide_count": 3,
+  "idea": "Армянский язык живёт в городе: вывески, голоса на улице, диалект между домами — не музейный артефакт, а дыхание улицы",
+  "hook": "Язык дышит улицей?",
+  "tone": "vernatun",
+  "cta_type": 4,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Язык дышит улицей?",
+      "secondary_copy": "",
+      "swipe_trigger": "META: paradox — зритель хочет узнать, как язык может дышать и что это значит для города",
+      "visual_prompt": "urban_language street sign close-up charcoal texture, Armenian letters carved/painted on wood storefront, warm sodium street light from left, soft focus city blur behind, no purple grade, cinematic shallow depth",
+      "alt_text": "Армянская вывеска на городской улице"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "point",
+      "primary_copy": "Голос — это адрес",
+      "secondary_copy": "Диалект бабушки, акцент отца, слово соседа — каждый голос метит дом в городе. Язык — не учебник, это карта.",
+      "swipe_trigger": "META: proof beat — конкретика: язык = живая география, не грамматика",
+      "visual_prompt": "urban_language hand-drawn city map grid charcoal, Armenian letter nodes connected by warm amber lines, street corner silhouette overlay, telemetry gauge soft glow marking speech zones, no stock map app look",
+      "alt_text": "Карта голосов города с армянскими буквами"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta",
+      "primary_copy": "Сохрани голос",
+      "secondary_copy": "Лайк + сохранить — чтобы помнить, где дышит твой язык.",
+      "swipe_trigger": "META: soft end — CTA save; дальше листать не нужно",
+      "visual_prompt": "urban_language gold CTA button frame, Armenian letter watermark soft behind, street light warm accent only, city silhouette echo bottom, Vernatun mark tiny, premium editorial not purple pill",
+      "alt_text": "CTA сохранить голос города",
+      "cta_type": 4
+    }
+  ],
+  "caption": "Армянский язык — не в учебнике. На улице. В голосах. В домах. Vernatun.",
+  "hashtags": [
+    "#Vernatun",
+    "#АрмянскийЯзык",
+    "#ГородскойДиалект",
+    "#ЖивойЯзык",
+    "#Город"
+  ],
+  "promptForDesigner": "urban_language class: street signs + map + gold CTA; HTML/CSS-first 3×4:5; warm sodium light palette; no purple; ignore swipe_trigger paint"
+}

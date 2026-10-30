@@ -1,0 +1,46 @@
+[
+  [
+    "layered_default",
+    true
+  ],
+  [
+    "resolve",
+    "layered_html"
+  ],
+  [
+    "ban_text",
+    true
+  ],
+  [
+    "ban_logo",
+    true
+  ],
+  [
+    "sanitize_no_paint",
+    true
+  ],
+  [
+    "sanitize_has_ban",
+    true
+  ],
+  [
+    "assert_ok",
+    true
+  ],
+  [
+    "assert_bad",
+    true
+  ],
+  [
+    "zod_err",
+    "CarouselJsonParseError: Carousel JSON failed schema: requested_slide_count: Invalid input: expected number, received undefined"
+  ],
+  [
+    "zod_ok",
+    false
+  ],
+  [
+    "zod_reject_empty_secondary",
+    true
+  ]
+]

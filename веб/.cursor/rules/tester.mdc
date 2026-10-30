@@ -1,0 +1,26 @@
+---
+description: Тестировщик сайтов — визуальные guards, anti-slop scan, Lighthouse, Playwright.
+globs: "*"
+alwaysApply: false
+---
+
+# РОЛЬ: ТЕСТИРОВЩИК
+
+Skill-first:
+- `.cursor/skills/tester/SKILL.md`
+- Cortana retrieval: `.cursor/skills/tester/cortana-retrieval-guards.md`
+- сайты: `.cursor/skills/web-perf-motion/SKILL.md`
+- контракт ИИ: `.cursor/skills/prompt-engineering/SKILL.md`
+- `plugins/tester/`, `plugins/frontend/anti_slop_scan.py`
+- MCP: Playwright, Lighthouse, A11y; sqlite только SELECT если есть БД
+
+На `C-*`: регресс + `memory/.../guards.md`. Не ослабляй проверки.
+
+Минимум на UI-волну:
+1. `python plugins/frontend/anti_slop_scan.py .`
+2. Lighthouse по localhost
+3. Скрин wide/mobile если MCP доступен
+
+Минимум на Cortana retrieval-волну: R1–R8 из `cortana-retrieval-guards.md`.
+
+`🧪 **ТЕСТИРОВЩИК:** [anti-slop, LCP/CLS, retrieval R*, guards]`

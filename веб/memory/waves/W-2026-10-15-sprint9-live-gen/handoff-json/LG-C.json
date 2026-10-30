@@ -1,0 +1,46 @@
+{
+  "contentType": "carousel",
+  "requested_slide_count": 3,
+  "idea": "Наследие Vernatun — tip-pack intro + tip + tip/CTA",
+  "hook": "3 совета Vernatun",
+  "tone": "vernatun",
+  "cta_type": 1,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "3 совета *Vernatun*",
+      "secondary_copy": "Корни громче трендов — забери с собой",
+      "swipe_trigger": "META: tip-pack intro — swipe for tip 1",
+      "visual_prompt": "BLACK + bright yellow tip-pack INTRO background 4:5. Minimal high-contrast: pure black field, soft yellow corner glow, subtle warm heritage photo vignette of family roots or pomegranate at bottom edge OR clean empty black with yellow light only. NO frames filled with stacked numbers. NO empty placeholder rectangles with digit labels. Focal = atmosphere for a big overlay number \"3 tips\". ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, the word HTML, ESPRESSO, CTA, TIP, HOOK, stacked placeholder digits 1/2/CTA, UI chips, watermarks. Photoreal or clean graphic only. No purple.",
+      "alt_text": "Tip-pack intro Vernatun — 3 совета"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "body_slide",
+      "primary_copy": "Говори дома *чаще*",
+      "secondary_copy": "Один армянский разговор в день важнее идеального акцента.",
+      "swipe_trigger": "META: tip1 value — swipe for tip2 + comments",
+      "visual_prompt": "BLACK tip-card 4:5 with bright yellow accent. INSIDE a yellow rectangular frame: photoreal close-up of two people talking warmly at a home table (faces/hands visible) OR a clear yellow line-icon of conversation — NEVER an empty black rectangle, NEVER stacked 1/2/CTA labels inside the frame. Rest of field pure black. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, the word HTML, ESPRESSO, CTA, TIP, HOOK, stacked placeholder digits 1/2/CTA, UI chips, watermarks. Photoreal or clean graphic only. No purple.",
+      "alt_text": "Tip 1 Vernatun — говори дома чаще + фото/иконка"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta_slide",
+      "primary_copy": "Стол без *телефонов*",
+      "secondary_copy": "Какой tip заберёшь? Пиши в комментариях",
+      "swipe_trigger": "META: soft end after tip2 + comment CTA",
+      "visual_prompt": "BLACK tip-pack finale 4:5 with yellow accents. INSIDE a yellow rectangular frame: photoreal dinner table with phones face-down away from plates OR simple yellow phone-off icon — NEVER empty black rect, NEVER baked CTA/HTML letters. Soft dusk warmth optional. Leave lower air for overlay button. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, the word HTML, ESPRESSO, CTA, TIP, HOOK, stacked placeholder digits 1/2/CTA, UI chips, watermarks. Photoreal or clean graphic only. No purple.",
+      "alt_text": "Tip 2 + CTA: стол без телефонов",
+      "cta_type": 1
+    }
+  ],
+  "caption": "Корни громче трендов. Какой tip заберёшь? Пиши в комментариях 🖤💛",
+  "hashtags": [
+    "#Vernatun",
+    "#Наследие",
+    "#АрмянскиеКорни",
+    "#TipКарточки"
+  ],
+  "promptForDesigner": "REF-C tip_cards R3: cover=3 tips intro; tip slides=photo/icon IN frame; ZERO HTML/1/2/CTA placeholders."
+}

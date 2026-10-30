@@ -1,0 +1,247 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary "Главная навигация" [ref=f1e3]:
+      - generic [ref=f1e11]:
+        - generic [ref=f1e12]: VERN·ATUN
+        - generic [ref=f1e13]: Content Factory
+      - navigation [ref=f1e15]:
+        - generic [ref=f1e16]:
+          - link "Студия" [ref=f1e19] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f1e32] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f1e45] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f1e55] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f1e68] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f1e78]:
+        - paragraph [ref=f1e79]: Роль QA (локально)
+        - generic [ref=f1e80]:
+          - button "OWNER" [ref=f1e81]
+          - button "ADMIN" [ref=f1e82]
+      - button "Изменить ширину боковой панели" [ref=f1e83]
+    - main [ref=f1e85]:
+      - generic [ref=f1e86]:
+        - generic [ref=f1e87]:
+          - generic [ref=f1e88]:
+            - heading "Рилс" [level=1] [ref=f1e181]
+            - button "Создать" [ref=f1e182]
+          - paragraph [ref=f1e90]: "Короткие вертикальные ролики 9:16 под Reels и Shorts: хук, сценарий и монтажный ритм под бренд клуба."
+        - generic [ref=f1e91]:
+          - generic [ref=f1e184]: Онлайн · Instagram
+          - generic [ref=f1e92]:
+            - generic [ref=f1e93]:
+              - generic [ref=f1e94]:
+                - generic [ref=f1e95]:
+                  - heading "Наши" [level=2] [ref=f1e97]
+                  - generic [ref=f1e98]: "0"
+                - tablist "Вкладки нашей ленты" [ref=f1e100]:
+                  - tab "Опубликовано" [selected] [ref=f1e101]
+                  - tab "Черновики" [ref=f1e103]
+              - paragraph [ref=f1e187]: Пока нет наших постов
+            - generic [ref=f1e108]:
+              - generic [ref=f1e109]:
+                - generic [ref=f1e110]:
+                  - heading "Конкуренты" [level=2] [ref=f1e112]
+                  - generic [ref=f1e113]: "12"
+                - searchbox "Поиск конкурентов" [ref=f1e119]
+              - generic [ref=f1e120]:
+                - article [ref=f1e188]:
+                  - generic [ref=f1e189]:
+                    - generic [ref=f1e191]: Конкуренты
+                    - button "Смотреть" [ref=f1e193]
+                  - generic [ref=f1e197]:
+                    - generic [ref=f1e198]:
+                      - heading "All Armenian clubs in Argentina have a « parrilla » or barbecue area, for families or groups of friends willing to sp…" [level=3] [ref=f1e199]
+                      - paragraph [ref=f1e200]: "@littlearmenias"
+                    - generic [ref=f1e201]:
+                      - generic "Просмотры" [ref=f1e202]: 283K просмотры
+                      - generic "Лайки" [ref=f1e203]: 3.3K лайки
+                      - generic "Комментарии" [ref=f1e204]: 36 комм.
+                    - button "Разбор" [ref=f1e205]
+                - article [ref=f1e206]:
+                  - generic [ref=f1e207]:
+                    - generic [ref=f1e209]: Конкуренты
+                    - button "Смотреть" [ref=f1e211]
+                  - generic [ref=f1e215]:
+                    - generic [ref=f1e216]:
+                      - heading "Today was great! Thank you to everyone who stopped by ❤️💙🧡" [level=3] [ref=f1e217]
+                      - paragraph [ref=f1e218]: "@ghs_armenianclub"
+                    - generic [ref=f1e219]:
+                      - generic "Просмотры" [ref=f1e220]: 18K просмотры
+                      - generic "Лайки" [ref=f1e221]: 352 лайки
+                      - generic "Комментарии" [ref=f1e222]: 6 комм.
+                    - button "Разбор" [ref=f1e223]
+                - article [ref=f1e224]:
+                  - generic [ref=f1e225]:
+                    - generic [ref=f1e227]: Конкуренты
+                    - button "Смотреть" [ref=f1e229]
+                  - generic [ref=f1e233]:
+                    - generic [ref=f1e234]:
+                      - 'heading "Vardges Hakobyan Klarnet #klarnet #klarnetportal #erger #rabiz #rabiz_erger #music #armenia🇦🇲 #armenianclub" [level=3] [ref=f1e235]'
+                      - paragraph [ref=f1e236]: "@h_vardges"
+                    - generic [ref=f1e237]:
+                      - generic "Просмотры" [ref=f1e238]: 16K просмотры
+                      - generic "Лайки" [ref=f1e239]: 543 лайки
+                      - generic "Комментарии" [ref=f1e240]: 5 комм.
+                    - button "Разбор" [ref=f1e241]
+                - article [ref=f1e242]:
+                  - generic [ref=f1e243]:
+                    - generic [ref=f1e245]: Конкуренты
+                    - button "Смотреть" [ref=f1e247]
+                  - generic [ref=f1e251]:
+                    - generic [ref=f1e252]:
+                      - heading "There are a lot of songs I want to here when partying in Armenia 🇦🇲 - Yerevan" [level=3] [ref=f1e253]
+                      - paragraph [ref=f1e254]: "@_teekhay_"
+                    - generic [ref=f1e255]:
+                      - generic "Просмотры" [ref=f1e256]: 8.4K просмотры
+                      - generic "Лайки" [ref=f1e257]: 992 лайки
+                      - generic "Комментарии" [ref=f1e258]: 12 комм.
+                    - button "Разбор" [ref=f1e259]
+                - article [ref=f1e260]:
+                  - generic [ref=f1e261]:
+                    - generic [ref=f1e263]: Конкуренты
+                    - button "Смотреть" [ref=f1e265]
+                  - generic [ref=f1e269]:
+                    - generic [ref=f1e270]:
+                      - heading "@tabligh.vipalice" [level=3] [ref=f1e271]
+                      - paragraph [ref=f1e272]: "@tabligh.vipalice"
+                    - generic [ref=f1e273]:
+                      - generic "Просмотры" [ref=f1e274]: 7.2K просмотры
+                      - generic "Лайки" [ref=f1e275]: 662 лайки
+                      - generic "Комментарии" [ref=f1e276]: 16 комм.
+                    - button "Разбор" [ref=f1e277]
+                - article [ref=f1e278]:
+                  - generic [ref=f1e279]:
+                    - generic [ref=f1e281]: Конкуренты
+                    - button "Смотреть" [ref=f1e283]
+                  - generic [ref=f1e287]:
+                    - generic [ref=f1e288]:
+                      - heading "Capturing the dynamic spirit of today’s Cultural Day, hosted by the Armenian Club! 🇦🇲💃" [level=3] [ref=f1e289]
+                      - paragraph [ref=f1e290]: "@clublibanoarmenien.usj"
+                    - generic [ref=f1e291]:
+                      - generic "Просмотры" [ref=f1e292]: 4.7K просмотры
+                      - generic "Лайки" [ref=f1e293]: 103 лайки
+                      - generic "Комментарии" [ref=f1e294]: 20 комм.
+                    - button "Разбор" [ref=f1e295]
+                - article [ref=f1e296]:
+                  - generic [ref=f1e297]:
+                    - generic [ref=f1e299]: Конкуренты
+                    - button "Смотреть" [ref=f1e301]
+                  - generic [ref=f1e305]:
+                    - generic [ref=f1e306]:
+                      - heading "Our Student Clubs joined together to spread Christmas cheer all over campus! Going class to class, they led the entir…" [level=3] [ref=f1e307]
+                      - paragraph [ref=f1e308]: "@chamlianarmenianschoolofficial"
+                    - generic [ref=f1e309]:
+                      - generic "Просмотры" [ref=f1e310]: 4.5K просмотры
+                      - generic "Лайки" [ref=f1e311]: 106 лайки
+                      - generic "Комментарии" [ref=f1e312]: 0 комм.
+                    - button "Разбор" [ref=f1e313]
+                - article [ref=f1e314]:
+                  - generic [ref=f1e315]:
+                    - generic [ref=f1e317]: Конкуренты
+                    - button "Смотреть" [ref=f1e319]
+                  - generic [ref=f1e323]:
+                    - generic [ref=f1e324]:
+                      - heading "Շամլեան Ազգային Վարժարանի Հայկական Ակումբի խօսքը ի յիշատակ Արցախեան երկրորդ պատերազմի տարելիցին։ 🇦🇲" [level=3] [ref=f1e325]
+                      - paragraph [ref=f1e326]: "@chamlianarmenianschoolofficial"
+                    - generic [ref=f1e327]:
+                      - generic "Просмотры" [ref=f1e328]: 4.1K просмотры
+                      - generic "Лайки" [ref=f1e329]: 160 лайки
+                      - generic "Комментарии" [ref=f1e330]: 10 комм.
+                    - button "Разбор" [ref=f1e331]
+                - article [ref=f1e332]:
+                  - generic [ref=f1e333]:
+                    - generic [ref=f1e335]: Конкуренты
+                    - button "Смотреть" [ref=f1e337]
+                  - generic [ref=f1e341]:
+                    - generic [ref=f1e342]:
+                      - heading "Snippets from our annual Christmas Dinner ❤️❤️" [level=3] [ref=f1e343]
+                      - paragraph [ref=f1e344]: "@lahc_aub"
+                    - generic [ref=f1e345]:
+                      - generic "Просмотры" [ref=f1e346]: 3.2K просмотры
+                      - generic "Лайки" [ref=f1e347]: 66 лайки
+                      - generic "Комментарии" [ref=f1e348]: 9 комм.
+                    - button "Разбор" [ref=f1e349]
+                - article [ref=f1e350]:
+                  - generic [ref=f1e351]:
+                    - generic [ref=f1e353]: Конкуренты
+                    - button "Смотреть" [ref=f1e355]
+                  - generic [ref=f1e359]:
+                    - generic [ref=f1e360]:
+                      - heading "AK BBQ 2024" [level=3] [ref=f1e361]
+                      - paragraph [ref=f1e362]: "@nellimovs"
+                    - generic [ref=f1e363]:
+                      - generic "Просмотры" [ref=f1e364]: 3.1K просмотры
+                      - generic "Лайки" [ref=f1e365]: 137 лайки
+                      - generic "Комментарии" [ref=f1e366]: 2 комм.
+                    - button "Разбор" [ref=f1e367]
+                - article [ref=f1e368]:
+                  - generic [ref=f1e369]:
+                    - generic [ref=f1e371]: Конкуренты
+                    - button "Смотреть" [ref=f1e373]
+                  - generic [ref=f1e377]:
+                    - generic [ref=f1e378]:
+                      - heading "Unity fest x HSE Armenian club 🥺🫶🇦🇲" [level=3] [ref=f1e379]
+                      - paragraph [ref=f1e380]: "@_.yourserendipity._"
+                    - generic [ref=f1e381]:
+                      - generic "Просмотры" [ref=f1e382]: 2.6K просмотры
+                      - generic "Лайки" [ref=f1e383]: 58 лайки
+                      - generic "Комментарии" [ref=f1e384]: 5 комм.
+                    - button "Разбор" [ref=f1e385]
+                - article [ref=f1e386]:
+                  - generic [ref=f1e387]:
+                    - generic [ref=f1e389]: Конкуренты
+                    - button "Смотреть" [ref=f1e391]
+                  - generic [ref=f1e395]:
+                    - generic [ref=f1e396]:
+                      - heading "Armenian Club Interview ❤️🇦🇲" [level=3] [ref=f1e397]
+                      - paragraph [ref=f1e398]: "@cmhs_armenianclub"
+                    - generic [ref=f1e399]:
+                      - generic "Просмотры" [ref=f1e400]: 2.1K просмотры
+                      - generic "Лайки" [ref=f1e401]: 102 лайки
+                      - generic "Комментарии" [ref=f1e402]: 4 комм.
+                    - button "Разбор" [ref=f1e403]
+      - button "Закрыть панель генерации"
+      - complementary [aria-hidden] [ref=f1e124]:
+        - generic [ref=f1e125]:
+          - generic [ref=f1e126]:
+            - paragraph [ref=f1e127]: Журнал генерации
+            - heading [level=2] [ref=f1e128]: Конвейер агентов
+          - button [ref=f1e129]: Закрыть
+        - generic [ref=f1e130]:
+          - generic [ref=f1e131]:
+            - generic [ref=f1e132]: Прогресс
+            - generic [ref=f1e133]: 0%
+          - progressbar [ref=f1e134]
+        - list [ref=f1e135]:
+          - listitem [ref=f1e136]:
+            - generic [ref=f1e139]:
+              - generic [ref=f1e140]: Исследователь
+              - generic [ref=f1e141]: Ожидание...
+          - listitem [ref=f1e142]:
+            - generic [ref=f1e145]:
+              - generic [ref=f1e146]: Автор хуков
+              - generic [ref=f1e147]: Ожидание...
+          - listitem [ref=f1e148]:
+            - generic [ref=f1e151]:
+              - generic [ref=f1e152]: Сценарист
+              - generic [ref=f1e153]: Ожидание...
+          - listitem [ref=f1e154]:
+            - generic [ref=f1e157]:
+              - generic [ref=f1e158]: Дизайнер
+              - generic [ref=f1e159]: Ожидание...
+          - listitem [ref=f1e160]:
+            - generic [ref=f1e163]:
+              - generic [ref=f1e164]: Конвейер
+              - generic [ref=f1e165]: Ожидание...
+        - generic [ref=f1e167]:
+          - textbox [disabled] [ref=f1e168]:
+            - /placeholder: Заметка активному шагу…
+          - group [ref=f1e169]:
+            - button [disabled] [ref=f1e170]
+            - button [disabled] [ref=f1e175]
+  - button "Open Next.js Dev Tools" [ref=f1e409] [cursor=pointer]
+  - alert [ref=f1e413]

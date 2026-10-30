@@ -1,0 +1,82 @@
+- generic [ref=f10e2]:
+  - complementary "Главная навигация" [ref=f10e3]:
+    - generic [ref=f10e11]:
+      - generic [ref=f10e12]: VERN·ATUN
+      - generic [ref=f10e13]: Content Factory
+    - navigation [ref=f10e15]:
+      - generic [ref=f10e16]:
+        - link "Студия" [ref=f10e19] [cursor=pointer]:
+          - /url: /studio
+        - link "Команда выпуска" [ref=f10e32] [cursor=pointer]:
+          - /url: /admin/mesh
+        - link "Расписание" [ref=f10e45] [cursor=pointer]:
+          - /url: /schedule
+        - link "Аналитика" [ref=f10e55] [cursor=pointer]:
+          - /url: /analytics
+        - link "Настройки" [ref=f10e68] [cursor=pointer]:
+          - /url: /settings
+    - generic [ref=f10e78]:
+      - paragraph [ref=f10e79]: Роль QA (локально)
+      - generic [ref=f10e80]:
+        - button "OWNER" [ref=f10e81]
+        - button "ADMIN" [ref=f10e82]
+    - button "Изменить ширину боковой панели" [ref=f10e83]
+  - main [ref=f10e85]:
+    - generic [ref=f10e86]:
+      - generic [ref=f10e87]:
+        - heading "custom-reels" [level=1] [ref=f10e89]
+        - paragraph [ref=f10e90]: Загрузка модуля…
+      - generic [ref=f10e92]:
+        - generic [ref=f10e94]:
+          - generic [ref=f10e95]:
+            - heading "Наши" [level=2] [ref=f10e97]
+            - generic [ref=f10e98]: "0"
+          - tablist "Вкладки нашей ленты" [ref=f10e100]:
+            - tab "Опубликовано" [selected] [ref=f10e101]
+            - tab "Черновики" [ref=f10e103]
+        - generic [ref=f10e112]:
+          - generic [ref=f10e113]:
+            - heading "Конкуренты" [level=2] [ref=f10e115]
+            - generic [ref=f10e116]: "0"
+          - searchbox "Поиск конкурентов" [ref=f10e122]
+    - button "Закрыть панель генерации"
+    - complementary [aria-hidden] [ref=f10e130]:
+      - generic [ref=f10e131]:
+        - generic [ref=f10e132]:
+          - paragraph [ref=f10e133]: Журнал генерации
+          - heading [level=2] [ref=f10e134]: Конвейер агентов
+        - button [ref=f10e135]: Закрыть
+      - generic [ref=f10e136]:
+        - generic [ref=f10e137]:
+          - generic [ref=f10e138]: Прогресс
+          - generic [ref=f10e139]: 0%
+        - progressbar [ref=f10e140]
+      - list [ref=f10e141]:
+        - listitem [ref=f10e142]:
+          - generic [ref=f10e145]:
+            - generic [ref=f10e146]: Исследователь
+            - generic [ref=f10e147]: Ожидание...
+        - listitem [ref=f10e148]:
+          - generic [ref=f10e151]:
+            - generic [ref=f10e152]: Автор хуков
+            - generic [ref=f10e153]: Ожидание...
+        - listitem [ref=f10e154]:
+          - generic [ref=f10e157]:
+            - generic [ref=f10e158]: Сценарист
+            - generic [ref=f10e159]: Ожидание...
+        - listitem [ref=f10e160]:
+          - generic [ref=f10e163]:
+            - generic [ref=f10e164]: Дизайнер
+            - generic [ref=f10e165]: Ожидание...
+        - listitem [ref=f10e166]:
+          - generic [ref=f10e169]:
+            - generic [ref=f10e170]: Конвейер
+            - generic [ref=f10e171]: Ожидание...
+      - generic [ref=f10e172]:
+        - generic [ref=f10e173]:
+          - textbox [disabled] [ref=f10e174]:
+            - /placeholder: Заметка активному шагу…
+          - group [ref=f10e175]:
+            - button [disabled] [ref=f10e176]
+            - button [disabled] [ref=f10e181]
+        - paragraph [ref=f10e186]: Голос недоступен — введите правку текстом

@@ -1,0 +1,52 @@
+- generic [ref=f2e2]:
+  - complementary "Главная навигация" [ref=f2e3]:
+    - generic [ref=f2e6]:
+      - generic [ref=f2e7]: VERNATUN
+      - generic [ref=f2e8]: ARMENIAN CLUB
+    - navigation [ref=f2e10]:
+      - generic [ref=f2e11]:
+        - link "Студия" [ref=f2e14] [cursor=pointer]:
+          - /url: /studio
+        - link "Расписание" [ref=f2e27] [cursor=pointer]:
+          - /url: /schedule
+        - link "Настройки" [ref=f2e37] [cursor=pointer]:
+          - /url: /settings
+        - link "Директор" [ref=f2e48] [cursor=pointer]:
+          - /url: /marketing
+    - generic [ref=f2e58]:
+      - paragraph [ref=f2e59]: Роль QA (локально)
+      - generic [ref=f2e60]:
+        - button "OWNER" [ref=f2e61]
+        - button "ADMIN" [ref=f2e62]
+    - button "Изменить ширину боковой панели" [ref=f2e63]
+  - main [ref=f2e65]:
+    - generic [ref=f2e66]:
+      - generic [ref=f2e67]:
+        - heading "custom-reels" [level=1] [ref=f2e69]
+        - paragraph [ref=f2e70]: Загрузка модуля…
+      - generic [ref=f2e72]:
+        - generic [ref=f2e74]:
+          - generic [ref=f2e75]:
+            - heading "Наши" [level=2] [ref=f2e76]
+            - generic [ref=f2e77]: "0"
+          - generic [ref=f2e79]:
+            - tablist "Вкладки нашей ленты" [ref=f2e80]:
+              - tab "Опубликовано" [selected] [ref=f2e81]
+              - tab "Черновики" [ref=f2e83]
+            - generic [ref=f2e84]:
+              - button "Сортировка" [ref=f2e86]
+              - button "Фильтр" [ref=f2e91]
+              - searchbox "Поиск наших постов" [ref=f2e98]
+        - generic [ref=f2e107]:
+          - generic [ref=f2e108]:
+            - heading "Конкуренты" [level=2] [ref=f2e109]
+            - generic [ref=f2e110]: "0"
+          - generic [ref=f2e112]:
+            - tablist "Конкуренты или доски" [ref=f2e113]:
+              - tab "Конкуренты" [selected] [ref=f2e114]
+              - tab "Доски" [ref=f2e117]
+            - generic [ref=f2e127]:
+              - button "Сортировка" [ref=f2e129]
+              - button "Фильтр" [ref=f2e134]
+              - button "Загрузить" [disabled] [ref=f2e137]
+              - searchbox "Поиск конкурентов" [ref=f2e145]

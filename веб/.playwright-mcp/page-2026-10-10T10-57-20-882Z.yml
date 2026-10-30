@@ -1,0 +1,138 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary "Главная навигация" [ref=f1e3]:
+      - generic [ref=f1e6]:
+        - generic [ref=f1e7]: VERNATUN
+        - generic [ref=f1e8]: ARMENIAN CLUB
+      - navigation [ref=f1e10]:
+        - generic [ref=f1e11]:
+          - link "Студия" [ref=f1e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f1e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f1e37] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f1e47]:
+        - paragraph [ref=f1e48]: Роль QA (локально)
+        - generic [ref=f1e49]:
+          - button "OWNER" [ref=f1e50]
+          - button "ADMIN" [ref=f1e51]
+      - button "Изменить ширину боковой панели" [ref=f1e52]
+    - main [ref=f1e54]:
+      - generic [ref=f1e167]:
+        - heading "Команда выпуска" [level=1] [ref=f1e168]
+        - generic [ref=f1e169]:
+          - generic [ref=f1e170]:
+            - generic [ref=f1e171]:
+              - heading "Команда выпуска" [level=1] [ref=f1e172]
+              - paragraph [ref=f1e173]: Выберите пайплайн канала и смотрите, как агенты связаны на холсте.
+            - tablist "Пайплайн вида контента" [ref=f1e175]:
+              - group [ref=f1e176]:
+                - button "Карусели Instagram (4:5)" [ref=f1e177] [cursor=pointer]
+                - button "Полезные картинки & Инфографика" [ref=f1e184] [cursor=pointer]
+                - button "Мульт-Reels (2D сторителлинг)" [ref=f1e193] [cursor=pointer]
+                - button "HeyGen AI-Аватар Reels" [ref=f1e199] [cursor=pointer]
+                - button "Статьи на сайт" [ref=f1e205] [cursor=pointer]
+                - button "Статьи в TG" [ref=f1e211] [cursor=pointer]
+                - button "Рилс" [ref=f1e217] [cursor=pointer]
+                - button "Нарезки с видео в рилсы" [ref=f1e225] [cursor=pointer]
+                - button "Информационное видео" [ref=f1e234] [cursor=pointer]
+          - application [ref=f1e240]:
+            - generic [ref=f1e242]:
+              - generic:
+                - generic:
+                  - img:
+                    - group "Edge from user to razbor" [ref=f1e397] [cursor=pointer]
+                  - img:
+                    - group "Edge from razbor to copywriter"
+                  - img:
+                    - group "Edge from copywriter to designer"
+                  - img:
+                    - group "Edge from designer to publisher"
+                  - img:
+                    - group "Edge from scout to analyst"
+                  - img:
+                    - group "Edge from analyst to team-trainer"
+                  - img:
+                    - group "Edge from team-trainer to razbor" [ref=f1e400] [cursor=pointer]
+                  - img:
+                    - group "Edge from team-trainer to copywriter" [ref=f1e403] [cursor=pointer]
+                  - img:
+                    - group "Edge from team-trainer to designer" [ref=f1e406] [cursor=pointer]
+                  - img:
+                    - group "Edge from team-trainer to publisher" [ref=f1e409] [cursor=pointer]
+                - generic:
+                  - generic: запрос
+                  - generic: разбор
+                  - generic: сценарий
+                  - generic: медиа
+                  - generic: фильтр
+                  - generic: выводы
+                - generic:
+                  - group [ref=f1e258] [cursor=pointer]:
+                    - generic [ref=f1e260]:
+                      - generic [ref=f1e261]: Пользователь
+                      - paragraph [ref=f1e270]: "Сделай карусель про гостевой вечер: 5 слайдов, тёплый тон клуба, CTA «забронировать стол»."
+                  - group [ref=f1e272] [cursor=pointer]:
+                    - generic [ref=f1e273]: Разборщик
+                  - group [ref=f1e288] [cursor=pointer]:
+                    - generic [ref=f1e289]: Копирайтер каруселей
+                  - group [ref=f1e303] [cursor=pointer]:
+                    - generic [ref=f1e304]: Дизайнер карусели
+                  - group [ref=f1e322] [cursor=pointer]:
+                    - generic [ref=f1e323]: Публицист
+                  - group [ref=f1e338] [cursor=pointer]:
+                    - generic [ref=f1e339]: Скаут
+                  - group [ref=f1e355] [cursor=pointer]:
+                    - generic [ref=f1e356]: Аналитик
+                  - group [active] [ref=f1e368] [cursor=pointer]:
+                    - generic [ref=f1e369]: Тренер
+          - 'complementary "Инспектор: Тренер" [ref=f1e412]':
+            - separator "Изменить ширину инспектора" [ref=f1e413]
+            - generic [ref=f1e414]:
+              - generic [ref=f1e427]:
+                - heading "Тренер" [level=2] [ref=f1e428]
+                - generic [ref=f1e429]: Усиление команды
+                - generic [ref=f1e430]:
+                  - checkbox "Active" [checked] [ref=f1e431]
+                  - text: Active
+              - button "Закрыть инспектор" [ref=f1e432]
+            - generic [ref=f1e436]:
+              - generic [ref=f1e437]:
+                - heading "Skills" [level=3] [ref=f1e438]
+                - list [ref=f1e439]:
+                  - listitem [ref=f1e440]:
+                    - generic [ref=f1e441]: trainer
+                    - button "Удалить trainer" [ref=f1e442]: ×
+                - textbox "Добавить skill · Enter" [ref=f1e443]
+              - generic [ref=f1e444]:
+                - heading "System prompt" [level=3] [ref=f1e445]
+                - textbox [ref=f1e446]: По заключению аналитика предлагай обновления skills/rules команды выпуска. Apply только после HITL.
+              - generic [ref=f1e447]:
+                - heading "Rules" [level=3] [ref=f1e448]
+                - list [ref=f1e449]:
+                  - listitem [ref=f1e450]:
+                    - generic [ref=f1e451]: Патчи только через HITL «Согласовано»
+                    - button "Удалить правило" [ref=f1e452]: ×
+                  - listitem [ref=f1e453]:
+                    - generic [ref=f1e454]: Не подменять Скаута
+                    - button "Удалить правило" [ref=f1e455]: ×
+                - textbox "Добавить rule · Enter" [ref=f1e456]
+              - generic [ref=f1e457]:
+                - heading "Model config" [level=3] [ref=f1e458]
+                - generic [ref=f1e459]:
+                  - text: Model
+                  - combobox "Model" [ref=f1e460]:
+                    - option "GPT-4o"
+                    - option "GPT-4o mini"
+                    - option "Claude Sonnet" [selected]
+                    - option "Claude Haiku"
+                - generic [ref=f1e461]:
+                  - text: Temperature · 0.45
+                  - slider "Temperature · 0.45" [ref=f1e462]: "0.45"
+              - paragraph [ref=f1e463]: Тренер предлагает обновления skills/rules; apply только после HITL «Согласовано».
+            - generic [ref=f1e464]:
+              - button "Reset" [ref=f1e465]
+              - button "Save" [ref=f1e467]
+  - button "Open Next.js Dev Tools" [ref=f1e393] [cursor=pointer]
+  - alert [ref=f1e166]

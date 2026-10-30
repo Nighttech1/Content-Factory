@@ -1,0 +1,46 @@
+{
+  "contentType": "carousel",
+  "requested_slide_count": 3,
+  "idea": "Ночной Ереван: огни, Cascade, тёплый воздух — Vernatun как publisher",
+  "hook": "Город спит?",
+  "tone": "vernatun",
+  "cta_type": 4,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Город *спит*?",
+      "secondary_copy": "Ереван ночь",
+      "swipe_trigger": "META: curiosity — swipe for yerevan_night value beat",
+      "visual_prompt": "CINEMATIC full-bleed photograph: Yerevan night skyline Cascade steps warm sodium lights, shallow depth, premium editorial mood. FULL-BLEED photoreal/cinematic hero image. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, HTML, CTA, TIP, HOOK, stacked placeholder digits. Photoreal or cinematic illustration only. No purple glow.",
+      "alt_text": "Cover: Ереван ночь"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "body_slide",
+      "primary_copy": "Огни Cascade *молчат*",
+      "secondary_copy": "Пока кто-то говорит по-армянски — город живой.",
+      "swipe_trigger": "META: value beat — swipe for CTA",
+      "visual_prompt": "CINEMATIC street scene photograph: wet asphalt reflections, soft bokeh neon amber, empty plaza at night Armenia. CINEMATIC photograph illustration, photoreal scene. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, HTML, CTA, TIP, HOOK, stacked placeholder digits. Photoreal or cinematic illustration only. No purple glow.",
+      "alt_text": "Body: Ереван ночь"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta_slide",
+      "primary_copy": "Сохрани *ночь*",
+      "secondary_copy": "Лайк + сохранить — Ереван останется в ленте.",
+      "swipe_trigger": "META: soft end after CTA",
+      "visual_prompt": "CINEMATIC night balcony view over Yerevan lights, dark upper third empty for overlay typography, warm orange rim. CINEMATIC photograph, empty space for HTML CTA overlay. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, HTML, CTA, TIP, HOOK, stacked placeholder digits. Photoreal or cinematic illustration only. No purple glow.",
+      "alt_text": "CTA: Ереван ночь",
+      "cta_type": 4
+    }
+  ],
+  "caption": "Ночной Ереван: огни, Cascade, тёплый воздух — Vernatun как publisher Vernatun.",
+  "hashtags": [
+    "#Vernatun",
+    "#Ереван",
+    "#Ночь",
+    "#Армения"
+  ],
+  "promptForDesigner": "S52 cinematic_scene + image-2 bg; HTML/CSS text overlay; TOPIC from theme not coffee."
+}

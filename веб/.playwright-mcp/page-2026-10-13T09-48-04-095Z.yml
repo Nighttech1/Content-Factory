@@ -1,0 +1,119 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Главная навигация" [ref=e3]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: VERNATUN
+        - generic [ref=e8]: ARMENIAN CLUB
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - link "Студия" [ref=e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=e37] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=e47]:
+        - paragraph [ref=e48]: Роль QA (локально)
+        - generic [ref=e49]:
+          - button "OWNER" [ref=e50]
+          - button "ADMIN" [ref=e51]
+      - button "Изменить ширину боковой панели" [ref=e52]
+    - main [ref=e54]:
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - heading "Настройки" [level=1] [ref=e57]
+          - paragraph [ref=e58]: Дизайн, площадки, расписание и рилсы. Параметры разведки и модели агентов — в «Команда выпуска».
+        - complementary [ref=e59]:
+          - navigation [ref=e60]:
+            - generic [ref=e61]: Навигация
+            - list [ref=e62]:
+              - listitem [ref=e63]:
+                - button "Дизайн" [ref=e64]
+              - listitem [ref=e70]:
+                - button "Площадки" [ref=e71]
+              - listitem [ref=e76]:
+                - button "Расписание" [ref=e77]
+              - listitem [ref=e81]:
+                - button "Рилсы" [ref=e82]
+        - region [ref=e86]:
+          - generic [ref=e87]:
+            - heading "Дизайн" [level=2] [ref=e88]
+            - paragraph [ref=e89]: Библиотека DESIGN.md (до 10). Активный слот читает Дизайнер в Create.
+          - generic [ref=e116]:
+            - region [ref=e118]:
+              - group [ref=e121]:
+                - 'button "--- name: Atelier Synth colors: surface: ''#111317'' surface-dim: ''#111317'' surface-bright: ''#37393d'' surface-cont… DESIGN.md Активный DESIGN.md" [ref=e122] [cursor=pointer]':
+                  - paragraph [ref=e127]: "--- name: Atelier Synth colors: surface: '#111317' surface-dim: '#111317' surface-bright: '#37393d' surface-cont…"
+                  - button "DESIGN.md" [ref=e128]
+                  - generic [ref=e129]: Активный
+                  - generic [ref=e130]: DESIGN.md
+              - button "Предыдущий дизайн" [disabled]
+              - button "Следующий дизайн" [disabled]
+            - paragraph [ref=e131]: "Слотов: 1/10 · активный: DESIGN.md"
+            - generic [ref=e132]:
+              - generic [ref=e133] [cursor=pointer]:
+                - generic [ref=e134]: Загрузить DESIGN.md
+                - button "Загрузить DESIGN.md" [ref=e138]
+              - generic [ref=e139] [cursor=pointer]:
+                - generic [ref=e140]: Добавить новый дизайн
+                - button "Добавить новый дизайн" [ref=e145]
+          - button "Превью design.md" [ref=e208]
+        - region [ref=e96]:
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - heading "Площадки публикации" [level=2] [ref=e99]
+              - paragraph [ref=e100]: Ключи API только в браузере. Зелёный блок — публицист может публиковать; красный — подключение не подтверждено.
+            - button "Добавить площадку" [ref=e101]
+          - list [ref=e146]:
+            - listitem [ref=e147]:
+              - generic [ref=e148]:
+                - paragraph [ref=e149]: Instagram · основной
+                - paragraph [ref=e150]: Instagram · нет связи · без ключа
+              - generic [ref=e151]:
+                - button "Проверить подключение" [ref=e152]
+                - button "Изменить" [ref=e153]
+                - button "Удалить" [ref=e154]
+            - listitem [ref=e155]:
+              - generic [ref=e156]:
+                - paragraph [ref=e157]: Telegram · канал
+                - paragraph [ref=e158]: Telegram · нет связи · без ключа
+              - generic [ref=e159]:
+                - button "Проверить подключение" [ref=e160]
+                - button "Изменить" [ref=e161]
+                - button "Удалить" [ref=e162]
+            - listitem [ref=e163]:
+              - generic [ref=e164]:
+                - paragraph [ref=e165]: YouTube
+                - paragraph [ref=e166]: YouTube · нет связи · без ключа
+              - generic [ref=e167]:
+                - button "Проверить подключение" [ref=e168]
+                - button "Изменить" [ref=e169]
+                - button "Удалить" [ref=e170]
+            - listitem [ref=e171]:
+              - generic [ref=e172]:
+                - paragraph [ref=e173]: Сайт Vernatun
+                - paragraph [ref=e174]: Сайт · нет связи · без ключа
+              - generic [ref=e175]:
+                - button "Проверить подключение" [ref=e176]
+                - button "Изменить" [ref=e177]
+                - button "Удалить" [ref=e178]
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - heading "Расписание" [level=2] [ref=e106]
+              - paragraph [ref=e107]: Правила автозаполнения календаря публициста. Готовый контент встаёт в слоты по правилам; ручной перенос в календаре важнее правила.
+            - button "Создать правило" [ref=e108]
+          - list [ref=e109]:
+            - listitem [ref=e110]: Правил пока нет.
+        - region [ref=e111]:
+          - generic [ref=e112]:
+            - heading "Рилсы" [level=2] [ref=e113]
+            - paragraph [ref=e114]: Сколько карточек в dual-feed (Наши и Конкуренты).
+          - generic [ref=e179]:
+            - generic [ref=e180]:
+              - paragraph [ref=e181]: Отображение рилсов (количество на странице)
+              - paragraph [ref=e182]: От 4 до 48. По умолчанию 12.
+            - generic [ref=e183]:
+              - generic [ref=e184]: На странице
+              - spinbutton "Отображение рилсов (количество на странице)" [ref=e185]: "12"
+  - alert [ref=e186]

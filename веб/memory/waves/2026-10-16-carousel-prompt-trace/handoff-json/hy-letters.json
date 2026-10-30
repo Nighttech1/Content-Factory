@@ -1,0 +1,50 @@
+{
+  "project": "vernatun",
+  "content_id": "golden-letter-diaspora-home",
+  "contentType": "carousel",
+  "requested_slide_count": 3,
+  "idea": "Армянский алфавит Маштоца как дом для детей диаспоры — буква держит идентичность, когда город чужой",
+  "hook": "Буква дышит?",
+  "tone": "vernatun",
+  "cta_type": 2,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Буква дышит?",
+      "secondary_copy": "",
+      "swipe_trigger": "META: paradox — может ли символ быть домом для ребёнка в чужом городе",
+      "visual_prompt": "dark_editorial charcoal wall, single Armenian letter (Ա) chalk-drawn soft gold outline, warm side light from left, faint breath-like steam wisps around letter, no purple glow, cinematic grain",
+      "alt_text": "Армянская буква на меловой доске"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "point",
+      "primary_copy": "Маштоц создал дом из букв",
+      "secondary_copy": "Когда ребёнок в Лондоне или Берлине пишет по-армянски — он не теряет корни. Буква = якорь идентичности.",
+      "swipe_trigger": "META: proof beat — конкретный жест: письмо на родном языке как связь с домом",
+      "visual_prompt": "dark_editorial hand-drawn Armenian script flowing left-to-right, gold accent line bridge connecting letters like doorways, charcoal depth, warm amber light, editorial hierarchy, no stock font showcase",
+      "alt_text": "Армянский текст как цепь домов"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta",
+      "primary_copy": "Хочешь ещё такого?",
+      "secondary_copy": "Подписывайся — истории букв, которые держат диаспору живой.",
+      "swipe_trigger": "META: soft end — subscribe CTA; stop here",
+      "visual_prompt": "dark_editorial gold CTA button solid warm glow, Armenian letter mark Vernatun subtle bottom-left, blurred charcoal background, premium editorial feel, no purple pill",
+      "alt_text": "CTA подписка на истории букв",
+      "cta_type": 2
+    }
+  ],
+  "caption": "Буква Маштоца — дом для детей диаспоры. Язык держит корни, когда город чужой. Vernatun.",
+  "hashtags": [
+    "#Vernatun",
+    "#АрмянскийАлфавит",
+    "#Маштоц",
+    "#Диаспора",
+    "#Идентичность",
+    "#АрмянскийЯзык"
+  ],
+  "promptForDesigner": "dark_editorial: charcoal + gold Armenian letters + warm light; HTML/CSS-first 3×4:5; letter as visual anchor, not calligraphy showcase; ignore swipe_trigger in final design"
+}

@@ -1,0 +1,45 @@
+{
+  "contentType": "reels",
+  "durationSec": 28,
+  "hook": {
+    "t0": 0,
+    "t1": 1.8,
+    "onScreen": "Клуб без камеры?",
+    "vo": "А если лучший клуб — без камеры?"
+  },
+  "beats": [
+    {
+      "t0": 1.8,
+      "t1": 9,
+      "label": "shock",
+      "onScreen": "Лента врёт громче",
+      "vo": "YouTube Shorts кормит тебя чужими успехами. За столом Vernatun ты слышишь живой язык."
+    },
+    {
+      "t0": 9,
+      "t1": 18,
+      "label": "proof",
+      "onScreen": "Ошибка = ок",
+      "vo": "Можно ошибаться. Можно молчать. Можно вернуться к фразе ещё раз."
+    },
+    {
+      "t0": 18,
+      "t1": 23,
+      "label": "turn",
+      "onScreen": "Не курс. Стол.",
+      "vo": "Это не урок. Это стол. Разница огромная."
+    }
+  ],
+  "cta": {
+    "t0": 23,
+    "t1": 28,
+    "onScreen": "ПОДПИШИСЬ · TG В ШАПКЕ",
+    "vo": "Подпишись и зайди в TG в шапке — там живые встречи.",
+    "captionLine": "Shorts = намёк. Стол = Vernatun. TG в шапке профиля."
+  },
+  "roles": ["host"],
+  "location": "night city window + club table",
+  "caption": "Клуб без камеры громче Shorts. Vernatun — подпишись, TG в шапке.",
+  "hashtags": ["#Shorts", "#Vernatun", "#ArmenianClub", "#Язык"],
+  "promptForMontage": "YT Shorts pacing slightly denser cuts than IG; hook text ≤1.8s; beat inserts city neon B-roll; end-card subscribe + TG mention; burn-in subs large; vertical 9:16; never export carousel JSON frames."
+}

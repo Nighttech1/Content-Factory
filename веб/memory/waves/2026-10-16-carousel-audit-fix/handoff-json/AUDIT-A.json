@@ -1,0 +1,46 @@
+{
+  "contentType": "carousel",
+  "requested_slide_count": 3,
+  "idea": "Утренний ритуал Vernatun: кофе как пауза, не продуктивность",
+  "hook": "Кофе врёт?",
+  "tone": "vernatun",
+  "cta_type": 4,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Кофе врёт?",
+      "secondary_copy": "Не про «систему на 6 фигур»",
+      "swipe_trigger": "META: curiosity — зритель хочет узнать, что врёт кофе про продуктивность",
+      "visual_prompt": "dark_notes chalk grid charcoal wall, yellow marker underline, coffee cup outline doodle, soft steam, Vernatun warm amber only, no purple, no photoreal people",
+      "alt_text": "Меловая доска с вопросом про кофе"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "body_slide",
+      "primary_copy": "Ритуал важнее *рецепта*",
+      "secondary_copy": "В Vernatun кофе — пауза, чтобы услышать друг друга.",
+      "swipe_trigger": "META: value beat — swipe for like+save CTA",
+      "visual_prompt": "dark_notes checklist boxes hand-drawn, yellow marker highlight, chalk texture, warm amber accent, text-kit only",
+      "alt_text": "Чеклист ритуала на меловой доске"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta_slide",
+      "primary_copy": "Сохрани *ритуал*",
+      "secondary_copy": "Лайк + сохранить — пауза останется на неделе",
+      "swipe_trigger": "META: soft end after engagement CTA",
+      "visual_prompt": "dark_notes cta frame chalk gold-soft block, doodle arrow to save gesture, seamless steam leftover, no stock Inter",
+      "alt_text": "CTA сохранить ритуал",
+      "cta_type": 4
+    }
+  ],
+  "caption": "Кофе не про продуктивность. Про паузу. Vernatun.",
+  "hashtags": [
+    "#Vernatun",
+    "#АрмянскийКлуб",
+    "#Ритуал",
+    "#Кофе"
+  ],
+  "promptForDesigner": "dark_notes HTML/CSS-first; CTA 4 like+save; no diffusion text"
+}

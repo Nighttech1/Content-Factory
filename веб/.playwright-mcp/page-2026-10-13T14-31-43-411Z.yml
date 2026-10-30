@@ -1,0 +1,112 @@
+- generic [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - complementary "Главная навигация" [ref=f2e3]:
+      - generic [ref=f2e6]:
+        - generic [ref=f2e7]: VERNATUN
+        - generic [ref=f2e8]: ARMENIAN CLUB
+      - navigation [ref=f2e10]:
+        - generic [ref=f2e11]:
+          - link "Студия" [ref=f2e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f2e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f2e37] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f2e47]:
+        - paragraph [ref=f2e48]: Роль QA (локально)
+        - generic [ref=f2e49]:
+          - button "OWNER" [ref=f2e50]
+          - button "ADMIN" [ref=f2e51]
+      - button "Изменить ширину боковой панели" [ref=f2e52]
+    - main [ref=f2e54]:
+      - generic [ref=f2e55]:
+        - 'heading "Команда выпуска: Карусели Instagram (4:5)" [level=1] [ref=f2e56]'
+        - generic [ref=f2e58]:
+          - generic [ref=f2e60]:
+            - 'heading "Команда выпуска: Карусели Instagram (4:5)" [level=1] [ref=f2e61]'
+            - paragraph [ref=f2e62]: Пайплайн создания и публикации контента. Кликните на любого агента для детальной настройки.
+          - generic [ref=f2e63]:
+            - generic [ref=f2e65]:
+              - img [aria-hidden]:
+                - generic:
+                  - generic: запрос
+                  - generic: разбор
+                  - generic: сценарий
+                  - generic: медиа
+                  - generic: фильтр
+                  - generic: выводы
+              - generic [ref=f2e66]:
+                - generic [ref=f2e67]:
+                  - generic [ref=f2e68]:
+                    - generic [ref=f2e75]:
+                      - text: Клиент
+                      - heading "Задание" [level=3] [ref=f2e76]
+                    - textbox "Задание" [ref=f2e78]:
+                      - /placeholder: ""
+                  - button "Декомпозиция Разборщик Структура и тезисы" [ref=f2e79]:
+                    - generic [ref=f2e92]:
+                      - text: Декомпозиция
+                      - heading "Разборщик" [level=3] [ref=f2e93]
+                      - generic [ref=f2e94]: Структура и тезисы
+                  - button "Слайды & Текст Копирайтер каруселей Хуки и сценарий" [active] [ref=f2e95]:
+                    - generic [ref=f2e107]:
+                      - text: Слайды & Текст
+                      - heading "Копирайтер каруселей" [level=3] [ref=f2e108]
+                      - generic [ref=f2e109]: Хуки и сценарий
+                  - 'button "Визуал & Сетка Дизайнер карусели Промпты и стили 📄 design.md База Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления." [ref=f2e110]':
+                    - generic [ref=f2e126]:
+                      - text: Визуал & Сетка
+                      - heading "Дизайнер карусели" [level=3] [ref=f2e127]
+                      - generic [ref=f2e128]: Промпты и стили
+                    - generic [ref=f2e133]:
+                      - generic [ref=f2e134]:
+                        - generic [ref=f2e135]: 📄 design.md
+                        - generic [ref=f2e136]: База
+                      - paragraph [ref=f2e137]: "Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления."
+                  - button "Выгрузка & Пост Публицист Дистрибуция каналов" [ref=f2e138]:
+                    - generic [ref=f2e151]:
+                      - text: Выгрузка & Пост
+                      - heading "Публицист" [level=3] [ref=f2e152]
+                      - generic [ref=f2e153]: Дистрибуция каналов
+                - generic [ref=f2e154]:
+                  - button "Мониторинг Скаут Тренды & Референсы" [ref=f2e155]:
+                    - generic [ref=f2e168]:
+                      - text: Мониторинг
+                      - heading "Скаут" [level=3] [ref=f2e169]
+                      - generic [ref=f2e170]: Тренды & Референсы
+                  - button "Метрики Аналитик ERR & Дочитывания" [ref=f2e171]:
+                    - generic [ref=f2e181]:
+                      - text: Метрики
+                      - heading "Аналитик" [level=3] [ref=f2e182]
+                      - generic [ref=f2e183]: ERR & Дочитывания
+                  - button "Обучение Тренер RLHF & Обновление баз" [ref=f2e184]:
+                    - generic [ref=f2e199]:
+                      - text: Обучение
+                      - heading "Тренер" [level=3] [ref=f2e200]
+                      - generic [ref=f2e201]: RLHF & Обновление баз
+            - 'complementary "Инспектор: Копирайтер каруселей" [ref=f2e266]':
+              - separator "Изменить ширину инспектора" [ref=f2e204]
+              - generic [ref=f2e205]:
+                - generic [ref=f2e218]:
+                  - generic [ref=f2e219]:
+                    - heading "Копирайтер каруселей" [level=2] [ref=f2e269]
+                    - generic [ref=f2e221]: Копирайтер · Карусели Instagram (4:5)
+                  - paragraph [ref=f2e222]: Назначение агента в пайплайне
+                  - generic [ref=f2e223]:
+                    - checkbox "Активен" [checked] [ref=f2e224]
+                    - text: Активен
+                - button "Закрыть инспектор" [ref=f2e225]
+              - generic [ref=f2e229]:
+                - button "Инструкция" [ref=f2e230]
+                - button "Скиллы & Инструменты" [ref=f2e231]
+                - button "Модель & Параметры" [ref=f2e232]
+              - generic [ref=f2e270]:
+                - generic [ref=f2e271]:
+                  - generic [ref=f2e272]: Системная инструкция (System Prompt)
+                  - generic [ref=f2e273]: Markdown supported
+                - paragraph [ref=f2e274]: Определяет логику, формат ответов, tone of voice и жёсткие правила работы агента.
+                - textbox [ref=f2e275]: "Dramaturgy & Hook Engine для каруселей Instagram 4:5 Vernatun. Primary artifact = STRICT JSON: requested_slide_count, slides[{slide_number, layout_variant, primary_copy, secondary_copy?, swipe_trigger, visual_prompt, alt_text?}], caption, hashtags[]. requested_slide_count и slides.length = только N из запроса пользователя; если N нет — спроси; никогда не хардкодь 4/5/8. HOOK BAR (HARD): cover primary_copy = captivating curiosity gap, ≤6–8 слов; FAIL flat hooks («Лучший вечер», «Секрет успеха», «Подпишись») without gap. Cover primary_copy ≤6–8 слов; swipe_trigger на каждом слайде; без инфобиз-воды. Markdown prose только для ask-N / polish; fenced json как основной артефакт. НИКОГДА не передавай задание дизайнеру сам: после JSON спроси «Понравилось? Что поправить?» Handoff → promptForDesigner + machine JSON (не promptForMontage)."
+              - generic [ref=f2e240]:
+                - button "Сбросить" [ref=f2e241]
+                - button "Сохранить изменения" [ref=f2e243]
+  - alert [ref=f2e202]

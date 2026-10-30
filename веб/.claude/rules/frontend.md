@@ -1,0 +1,69 @@
+# ROLE: Lead Frontend — Content Factory
+
+> On-demand (по chain). Профиль по умолчанию: **A) Premium Dark Luxury Web (Next.js 15)**.
+
+## A) Content Factory Web (основной)
+
+**Стек: Next.js 15 App Router, React 19, Tailwind v4, framer-motion, @xyflow/react, shadcn/Radix.**
+
+### HARD RULE — UI только через 21st.dev (не сток)
+
+**Запрещено** собирать экраны из «стоковых» примитивов по памяти (голый div + Tailwind, дефолтный shadcn, плоские кнопки/карточки без характера), если MCP **`21st`** доступен.
+
+**Обязательно** для **каждого** визуального элемента (карточка модуля, command bar, drawer, modal, KPI, badge, toolbar, player chrome, sidebar item, empty state, skeleton, datetime picker, file-tree…):
+
+1. Прочитать `.claude/skills/21st-ui-catalog/SKILL.md`.
+2. MCP `21st`: `search` (не `search_picker`) → сам выбрать лучший → `get_component`.
+3. Предпочитать варианты **с анимацией** (framer-motion / CSS spring / micro-interactions / stagger) — «покрасивее», не статичный блок.
+4. Встроить код и **перекрасить** под Dark Luxury токены (`content-factory-ui`). Композиция экрана — по Stitch / `ARCHITECTURE.md`, не выдумывать второй layout.
+5. В `decisions.md`: строка `21st id=… · element=… · motion=yes/no`.
+
+**Reuse:** уже адаптированный компонент из `components/` можно взять снова. Не адаптированный сток / дефолт shadcn — **не** источник правды.
+
+**Fallback** (только если MCP 401 / квота / `21st=unavailable`): `luxury-web-craft` + существующие `GlassCard` / `NeonBadge` / `ReactiveButton`. В отчёте явно: `21st=unavailable`. Не стоп волны.
+
+**Motion:** если в chain есть роль Motion — сложные сцены согласуй с ней; микро-анимации из 21st оставляй, spring `{ damping: 25, stiffness: 300 }`.
+
+Перед работой:
+1. `ARCHITECTURE.md` + `DEV_PLAN.md` + эскизы `stitch_armenian_club_brandbook/`
+2. `.claude/skills/21st-ui-catalog/SKILL.md` + MCP `21st` — **первый** источник UI
+3. `.claude/skills/content-factory-ui/SKILL.md` — токены / ретокенизация
+4. `.claude/skills/image-to-luxury-ui/SKILL.md` + `create-design-md` — если идём от скрина Stitch
+5. `.claude/skills/luxury-web-craft/SKILL.md` + `design-token-guardian` + `taste-skill`
+6. Mesh → `xyflow-agent-mesh`. **C-53:** пайплайны × вид контента. **C-58:** view-only (не drag, не connect, без «свой модуль»; `MeshPipelineSwitcher` сверху).
+7. Module tiles → `content-module-sdk`
+8. SSE drawer → `sse-job-stream`
+9. Motion в chain → `.claude/rules/motion.md`
+10. Глаза: встроенный браузер @1440 + mobile preset (iphone/android)
+11. `plugins/frontend/PLUGINS.md` + anti_slop_scan при `/audit`
+12. `knowledge/area_content_factory/_index.md`
+13. Chrome UI — **русский** (`content-factory-ui` C-54); `/schedule` — календарь + **animated-file-tree** rail (C-59).
+14. Dual-feed: скелетоны только на пустой первой загрузке; **счётчик шапки не в "…" при refetch** (C-52/C-58). **C-61:** не opacity-pulse title/count; `handleCompetitorsTopicSearch` = `useCallback`.
+15. Paste 21st: `motion/react` → `framer-motion`; сайдбар MenuVertical `text-sm` (C-57). **C-60:** Студия без children-модулей; ширина aside `cf.sidebar.width`.
+16. AI-чаты (**C-155…C-158**): composer = **21st `chatgpt-prompt-input` → `PromptBox`** (retokenize Dark Luxury); mic/Web Speech внутри PromptBox, не второй SpeechRecognition. **Не** возвращать legacy `AgentChatComposer` как канон. Live Polza: user = raw only; system = mesh `systemPrompt` only. Thinking: 9-cube assemble + shimmer «Thinking…». Carousel drafts — **zustand persist**. **C-62 (Razbor):** сценарист → дизайнер; дизайнер → публицист; hide scrollbar; drafts L/R + дата.
+17. **Create carousel (**C-carousel-***):** skill `carousel-studio-handoff`. Top Button-variant segment + top-right «Передать задание»; **нет** bottom handoff/tools; шаг **Публикация** вместо агента Публицист; markdown chat; Designer describe→«Нарисовать»→preview; no-mock. `button.tsx` + slot/cva OK с адаптацией Vernatun tokens.
+18. **Typography Vernatun — Century Gothic HARD:** UI shell, feed plaques/metrics, Razbor/Create chrome, preview index `N/M`, Marketing Director chat = **`--font-ui` / Century Gothic**. Inter / Plus Jakarta / system-ui как default UI = **FAIL** (C-26 + S47). Armenian → Noto Sans Armenian fallback only for hy runs.
+19. **Feed cards S47→S49:** no «Онлайн · Instagram»; no Конкуренты/Наши tags on card; no bottom caption; **Competitors:** black plaque = `{name} | {followers}` **inside**; **Ours: no** name/followers plaque; bottom-center engagement CG (S48 scale). Published/Drafts = **simple toggle** + search **same row**; labels/count **white**; feed bottom clip **minimal gap**.
+20. **Razbor + Create S47/S48 + Boards S49:** modal scroll/screenshot = dialog; Boards upload **«Загрузить»** same row as search; **no** «Локально · несколько кадров…»; **no metrics** on board cards; handoff arrow+logo; 4 people icons; preview `N/M` CG.
+21. **Marketing Director S47:** ChatGPT-like projects left; welcome→input sinks; adapt provided **AIInput** shadcn; Century Gothic; wire Haiku + GraphQL/search via AI Bridge/Backend — не mock-only.
+22. **Settings Design S49:** show DESIGN.md as **visual brandbook cards** (colors/type/buttons grid); upload reel/image → deconstruct into that brandbook for Designer. **Team S49:** remove User basic brief; never send removed text to agents.
+23. **S50 feed chrome:** **minimal** bottom bar (no thick black field clipping cards); remove «(4:5)» from module title; remove orange dots left of Наши/Конкуренты; Boards = **dropdown** all boards + create/rename; remove badge «1» from Доски; **sort+filter left of search** on **both** columns.
+24. **S50 Settings Design:** brandbook cards = **horizontal 3:5** ONLY (Heritage Community photo); **no** leftover DESIGN.md chunks under cards; **no** slots counter; toolbar **ONE row**: «дизайн.md» icon-short · «референс» · «новый дизайн»+icon · preview icon-only; side padding **~75% smaller**; **no** context menu on card click; **no** colors-only helper paragraph.
+25. **S50 Create:** same UI as Razbor except start on **Scriptwriter**; Competitors/Ours toggle **higher**; preview **≈1.5×** again. Live competitors — never mock when live expected.
+26. **S51 Settings Design:** all Design actions **top-right** cluster; **remove** preview DESIGN.md button; eye control label **«код дизайн мд»**; shrink brandbook card **empty bottom**; active card = **blue neon glow** perimeter; **NO** context/edit popup on card click (select only).
+27. **S51 Boards segment:** dropdown opens **FROM** the **«Доски»** segment next to Конкуренты — **no extra** Boards buttons; **double-click** board name → rename; selected board **replaces** label «Доски» on that segment; Upload = **icon only**, **always** visible right of filter (**gray disabled** in Competitors mode) — toolbar **must not jump** on Конкуренты|Доски switch.
+28. **Useful-smoke / Phase6 Settings:** block label **«Персонажи»** everywhere (never product chrome «Пейзажи»; API key `landscapes` OK). Brand + Персонажи field groups **`max-w-[50%]`** / ~50vw. Skill: `content-factory-ui` § Brand + Персонажи; Client **S55/S56**.
+
+Ключ `API_KEY_21ST` — только env / `.env`, не в git.
+
+### Frontend-minimal (Sprint 8 Postgres SoT)
+
+Когда в `chain.md` роль **Frontend-minimal**: только смена data layer (localStorage/zustand SoT → API cache) для Draft/Board/Schedule/DesignSlot + one-shot import. **shell_freeze** — не трогать AppShell/nav/chrome. См. `content-factory-ui` § Frontend-minimal. Без 21st redesign «заодно».
+
+## B) Flutter (legacy, не default)
+
+Только если Архитектор явно указал в `chain.md`. Skills: `flutter-motion-engine`, `flutter-dense-datagrid`.
+
+Работай только по paths `chain.md`. Архитектуру не меняй.
+
+`🎨 **FRONTEND (+21st):** [экран; N× get_component; motion; Stitch parity]`

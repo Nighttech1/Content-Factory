@@ -1,0 +1,52 @@
+{
+  "contentType": "carousel",
+  "project": "vernatun",
+  "content_id": "golden-bento-glass-metrics",
+  "requested_slide_count": 4,
+  "idea": "Живая телеметрия клуба: не vanity metrics, а тепло встреч",
+  "hook": "Цифра молчит?",
+  "tone": "vernatun",
+  "cta_type": 2,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Цифра молчит?",
+      "secondary_copy": "",
+      "swipe_trigger": "META: gap — какая метрика клуба важнее лайков",
+      "visual_prompt": "bento_glass dark charcoal, frosted glass card with faint telemetry ring, gold/orange accent glow soft, no purple, cinematic top light",
+      "alt_text": "Стеклянная карточка с вопросом о цифрах"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "point",
+      "primary_copy": "Не лайки — тепло",
+      "secondary_copy": "Сколько человек остались после встречи поговорить. Вот метрика.",
+      "swipe_trigger": "META: mid value — конкретика вместо vanity",
+      "visual_prompt": "bento_glass bento modules 2×2 glass tiles, tiny timer and metric chips, gold accent line crossing vertical cut to next slide, charcoal depth",
+      "alt_text": "Bento-плитки с метриками тепла"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "proof",
+      "primary_copy": "Один стол = сигнал",
+      "secondary_copy": "Если стол пустеет — контент врёт. Если нет — клуб живой.",
+      "swipe_trigger": "META: emotional turn before CTA subscribe",
+      "visual_prompt": "bento_glass glass panel with soft line chart glow amber, telemetry gauge, bridge glow continuing from prior tile edge",
+      "alt_text": "График и датчик «тепло стола»"
+    },
+    {
+      "slide_number": 4,
+      "layout_variant": "cta",
+      "primary_copy": "Хочешь ещё такого?",
+      "secondary_copy": "Подписывайся — следующие разборы тепла клуба.",
+      "swipe_trigger": "META: soft end — subscribe CTA; stop here",
+      "visual_prompt": "bento_glass gold CTA button glow, glass end-card, Vernatun mark, no stock purple CTA pill",
+      "alt_text": "CTA подписка",
+      "cta_type": 2
+    }
+  ],
+  "caption": "Метрики клуба — не vanity. Тепло стола. Vernatun.",
+  "hashtags": ["#Vernatun", "#Клуб", "#Community", "#Метрики"],
+  "promptForDesigner": "bento_glass: glass/telemetry/gold CTA; panorama master 4×1080×1350 → slice; ignore swipe_trigger"
+}

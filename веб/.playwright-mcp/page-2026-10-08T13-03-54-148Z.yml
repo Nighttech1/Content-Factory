@@ -1,0 +1,350 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - complementary "Главная навигация" [ref=f3e3]:
+      - generic [ref=f3e11]:
+        - generic [ref=f3e12]: VERN·ATUN
+        - generic [ref=f3e13]: Content Factory
+      - navigation [ref=f3e15]:
+        - generic [ref=f3e16]:
+          - link "Студия" [ref=f3e19] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f3e32] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f3e45] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f3e55] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f3e68] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f3e78]:
+        - paragraph [ref=f3e79]: Роль QA (локально)
+        - generic [ref=f3e80]:
+          - button "OWNER" [ref=f3e81]
+          - button "ADMIN" [ref=f3e82]
+      - button "Изменить ширину боковой панели" [ref=f3e83]
+    - main [ref=f3e85]:
+      - generic [ref=f3e86]:
+        - generic [ref=f3e87]:
+          - heading "Настройки" [level=1] [ref=f3e88]
+          - paragraph [ref=f3e89]: Дизайн, площадки, промпты агентов, LLM и рилсы. Правки — в браузере.
+        - complementary [ref=f3e90]:
+          - navigation [ref=f3e91]:
+            - generic [ref=f3e92]: Навигация
+            - list [ref=f3e93]:
+              - listitem [ref=f3e94]:
+                - button "Дизайн" [ref=f3e95]
+              - listitem [ref=f3e101]:
+                - button "Площадки" [ref=f3e102]
+              - listitem [ref=f3e107]:
+                - button "Агенты" [ref=f3e108]
+              - listitem [ref=f3e113]:
+                - button "LLM" [ref=f3e114]
+              - listitem [ref=f3e119]:
+                - button "Рилсы" [ref=f3e120]
+        - region [ref=f3e124]:
+          - generic [ref=f3e125]:
+            - heading "Дизайн" [level=2] [ref=f3e126]
+            - paragraph [ref=f3e127]: Текущий файл дизайн-системы для дизайнера.
+          - paragraph [ref=f3e128]:
+            - text: DESIGN.md
+            - generic [ref=f3e129]: docs/DESIGN.md · 14343 символов
+          - generic [ref=f3e130] [cursor=pointer]:
+            - text: Загрузить новый файл
+            - button "Загрузить новый файл" [ref=f3e131]
+        - region [ref=f3e132]:
+          - generic [ref=f3e133]:
+            - generic [ref=f3e134]:
+              - heading "Площадки публикации" [level=2] [ref=f3e135]
+              - paragraph [ref=f3e136]: Ключи API только в браузере. Зелёный блок — публицист может публиковать; красный — подключение не подтверждено.
+            - button "Добавить площадку" [ref=f3e137]
+          - list [ref=f3e246]:
+            - listitem [ref=f3e247]:
+              - generic [ref=f3e248]:
+                - paragraph [ref=f3e249]: Instagram · основной
+                - paragraph [ref=f3e250]: Instagram · нет связи · без ключа
+              - generic [ref=f3e251]:
+                - button "Проверить подключение" [ref=f3e252]
+                - button "Изменить" [ref=f3e253]
+                - button "Удалить" [ref=f3e254]
+            - listitem [ref=f3e255]:
+              - generic [ref=f3e256]:
+                - paragraph [ref=f3e257]: Telegram · канал
+                - paragraph [ref=f3e258]: Telegram · нет связи · без ключа
+              - generic [ref=f3e259]:
+                - button "Проверить подключение" [ref=f3e260]
+                - button "Изменить" [ref=f3e261]
+                - button "Удалить" [ref=f3e262]
+            - listitem [ref=f3e263]:
+              - generic [ref=f3e264]:
+                - paragraph [ref=f3e265]: YouTube
+                - paragraph [ref=f3e266]: YouTube · нет связи · без ключа
+              - generic [ref=f3e267]:
+                - button "Проверить подключение" [ref=f3e268]
+                - button "Изменить" [ref=f3e269]
+                - button "Удалить" [ref=f3e270]
+            - listitem [ref=f3e271]:
+              - generic [ref=f3e272]:
+                - paragraph [ref=f3e273]: Сайт Vernatun
+                - paragraph [ref=f3e274]: Сайт · нет связи · без ключа
+              - generic [ref=f3e275]:
+                - button "Проверить подключение" [ref=f3e276]
+                - button "Изменить" [ref=f3e277]
+                - button "Удалить" [ref=f3e278]
+        - region [ref=f3e139]:
+          - generic [ref=f3e140]:
+            - 'heading "Агенты: промпты и правила" [level=2] [ref=f3e141]'
+            - paragraph [ref=f3e142]:
+              - text: Skills / prompt.md / agents/*.md. Промпты разные по типу контента (ключ
+              - code [ref=f3e143]: agentId::contentType
+              - text: ). Правки — в localStorage; ими же пользуется панель «Команда выпуска».
+          - group "Тип контента" [ref=f3e144]:
+            - group [ref=f3e145]:
+              - button "Общий" [ref=f3e146] [cursor=pointer]
+              - button "Карусели" [ref=f3e153] [cursor=pointer]
+              - button "HeyGen Reels" [ref=f3e160] [cursor=pointer]
+              - button "Instagram Reels" [ref=f3e167] [cursor=pointer]
+          - group "Агент" [ref=f3e173]:
+            - group [ref=f3e174]:
+              - button "Исследователь" [ref=f3e175] [cursor=pointer]
+              - button "Хук-райтер" [ref=f3e181] [cursor=pointer]
+              - button "Сценарист" [ref=f3e187] [cursor=pointer]
+              - button "Аналитик" [ref=f3e193] [cursor=pointer]
+              - button "Дизайнер" [ref=f3e199] [cursor=pointer]
+              - button "Публицист" [ref=f3e205] [cursor=pointer]
+              - button "Роутер" [ref=f3e211] [cursor=pointer]
+              - button "Рендерер" [ref=f3e217] [cursor=pointer]
+          - paragraph [ref=f3e279]: agents/researcher.md · workers/researcher/SKILL.md
+          - generic [ref=f3e222]:
+            - generic [ref=f3e223]: Промпт
+            - textbox "Промпт" [ref=f3e224]: "# Researcher ## Role Сбор трендов, источников и нишевого контекста для контент-пайплайна Vernatun Content Factory. Пишет краткие findings в `feedbackLogs` до Hook Writer. Поддерживает **live Instagram carousel** context (`sourceMode: live|mock`) без самостоятельного fetch. **Primary competitor discovery (C-38):** хэштеги из темы → Hashtag Search + `top_media` (Backend C-39). Ручной список ников конкурентов — только optional fallback. ## Base prompt Ты — Researcher агент Content Factory. На вход получаешь бриф ниши/темы и (опционально) live/mock посты (наш аккаунт + карусели по хэштегам / fallback BD). Задачи: 1. Выдели 3–5 актуальных углов и трендов по теме. 2. Укажи источники/сигналы (без выдуманных URL, если неизвестны — пометь «гипотеза»). 3. Сформулируй аудиторию и tone of voice для следующих агентов. 4. Верни структурированный JSON (см. Output ниже), включая **`instagramHashtags`** (контракт topic → hashtags). Пиши на русском, кратко, без воды. Не публикуй контент. Не запрашивай и не логируй секреты / access tokens. **Не проси** пользователя вводить competitor usernames / URLs — конкуренты находятся по хэштегам темы (Backend). ### Topic → hashtags (`instagramHashtags`) Контракт заполняет **детерминированный** mapper (Backend util, C-39; без LLM-ключа). Researcher **документирует и отражает** тот же JSON в выводе. `source` всегда `\"deterministic_mapper\"` в этой волне. ```json { \"topic\": \"гостевой вечер\", \"hashtags\": [\"guestnight\", \"armenianclub\", \"yerevan\"], \"source\": \"deterministic_mapper\", \"emptyTopic\": false } ``` | Field | Rule | |-------|------| | `topic` | Строка как на входе (trim); пустая → `\"\"` | | `hashtags` | 1–5 lowercase, без `#`, без пробелов; Backend в Graph берёт **первые 3** (rate limit) | | `source` | Всегда `\"deterministic_mapper\"` (LLM `\"llm_mapper\"` — future, out of scope) | | `emptyTopic` | `true` если topic после trim пустой | **Empty topic:** 1. Prefer env `IG_DEFAULT_HASHTAGS` (comma-separated, bare names). 2. Else niche defaults: `armenianclub`, `yerevan`, `armenianfood`, `guestnight`. **Non-empty (semantics for Backend parity):** normalize trim/lowercase/collapse spaces → keyword/alias table (RU/EN) → dedupe, stable order, cap ≤5; unknown topic → slugify + niche anchors `armenianclub`, `yerevan`. Exact alias table lives in Backend (C-39). ### Live Instagram rules (`sourceMode: \"live\"`) Когда во входе есть live feed / hashtag `top_media` / optional BD posts с полями `externalId`, `permalink`, `username`, `slideUrls`, `metrics`: - Используй их **как факты**: likes, views, comments, число слайдов (`slideUrls.length` или media children count), handle, permalink. - **Не выдумывай** URL и метрики. Нет permalink → пометь источник как «гипотеза», не подставляй фейковый link. - **Запрещён** HTML scrape Instagram и любые неофициальные API. Live-данные приходят только из Instagram Graph API: **Hashtag Search + `top_media` (primary)** и optional Business Discovery fallback (Backend, C-39). Soft-fail → mock — это нормально; не пытайся «добыть» посты сам. - Токены (`INSTAGRAM_ACCESS_TOKEN` / `INSTAGRAM_GRAPH_TOKEN` / `IG_ACCESS_TOKEN`) **никогда** не интерполируй в ответ, `feedbackLogs` или рассуждения. ### Mock / missing metrics (`sourceMode: \"mock\"` или нет live-полей) Работай как раньше: тренды и углы по брифу; источники без выдуманных URL. Опциональные live-поля (`liveHandles`, `observedPosts`) **не** обязательны. Поле `instagramHashtags` **всё равно обязательно** на carousel researcher path. ### Handle / hashtag config (имена env, не значения) | Key | Role | |-----|------| | `IG_OURS_USERNAME` | Our handle; default `mosarmclub` | | `IG_DEFAULT_HASHTAGS` | Optional override when topic empty (comma-separated bare names) | | `IG_COMPETITOR_USERNAMES` | **Optional fallback only** (Business Discovery). Не primary discovery | Primary discovery = hashtags from topic → Hashtag `top_media`. Секреты токена **не** документируй значениями и не читай в промпт. ### Output Базовый контракт + **required** `instagramHashtags` (carousel path): ```json { \"trends\": [\"…\"], \"audience\": \"…\", \"sources\": [{ \"label\": \"…\", \"url\": \"…\", \"hypothesis\": false }], \"briefForHookWriter\": \"…\", \"instagramHashtags\": { \"topic\": \"\", \"hashtags\": [\"armenianclub\", \"yerevan\", \"armenianfood\", \"guestnight\"], \"source\": \"deterministic_mapper\", \"emptyTopic\": true } } ``` Пример непустой темы: ```json { \"instagramHashtags\": { \"topic\": \"гостевой вечер\", \"hashtags\": [\"guestnight\", \"armenianclub\", \"yerevan\"], \"source\": \"deterministic_mapper\", \"emptyTopic\": false } } ``` Опционально при live context: ```json { \"liveHandles\": { \"ours\": \"mosarmclub\", \"competitors\": [\"…\"] }, \"observedPosts\": [ { \"username\": \"…\", \"permalink\": \"https://…\", \"likes\": 0, \"views\": 0, \"slideCount\": 1 } ] } ``` `observedPosts` — только посты из входа; числа копируй из `metrics` / `slideUrls`, не округляй «на глаз». `liveHandles.competitors` может быть пустым: primary discovery — hashtags, не ручной список. ## Skills - `.cursor/skills/content-pipeline-agents/SKILL.md` - `.cursor/skills/prompt-engineering/SKILL.md` - `.cursor/skills/ai-bridge/SKILL.md` - `.cursor/skills/rag-stack/SKILL.md` (если нужен retrieval) ## Plugins - `plugins/ai-bridge/PLUGINS.md` - `plugins/ai-bridge/cortana_retrieval_contract.py` (при Cortana/retrieval) ## MCP servers - `chrome-devtools` — проверка живых страниц/сети при исследовании (опционально; **не** для scrape IG) - `playwright` — снимки UI Studio / конкурентных сайтов (опционально; **не** для неофициального IG scrape) ## Default LLM model slot id `gpt-4o-mini` ## Notes Mock pipeline: `lib/jobs/mock-emitter.ts` agent `researcher`. Settings id: `researcher`. Worker skill: `workers/researcher/SKILL.md` (`researcher@v3`). Wave: C-38 (topic→hashtags packs) → C-39 (Graph hashtag feed) → C-40 (Studio UI)."
+          - generic [ref=f3e225]:
+            - generic [ref=f3e226]: Правила (SKILL)
+            - textbox "Правила (SKILL)" [ref=f3e227]: "# Researcher — разведка темы и источников **Version:** `researcher@v3` (C-38) ## Role Mesh-нода **The Researcher**. Собирает факты, тренды и углы подачи **до** хуков и сценария. Не рисует медиа, не публикует. Опирается на **live Instagram carousel** context, когда Backend передаёт посты с `sourceMode: \"live\"`. **Primary discovery (C-38):** topic → hashtags → Hashtag Search + `top_media` (реализация fetch — C-39). `IG_COMPETITOR_USERNAMES` / Business Discovery — **optional fallback only**. ## When Статус джобы `RESEARCHING`. Вход: `topic`, теги Launchpad (`В тренде`, сленг, спор…), язык клуба; опционально live/mock IG posts. ## Inputs | Поле | Обязательно | |------|-------------| | `topic` / URL | да (может быть пустой строкой → niche default hashtags) | | `locale` (`hy`/`ru`/`en`) | да | | `audience` / club context | желательно | | запреты из brandbook §1 | если загружен | | live/mock post context (`sourceMode`, metrics, handles, `slideUrls`) | опц. (C-39 hashtag feed) | Не запрашивай у админа competitor usernames/URLs — discovery по хэштегам темы. ## Handle / hashtag env (имена ключей) | Key | Role | |-----|------| | `IG_OURS_USERNAME` | Our handle; default `mosarmclub` | | `IG_DEFAULT_HASHTAGS` | Optional empty-topic override (comma-separated bare names) | | `IG_COMPETITOR_USERNAMES` | **Optional BD fallback only** — не primary | Token keys exist upstream (`INSTAGRAM_ACCESS_TOKEN` \\| `INSTAGRAM_GRAPH_TOKEN` \\| `IG_ACCESS_TOKEN`) — **never** read into skill output or logs. ## Topic → hashtags contract Deterministic mapper (Backend C-39; document parity here). `source` always `\"deterministic_mapper\"`. | Field | Rule | |-------|------| | `topic` | Input as trimmed string; empty → `\"\"` | | `hashtags` | 1–5 lowercase, no `#`, no spaces; Backend Graph uses **first 3** | | `source` | `\"deterministic_mapper\"` | | `emptyTopic` | `true` iff topic trim empty | **Empty topic defaults:** env `IG_DEFAULT_HASHTAGS` else `armenianclub`, `yerevan`, `armenianfood`, `guestnight`. **Non-empty:** normalize → alias/keyword map (RU/EN) → dedupe/stable order/cap ≤5; unknown → slugify + anchors `armenianclub`, `yerevan`. Alias table owns Backend (C-39). ## Outputs → `feedbackLogs.researcher` Compat (mock / legacy): ```json { \"summary\": \"2–4 предложения\", \"angles\": [\"угол 1\", \"угол 2\", \"угол 3\"], \"sources\": [{\"title\": \"\", \"url\": \"\", \"note\": \"\"}], \"keywords\": [], \"risks\": [\"спорные утверждения / нужна проверка\"], \"freshness\": \"ISO date or unknown\" } ``` Agent-pack JSON (mesh) — existing fields **plus required** `instagramHashtags` on carousel path: ```json { \"trends\": [], \"audience\": \"\", \"sources\": [], \"briefForHookWriter\": \"\", \"instagramHashtags\": { \"topic\": \"\", \"hashtags\": [\"armenianclub\", \"yerevan\", \"armenianfood\", \"guestnight\"], \"source\": \"deterministic_mapper\", \"emptyTopic\": true } } ``` Optional live fields: ```json { \"liveHandles\": { \"ours\": \"mosarmclub\", \"competitors\": [] }, \"observedPosts\": [ { \"username\": \"\", \"permalink\": \"\", \"likes\": 0, \"views\": 0, \"slideCount\": 1 } ] } ``` `competitors` may be empty — primary path is hashtag `top_media`, not the manual list. ## Practical skills 1. **Filter-first:** сначала явные факты и даты, потом «мнение». 2. **Нишевые углы:** минимум 3 разных угла (новичок / спор / локальный Ереван / тренд). 3. **Source hygiene:** без выдуманных URL; если источник не подтверждён — в `risks` / `hypothesis: true`. 4. **Hashtag hand-off:** отрази `instagramHashtags` по контракту; не выдумывай Graph fetch — Backend C-39. 5. **Live IG facts:** при `sourceMode: \"live\"` копируй likes/views/comments/slideCount/permalink из входа; не scrape HTML. 6. **Club voice prep:** отметить сленг/табу из brandbook, не генерировать оскорбления. 7. **Hand-off:** краткий brief для Hook Writer (не готовый пост). Script Writer later may receive real metrics context via cascade — do not invent them here. ## Rules - Не писать финальный хук или полный сценарий. - Не вызывать Designer / Publisher. - Писать только в `feedbackLogs`, не в `generatedMedia`. - При недостатке данных — `SufficiencySignal: insufficient` + что дозапросить у админа (не competitor nicknames). - Soft-fail live → mock: работай без `observedPosts`; не пытайся «добрать» IG неофициально. - **Forbidden:** Instagram HTML scrape / unofficial parsers. - Никаких access tokens в логах. ## Done when Hook Writer может выбрать угол без повторного поиска; `instagramHashtags` заполнен по контракту; при live — brief опирается на реальные observed posts (hashtag feed ± BD fallback)."
+          - button "Сохранить пакет агента" [ref=f3e228]
+        - region [ref=f3e229]:
+          - generic [ref=f3e230]:
+            - heading "LLM по агентам" [level=2] [ref=f3e231]
+            - paragraph [ref=f3e232]: Подключите агрегатор (URL + ключ) — он подберёт маршрут к модели. В списке агента доступны все модели каталога, не только 4 стоковых.
+          - generic [ref=f3e233]:
+            - generic [ref=f3e234]:
+              - generic [ref=f3e235]: URL провайдера / агрегатора
+              - textbox "URL провайдера / агрегатора" [ref=f3e236]:
+                - /placeholder: https://api.example.com/v1
+            - generic [ref=f3e237]:
+              - generic [ref=f3e238]: API-ключ агрегатора
+              - textbox "API-ключ агрегатора" [ref=f3e239]:
+                - /placeholder: хранится только в браузере
+          - list [ref=f3e280]:
+            - listitem [ref=f3e281]:
+              - generic [ref=f3e282]:
+                - paragraph [ref=f3e283]: Исследователь
+                - paragraph [ref=f3e284]: Тренды, источники, ниша
+              - generic [ref=f3e285]:
+                - generic [ref=f3e286]: Модель
+                - combobox "Модель для Исследователь" [ref=f3e287]:
+                  - option "GPT-4o mini · OpenAI" [selected]
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic"
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f3e288]:
+              - generic [ref=f3e289]:
+                - paragraph [ref=f3e290]: Автор хуков
+                - paragraph [ref=f3e291]: Хуки и оценка вирусности
+              - generic [ref=f3e292]:
+                - generic [ref=f3e293]: Модель
+                - combobox "Модель для Автор хуков" [ref=f3e294]:
+                  - option "GPT-4o mini · OpenAI"
+                  - option "GPT-4o · OpenAI" [selected]
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic"
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f3e295]:
+              - generic [ref=f3e296]:
+                - paragraph [ref=f3e297]: Сценарист
+                - paragraph [ref=f3e298]: Idea-brief / сценарий
+              - generic [ref=f3e299]:
+                - generic [ref=f3e300]: Модель
+                - combobox "Модель для Сценарист" [ref=f3e301]:
+                  - option "GPT-4o mini · OpenAI"
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic" [selected]
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f3e302]:
+              - generic [ref=f3e303]:
+                - paragraph [ref=f3e304]: Аналитик
+                - paragraph [ref=f3e305]: Метрики → инсайты (/analytics)
+              - generic [ref=f3e306]:
+                - generic [ref=f3e307]: Модель
+                - combobox "Модель для Аналитик" [ref=f3e308]:
+                  - option "GPT-4o mini · OpenAI" [selected]
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic"
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f3e309]:
+              - generic [ref=f3e310]:
+                - paragraph [ref=f3e311]: Дизайнер
+                - paragraph [ref=f3e312]: Визуал / макеты
+              - generic [ref=f3e313]:
+                - generic [ref=f3e314]: Модель
+                - combobox "Модель для Дизайнер" [ref=f3e315]:
+                  - option "GPT-4o mini · OpenAI"
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic" [selected]
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f3e316]:
+              - generic [ref=f3e317]:
+                - paragraph [ref=f3e318]: Рендерер
+                - paragraph [ref=f3e319]: Remotion / HeyGen / Satori
+              - generic [ref=f3e320]:
+                - generic [ref=f3e321]: Модель
+                - combobox "Модель для Рендерер" [ref=f3e322]:
+                  - option "GPT-4o mini · OpenAI" [selected]
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic"
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f3e323]:
+              - generic [ref=f3e324]:
+                - paragraph [ref=f3e325]: Публицист
+                - paragraph [ref=f3e326]: Слоты и площадки после HITL
+              - generic [ref=f3e327]:
+                - generic [ref=f3e328]: Модель
+                - combobox "Модель для Публицист" [ref=f3e329]:
+                  - option "GPT-4o mini · OpenAI" [selected]
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic"
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f3e330]:
+              - generic [ref=f3e331]:
+                - paragraph [ref=f3e332]: Маршрутизатор
+                - paragraph [ref=f3e333]: Выбор модуля пайплайна
+              - generic [ref=f3e334]:
+                - generic [ref=f3e335]: Модель
+                - combobox "Модель для Маршрутизатор" [ref=f3e336]:
+                  - option "GPT-4o mini · OpenAI"
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic"
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google" [selected]
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+        - region [ref=f3e241]:
+          - generic [ref=f3e242]:
+            - heading "Рилсы" [level=2] [ref=f3e243]
+            - paragraph [ref=f3e244]: Сколько карточек в dual-feed (Наши и Конкуренты).
+          - generic [ref=f3e337]:
+            - generic [ref=f3e338]:
+              - paragraph [ref=f3e339]: Отображение рилсов (количество на странице)
+              - paragraph [ref=f3e340]: От 4 до 48. По умолчанию 12.
+            - generic [ref=f3e341]:
+              - generic [ref=f3e342]: На странице
+              - spinbutton "Отображение рилсов (количество на странице)" [ref=f3e343]: "12"
+  - button "Open Next.js Dev Tools" [ref=f3e349] [cursor=pointer]
+  - alert [ref=f3e353]

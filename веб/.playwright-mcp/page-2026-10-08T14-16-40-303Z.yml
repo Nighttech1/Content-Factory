@@ -1,0 +1,107 @@
+- generic [active] [ref=f5e1]:
+  - generic [ref=f5e2]:
+    - complementary "Главная навигация" [ref=f5e3]:
+      - generic [ref=f5e11]:
+        - generic [ref=f5e12]: VERN·ATUN
+        - generic [ref=f5e13]: Content Factory
+      - navigation [ref=f5e15]:
+        - generic [ref=f5e16]:
+          - link "Студия" [ref=f5e19] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f5e32] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f5e45] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f5e55] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f5e68] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f5e78]:
+        - paragraph [ref=f5e79]: Роль QA (локально)
+        - generic [ref=f5e80]:
+          - button "OWNER" [ref=f5e81]
+          - button "ADMIN" [ref=f5e82]
+      - button "Изменить ширину боковой панели" [ref=f5e83]
+    - main [ref=f5e85]:
+      - generic [ref=f5e86]:
+        - heading "Команда выпуска" [level=1] [ref=f5e87]
+        - generic [ref=f5e90]:
+          - generic [ref=f5e91]:
+            - generic [ref=f5e92]:
+              - heading "Команда выпуска" [level=1] [ref=f5e93]
+              - paragraph [ref=f5e94]: Выберите пайплайн канала и смотрите, как агенты связаны на холсте.
+            - tablist "Пайплайн вида контента" [ref=f5e96]:
+              - group [ref=f5e97]:
+                - button "Карусели Instagram (4:5)" [ref=f5e98] [cursor=pointer]
+                - button "Полезные картинки & Инфографика" [ref=f5e105] [cursor=pointer]
+                - button "Мульт-Reels (2D сторителлинг)" [ref=f5e114] [cursor=pointer]
+                - button "HeyGen AI-Аватар Reels" [ref=f5e120] [cursor=pointer]
+                - button "Статьи на сайт" [ref=f5e126] [cursor=pointer]
+                - button "Статьи в TG" [ref=f5e132] [cursor=pointer]
+                - button "Рилс" [ref=f5e138] [cursor=pointer]
+                - button "Нарезки с видео в рилсы" [ref=f5e146] [cursor=pointer]
+                - button "Информационное видео" [ref=f5e155] [cursor=pointer]
+          - application [ref=f5e161]:
+            - generic [ref=f5e163]:
+              - generic:
+                - generic:
+                  - img:
+                    - group "Edge from analyst to script"
+                  - img:
+                    - group "Edge from script to designer"
+                  - img:
+                    - group "Edge from designer to publisher"
+                - generic:
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                - generic:
+                  - group [ref=f5e164] [cursor=pointer]:
+                    - generic [ref=f5e168]:
+                      - generic [aria-hidden] [ref=f5e169]: A
+                      - generic [ref=f5e170]:
+                        - generic [ref=f5e171]: Аналитик
+                        - generic [ref=f5e172]:
+                          - generic [ref=f5e173]: разбор
+                          - generic [ref=f5e174]: "задачи: 5"
+                  - group [ref=f5e176] [cursor=pointer]:
+                    - generic [ref=f5e180]:
+                      - generic [aria-hidden] [ref=f5e181]: S
+                      - generic [ref=f5e182]:
+                        - generic [ref=f5e183]: Сценарист
+                        - generic [ref=f5e184]:
+                          - generic [ref=f5e185]: пишет
+                          - generic [ref=f5e186]: "задачи: 1"
+                  - group [ref=f5e188] [cursor=pointer]:
+                    - generic [ref=f5e192]:
+                      - generic [aria-hidden] [ref=f5e193]: C
+                      - generic [ref=f5e194]:
+                        - generic [ref=f5e195]: Дизайнер карусели
+                        - generic [ref=f5e196]:
+                          - generic [ref=f5e197]: собирает
+                          - generic [ref=f5e198]: "задачи: 2"
+                  - group [ref=f5e200] [cursor=pointer]:
+                    - generic [ref=f5e204]:
+                      - generic [aria-hidden] [ref=f5e205]: P
+                      - generic [ref=f5e206]:
+                        - generic [ref=f5e207]: Публицист
+                        - generic [ref=f5e208]:
+                          - generic [ref=f5e209]: слот
+                          - generic [ref=f5e210]: "задачи: 0"
+            - generic "Control Panel" [ref=f5e212]:
+              - button "Zoom In" [ref=f5e213] [cursor=pointer]
+              - button "Zoom Out" [ref=f5e216] [cursor=pointer]
+              - button "Fit View" [ref=f5e219] [cursor=pointer]
+              - button "Toggle Interactivity" [ref=f5e222] [cursor=pointer]
+            - img "Mini Map" [ref=f5e226]
+          - complementary [aria-hidden]
+  - generic [ref=f5e236] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=f5e237]
+    - generic [ref=f5e241]:
+      - button "Open issues overlay" [ref=f5e242]:
+        - generic [ref=f5e243]:
+          - generic [aria-hidden] [ref=f5e244]: "0"
+          - generic [ref=f5e245]: "1"
+        - generic [ref=f5e246]: Issue
+      - button "Collapse issues badge" [ref=f5e247]
+  - alert [ref=f5e89]

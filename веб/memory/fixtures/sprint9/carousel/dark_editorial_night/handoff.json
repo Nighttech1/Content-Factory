@@ -1,0 +1,43 @@
+{
+  "contentType": "carousel",
+  "project": "vernatun",
+  "content_id": "golden-dark-editorial-night",
+  "requested_slide_count": 3,
+  "idea": "Ночной город и армянский разговорный клуб — editorial photo + gold CTA",
+  "hook": "Город спит. Мы — нет.",
+  "tone": "vernatun",
+  "cta_type": 3,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Город спит. Мы — нет.",
+      "secondary_copy": "",
+      "swipe_trigger": "META: cinematic curiosity — кто «мы» в городе ночью",
+      "visual_prompt": "dark_editorial cinematic B/W night street photo grain, soft sodium rim light, editorial title safe-zone top, no purple color grade",
+      "alt_text": "Ночная улица, editorial обложка"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "point",
+      "primary_copy": "Разговор громче неона",
+      "secondary_copy": "В Vernatun язык — не упражнение. Это стол, где можно ошибаться и смеяться.",
+      "swipe_trigger": "META: value — клуб как живой стол, не курс",
+      "visual_prompt": "dark_editorial telemetry gauges soft gold arcs over desaturated photo, editorial type hierarchy, bridge light streak across cut",
+      "alt_text": "Телеметрия поверх ночного кадра"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta",
+      "primary_copy": "Живые встречи",
+      "secondary_copy": "Приглашение через TG-канал в шапке профиля — приходи за столом.",
+      "swipe_trigger": "META: soft end — club meet CTA via TG; stop",
+      "visual_prompt": "dark_editorial gold CTA button solid, photo still blurred behind, Vernatun mark, premium editorial not purple CTA pill",
+      "alt_text": "CTA живые встречи клуба",
+      "cta_type": 3
+    }
+  ],
+  "caption": "Ночной город. Живой стол. Vernatun — через TG в шапке.",
+  "hashtags": ["#Vernatun", "#Ереван", "#РазговорныйКлуб", "#Ночь"],
+  "promptForDesigner": "dark_editorial: photo cover + gauges + gold CTA; panorama→slice; ignore swipe_trigger"
+}

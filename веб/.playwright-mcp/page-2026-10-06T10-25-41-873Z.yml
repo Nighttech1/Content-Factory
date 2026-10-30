@@ -1,0 +1,94 @@
+- generic [ref=f4e2]:
+  - complementary "Главная навигация" [ref=f4e3]:
+    - generic [ref=f4e11]:
+      - generic [ref=f4e12]: VERN·ATUN
+      - generic [ref=f4e13]: Content Factory
+    - generic [ref=f4e14]:
+      - paragraph [ref=f4e15]: Пайплайны и ноды
+      - navigation [ref=f4e16]:
+        - generic [ref=f4e17]:
+          - generic [ref=f4e18]:
+            - link "Студия" [ref=f4e19] [cursor=pointer]:
+              - /url: /studio
+            - button "Свернуть модули Студии" [expanded] [ref=f4e26]
+          - list [ref=f4e30]:
+            - listitem [ref=f4e31]:
+              - link "Карусели Instagram (4:5)" [ref=f4e32] [cursor=pointer]:
+                - /url: /studio/carousel-engine
+            - listitem [ref=f4e33]:
+              - link "Полезные картинки & Инфографика" [ref=f4e34] [cursor=pointer]:
+                - /url: /studio/aesthetic-graphics
+            - listitem [ref=f4e35]:
+              - link "Мульт-Reels (2D сторителлинг)" [ref=f4e36] [cursor=pointer]:
+                - /url: /studio/cartoon-reels
+            - listitem [ref=f4e37]:
+              - link "HeyGen AI-Аватар Reels" [ref=f4e38] [cursor=pointer]:
+                - /url: /studio/heygen-reels
+        - link "Холст" [ref=f4e40] [cursor=pointer]:
+          - /url: /admin/mesh
+        - link "Расписание" [ref=f4e48] [cursor=pointer]:
+          - /url: /schedule
+        - link "Аналитика" [ref=f4e53] [cursor=pointer]:
+          - /url: /analytics
+        - link "Бренд-кит" [ref=f4e61] [cursor=pointer]:
+          - /url: /brand-kit
+        - link "Настройки" [ref=f4e70] [cursor=pointer]:
+          - /url: /settings
+    - generic [ref=f4e75]:
+      - paragraph [ref=f4e76]: Բարև · Vernatun
+      - generic [ref=f4e77]:
+        - paragraph [ref=f4e78]: Роль QA (локально)
+        - generic [ref=f4e79]:
+          - button "OWNER" [ref=f4e80]
+          - button "ADMIN" [ref=f4e81]
+  - main [ref=f4e83]:
+    - generic [ref=f4e84]:
+      - generic [ref=f4e86]:
+        - heading "Студия" [level=1] [ref=f4e87]
+        - paragraph [ref=f4e88]: Выберите модуль — откроется рабочая страница канала.
+      - region [ref=f4e89]:
+        - generic [ref=f4e90]:
+          - generic [ref=f4e91]:
+            - heading "Каналы рендера" [level=2] [ref=f4e92]
+            - paragraph [ref=f4e93]: Выберите модуль — откроется страница канала
+          - generic [ref=f4e94]: Ничего не выбрано
+        - generic [ref=f4e95]:
+          - link "4:5 · PNG Карусели Instagram (4:5) Редакционная карусель 1080×1350 с типографикой и CTA-слайдом. Открыть →" [ref=f4e97] [cursor=pointer]:
+            - /url: /studio/carousel-engine
+            - generic [ref=f4e99]:
+              - generic [ref=f4e100]:
+                - generic [ref=f4e101]: 4:5 · PNG
+                - generic [ref=f4e102]:
+                  - generic [ref=f4e103]: Карусели Instagram (4:5)
+                  - paragraph [ref=f4e104]: Редакционная карусель 1080×1350 с типографикой и CTA-слайдом.
+              - generic [ref=f4e105]: Открыть →
+          - link "Bilingual Полезные картинки & Инфографика Читы, таблицы и quote-тайлы для Telegram и LinkedIn. Открыть →" [ref=f4e107] [cursor=pointer]:
+            - /url: /studio/aesthetic-graphics
+            - generic [ref=f4e109]:
+              - generic [ref=f4e110]:
+                - generic [ref=f4e111]: Bilingual
+                - generic [ref=f4e112]:
+                  - generic [ref=f4e113]: Полезные картинки & Инфографика
+                  - paragraph [ref=f4e114]: Читы, таблицы и quote-тайлы для Telegram и LinkedIn.
+              - generic [ref=f4e115]: Открыть →
+          - link "9:16 · 2D Мульт-Reels (2D сторителлинг) Иллюстрированный сторителлинг 9:16 с субтитрами. Открыть →" [ref=f4e117] [cursor=pointer]:
+            - /url: /studio/cartoon-reels
+            - generic [ref=f4e119]:
+              - generic [ref=f4e120]:
+                - generic [ref=f4e121]: 9:16 · 2D
+                - generic [ref=f4e122]:
+                  - generic [ref=f4e123]: Мульт-Reels (2D сторителлинг)
+                  - paragraph [ref=f4e124]: Иллюстрированный сторителлинг 9:16 с субтитрами.
+              - generic [ref=f4e125]: Открыть →
+          - link "HeyGen HeyGen AI-Аватар Reels Говорящий аватар с синхроном губ и бренд-палитрой. Открыть →" [ref=f4e127] [cursor=pointer]:
+            - /url: /studio/heygen-reels
+            - generic [ref=f4e129]:
+              - generic [ref=f4e130]:
+                - generic [ref=f4e131]: HeyGen
+                - generic [ref=f4e132]:
+                  - generic [ref=f4e133]: HeyGen AI-Аватар Reels
+                  - paragraph [ref=f4e134]: Говорящий аватар с синхроном губ и бренд-палитрой.
+              - generic [ref=f4e135]: Открыть →
+          - button "+ [+ Добавить модуль]" [ref=f4e137]:
+            - generic [ref=f4e138]: +
+            - generic [ref=f4e139]: "[+ Добавить модуль]"

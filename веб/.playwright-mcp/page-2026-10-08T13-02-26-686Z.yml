@@ -1,0 +1,138 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - complementary "Главная навигация" [ref=f2e3]:
+      - generic [ref=f2e11]:
+        - generic [ref=f2e12]: VERN·ATUN
+        - generic [ref=f2e13]: Content Factory
+      - navigation [ref=f2e15]:
+        - generic [ref=f2e16]:
+          - link "Студия" [ref=f2e19] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f2e32] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f2e45] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f2e55] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f2e68] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f2e78]:
+        - paragraph [ref=f2e79]: Роль QA (локально)
+        - generic [ref=f2e80]:
+          - button "OWNER" [ref=f2e81]
+          - button "ADMIN" [ref=f2e82]
+      - button "Изменить ширину боковой панели" [ref=f2e83]
+    - main [ref=f2e85]:
+      - generic [ref=f2e86]:
+        - generic [ref=f2e87]:
+          - heading "Расписание" [level=1] [ref=f2e88]
+          - paragraph [ref=f2e89]: Календарь слотов для готовых постов. Назначение даты — только очередь в студии, без публикации в соцсети.
+        - generic [ref=f2e101]:
+          - generic [ref=f2e102]:
+            - generic [ref=f2e103]:
+              - generic [ref=f2e104]:
+                - button "Предыдущий месяц" [ref=f2e105]
+                - heading "октябрь 2026 г." [level=2] [ref=f2e108]
+                - button "Следующий месяц" [ref=f2e109]
+              - button "Сегодня" [ref=f2e112]
+            - generic [ref=f2e113]:
+              - paragraph [ref=f2e114]: Пн
+              - paragraph [ref=f2e115]: Вт
+              - paragraph [ref=f2e116]: Ср
+              - paragraph [ref=f2e117]: Чт
+              - paragraph [ref=f2e118]: Пт
+              - paragraph [ref=f2e119]: Сб
+              - paragraph [ref=f2e120]: Вс
+              - generic [ref=f2e121]:
+                - generic [ref=f2e122] [cursor=pointer]: "28"
+                - generic [ref=f2e125] [cursor=pointer]: "29"
+                - generic [ref=f2e128] [cursor=pointer]: "30"
+                - generic [ref=f2e131] [cursor=pointer]: "1"
+                - generic [ref=f2e134] [cursor=pointer]: "2"
+                - generic [ref=f2e137] [cursor=pointer]: "3"
+                - generic [ref=f2e140] [cursor=pointer]: "4"
+                - generic [ref=f2e143] [cursor=pointer]: "5"
+                - generic [ref=f2e146] [cursor=pointer]: "6"
+                - generic [ref=f2e149] [cursor=pointer]: "7"
+                - generic [ref=f2e152] [cursor=pointer]: "8"
+                - generic [ref=f2e155] [cursor=pointer]: "9"
+                - generic [ref=f2e158] [cursor=pointer]: "10"
+                - generic [ref=f2e161] [cursor=pointer]: "11"
+                - generic [ref=f2e164] [cursor=pointer]: "12"
+                - generic [ref=f2e167] [cursor=pointer]: "13"
+                - generic [ref=f2e170] [cursor=pointer]: "14"
+                - generic [ref=f2e173] [cursor=pointer]:
+                  - generic [ref=f2e174]: "15"
+                  - button "Armenian Club — 5 tips for guest night" [ref=f2e379]
+                - generic [ref=f2e176] [cursor=pointer]: "16"
+                - generic [ref=f2e179] [cursor=pointer]: "17"
+                - generic [ref=f2e182] [cursor=pointer]: "18"
+                - generic [ref=f2e185] [cursor=pointer]: "19"
+                - generic [ref=f2e188] [cursor=pointer]: "20"
+                - generic [ref=f2e191] [cursor=pointer]: "21"
+                - generic [ref=f2e194] [cursor=pointer]: "22"
+                - generic [ref=f2e197] [cursor=pointer]: "23"
+                - generic [ref=f2e200] [cursor=pointer]: "24"
+                - generic [ref=f2e203] [cursor=pointer]: "25"
+                - generic [ref=f2e206] [cursor=pointer]: "26"
+                - generic [ref=f2e209] [cursor=pointer]: "27"
+                - generic [ref=f2e212] [cursor=pointer]: "28"
+                - generic [ref=f2e215] [cursor=pointer]: "29"
+                - generic [ref=f2e218] [cursor=pointer]: "30"
+                - generic [ref=f2e221] [cursor=pointer]: "31"
+                - generic [ref=f2e224] [cursor=pointer]: "1"
+                - generic [ref=f2e227] [cursor=pointer]: "2"
+                - generic [ref=f2e230] [cursor=pointer]: "3"
+                - generic [ref=f2e233] [cursor=pointer]: "4"
+                - generic [ref=f2e236] [cursor=pointer]: "5"
+                - generic [ref=f2e239] [cursor=pointer]: "6"
+                - generic [ref=f2e242] [cursor=pointer]: "7"
+                - generic [ref=f2e245] [cursor=pointer]: "8"
+          - complementary [ref=f2e248]:
+            - generic [ref=f2e249]:
+              - paragraph [ref=f2e250]: Очередь
+              - heading "Модули студии" [level=2] [ref=f2e251]
+            - tree [ref=f2e253]:
+              - treeitem [expanded] [ref=f2e254]:
+                - button "Карусели Instagram (4:5)" [ref=f2e255]
+                - group [ref=f2e328]:
+                  - generic [ref=f2e329]:
+                    - treeitem "Armenian Club — 5 tips for guest night 15 октября 2026 г. в 12:00" [selected] [ref=f2e384]:
+                      - generic [ref=f2e335]:
+                        - generic [ref=f2e336]: Armenian Club — 5 tips for guest night
+                        - generic [ref=f2e337]: 15 октября 2026 г. в 12:00
+                    - button "Снять слот" [ref=f2e386]
+                  - 'treeitem "Carousel: menu highlights this week Слот не назначен" [ref=f2e340]':
+                    - generic [ref=f2e345]:
+                      - generic [ref=f2e346]: "Carousel: menu highlights this week"
+                      - generic [ref=f2e347]: Слот не назначен
+                  - treeitem "Behind the bar — signature cocktails Слот не назначен" [ref=f2e350]:
+                    - generic [ref=f2e355]:
+                      - generic [ref=f2e356]: Behind the bar — signature cocktails
+                      - generic [ref=f2e357]: Слот не назначен
+                  - 'treeitem "Wine flight: three Armenian reds Слот не назначен" [ref=f2e360]':
+                    - generic [ref=f2e365]:
+                      - generic [ref=f2e366]: "Wine flight: three Armenian reds"
+                      - generic [ref=f2e367]: Слот не назначен
+                  - treeitem "Table styling for Saturday dinner Слот не назначен" [ref=f2e370]:
+                    - generic [ref=f2e375]:
+                      - generic [ref=f2e376]: Table styling for Saturday dinner
+                      - generic [ref=f2e377]: Слот не назначен
+              - treeitem [ref=f2e262]:
+                - button "Полезные картинки & Инфографика" [ref=f2e263]
+              - treeitem [ref=f2e270]:
+                - button "Мульт-Reels (2D сторителлинг)" [ref=f2e271]
+              - treeitem [ref=f2e278]:
+                - button "HeyGen AI-Аватар Reels" [ref=f2e279]
+              - treeitem [ref=f2e286]:
+                - button "Статьи на сайт" [ref=f2e287]
+              - treeitem [ref=f2e294]:
+                - button "Статьи в TG" [ref=f2e295]
+              - treeitem [ref=f2e302]:
+                - button "Рилс" [ref=f2e303]
+              - treeitem [ref=f2e310]:
+                - button "Нарезки с видео в рилсы" [ref=f2e311]
+              - treeitem [ref=f2e318]:
+                - button "Информационное видео" [ref=f2e319]
+  - button "Open Next.js Dev Tools" [ref=f2e96] [cursor=pointer]
+  - alert [ref=f2e100]

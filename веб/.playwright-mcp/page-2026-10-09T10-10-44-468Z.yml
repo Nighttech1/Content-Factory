@@ -1,0 +1,139 @@
+- generic [ref=f5e2]:
+  - complementary "Главная навигация" [ref=f5e3]:
+    - generic [ref=f5e11]:
+      - generic [ref=f5e12]: VERN·ATUN
+      - generic [ref=f5e13]: Content Factory
+    - navigation [ref=f5e15]:
+      - generic [ref=f5e16]:
+        - link "Студия" [ref=f5e19] [cursor=pointer]:
+          - /url: /studio
+        - link "Команда выпуска" [ref=f5e32] [cursor=pointer]:
+          - /url: /admin/mesh
+        - link "Расписание" [ref=f5e45] [cursor=pointer]:
+          - /url: /schedule
+        - link "Аналитика" [ref=f5e55] [cursor=pointer]:
+          - /url: /analytics
+        - link "Настройки" [ref=f5e68] [cursor=pointer]:
+          - /url: /settings
+    - generic [ref=f5e78]:
+      - paragraph [ref=f5e79]: Роль QA (локально)
+      - generic [ref=f5e80]:
+        - button "OWNER" [ref=f5e81]
+        - button "ADMIN" [ref=f5e82]
+    - button "Изменить ширину боковой панели" [ref=f5e83]
+  - main [ref=f5e85]:
+    - generic [ref=f5e86]:
+      - generic [ref=f5e87]:
+        - heading "Настройки" [level=1] [ref=f5e88]
+        - paragraph [ref=f5e89]: Дизайн, площадки, промпты агентов, LLM и рилсы. Правки — в браузере.
+      - complementary [ref=f5e90]:
+        - navigation [ref=f5e91]:
+          - generic [ref=f5e92]: Навигация
+          - list [ref=f5e93]:
+            - listitem [ref=f5e94]:
+              - button "Дизайн" [ref=f5e95]
+            - listitem [ref=f5e101]:
+              - button "Площадки" [ref=f5e102]
+            - listitem [ref=f5e107]:
+              - button "Расписание" [ref=f5e108]
+            - listitem [ref=f5e112]:
+              - button "Разведка" [ref=f5e113]
+            - listitem [ref=f5e120]:
+              - button "Агенты" [ref=f5e121]
+            - listitem [ref=f5e126]:
+              - button "LLM" [ref=f5e127]
+            - listitem [ref=f5e132]:
+              - button "Рилсы" [ref=f5e133]
+      - region [ref=f5e137]:
+        - generic [ref=f5e138]:
+          - heading "Дизайн" [level=2] [ref=f5e139]
+          - paragraph [ref=f5e140]: Текущий файл дизайн-системы для дизайнера.
+        - paragraph [ref=f5e141]:
+          - text: DESIGN.md
+          - generic [ref=f5e142]: docs/DESIGN.md
+        - generic [ref=f5e143] [cursor=pointer]:
+          - text: Загрузить новый файл
+          - button "Загрузить новый файл" [ref=f5e144]
+      - region [ref=f5e145]:
+        - generic [ref=f5e146]:
+          - generic [ref=f5e147]:
+            - heading "Площадки публикации" [level=2] [ref=f5e148]
+            - paragraph [ref=f5e149]: Ключи API только в браузере. Зелёный блок — публицист может публиковать; красный — подключение не подтверждено.
+          - button "Добавить площадку" [ref=f5e150]
+        - paragraph [ref=f5e151]: Загрузка…
+      - generic [ref=f5e152]:
+        - generic [ref=f5e153]:
+          - generic [ref=f5e154]:
+            - heading "Расписание" [level=2] [ref=f5e155]
+            - paragraph [ref=f5e156]: Правила автозаполнения календаря публициста. Готовый контент встаёт в слоты по правилам; ручной перенос в календаре важнее правила.
+          - button "Создать правило" [ref=f5e157]
+        - list [ref=f5e158]:
+          - listitem [ref=f5e159]: Правил пока нет.
+      - generic [ref=f5e160]:
+        - generic [ref=f5e161]:
+          - heading "Разведка" [level=2] [ref=f5e162]
+          - paragraph [ref=f5e163]: Параметры автоматического поиска контента для диагностики. Скрипт без LLM — токены не тратятся.
+        - generic [ref=f5e164]:
+          - generic [ref=f5e165]: Тема по умолчанию
+          - textbox "Тема по умолчанию" [ref=f5e166]:
+            - /placeholder: "например: армянская кухня"
+        - generic [ref=f5e167]:
+          - generic [ref=f5e168]:
+            - generic [ref=f5e169]: Глубина, дней
+            - spinbutton "Глубина, дней" [ref=f5e170]: "7"
+          - generic [ref=f5e171]:
+            - generic [ref=f5e172]: Мин. просмотры
+            - spinbutton "Мин. просмотры" [ref=f5e173]: "10000"
+        - generic [ref=f5e174]:
+          - checkbox "Автозапуск разведки по расписанию параметров" [ref=f5e175]
+          - text: Автозапуск разведки по расписанию параметров
+        - button "Сохранить параметры" [ref=f5e176]
+      - region [ref=f5e177]:
+        - generic [ref=f5e178]:
+          - 'heading "Агенты: промпты и правила" [level=2] [ref=f5e179]'
+          - paragraph [ref=f5e180]:
+            - text: Skills / prompt.md / agents/*.md. Промпты разные по типу контента (ключ
+            - code [ref=f5e181]: agentId::contentType
+            - text: ). Правки — в localStorage; ими же пользуется панель «Команда выпуска».
+        - group "Тип контента" [ref=f5e182]:
+          - group [ref=f5e183]:
+            - button "Общий" [ref=f5e184] [cursor=pointer]
+            - button "Карусели" [ref=f5e191] [cursor=pointer]
+            - button "HeyGen Reels" [ref=f5e198] [cursor=pointer]
+            - button "Instagram Reels" [ref=f5e205] [cursor=pointer]
+        - group "Агент" [ref=f5e211]:
+          - group [ref=f5e212]:
+            - button "Исследователь" [ref=f5e213] [cursor=pointer]
+            - button "Хук-райтер" [ref=f5e219] [cursor=pointer]
+            - button "Сценарист" [ref=f5e225] [cursor=pointer]
+            - button "Аналитик" [ref=f5e231] [cursor=pointer]
+            - button "Дизайнер" [ref=f5e237] [cursor=pointer]
+            - button "Публицист" [ref=f5e243] [cursor=pointer]
+            - button "Роутер" [ref=f5e249] [cursor=pointer]
+            - button "Рендерер" [ref=f5e255] [cursor=pointer]
+        - generic [ref=f5e260]:
+          - generic [ref=f5e261]: Промпт
+          - textbox "Промпт" [ref=f5e262]
+        - generic [ref=f5e263]:
+          - generic [ref=f5e264]: Правила (SKILL)
+          - textbox "Правила (SKILL)" [ref=f5e265]
+        - button "Сохранить пакет агента" [ref=f5e266]
+      - region [ref=f5e267]:
+        - generic [ref=f5e268]:
+          - heading "LLM по агентам" [level=2] [ref=f5e269]
+          - paragraph [ref=f5e270]: Подключите агрегатор (URL + ключ) — он подберёт маршрут к модели. В списке агента доступны все модели каталога, не только 4 стоковых.
+        - generic [ref=f5e271]:
+          - generic [ref=f5e272]:
+            - generic [ref=f5e273]: URL провайдера / агрегатора
+            - textbox "URL провайдера / агрегатора" [ref=f5e274]:
+              - /placeholder: https://api.example.com/v1
+          - generic [ref=f5e275]:
+            - generic [ref=f5e276]: API-ключ агрегатора
+            - textbox "API-ключ агрегатора" [ref=f5e277]:
+              - /placeholder: хранится только в браузере
+        - paragraph [ref=f5e278]: Загрузка…
+      - region [ref=f5e279]:
+        - generic [ref=f5e280]:
+          - heading "Рилсы" [level=2] [ref=f5e281]
+          - paragraph [ref=f5e282]: Сколько карточек в dual-feed (Наши и Конкуренты).
+        - paragraph [ref=f5e283]: Загрузка…

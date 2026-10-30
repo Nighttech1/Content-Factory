@@ -1,0 +1,113 @@
+- generic [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - complementary "Главная навигация" [ref=f3e3]:
+      - generic [ref=f3e6]:
+        - generic [ref=f3e7]: VERNATUN
+        - generic [ref=f3e8]: ARMENIAN CLUB
+      - navigation [ref=f3e10]:
+        - generic [ref=f3e11]:
+          - link "Студия" [ref=f3e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f3e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f3e37] [cursor=pointer]:
+            - /url: /settings
+          - link "Директор" [ref=f3e48] [cursor=pointer]:
+            - /url: /marketing
+      - generic [ref=f3e58]:
+        - paragraph [ref=f3e59]: Роль QA (локально)
+        - generic [ref=f3e60]:
+          - button "OWNER" [ref=f3e61]
+          - button "ADMIN" [ref=f3e62]
+      - button "Изменить ширину боковой панели" [ref=f3e63]
+    - main [ref=f3e65]:
+      - generic [ref=f3e66]:
+        - 'heading "Команда выпуска: Карусели Instagram" [level=1] [ref=f3e67]'
+        - generic [ref=f3e68]:
+          - generic [ref=f3e70]:
+            - 'heading "Команда выпуска: Карусели Instagram" [level=1] [ref=f3e71]'
+            - paragraph [ref=f3e72]: Пайплайн создания и публикации контента. Кликните на любого агента для детальной настройки.
+          - generic [ref=f3e73]:
+            - generic [ref=f3e75]:
+              - img [aria-hidden]:
+                - generic:
+                  - generic: запрос
+                  - generic: разбор
+                  - generic: сценарий
+                  - generic: медиа
+                  - generic: фильтр
+                  - generic: выводы
+              - generic [ref=f3e76]:
+                - generic [ref=f3e77]:
+                  - generic [ref=f3e85]:
+                    - text: Клиент
+                    - heading "User" [level=3] [ref=f3e86]
+                    - paragraph [ref=f3e87]: Тема и бриф — только в чате Create / Studio
+                  - button "Декомпозиция Разборщик Структура и тезисы" [ref=f3e88]:
+                    - generic [ref=f3e101]:
+                      - text: Декомпозиция
+                      - heading "Разборщик" [level=3] [ref=f3e102]
+                      - generic [ref=f3e103]: Структура и тезисы
+                  - button "Слайды & Текст Копирайтер каруселей Хуки и сценарий" [active] [ref=f3e104]:
+                    - generic [ref=f3e116]:
+                      - text: Слайды & Текст
+                      - heading "Копирайтер каруселей" [level=3] [ref=f3e117]
+                      - generic [ref=f3e118]: Хуки и сценарий
+                  - 'button "Визуал & Сетка Дизайнер карусели Промпты и стили 📄 design.md База Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления." [ref=f3e119]':
+                    - generic [ref=f3e135]:
+                      - text: Визуал & Сетка
+                      - heading "Дизайнер карусели" [level=3] [ref=f3e136]
+                      - generic [ref=f3e137]: Промпты и стили
+                    - generic [ref=f3e142]:
+                      - generic [ref=f3e143]:
+                        - generic [ref=f3e144]: 📄 design.md
+                        - generic [ref=f3e145]: База
+                      - paragraph [ref=f3e146]: "Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления."
+                  - button "Выгрузка & Пост Публицист Дистрибуция каналов" [ref=f3e147]:
+                    - generic [ref=f3e160]:
+                      - text: Выгрузка & Пост
+                      - heading "Публицист" [level=3] [ref=f3e161]
+                      - generic [ref=f3e162]: Дистрибуция каналов
+                - generic [ref=f3e163]:
+                  - button "Мониторинг Скаут Тренды & Референсы" [ref=f3e164]:
+                    - generic [ref=f3e177]:
+                      - text: Мониторинг
+                      - heading "Скаут" [level=3] [ref=f3e178]
+                      - generic [ref=f3e179]: Тренды & Референсы
+                  - button "Метрики Аналитик ERR & Дочитывания" [ref=f3e180]:
+                    - generic [ref=f3e190]:
+                      - text: Метрики
+                      - heading "Аналитик" [level=3] [ref=f3e191]
+                      - generic [ref=f3e192]: ERR & Дочитывания
+                  - button "Обучение Тренер RLHF & Обновление баз" [ref=f3e193]:
+                    - generic [ref=f3e208]:
+                      - text: Обучение
+                      - heading "Тренер" [level=3] [ref=f3e209]
+                      - generic [ref=f3e210]: RLHF & Обновление баз
+            - 'complementary "Инспектор: Копирайтер каруселей" [ref=f3e212]':
+              - separator "Изменить ширину инспектора" [ref=f3e213]
+              - generic [ref=f3e214]:
+                - generic [ref=f3e223]:
+                  - generic [ref=f3e224]:
+                    - heading "Копирайтер каруселей" [level=2] [ref=f3e225]
+                    - generic [ref=f3e226]: Копирайтер · Карусели Instagram
+                  - paragraph [ref=f3e227]: Назначение агента в пайплайне
+                  - generic [ref=f3e228]:
+                    - checkbox "Активен" [checked] [ref=f3e229]
+                    - text: Активен
+                - button "Закрыть инспектор" [ref=f3e230]
+              - generic [ref=f3e234]:
+                - button "Инструкция" [ref=f3e235]
+                - button "Скиллы & Инструменты" [ref=f3e236]
+                - button "Модель & Параметры" [ref=f3e237]
+                - button "Логи" [ref=f3e238]
+              - generic [ref=f3e240]:
+                - generic [ref=f3e241]:
+                  - generic [ref=f3e242]: Системная инструкция (System Prompt)
+                  - generic [ref=f3e243]: Markdown supported
+                - paragraph [ref=f3e244]: Определяет логику, формат ответов, tone of voice и жёсткие правила работы агента.
+                - textbox [ref=f3e245]: "Роль: Сценарист каруселей Instagram 4:5 Vernatun (Dramaturgy & Hook Engine). Артефакт: STRICT JSON slides[] → zod + critic 05 (retry ≤2) → Designer. Не рилс, не auto-handoff. Modes meetings|useful; Create chat ⊕ sheet. Placeholders BRAND/LOGO/PALETTE/CATALOG/MODE. CTA 1–4 + swipe_trigger META KEEP. Combat rules: Create agent-start — не дублируй полный HARD здесь."
+              - generic [ref=f3e246]:
+                - button "Сбросить" [ref=f3e247]
+                - button "Сохранить изменения" [ref=f3e249]
+  - alert [ref=f3e211]

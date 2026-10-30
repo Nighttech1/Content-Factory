@@ -1,0 +1,85 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e2]:
+    - complementary "Главная навигация" [ref=f7e3]:
+      - generic [ref=f7e11]:
+        - generic [ref=f7e12]: VERN·ATUN
+        - generic [ref=f7e13]: Content Factory
+      - navigation [ref=f7e15]:
+        - generic [ref=f7e16]:
+          - link "Студия" [ref=f7e19] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f7e32] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f7e45] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f7e55] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f7e68] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f7e78]:
+        - paragraph [ref=f7e79]: Роль QA (локально)
+        - generic [ref=f7e80]:
+          - button "OWNER" [ref=f7e81]
+          - button "ADMIN" [ref=f7e82]
+      - button "Изменить ширину боковой панели" [ref=f7e83]
+    - main [ref=f7e85]:
+      - generic [ref=f7e86]:
+        - heading "Команда выпуска" [level=1] [ref=f7e87]
+        - generic [ref=f7e89]:
+          - generic [ref=f7e90]:
+            - generic [ref=f7e91]:
+              - heading "Команда выпуска" [level=1] [ref=f7e92]
+              - paragraph [ref=f7e93]: Выберите пайплайн канала и смотрите, как агенты связаны на холсте.
+            - tablist "Пайплайн вида контента" [ref=f7e95]:
+              - group [ref=f7e96]:
+                - button "Карусели Instagram (4:5)" [ref=f7e97] [cursor=pointer]
+                - button "Полезные картинки & Инфографика" [ref=f7e104] [cursor=pointer]
+                - button "Мульт-Reels (2D сторителлинг)" [ref=f7e113] [cursor=pointer]
+                - button "HeyGen AI-Аватар Reels" [ref=f7e119] [cursor=pointer]
+                - button "Статьи на сайт" [ref=f7e125] [cursor=pointer]
+                - button "Статьи в TG" [ref=f7e131] [cursor=pointer]
+                - button "Рилс" [ref=f7e137] [cursor=pointer]
+                - button "Нарезки с видео в рилсы" [ref=f7e145] [cursor=pointer]
+                - button "Информационное видео" [ref=f7e154] [cursor=pointer]
+          - application [ref=f7e160]:
+            - generic [ref=f7e162]:
+              - generic:
+                - generic:
+                  - img:
+                    - group "Edge from scout to analyst"
+                  - img:
+                    - group "Edge from analyst to team-trainer"
+                  - img:
+                    - group "Edge from team-trainer to copywriter"
+                  - img:
+                    - group "Edge from copywriter to designer"
+                  - img:
+                    - group "Edge from designer to publisher"
+                - generic:
+                  - generic: отфильтрованная лента
+                  - generic: заключение по типам и площадкам
+                  - generic: обновлённые skills и правила
+                  - generic: текст / сценарий / brief
+                  - generic: готовый макет
+                - generic:
+                  - group [ref=f7e163] [cursor=pointer]:
+                    - generic [ref=f7e164]: Скаут
+                  - group [ref=f7e180] [cursor=pointer]:
+                    - generic [ref=f7e181]: Аналитик
+                  - group [ref=f7e195] [cursor=pointer]:
+                    - generic [ref=f7e196]: Тренер
+                  - group [ref=f7e210] [cursor=pointer]:
+                    - generic [ref=f7e211]: Копирайтер каруселей
+                  - group [ref=f7e224] [cursor=pointer]:
+                    - generic [ref=f7e225]: Дизайнер карусели
+                  - group [ref=f7e242] [cursor=pointer]:
+                    - generic [ref=f7e243]: Публицист
+            - generic "Control Panel" [ref=f7e257]:
+              - button "Zoom In" [ref=f7e258] [cursor=pointer]
+              - button "Zoom Out" [ref=f7e261] [cursor=pointer]
+              - button "Fit View" [ref=f7e264] [cursor=pointer]
+              - button "Toggle Interactivity" [ref=f7e267] [cursor=pointer]
+            - img "Mini Map" [ref=f7e271]
+          - complementary [aria-hidden]
+  - button "Open Next.js Dev Tools" [ref=f7e284] [cursor=pointer]
+  - alert [ref=f7e288]

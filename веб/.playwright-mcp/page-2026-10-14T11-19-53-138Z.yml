@@ -1,0 +1,25 @@
+- generic [ref=f12e2]:
+  - complementary "Главная навигация" [ref=f12e3]:
+    - generic [ref=f12e6]:
+      - generic [ref=f12e7]: VERNATUN
+      - generic [ref=f12e8]: ARMENIAN CLUB
+    - navigation [ref=f12e10]:
+      - generic [ref=f12e11]:
+        - link "Студия" [ref=f12e14] [cursor=pointer]:
+          - /url: /studio
+        - link "Расписание" [ref=f12e27] [cursor=pointer]:
+          - /url: /schedule
+        - link "Настройки" [ref=f12e37] [cursor=pointer]:
+          - /url: /settings
+        - link "Директор" [ref=f12e48] [cursor=pointer]:
+          - /url: /marketing
+    - generic [ref=f12e58]:
+      - paragraph [ref=f12e59]: Роль QA (локально)
+      - generic [ref=f12e60]:
+        - button "OWNER" [ref=f12e61]
+        - button "ADMIN" [ref=f12e62]
+    - button "Изменить ширину боковой панели" [ref=f12e63]
+  - main [ref=f12e65]:
+    - generic [ref=f12e66]:
+      - 'heading "Команда выпуска: Карусели Instagram (4:5)" [level=1] [ref=f12e67]'
+      - generic "Загрузка команды выпуска" [ref=f12e68]

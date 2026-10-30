@@ -1,0 +1,16 @@
+---
+description: Маршрутизатор реализации — кросс-стек в профильные роли, не один монолитный кодер.
+globs: "*"
+alwaysApply: false
+---
+
+# Маршрутизатор
+
+- UI / тип / материалы → Frontend (`luxury-web-craft`)
+- Анимации / скролл → Motion (`web-motion-engine`)
+- WebGL → `three-webgl-craft` по chain
+- API / БД → Backend (`backend` + `safe-db-migrations`)
+- Промпты / tools → AI Bridge + `.cursor/skills/prompt-engineering/SKILL.md`
+- LangGraph / RAG в chain → `.cursor/skills/rag-stack/SKILL.md` затем `.agents/skills/langgraph-*`
+- Cortana контекст / filter / vector → **не монолитный кодер**: AI Bridge + `cortana-retrieval`
+- Общая серверная логика без UI → `coder` + при схемах `pydantic-v2`; вызов LLM → `prompt-engineering`

@@ -1,0 +1,297 @@
+- generic [ref=e1] [box=0,-787,1440,3041]:
+  - generic [ref=e2] [box=0,-787,1440,3041]:
+    - complementary "Главная навигация" [ref=e3] [box=0,0,256,900]:
+      - generic [ref=e6] [box=68,21,98,35]:
+        - generic [ref=e7] [box=68,21,98,20]: VERNATUN
+        - generic [ref=e8] [box=68,41,98,15]: ARMENIAN CLUB
+      - navigation [ref=e10] [box=12,93,231,180]:
+        - generic [ref=e11] [box=12,93,231,180]:
+          - link "Студия" [ref=e14] [cursor=pointer] [box=12,93,231,44]:
+            - /url: /studio
+          - link "Расписание" [ref=e27] [cursor=pointer] [box=12,138,231,44]:
+            - /url: /schedule
+          - link "Настройки" [ref=e37] [cursor=pointer] [box=12,183,231,44]:
+            - /url: /settings
+          - link "Директор" [ref=e48] [cursor=pointer] [box=12,228,231,44]:
+            - /url: /marketing
+      - generic [ref=e58] [box=12,820,231,65]:
+        - paragraph [ref=e59] [box=21,829,213,14]: Роль QA (локально)
+        - generic [ref=e60] [box=21,848,213,27]:
+          - button "OWNER" [ref=e61] [box=21,848,105,27]
+          - button "ADMIN" [ref=e62] [box=130,848,105,27]
+      - button "Изменить ширину боковой панели" [ref=e63] [box=237,0,12,900]
+    - main [ref=e65] [box=256,-787,1184,3041]:
+      - generic [ref=e66] [box=264,-755,1120,2977]:
+        - generic [ref=e67] [box=272,-755,1080,90]:
+          - heading "Настройки" [level=1] [ref=e68] [box=272,-755,1080,36]
+          - paragraph [ref=e69] [box=272,-711,576,46]: Дизайн, бренд, персонажи, площадки, расписание и рилсы. Разведка и модели агентов — в «Команда выпуска».
+        - complementary [ref=e70] [box=1278,96,138,293]:
+          - navigation [ref=e71] [box=1278,96,138,293]:
+            - generic [ref=e72] [box=1285,103,124,27]: Навигация
+            - list [ref=e73] [box=1285,134,124,248]:
+              - listitem [ref=e74] [box=1285,134,124,32]:
+                - button "Дизайн" [ref=e75] [box=1285,134,124,32]
+              - listitem [ref=e81] [box=1285,170,124,32]:
+                - button "Бренд" [active] [ref=e82] [box=1285,170,124,32]
+              - listitem [ref=e87] [box=1285,206,124,32]:
+                - button "Персонажи" [ref=e88] [box=1285,206,124,32]
+              - listitem [ref=e95] [box=1285,242,124,32]:
+                - button "Площадки" [ref=e96] [box=1285,242,124,32]
+              - listitem [ref=e101] [box=1285,278,124,32]:
+                - button "Расписание" [ref=e102] [box=1285,278,124,32]
+              - listitem [ref=e106] [box=1285,314,124,32]:
+                - button "Публицист" [ref=e107] [box=1285,314,124,32]
+              - listitem [ref=e112] [box=1285,350,124,32]:
+                - button "Рилсы" [ref=e113] [box=1285,350,124,32]
+        - region [ref=e117] [box=272,-641,1080,707]:
+          - generic [ref=e118] [box=285,-624,1054,645]:
+            - generic [ref=e119] [box=285,-624,774,32]:
+              - heading "Дизайн" [level=2] [ref=e120] [box=285,-622,64,28]
+              - generic [ref=e121] [box=361,-624,386,32]:
+                - generic [ref=e122] [cursor=pointer] [box=361,-624,110,32]:
+                  - generic [ref=e123] [box=361,-624,110,32]: референс
+                  - button "референс" [ref=e127] [box=360,-625,1,1]
+                - generic [ref=e128] [cursor=pointer] [box=478,-624,128,32]:
+                  - generic [ref=e129] [box=478,-624,128,32]: новый дизайн
+                  - button "новый дизайн" [ref=e134] [box=477,-625,1,1]
+                - button "код дизайн мд" [ref=e135] [box=614,-624,133,32]
+            - region [ref=e181] [box=325,-580,694,601]:
+              - generic [ref=e183] [box=309,-580,710,601]:
+                - group [ref=e184] [box=309,-580,384,601]:
+                  - 'button "Accent #fbedaa #f9e584 #f7dd5e #F5D742 #c4ac35 #938128 #62561a #F5D742 Surface #989898 #6a6a6a #3c3c3c #1A1A1A #151515 #101010 #0a0a0a #1A1A1A Text #ffffff #ffffff #ffffff #FFFFFF #cccccc #999999 #666666 #FFFFFF Display Aa Heritage Body Aa Community Aa Text block Hook line Body paragraph · spacing · contrast 56/36/22/16 Small elements chip label meta Accents Активный" [ref=e185] [cursor=pointer] [box=325,-580,368,601]':
+                    - generic [ref=e188] [box=334,-571,350,455]:
+                      - generic [ref=e189] [box=340,-565,166,77]:
+                        - paragraph [ref=e190] [box=347,-558,152,15]: Accent
+                        - generic [ref=e191] [box=347,-539,152,26]:
+                          - generic "#fbedaa" [ref=e192] [box=348,-538,21,24]
+                          - generic "#f9e584" [ref=e193] [box=369,-538,21,24]
+                          - generic "#f7dd5e" [ref=e194] [box=391,-538,21,24]
+                          - generic "#F5D742" [ref=e195] [box=412,-538,21,24]
+                          - generic "#c4ac35" [ref=e196] [box=434,-538,21,24]
+                          - generic "#938128" [ref=e197] [box=455,-538,21,24]
+                          - generic "#62561a" [ref=e198] [box=477,-538,21,24]
+                        - paragraph [ref=e199] [box=347,-509,152,14]: "#F5D742"
+                      - generic [ref=e200] [box=512,-565,166,77]:
+                        - paragraph [ref=e201] [box=519,-558,152,15]: Surface
+                        - generic [ref=e202] [box=519,-539,152,26]:
+                          - generic "#989898" [ref=e203] [box=520,-538,21,24]
+                          - generic "#6a6a6a" [ref=e204] [box=541,-538,21,24]
+                          - generic "#3c3c3c" [ref=e205] [box=563,-538,21,24]
+                          - generic "#1A1A1A" [ref=e206] [box=584,-538,21,24]
+                          - generic "#151515" [ref=e207] [box=606,-538,21,24]
+                          - generic "#101010" [ref=e208] [box=627,-538,21,24]
+                          - generic "#0a0a0a" [ref=e209] [box=649,-538,21,24]
+                        - paragraph [ref=e210] [box=519,-509,152,14]: "#1A1A1A"
+                      - generic [ref=e211] [box=340,-483,166,81]:
+                        - paragraph [ref=e212] [box=347,-476,152,15]: Text
+                        - generic [ref=e213] [box=347,-457,152,26]:
+                          - generic "#ffffff" [ref=e214] [box=348,-456,21,24]
+                          - generic "#ffffff" [ref=e215] [box=369,-456,21,24]
+                          - generic "#ffffff" [ref=e216] [box=391,-456,21,24]
+                          - generic "#FFFFFF" [ref=e217] [box=412,-456,21,24]
+                          - generic "#cccccc" [ref=e218] [box=434,-456,21,24]
+                          - generic "#999999" [ref=e219] [box=455,-456,21,24]
+                          - generic "#666666" [ref=e220] [box=477,-456,21,24]
+                        - paragraph [ref=e221] [box=347,-427,152,14]: "#FFFFFF"
+                      - generic [ref=e222] [box=512,-483,166,81]:
+                        - paragraph [ref=e223] [box=519,-476,152,15]: Display
+                        - paragraph [ref=e224] [box=519,-459,152,33]: Aa
+                        - paragraph [ref=e225] [box=519,-424,152,15]: Heritage
+                      - generic [ref=e226] [box=340,-396,166,81]:
+                        - paragraph [ref=e227] [box=347,-389,152,15]: Body
+                        - paragraph [ref=e228] [box=347,-372,152,33]: Aa
+                        - paragraph [ref=e229] [box=347,-337,152,15]: Community Aa
+                      - generic [ref=e230] [box=340,-309,338,97]:
+                        - paragraph [ref=e231] [box=347,-302,324,15]: Text block
+                        - generic [ref=e232] [box=347,-283,324,64]:
+                          - paragraph [ref=e233] [box=356,-276,306,17]: Hook line
+                          - paragraph [ref=e234] [box=356,-255,306,14]: Body paragraph · spacing · contrast
+                          - paragraph [ref=e235] [box=356,-238,306,12]: 56/36/22/16
+                      - generic [ref=e236] [box=340,-206,166,83]:
+                        - paragraph [ref=e237] [box=347,-199,152,15]: Small elements
+                        - generic [ref=e238] [box=347,-180,152,18]:
+                          - generic [ref=e239] [box=347,-180,31,18]: chip
+                          - generic [ref=e240] [box=382,-180,37,18]: label
+                          - generic [ref=e241] [box=423,-180,42,18]: meta
+                      - paragraph [ref=e251] [box=519,-199,152,15]: Accents
+                    - generic [box=617,-9,67,21]: Активный
+                - group [ref=e258] [box=693,-580,384,601]:
+                  - 'button "Accent #fbd391 #f9c060 #f7ad30 #F59E0B #c47e09 #935f07 #623f04 #F59E0B Surface #96979a #68696d #393b41 #16181F #121319 #0d0e13 #090a0c #16181F Text #ffffff #ffffff #ffffff #FFFFFF #cccccc #999999 #666666 #FFFFFF Display Aa Heritage Body Aa Community Aa Text block Hook line Body paragraph · spacing · contrast 52/32/20/14 Small elements chip label meta Accents" [ref=e259] [cursor=pointer] [box=709,-580,368,601]':
+                    - generic [ref=e262] [box=718,-571,350,455]:
+                      - generic [ref=e263] [box=724,-565,166,77]:
+                        - paragraph [ref=e264] [box=731,-558,152,15]: Accent
+                        - generic [ref=e265] [box=731,-539,152,26]:
+                          - generic "#fbd391" [ref=e266] [box=732,-538,21,24]
+                          - generic "#f9c060" [ref=e267] [box=753,-538,21,24]
+                          - generic "#f7ad30" [ref=e268] [box=775,-538,21,24]
+                          - generic "#F59E0B" [ref=e269] [box=796,-538,21,24]
+                          - generic "#c47e09" [ref=e270] [box=818,-538,21,24]
+                          - generic "#935f07" [ref=e271] [box=839,-538,21,24]
+                          - generic "#623f04" [ref=e272] [box=861,-538,21,24]
+                        - paragraph [ref=e273] [box=731,-509,152,14]: "#F59E0B"
+                      - generic [ref=e274] [box=896,-565,166,77]:
+                        - paragraph [ref=e275] [box=903,-558,152,15]: Surface
+                        - generic [ref=e276] [box=903,-539,152,26]:
+                          - generic "#96979a" [ref=e277] [box=904,-538,21,24]
+                          - generic "#68696d" [ref=e278] [box=925,-538,21,24]
+                          - generic "#393b41" [ref=e279] [box=947,-538,21,24]
+                          - generic "#16181F" [ref=e280] [box=968,-538,21,24]
+                          - generic "#121319" [ref=e281] [box=990,-538,21,24]
+                          - generic "#0d0e13" [ref=e282] [box=1011,-538,21,24]
+                          - generic "#090a0c" [ref=e283] [box=1033,-538,21,24]
+                        - paragraph [ref=e284] [box=903,-509,152,14]: "#16181F"
+                      - generic [ref=e285] [box=724,-483,166,81]:
+                        - paragraph [ref=e286] [box=731,-476,152,15]: Text
+                        - generic [ref=e287] [box=731,-457,152,26]:
+                          - generic "#ffffff" [ref=e288] [box=732,-456,21,24]
+                          - generic "#ffffff" [ref=e289] [box=753,-456,21,24]
+                          - generic "#ffffff" [ref=e290] [box=775,-456,21,24]
+                          - generic "#FFFFFF" [ref=e291] [box=796,-456,21,24]
+                          - generic "#cccccc" [ref=e292] [box=818,-456,21,24]
+                          - generic "#999999" [ref=e293] [box=839,-456,21,24]
+                          - generic "#666666" [ref=e294] [box=861,-456,21,24]
+                        - paragraph [ref=e295] [box=731,-427,152,14]: "#FFFFFF"
+                      - generic [ref=e296] [box=896,-483,166,81]:
+                        - paragraph [ref=e297] [box=903,-476,152,15]: Display
+                        - paragraph [ref=e298] [box=903,-459,152,33]: Aa
+                        - paragraph [ref=e299] [box=903,-424,152,15]: Heritage
+                      - generic [ref=e300] [box=724,-396,166,81]:
+                        - paragraph [ref=e301] [box=731,-389,152,15]: Body
+                        - paragraph [ref=e302] [box=731,-372,152,33]: Aa
+                        - paragraph [ref=e303] [box=731,-337,152,15]: Community Aa
+                      - generic [ref=e304] [box=724,-309,338,97]:
+                        - paragraph [ref=e305] [box=731,-302,324,15]: Text block
+                        - generic [ref=e306] [box=731,-283,324,64]:
+                          - paragraph [ref=e307] [box=740,-276,306,17]: Hook line
+                          - paragraph [ref=e308] [box=740,-255,306,14]: Body paragraph · spacing · contrast
+                          - paragraph [ref=e309] [box=740,-238,306,12]: 52/32/20/14
+                      - generic [ref=e310] [box=724,-206,166,83]:
+                        - paragraph [ref=e311] [box=731,-199,152,15]: Small elements
+                        - generic [ref=e312] [box=731,-180,152,18]:
+                          - generic [ref=e313] [box=731,-180,31,18]: chip
+                          - generic [ref=e314] [box=766,-180,37,18]: label
+                          - generic [ref=e315] [box=807,-180,42,18]: meta
+                      - paragraph [ref=e325] [box=903,-199,152,15]: Accents
+              - button "Предыдущий дизайн" [disabled] [box=285,-296,32,32]
+              - button "Следующий дизайн" [ref=e332] [box=1027,-296,32,32]
+          - paragraph [ref=e140] [box=285,33,1054,16]: Только токены (цвета · типографика · текст-блоки · мелкие элементы) — разметку придумает Дизайнер
+        - region [ref=e141] [box=272,90,1080,583]:
+          - generic [ref=e142] [box=285,107,527,549]:
+            - generic [ref=e143] [box=285,107,527,48]:
+              - heading "Бренд" [level=2] [ref=e144] [box=285,107,527,28]
+              - paragraph [ref=e145] [box=285,139,527,16]: Название и логотип для плейсхолдеров карусели. Идут сразу после «Дизайн».
+            - generic [ref=e374] [box=285,171,527,485]:
+              - generic [ref=e375] [box=285,171,527,60]:
+                - generic [ref=e376] [box=285,171,527,16]: Название бренда
+                - textbox "Название бренда" [ref=e377] [box=285,193,527,38]:
+                  - /placeholder: Vernatun
+                  - text: Vernatun
+              - generic [ref=e378] [box=285,247,527,60]:
+                - generic [ref=e379] [box=285,247,527,16]: Слоган (необязательно)
+                - textbox "Слоган (необязательно)" [ref=e380] [box=285,269,527,38]:
+                  - /placeholder: Клуб · сообщество · встречи
+                  - text: moscow armenian club
+              - generic [ref=e381] [box=285,323,527,281]:
+                - generic [ref=e382] [box=285,323,527,16]: Логотип
+                - generic [ref=e383] [box=285,347,527,188]:
+                  - button "Choose File" [ref=e384] [box=548,371,1,1]
+                  - img "Превью логотипа" [ref=e385] [box=517,372,64,64]
+                  - paragraph [ref=e386] [box=403,448,292,20]: Перетащите логотип или выберите файл
+                  - button "Загрузить" [ref=e387] [box=495,480,107,30]
+                - generic [ref=e391] [box=285,543,527,61]:
+                  - generic [ref=e392] [box=285,543,527,17]: Или URL / путь
+                  - textbox "Или URL / путь" [ref=e393] [box=285,565,527,38]:
+                    - /placeholder: /brand/vernatun-logo.svg
+              - button "Сохранить бренд" [ref=e394] [box=285,619,158,36]
+        - region [ref=e147] [box=272,696,1080,478]:
+          - generic [ref=e148] [box=285,713,527,444]:
+            - generic [ref=e149] [box=285,713,527,48]:
+              - heading "Персонажи" [level=2] [ref=e150] [box=285,713,527,28]
+              - paragraph [ref=e151] [box=285,745,527,16]: "Каталог персонажей: имя и фото с разных ракурсов. Номер = поле hero в таблице."
+            - list [ref=e395] [box=285,777,527,70]:
+              - listitem [ref=e396] [box=285,777,527,70]: Пока пусто — добавьте первого персонажа ниже.
+            - generic [ref=e397] [box=285,863,527,294]:
+              - paragraph [ref=e398] [box=298,876,501,20]: Новый персонаж
+              - generic [ref=e399] [box=298,908,501,60]:
+                - generic [ref=e400] [box=298,908,393,60]:
+                  - generic [ref=e401] [box=298,908,393,16]: Имя
+                  - textbox "Имя" [ref=e402] [box=298,930,393,38]:
+                    - /placeholder: Арег
+                - generic [ref=e403] [box=703,908,96,60]:
+                  - generic [ref=e404] [box=703,908,96,16]: №
+                  - textbox "№" [ref=e405] [box=703,930,96,38]:
+                    - /placeholder: авто
+              - generic [ref=e406] [box=298,980,501,116]:
+                - button "Choose File" [ref=e407] [box=548,996,1,1]
+                - paragraph [ref=e412] [box=467,1025,163,16]: Несколько ракурсов (до 8)
+                - button "Фото" [ref=e413] [box=510,1049,77,30]
+              - button "Добавить персонажа" [ref=e417] [box=298,1108,211,36]
+        - region [ref=e153] [box=272,1198,1080,390]:
+          - generic [ref=e154] [box=293,1219,1038,64]:
+            - generic [ref=e155] [box=293,1219,576,64]:
+              - heading "Площадки публикации" [level=2] [ref=e156] [box=293,1219,576,28]
+              - paragraph [ref=e157] [box=293,1251,576,32]: Ключи API только в браузере. Зелёный блок — публицист может публиковать; красный — подключение не подтверждено.
+            - button "Добавить площадку" [ref=e158] [box=1160,1219,171,38]
+          - list [ref=e334] [box=293,1299,1038,268]:
+            - listitem [ref=e335] [box=293,1299,1038,61]:
+              - generic [ref=e336] [box=306,1312,666,35]:
+                - paragraph [ref=e337] [box=306,1312,666,20]: Instagram · основной
+                - paragraph [ref=e338] [box=306,1332,666,15]: Instagram · нет связи · без ключа
+              - generic [ref=e339] [box=980,1315,338,30]:
+                - button "Проверить подключение" [ref=e340] [box=980,1315,173,30]
+                - button "Изменить" [ref=e341] [box=1161,1315,79,30]
+                - button "Удалить" [ref=e342] [box=1248,1315,70,30]
+            - listitem [ref=e343] [box=293,1368,1038,61]:
+              - generic [ref=e344] [box=306,1381,666,35]:
+                - paragraph [ref=e345] [box=306,1381,666,20]: Telegram · канал
+                - paragraph [ref=e346] [box=306,1401,666,15]: Telegram · нет связи · без ключа
+              - generic [ref=e347] [box=980,1384,338,30]:
+                - button "Проверить подключение" [ref=e348] [box=980,1384,173,30]
+                - button "Изменить" [ref=e349] [box=1161,1384,79,30]
+                - button "Удалить" [ref=e350] [box=1248,1384,70,30]
+            - listitem [ref=e351] [box=293,1437,1038,61]:
+              - generic [ref=e352] [box=306,1450,666,35]:
+                - paragraph [ref=e353] [box=306,1450,666,20]: YouTube
+                - paragraph [ref=e354] [box=306,1470,666,15]: YouTube · нет связи · без ключа
+              - generic [ref=e355] [box=980,1453,338,30]:
+                - button "Проверить подключение" [ref=e356] [box=980,1453,173,30]
+                - button "Изменить" [ref=e357] [box=1161,1453,79,30]
+                - button "Удалить" [ref=e358] [box=1248,1453,70,30]
+            - listitem [ref=e359] [box=293,1506,1038,61]:
+              - generic [ref=e360] [box=306,1519,666,35]:
+                - paragraph [ref=e361] [box=306,1519,666,20]: Сайт Vernatun
+                - paragraph [ref=e362] [box=306,1539,666,15]: Сайт · нет связи · без ключа
+              - generic [ref=e363] [box=980,1522,338,30]:
+                - button "Проверить подключение" [ref=e364] [box=980,1522,173,30]
+                - button "Изменить" [ref=e365] [box=1161,1522,79,30]
+                - button "Удалить" [ref=e366] [box=1248,1522,70,30]
+        - generic [ref=e160] [box=272,1612,1080,142]:
+          - generic [ref=e161] [box=293,1633,1038,64]:
+            - generic [ref=e162] [box=293,1633,576,64]:
+              - heading "Расписание" [level=2] [ref=e163] [box=293,1633,576,28]
+              - paragraph [ref=e164] [box=293,1665,576,32]: Правила автозаполнения календаря публициста. Готовый контент встаёт в слоты по правилам; ручной перенос в календаре важнее правила.
+            - button "Создать правило" [ref=e165] [box=1183,1633,148,38]
+          - list [ref=e166] [box=293,1713,1038,20]:
+            - listitem [ref=e167] [box=293,1713,1038,20]: Правил пока нет.
+        - region [ref=e168] [box=272,1778,1080,208]:
+          - generic [ref=e169] [box=285,1795,1054,48]:
+            - heading "Публицист" [level=2] [ref=e170] [box=285,1795,1054,28]
+            - paragraph [ref=e171] [box=285,1827,576,16]: Авто-слот по умолчанию или ручное время на черновике. Соцсети — только через HITL.
+          - generic [ref=e419] [box=285,1859,1054,110]:
+            - generic [ref=e420] [box=285,1859,134,34]:
+              - button "Вручную" [ref=e421] [box=288,1862,77,28]
+              - button "Авто" [ref=e422] [box=365,1862,51,28]
+            - paragraph [ref=e423] [box=285,1905,1054,16]: В Create / Разбор укажите дату и время вручную на шаге публикации.
+            - button "Сохранить" [ref=e424] [box=285,1933,110,36]
+        - region [ref=e173] [box=272,2010,1080,180]:
+          - generic [ref=e174] [box=285,2027,1054,48]:
+            - heading "Рилсы" [level=2] [ref=e175] [box=285,2027,1054,28]
+            - paragraph [ref=e176] [box=285,2059,1054,16]: Сколько карточек в dual-feed (Наши и Конкуренты).
+          - generic [ref=e367] [box=285,2091,1054,82]:
+            - generic [ref=e368] [box=298,2114,916,36]:
+              - paragraph [ref=e369] [box=298,2114,916,20]: Отображение рилсов (количество на странице)
+              - paragraph [ref=e370] [box=298,2134,916,16]: От 4 до 48. По умолчанию 12.
+            - generic [ref=e371] [box=1222,2104,104,56]:
+              - generic [ref=e372] [box=1262,2104,64,14]: На странице
+              - spinbutton "Отображение рилсов (количество на странице)" [ref=e373] [box=1222,2122,104,38]: "12"
+  - alert [ref=e178] [box=-1,2253,1,1]

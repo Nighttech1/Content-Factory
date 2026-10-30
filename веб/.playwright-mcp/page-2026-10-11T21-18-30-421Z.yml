@@ -1,0 +1,436 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary "Главная навигация" [ref=f1e3]:
+      - generic [ref=f1e6]:
+        - generic [ref=f1e7]: VERNATUN
+        - generic [ref=f1e8]: ARMENIAN CLUB
+      - navigation [ref=f1e10]:
+        - generic [ref=f1e11]:
+          - link "Студия" [ref=f1e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f1e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f1e37] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f1e47]:
+        - paragraph [ref=f1e48]: Роль QA (локально)
+        - generic [ref=f1e49]:
+          - button "OWNER" [ref=f1e50]
+          - button "ADMIN" [ref=f1e51]
+      - button "Изменить ширину боковой панели" [ref=f1e52]
+    - main [ref=f1e54]:
+      - generic [ref=f1e55]:
+        - generic [ref=f1e57]:
+          - heading "Карусели Instagram (4:5)" [level=1] [ref=f1e58]
+          - generic [ref=f1e59]:
+            - link "Команда выпуска" [ref=f1e60] [cursor=pointer]:
+              - /url: /studio/carousel-engine/mesh
+            - link "Аналитика" [ref=f1e61] [cursor=pointer]:
+              - /url: /studio/carousel-engine/analytics
+            - button "Создать карусель" [ref=f1e62]
+        - generic [ref=f1e64]:
+          - generic [ref=f1e65]: Онлайн · Instagram
+          - generic [ref=f1e68]:
+            - generic [ref=f1e69]:
+              - generic [ref=f1e70]:
+                - generic [ref=f1e71]:
+                  - heading "Наши" [level=2] [ref=f1e73]
+                  - generic [ref=f1e75]: "12"
+                - tablist "Вкладки нашей ленты" [ref=f1e77]:
+                  - tab "Опубликовано" [selected] [ref=f1e78]
+                  - tab "Черновики1" [ref=f1e868]
+              - generic [ref=f1e81]:
+                - article [ref=f1e82]:
+                  - generic [ref=f1e83]:
+                    - generic [ref=f1e85]: Наши
+                    - button "Предыдущий слайд" [ref=f1e86]
+                    - button "Следующий слайд" [ref=f1e89]
+                  - generic [ref=f1e92]:
+                    - heading "Armenian Club — 5 tips for guest night" [level=3] [ref=f1e94]
+                    - generic [ref=f1e95]:
+                      - generic "Просмотры" [ref=f1e96]: 19K просмотры
+                      - generic "Лайки" [ref=f1e97]: 1.2K лайки
+                      - generic "Комментарии" [ref=f1e98]: 48 комм.
+                      - generic "Репосты" [ref=f1e99]: 53 репосты
+                - article [ref=f1e100]:
+                  - generic [ref=f1e101]:
+                    - generic [ref=f1e103]: Наши
+                    - button "Предыдущий слайд" [ref=f1e104]
+                    - button "Следующий слайд" [ref=f1e107]
+                  - generic [ref=f1e110]:
+                    - 'heading "Carousel: menu highlights this week" [level=3] [ref=f1e112]'
+                    - generic [ref=f1e113]:
+                      - generic "Просмотры" [ref=f1e114]: 14K просмотры
+                      - generic "Лайки" [ref=f1e115]: 890 лайки
+                      - generic "Комментарии" [ref=f1e116]: 31 комм.
+                      - generic "Репосты" [ref=f1e117]: 37 репосты
+                - article [ref=f1e118]:
+                  - generic [ref=f1e119]:
+                    - generic [ref=f1e121]: Наши
+                    - button "Предыдущий слайд" [ref=f1e122]
+                    - button "Следующий слайд" [ref=f1e125]
+                  - generic [ref=f1e128]:
+                    - heading "Behind the bar — signature cocktails" [level=3] [ref=f1e130]
+                    - generic [ref=f1e131]:
+                      - generic "Просмотры" [ref=f1e132]: 28K просмотры
+                      - generic "Лайки" [ref=f1e133]: 2.1K лайки
+                      - generic "Комментарии" [ref=f1e134]: 72 комм.
+                      - generic "Репосты" [ref=f1e135]: 88 репосты
+                - article [ref=f1e136]:
+                  - generic [ref=f1e137]:
+                    - generic [ref=f1e139]: Наши
+                    - button "Предыдущий слайд" [ref=f1e140]
+                    - button "Следующий слайд" [ref=f1e143]
+                  - generic [ref=f1e146]:
+                    - 'heading "Wine flight: three Armenian reds" [level=3] [ref=f1e148]'
+                    - generic [ref=f1e149]:
+                      - generic "Просмотры" [ref=f1e150]: 22K просмотры
+                      - generic "Лайки" [ref=f1e151]: 1.6K лайки
+                      - generic "Комментарии" [ref=f1e152]: 44 комм.
+                      - generic "Репосты" [ref=f1e153]: 63 репосты
+                - article [ref=f1e154]:
+                  - generic [ref=f1e155]:
+                    - generic [ref=f1e157]: Наши
+                    - button "Предыдущий слайд" [ref=f1e158]
+                    - button "Следующий слайд" [ref=f1e161]
+                  - generic [ref=f1e164]:
+                    - heading "Table styling for Saturday dinner" [level=3] [ref=f1e166]
+                    - generic [ref=f1e167]:
+                      - generic "Просмотры" [ref=f1e168]: 15K просмотры
+                      - generic "Лайки" [ref=f1e169]: 980 лайки
+                      - generic "Комментарии" [ref=f1e170]: 29 комм.
+                      - generic "Репосты" [ref=f1e171]: 40 репосты
+                - article [ref=f1e172]:
+                  - generic [ref=f1e173]:
+                    - generic [ref=f1e175]: Наши
+                    - button "Предыдущий слайд" [ref=f1e176]
+                    - button "Следующий слайд" [ref=f1e179]
+                  - generic [ref=f1e182]:
+                    - heading "Chef specials — autumn mezze board" [level=3] [ref=f1e184]
+                    - generic [ref=f1e185]:
+                      - generic "Просмотры" [ref=f1e186]: 27K просмотры
+                      - generic "Лайки" [ref=f1e187]: 1.8K лайки
+                      - generic "Комментарии" [ref=f1e188]: 61 комм.
+                      - generic "Репосты" [ref=f1e189]: 75 репосты
+                - article [ref=f1e190]:
+                  - generic [ref=f1e191]:
+                    - generic [ref=f1e193]: Наши
+                    - button "Предыдущий слайд" [ref=f1e194]
+                    - button "Следующий слайд" [ref=f1e197]
+                  - generic [ref=f1e200]:
+                    - heading "Live music night lineup teaser" [level=3] [ref=f1e202]
+                    - generic [ref=f1e203]:
+                      - generic "Просмотры" [ref=f1e204]: 41K просмотры
+                      - generic "Лайки" [ref=f1e205]: 2.3K лайки
+                      - generic "Комментарии" [ref=f1e206]: 88 комм.
+                      - generic "Репосты" [ref=f1e207]: 100 репосты
+                - article [ref=f1e208]:
+                  - generic [ref=f1e209]:
+                    - generic [ref=f1e211]: Наши
+                    - button "Предыдущий слайд" [ref=f1e212]
+                    - button "Следующий слайд" [ref=f1e215]
+                  - generic [ref=f1e218]:
+                    - heading "Private dining room walkthrough" [level=3] [ref=f1e220]
+                    - generic [ref=f1e221]:
+                      - generic "Просмотры" [ref=f1e222]: 19K просмотры
+                      - generic "Лайки" [ref=f1e223]: 1.1K лайки
+                      - generic "Комментарии" [ref=f1e224]: 35 комм.
+                      - generic "Репосты" [ref=f1e225]: 46 репосты
+                - article [ref=f1e226]:
+                  - generic [ref=f1e227]:
+                    - generic [ref=f1e229]: Наши
+                    - button "Предыдущий слайд" [ref=f1e230]
+                    - button "Следующий слайд" [ref=f1e233]
+                  - generic [ref=f1e236]:
+                    - heading "Coffee & baklava afternoon set" [level=3] [ref=f1e238]
+                    - generic [ref=f1e239]:
+                      - generic "Просмотры" [ref=f1e240]: 12K просмотры
+                      - generic "Лайки" [ref=f1e241]: 760 лайки
+                      - generic "Комментарии" [ref=f1e242]: 22 комм.
+                      - generic "Репосты" [ref=f1e243]: 31 репосты
+                - article [ref=f1e244]:
+                  - generic [ref=f1e245]:
+                    - generic [ref=f1e247]: Наши
+                    - button "Предыдущий слайд" [ref=f1e248]
+                    - button "Следующий слайд" [ref=f1e251]
+                  - generic [ref=f1e254]:
+                    - heading "DJ warm-up playlist carousel" [level=3] [ref=f1e256]
+                    - generic [ref=f1e257]:
+                      - generic "Просмотры" [ref=f1e258]: 34K просмотры
+                      - generic "Лайки" [ref=f1e259]: 1.9K лайки
+                      - generic "Комментарии" [ref=f1e260]: 70 комм.
+                      - generic "Репосты" [ref=f1e261]: 80 репосты
+                - article [ref=f1e262]:
+                  - generic [ref=f1e263]:
+                    - generic [ref=f1e265]: Наши
+                    - button "Предыдущий слайд" [ref=f1e266]
+                    - button "Следующий слайд" [ref=f1e269]
+                  - generic [ref=f1e272]:
+                    - heading "How we plate lavash wraps" [level=3] [ref=f1e274]
+                    - generic [ref=f1e275]:
+                      - generic "Просмотры" [ref=f1e276]: 20K просмотры
+                      - generic "Лайки" [ref=f1e277]: 1.3K лайки
+                      - generic "Комментарии" [ref=f1e278]: 41 комм.
+                      - generic "Репосты" [ref=f1e279]: 55 репосты
+                - article [ref=f1e280]:
+                  - generic [ref=f1e281]:
+                    - generic [ref=f1e283]: Наши
+                    - button "Предыдущий слайд" [ref=f1e284]
+                    - button "Следующий слайд" [ref=f1e287]
+                  - generic [ref=f1e290]:
+                    - heading "Weekend brunch reservation reminder" [level=3] [ref=f1e292]
+                    - generic [ref=f1e293]:
+                      - generic "Просмотры" [ref=f1e294]: 15K просмотры
+                      - generic "Лайки" [ref=f1e295]: 920 лайки
+                      - generic "Комментарии" [ref=f1e296]: 27 комм.
+                      - generic "Репосты" [ref=f1e297]: 38 репосты
+            - generic [ref=f1e298]:
+              - generic [ref=f1e299]:
+                - generic [ref=f1e300]:
+                  - heading "Конкуренты" [level=2] [ref=f1e302]
+                  - generic [ref=f1e304]: "12"
+                - searchbox "Поиск конкурентов" [ref=f1e310]
+              - generic [ref=f1e311]:
+                - article [ref=f1e540]:
+                  - generic [ref=f1e541]:
+                    - generic [ref=f1e543]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e544]
+                    - button "Следующий слайд" [ref=f1e547]
+                  - generic [ref=f1e550]:
+                    - generic [ref=f1e551]:
+                      - 'heading "Hey Bulldogs! Meet your Armenian club cabinet for the 2026-2027 school year!!! 🇦🇲🇦🇲 #armenianclub #pasadenahighsc…" [level=3] [ref=f1e552]'
+                      - paragraph [ref=f1e553]: "@phs.armenianclub"
+                    - generic [ref=f1e554]:
+                      - generic "Просмотры" [ref=f1e555]: 0 просмотры
+                      - generic "Лайки" [ref=f1e556]: 122 лайки
+                      - generic "Комментарии" [ref=f1e557]: 0 комм.
+                    - button "Разбор" [ref=f1e558]
+                - article [ref=f1e559]:
+                  - generic [ref=f1e560]:
+                    - generic [ref=f1e562]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e563]
+                    - button "Следующий слайд" [ref=f1e566]
+                  - generic [ref=f1e569]:
+                    - generic [ref=f1e570]:
+                      - heading "This upcoming week, Armenian Club will be hosting Armenian Heritage Spirit Week! 🇦🇲 (NOT FREE DRESS)" [level=3] [ref=f1e571]
+                      - paragraph [ref=f1e572]: "@cmhs_armenianclub"
+                    - generic [ref=f1e573]:
+                      - generic "Просмотры" [ref=f1e574]: 0 просмотры
+                      - generic "Лайки" [ref=f1e575]: 119 лайки
+                      - generic "Комментарии" [ref=f1e576]: 3 комм.
+                    - button "Разбор" [ref=f1e577]
+                - article [ref=f1e578]:
+                  - generic [ref=f1e579]:
+                    - generic [ref=f1e581]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e582]
+                    - button "Следующий слайд" [ref=f1e585]
+                  - generic [ref=f1e588]:
+                    - generic [ref=f1e589]:
+                      - heading "Huge thanks to everyone who came out to leave their mark with the Armenian Club. It was amazing to see so many people…" [level=3] [ref=f1e590]
+                      - paragraph [ref=f1e591]: "@cmhs_armenianclub"
+                    - generic [ref=f1e592]:
+                      - generic "Просмотры" [ref=f1e593]: 0 просмотры
+                      - generic "Лайки" [ref=f1e594]: 100 лайки
+                      - generic "Комментарии" [ref=f1e595]: 1 комм.
+                    - button "Разбор" [ref=f1e596]
+                - article [ref=f1e597]:
+                  - generic [ref=f1e598]:
+                    - generic [ref=f1e600]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e601]
+                    - button "Следующий слайд" [ref=f1e604]
+                  - generic [ref=f1e607]:
+                    - generic [ref=f1e608]:
+                      - heading "Our first meeting was a huge success! It was great meeting everyone. Thank you for joining us! 🇦🇲" [level=3] [ref=f1e609]
+                      - paragraph [ref=f1e610]: "@cmhs_armenianclub"
+                    - generic [ref=f1e611]:
+                      - generic "Просмотры" [ref=f1e612]: 0 просмотры
+                      - generic "Лайки" [ref=f1e613]: 77 лайки
+                      - generic "Комментарии" [ref=f1e614]: 1 комм.
+                    - button "Разбор" [ref=f1e615]
+                - article [ref=f1e616]:
+                  - generic [ref=f1e617]:
+                    - generic [ref=f1e619]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e620]
+                    - button "Следующий слайд" [ref=f1e623]
+                  - generic [ref=f1e626]:
+                    - generic [ref=f1e627]:
+                      - heading "Thank you to everyone who stopped by and signed up with us today! 🇦🇲❤️💙🧡 We loved meeting you all and sharing wha…" [level=3] [ref=f1e628]
+                      - paragraph [ref=f1e629]: "@aaaofuscpharm"
+                    - generic [ref=f1e630]:
+                      - generic "Просмотры" [ref=f1e631]: 0 просмотры
+                      - generic "Лайки" [ref=f1e632]: 61 лайки
+                      - generic "Комментарии" [ref=f1e633]: 2 комм.
+                    - button "Разбор" [ref=f1e634]
+                - article [ref=f1e635]:
+                  - generic [ref=f1e636]:
+                    - generic [ref=f1e638]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e639]
+                    - button "Следующий слайд" [ref=f1e642]
+                  - generic [ref=f1e645]:
+                    - generic [ref=f1e646]:
+                      - heading "Thank you to everyone who came to our meeting!" [level=3] [ref=f1e647]
+                      - paragraph [ref=f1e648]: "@providencehye"
+                    - generic [ref=f1e649]:
+                      - generic "Просмотры" [ref=f1e650]: 0 просмотры
+                      - generic "Лайки" [ref=f1e651]: 61 лайки
+                      - generic "Комментарии" [ref=f1e652]: 0 комм.
+                    - button "Разбор" [ref=f1e653]
+                - article [ref=f1e654]:
+                  - generic [ref=f1e655]:
+                    - generic [ref=f1e657]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e658]
+                    - button "Следующий слайд" [ref=f1e661]
+                  - generic [ref=f1e664]:
+                    - generic [ref=f1e665]:
+                      - heading "Thank you to everyone who supported Armenian Club at Winterfest! We hope you all enjoyed! 😋" [level=3] [ref=f1e666]
+                      - paragraph [ref=f1e667]: "@cmhs_armenianclub"
+                    - generic [ref=f1e668]:
+                      - generic "Просмотры" [ref=f1e669]: 0 просмотры
+                      - generic "Лайки" [ref=f1e670]: 46 лайки
+                      - generic "Комментарии" [ref=f1e671]: 3 комм.
+                    - button "Разбор" [ref=f1e672]
+                - article [ref=f1e673]:
+                  - generic [ref=f1e674]:
+                    - generic [ref=f1e676]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e677]
+                    - button "Следующий слайд" [ref=f1e680]
+                  - generic [ref=f1e683]:
+                    - generic [ref=f1e684]:
+                      - heading "What an amazing and memorable evening! ✨" [level=3] [ref=f1e685]
+                      - paragraph [ref=f1e686]: "@cvhsapc"
+                    - generic [ref=f1e687]:
+                      - generic "Просмотры" [ref=f1e688]: 0 просмотры
+                      - generic "Лайки" [ref=f1e689]: 41 лайки
+                      - generic "Комментарии" [ref=f1e690]: 0 комм.
+                    - button "Разбор" [ref=f1e691]
+                - article [ref=f1e692]:
+                  - generic [ref=f1e693]:
+                    - generic [ref=f1e695]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e696]
+                    - button "Следующий слайд" [ref=f1e699]
+                  - generic [ref=f1e702]:
+                    - generic [ref=f1e703]:
+                      - heading "❤️💙🧡" [level=3] [ref=f1e704]
+                      - paragraph [ref=f1e705]: "@armenian__club"
+                    - generic [ref=f1e706]:
+                      - generic "Просмотры" [ref=f1e707]: 0 просмотры
+                      - generic "Лайки" [ref=f1e708]: 32 лайки
+                      - generic "Комментарии" [ref=f1e709]: 0 комм.
+                    - button "Разбор" [ref=f1e710]
+                - article [ref=f1e711]:
+                  - generic [ref=f1e712]:
+                    - generic [ref=f1e714]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e715]
+                    - button "Следующий слайд" [ref=f1e718]
+                  - generic [ref=f1e721]:
+                    - generic [ref=f1e722]:
+                      - heading "ars.barber Utopia Barbers N_1 Hair Cut 💈Hair style 💈Hair & beard style 💈 Hair & beard color 💈 Welcome / Every da…" [level=3] [ref=f1e723]
+                      - paragraph [ref=f1e724]: "@utopia_barbers.n_1"
+                    - generic [ref=f1e725]:
+                      - generic "Просмотры" [ref=f1e726]: 0 просмотры
+                      - generic "Лайки" [ref=f1e727]: 32 лайки
+                      - generic "Комментарии" [ref=f1e728]: 0 комм.
+                    - button "Разбор" [ref=f1e729]
+                - article [ref=f1e730]:
+                  - generic [ref=f1e731]:
+                    - generic [ref=f1e733]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e734]
+                    - button "Следующий слайд" [ref=f1e737]
+                  - generic [ref=f1e740]:
+                    - generic [ref=f1e741]:
+                      - heading "As a strong believer in entrepreneurship and innovation, early exposure and extending opportunities to youth creates …" [level=3] [ref=f1e742]
+                      - paragraph [ref=f1e743]: "@dinkjian4gusd"
+                    - generic [ref=f1e744]:
+                      - generic "Просмотры" [ref=f1e745]: 0 просмотры
+                      - generic "Лайки" [ref=f1e746]: 22 лайки
+                      - generic "Комментарии" [ref=f1e747]: 1 комм.
+                    - button "Разбор" [ref=f1e748]
+                - article [ref=f1e749]:
+                  - generic [ref=f1e750]: Конкуренты
+                  - generic [ref=f1e753]:
+                    - generic [ref=f1e754]:
+                      - heading "In collaboration with Armenian Club, Wish Upon a Star members came together to create heartfelt cards for the childre…" [level=3] [ref=f1e755]
+                      - paragraph [ref=f1e756]: "@wish__uponastar"
+                    - generic [ref=f1e757]:
+                      - generic "Просмотры" [ref=f1e758]: 0 просмотры
+                      - generic "Лайки" [ref=f1e759]: 31 лайки
+                      - generic "Комментарии" [ref=f1e760]: 1 комм.
+                    - button "Разбор" [ref=f1e761]
+      - button "Закрыть панель генерации"
+      - complementary [aria-hidden] [ref=f1e762]:
+        - generic [ref=f1e763]:
+          - generic [ref=f1e764]:
+            - paragraph [ref=f1e765]: Журнал генерации
+            - heading [level=2] [ref=f1e766]: Конвейер агентов
+          - button [ref=f1e767]: Закрыть
+        - generic [ref=f1e768]:
+          - generic [ref=f1e769]:
+            - generic [ref=f1e770]: Прогресс
+            - generic [ref=f1e771]: 0%
+          - progressbar [ref=f1e772]
+        - list [ref=f1e773]:
+          - listitem [ref=f1e774]:
+            - generic [ref=f1e777]:
+              - generic [ref=f1e778]: Исследователь
+              - generic [ref=f1e779]: Ожидание...
+          - listitem [ref=f1e780]:
+            - generic [ref=f1e783]:
+              - generic [ref=f1e784]: Автор хуков
+              - generic [ref=f1e785]: Ожидание...
+          - listitem [ref=f1e786]:
+            - generic [ref=f1e789]:
+              - generic [ref=f1e790]: Сценарист
+              - generic [ref=f1e791]: Ожидание...
+          - listitem [ref=f1e792]:
+            - generic [ref=f1e795]:
+              - generic [ref=f1e796]: Дизайнер
+              - generic [ref=f1e797]: Ожидание...
+          - listitem [ref=f1e798]:
+            - generic [ref=f1e801]:
+              - generic [ref=f1e802]: Конвейер
+              - generic [ref=f1e803]: Ожидание...
+        - generic [ref=f1e805]:
+          - generic:
+            - textbox [disabled]:
+              - /placeholder: Заметка активному шагу…
+            - generic:
+              - generic:
+                - button:
+                  - generic: Attach image
+                - button: Tools
+                - generic:
+                  - button [disabled]:
+                    - generic: Record voice
+                  - button [disabled]:
+                    - generic: Send message
+      - dialog [ref=f1e816]:
+        - button "Закрыть" [ref=f1e817]
+        - generic [ref=f1e818]:
+          - generic [ref=f1e819]:
+            - heading "Создать карусель" [level=2] [ref=f1e820]
+            - button "Закрыть" [ref=f1e821]
+          - generic [ref=f1e825]:
+            - generic [ref=f1e826]:
+              - tablist "Агенты создания" [ref=f1e827]:
+                - group [ref=f1e828]:
+                  - button "Публицист" [ref=f1e909]
+                - generic [ref=f1e875]: ✓
+                - generic [ref=f1e913]: ✓
+              - list [ref=f1e833]:
+                - listitem [ref=f1e914]: Жду готовый макет. Здесь обсудим слот публикации и финальные правки.
+                - listitem [ref=f1e915]: Макет карусели получен. Выберите слот в Расписании или уточните время здесь.
+              - generic [ref=f1e837]:
+                - textbox "Сообщение для Публицист…" [active] [ref=f1e916]: Поставь на завтра 10:00
+                - generic [ref=f1e840]:
+                  - button "Attach image" [ref=f1e841]
+                  - button "Tools" [ref=f1e844]
+                  - generic [ref=f1e848]:
+                    - button "Голосовой ввод" [ref=f1e849]:
+                      - generic [ref=f1e853]: Record voice
+                    - button "Отправить сообщение" [ref=f1e862]:
+                      - generic [ref=f1e865]: Send message
+            - generic [ref=f1e887]:
+              - button "Предыдущий слайд" [ref=f1e888]
+              - button "Следующий слайд" [ref=f1e892]
+  - button "Open Next.js Dev Tools" [ref=f1e811] [cursor=pointer]
+  - alert [ref=f1e815]

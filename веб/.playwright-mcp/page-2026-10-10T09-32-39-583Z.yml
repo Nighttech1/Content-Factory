@@ -1,0 +1,111 @@
+- generic [active] [ref=f16e1]:
+  - generic [ref=f16e2]:
+    - complementary "Главная навигация" [ref=f16e3]:
+      - generic [ref=f16e6]:
+        - generic [ref=f16e7]: VERNATUN
+        - generic [ref=f16e8]: ARMENIAN CLUB
+      - navigation [ref=f16e10]:
+        - generic [ref=f16e11]:
+          - link "Студия" [ref=f16e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f16e27] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f16e40] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f16e50] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f16e63] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f16e73]:
+        - paragraph [ref=f16e74]: Роль QA (локально)
+        - generic [ref=f16e75]:
+          - button "OWNER" [ref=f16e76]
+          - button "ADMIN" [ref=f16e77]
+      - button "Изменить ширину боковой панели" [ref=f16e78]
+    - main [ref=f16e80]:
+      - generic [ref=f16e81]:
+        - heading "Команда выпуска" [level=1] [ref=f16e82]
+        - generic [ref=f16e84]:
+          - generic [ref=f16e85]:
+            - generic [ref=f16e86]:
+              - heading "Команда выпуска" [level=1] [ref=f16e87]
+              - paragraph [ref=f16e88]: Выберите пайплайн канала и смотрите, как агенты связаны на холсте.
+            - tablist "Пайплайн вида контента" [ref=f16e90]:
+              - group [ref=f16e91]:
+                - button "Карусели Instagram (4:5)" [ref=f16e92] [cursor=pointer]
+                - button "Полезные картинки & Инфографика" [ref=f16e99] [cursor=pointer]
+                - button "Мульт-Reels (2D сторителлинг)" [ref=f16e108] [cursor=pointer]
+                - button "HeyGen AI-Аватар Reels" [ref=f16e114] [cursor=pointer]
+                - button "Статьи на сайт" [ref=f16e120] [cursor=pointer]
+                - button "Статьи в TG" [ref=f16e126] [cursor=pointer]
+                - button "Рилс" [ref=f16e132] [cursor=pointer]
+                - button "Нарезки с видео в рилсы" [ref=f16e140] [cursor=pointer]
+                - button "Информационное видео" [ref=f16e149] [cursor=pointer]
+          - application [ref=f16e155]:
+            - generic [ref=f16e157]:
+              - generic:
+                - generic:
+                  - img:
+                    - group "Edge from user to razborщик" [ref=f16e158] [cursor=pointer]:
+                      - generic "запрос" [ref=f16e160]
+                  - img:
+                    - group "Edge from razborщик to copywriter":
+                      - generic:
+                        - generic "разбор"
+                  - img:
+                    - group "Edge from copywriter to designer":
+                      - generic:
+                        - generic "сценарий"
+                  - img:
+                    - group "Edge from designer to publisher":
+                      - generic:
+                        - generic "медиа"
+                  - img:
+                    - group "Edge from scout to analyst":
+                      - generic:
+                        - generic "фильтр постов"
+                  - img:
+                    - group "Edge from analyst to team-trainer":
+                      - generic:
+                        - generic "выводы"
+                  - img:
+                    - group "Edge from team-trainer to razborщик" [ref=f16e162] [cursor=pointer]:
+                      - generic "skill patches" [ref=f16e164]
+                  - img:
+                    - group "Edge from team-trainer to copywriter" [ref=f16e166] [cursor=pointer]:
+                      - generic "skill patches" [ref=f16e168]
+                  - img:
+                    - group "Edge from team-trainer to designer" [ref=f16e170] [cursor=pointer]:
+                      - generic "skill patches" [ref=f16e172]
+                  - img:
+                    - group "Edge from team-trainer to publisher" [ref=f16e174] [cursor=pointer]:
+                      - generic "skill patches" [ref=f16e176]
+                - generic:
+                  - generic: запрос
+                  - generic: разбор
+                  - generic: сценарий
+                  - generic: медиа
+                  - generic: фильтр постов
+                  - generic: выводы
+                - generic:
+                  - group [ref=f16e178] [cursor=pointer]:
+                    - generic [ref=f16e180]:
+                      - generic [ref=f16e181]: Пользователь
+                      - paragraph [ref=f16e190]: "Сделай карусель про гостевой вечер: 5 слайдов, тёплый тон клуба, CTA «забронировать стол»."
+                  - group [ref=f16e192] [cursor=pointer]:
+                    - generic [ref=f16e193]: Разборщик
+                  - group [ref=f16e208] [cursor=pointer]:
+                    - generic [ref=f16e209]: Копирайтер каруселей
+                  - group [ref=f16e223] [cursor=pointer]:
+                    - generic [ref=f16e224]: Дизайнер карусели
+                  - group [ref=f16e242] [cursor=pointer]:
+                    - generic [ref=f16e243]: Публицист
+                  - group [ref=f16e258] [cursor=pointer]:
+                    - generic [ref=f16e259]: Скаут
+                  - group [ref=f16e275] [cursor=pointer]:
+                    - generic [ref=f16e276]: Аналитик
+                  - group [ref=f16e288] [cursor=pointer]:
+                    - generic [ref=f16e289]: Тренер
+          - complementary [aria-hidden]
+  - button "Open Next.js Dev Tools" [ref=f16e313] [cursor=pointer]
+  - alert [ref=f16e317]

@@ -1,0 +1,33 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - complementary "Главная навигация" [ref=f3e3]:
+      - generic [ref=f3e4]:
+        - img "Vernatun" [ref=f3e5]
+        - generic [ref=f3e6]:
+          - generic [ref=f3e7]: VERNATUN
+          - generic [ref=f3e8]: ARMENIAN CLUB
+      - navigation [ref=f3e10]:
+        - generic [ref=f3e11]:
+          - link "Студия" [ref=f3e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f3e27] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f3e40] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f3e50] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f3e63] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f3e73]:
+        - paragraph [ref=f3e74]: Роль QA (локально)
+        - generic [ref=f3e75]:
+          - button "OWNER" [ref=f3e76]
+          - button "ADMIN" [ref=f3e77]
+      - button "Изменить ширину боковой панели" [ref=f3e78]
+    - main [ref=f3e80]:
+      - generic [ref=f3e81]:
+        - generic [ref=f3e82]:
+          - heading "Расписание" [level=1] [ref=f3e83]
+          - paragraph [ref=f3e84]: Календарь слотов для готовых постов. Назначение даты — только очередь в студии, без публикации в соцсети.
+        - paragraph [ref=f3e85]: Загрузка…
+  - alert [ref=f3e86]

@@ -1,0 +1,131 @@
+- generic [ref=f12e1]:
+  - generic [ref=f12e2]:
+    - complementary "Главная навигация" [ref=f12e3]:
+      - generic [ref=f12e11]:
+        - generic [ref=f12e12]: VERN·ATUN
+        - generic [ref=f12e13]: Content Factory
+      - generic [ref=f12e14]:
+        - paragraph [ref=f12e15]: Пайплайны и ноды
+        - navigation [ref=f12e16]:
+          - generic [ref=f12e17]:
+            - generic [ref=f12e18]:
+              - link "Студия" [ref=f12e19] [cursor=pointer]:
+                - /url: /studio
+              - button "Свернуть модули Студии" [expanded] [ref=f12e413]
+            - list [ref=f12e414]:
+              - listitem [ref=f12e415]:
+                - link "Карусели Instagram (4:5)" [ref=f12e416] [cursor=pointer]:
+                  - /url: /studio/carousel-engine
+              - listitem [ref=f12e417]:
+                - link "Полезные картинки & Инфографика" [ref=f12e418] [cursor=pointer]:
+                  - /url: /studio/aesthetic-graphics
+              - listitem [ref=f12e419]:
+                - link "Мульт-Reels (2D сторителлинг)" [ref=f12e420] [cursor=pointer]:
+                  - /url: /studio/cartoon-reels
+              - listitem [ref=f12e421]:
+                - link "HeyGen AI-Аватар Reels" [ref=f12e422] [cursor=pointer]:
+                  - /url: /studio/heygen-reels
+              - listitem [ref=f12e423]:
+                - link "Рилс" [ref=f12e424] [cursor=pointer]:
+                  - /url: /studio/custom-reels
+              - listitem [ref=f12e425]:
+                - link "Нарезки с видео в рилсы" [ref=f12e426] [cursor=pointer]:
+                  - /url: /studio/custom-clips-to-reels
+              - listitem [ref=f12e427]:
+                - link "Информационное видео" [ref=f12e428] [cursor=pointer]:
+                  - /url: /studio/custom-info-video
+          - link "Расписание" [ref=f12e39] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f12e44] [cursor=pointer]:
+            - /url: /analytics
+          - link "Бренд-кит" [ref=f12e52] [cursor=pointer]:
+            - /url: /brand-kit
+          - link "Настройки" [ref=f12e61] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f12e66]:
+        - paragraph [ref=f12e67]: Բարև · Vernatun
+        - generic [ref=f12e68]:
+          - paragraph [ref=f12e69]: Роль QA (локально)
+          - generic [ref=f12e70]:
+            - button "OWNER" [ref=f12e71]
+            - button "ADMIN" [active] [ref=f12e72]
+    - main [ref=f12e74]:
+      - generic [ref=f12e429]:
+        - generic [ref=f12e431]:
+          - heading "Студия" [level=1] [ref=f12e432]
+          - paragraph [ref=f12e433]: Выберите модуль — откроется рабочая страница канала.
+        - region [ref=f12e434]:
+          - generic [ref=f12e435]:
+            - generic [ref=f12e436]:
+              - heading "Каналы рендера" [level=2] [ref=f12e437]
+              - paragraph [ref=f12e438]: Выберите модуль — откроется страница канала
+            - generic [ref=f12e439]: Ничего не выбрано
+          - generic [ref=f12e440]:
+            - link "4:5 · PNG Карусели Instagram (4:5) Редакционная карусель 1080×1350 с типографикой и CTA-слайдом. Открыть →" [ref=f12e442] [cursor=pointer]:
+              - /url: /studio/carousel-engine
+              - generic [ref=f12e444]:
+                - generic [ref=f12e445]:
+                  - generic [ref=f12e446]: 4:5 · PNG
+                  - generic [ref=f12e447]:
+                    - generic [ref=f12e448]: Карусели Instagram (4:5)
+                    - paragraph [ref=f12e449]: Редакционная карусель 1080×1350 с типографикой и CTA-слайдом.
+                - generic [ref=f12e450]: Открыть →
+            - link "Bilingual Полезные картинки & Инфографика Читы, таблицы и quote-тайлы для Telegram и LinkedIn. Открыть →" [ref=f12e452] [cursor=pointer]:
+              - /url: /studio/aesthetic-graphics
+              - generic [ref=f12e454]:
+                - generic [ref=f12e455]:
+                  - generic [ref=f12e456]: Bilingual
+                  - generic [ref=f12e457]:
+                    - generic [ref=f12e458]: Полезные картинки & Инфографика
+                    - paragraph [ref=f12e459]: Читы, таблицы и quote-тайлы для Telegram и LinkedIn.
+                - generic [ref=f12e460]: Открыть →
+            - link "9:16 · 2D Мульт-Reels (2D сторителлинг) Иллюстрированный сторителлинг 9:16 с субтитрами. Открыть →" [ref=f12e462] [cursor=pointer]:
+              - /url: /studio/cartoon-reels
+              - generic [ref=f12e464]:
+                - generic [ref=f12e465]:
+                  - generic [ref=f12e466]: 9:16 · 2D
+                  - generic [ref=f12e467]:
+                    - generic [ref=f12e468]: Мульт-Reels (2D сторителлинг)
+                    - paragraph [ref=f12e469]: Иллюстрированный сторителлинг 9:16 с субтитрами.
+                - generic [ref=f12e470]: Открыть →
+            - link "HeyGen HeyGen AI-Аватар Reels Говорящий аватар с синхроном губ и бренд-палитрой. Открыть →" [ref=f12e472] [cursor=pointer]:
+              - /url: /studio/heygen-reels
+              - generic [ref=f12e474]:
+                - generic [ref=f12e475]:
+                  - generic [ref=f12e476]: HeyGen
+                  - generic [ref=f12e477]:
+                    - generic [ref=f12e478]: HeyGen AI-Аватар Reels
+                    - paragraph [ref=f12e479]: Говорящий аватар с синхроном губ и бренд-палитрой.
+                - generic [ref=f12e480]: Открыть →
+            - link "9:16 Рилс Custom worker · http://127.0.0.1:9/no-worker Открыть →" [ref=f12e482] [cursor=pointer]:
+              - /url: /studio/custom-reels
+              - generic [ref=f12e484]:
+                - generic [ref=f12e485]:
+                  - generic [ref=f12e486]: 9:16
+                  - generic [ref=f12e487]:
+                    - generic [ref=f12e488]: Рилс
+                    - paragraph [ref=f12e489]: Custom worker · http://127.0.0.1:9/no-worker
+                - generic [ref=f12e490]: Открыть →
+            - link "9:16 Нарезки с видео в рилсы Custom worker · http://127.0.0.1:9/no-worker Открыть →" [ref=f12e492] [cursor=pointer]:
+              - /url: /studio/custom-clips-to-reels
+              - generic [ref=f12e494]:
+                - generic [ref=f12e495]:
+                  - generic [ref=f12e496]: 9:16
+                  - generic [ref=f12e497]:
+                    - generic [ref=f12e498]: Нарезки с видео в рилсы
+                    - paragraph [ref=f12e499]: Custom worker · http://127.0.0.1:9/no-worker
+                - generic [ref=f12e500]: Открыть →
+            - link "9:16 Информационное видео Custom worker · http://127.0.0.1:9/no-worker Открыть →" [ref=f12e502] [cursor=pointer]:
+              - /url: /studio/custom-info-video
+              - generic [ref=f12e504]:
+                - generic [ref=f12e505]:
+                  - generic [ref=f12e506]: 9:16
+                  - generic [ref=f12e507]:
+                    - generic [ref=f12e508]: Информационное видео
+                    - paragraph [ref=f12e509]: Custom worker · http://127.0.0.1:9/no-worker
+                - generic [ref=f12e510]: Открыть →
+            - button "+ [+ Добавить модуль]" [ref=f12e512]:
+              - generic [ref=f12e513]: +
+              - generic [ref=f12e514]: "[+ Добавить модуль]"
+  - button "Open Next.js Dev Tools" [ref=f12e267] [cursor=pointer]
+  - alert [ref=f12e271]

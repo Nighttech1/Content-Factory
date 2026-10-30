@@ -1,0 +1,23 @@
+# ROLE: ART DIRECTOR — Content Factory (pipeline)
+
+> On-demand (по chain / Variant A). Визуальный QA готовых каруселей: remarks или approve; NO auto-remake.
+
+Субагент: `.claude/agents/art-director.md`
+
+Skill-first:
+1. `.claude/skills/art-director/SKILL.md`
+2. `.claude/skills/art-director/critique-checklist.md`
+3. `.claude/skills/art-director/html-layout-variant-a.md` — when wave = Variant A
+4. `plugins/trainer/variant-a-art-director.md`
+5. `taste-skill` bans + S57 etalon layered-html-refs (#3)
+6. Mesh/Team: `xyflow-agent-mesh` node id `art-director`
+
+## HARD
+
+- Runs **after** carousel composite PNGs exist.
+- Output: `approve` **or** `remarks` text only.
+- **NO auto-remake** / no re-draw / no new Designer job from this role.
+- Does not publish social. Does not write Studio chrome beyond showing verdict on mesh/Team.
+- Not a substitute for **Клиент** live-browser acceptance.
+
+`🎨 **ART DIRECTOR:** [verdict · remarks count · no remake]`

@@ -1,0 +1,300 @@
+- generic [ref=e1] [box=0,0,1440,900]:
+  - generic [ref=e2] [box=0,0,1440,900]:
+    - complementary "Главная навигация" [ref=e3] [box=0,0,256,900]:
+      - generic [ref=e6] [box=68,21,98,35]:
+        - generic [ref=e7] [box=68,21,98,20]: VERNATUN
+        - generic [ref=e8] [box=68,41,98,15]: ARMENIAN CLUB
+      - navigation [ref=e10] [box=12,93,231,180]:
+        - generic [ref=e11] [box=12,93,231,180]:
+          - link "Студия" [ref=e14] [cursor=pointer] [box=12,93,231,44]:
+            - /url: /studio
+          - link "Расписание" [ref=e27] [cursor=pointer] [box=12,138,231,44]:
+            - /url: /schedule
+          - link "Настройки" [ref=e37] [cursor=pointer] [box=12,183,231,44]:
+            - /url: /settings
+          - link "Директор" [ref=e48] [cursor=pointer] [box=12,228,231,44]:
+            - /url: /marketing
+      - generic [ref=e58] [box=12,820,231,65]:
+        - paragraph [ref=e59] [box=21,829,213,14]: Роль QA (локально)
+        - generic [ref=e60] [box=21,848,213,27]:
+          - button "OWNER" [ref=e61] [box=21,848,105,27]
+          - button "ADMIN" [ref=e62] [box=130,848,105,27]
+      - button "Изменить ширину боковой панели" [ref=e63] [box=237,0,12,900]
+    - main [ref=e65] [box=256,0,1184,900]:
+      - generic [ref=e66] [box=288,32,1120,780]:
+        - generic [ref=e68] [box=288,32,1120,44]:
+          - heading "Карусели Instagram" [level=1] [ref=e69] [box=288,32,347,40]
+          - generic [ref=e70] [box=968,32,440,44]:
+            - link "Команда выпуска" [ref=e71] [cursor=pointer] [box=968,32,157,44]:
+              - /url: /studio/carousel-engine/mesh
+            - link "Аналитика" [ref=e72] [cursor=pointer] [box=1133,32,105,44]:
+              - /url: /studio/carousel-engine/analytics
+            - button "Создать карусель" [ref=e73] [box=1246,34,162,40]
+        - generic [ref=e76] [box=288,88,1120,724]:
+          - generic [ref=e77] [box=288,88,554,724]:
+            - generic [ref=e78] [box=289,89,552,79]:
+              - generic [ref=e79] [box=301,97,528,20]:
+                - heading "Наши" [level=2] [ref=e80] [box=301,97,38,20]
+                - generic [ref=e82] [box=817,100,12,15]: "12"
+              - generic [ref=e84] [box=301,125,528,34]:
+                - tablist "Вкладки нашей ленты" [ref=e85] [box=301,125,203,34]:
+                  - tab "Опубликовано" [selected] [ref=e86] [box=304,128,109,28]
+                  - tab "Черновики" [ref=e88] [box=417,128,84,28]
+                - generic [ref=e89] [box=512,125,317,34]:
+                  - button "Сортировка" [ref=e91] [box=512,125,34,34]
+                  - button "Фильтр" [ref=e96] [box=554,125,34,34]
+                  - searchbox "Поиск наших постов" [ref=e103] [box=629,126,189,32]
+            - generic [ref=e104] [box=289,176,552,635]:
+              - article [ref=e105] [box=297,180,264,330]:
+                - generic [ref=e106] [box=298,181,262,328]:
+                  - button "Предыдущий слайд" [ref=e108] [box=304,329,32,32]
+                  - button "Следующий слайд" [ref=e111] [box=522,329,32,32]
+                  - generic [box=298,458,262,51]:
+                    - list [box=314,482,230,21]:
+                      - listitem "Просмотры" [box=314,482,44,21]:
+                        - generic [box=334,482,24,21]: 19K
+                      - listitem "Лайки" [box=366,482,48,21]:
+                        - generic [box=386,482,28,21]: 1.2K
+                      - listitem "Комментарии" [box=421,482,36,21]:
+                        - generic [box=441,482,16,21]: "48"
+                      - listitem "Репосты" [box=465,482,36,21]:
+                        - generic [box=485,482,16,21]: "53"
+                      - listitem "Сохранения" [box=509,482,36,21]:
+                        - generic [box=529,482,16,21]: "82"
+              - article [ref=e114] [box=569,180,264,330]:
+                - generic [ref=e115] [box=570,181,262,328]:
+                  - button "Предыдущий слайд" [ref=e117] [box=576,329,32,32]
+                  - button "Следующий слайд" [ref=e120] [box=794,329,32,32]
+                  - generic [box=570,458,262,51]:
+                    - list [box=588,482,226,21]:
+                      - listitem "Просмотры" [box=588,482,44,21]:
+                        - generic [box=608,482,24,21]: 14K
+                      - listitem "Лайки" [box=640,482,43,21]:
+                        - generic [box=660,482,23,21]: "890"
+                      - listitem "Комментарии" [box=691,482,36,21]:
+                        - generic [box=711,482,16,21]: "31"
+                      - listitem "Репосты" [box=735,482,36,21]:
+                        - generic [box=755,482,16,21]: "37"
+                      - listitem "Сохранения" [box=778,482,36,21]:
+                        - generic [box=798,482,16,21]: "58"
+              - article [ref=e123] [box=297,518,264,330]:
+                - generic [ref=e124] [box=298,519,262,328]:
+                  - button "Предыдущий слайд" [ref=e126] [box=304,666,32,32]
+                  - button "Следующий слайд" [ref=e129] [box=522,666,32,32]
+                  - generic [box=298,795,262,51]:
+                    - list [box=310,819,238,21]:
+                      - listitem "Просмотры" [box=310,819,44,21]:
+                        - generic [box=330,819,24,21]: 28K
+                      - listitem "Лайки" [box=362,819,48,21]:
+                        - generic [box=382,819,28,21]: 2.1K
+                      - listitem "Комментарии" [box=418,819,36,21]:
+                        - generic [box=438,819,16,21]: "72"
+                      - listitem "Репосты" [box=461,819,36,21]:
+                        - generic [box=481,819,16,21]: "88"
+                      - listitem "Сохранения" [box=505,819,43,21]:
+                        - generic [box=525,819,23,21]: "137"
+              - article [ref=e132] [box=569,518,264,330]:
+                - generic [ref=e133] [box=570,519,262,328]:
+                  - button "Предыдущий слайд" [ref=e135] [box=576,666,32,32]
+                  - button "Следующий слайд" [ref=e138] [box=794,666,32,32]
+                  - generic [box=570,795,262,51]:
+                    - list [box=582,819,238,21]:
+                      - listitem "Просмотры" [box=582,819,44,21]:
+                        - generic [box=602,819,24,21]: 22K
+                      - listitem "Лайки" [box=634,819,48,21]:
+                        - generic [box=654,819,28,21]: 1.6K
+                      - listitem "Комментарии" [box=690,819,36,21]:
+                        - generic [box=710,819,16,21]: "44"
+                      - listitem "Репосты" [box=733,819,36,21]:
+                        - generic [box=753,819,16,21]: "63"
+                      - listitem "Сохранения" [box=777,819,43,21]:
+                        - generic [box=797,819,23,21]: "100"
+              - article [ref=e141] [box=297,855,264,330]:
+                - generic [ref=e142] [box=298,856,262,328]:
+                  - button "Предыдущий слайд" [ref=e144] [box=304,1004,32,32]
+                  - button "Следующий слайд" [ref=e147] [box=522,1004,32,32]
+                  - generic [box=298,1133,262,51]:
+                    - list [box=316,1157,226,21]:
+                      - listitem "Просмотры" [box=316,1157,44,21]:
+                        - generic [box=336,1157,24,21]: 15K
+                      - listitem "Лайки" [box=368,1157,43,21]:
+                        - generic [box=388,1157,23,21]: "980"
+                      - listitem "Комментарии" [box=419,1157,36,21]:
+                        - generic [box=439,1157,16,21]: "29"
+                      - listitem "Репосты" [box=463,1157,36,21]:
+                        - generic [box=483,1157,16,21]: "40"
+                      - listitem "Сохранения" [box=506,1157,36,21]:
+                        - generic [box=526,1157,16,21]: "63"
+              - article [ref=e150] [box=569,855,264,330]:
+                - generic [ref=e151] [box=570,856,262,328]:
+                  - button "Предыдущий слайд" [ref=e153] [box=576,1004,32,32]
+                  - button "Следующий слайд" [ref=e156] [box=794,1004,32,32]
+                  - generic [box=570,1133,262,51]:
+                    - list [box=582,1157,238,21]:
+                      - listitem "Просмотры" [box=582,1157,44,21]:
+                        - generic [box=602,1157,24,21]: 27K
+                      - listitem "Лайки" [box=634,1157,48,21]:
+                        - generic [box=654,1157,28,21]: 1.8K
+                      - listitem "Комментарии" [box=690,1157,36,21]:
+                        - generic [box=710,1157,16,21]: "61"
+                      - listitem "Репосты" [box=733,1157,36,21]:
+                        - generic [box=753,1157,16,21]: "75"
+                      - listitem "Сохранения" [box=777,1157,43,21]:
+                        - generic [box=797,1157,23,21]: "116"
+              - article [ref=e159] [box=297,1193,264,330]:
+                - generic [ref=e160] [box=298,1194,262,328]:
+                  - button "Предыдущий слайд" [ref=e162] [box=304,1341,32,32]
+                  - button "Следующий слайд" [ref=e165] [box=522,1341,32,32]
+                  - generic [box=298,1470,262,51]:
+                    - list [box=306,1494,246,21]:
+                      - listitem "Просмотры" [box=306,1494,44,21]:
+                        - generic [box=326,1494,24,21]: 41K
+                      - listitem "Лайки" [box=358,1494,48,21]:
+                        - generic [box=378,1494,28,21]: 2.3K
+                      - listitem "Комментарии" [box=414,1494,36,21]:
+                        - generic [box=434,1494,16,21]: "88"
+                      - listitem "Репосты" [box=457,1494,43,21]:
+                        - generic [box=477,1494,23,21]: "100"
+                      - listitem "Сохранения" [box=509,1494,43,21]:
+                        - generic [box=529,1494,23,21]: "154"
+              - article [ref=e168] [box=569,1193,264,330]:
+                - generic [ref=e169] [box=570,1194,262,328]:
+                  - button "Предыдущий слайд" [ref=e171] [box=576,1341,32,32]
+                  - button "Следующий слайд" [ref=e174] [box=794,1341,32,32]
+                  - generic [box=570,1470,262,51]:
+                    - list [box=586,1494,230,21]:
+                      - listitem "Просмотры" [box=586,1494,44,21]:
+                        - generic [box=606,1494,24,21]: 19K
+                      - listitem "Лайки" [box=638,1494,48,21]:
+                        - generic [box=658,1494,28,21]: 1.1K
+                      - listitem "Комментарии" [box=693,1494,36,21]:
+                        - generic [box=713,1494,16,21]: "35"
+                      - listitem "Репосты" [box=737,1494,36,21]:
+                        - generic [box=757,1494,16,21]: "46"
+                      - listitem "Сохранения" [box=781,1494,36,21]:
+                        - generic [box=801,1494,16,21]: "72"
+              - article [ref=e177] [box=297,1530,264,330]:
+                - generic [ref=e178] [box=298,1531,262,328]:
+                  - button "Предыдущий слайд" [ref=e180] [box=304,1679,32,32]
+                  - button "Следующий слайд" [ref=e183] [box=522,1679,32,32]
+                  - generic [box=298,1808,262,51]:
+                    - list [box=316,1832,226,21]:
+                      - listitem "Просмотры" [box=316,1832,44,21]:
+                        - generic [box=336,1832,24,21]: 12K
+                      - listitem "Лайки" [box=368,1832,43,21]:
+                        - generic [box=388,1832,23,21]: "760"
+                      - listitem "Комментарии" [box=419,1832,36,21]:
+                        - generic [box=439,1832,16,21]: "22"
+                      - listitem "Репосты" [box=463,1832,36,21]:
+                        - generic [box=483,1832,16,21]: "31"
+                      - listitem "Сохранения" [box=506,1832,36,21]:
+                        - generic [box=526,1832,16,21]: "49"
+              - article [ref=e186] [box=569,1530,264,330]:
+                - generic [ref=e187] [box=570,1531,262,328]:
+                  - button "Предыдущий слайд" [ref=e189] [box=576,1679,32,32]
+                  - button "Следующий слайд" [ref=e192] [box=794,1679,32,32]
+                  - generic [box=570,1808,262,51]:
+                    - list [box=582,1832,238,21]:
+                      - listitem "Просмотры" [box=582,1832,44,21]:
+                        - generic [box=602,1832,24,21]: 34K
+                      - listitem "Лайки" [box=634,1832,48,21]:
+                        - generic [box=654,1832,28,21]: 1.9K
+                      - listitem "Комментарии" [box=690,1832,36,21]:
+                        - generic [box=710,1832,16,21]: "70"
+                      - listitem "Репосты" [box=733,1832,36,21]:
+                        - generic [box=753,1832,16,21]: "80"
+                      - listitem "Сохранения" [box=777,1832,43,21]:
+                        - generic [box=797,1832,23,21]: "124"
+              - article [ref=e195] [box=297,1868,264,330]:
+                - generic [ref=e196] [box=298,1869,262,328]:
+                  - button "Предыдущий слайд" [ref=e198] [box=304,2016,32,32]
+                  - button "Следующий слайд" [ref=e201] [box=522,2016,32,32]
+                  - generic [box=298,2145,262,51]:
+                    - list [box=314,2169,230,21]:
+                      - listitem "Просмотры" [box=314,2169,44,21]:
+                        - generic [box=334,2169,24,21]: 20K
+                      - listitem "Лайки" [box=366,2169,48,21]:
+                        - generic [box=386,2169,28,21]: 1.3K
+                      - listitem "Комментарии" [box=421,2169,36,21]:
+                        - generic [box=441,2169,16,21]: "41"
+                      - listitem "Репосты" [box=465,2169,36,21]:
+                        - generic [box=485,2169,16,21]: "55"
+                      - listitem "Сохранения" [box=509,2169,36,21]:
+                        - generic [box=529,2169,16,21]: "87"
+              - article [ref=e204] [box=569,1868,264,330]:
+                - generic [ref=e205] [box=570,1869,262,328]:
+                  - button "Предыдущий слайд" [ref=e207] [box=576,2016,32,32]
+                  - button "Следующий слайд" [ref=e210] [box=794,2016,32,32]
+                  - generic [box=570,2145,262,51]:
+                    - list [box=588,2169,226,21]:
+                      - listitem "Просмотры" [box=588,2169,44,21]:
+                        - generic [box=608,2169,24,21]: 15K
+                      - listitem "Лайки" [box=640,2169,43,21]:
+                        - generic [box=660,2169,23,21]: "920"
+                      - listitem "Комментарии" [box=691,2169,36,21]:
+                        - generic [box=711,2169,16,21]: "27"
+                      - listitem "Репосты" [box=735,2169,36,21]:
+                        - generic [box=755,2169,16,21]: "38"
+                      - listitem "Сохранения" [box=778,2169,36,21]:
+                        - generic [box=798,2169,16,21]: "59"
+          - generic [ref=e213] [box=854,88,554,724]:
+            - generic [ref=e214] [box=855,89,552,121]:
+              - generic [ref=e215] [box=867,97,528,20]:
+                - heading "Конкуренты" [level=2] [ref=e216] [box=867,97,83,20]
+                - generic [ref=e217] [box=1389,100,6,15]: "0"
+              - generic [ref=e219] [box=867,125,528,76]:
+                - tablist "Конкуренты или доски" [ref=e220] [box=867,145,174,36]:
+                  - tab "Конкуренты" [ref=e221] [box=870,148,90,30]
+                  - tab "Доски" [active] [selected] [ref=e224] [box=964,148,74,30]
+                - generic [ref=e231] [box=1049,125,346,76]:
+                  - button "Сортировка" [ref=e233] [box=1049,125,34,34]
+                  - button "Фильтр" [ref=e238] [box=1091,125,34,34]
+                  - button "Загрузить" [ref=e293] [box=1133,125,101,34]
+                  - button "Доски" [ref=e298] [box=1243,125,88,34]
+                  - searchbox "Поиск по доскам" [ref=e307] [box=1082,168,302,32]
+            - paragraph [ref=e316] [box=921,303,420,20]: Выберите доску или нажмите «Загрузить» / «Создать доску»
+      - button "Закрыть панель генерации" [box=0,0,1440,900]
+      - complementary [aria-hidden] [ref=e249] [box=1440,0,448,900]:
+        - generic [ref=e250] [box=1441,0,447,80]:
+          - generic [ref=e251] [box=1461,16,166,47]:
+            - paragraph [ref=e252] [box=1461,16,166,17]: Журнал генерации
+            - heading [level=2] [ref=e253] [box=1461,35,166,28]: Конвейер агентов
+          - button [ref=e254] [box=1786,22,82,34]: Закрыть
+        - generic [ref=e255] [box=1441,80,447,67]:
+          - generic [ref=e256] [box=1461,96,407,16]:
+            - generic [ref=e257] [box=1461,96,60,16]: Прогресс
+            - generic [ref=e258] [box=1854,96,14,16]: 0%
+          - progressbar [ref=e259] [box=1461,124,407,6]
+        - list [ref=e260] [box=1441,147,447,629]:
+          - listitem [ref=e261] [box=1467,176,395,76]:
+            - generic [ref=e264] [box=1503,192,107,43]:
+              - generic [ref=e265] [box=1503,192,107,19]: Исследователь
+              - generic [ref=e266] [box=1503,215,107,19]: Ожидание...
+          - listitem [ref=e267] [box=1467,266,395,76]:
+            - generic [ref=e270] [box=1503,282,85,43]:
+              - generic [ref=e271] [box=1503,282,85,19]: Автор хуков
+              - generic [ref=e272] [box=1503,305,85,19]: Ожидание...
+          - listitem [ref=e273] [box=1467,356,395,76]:
+            - generic [ref=e276] [box=1503,372,85,43]:
+              - generic [ref=e277] [box=1503,372,85,19]: Сценарист
+              - generic [ref=e278] [box=1503,395,85,19]: Ожидание...
+          - listitem [ref=e279] [box=1467,446,395,76]:
+            - generic [ref=e282] [box=1503,462,85,43]:
+              - generic [ref=e283] [box=1503,462,85,19]: Дизайнер
+              - generic [ref=e284] [box=1503,485,85,19]: Ожидание...
+          - listitem [ref=e285] [box=1467,536,395,76]:
+            - generic [ref=e288] [box=1503,552,85,43]:
+              - generic [ref=e289] [box=1503,552,85,19]: Конвейер
+              - generic [ref=e290] [box=1503,575,85,19]: Ожидание...
+        - generic [ref=e291] [box=1441,775,447,125]:
+          - generic [box=1453,786,423,104]:
+            - textbox [disabled] [box=1462,795,405,48]:
+              - /placeholder: Заметка активному шагу…
+            - generic [box=1462,845,405,36]:
+              - generic [box=1466,845,397,32]:
+                - generic [box=1791,845,72,32]:
+                  - button [disabled] [box=1791,845,32,32]:
+                    - generic [box=1807,861,1,1]: Record voice
+                  - button [disabled] [box=1831,845,32,32]:
+                    - generic [box=1847,861,1,1]: Send message
+  - alert [ref=e248] [box=-1,899,1,1]

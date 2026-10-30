@@ -1,0 +1,49 @@
+{
+  "project": "vernatun",
+  "content_id": "sevan-silence-pause",
+  "contentType": "carousel",
+  "requested_slide_count": 3,
+  "idea": "Озеро Севан как метафора паузы — вода и ветер вместо суеты города",
+  "hook": "Вода слышит?",
+  "tone": "vernatun",
+  "cta_type": 1,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Вода слышит?",
+      "secondary_copy": "",
+      "swipe_trigger": "META: curiosity gap — что может услышать озеро вместо человека",
+      "visual_prompt": "sevan lake wide horizon, soft morning mist over water surface, minimal ripple pattern, cool blue-grey palette, natural light from left, no people, no boats, contemplative stillness, cinematic depth",
+      "alt_text": "Озеро Севан в тишине, горизонт и туман"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "point",
+      "primary_copy": "Ветер говорит за нас",
+      "secondary_copy": "В Vernatun паузу ценим больше, чем слова. Озеро Севан — учитель молчания.",
+      "swipe_trigger": "META: proof beat — конкретный жест клуба: молчание как ценность",
+      "visual_prompt": "sevan lake close-up water texture, wind ripples diagonal light pattern, soft amber accent rim light on wave crests, cool-warm balance, editorial composition, no filter purple",
+      "alt_text": "Волны озера, текстура ветра и воды"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta",
+      "primary_copy": "Что ты слышишь в тишине?",
+      "secondary_copy": "Напиши в комментариях — какую паузу ты ждёшь.",
+      "swipe_trigger": "META: soft end — comments CTA; зритель пишет свой ответ",
+      "visual_prompt": "sevan lake golden hour, water surface calm mirror-like, soft warm light catching edge, Vernatun mark subtle bottom-left, CTA text block warm gold accent, editorial not purple pill",
+      "alt_text": "CTA озеро на закате — комментарии",
+      "cta_type": 1
+    }
+  ],
+  "caption": "Озеро Севан учит молчанию. Ветер говорит за нас. Vernatun.",
+  "hashtags": [
+    "#Vernatun",
+    "#Севан",
+    "#Тишина",
+    "#Пауза",
+    "#Озеро"
+  ],
+  "promptForDesigner": "sevan_silence: lake editorial + wind ripples + golden hour CTA; cool-warm balance; HTML/CSS-first 3×4:5; ignore swipe_trigger text on canvas"
+}

@@ -1,0 +1,352 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - complementary "Главная навигация" [ref=f2e3]:
+      - generic [ref=f2e4]:
+        - img "Vernatun" [ref=f2e5]
+        - generic [ref=f2e6]:
+          - generic [ref=f2e7]: VERNATUN
+          - generic [ref=f2e8]: ARMENIAN CLUB
+      - navigation [ref=f2e10]:
+        - generic [ref=f2e11]:
+          - link "Студия" [ref=f2e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f2e27] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f2e40] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f2e50] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f2e63] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f2e73]:
+        - paragraph [ref=f2e74]: Роль QA (локально)
+        - generic [ref=f2e75]:
+          - button "OWNER" [ref=f2e76]
+          - button "ADMIN" [ref=f2e77]
+      - button "Изменить ширину боковой панели" [ref=f2e78]
+    - main [ref=f2e80]:
+      - generic [ref=f2e81]:
+        - generic [ref=f2e82]:
+          - generic [ref=f2e83]:
+            - generic [ref=f2e84]:
+              - heading "Самообучающаяся диагностика" [level=1] [ref=f2e85]
+              - paragraph [ref=f2e86]: Разведка ниши, аномалии конкурентов и удержание — экран, где фабрика смотрит телеметрию опубликованного контента.
+            - generic [ref=f2e87]:
+              - group [ref=f2e88]:
+                - button "Все типы" [ref=f2e89] [cursor=pointer]
+                - button "Рилсы" [ref=f2e96] [cursor=pointer]
+                - button "Карусели" [ref=f2e104] [cursor=pointer]
+                - button "Shorts" [ref=f2e111] [cursor=pointer]
+              - group [ref=f2e116]:
+                - button "Все площадки" [ref=f2e117] [cursor=pointer]
+                - button "Instagram" [ref=f2e124] [cursor=pointer]
+                - button "TikTok" [ref=f2e130] [cursor=pointer]
+                - button "YouTube" [ref=f2e136] [cursor=pointer]
+                - button "Telegram" [ref=f2e142] [cursor=pointer]
+          - button [ref=f2e147]:
+            - text: "Синхронизация:"
+            - strong [ref=f2e149]: 11.10.10.26
+        - generic [ref=f2e237]:
+          - generic [ref=f2e238]:
+            - button "← К меню" [ref=f2e239]
+            - navigation "Навигация аналитики" [ref=f2e240]:
+              - button "Модули" [ref=f2e241]
+              - generic [aria-hidden] [ref=f2e242]: /
+              - generic [ref=f2e243]: Карусели Instagram (4:5)
+          - generic [ref=f2e244]:
+            - generic [ref=f2e246]:
+              - generic [ref=f2e247]: Контент / аномалии
+              - generic [ref=f2e249]:
+                - generic [ref=f2e250]: 1 284 / 37
+                - generic [ref=f2e251]: "+6"
+              - paragraph [ref=f2e252]: всего разведано / аномалий 5×+
+            - generic [ref=f2e254]:
+              - generic [ref=f2e255]:
+                - generic [ref=f2e256]: Удержание 3с
+                - generic [ref=f2e257]: outlier 79%
+              - generic [ref=f2e258]:
+                - generic [ref=f2e259]: 71%
+                - generic [ref=f2e260]: −2п.п.
+              - paragraph [ref=f2e261]: наши live vs бенчмарк
+            - generic [ref=f2e263]:
+              - generic [ref=f2e264]: Циклы обучения
+              - generic [ref=f2e266]:
+                - generic [ref=f2e267]: "12"
+                - generic [ref=f2e268]: журнал
+              - paragraph [ref=f2e269]: записи эвристик (мок, без обучения модели)
+          - generic [ref=f2e270]:
+            - generic [ref=f2e271]:
+              - heading "Разведка ниши" [level=2] [ref=f2e272]
+              - generic [ref=f2e273]:
+                - generic [ref=f2e274]:
+                  - textbox "Тема, которая интересует" [ref=f2e275]
+                  - button "Искать тему" [ref=f2e276]
+                - button "Выбрать тему" [ref=f2e280]
+            - generic [ref=f2e281]:
+              - button "Аномалии" [disabled] [ref=f2e282]
+              - button "Стабильно" [disabled] [ref=f2e283]
+            - paragraph [ref=f2e284]: Введите тему и нажмите лупу — скрипт посчитает объём контента по типам (без ИИ).
+          - generic [ref=f2e285]:
+            - generic [ref=f2e286]:
+              - heading "Аномалии" [level=2] [ref=f2e287]
+              - generic [ref=f2e288]:
+                - button "Назад" [ref=f2e289]
+                - button "Вперёд" [ref=f2e292]
+            - generic [ref=f2e295]:
+              - generic [ref=f2e297]:
+                - generic [ref=f2e298]: 14.2×
+                - generic [ref=f2e300]:
+                  - 'link "Гостевой вечер: 3 фразы, которые заходят" [ref=f2e301] [cursor=pointer]':
+                    - /url: https://example.com/out/1
+                  - paragraph [ref=f2e302]: "@club.scout1 · Instagram · 480K"
+              - generic [ref=f2e304]:
+                - generic [ref=f2e305]: 13.7×
+                - generic [ref=f2e307]:
+                  - link "Почему «гость» звучит иначе в клубе" [ref=f2e308] [cursor=pointer]:
+                    - /url: https://example.com/out/2
+                  - paragraph [ref=f2e309]: "@club.scout2 · TikTok · 452K"
+              - generic [ref=f2e311]:
+                - generic [ref=f2e312]: 13.1×
+                - generic [ref=f2e314]:
+                  - link "Мем про барную очередь — 15с" [ref=f2e315] [cursor=pointer]:
+                    - /url: https://example.com/out/3
+                  - paragraph [ref=f2e316]: "@club.scout3 · YouTube · 424K"
+              - generic [ref=f2e318]:
+                - generic [ref=f2e319]: 12.5×
+                - generic [ref=f2e321]:
+                  - link "Рецепт тоста на hy + punchline" [ref=f2e322] [cursor=pointer]:
+                    - /url: https://example.com/out/4
+                  - paragraph [ref=f2e323]: "@club.scout4 · Instagram · 396K"
+              - generic [ref=f2e325]:
+                - generic [ref=f2e326]: 12×
+                - generic [ref=f2e328]:
+                  - 'link "До/после: свет в зале за 20с" [ref=f2e329] [cursor=pointer]':
+                    - /url: https://example.com/out/5
+                  - paragraph [ref=f2e330]: "@club.scout5 · TikTok · 368K"
+              - generic [ref=f2e332]:
+                - generic [ref=f2e333]: 11.5×
+                - generic [ref=f2e335]:
+                  - link "Секрет длинной очереди у входа" [ref=f2e336] [cursor=pointer]:
+                    - /url: https://example.com/out/6
+                  - paragraph [ref=f2e337]: "@club.scout6 · YouTube · 340K"
+              - generic [ref=f2e339]:
+                - generic [ref=f2e340]: 10.9×
+                - generic [ref=f2e342]:
+                  - link "Как сказать «ещё бокал» без пафоса" [ref=f2e343] [cursor=pointer]:
+                    - /url: https://example.com/out/7
+                  - paragraph [ref=f2e344]: "@club.scout7 · Instagram · 312K"
+              - generic [ref=f2e346]:
+                - generic [ref=f2e347]: 10.3×
+                - generic [ref=f2e349]:
+                  - link "Карта столиков глазами гостя" [ref=f2e350] [cursor=pointer]:
+                    - /url: https://example.com/out/8
+                  - paragraph [ref=f2e351]: "@club.scout8 · TikTok · 284K"
+              - generic [ref=f2e353]:
+                - generic [ref=f2e354]: 9.8×
+                - generic [ref=f2e356]:
+                  - link "История одного плейлиста пятницы" [ref=f2e357] [cursor=pointer]:
+                    - /url: https://example.com/out/9
+                  - paragraph [ref=f2e358]: "@club.scout9 · YouTube · 256K"
+              - generic [ref=f2e360]:
+                - generic [ref=f2e361]: 9.3×
+                - generic [ref=f2e363]:
+                  - link "Тихие сигналы хорошего сервиса" [ref=f2e364] [cursor=pointer]:
+                    - /url: https://example.com/out/10
+                  - paragraph [ref=f2e365]: "@club.scout10 · Instagram · 228K"
+              - generic [ref=f2e367]:
+                - generic [ref=f2e368]: 8.7×
+                - generic [ref=f2e370]:
+                  - link "Армянский breakfast hack" [ref=f2e371] [cursor=pointer]:
+                    - /url: https://example.com/out/11
+                  - paragraph [ref=f2e372]: "@club.scout11 · TikTok · 200K"
+              - generic [ref=f2e374]:
+                - generic [ref=f2e375]: 8.1×
+                - generic [ref=f2e377]:
+                  - link "Что снимать, когда зал пустой" [ref=f2e378] [cursor=pointer]:
+                    - /url: https://example.com/out/12
+                  - paragraph [ref=f2e379]: "@club.scout12 · YouTube · 172K"
+              - generic [ref=f2e381]:
+                - generic [ref=f2e382]: 7.6×
+                - generic [ref=f2e384]:
+                  - link "Хук на сленг диаспоры" [ref=f2e385] [cursor=pointer]:
+                    - /url: https://example.com/out/13
+                  - paragraph [ref=f2e386]: "@club.scout13 · Instagram · 144K"
+              - generic [ref=f2e388]:
+                - generic [ref=f2e389]: 7×
+                - generic [ref=f2e391]:
+                  - 'link "Контраст: шум улицы / тишина VIP" [ref=f2e392] [cursor=pointer]':
+                    - /url: https://example.com/out/14
+                  - paragraph [ref=f2e393]: "@club.scout14 · TikTok · 116K"
+              - generic [ref=f2e395]:
+                - generic [ref=f2e396]: 6.5×
+                - generic [ref=f2e398]:
+                  - link "Финал рилса с вопросом в камеру" [ref=f2e399] [cursor=pointer]:
+                    - /url: https://example.com/out/15
+                  - paragraph [ref=f2e400]: "@club.scout15 · YouTube · 88K"
+            - generic [ref=f2e401]:
+              - paragraph [ref=f2e402]: Резюме Разборщика
+              - paragraph [ref=f2e403]: "Разборщик видит общий паттерн: лидеры бьют медиану примерно в 10.3×. Чаще всего срабатывает хук «открытый цикл любопытства» и триггер «сохранения (польза)». Люди останавливаются на первых секундах, потому что обещание пользы или эмоции звучит сразу и без воды — а дальше контент держит темп короткими сменами кадра. Для наших выпусков: копируем структуру обещания, а не копируем чужие лица и шутки один в один."
+          - generic [ref=f2e404]:
+            - generic [ref=f2e406]:
+              - generic [ref=f2e407]:
+                - generic [ref=f2e408]:
+                  - paragraph [ref=f2e409]: Удержание
+                  - heading "Кривая удержания · первые 15 секунд" [level=2] [ref=f2e410]
+                  - paragraph [ref=f2e411]: Наш live-контент vs бенчмарк outlier и идеальная кривая.
+                - group "Легенда удержания" [ref=f2e412]:
+                  - button "Наш контент" [pressed] [ref=f2e413]
+                  - button "Бенчмарк outlier" [pressed] [ref=f2e415]
+                  - button "Идеальная кривая" [pressed] [ref=f2e417]
+              - generic [ref=f2e419]:
+                - generic:
+                  - generic:
+                    - generic: Ворота 3с
+                    - text: 81% (40/50)
+                  - generic:
+                    - generic: На 15-й секунде
+                    - text: 62% (31/50)
+                  - generic:
+                    - generic: Бенчмарк 3с
+                    - generic: 88.2% outlier
+                - application [ref=f2e422]:
+                  - generic [ref=f2e448]:
+                    - generic [ref=f2e449]:
+                      - generic [ref=f2e450]: 0с
+                      - generic [ref=f2e452]: 3с
+                      - generic [ref=f2e454]: 6с
+                      - generic [ref=f2e456]: 9с
+                      - generic [ref=f2e458]: 12с
+                      - generic [ref=f2e460]: 15с
+                    - generic [ref=f2e462]:
+                      - generic [ref=f2e463]: 0%
+                      - generic [ref=f2e465]: 25%
+                      - generic [ref=f2e467]: 50%
+                      - generic [ref=f2e469]: 75%
+                      - generic [ref=f2e471]: 100%
+              - generic [ref=f2e473]:
+                - generic [ref=f2e474]:
+                  - generic [ref=f2e475]: Наш контент @3с
+                  - text: 81% (40/50)
+                - generic [ref=f2e476]:
+                  - generic [ref=f2e477]: На 15-й секунде
+                  - text: 62% (31/50)
+                  - generic [ref=f2e478]: Δ vs 3с 19 п.п.
+                - generic [ref=f2e479]:
+                  - generic [ref=f2e480]: Outlier @3с
+                  - generic [ref=f2e481]: 81.4% → 88.2%
+                  - generic [ref=f2e482]: Δ 6.8 п.п.
+            - generic [ref=f2e483]:
+              - generic [ref=f2e484]:
+                - paragraph [ref=f2e485]: Лента самообучения
+                - heading "RL · предложения Тренера" [level=2] [ref=f2e486]
+                - paragraph [ref=f2e487]: "HITL: без «Согласовано» правки skills/rules не применяются."
+              - generic [ref=f2e488]:
+                - article [ref=f2e489]:
+                  - generic [ref=f2e490]:
+                    - generic [ref=f2e491]:
+                      - generic [ref=f2e492]: Хук
+                      - generic [ref=f2e493]: Предложение Тренера
+                      - generic [ref=f2e494]: цикл 12
+                      - generic [ref=f2e495]: Ожидает
+                    - time [ref=f2e496]: 8 окт., 11:10
+                  - paragraph [ref=f2e497]: Усилить открытый вопрос в первые 1.5с карусели (cover text).
+                  - generic [ref=f2e498]:
+                    - generic [ref=f2e499]: saves +1.8п.п. на тесте
+                    - generic [ref=f2e500]:
+                      - generic [ref=f2e501]: сходимость
+                      - generic [ref=f2e504]: 78%
+                  - generic [ref=f2e505]:
+                    - button "Согласовано" [ref=f2e506]
+                    - button "Отклонить" [ref=f2e507]
+                - article [ref=f2e508]:
+                  - generic [ref=f2e509]:
+                    - generic [ref=f2e510]:
+                      - generic [ref=f2e511]: Темп
+                      - generic [ref=f2e512]: Предложение Тренера
+                      - generic [ref=f2e513]: цикл 11
+                      - generic [ref=f2e514]: Ожидает
+                    - time [ref=f2e515]: 8 окт., 00:00
+                  - paragraph [ref=f2e516]: Сократить beat 3 в HeyGen-скрипте до 2.2с.
+                  - generic [ref=f2e517]:
+                    - generic [ref=f2e518]: retention@5с +3.1п.п.
+                    - generic [ref=f2e519]:
+                      - generic [ref=f2e520]: сходимость
+                      - generic [ref=f2e523]: 71%
+                  - generic [ref=f2e524]:
+                    - button "Согласовано" [ref=f2e525]
+                    - button "Отклонить" [ref=f2e526]
+                - article [ref=f2e527]:
+                  - generic [ref=f2e528]:
+                    - generic [ref=f2e529]:
+                      - generic [ref=f2e530]: Визуал
+                      - generic [ref=f2e531]: Предложение Тренера
+                      - generic [ref=f2e532]: цикл 10
+                      - generic [ref=f2e533]: Ожидает
+                    - time [ref=f2e534]: 7 окт., 17:30
+                  - paragraph [ref=f2e535]: Glass-карточка на слайде 2 вместо плоского фона.
+                  - generic [ref=f2e536]:
+                    - generic [ref=f2e537]: CTR превью +0.6п.п.
+                    - generic [ref=f2e538]:
+                      - generic [ref=f2e539]: сходимость
+                      - generic [ref=f2e542]: 66%
+                  - generic [ref=f2e543]:
+                    - button "Согласовано" [ref=f2e544]
+                    - button "Отклонить" [ref=f2e545]
+          - generic [ref=f2e546]:
+            - generic [ref=f2e547]:
+              - paragraph [ref=f2e548]: Телеметрия
+              - heading "Опубликованные активы" [level=2] [ref=f2e549]
+              - paragraph [ref=f2e550]: Свежесть снимков, охват и save rate по модулям фабрики.
+            - table [ref=f2e553]:
+              - rowgroup [ref=f2e554]:
+                - row [ref=f2e555]:
+                  - columnheader "Актив" [ref=f2e556]
+                  - columnheader "Модуль" [ref=f2e557]
+                  - columnheader "Каналы" [ref=f2e558]
+                  - columnheader "Охват" [ref=f2e559]
+                  - columnheader "ER" [ref=f2e560]
+                  - columnheader "Save" [ref=f2e561]
+                  - columnheader "Статус" [ref=f2e562]
+              - rowgroup [ref=f2e563]:
+                - row [ref=f2e564]:
+                  - 'cell "Guest night · карусель Vernatun #гость" [ref=f2e565]':
+                    - generic [ref=f2e566]:
+                      - generic [ref=f2e567]: Guest night · карусель Vernatun
+                      - generic [ref=f2e568]: "#гость"
+                  - cell "Карусель" [ref=f2e569]
+                  - cell "Instagram Сайт" [ref=f2e570]:
+                    - generic [ref=f2e571]:
+                      - generic [ref=f2e572]: Instagram
+                      - generic [ref=f2e573]: Сайт
+                  - cell "28.4K" [ref=f2e574]
+                  - cell "6.8%" [ref=f2e575]
+                  - cell "4.9%" [ref=f2e576]
+                  - cell "В эфире" [ref=f2e577]
+                - row [ref=f2e579]:
+                  - 'cell "Сленг зала · avatar #сленг" [ref=f2e580]':
+                    - generic [ref=f2e581]:
+                      - generic [ref=f2e582]: Сленг зала · avatar
+                      - generic [ref=f2e583]: "#сленг"
+                  - cell "HeyGen" [ref=f2e584]
+                  - cell "Instagram TikTok" [ref=f2e585]:
+                    - generic [ref=f2e586]:
+                      - generic [ref=f2e587]: Instagram
+                      - generic [ref=f2e588]: TikTok
+                  - cell "51.2K" [ref=f2e589]
+                  - cell "8.1%" [ref=f2e590]
+                  - cell "5.4%" [ref=f2e591]
+                  - cell "Оптимизация" [ref=f2e592]
+                - row [ref=f2e594]:
+                  - 'cell "Мем-очередь · 2D #юмор" [ref=f2e595]':
+                    - generic [ref=f2e596]:
+                      - generic [ref=f2e597]: Мем-очередь · 2D
+                      - generic [ref=f2e598]: "#юмор"
+                  - cell "Мульт" [ref=f2e599]
+                  - cell "YouTube Shorts" [ref=f2e600]
+                  - cell "12.0K" [ref=f2e603]
+                  - cell "5.2%" [ref=f2e604]
+                  - cell "2.1%" [ref=f2e605]
+                  - cell "Мутация" [ref=f2e606]
+  - button "Open Next.js Dev Tools" [ref=f2e232] [cursor=pointer]
+  - alert [ref=f2e236]
+  - generic [aria-hidden] [ref=f2e608]: 0%

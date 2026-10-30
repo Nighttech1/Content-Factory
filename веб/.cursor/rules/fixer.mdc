@@ -1,0 +1,14 @@
+---
+description: Фиксер — корневая причина по стектрейсу, откат к before_sha при порче данных.
+globs: "*"
+alwaysApply: false
+---
+
+# РОЛЬ: ФИКСЕР
+
+Skill-first: `.cursor/skills/fixer/SKILL.md` + `runbook.md`. Плагины `plugins/fixer/`.
+Промпт / parse LLM / tools: `.cursor/skills/prompt-engineering/SKILL.md`.
+
+Не меняй архитектуру вне chain. Не ослабляй тесты.
+
+`🔧 **ФИКСЕР:** [что падало → причина → фикс]`

@@ -1,0 +1,49 @@
+{
+  "project": "vernatun",
+  "content_id": "language-diaspora-kids-armenian",
+  "contentType": "carousel",
+  "requested_slide_count": 3,
+  "idea": "Дети диаспоры в субботней школе: стыд перед звуком армянского vs гордость за наследие — живой конфликт языка",
+  "hook": "Буква дышит?",
+  "tone": "vernatun",
+  "cta_type": 1,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Буква дышит?",
+      "secondary_copy": "",
+      "swipe_trigger": "META: paradox — звук языка как живой организм, а не мёртвый предмет в классе",
+      "visual_prompt": "dark_editorial B/W grain photo: child hand on desk, Cyrillic-Armenian letter block (Mashtots alphabet) soft focus, warm amber side-light on letter edge, no purple grade, cinematic title-safe top",
+      "alt_text": "Рука ребёнка на букве армянского алфавита"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "point",
+      "primary_copy": "Стыд звука — до первого слова",
+      "secondary_copy": "В субботней школе дети боятся произнести «հայերեն» с акцентом. Но молчание — тоже выбор.",
+      "swipe_trigger": "META: tension beat — зритель листает за разрешением конфликта стыда",
+      "visual_prompt": "dark_editorial classroom telemetry soft gold arcs over desaturated photo, speech bubble outline (empty), bridge light streak continuing from letter edge, charcoal depth, no stock classroom poster",
+      "alt_text": "Пустой речевой пузырь в классе"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta",
+      "primary_copy": "Ошибка = звук жизни",
+      "secondary_copy": "Напиши в комментариях: первое слово по-армянски, которое ты услышал от бабушки.",
+      "swipe_trigger": "META: soft end — comments CTA; зритель делится личной памятью о языке",
+      "visual_prompt": "dark_editorial gold CTA comment icon solid, photo still blurred behind, Vernatun mark bottom-left, premium editorial frame not purple CTA pill, warm accent only",
+      "alt_text": "CTA комментарии — первое слово армянского",
+      "cta_type": 1
+    }
+  ],
+  "caption": "Диаспора говорит. Субботняя школа. Буква дышит. Vernatun.",
+  "hashtags": [
+    "#Vernatun",
+    "#АрмянскийЯзык",
+    "#Диаспора",
+    "#Маштоц",
+    "#Наследие"
+  ],
+  "promptForDesigner": "dark_editorial: Mashtots letter + classroom + gold comment CTA; HTML/CSS-first 3×4:5; ignore swipe_trigger; warm amber only, no purple"
+}

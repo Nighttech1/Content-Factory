@@ -1,0 +1,341 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e2]:
+    - complementary "Главная навигация" [ref=f8e3]:
+      - generic [ref=f8e11]:
+        - generic [ref=f8e12]: VERN·ATUN
+        - generic [ref=f8e13]: Content Factory
+      - generic [ref=f8e14]:
+        - paragraph [ref=f8e15]: Пайплайны и ноды
+        - navigation [ref=f8e16]:
+          - generic [ref=f8e17]:
+            - generic [ref=f8e18]:
+              - link "Студия" [ref=f8e19] [cursor=pointer]:
+                - /url: /studio
+              - button "Свернуть модули Студии" [expanded] [ref=f8e26]
+            - list [ref=f8e30]:
+              - listitem [ref=f8e31]:
+                - link "Карусели Instagram (4:5)" [ref=f8e32] [cursor=pointer]:
+                  - /url: /studio/carousel-engine
+              - listitem [ref=f8e33]:
+                - link "Полезные картинки & Инфографика" [ref=f8e34] [cursor=pointer]:
+                  - /url: /studio/aesthetic-graphics
+              - listitem [ref=f8e35]:
+                - link "Мульт-Reels (2D сторителлинг)" [ref=f8e36] [cursor=pointer]:
+                  - /url: /studio/cartoon-reels
+              - listitem [ref=f8e37]:
+                - link "HeyGen AI-Аватар Reels" [ref=f8e38] [cursor=pointer]:
+                  - /url: /studio/heygen-reels
+              - listitem [ref=f8e176]:
+                - link "Рилс" [ref=f8e177] [cursor=pointer]:
+                  - /url: /studio/custom-reels
+              - listitem [ref=f8e178]:
+                - link "Нарезки с видео в рилсы" [ref=f8e179] [cursor=pointer]:
+                  - /url: /studio/custom-clips-to-reels
+              - listitem [ref=f8e180]:
+                - link "Информационное видео" [ref=f8e181] [cursor=pointer]:
+                  - /url: /studio/custom-info-video
+          - link "Холст" [ref=f8e40] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f8e48] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f8e53] [cursor=pointer]:
+            - /url: /analytics
+          - link "Бренд-кит" [ref=f8e61] [cursor=pointer]:
+            - /url: /brand-kit
+          - link "Настройки" [ref=f8e70] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f8e75]:
+        - paragraph [ref=f8e76]: Բարև · Vernatun
+        - generic [ref=f8e77]:
+          - paragraph [ref=f8e78]: Роль QA (локально)
+          - generic [ref=f8e79]:
+            - button "OWNER" [ref=f8e80]
+            - button "ADMIN" [ref=f8e81]
+    - main [ref=f8e83]:
+      - generic [ref=f8e84]:
+        - generic [ref=f8e85]:
+          - paragraph [ref=f8e86]: // Рабочая страница модуля
+          - heading "Карусели Instagram (4:5)" [level=1] [ref=f8e87]
+          - paragraph [ref=f8e88]: Редакционная карусель 1080×1350 с типографикой и CTA-слайдом.
+        - generic [ref=f8e89]:
+          - generic [ref=f8e182]: Демо-данные
+          - generic [ref=f8e90]:
+            - generic [ref=f8e91]:
+              - generic [ref=f8e92]:
+                - generic [ref=f8e93]:
+                  - heading "Наши" [level=2] [ref=f8e95]
+                  - generic [ref=f8e96]: "12"
+                - tablist "Вкладки нашей ленты" [ref=f8e98]:
+                  - tab "Опубликовано" [selected] [ref=f8e99]
+                  - tab "Черновики" [ref=f8e101]
+              - generic [ref=f8e102]:
+                - article [ref=f8e185]:
+                  - generic [ref=f8e186]: Наши
+                  - generic [ref=f8e188]:
+                    - heading "Armenian Club — 5 tips for guest night" [level=3] [ref=f8e190]
+                    - generic [ref=f8e191]:
+                      - generic "Просмотры" [ref=f8e192]: 19K просмотры
+                      - generic "Лайки" [ref=f8e193]: 1.2K лайки
+                      - generic "Комментарии" [ref=f8e194]: 48 комм.
+                      - generic "Репосты" [ref=f8e195]: 53 репосты
+                - article [ref=f8e196]:
+                  - generic [ref=f8e197]: Наши
+                  - generic [ref=f8e199]:
+                    - 'heading "Carousel: menu highlights this week" [level=3] [ref=f8e201]'
+                    - generic [ref=f8e202]:
+                      - generic "Просмотры" [ref=f8e203]: 14K просмотры
+                      - generic "Лайки" [ref=f8e204]: 890 лайки
+                      - generic "Комментарии" [ref=f8e205]: 31 комм.
+                      - generic "Репосты" [ref=f8e206]: 37 репосты
+                - article [ref=f8e207]:
+                  - generic [ref=f8e208]: Наши
+                  - generic [ref=f8e210]:
+                    - heading "Behind the bar — signature cocktails" [level=3] [ref=f8e212]
+                    - generic [ref=f8e213]:
+                      - generic "Просмотры" [ref=f8e214]: 28K просмотры
+                      - generic "Лайки" [ref=f8e215]: 2.1K лайки
+                      - generic "Комментарии" [ref=f8e216]: 72 комм.
+                      - generic "Репосты" [ref=f8e217]: 88 репосты
+                - article [ref=f8e218]:
+                  - generic [ref=f8e219]: Наши
+                  - generic [ref=f8e221]:
+                    - 'heading "Wine flight: three Armenian reds" [level=3] [ref=f8e223]'
+                    - generic [ref=f8e224]:
+                      - generic "Просмотры" [ref=f8e225]: 22K просмотры
+                      - generic "Лайки" [ref=f8e226]: 1.6K лайки
+                      - generic "Комментарии" [ref=f8e227]: 44 комм.
+                      - generic "Репосты" [ref=f8e228]: 63 репосты
+                - article [ref=f8e229]:
+                  - generic [ref=f8e230]: Наши
+                  - generic [ref=f8e232]:
+                    - heading "Table styling for Saturday dinner" [level=3] [ref=f8e234]
+                    - generic [ref=f8e235]:
+                      - generic "Просмотры" [ref=f8e236]: 15K просмотры
+                      - generic "Лайки" [ref=f8e237]: 980 лайки
+                      - generic "Комментарии" [ref=f8e238]: 29 комм.
+                      - generic "Репосты" [ref=f8e239]: 40 репосты
+                - article [ref=f8e240]:
+                  - generic [ref=f8e241]: Наши
+                  - generic [ref=f8e243]:
+                    - heading "Chef specials — autumn mezze board" [level=3] [ref=f8e245]
+                    - generic [ref=f8e246]:
+                      - generic "Просмотры" [ref=f8e247]: 27K просмотры
+                      - generic "Лайки" [ref=f8e248]: 1.8K лайки
+                      - generic "Комментарии" [ref=f8e249]: 61 комм.
+                      - generic "Репосты" [ref=f8e250]: 75 репосты
+                - article [ref=f8e251]:
+                  - generic [ref=f8e252]: Наши
+                  - generic [ref=f8e254]:
+                    - heading "Live music night lineup teaser" [level=3] [ref=f8e256]
+                    - generic [ref=f8e257]:
+                      - generic "Просмотры" [ref=f8e258]: 41K просмотры
+                      - generic "Лайки" [ref=f8e259]: 2.3K лайки
+                      - generic "Комментарии" [ref=f8e260]: 88 комм.
+                      - generic "Репосты" [ref=f8e261]: 100 репосты
+                - article [ref=f8e262]:
+                  - generic [ref=f8e263]: Наши
+                  - generic [ref=f8e265]:
+                    - heading "Private dining room walkthrough" [level=3] [ref=f8e267]
+                    - generic [ref=f8e268]:
+                      - generic "Просмотры" [ref=f8e269]: 19K просмотры
+                      - generic "Лайки" [ref=f8e270]: 1.1K лайки
+                      - generic "Комментарии" [ref=f8e271]: 35 комм.
+                      - generic "Репосты" [ref=f8e272]: 46 репосты
+                - article [ref=f8e273]:
+                  - generic [ref=f8e274]: Наши
+                  - generic [ref=f8e276]:
+                    - heading "Coffee & baklava afternoon set" [level=3] [ref=f8e278]
+                    - generic [ref=f8e279]:
+                      - generic "Просмотры" [ref=f8e280]: 12K просмотры
+                      - generic "Лайки" [ref=f8e281]: 760 лайки
+                      - generic "Комментарии" [ref=f8e282]: 22 комм.
+                      - generic "Репосты" [ref=f8e283]: 31 репосты
+                - article [ref=f8e284]:
+                  - generic [ref=f8e285]: Наши
+                  - generic [ref=f8e287]:
+                    - heading "DJ warm-up playlist carousel" [level=3] [ref=f8e289]
+                    - generic [ref=f8e290]:
+                      - generic "Просмотры" [ref=f8e291]: 34K просмотры
+                      - generic "Лайки" [ref=f8e292]: 1.9K лайки
+                      - generic "Комментарии" [ref=f8e293]: 70 комм.
+                      - generic "Репосты" [ref=f8e294]: 80 репосты
+                - article [ref=f8e295]:
+                  - generic [ref=f8e296]: Наши
+                  - generic [ref=f8e298]:
+                    - heading "How we plate lavash wraps" [level=3] [ref=f8e300]
+                    - generic [ref=f8e301]:
+                      - generic "Просмотры" [ref=f8e302]: 20K просмотры
+                      - generic "Лайки" [ref=f8e303]: 1.3K лайки
+                      - generic "Комментарии" [ref=f8e304]: 41 комм.
+                      - generic "Репосты" [ref=f8e305]: 55 репосты
+                - article [ref=f8e306]:
+                  - generic [ref=f8e307]: Наши
+                  - generic [ref=f8e309]:
+                    - heading "Weekend brunch reservation reminder" [level=3] [ref=f8e311]
+                    - generic [ref=f8e312]:
+                      - generic "Просмотры" [ref=f8e313]: 15K просмотры
+                      - generic "Лайки" [ref=f8e314]: 920 лайки
+                      - generic "Комментарии" [ref=f8e315]: 27 комм.
+                      - generic "Репосты" [ref=f8e316]: 38 репосты
+            - generic [ref=f8e112]:
+              - generic [ref=f8e113]:
+                - generic [ref=f8e114]:
+                  - heading "Конкуренты" [level=2] [ref=f8e116]
+                  - generic [ref=f8e117]: "12"
+                - searchbox "Поиск каруселей конкурентов" [ref=f8e123]
+              - generic [ref=f8e124]:
+                - article [ref=f8e317]:
+                  - generic [ref=f8e318]: Конкуренты
+                  - generic [ref=f8e320]:
+                    - 'heading "Competitor: rooftop guest night invite" [level=3] [ref=f8e322]'
+                    - generic [ref=f8e323]:
+                      - generic "Просмотры" [ref=f8e324]: 52K просмотры
+                      - generic "Лайки" [ref=f8e325]: 3.4K лайки
+                      - generic "Комментарии" [ref=f8e326]: 110 комм.
+                      - generic "Репосты" [ref=f8e327]: 141 репосты
+                    - button "Разбор" [ref=f8e328]
+                - article [ref=f8e329]:
+                  - generic [ref=f8e330]: Конкуренты
+                  - generic [ref=f8e332]:
+                    - heading "Food carousel — seasonal menu drop" [level=3] [ref=f8e334]
+                    - generic [ref=f8e335]:
+                      - generic "Просмотры" [ref=f8e336]: 31K просмотры
+                      - generic "Лайки" [ref=f8e337]: 1.8K лайки
+                      - generic "Комментарии" [ref=f8e338]: 64 комм.
+                      - generic "Репосты" [ref=f8e339]: 76 репосты
+                    - button "Разбор" [ref=f8e340]
+                - article [ref=f8e341]:
+                  - generic [ref=f8e342]: Конкуренты
+                  - generic [ref=f8e344]:
+                    - heading "Cocktail flight education series" [level=3] [ref=f8e346]
+                    - generic [ref=f8e347]:
+                      - generic "Просмотры" [ref=f8e348]: 16K просмотры
+                      - generic "Лайки" [ref=f8e349]: 960 лайки
+                      - generic "Комментарии" [ref=f8e350]: 22 комм.
+                      - generic "Репосты" [ref=f8e351]: 38 репосты
+                    - button "Разбор" [ref=f8e352]
+                - article [ref=f8e353]:
+                  - generic [ref=f8e354]: Конкуренты
+                  - generic [ref=f8e356]:
+                    - heading "Wedding venue walkthrough slides" [level=3] [ref=f8e358]
+                    - generic [ref=f8e359]:
+                      - generic "Просмотры" [ref=f8e360]: 68K просмотры
+                      - generic "Лайки" [ref=f8e361]: 4.2K лайки
+                      - generic "Комментарии" [ref=f8e362]: 95 комм.
+                      - generic "Репосты" [ref=f8e363]: 166 репосты
+                    - button "Разбор" [ref=f8e364]
+                - article [ref=f8e365]:
+                  - generic [ref=f8e366]: Конкуренты
+                  - generic [ref=f8e368]:
+                    - heading "DJ night hype carousel" [level=3] [ref=f8e370]
+                    - generic [ref=f8e371]:
+                      - generic "Просмотры" [ref=f8e372]: 41K просмотры
+                      - generic "Лайки" [ref=f8e373]: 2.7K лайки
+                      - generic "Комментарии" [ref=f8e374]: 88 комм.
+                      - generic "Репосты" [ref=f8e375]: 112 репосты
+                    - button "Разбор" [ref=f8e376]
+                - article [ref=f8e377]:
+                  - generic [ref=f8e378]: Конкуренты
+                  - generic [ref=f8e380]:
+                    - heading "Brunch reservation story pack" [level=3] [ref=f8e382]
+                    - generic [ref=f8e383]:
+                      - generic "Просмотры" [ref=f8e384]: 36K просмотры
+                      - generic "Лайки" [ref=f8e385]: 2.1K лайки
+                      - generic "Комментарии" [ref=f8e386]: 71 комм.
+                      - generic "Репосты" [ref=f8e387]: 88 репосты
+                    - button "Разбор" [ref=f8e388]
+                - article [ref=f8e389]:
+                  - generic [ref=f8e390]: Конкуренты
+                  - generic [ref=f8e392]:
+                    - heading "Heritage month bilingual graphics" [level=3] [ref=f8e394]
+                    - generic [ref=f8e395]:
+                      - generic "Просмотры" [ref=f8e396]: 30K просмотры
+                      - generic "Лайки" [ref=f8e397]: 1.9K лайки
+                      - generic "Комментарии" [ref=f8e398]: 58 комм.
+                      - generic "Репосты" [ref=f8e399]: 78 репосты
+                    - button "Разбор" [ref=f8e400]
+                - article [ref=f8e401]:
+                  - generic [ref=f8e402]: Конкуренты
+                  - generic [ref=f8e404]:
+                    - heading "Pomegranate cocktail tutorial" [level=3] [ref=f8e406]
+                    - generic [ref=f8e407]:
+                      - generic "Просмотры" [ref=f8e408]: 24K просмотры
+                      - generic "Лайки" [ref=f8e409]: 1.5K лайки
+                      - generic "Комментарии" [ref=f8e410]: 49 комм.
+                      - generic "Репосты" [ref=f8e411]: 62 репосты
+                    - button "Разбор" [ref=f8e412]
+                - article [ref=f8e413]:
+                  - generic [ref=f8e414]: Конкуренты
+                  - generic [ref=f8e416]:
+                    - heading "Private dining upsell carousel" [level=3] [ref=f8e418]
+                    - generic [ref=f8e419]:
+                      - generic "Просмотры" [ref=f8e420]: 20K просмотры
+                      - generic "Лайки" [ref=f8e421]: 1.3K лайки
+                      - generic "Комментарии" [ref=f8e422]: 36 комм.
+                      - generic "Репосты" [ref=f8e423]: 52 репосты
+                    - button "Разбор" [ref=f8e424]
+                - article [ref=f8e425]:
+                  - generic [ref=f8e426]: Конкуренты
+                  - generic [ref=f8e428]:
+                    - heading "Autumn mezze board competitor take" [level=3] [ref=f8e430]
+                    - generic [ref=f8e431]:
+                      - generic "Просмотры" [ref=f8e432]: 28K просмотры
+                      - generic "Лайки" [ref=f8e433]: 1.8K лайки
+                      - generic "Комментарии" [ref=f8e434]: 62 комм.
+                      - generic "Репосты" [ref=f8e435]: 74 репосты
+                    - button "Разбор" [ref=f8e436]
+                - article [ref=f8e437]:
+                  - generic [ref=f8e438]: Конкуренты
+                  - generic [ref=f8e440]:
+                    - heading "Live jazz night promo slides" [level=3] [ref=f8e442]
+                    - generic [ref=f8e443]:
+                      - generic "Просмотры" [ref=f8e444]: 39K просмотры
+                      - generic "Лайки" [ref=f8e445]: 2.3K лайки
+                      - generic "Комментарии" [ref=f8e446]: 80 комм.
+                      - generic "Репосты" [ref=f8e447]: 97 репосты
+                    - button "Разбор" [ref=f8e448]
+                - article [ref=f8e449]:
+                  - generic [ref=f8e450]: Конкуренты
+                  - generic [ref=f8e452]:
+                    - heading "Baklava & coffee afternoon set" [level=3] [ref=f8e454]
+                    - generic [ref=f8e455]:
+                      - generic "Просмотры" [ref=f8e456]: 14K просмотры
+                      - generic "Лайки" [ref=f8e457]: 880 лайки
+                      - generic "Комментарии" [ref=f8e458]: 24 комм.
+                      - generic "Репосты" [ref=f8e459]: 36 репосты
+                    - button "Разбор" [ref=f8e460]
+      - button "Закрыть панель генерации"
+      - complementary [aria-hidden] [ref=f8e134]:
+        - generic [ref=f8e135]:
+          - generic [ref=f8e136]:
+            - paragraph [ref=f8e137]: Журнал генерации
+            - heading [level=2] [ref=f8e138]: Конвейер агентов
+          - button [ref=f8e139]: Закрыть
+        - generic [ref=f8e140]:
+          - generic [ref=f8e141]:
+            - generic [ref=f8e142]: Прогресс
+            - generic [ref=f8e143]: 0%
+          - progressbar [ref=f8e144]
+        - list [ref=f8e145]:
+          - listitem [ref=f8e146]:
+            - generic [ref=f8e149]:
+              - generic [ref=f8e150]: Исследователь
+              - generic [ref=f8e151]: Ожидание...
+          - listitem [ref=f8e152]:
+            - generic [ref=f8e155]:
+              - generic [ref=f8e156]: Автор хуков
+              - generic [ref=f8e157]: Ожидание...
+          - listitem [ref=f8e158]:
+            - generic [ref=f8e161]:
+              - generic [ref=f8e162]: Сценарист
+              - generic [ref=f8e163]: Ожидание...
+          - listitem [ref=f8e164]:
+            - generic [ref=f8e167]:
+              - generic [ref=f8e168]: Дизайнер
+              - generic [ref=f8e169]: Ожидание...
+          - listitem [ref=f8e170]:
+            - generic [ref=f8e173]:
+              - generic [ref=f8e174]: Конвейер
+              - generic [ref=f8e175]: Ожидание...
+  - button "Open Next.js Dev Tools" [ref=f8e466] [cursor=pointer]
+  - alert [ref=f8e470]

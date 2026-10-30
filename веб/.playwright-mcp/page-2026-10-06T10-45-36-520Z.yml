@@ -1,0 +1,113 @@
+- generic [active] [ref=f11e1]:
+  - generic [ref=f11e2]:
+    - complementary "Главная навигация" [ref=f11e3]:
+      - generic [ref=f11e11]:
+        - generic [ref=f11e12]: VERN·ATUN
+        - generic [ref=f11e13]: Content Factory
+      - generic [ref=f11e14]:
+        - paragraph [ref=f11e15]: Пайплайны и ноды
+        - navigation [ref=f11e16]:
+          - generic [ref=f11e17]:
+            - generic [ref=f11e18]:
+              - link "Студия" [ref=f11e19] [cursor=pointer]:
+                - /url: /studio
+              - button "Свернуть модули Студии" [expanded] [ref=f11e26]
+            - list [ref=f11e30]:
+              - listitem [ref=f11e31]:
+                - link "Карусели Instagram (4:5)" [ref=f11e32] [cursor=pointer]:
+                  - /url: /studio/carousel-engine
+              - listitem [ref=f11e33]:
+                - link "Полезные картинки & Инфографика" [ref=f11e34] [cursor=pointer]:
+                  - /url: /studio/aesthetic-graphics
+              - listitem [ref=f11e35]:
+                - link "Мульт-Reels (2D сторителлинг)" [ref=f11e36] [cursor=pointer]:
+                  - /url: /studio/cartoon-reels
+              - listitem [ref=f11e37]:
+                - link "HeyGen AI-Аватар Reels" [ref=f11e38] [cursor=pointer]:
+                  - /url: /studio/heygen-reels
+              - listitem [ref=f11e164]:
+                - link "Рилс" [ref=f11e165] [cursor=pointer]:
+                  - /url: /studio/custom-reels
+              - listitem [ref=f11e166]:
+                - link "Нарезки с видео в рилсы" [ref=f11e167] [cursor=pointer]:
+                  - /url: /studio/custom-clips-to-reels
+              - listitem [ref=f11e168]:
+                - link "Информационное видео" [ref=f11e169] [cursor=pointer]:
+                  - /url: /studio/custom-info-video
+          - link "Холст" [ref=f11e40] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f11e48] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f11e53] [cursor=pointer]:
+            - /url: /analytics
+          - link "Бренд-кит" [ref=f11e61] [cursor=pointer]:
+            - /url: /brand-kit
+          - link "Настройки" [ref=f11e70] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f11e75]:
+        - paragraph [ref=f11e76]: Բարև · Vernatun
+        - generic [ref=f11e77]:
+          - paragraph [ref=f11e78]: Роль QA (локально)
+          - generic [ref=f11e79]:
+            - button "OWNER" [ref=f11e80]
+            - button "ADMIN" [ref=f11e81]
+    - main [ref=f11e83]:
+      - generic [ref=f11e84]:
+        - generic [ref=f11e85]:
+          - paragraph [ref=f11e86]: // Рабочая страница модуля
+          - heading "Нарезки с видео в рилсы" [level=1] [ref=f11e170]
+          - paragraph [ref=f11e88]: Custom worker · http://127.0.0.1:9/no-worker
+        - generic [ref=f11e89]:
+          - generic [ref=f11e171]: Демо-данные
+          - generic [ref=f11e90]:
+            - generic [ref=f11e91]:
+              - generic [ref=f11e92]:
+                - generic [ref=f11e93]:
+                  - heading "Наши" [level=2] [ref=f11e95]
+                  - generic [ref=f11e96]: "0"
+                - tablist "Вкладки нашей ленты" [ref=f11e98]:
+                  - tab "Опубликовано" [selected] [ref=f11e99]
+                  - tab "Черновики" [ref=f11e101]
+              - paragraph [ref=f11e174]: Пока нет наших постов
+            - generic [ref=f11e106]:
+              - generic [ref=f11e107]:
+                - generic [ref=f11e108]:
+                  - heading "Конкуренты" [level=2] [ref=f11e110]
+                  - generic [ref=f11e111]: "0"
+                - searchbox "Поиск каруселей конкурентов" [ref=f11e117]
+              - paragraph [ref=f11e186]: Пока нет каруселей ниши
+      - button "Закрыть панель генерации"
+      - complementary [aria-hidden] [ref=f11e122]:
+        - generic [ref=f11e123]:
+          - generic [ref=f11e124]:
+            - paragraph [ref=f11e125]: Журнал генерации
+            - heading [level=2] [ref=f11e126]: Конвейер агентов
+          - button [ref=f11e127]: Закрыть
+        - generic [ref=f11e128]:
+          - generic [ref=f11e129]:
+            - generic [ref=f11e130]: Прогресс
+            - generic [ref=f11e131]: 0%
+          - progressbar [ref=f11e132]
+        - list [ref=f11e133]:
+          - listitem [ref=f11e134]:
+            - generic [ref=f11e137]:
+              - generic [ref=f11e138]: Исследователь
+              - generic [ref=f11e139]: Ожидание...
+          - listitem [ref=f11e140]:
+            - generic [ref=f11e143]:
+              - generic [ref=f11e144]: Автор хуков
+              - generic [ref=f11e145]: Ожидание...
+          - listitem [ref=f11e146]:
+            - generic [ref=f11e149]:
+              - generic [ref=f11e150]: Сценарист
+              - generic [ref=f11e151]: Ожидание...
+          - listitem [ref=f11e152]:
+            - generic [ref=f11e155]:
+              - generic [ref=f11e156]: Дизайнер
+              - generic [ref=f11e157]: Ожидание...
+          - listitem [ref=f11e158]:
+            - generic [ref=f11e161]:
+              - generic [ref=f11e162]: Конвейер
+              - generic [ref=f11e163]: Ожидание...
+  - button "Open Next.js Dev Tools" [ref=f11e181] [cursor=pointer]
+  - alert [ref=f11e185]

@@ -1,0 +1,117 @@
+# Vernatun Carousel — правила разработки модулей (Framework B)
+
+**Активный план:** `tasks/DEV_PLAN.md` (B0–B8)  
+**Архитектура:** `tasks/ARCHITECTURE.md`  
+**Архив A:** `tasks/DEV_PLAN_A_CLOSED.md`
+
+Тренер → команда → Оркестратор.  
+Перед live: `npm run test:vernatun`.
+
+---
+
+## КЛИЕНТ (платит деньги) — HARD RULES
+
+1. Успех = только **крутой FINAL**. Полуфабрикаты **НЕ согласовывать**.  
+2. Тикет/волну **не закрывать**, пока генератор не даёт вау-карусель.  
+3. Клиент = супер-арт-директор: жёсткие замечания, без поблажек.  
+4. Тренер после каждого демо читает findings → **усиливает** промпты/скиллы/gates команды.
+
+---
+
+## DEV BUDGET (на время разработки) — HARD
+
+1. **Один ход агента = максимум 1 генерация карусели** (не dual, не 2×N smoke).  
+2. **Repair по умолчанию = 0** (`CAROUSEL_MAX_REPAIR`, default 0). Сначала AD пишет вердикт → команда чинит код/промпты → потом снова 1 генерация.  
+3. Прод: явно `CAROUSEL_MAX_REPAIR=2` если нужны авто-перерисовки.  
+4. **Арт-директор ВСЕГДА пишет лог** в `prompts/AD_VERDICT.md` + `AD_FINDINGS.json` (`APPROVED` | `REMARKS`). Без этого лога фикс «вслепую» запрещён.  
+5. Команда **перед следующим фиксом** открывает `AD_VERDICT.md` и разбирает каждый major/blocker — не повторять одни и те же ошибки.
+
+---
+
+## Решения продукта (B-only, 2026-10-23)
+
+| Тема | Решение |
+|------|---------|
+| Пайплайн | **Только Framework B** (цельный AI-слайд). Mode A — legacy. |
+| Мозг | `google/gemini-3.8-flash` + маски в одном JobLlmSession |
+| Картинки | Primary `openai/gpt-5.4-image-2`; fallback mini → yandex. Logo = `logo_bake`. |
+| Анти-болото сценария | Mid = практический шаг + именнованный ориентир. ИП/налоги ок если полезны + next step; режем только воду. AD major `swamp_copy`. |
+| N слайдов | Выбирает **AD на этапе сценария** (`slide_count` 4–8). Демо может FORCE N. |
+| Цвета | **Только hex** из Design MD / preset |
+| Логотип | Bake **TOP-RIGHT**. Промпт: точные px зоны (x=852..1052, y=28..264 на 1080×1350) — **текст не заезжает**; **не обозначать** зону линией/пунктиром; **не рисовать** лого (вставит post-pass). |
+| Словарь HY | GPT **не** рисует HY и **не рисует маркер/пунктир** на картинке (B4.7, default). AD смотрит готовый кадр → **vocab-guide-vision** ставит oval HY—RU pill на чистое место → **без стирания** (нет следов на текстуре). Legacy пунктир VOCAB_SLOT только при `CAROUSEL_VOCAB_DRAW_SLOT=1` (CYAN #00E8FF): bake = геометрия → tight wipe (dilate 6 / R 6, не смазывать фон) → pill. Стрелка BR: **реф2 swoosh** (`brand/arrow-swoosh-ref2.png`, white alpha), силуэт → плоский **Ч/Б по фону** + ореол, **фикс** место (margin 72), подъём только при наезде текстовой/цветной плашки, **нет на последнем слайде**. |
+| Смысл сценария | **Две маски:** сценарист ↔ AD сценария до APPROVED. **Словарь HARD:** 1 HY—RU/слайд в `supporting_copy`; слово **по теме слайда**; headline/body/cta без HY. |
+| Серия style | Vocab chip LOCK. **ATMOSPHERE:** photoreal full-bleed на КАЖДОМ слайде (запрет сплошного чёрного/белого). **List-rows условно:** только если body = 2+ пунктов; иначе poster без фейкового checklist. |
+| FACT_CHECK | Колонка Sheet `facts` / `Проверка достоверности фактов` / `фактс`: `1` → Research+Fact-Checker; `0`/пусто → STANDARD (маски не вызывать). LLM флаг не переопределяет. Лог: `01_factcheck_pipeline.json`. |
+| Приёмка картинок | После APPROVED: YandexART → logo_bake → layout-QA → AD final → замечания сборщику. |
+| CTA | 4 типа в `cta-catalog.ts`; Sheet позже; сейчас default `speaking_meetup`. |
+| Заголовки | Только **русский**; **без** армянского в headline; **без** декоративных «кавычек» на кадре. |
+| Пагинация | **All-or-none:** на всех слайдах одинаково `k/N` ИЛИ нигде. Mode B prompt = по умолчанию **без** счётчика. AD major при смеси. |
+| Размер кадра | API + промпт: **1080×1350 (4:5)**. Запрет 9:16 Stories. Fallback size `1024x1280` (тот же 4:5). Страховка: `normalizeSlideToFrame` contain. Лого = post-pass `logo_bake` TOP-RIGHT. |
+| Safe zone (1080×1350) | Координаты **в промпте ЕСТЬ** (чтобы текст не заезжал), но модель **запрещено** рисовать саму зону (никаких рамок/пунктира вокруг лого-air). Edge ≥48px. |
+| User-фото | 0…N must-use; preserve; исходники immutable |
+| UI | Один чат Арт-директор; без тумблера A/B (волна B6) |
+| Тесты | `npm run test:vernatun` |
+| B4 Armenian | Канон HY в сценарии; image-prompt: ONLY quoted + letter-by-letter; AD major `hy_spelling` → regen. Smoke: `npx tsx scripts/smoke-vernatun-b4-hy.ts` |
+
+---
+
+## ОБЯЗАТЕЛЬНЫЙ ЛОГ разработки карусели (модульное правило)
+
+На каждый `jobId` в `generatedMedia/vernatun-jobs/<jobId>/prompts/`:
+
+| Файл | Содержание |
+|------|------------|
+| `00_brief.md` | Тема, N hint/force, refs |
+| `01_script_system.md` + `01_script_user.md` + `01_script_out.json` | Что получила/отдала текстовая LLM (сценарий) |
+| `02_image_plan.json` | План слотов + user/logo refs |
+| `slide_NN_image_prompt.md` | **Точный** промпт в GPT Image |
+| `slide_NN_refs.json` | Пути logo + user photo |
+| `AD_FINDINGS.json` | Машинный лог AD (verdict + findings) — **обязателен** |
+| `AD_VERDICT.md` | Человеческий вердикт **APPROVED \| REMARKS** — **главный файл для команды разработки** |
+| `session-tools.jsonl` | Tool-вызовы |
+| `DEV_TRACE.md` | Сводка: маска → промпт → ответ → image prompt → findings |
+
+**Без этого лога FINAL запрещён** (Оркестратор/Клиент режут).  
+Лог нужен, чтобы Оркестратор/Тренер видели **где** сломалось: сценарий, image-prompt, refs или AD check.
+
+---
+
+## Контрольные точки генерации (не жечь API зря)
+
+1. После **B2** — smoke 1–2 слайда / 1 тест + 1 финиш волны  
+2. После **B4** — 1×N  
+3. После **B6** — 1×N из UI  
+4. **B8 DoD** — 2 карусели (с фото / без)
+
+---
+
+## Плагины Тренера
+
+- Волна B: усиливать native logo/photo + type_system + HY + viral CHECK по findings  
+- Не возвращать HTML Mode A как «фикс» продукта  
+- Checkpoint B0–B2: `plugins/trainer/vernatun-b0-b2-checkpoint.md` + `tasks/CLIENT_VERDICT_B0_B2.md`  
+- Checkpoint B1/B5: `plugins/trainer/vernatun-b1-b5-checkpoint.md` + `tasks/CLIENT_VERDICT_B1_B5.md`  
+  → major блокирует FINAL ✅  
+- Checkpoint B5.4 logo bake: `plugins/trainer/vernatun-b5-logo-bake-checkpoint.md` + `tasks/CLIENT_VERDICT_B5_LOGO_BAKE.md`  
+  → exact PNG composite (`logo-bake.ts`), не HTML chrome и не GPT redraw
+- Checkpoint two masks: `plugins/trainer/vernatun-two-masks-script.md` + `tasks/CLIENT_VERDICT_TWO_MASKS_HY4.md`  
+  → сценарист↔AD до APPROVED; 1 HY+перевод/слайд; единый vocab chip + medium серии
+- Anti-swamp + mini: `tasks/CLIENT_VERDICT_REMOTE_MINI_HY4.md` — сценарий с площадками ок; mini не тянет глифы
+- Soft польза + 5.4: `tasks/CLIENT_VERDICT_REMOTE_54_HY4.md` — почти; major guide_artifact на обложке
+- Rich layout: `tasks/CLIENT_VERDICT_REMOTE_RICH_LAYOUT.md` — mid lists ок; CTA slide dashed frame у лого
+- **2026-10-24 фикс скучных mid + logo marks:** `logoSafeZonePromptBlock` = unmarked LOGO AIR; Mode B ATMOSPHERE; scriptwriter `normalizeImageNeed` запрещает `none`/`graphic` → `photo_generic`. Smoke: `npx tsx scripts/smoke-vernatun-remote-comments-hy4.ts`
+- Alive job `3a6cda95`: logo+atmosphere ✅; клиент **НЕ принял** — mid slab + props «УСН 5%». См. `tasks/CLIENT_VERDICT_REMOTE_ALIVE_HY4.md`
+- **2026-10-25:** list-rows только где нужны; FACT_CHECK ветка (Research+Fact-Checker) по флагу `facts`. Smoke: `npx tsx scripts/smoke-vernatun-parcel-facts-hy4.ts` (sheet №44)
+- Job `fa9dd45c`: FACT_CHECK+lists+photo ✅; клиент **НЕ принял** — HY latin, logo_collision, type_system. `tasks/CLIENT_VERDICT_PARCEL_FACTS_HY4.md`
+- **B4.5 план:** logo air с px + HY HTML bake mid-slot. `tasks/ARCHITECT_VOCAB_HTML_BAKE.md`
+- Job `5b457d9a`: bake HY+logo ✅; клиент **НЕ принял** — остаточный пунктир. → FREE + detect.
+- Job `e57af33d`: FREE ✅, orange detect FAIL → REJECT.
+- VOCAB: геометрия → AD vision miss. Spec: `tasks/ARCHITECT_VOCAB_AD_VISION_FALLBACK.md`
+- Arrow BR: **curved swoosh** (реф), Ч/Б, наши размеры. Rebake: `npx tsx scripts/rebake-vocab-job.ts <jobId>`
+- **Клиент-приёмка HARD:** `plugins/trainer/vernatun-client-accept-scenarios.md` — сценарии кликов + хореография + naked-eye; без этого НЕ ПРИНЯТО.
+- Smoke FINAL transfers: `npx tsx scripts/smoke-vernatun-transfers-card-hy4.ts`
+- Job `a1f36616`: pipeline FINAL, **клиент НЕ ПРИНЯЛ** — wipe-пятна у pill + стрелка≠реф 1:1 + нет UI-сценариев. `tasks/CLIENT_VERDICT_TRANSFERS_CARD_HY4.md`
+- Тренер: всегда усиливать команду по findings; Оркестратор пишет **какой агент сейчас**.
+- Приёмка: `plugins/trainer/vernatun-client-accept-scenarios.md` (клики + хореография + naked-eye).
+- **2026-10-27 wipe_trace (HARD):** GPT часто заливает слот лёгкой **дымкой** (не cyan → dash-wipe её не берёт) → прямоугольный призрак вокруг плашки на гладком фоне. Фикс: directional-interp fill + **полная реконструкция слот-прямоугольника** на гладком фоне (guard по stddev<26; на текстуре — dash-only). Клиент/AD обязаны ловить `wipe_trace` **за пределами** плашки (зум). Радикальное решение: forward no-marker (default) — слот не рисуем, AD ставит плашку на чистый кадр.

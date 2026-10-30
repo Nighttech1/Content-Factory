@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-error-container":"#ffdad6","error-container":"#93000a","secondary-container":"#7e5700","secondary":"#f3be64","tertiary-fixed":"#cfe5ff","surface":"#111317","background":"#111317","on-background":"#e2e2e6","surface-container-high":"#282a2d","on-surface":"#e2e2e6","on-primary":"#561f00","primary":"#ffb694","surface-container-lowest":"#0c0e11","primary-fixed-dim":"#ffb694","tertiary-fixed-dim":"#9ecbfb","tertiary-container":"#6894c2","inverse-primary":"#9d430c","tertiary":"#9ecbfb","on-tertiary-fixed":"#001d34","secondary-fixed":"#ffdeac","surface-tint":"#ffb694","on-secondary-container":"#ffd28a","on-tertiary-container":"#002c4a","surface-container":"#1e2023","outline":"#a48c81","on-secondary-fixed-variant":"#604100","on-surface-variant":"#ddc1b5","surface-variant":"#333538","on-tertiary-fixed-variant":"#154a73","surface-bright":"#37393d","on-error":"#690005","on-secondary-fixed":"#281900","surface-dim":"#111317","on-tertiary":"#003355","outline-variant":"#56423a","surface-container-low":"#1a1c1f","secondary-fixed-dim":"#f3be64","on-secondary":"#432c00","on-primary-container":"#4c1a00","on-primary-fixed":"#351000","surface-container-highest":"#333538","inverse-on-surface":"#2f3034","primary-container":"#de733c","error":"#ffb4ab","primary-fixed":"#ffdbcc","on-primary-fixed-variant":"#7b2f00","inverse-surface":"#e2e2e6"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"0.75rem","space-sm":"0.5rem","space-md":"0.75rem","space-xs":"0.25rem","margin":"1.5rem","space-lg":"1.25rem","space-xl":"2rem","margin-mobile":"1rem","gutter":"1rem"},"fontFamily":{"label-md":["JetBrains Mono"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"code-sm":["JetBrains Mono"],"body-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["JetBrains Mono"],"body-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"code-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.025em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.40)]"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[22px]">token</span><span class="absolute -top-0.5 -right-0.5 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><div class="flex flex-col"><span class="font-headline-md text-label-md tracking-wider text-on-surface font-semibold">VERN·ATUN AI</span><span class="font-label-sm text-label-sm tracking-widest text-on-surface-variant">CONTENT FACTORY</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container border border-surface-bright"><span class="material-symbols-outlined text-tertiary text-[14px]">terminal</span><span class="font-label-sm text-label-sm text-tertiary font-medium">PRODUCTION MESH v2.4</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(194,94,40,0.30)]"><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="agent-mesh" href="#">Agent Mesh</a><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="studio-launchpad" href="#">Studio Launchpad</a><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="inspector-hitl" href="#">Inspector &amp; HITL</a><a aria-current="page" class="px-space-md py-space-xs transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(194,94,40,0.30)]" data-path="self-learning-engine" href="#">Self-Learning Engine</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden 2xl:flex items-center gap-space-md px-space-md py-space-xs rounded bg-surface-container-low border border-surface-container-high"><div class="flex items-center gap-space-xs"><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Workers:</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">4/8</span></div><div class="h-3 w-[1px] bg-surface-variant"></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">Latency:</span><span class="font-label-sm text-label-sm text-tertiary font-semibold">180ms</span></div><div class="h-3 w-[1px] bg-surface-variant"></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">GPU:</span><span class="font-label-sm text-label-sm text-secondary font-semibold">42%</span></div></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary transition-all font-body-sm text-body-sm font-semibold shadow-[0_0_12px_rgba(222,115,60,0.25)]" type="button"><span class="material-symbols-outlined text-[16px]">extension</span><span class="hidden sm:inline">+ New Module Plugin</span></button><a class="p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center justify-center" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span></a><div class="flex items-center gap-space-xs pl-space-xs"><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-1 ring-primary/40"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div><div class="hidden md:flex flex-col"><span class="font-label-sm text-[10px] uppercase font-semibold text-secondary-container bg-secondary-fixed/90 px-1 rounded">Superadmin</span></div></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md border-r border-surface-container"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/70">Pipelines &amp; Nodes</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="agent-mesh" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span>Node Canvas</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="studio-launchpad" href="#"><span class="material-symbols-outlined text-[18px]">rocket_launch</span><span>Production Portal</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="inspector-hitl" href="#"><span class="material-symbols-outlined text-[18px]">rule</span><span>HITL Studio</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-surface-container-high text-primary font-semibold rounded-lg" data-path="self-learning-engine" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span>Engine Analytics</span></a></nav><div class="mt-space-md px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/70">Cluster Telemetry</span></div><div class="flex flex-col gap-space-xs px-space-sm"><div class="flex justify-between items-center py-space-xs font-label-sm text-label-sm"><span class="text-on-surface-variant">Context Capacity</span><span class="text-secondary font-mono">78%</span></div><div class="w-full h-1 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-secondary w-[78%]"></div></div><div class="flex justify-between items-center py-space-xs font-label-sm text-label-sm"><span class="text-on-surface-variant">Throughput</span><span class="text-tertiary font-mono">1,240 t/s</span></div></div></div><div class="px-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Autonomous Run</span><span class="font-label-sm text-[10px] text-tertiary">Synchronized</span></div><span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span></div></div></aside><div class="pl-64"><main class="relative w-full pt-16 bg-surface min-h-screen px-gutter py-margin"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg w-full">
+<!-- Header Context & Quick Actions Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm tracking-widest text-primary uppercase">ENGINE TELEMETRY · CYCLE #42</span>
+<span class="h-1.5 w-1.5 rounded-full bg-secondary animate-ping"></span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Self-Learning Diagnostics</span>
+<span class="font-label-md text-label-md text-tertiary">v2.4-weights.active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+          Automated reinforcement feedback loop updating generation prompts, multimodal hooks, and distribution cadence based on real-time Yerevan &amp; diaspora cross-channel consumption telemetry.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="bg-surface-container-low px-space-sm py-space-xs rounded-lg flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary">sync</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sync: <strong class="text-on-surface">32s ago</strong></span>
+</div>
+<button class="bg-primary-container text-on-primary-container px-space-md py-space-xs rounded-lg font-body-sm text-body-sm font-semibold hover:bg-primary hover:text-on-primary transition-all flex items-center gap-space-xs shadow-md" id="recalibrate-btn">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Trigger Heuristic Re-weight</span>
+</button>
+</div>
+</div>
+<!-- 4 High Impact KPI Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1: Total Views -->
+<div class="bg-surface-container-low rounded-xl p-space-md relative overflow-hidden flex flex-col justify-between group hover:bg-surface-container transition-all shadow-sm">
+<div class="absolute -right-8 -top-8 w-28 h-28 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Total Aggregated Views</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-surface-container px-1.5 py-0.5 rounded flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">visibility</span> L30D
+          </span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">1.2M</span>
+<div class="flex items-center text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">arrow_drop_up</span>
+<span>+34.8%</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">vs previous synthetic run</span>
+<!-- Inline Sparkline SVG -->
+<svg class="w-20 h-6 text-secondary" fill="none" viewbox="0 0 80 24">
+<path d="M1 19 L15 17 L28 20 L40 12 L52 14 L65 7 L79 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M1 19 L15 17 L28 20 L40 12 L52 14 L65 7 L79 2 V 24 H 1 Z" fill="currentColor" fill-opacity="0.12"></path>
+</svg>
+</div>
+</div>
+<!-- Card 2: Saves / Bookmark Rate -->
+<div class="bg-surface-container-low rounded-xl p-space-md relative overflow-hidden flex flex-col justify-between group hover:bg-surface-container transition-all shadow-sm">
+<div class="absolute -right-8 -top-8 w-28 h-28 bg-secondary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Saves / Bookmark Rate</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-1.5 py-0.5 rounded flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">bookmark</span> HVC 4x
+          </span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-secondary font-bold">8.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Benchmark: 2.1%</span>
+</div>
+<div class="flex flex-col gap-1 pt-space-xs">
+<div class="w-full h-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 84%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-right">High-Value Multiplier Applied</span>
+</div>
+</div>
+<!-- Card 3: Follower Conversions -->
+<div class="bg-surface-container-low rounded-xl p-space-md relative overflow-hidden flex flex-col justify-between group hover:bg-surface-container transition-all shadow-sm">
+<div class="absolute -right-8 -top-8 w-28 h-28 bg-tertiary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Conversion Yield</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-surface-container px-1.5 py-0.5 rounded">
+            $0.00 Organic
+          </span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">+1,420</span>
+<span class="font-label-md text-label-md text-tertiary">Vernatun Residents</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">CAC: Nil (Agent Directed)</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">+18.2% MoM</span>
+</div>
+</div>
+<!-- Card 4: Agent Efficiency Score -->
+<div class="bg-surface-container-low rounded-xl p-space-md relative overflow-hidden flex flex-col justify-between group hover:bg-surface-container transition-all shadow-sm">
+<div class="absolute -right-8 -top-8 w-28 h-28 bg-primary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Agent Engine Health</span>
+<span class="font-label-sm text-label-sm text-primary bg-primary-container/30 px-1.5 py-0.5 rounded">
+            Stable Mesh
+          </span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">99.2%</span>
+<span class="font-label-md text-label-md text-on-surface-variant">48.2s Latency</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">Zero fatal schema drops</span>
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant">1,402 runs</span>
+</div>
+</div>
+</div>
+<!-- MAIN ANALYTICS: Multi-Line Retention Curve & Deep Dive -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-space-md">
+<!-- Graph Bay (2 cols on desktop) -->
+<div class="xl:col-span-2 bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">show_chart</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Multi-Modal Audience Retention Curve</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cross-platform granular drop-off across first 60 seconds of playback</span>
+</div>
+<!-- Retention Legend Toggles -->
+<div class="flex flex-wrap items-center gap-space-xs font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container text-on-surface">
+<span class="h-2 w-2 rounded-full bg-primary-container"></span>
+              HeyGen Reel (Terracotta)
+            </span>
+<span class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container text-on-surface">
+<span class="h-2 w-2 rounded-full bg-secondary"></span>
+              Editorial Carousel (Gold)
+            </span>
+<span class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container text-on-surface">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>
+              Motion Toon (Azure)
+            </span>
+</div>
+</div>
+<!-- Retention Curve SVG Interactive Chart -->
+<div class="relative w-full h-72 sm:h-80 bg-surface-container-lowest rounded-lg p-space-sm flex flex-col justify-between overflow-hidden">
+<!-- Subtle Grid Lines (SVG) -->
+<svg class="absolute inset-0 w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 600 240">
+<!-- Grid Horizontals -->
+<line class="text-on-surface" stroke="currentColor" stroke-dasharray="4 4" stroke-opacity="0.05" x1="40" x2="580" y1="30" y2="30"></line>
+<line class="text-on-surface" stroke="currentColor" stroke-dasharray="4 4" stroke-opacity="0.05" x1="40" x2="580" y1="80" y2="80"></line>
+<line class="text-on-surface" stroke="currentColor" stroke-dasharray="4 4" stroke-opacity="0.05" x1="40" x2="580" y1="130" y2="130"></line>
+<line class="text-on-surface" stroke="currentColor" stroke-dasharray="4 4" stroke-opacity="0.05" x1="40" x2="580" y1="180" y2="180"></line>
+<!-- Markers / Annotations -->
+<!-- Marker 1: Hook Drop-off -->
+<line stroke="#ffb694" stroke-dasharray="2 2" stroke-opacity="0.4" stroke-width="1.5" x1="90" x2="90" y1="20" y2="200"></line>
+<circle cx="90" cy="85" fill="#de733c" r="4"></circle>
+<!-- Marker 2: Viral Peak -->
+<line stroke="#9ecbfb" stroke-dasharray="2 2" stroke-opacity="0.4" stroke-width="1.5" x1="160" x2="160" y1="20" y2="200"></line>
+<circle cx="160" cy="50" fill="#6894c2" r="4"></circle>
+<!-- Marker 3: High Completion -->
+<circle cx="480" cy="70" fill="#f3be64" r="4"></circle>
+<!-- Curve 1: HeyGen Avatar Reel (Terracotta) -->
+<!-- Starts 100%, 74% at 3s (x=90), 58% at 30s (x=320), stabilizes around 42% at 60s (x=560) -->
+<path d="M 40 30 C 60 40, 75 75, 90 85 C 150 110, 220 125, 320 135 C 400 142, 480 152, 570 158" fill="none" stroke="#de733c" stroke-linecap="round" stroke-width="3"></path>
+<!-- Curve 2: Editorial Carousel (Sun Gold #f3be64) -->
+<!-- Steady pacing, slide drop small, 82% finish slide 8 -->
+<path d="M 40 30 C 90 38, 180 50, 280 56 C 380 62, 440 66, 480 70 C 530 76, 560 82, 570 86" fill="none" stroke="#f3be64" stroke-dasharray="1 0" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Curve 3: Motion Toon (Cyan/Azure #9ecbfb) -->
+<!-- Starts fast, peaks at 12s with viral share, then drops steeper -->
+<path d="M 40 30 C 80 32, 120 40, 160 50 C 200 62, 240 120, 320 160 C 400 185, 480 195, 570 200" fill="none" stroke="#9ecbfb" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+<!-- Annotations Over Graph -->
+<div class="relative z-10 flex justify-between pointer-events-none px-4 pt-1">
+<div class="bg-surface-container/90 backdrop-blur px-2 py-1 rounded shadow text-left border border-primary/20" style="margin-left: 5%;">
+<span class="font-label-sm text-[10px] text-primary block font-semibold uppercase">3s Hook Gate</span>
+<span class="font-label-sm text-[11px] text-on-surface">74% Retention</span>
+</div>
+<div class="bg-surface-container/90 backdrop-blur px-2 py-1 rounded shadow text-left border border-tertiary/20" style="margin-right: 48%;">
+<span class="font-label-sm text-[10px] text-tertiary block font-semibold uppercase">12s Re-share Hook</span>
+<span class="font-label-sm text-[11px] text-on-surface">Peak Virality Spurt</span>
+</div>
+<div class="bg-surface-container/90 backdrop-blur px-2 py-1 rounded shadow text-left border border-secondary/20">
+<span class="font-label-sm text-[10px] text-secondary block font-semibold uppercase">Slide 8 Depth</span>
+<span class="font-label-sm text-[11px] text-on-surface">82% Completion</span>
+</div>
+</div>
+<!-- Bottom Time Axis Labels -->
+<div class="relative z-10 flex justify-between text-on-surface-variant font-label-sm text-label-sm px-4 pt-2">
+<span>0s (Impression)</span>
+<span>3s (The Filter)</span>
+<span>12s (Spike)</span>
+<span>30s (Midpoint)</span>
+<span>45s</span>
+<span>60s (Outro / CTA)</span>
+</div>
+</div>
+<!-- Telemetry Diagnostic Bar -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-md text-left">
+<div class="bg-surface-container px-space-sm py-space-xs rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">HeyGen Hook Baseline</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">58% at 30s</span>
+<span class="font-label-sm text-[11px] text-primary block">+12% vs text overlay</span>
+</div>
+<div class="bg-surface-container px-space-sm py-space-xs rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Carousel Slide-Through</span>
+<span class="font-body-md text-body-md text-secondary font-semibold">4.8 slides avg</span>
+<span class="font-label-sm text-[11px] text-secondary block">Top diaspora collector</span>
+</div>
+<div class="bg-surface-container px-space-sm py-space-xs rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Drop-Off Penalty</span>
+<span class="font-body-md text-body-md text-tertiary font-semibold">-26% after 40s</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant block">Recommended trim: 38s</span>
+</div>
+</div>
+</div>
+<!-- Autonomous Heuristics & Weights Feed (Side bay) -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs pb-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-secondary uppercase">AGENT HEURISTICS</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-surface-container px-2 py-0.5 rounded font-mono">Loop #42</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Self-Learning Feed</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Live adjustments compiled by the Self-Learning Analyst Agent, re-injecting prompts into generation nodes.
+          </p>
+</div>
+<div class="flex flex-col gap-space-sm my-auto">
+<!-- Insight Card 1: Yerevan Street Slang -->
+<div class="bg-surface-container rounded-lg p-space-sm hover:bg-surface-container-high transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-secondary/20 text-secondary">
+                +42% RETENTION
+              </span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Applied to Hook Writer</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Hooks opening with Yerevan street slang or rhetorical cafe questions had <strong>42% higher retention</strong> in the first 3 seconds than academic introductions.
+            </p>
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px]">auto_fix_high</span>
+<span>Weight update injected into Node 02</span>
+</div>
+</div>
+<!-- Insight Card 2: Library Interior Settings -->
+<div class="bg-surface-container rounded-lg p-space-sm hover:bg-surface-container-high transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-tertiary/20 text-tertiary">
+                2.3X DM CONVERSION
+              </span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Module 4 Synthesis</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Module 4 (HeyGen Avatars in historical library interiors) drove <strong>2.3x more direct messages</strong> and salon inquiries than flat infographics.
+            </p>
+<div class="flex items-center gap-space-xs text-tertiary font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Visual environment biased to +35% Library</span>
+</div>
+</div>
+<!-- Insight Card 3: Diaspora Timezone Distribution -->
+<div class="bg-surface-container rounded-lg p-space-sm hover:bg-surface-container-high transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-primary/20 text-primary">
+                OPTIMAL POST TIME
+              </span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Cadence Scheduler</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Cross-channel engagement for Yerevan &amp; Diaspora peaks at <strong>20:15 MSK</strong> on Tuesdays and Saturdays.
+            </p>
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Publish queue shifted: Next at 20:15 MSK</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm">
+<div class="bg-surface-container-lowest p-space-xs rounded-lg flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Model Loss Convergence:</span>
+<span class="text-tertiary font-mono">0.0124 (Optima)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM SECTION: Recent Autonomous Posts & Live Performance -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md">
+<!-- Table Header & Filters -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">dynamic_feed</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Autonomous Posts &amp; Telemetry Matrix</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Active Sync</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-space-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-all">
+            Filter: All Channels
+          </button>
+<button class="px-space-sm py-space-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-all">
+            Sort: Top Engagement
+          </button>
+</div>
+</div>
+<!-- High Density Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="text-on-surface-variant font-label-sm text-label-sm border-b border-surface-container uppercase tracking-wider">
+<th class="py-space-sm px-space-sm">Content Asset</th>
+<th class="py-space-sm px-space-sm">Generation Module</th>
+<th class="py-space-sm px-space-sm">Target Channels</th>
+<th class="py-space-sm px-space-sm">Reach / Views</th>
+<th class="py-space-sm px-space-sm">Eng. Rate</th>
+<th class="py-space-sm px-space-sm">Status</th>
+<th class="py-space-sm px-space-sm text-right">Node Attribution</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container/50">
+<!-- Row 1: Cafe Chess & Philosophy -->
+<tr class="hover:bg-surface-container transition-all group">
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Cinematic macro shot of an antique wooden chessboard set on an espresso table inside a dimly lit intellectual salon in Yerevan, moody chiaroscuro lighting with warm terracotta and sun gold glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClhT9Ntb6qQeLtDWYqrOyVyIRVrpPEtxGrRg47je0PMnhYY9x6WgLY7hNsluaOApfBNHojfqqXIv6VMQ5bRD96H5KnDfu68IWFd5v83Q4NVVCCbS7vRPiTnuzfjmy7OrwnWPHqDVUo0mIUSZzv4pXAtIhrMUjJ6br22G3b7d2W8uUlvfny5PVeOO4WRZmxiHcJl9wftP_Mi3r4SMlt-_i8XxXOsjBdtcWw7MSfMLdGbABMmVmIdpSY"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-on-surface font-semibold truncate group-hover:text-primary transition-all">Cafe Chess &amp; Philosophy</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">ID: #SYNTH-8902 · Yerevan Bohemia series</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-primary-container/30 text-primary font-label-sm text-[11px] font-medium">
+                  HeyGen Avatar
+                </span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] hover:text-on-surface" title="Instagram">photo_camera</span>
+<span class="material-symbols-outlined text-[16px] hover:text-on-surface" title="TikTok">music_note</span>
+<span class="material-symbols-outlined text-[16px] hover:text-on-surface" title="YouTube">smart_display</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-mono text-on-surface font-medium">482.1k</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono text-secondary font-semibold">9.8%</span>
+<span class="material-symbols-outlined text-secondary text-[14px]">trending_up</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary/20 text-secondary font-label-sm text-[11px]">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+                  Live
+                </span>
+</td>
+<td class="py-space-sm px-space-sm text-right whitespace-nowrap">
+<a class="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-tertiary hover:text-on-surface transition-all" href="#">
+<span>Inspect Node Run</span>
+<span class="material-symbols-outlined text-[12px]">north_east</span>
+</a>
+</td>
+</tr>
+<!-- Row 2: Slang: Tsavt Tanem Deep Dive -->
+<tr class="hover:bg-surface-container transition-all group">
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="High contrast editorial typography poster featuring stylized Armenian calligraphy for Tsavt Tanem with deep cognac amber overlays on raw charcoal obsidian paper texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKWowvM5p6hUYMTh1ZuuC9LQmW4MkIRqQsk-yjEOR-vf4MAaAXlO28YaVny6NMNFEbXSdvLp_IwZixXVubO-ym_8L43m73qhkMLPYSulOz1R6kBHQylgXU2BnLHtcwOGLWUqL0kNtQleAdnaVQLgyc0ekMdmATVK2gHh2tU1U8s42nE7E87Uhkp9rlNHH2ucBIE0nQQW54vrWYFcUH4-f9CR2-rr1HbolO_nXTBivkUp6UZc4O2oG9"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-on-surface font-semibold truncate group-hover:text-primary transition-all">Slang: Tsavt Tanem Deep Dive</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">ID: #SYNTH-8905 · Diaspora Linguistic Nodes</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-secondary/20 text-secondary font-label-sm text-[11px] font-medium">
+                  Editorial Carousel
+                </span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] hover:text-on-surface" title="Instagram">photo_camera</span>
+<span class="material-symbols-outlined text-[16px] hover:text-on-surface" title="LinkedIn">business_center</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-mono text-on-surface font-medium">210.4k</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono text-secondary font-semibold">12.4%</span>
+<span class="material-symbols-outlined text-secondary text-[14px]">star</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary/20 text-primary font-label-sm text-[11px]">
+<span class="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
+                  Self-Optimizing
+                </span>
+</td>
+<td class="py-space-sm px-space-sm text-right whitespace-nowrap">
+<a class="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-tertiary hover:text-on-surface transition-all" href="#">
+<span>Inspect Node Run</span>
+<span class="material-symbols-outlined text-[12px]">north_east</span>
+</a>
+</td>
+</tr>
+<!-- Row 3: Vernatun 1899 Legacy -->
+<tr class="hover:bg-surface-container transition-all group">
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Archival aesthetic illustration of late 19th-century Caucasian bohemian writers gathered around a wooden table in an attic studio, warm tungsten light and dramatic architectural perspective" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPN9EJ-DQBR5Vw9rh2xi7O0aTdC0OyOtYvLC3wKFzI-KeDxpLRsUN4KA1v_6ufJcGJ7-2biH-FSLaOpdUtnHGhp_B8WecGrtGPQ4_t-eX5vGAq8WqHwBJhJF0LkI_1tmk_jL2sZSTR0xshUai2G5w551ODdYIgCnP5kRc3_F6ZAfV5Jazu0H5bVCUt5iPixzCDqDCIV-znJgd9-1Tdwibw1MhQ7856W3MZa4EqPtBHxQv-LUmTzecH"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-on-surface font-semibold truncate group-hover:text-primary transition-all">Vernatun 1899 Legacy</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">ID: #SYNTH-8884 · Architectural History</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-label-sm text-[11px] font-medium">
+                  Infographic
+                </span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] hover:text-on-surface" title="YouTube">smart_display</span>
+<span class="material-symbols-outlined text-[16px] hover:text-on-surface" title="Instagram">photo_camera</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="font-mono text-on-surface font-medium">94.8k</span>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono text-on-surface-variant">7.2%</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px]">
+<span class="h-1.5 w-1.5 rounded-full bg-surface-variant"></span>
+                  Archived
+                </span>
+</td>
+<td class="py-space-sm px-space-sm text-right whitespace-nowrap">
+<a class="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-tertiary hover:text-on-surface transition-all" href="#">
+<span>Inspect Node Run</span>
+<span class="material-symbols-outlined text-[12px]">north_east</span>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Autonomous Agent Feedback Loop Banner -->
+<div class="p-space-sm bg-surface-container rounded-lg flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">psychology</span>
+</div>
+<div>
+<span class="text-on-surface font-semibold font-body-sm text-body-sm block">Active Feedback Convergence</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Next automated generation batch scheduled with revised weights in 42 minutes.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-mono font-label-sm text-label-sm text-tertiary">
+<span>Delta-Prompt Efficacy: +19.4%</span>
+<span class="h-1.5 w-1.5 rounded-full bg-secondary animate-ping"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  document.getElementById('recalibrate-btn')?.addEventListener('click', function() {
+    const originalText = this.innerHTML;
+    this.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Computing Weights...</span>';
+    this.disabled = true;
+    setTimeout(() => {
+      this.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Heuristics Applied (Cycle #43)</span>';
+      setTimeout(() => {
+        this.innerHTML = originalText;
+        this.disabled = false;
+      }, 2500);
+    }, 1200);
+  });
+</script></main></div></body></html>

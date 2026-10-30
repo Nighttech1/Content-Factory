@@ -1,0 +1,187 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - complementary "Главная навигация" [ref=f2e3]:
+      - generic [ref=f2e11]:
+        - generic [ref=f2e12]: VERN·ATUN
+        - generic [ref=f2e13]: Content Factory
+      - generic [ref=f2e14]:
+        - paragraph [ref=f2e15]: Пайплайны и ноды
+        - navigation [ref=f2e16]:
+          - generic [ref=f2e17]:
+            - link "Студия" [ref=f2e20] [cursor=pointer]:
+              - /url: /studio
+            - link "Команда выпуска" [ref=f2e33] [cursor=pointer]:
+              - /url: /admin/mesh
+            - link "Расписание" [ref=f2e46] [cursor=pointer]:
+              - /url: /schedule
+            - link "Аналитика" [ref=f2e56] [cursor=pointer]:
+              - /url: /analytics
+            - link "Бренд-кит" [ref=f2e69] [cursor=pointer]:
+              - /url: /brand-kit
+            - link "Настройки" [ref=f2e83] [cursor=pointer]:
+              - /url: /settings
+      - generic [ref=f2e92]:
+        - paragraph [ref=f2e93]: Բարև · Vernatun
+        - generic [ref=f2e94]:
+          - paragraph [ref=f2e95]: Роль QA (локально)
+          - generic [ref=f2e96]:
+            - button "OWNER" [ref=f2e97]
+            - button "ADMIN" [ref=f2e98]
+      - button "Изменить ширину боковой панели" [ref=f2e99]
+    - main [ref=f2e101]:
+      - generic [ref=f2e102]:
+        - heading "Команда выпуска" [level=1] [ref=f2e103]
+        - generic [ref=f2e105]:
+          - generic [ref=f2e106]:
+            - tablist "Пайплайн вида контента" [ref=f2e108]:
+              - tab "Карусели Instagram (4:5)" [selected] [ref=f2e109]
+              - tab "Полезные картинки & Инфографика" [ref=f2e111]
+              - tab "Мульт-Reels (2D сторителлинг)" [ref=f2e112]
+              - tab "HeyGen AI-Аватар Reels" [ref=f2e113]
+              - tab "Рилс" [ref=f2e114]
+              - tab "Нарезки с видео в рилсы" [ref=f2e115]
+              - tab "Информационное видео" [ref=f2e116]
+            - paragraph [ref=f2e118]: Команда выпуска
+            - generic [ref=f2e119]:
+              - generic [ref=f2e120]:
+                - paragraph [ref=f2e121]: Задачи
+                - paragraph [ref=f2e122]: "4"
+              - generic [ref=f2e123]:
+                - paragraph [ref=f2e124]: Задержка
+                - paragraph [ref=f2e125]: 180ms
+              - generic [ref=f2e126]:
+                - paragraph [ref=f2e127]: GPU
+                - paragraph [ref=f2e128]: Активен
+          - application [ref=f2e130]:
+            - generic [ref=f2e132]:
+              - generic:
+                - generic:
+                  - img:
+                    - group "Edge from researcher to hook"
+                  - img:
+                    - group "Edge from hook to script"
+                  - img:
+                    - group "Edge from script to router" [ref=f2e133] [cursor=pointer]
+                  - img:
+                    - group "Edge from router to queue" [ref=f2e136] [cursor=pointer]
+                  - img:
+                    - group "Edge from queue to designer" [ref=f2e139] [cursor=pointer]
+                  - img:
+                    - group "Edge from designer to hitl" [ref=f2e142] [cursor=pointer]
+                  - img:
+                    - group "Edge from hitl to publisher" [ref=f2e145] [cursor=pointer]
+                  - img:
+                    - group "Edge from publisher to analyst"
+                - generic:
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                - generic:
+                  - group [ref=f2e148] [cursor=pointer]:
+                    - generic [ref=f2e152]:
+                      - generic [aria-hidden] [ref=f2e153]: R
+                      - generic [ref=f2e154]:
+                        - generic [ref=f2e155]: Исследователь
+                        - generic [ref=f2e156]:
+                          - generic [ref=f2e157]: сканирует
+                          - generic [ref=f2e158]: "задачи: 3"
+                  - group [ref=f2e160] [cursor=pointer]:
+                    - generic [ref=f2e164]:
+                      - generic [aria-hidden] [ref=f2e165]: H
+                      - generic [ref=f2e166]:
+                        - generic [ref=f2e167]: Автор хуков
+                        - generic [ref=f2e168]:
+                          - generic [ref=f2e169]: отбирает
+                          - generic [ref=f2e170]: "задачи: 10"
+                  - group [ref=f2e172] [cursor=pointer]:
+                    - generic [ref=f2e176]:
+                      - generic [aria-hidden] [ref=f2e177]: S
+                      - generic [ref=f2e178]:
+                        - generic [ref=f2e179]: Сценарист
+                        - generic [ref=f2e180]:
+                          - generic [ref=f2e181]: простой
+                          - generic [ref=f2e182]: "задачи: 1"
+                  - group [ref=f2e184] [cursor=pointer]:
+                    - generic [ref=f2e187]:
+                      - paragraph [ref=f2e188]: Маршрут
+                      - paragraph [ref=f2e189]: Маршрутизатор карусели
+                      - generic [ref=f2e190]:
+                        - generic [ref=f2e191]: обложка
+                        - generic [ref=f2e192]: слайды
+                        - generic [ref=f2e193]: призыв
+                  - group [ref=f2e195] [cursor=pointer]:
+                    - generic [ref=f2e198]:
+                      - paragraph [ref=f2e199]: Очередь
+                      - paragraph [ref=f2e200]: Очередь задач
+                      - generic [ref=f2e201]:
+                        - generic [ref=f2e202]:
+                          - term [ref=f2e203]: акт.
+                          - definition [ref=f2e204]: "4"
+                        - generic [ref=f2e205]:
+                          - term [ref=f2e206]: ожид.
+                          - definition [ref=f2e207]: "2"
+                        - generic [ref=f2e208]:
+                          - term [ref=f2e209]: пауза
+                          - definition [ref=f2e210]: "1"
+                  - group [ref=f2e212] [cursor=pointer]:
+                    - generic [ref=f2e216]:
+                      - generic [aria-hidden] [ref=f2e217]: C
+                      - generic [ref=f2e218]:
+                        - generic [ref=f2e219]: Дизайнер карусели
+                        - generic [ref=f2e220]:
+                          - generic [ref=f2e221]: собирает
+                          - generic [ref=f2e222]: "задачи: 2"
+                  - group [ref=f2e224] [cursor=pointer]:
+                    - generic [ref=f2e227]:
+                      - paragraph [ref=f2e228]: Согласование
+                      - paragraph [ref=f2e229]: Шлюз согласования
+                      - generic [ref=f2e230]: "ждут: 1"
+                  - group [ref=f2e233] [cursor=pointer]:
+                    - generic [ref=f2e237]:
+                      - generic [aria-hidden] [ref=f2e238]: P
+                      - generic [ref=f2e239]:
+                        - generic [ref=f2e240]: Издатель
+                        - generic [ref=f2e241]:
+                          - generic [ref=f2e242]: готов
+                          - generic [ref=f2e243]: "задачи: 0"
+                  - group [ref=f2e245] [cursor=pointer]:
+                    - generic [ref=f2e249]:
+                      - generic [aria-hidden] [ref=f2e250]: A
+                      - generic [ref=f2e251]:
+                        - generic [ref=f2e252]: Аналитик
+                        - generic [ref=f2e253]:
+                          - generic [ref=f2e254]: учится
+                          - generic [ref=f2e255]: "задачи: 5"
+            - generic "Control Panel" [ref=f2e257]:
+              - button "Zoom In" [ref=f2e258] [cursor=pointer]
+              - button "Zoom Out" [ref=f2e261] [cursor=pointer]
+              - button "Fit View" [ref=f2e264] [cursor=pointer]
+              - button "Toggle Interactivity" [ref=f2e267] [cursor=pointer]
+            - img "Mini Map" [ref=f2e271]
+          - 'complementary "Свойства: Исследователь" [ref=f2e292]':
+            - generic [ref=f2e293]:
+              - generic [ref=f2e294]:
+                - paragraph [ref=f2e295]: Агент команды
+                - heading "Исследователь" [level=2] [ref=f2e296]
+                - generic [ref=f2e297]: сканирует
+              - button "Закрыть панель свойств" [ref=f2e298]
+            - generic [ref=f2e302]:
+              - generic [ref=f2e303]:
+                - heading "Контракт шага" [level=3] [ref=f2e304]
+                - paragraph [ref=f2e305]: Собирает тренды, источники и углы подачи для брифа контента Vernatun.
+              - generic [ref=f2e306]:
+                - heading "Навыки" [level=3] [ref=f2e307]
+                - list [ref=f2e308]:
+                  - listitem [ref=f2e309]: Скан трендов ниши
+                  - listitem [ref=f2e310]: Подбор источников
+                  - listitem [ref=f2e311]: Углы подачи
+              - generic [ref=f2e312]:
+                - paragraph [ref=f2e313]: Заявок отработано
+                - paragraph [ref=f2e314]: "312"
+  - button "Open Next.js Dev Tools" [ref=f2e287] [cursor=pointer]
+  - alert [ref=f2e291]

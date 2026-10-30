@@ -1,0 +1,149 @@
+- generic [active] [ref=f14e1]:
+  - generic [ref=f14e2]:
+    - complementary "Главная навигация" [ref=f14e3]:
+      - generic [ref=f14e11]:
+        - generic [ref=f14e12]: VERN·ATUN
+        - generic [ref=f14e13]: Content Factory
+      - generic [ref=f14e14]:
+        - paragraph [ref=f14e15]: Пайплайны и ноды
+        - navigation [ref=f14e16]:
+          - generic [ref=f14e18]:
+            - link "Студия" [ref=f14e19] [cursor=pointer]:
+              - /url: /studio
+            - button "Развернуть модули Студии" [ref=f14e26]
+          - link "Холст" [ref=f14e31] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f14e39] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f14e44] [cursor=pointer]:
+            - /url: /analytics
+          - link "Бренд-кит" [ref=f14e52] [cursor=pointer]:
+            - /url: /brand-kit
+          - link "Настройки" [ref=f14e61] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f14e66]:
+        - paragraph [ref=f14e67]: Բարև · Vernatun
+        - generic [ref=f14e68]:
+          - paragraph [ref=f14e69]: Роль QA (локально)
+          - generic [ref=f14e70]:
+            - button "OWNER" [ref=f14e71]
+            - button "ADMIN" [ref=f14e72]
+    - main [ref=f14e74]:
+      - generic [ref=f14e75]:
+        - generic [ref=f14e76]:
+          - paragraph [ref=f14e77]: // Настройки
+          - heading "Настройки" [level=1] [ref=f14e78]
+          - paragraph [ref=f14e79]:
+            - text: Модели LLM для агентов пайплайна и отображение рилсов в workspace. Выбор сохраняется в этом браузере (localStorage). Ключ агрегатора — только в локальном
+            - code [ref=f14e80]: .env
+            - text: ", никогда в репозитории."
+        - region [ref=f14e81]:
+          - generic [ref=f14e82]:
+            - heading "LLM по агентам" [level=2] [ref=f14e83]
+            - paragraph [ref=f14e84]:
+              - text: Слоты соответствуют папке
+              - code [ref=f14e85]: agents/
+              - text: . Runtime предпочитает
+              - code [ref=f14e86]: AGGREGATOR_API_KEY
+              - text: .
+          - list [ref=f14e87]:
+            - listitem [ref=f14e88]:
+              - generic [ref=f14e89]:
+                - paragraph [ref=f14e90]: Исследователь
+                - paragraph [ref=f14e91]: Тренды, источники, ниша
+              - generic [ref=f14e92]:
+                - generic [ref=f14e93]: Модель
+                - combobox "Модель для Исследователь" [ref=f14e94]:
+                  - option "GPT-4o mini" [selected]
+                  - option "GPT-4o"
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash"
+            - listitem [ref=f14e95]:
+              - generic [ref=f14e96]:
+                - paragraph [ref=f14e97]: Автор хуков
+                - paragraph [ref=f14e98]: Хуки и оценка вирусности
+              - generic [ref=f14e99]:
+                - generic [ref=f14e100]: Модель
+                - combobox "Модель для Автор хуков" [ref=f14e101]:
+                  - option "GPT-4o mini"
+                  - option "GPT-4o" [selected]
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash"
+            - listitem [ref=f14e102]:
+              - generic [ref=f14e103]:
+                - paragraph [ref=f14e104]: Сценарист
+                - paragraph [ref=f14e105]: Таймлайн / слайды сценария
+              - generic [ref=f14e106]:
+                - generic [ref=f14e107]: Модель
+                - combobox "Модель для Сценарист" [ref=f14e108]:
+                  - option "GPT-4o mini"
+                  - option "GPT-4o" [selected]
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash"
+            - listitem [ref=f14e109]:
+              - generic [ref=f14e110]:
+                - paragraph [ref=f14e111]: Аналитик
+                - paragraph [ref=f14e112]: Метрики → инсайты
+              - generic [ref=f14e113]:
+                - generic [ref=f14e114]: Модель
+                - combobox "Модель для Аналитик" [ref=f14e115]:
+                  - option "GPT-4o mini" [selected]
+                  - option "GPT-4o"
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash"
+            - listitem [ref=f14e116]:
+              - generic [ref=f14e117]:
+                - paragraph [ref=f14e118]: Дизайнер
+                - paragraph [ref=f14e119]: Визуал / бренд-кит
+              - generic [ref=f14e120]:
+                - generic [ref=f14e121]: Модель
+                - combobox "Модель для Дизайнер" [ref=f14e122]:
+                  - option "GPT-4o mini"
+                  - option "GPT-4o"
+                  - option "Claude Sonnet" [selected]
+                  - option "Gemini Flash"
+            - listitem [ref=f14e123]:
+              - generic [ref=f14e124]:
+                - paragraph [ref=f14e125]: Рендерер
+                - paragraph [ref=f14e126]: Remotion / HeyGen / Satori
+              - generic [ref=f14e127]:
+                - generic [ref=f14e128]: Модель
+                - combobox "Модель для Рендерер" [ref=f14e129]:
+                  - option "GPT-4o mini" [selected]
+                  - option "GPT-4o"
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash"
+            - listitem [ref=f14e130]:
+              - generic [ref=f14e131]:
+                - paragraph [ref=f14e132]: Издатель
+                - paragraph [ref=f14e133]: Публикация после HITL
+              - generic [ref=f14e134]:
+                - generic [ref=f14e135]: Модель
+                - combobox "Модель для Издатель" [ref=f14e136]:
+                  - option "GPT-4o mini" [selected]
+                  - option "GPT-4o"
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash"
+            - listitem [ref=f14e137]:
+              - generic [ref=f14e138]:
+                - paragraph [ref=f14e139]: Маршрутизатор
+                - paragraph [ref=f14e140]: Выбор модуля пайплайна
+              - generic [ref=f14e141]:
+                - generic [ref=f14e142]: Модель
+                - combobox "Модель для Маршрутизатор" [ref=f14e143]:
+                  - option "GPT-4o mini"
+                  - option "GPT-4o"
+                  - option "Claude Sonnet"
+                  - option "Gemini Flash" [selected]
+        - region [ref=f14e144]:
+          - generic [ref=f14e145]:
+            - heading "Рилсы" [level=2] [ref=f14e146]
+            - paragraph [ref=f14e147]: Сколько карточек показывать в dual-feed workspace (Наши и Конкуренты). Значение хранится только в браузере.
+          - generic [ref=f14e148]:
+            - generic [ref=f14e149]:
+              - paragraph [ref=f14e150]: Отображение рилсов (количество на странице)
+              - paragraph [ref=f14e151]: От 4 до 48. По умолчанию 12.
+            - generic [ref=f14e152]:
+              - generic [ref=f14e153]: На странице
+              - spinbutton "Отображение рилсов (количество на странице)" [ref=f14e154]: "12"
+  - alert [ref=f14e155]

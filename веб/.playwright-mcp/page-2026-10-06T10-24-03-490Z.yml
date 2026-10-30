@@ -1,0 +1,158 @@
+- generic [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - complementary "Главная навигация" [ref=f2e3]:
+      - generic [ref=f2e11]:
+        - generic [ref=f2e12]: VERN·ATUN
+        - generic [ref=f2e13]: Content Factory
+      - generic [ref=f2e14]:
+        - paragraph [ref=f2e15]: Пайплайны и ноды
+        - navigation [ref=f2e16]:
+          - generic [ref=f2e18]:
+            - link "Студия" [ref=f2e19] [cursor=pointer]:
+              - /url: /studio
+            - button "Развернуть модули Студии" [ref=f2e26]
+          - link "Холст" [ref=f2e31] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f2e39] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f2e44] [cursor=pointer]:
+            - /url: /analytics
+          - link "Бренд-кит" [ref=f2e52] [cursor=pointer]:
+            - /url: /brand-kit
+          - link "Настройки" [ref=f2e61] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f2e66]:
+        - paragraph [ref=f2e67]: Բարև · Vernatun
+        - generic [ref=f2e68]:
+          - paragraph [ref=f2e69]: Роль QA (локально)
+          - generic [ref=f2e70]:
+            - button "OWNER" [ref=f2e71]
+            - button "ADMIN" [ref=f2e72]
+    - main [ref=f2e74]:
+      - generic [ref=f2e75]:
+        - generic [ref=f2e77]:
+          - paragraph [ref=f2e78]: // Только владелец · Сетка агентов
+          - heading "Холст сетки агентов" [level=1] [ref=f2e79]
+        - generic [ref=f2e80]:
+          - generic [ref=f2e81]:
+            - generic [ref=f2e82]:
+              - generic [ref=f2e83]:
+                - paragraph [ref=f2e84]: Активные задачи
+                - paragraph [ref=f2e85]: "4"
+              - generic [ref=f2e86]:
+                - paragraph [ref=f2e87]: Задержка
+                - paragraph [ref=f2e88]: 180ms
+              - generic [ref=f2e89]:
+                - paragraph [ref=f2e90]: GPU
+                - paragraph [ref=f2e91]: Активен
+            - button "Добавить модуль пайплайна" [ref=f2e92]
+            - tablist "Пайплайн вида контента" [ref=f2e94]:
+              - tab "Карусели Instagram (4:5)" [ref=f2e95]
+              - tab "Полезные картинки & Инфографика" [active] [selected] [ref=f2e97]
+              - tab "Мульт-Reels (2D сторителлинг)" [ref=f2e98]
+              - tab "HeyGen AI-Аватар Reels" [ref=f2e99]
+              - tab "Рилс" [ref=f2e100]
+              - tab "Нарезки с видео в рилсы" [ref=f2e101]
+              - tab "Информационное видео" [ref=f2e102]
+          - application [ref=f2e125]:
+            - generic [ref=f2e127]:
+              - generic:
+                - generic:
+                  - img:
+                    - group "Edge from researcher to script"
+                  - img:
+                    - group "Edge from script to router" [ref=f2e128] [cursor=pointer]
+                  - img:
+                    - group "Edge from router to queue" [ref=f2e131] [cursor=pointer]
+                  - img:
+                    - group "Edge from queue to designer" [ref=f2e134] [cursor=pointer]
+                  - img:
+                    - group "Edge from designer to hitl" [ref=f2e137] [cursor=pointer]
+                  - img:
+                    - group "Edge from hitl to publisher" [ref=f2e140] [cursor=pointer]
+                  - img:
+                    - group "Edge from publisher to analyst"
+                - generic:
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                - generic:
+                  - group [ref=f2e143]:
+                    - generic [ref=f2e147]:
+                      - generic [aria-hidden] [ref=f2e148]: R
+                      - generic [ref=f2e149]:
+                        - generic [ref=f2e150]: The Researcher
+                        - generic [ref=f2e151]:
+                          - generic [ref=f2e152]: scanning
+                          - generic [ref=f2e153]: "jobs: 2"
+                  - group [ref=f2e155]:
+                    - generic [ref=f2e159]:
+                      - generic [aria-hidden] [ref=f2e160]: S
+                      - generic [ref=f2e161]:
+                        - generic [ref=f2e162]: The Script Writer
+                        - generic [ref=f2e163]:
+                          - generic [ref=f2e164]: idle
+                          - generic [ref=f2e165]: "jobs: 1"
+                  - group [ref=f2e167]:
+                    - generic [ref=f2e170]:
+                      - paragraph [ref=f2e171]: Router
+                      - paragraph [ref=f2e172]: Graphics Router
+                      - generic [ref=f2e173]:
+                        - generic [ref=f2e174]: quote
+                        - generic [ref=f2e175]: cheat
+                        - generic [ref=f2e176]: table
+                  - group [ref=f2e178]:
+                    - generic [ref=f2e181]:
+                      - paragraph [ref=f2e182]: Queue
+                      - paragraph [ref=f2e183]: BullMQ Queue
+                      - generic [ref=f2e184]:
+                        - generic [ref=f2e185]:
+                          - term [ref=f2e186]: act
+                          - definition [ref=f2e187]: "4"
+                        - generic [ref=f2e188]:
+                          - term [ref=f2e189]: wait
+                          - definition [ref=f2e190]: "2"
+                        - generic [ref=f2e191]:
+                          - term [ref=f2e192]: dly
+                          - definition [ref=f2e193]: "1"
+                  - group [ref=f2e195]:
+                    - generic [ref=f2e199]:
+                      - generic [aria-hidden] [ref=f2e200]: G
+                      - generic [ref=f2e201]:
+                        - generic [ref=f2e202]: The Graphics Designer
+                        - generic [ref=f2e203]:
+                          - generic [ref=f2e204]: layout
+                          - generic [ref=f2e205]: "jobs: 2"
+                  - group [ref=f2e207]:
+                    - generic [ref=f2e210]:
+                      - paragraph [ref=f2e211]: HITL
+                      - paragraph [ref=f2e212]: HITL Gate
+                      - generic [ref=f2e213]: "awaiting: 1"
+                  - group [ref=f2e216]:
+                    - generic [ref=f2e220]:
+                      - generic [aria-hidden] [ref=f2e221]: P
+                      - generic [ref=f2e222]:
+                        - generic [ref=f2e223]: The Publisher
+                        - generic [ref=f2e224]:
+                          - generic [ref=f2e225]: ready
+                          - generic [ref=f2e226]: "jobs: 0"
+                  - group [ref=f2e228]:
+                    - generic [ref=f2e232]:
+                      - generic [aria-hidden] [ref=f2e233]: A
+                      - generic [ref=f2e234]:
+                        - generic [ref=f2e235]: The Analyst
+                        - generic [ref=f2e236]:
+                          - generic [ref=f2e237]: learning
+                          - generic [ref=f2e238]: "jobs: 5"
+            - generic "Control Panel" [ref=f2e240]:
+              - button "Zoom In" [ref=f2e241] [cursor=pointer]
+              - button "Zoom Out" [ref=f2e244] [cursor=pointer]
+              - button "Fit View" [ref=f2e247] [cursor=pointer]
+              - button "Toggle Interactivity" [ref=f2e250] [cursor=pointer]
+            - img "Mini Map" [ref=f2e254]
+  - button "Open Next.js Dev Tools" [ref=f2e269] [cursor=pointer]
+  - alert [ref=f2e273]
