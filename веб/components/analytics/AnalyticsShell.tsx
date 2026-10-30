@@ -144,6 +144,14 @@ export function AnalyticsShell({ initialModuleId }: AnalyticsShellProps = {}) {
             </nav>
           </div>
 
+          {/* Честный маркер: верхние блоки — демо-фикстуры до подключения ingest/ключей.
+              Реальный путь данных — в секции «Реальные данные (API)» ниже. */}
+          <div className="rounded-lg border border-dashed border-[var(--border-glass)] bg-[color-mix(in_srgb,var(--bg-elevated)_70%,transparent)] px-3 py-2 font-[family-name:var(--font-mono-jb)] text-[11px] text-[var(--text-muted)]">
+            ⚠️ Демо-данные: блоки ниже до раздела «Реальные данные (API)» — показательные
+            фикстуры. Реальные цифры (+ KPI «люди на встречах») появятся при подключении
+            ключей и ингеста. См. web-analytics-spec.
+          </div>
+
           <KpiCardsRow kpis={kpis} />
           <ScoutSection />
           <OutliersVault
