@@ -5,11 +5,13 @@ description: IG/TikTok разведка через Apify (free-план, pay-per
 
 # Скилл: разведка IG/TikTok через Apify (бюджет прежде всего)
 
-Ключ — `APIFY_TOKEN` в окружении (НЕ в git, не эхоить значение). **Секрет виден только в сессии, стартовавшей после его добавления.** Проверка:
+Для REST-API Apify нужен **ровно один токен** — API token. Отдельный **`APIFY_ID`** (это id аккаунта) для вызовов **НЕ нужен** — токен сам аутентифицирует. Если в окружении лежат `APIFY_ID` + `APIFY_API_KEY` — используем только ключ. Имя переменной: поддерживаем и `APIFY_TOKEN`, и `APIFY_API_KEY`.
 ```bash
-test -n "$APIFY_TOKEN" && echo "ключ есть" || echo "НЕТ ключа — ключ подхватится в НОВОЙ сессии (секреты вступают на старте)"
+# резолвим токен из любого из принятых имён (значение не эхоим)
+APIFY="${APIFY_TOKEN:-${APIFY_API_KEY:-}}"
+test -n "$APIFY" && echo "ключ есть" || echo "НЕТ ключа — подхватится в НОВОЙ сессии (секреты вступают на старте); проверь имя: APIFY_TOKEN или APIFY_API_KEY"
 ```
-Free-план ≈ $5 кредитов/мес. **Цель — укладываться в бесплатное.**
+Free-план ≈ $5 кредитов/мес. **Цель — укладываться в бесплатное.** (Секрет — только из окружения, не эхоить, не в git.)
 
 ## Железные правила экономии (из `apify-scraper-cost-discipline`)
 - **Один прогон на задачу.** Никаких прогонов «на каждое открытие/рефетч». Результат → снапшот (временный файл), дальше читаем снапшот, не Apify.
@@ -23,8 +25,9 @@ Free-план ≈ $5 кредитов/мес. **Цель — укладыват�
 Цель владельца: найти **виральный залетевший контент**, исключив популярных армянских **артистов/селеб** (певцы/актёры/публичные персоны). Один прогон, ≤48 постов.
 
 ```bash
+APIFY="${APIFY_TOKEN:-${APIFY_API_KEY:-}}"   # один токен; APIFY_ID для вызовов не нужен
 # 1) ОДИН синхронный прогон: топ-посты по армянским хэштегам (≤12 на хэштег × 4 = ≤48)
-curl -s -X POST "https://api.apify.com/v2/acts/apify~instagram-hashtag-scraper/run-sync-get-dataset-items?token=$APIFY_TOKEN&timeout=180" \
+curl -s -X POST "https://api.apify.com/v2/acts/apify~instagram-hashtag-scraper/run-sync-get-dataset-items?token=$APIFY&timeout=180" \
   -H "Content-Type: application/json" \
   -d '{"hashtags":["hayastan","armenianfood","armenianmemes","armenianstyle"],"resultsLimit":12}' \
   > /tmp/apify-ig-snapshot.json
