@@ -1,0 +1,208 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Главная навигация" [ref=e3]:
+      - generic [ref=e11]:
+        - generic [ref=e12]: VERN·ATUN
+        - generic [ref=e13]: Content Factory
+      - generic [ref=e14]:
+        - paragraph [ref=e15]: Пайплайны и ноды
+        - navigation [ref=e16]:
+          - generic [ref=e17]:
+            - generic [ref=e18]:
+              - link "Студия" [ref=e19] [cursor=pointer]:
+                - /url: /studio
+              - button "Свернуть модули Студии" [expanded] [ref=e26]
+            - list [ref=e30]:
+              - listitem [ref=e31]:
+                - link "Карусели Instagram (4:5)" [ref=e32] [cursor=pointer]:
+                  - /url: /studio/carousel-engine
+              - listitem [ref=e33]:
+                - link "Полезные картинки & Инфографика" [ref=e34] [cursor=pointer]:
+                  - /url: /studio/aesthetic-graphics
+              - listitem [ref=e35]:
+                - link "Мульт-Reels (2D сторителлинг)" [ref=e36] [cursor=pointer]:
+                  - /url: /studio/cartoon-reels
+              - listitem [ref=e37]:
+                - link "HeyGen AI-Аватар Reels" [ref=e38] [cursor=pointer]:
+                  - /url: /studio/heygen-reels
+              - listitem [ref=e164]:
+                - link "Рилс" [ref=e165] [cursor=pointer]:
+                  - /url: /studio/custom-reels
+              - listitem [ref=e166]:
+                - link "Нарезки с видео в рилсы" [ref=e167] [cursor=pointer]:
+                  - /url: /studio/custom-clips-to-reels
+              - listitem [ref=e168]:
+                - link "Информационное видео" [ref=e169] [cursor=pointer]:
+                  - /url: /studio/custom-info-video
+          - link "Холст" [ref=e40] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=e48] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=e53] [cursor=pointer]:
+            - /url: /analytics
+          - link "Бренд-кит" [ref=e61] [cursor=pointer]:
+            - /url: /brand-kit
+          - link "Настройки" [ref=e70] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=e75]:
+        - paragraph [ref=e76]: Բարև · Vernatun
+        - generic [ref=e77]:
+          - paragraph [ref=e78]: Роль QA (локально)
+          - generic [ref=e79]:
+            - button "OWNER" [ref=e80]
+            - button "ADMIN" [ref=e81]
+    - main [ref=e83]:
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - paragraph [ref=e86]: // Рабочая страница модуля
+          - heading "Полезные картинки & Инфографика" [level=1] [ref=e87]
+          - paragraph [ref=e88]: Читы, таблицы и quote-тайлы для Telegram и LinkedIn.
+        - generic [ref=e89]:
+          - generic [ref=e170]: Демо-данные
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - generic [ref=e92]:
+                - generic [ref=e93]:
+                  - heading "Наши" [level=2] [ref=e95]
+                  - generic [ref=e96]: "3"
+                - tablist "Вкладки нашей ленты" [ref=e98]:
+                  - tab "Опубликовано" [selected] [ref=e99]
+                  - tab "Черновики" [ref=e101]
+              - generic [ref=e102]:
+                - article [ref=e173]:
+                  - generic [ref=e174]: Наши
+                  - generic [ref=e176]:
+                    - heading "Bilingual poster — Armenian Heritage Month" [level=3] [ref=e178]
+                    - generic [ref=e179]:
+                      - generic "Просмотры" [ref=e180]: 22K просмотры
+                      - generic "Лайки" [ref=e181]: 1.6K лайки
+                      - generic "Комментарии" [ref=e182]: 41 комм.
+                      - generic "Репосты" [ref=e183]: 62 репосты
+                    - generic [ref=e184]:
+                      - generic [ref=e185]: "#heritage"
+                      - generic [ref=e186]: "#bilingual"
+                      - generic [ref=e187]: "#poster"
+                - article [ref=e188]:
+                  - generic [ref=e189]: Наши
+                  - generic [ref=e191]:
+                    - 'heading "Quote card: hospitality values" [level=3] [ref=e193]'
+                    - generic [ref=e194]:
+                      - generic "Просмотры" [ref=e195]: 9.8K просмотры
+                      - generic "Лайки" [ref=e196]: 720 лайки
+                      - generic "Комментарии" [ref=e197]: 18 комм.
+                      - generic "Репосты" [ref=e198]: 29 репосты
+                    - generic [ref=e199]:
+                      - generic [ref=e200]: "#quote"
+                      - generic [ref=e201]: "#values"
+                      - generic [ref=e202]: "#hospitality"
+                - article [ref=e203]:
+                  - generic [ref=e204]: Наши
+                  - generic [ref=e206]:
+                    - 'heading "Infographic: tasting flight map" [level=3] [ref=e208]'
+                    - generic [ref=e209]:
+                      - generic "Просмотры" [ref=e210]: 17K просмотры
+                      - generic "Лайки" [ref=e211]: 1.1K лайки
+                      - generic "Комментарии" [ref=e212]: 27 комм.
+                      - generic "Репосты" [ref=e213]: 44 репосты
+                    - generic [ref=e214]:
+                      - generic [ref=e215]: "#infographic"
+                      - generic [ref=e216]: "#tasting"
+                      - generic [ref=e217]: "#wine"
+            - generic [ref=e106]:
+              - generic [ref=e107]:
+                - generic [ref=e108]:
+                  - heading "Конкуренты" [level=2] [ref=e110]
+                  - generic [ref=e111]: "4"
+                - searchbox "Поиск каруселей конкурентов" [ref=e117]
+              - generic [ref=e118]:
+                - article [ref=e218]:
+                  - generic [ref=e219]: Конкуренты
+                  - generic [ref=e221]:
+                    - heading "Minimal heritage month graphic" [level=3] [ref=e223]
+                    - generic [ref=e224]:
+                      - generic "Просмотры" [ref=e225]: 44K просмотры
+                      - generic "Лайки" [ref=e226]: 2.9K лайки
+                      - generic "Комментарии" [ref=e227]: 76 комм.
+                      - generic "Репосты" [ref=e228]: 118 репосты
+                    - generic [ref=e229]:
+                      - generic [ref=e230]: "#heritage"
+                      - generic [ref=e231]: "#minimal"
+                      - generic [ref=e232]: "#poster"
+                    - button "Разбор" [ref=e233]
+                - article [ref=e234]:
+                  - generic [ref=e235]: Конкуренты
+                  - generic [ref=e237]:
+                    - heading "Bilingual event flyer template" [level=3] [ref=e239]
+                    - generic [ref=e240]:
+                      - generic "Просмотры" [ref=e241]: 20K просмотры
+                      - generic "Лайки" [ref=e242]: 1.3K лайки
+                      - generic "Комментарии" [ref=e243]: 33 комм.
+                      - generic "Репосты" [ref=e244]: 54 репосты
+                    - generic [ref=e245]:
+                      - generic [ref=e246]: "#bilingual"
+                      - generic [ref=e247]: "#event"
+                      - generic [ref=e248]: "#flyer"
+                    - button "Разбор" [ref=e249]
+                - article [ref=e250]:
+                  - generic [ref=e251]: Конкуренты
+                  - generic [ref=e253]:
+                    - heading "Wine tasting infographic set" [level=3] [ref=e255]
+                    - generic [ref=e256]:
+                      - generic "Просмотры" [ref=e257]: 36K просмотры
+                      - generic "Лайки" [ref=e258]: 2.1K лайки
+                      - generic "Комментарии" [ref=e259]: 54 комм.
+                      - generic "Репосты" [ref=e260]: 86 репосты
+                    - generic [ref=e261]:
+                      - generic [ref=e262]: "#wine"
+                      - generic [ref=e263]: "#tasting"
+                      - generic [ref=e264]: "#infographic"
+                    - button "Разбор" [ref=e265]
+                - article [ref=e266]:
+                  - generic [ref=e267]: Конкуренты
+                  - generic [ref=e269]:
+                    - heading "Luxury hospitality quote series" [level=3] [ref=e271]
+                    - generic [ref=e272]:
+                      - generic "Просмотры" [ref=e273]: 12K просмотры
+                      - generic "Лайки" [ref=e274]: 880 лайки
+                      - generic "Комментарии" [ref=e275]: 19 комм.
+                      - generic "Репосты" [ref=e276]: 35 репосты
+                    - generic [ref=e277]:
+                      - generic [ref=e278]: "#quote"
+                      - generic [ref=e279]: "#luxury"
+                      - generic [ref=e280]: "#hospitality"
+                    - button "Разбор" [ref=e281]
+      - button "Закрыть панель генерации"
+      - complementary [aria-hidden] [ref=e122]:
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - paragraph [ref=e125]: Generation Log
+            - heading [level=2] [ref=e126]: Agent Pipeline
+          - button [ref=e127]: Close
+        - generic [ref=e128]:
+          - generic [ref=e129]:
+            - generic [ref=e130]: Progress
+            - generic [ref=e131]: 0%
+          - progressbar [ref=e132]
+        - list [ref=e133]:
+          - listitem [ref=e134]:
+            - generic [ref=e137]:
+              - generic [ref=e138]: The Researcher
+              - generic [ref=e139]: Ожидание...
+          - listitem [ref=e140]:
+            - generic [ref=e143]:
+              - generic [ref=e144]: The Hook Writer
+              - generic [ref=e145]: Ожидание...
+          - listitem [ref=e146]:
+            - generic [ref=e149]:
+              - generic [ref=e150]: The Script Writer
+              - generic [ref=e151]: Ожидание...
+          - listitem [ref=e152]:
+            - generic [ref=e155]:
+              - generic [ref=e156]: The Designer
+              - generic [ref=e157]: Ожидание...
+          - listitem [ref=e158]:
+            - generic [ref=e161]:
+              - generic [ref=e162]: Pipeline
+              - generic [ref=e163]: Ожидание...
+  - button "Open Next.js Dev Tools" [ref=e287] [cursor=pointer]
+  - alert [ref=e291]

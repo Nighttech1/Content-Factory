@@ -1,0 +1,427 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary "Главная навигация" [ref=f1e3]:
+      - generic [ref=f1e6]:
+        - generic [ref=f1e7]: VERNATUN
+        - generic [ref=f1e8]: ARMENIAN CLUB
+      - navigation [ref=f1e10]:
+        - generic [ref=f1e11]:
+          - link "Студия" [ref=f1e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f1e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f1e37] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f1e47]:
+        - paragraph [ref=f1e48]: Роль QA (локально)
+        - generic [ref=f1e49]:
+          - button "OWNER" [ref=f1e50]
+          - button "ADMIN" [ref=f1e51]
+      - button "Изменить ширину боковой панели" [ref=f1e52]
+    - main [ref=f1e54]:
+      - generic [ref=f1e55]:
+        - generic [ref=f1e57]:
+          - heading "Карусели Instagram (4:5)" [level=1] [ref=f1e58]
+          - generic [ref=f1e59]:
+            - link "Команда выпуска" [ref=f1e60] [cursor=pointer]:
+              - /url: /studio/carousel-engine/mesh
+            - link "Аналитика" [ref=f1e61] [cursor=pointer]:
+              - /url: /studio/carousel-engine/analytics
+            - button "Создать карусель" [ref=f1e62]
+        - generic [ref=f1e64]:
+          - generic [ref=f1e65]: Демо-данные
+          - generic [ref=f1e68]:
+            - generic [ref=f1e69]:
+              - generic [ref=f1e70]:
+                - generic [ref=f1e71]:
+                  - heading "Наши" [level=2] [ref=f1e73]
+                  - generic [ref=f1e75]: "12"
+                - tablist "Вкладки нашей ленты" [ref=f1e77]:
+                  - tab "Опубликовано" [selected] [ref=f1e78]
+                  - tab "Черновики" [ref=f1e80]
+              - generic [ref=f1e81]:
+                - article [ref=f1e82]:
+                  - generic [ref=f1e83]:
+                    - generic [ref=f1e85]: Наши
+                    - button "Предыдущий слайд" [ref=f1e86]
+                    - button "Следующий слайд" [ref=f1e89]
+                  - generic [ref=f1e92]:
+                    - heading "Armenian Club — 5 tips for guest night" [level=3] [ref=f1e94]
+                    - generic [ref=f1e95]:
+                      - generic "Просмотры" [ref=f1e96]: 19K просмотры
+                      - generic "Лайки" [ref=f1e97]: 1.2K лайки
+                      - generic "Комментарии" [ref=f1e98]: 48 комм.
+                      - generic "Репосты" [ref=f1e99]: 53 репосты
+                - article [ref=f1e100]:
+                  - generic [ref=f1e101]:
+                    - generic [ref=f1e103]: Наши
+                    - button "Предыдущий слайд" [ref=f1e104]
+                    - button "Следующий слайд" [ref=f1e107]
+                  - generic [ref=f1e110]:
+                    - 'heading "Carousel: menu highlights this week" [level=3] [ref=f1e112]'
+                    - generic [ref=f1e113]:
+                      - generic "Просмотры" [ref=f1e114]: 14K просмотры
+                      - generic "Лайки" [ref=f1e115]: 890 лайки
+                      - generic "Комментарии" [ref=f1e116]: 31 комм.
+                      - generic "Репосты" [ref=f1e117]: 37 репосты
+                - article [ref=f1e118]:
+                  - generic [ref=f1e119]:
+                    - generic [ref=f1e121]: Наши
+                    - button "Предыдущий слайд" [ref=f1e122]
+                    - button "Следующий слайд" [ref=f1e125]
+                  - generic [ref=f1e128]:
+                    - heading "Behind the bar — signature cocktails" [level=3] [ref=f1e130]
+                    - generic [ref=f1e131]:
+                      - generic "Просмотры" [ref=f1e132]: 28K просмотры
+                      - generic "Лайки" [ref=f1e133]: 2.1K лайки
+                      - generic "Комментарии" [ref=f1e134]: 72 комм.
+                      - generic "Репосты" [ref=f1e135]: 88 репосты
+                - article [ref=f1e136]:
+                  - generic [ref=f1e137]:
+                    - generic [ref=f1e139]: Наши
+                    - button "Предыдущий слайд" [ref=f1e140]
+                    - button "Следующий слайд" [ref=f1e143]
+                  - generic [ref=f1e146]:
+                    - 'heading "Wine flight: three Armenian reds" [level=3] [ref=f1e148]'
+                    - generic [ref=f1e149]:
+                      - generic "Просмотры" [ref=f1e150]: 22K просмотры
+                      - generic "Лайки" [ref=f1e151]: 1.6K лайки
+                      - generic "Комментарии" [ref=f1e152]: 44 комм.
+                      - generic "Репосты" [ref=f1e153]: 63 репосты
+                - article [ref=f1e154]:
+                  - generic [ref=f1e155]:
+                    - generic [ref=f1e157]: Наши
+                    - button "Предыдущий слайд" [ref=f1e158]
+                    - button "Следующий слайд" [ref=f1e161]
+                  - generic [ref=f1e164]:
+                    - heading "Table styling for Saturday dinner" [level=3] [ref=f1e166]
+                    - generic [ref=f1e167]:
+                      - generic "Просмотры" [ref=f1e168]: 15K просмотры
+                      - generic "Лайки" [ref=f1e169]: 980 лайки
+                      - generic "Комментарии" [ref=f1e170]: 29 комм.
+                      - generic "Репосты" [ref=f1e171]: 40 репосты
+                - article [ref=f1e172]:
+                  - generic [ref=f1e173]:
+                    - generic [ref=f1e175]: Наши
+                    - button "Предыдущий слайд" [ref=f1e176]
+                    - button "Следующий слайд" [ref=f1e179]
+                  - generic [ref=f1e182]:
+                    - heading "Chef specials — autumn mezze board" [level=3] [ref=f1e184]
+                    - generic [ref=f1e185]:
+                      - generic "Просмотры" [ref=f1e186]: 27K просмотры
+                      - generic "Лайки" [ref=f1e187]: 1.8K лайки
+                      - generic "Комментарии" [ref=f1e188]: 61 комм.
+                      - generic "Репосты" [ref=f1e189]: 75 репосты
+                - article [ref=f1e190]:
+                  - generic [ref=f1e191]:
+                    - generic [ref=f1e193]: Наши
+                    - button "Предыдущий слайд" [ref=f1e194]
+                    - button "Следующий слайд" [ref=f1e197]
+                  - generic [ref=f1e200]:
+                    - heading "Live music night lineup teaser" [level=3] [ref=f1e202]
+                    - generic [ref=f1e203]:
+                      - generic "Просмотры" [ref=f1e204]: 41K просмотры
+                      - generic "Лайки" [ref=f1e205]: 2.3K лайки
+                      - generic "Комментарии" [ref=f1e206]: 88 комм.
+                      - generic "Репосты" [ref=f1e207]: 100 репосты
+                - article [ref=f1e208]:
+                  - generic [ref=f1e209]:
+                    - generic [ref=f1e211]: Наши
+                    - button "Предыдущий слайд" [ref=f1e212]
+                    - button "Следующий слайд" [ref=f1e215]
+                  - generic [ref=f1e218]:
+                    - heading "Private dining room walkthrough" [level=3] [ref=f1e220]
+                    - generic [ref=f1e221]:
+                      - generic "Просмотры" [ref=f1e222]: 19K просмотры
+                      - generic "Лайки" [ref=f1e223]: 1.1K лайки
+                      - generic "Комментарии" [ref=f1e224]: 35 комм.
+                      - generic "Репосты" [ref=f1e225]: 46 репосты
+                - article [ref=f1e226]:
+                  - generic [ref=f1e227]:
+                    - generic [ref=f1e229]: Наши
+                    - button "Предыдущий слайд" [ref=f1e230]
+                    - button "Следующий слайд" [ref=f1e233]
+                  - generic [ref=f1e236]:
+                    - heading "Coffee & baklava afternoon set" [level=3] [ref=f1e238]
+                    - generic [ref=f1e239]:
+                      - generic "Просмотры" [ref=f1e240]: 12K просмотры
+                      - generic "Лайки" [ref=f1e241]: 760 лайки
+                      - generic "Комментарии" [ref=f1e242]: 22 комм.
+                      - generic "Репосты" [ref=f1e243]: 31 репосты
+                - article [ref=f1e244]:
+                  - generic [ref=f1e245]:
+                    - generic [ref=f1e247]: Наши
+                    - button "Предыдущий слайд" [ref=f1e248]
+                    - button "Следующий слайд" [ref=f1e251]
+                  - generic [ref=f1e254]:
+                    - heading "DJ warm-up playlist carousel" [level=3] [ref=f1e256]
+                    - generic [ref=f1e257]:
+                      - generic "Просмотры" [ref=f1e258]: 34K просмотры
+                      - generic "Лайки" [ref=f1e259]: 1.9K лайки
+                      - generic "Комментарии" [ref=f1e260]: 70 комм.
+                      - generic "Репосты" [ref=f1e261]: 80 репосты
+                - article [ref=f1e262]:
+                  - generic [ref=f1e263]:
+                    - generic [ref=f1e265]: Наши
+                    - button "Предыдущий слайд" [ref=f1e266]
+                    - button "Следующий слайд" [ref=f1e269]
+                  - generic [ref=f1e272]:
+                    - heading "How we plate lavash wraps" [level=3] [ref=f1e274]
+                    - generic [ref=f1e275]:
+                      - generic "Просмотры" [ref=f1e276]: 20K просмотры
+                      - generic "Лайки" [ref=f1e277]: 1.3K лайки
+                      - generic "Комментарии" [ref=f1e278]: 41 комм.
+                      - generic "Репосты" [ref=f1e279]: 55 репосты
+                - article [ref=f1e280]:
+                  - generic [ref=f1e281]:
+                    - generic [ref=f1e283]: Наши
+                    - button "Предыдущий слайд" [ref=f1e284]
+                    - button "Следующий слайд" [ref=f1e287]
+                  - generic [ref=f1e290]:
+                    - heading "Weekend brunch reservation reminder" [level=3] [ref=f1e292]
+                    - generic [ref=f1e293]:
+                      - generic "Просмотры" [ref=f1e294]: 15K просмотры
+                      - generic "Лайки" [ref=f1e295]: 920 лайки
+                      - generic "Комментарии" [ref=f1e296]: 27 комм.
+                      - generic "Репосты" [ref=f1e297]: 38 репосты
+            - generic [ref=f1e298]:
+              - generic [ref=f1e299]:
+                - generic [ref=f1e300]:
+                  - heading "Конкуренты" [level=2] [ref=f1e302]
+                  - generic [ref=f1e304]: "12"
+                - searchbox "Поиск конкурентов" [ref=f1e310]
+              - generic [ref=f1e311]:
+                - article [ref=f1e312]:
+                  - generic [ref=f1e313]:
+                    - generic [ref=f1e315]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e316]
+                    - button "Следующий слайд" [ref=f1e319]
+                  - generic [ref=f1e322]:
+                    - 'heading "Competitor: rooftop guest night invite" [level=3] [ref=f1e324]'
+                    - generic [ref=f1e325]:
+                      - generic "Просмотры" [ref=f1e326]: 52K просмотры
+                      - generic "Лайки" [ref=f1e327]: 3.4K лайки
+                      - generic "Комментарии" [ref=f1e328]: 110 комм.
+                      - generic "Репосты" [ref=f1e329]: 141 репосты
+                    - button "Разбор" [ref=f1e330]
+                - article [ref=f1e331]:
+                  - generic [ref=f1e332]:
+                    - generic [ref=f1e334]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e335]
+                    - button "Следующий слайд" [ref=f1e338]
+                  - generic [ref=f1e341]:
+                    - heading "Food carousel — seasonal menu drop" [level=3] [ref=f1e343]
+                    - generic [ref=f1e344]:
+                      - generic "Просмотры" [ref=f1e345]: 31K просмотры
+                      - generic "Лайки" [ref=f1e346]: 1.8K лайки
+                      - generic "Комментарии" [ref=f1e347]: 64 комм.
+                      - generic "Репосты" [ref=f1e348]: 76 репосты
+                    - button "Разбор" [ref=f1e349]
+                - article [ref=f1e350]:
+                  - generic [ref=f1e351]:
+                    - generic [ref=f1e353]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e354]
+                    - button "Следующий слайд" [ref=f1e357]
+                  - generic [ref=f1e360]:
+                    - heading "Cocktail flight education series" [level=3] [ref=f1e362]
+                    - generic [ref=f1e363]:
+                      - generic "Просмотры" [ref=f1e364]: 16K просмотры
+                      - generic "Лайки" [ref=f1e365]: 960 лайки
+                      - generic "Комментарии" [ref=f1e366]: 22 комм.
+                      - generic "Репосты" [ref=f1e367]: 38 репосты
+                    - button "Разбор" [ref=f1e368]
+                - article [ref=f1e369]:
+                  - generic [ref=f1e370]:
+                    - generic [ref=f1e372]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e373]
+                    - button "Следующий слайд" [ref=f1e376]
+                  - generic [ref=f1e379]:
+                    - heading "Wedding venue walkthrough slides" [level=3] [ref=f1e381]
+                    - generic [ref=f1e382]:
+                      - generic "Просмотры" [ref=f1e383]: 68K просмотры
+                      - generic "Лайки" [ref=f1e384]: 4.2K лайки
+                      - generic "Комментарии" [ref=f1e385]: 95 комм.
+                      - generic "Репосты" [ref=f1e386]: 166 репосты
+                    - button "Разбор" [ref=f1e387]
+                - article [ref=f1e388]:
+                  - generic [ref=f1e389]:
+                    - generic [ref=f1e391]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e392]
+                    - button "Следующий слайд" [ref=f1e395]
+                  - generic [ref=f1e398]:
+                    - heading "DJ night hype carousel" [level=3] [ref=f1e400]
+                    - generic [ref=f1e401]:
+                      - generic "Просмотры" [ref=f1e402]: 41K просмотры
+                      - generic "Лайки" [ref=f1e403]: 2.7K лайки
+                      - generic "Комментарии" [ref=f1e404]: 88 комм.
+                      - generic "Репосты" [ref=f1e405]: 112 репосты
+                    - button "Разбор" [ref=f1e406]
+                - article [ref=f1e407]:
+                  - generic [ref=f1e408]:
+                    - generic [ref=f1e410]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e411]
+                    - button "Следующий слайд" [ref=f1e414]
+                  - generic [ref=f1e417]:
+                    - heading "Brunch reservation story pack" [level=3] [ref=f1e419]
+                    - generic [ref=f1e420]:
+                      - generic "Просмотры" [ref=f1e421]: 36K просмотры
+                      - generic "Лайки" [ref=f1e422]: 2.1K лайки
+                      - generic "Комментарии" [ref=f1e423]: 71 комм.
+                      - generic "Репосты" [ref=f1e424]: 88 репосты
+                    - button "Разбор" [ref=f1e425]
+                - article [ref=f1e426]:
+                  - generic [ref=f1e427]:
+                    - generic [ref=f1e429]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e430]
+                    - button "Следующий слайд" [ref=f1e433]
+                  - generic [ref=f1e436]:
+                    - heading "Heritage month bilingual graphics" [level=3] [ref=f1e438]
+                    - generic [ref=f1e439]:
+                      - generic "Просмотры" [ref=f1e440]: 30K просмотры
+                      - generic "Лайки" [ref=f1e441]: 1.9K лайки
+                      - generic "Комментарии" [ref=f1e442]: 58 комм.
+                      - generic "Репосты" [ref=f1e443]: 78 репосты
+                    - button "Разбор" [ref=f1e444]
+                - article [ref=f1e445]:
+                  - generic [ref=f1e446]:
+                    - generic [ref=f1e448]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e449]
+                    - button "Следующий слайд" [ref=f1e452]
+                  - generic [ref=f1e455]:
+                    - heading "Pomegranate cocktail tutorial" [level=3] [ref=f1e457]
+                    - generic [ref=f1e458]:
+                      - generic "Просмотры" [ref=f1e459]: 24K просмотры
+                      - generic "Лайки" [ref=f1e460]: 1.5K лайки
+                      - generic "Комментарии" [ref=f1e461]: 49 комм.
+                      - generic "Репосты" [ref=f1e462]: 62 репосты
+                    - button "Разбор" [ref=f1e463]
+                - article [ref=f1e464]:
+                  - generic [ref=f1e465]:
+                    - generic [ref=f1e467]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e468]
+                    - button "Следующий слайд" [ref=f1e471]
+                  - generic [ref=f1e474]:
+                    - heading "Private dining upsell carousel" [level=3] [ref=f1e476]
+                    - generic [ref=f1e477]:
+                      - generic "Просмотры" [ref=f1e478]: 20K просмотры
+                      - generic "Лайки" [ref=f1e479]: 1.3K лайки
+                      - generic "Комментарии" [ref=f1e480]: 36 комм.
+                      - generic "Репосты" [ref=f1e481]: 52 репосты
+                    - button "Разбор" [ref=f1e482]
+                - article [ref=f1e483]:
+                  - generic [ref=f1e484]:
+                    - generic [ref=f1e486]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e487]
+                    - button "Следующий слайд" [ref=f1e490]
+                  - generic [ref=f1e493]:
+                    - heading "Autumn mezze board competitor take" [level=3] [ref=f1e495]
+                    - generic [ref=f1e496]:
+                      - generic "Просмотры" [ref=f1e497]: 28K просмотры
+                      - generic "Лайки" [ref=f1e498]: 1.8K лайки
+                      - generic "Комментарии" [ref=f1e499]: 62 комм.
+                      - generic "Репосты" [ref=f1e500]: 74 репосты
+                    - button "Разбор" [ref=f1e501]
+                - article [ref=f1e502]:
+                  - generic [ref=f1e503]:
+                    - generic [ref=f1e505]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e506]
+                    - button "Следующий слайд" [ref=f1e509]
+                  - generic [ref=f1e512]:
+                    - heading "Live jazz night promo slides" [level=3] [ref=f1e514]
+                    - generic [ref=f1e515]:
+                      - generic "Просмотры" [ref=f1e516]: 39K просмотры
+                      - generic "Лайки" [ref=f1e517]: 2.3K лайки
+                      - generic "Комментарии" [ref=f1e518]: 80 комм.
+                      - generic "Репосты" [ref=f1e519]: 97 репосты
+                    - button "Разбор" [ref=f1e520]
+                - article [ref=f1e521]:
+                  - generic [ref=f1e522]:
+                    - generic [ref=f1e524]: Конкуренты
+                    - button "Предыдущий слайд" [ref=f1e525]
+                    - button "Следующий слайд" [ref=f1e528]
+                  - generic [ref=f1e531]:
+                    - heading "Baklava & coffee afternoon set" [level=3] [ref=f1e533]
+                    - generic [ref=f1e534]:
+                      - generic "Просмотры" [ref=f1e535]: 14K просмотры
+                      - generic "Лайки" [ref=f1e536]: 880 лайки
+                      - generic "Комментарии" [ref=f1e537]: 24 комм.
+                      - generic "Репосты" [ref=f1e538]: 36 репосты
+                    - button "Разбор" [ref=f1e539]
+      - button "Закрыть панель генерации"
+      - complementary [aria-hidden] [ref=f1e540]:
+        - generic [ref=f1e541]:
+          - generic [ref=f1e542]:
+            - paragraph [ref=f1e543]: Журнал генерации
+            - heading [level=2] [ref=f1e544]: Конвейер агентов
+          - button [ref=f1e545]: Закрыть
+        - generic [ref=f1e546]:
+          - generic [ref=f1e547]:
+            - generic [ref=f1e548]: Прогресс
+            - generic [ref=f1e549]: 0%
+          - progressbar [ref=f1e550]
+        - list [ref=f1e551]:
+          - listitem [ref=f1e552]:
+            - generic [ref=f1e555]:
+              - generic [ref=f1e556]: Исследователь
+              - generic [ref=f1e557]: Ожидание...
+          - listitem [ref=f1e558]:
+            - generic [ref=f1e561]:
+              - generic [ref=f1e562]: Автор хуков
+              - generic [ref=f1e563]: Ожидание...
+          - listitem [ref=f1e564]:
+            - generic [ref=f1e567]:
+              - generic [ref=f1e568]: Сценарист
+              - generic [ref=f1e569]: Ожидание...
+          - listitem [ref=f1e570]:
+            - generic [ref=f1e573]:
+              - generic [ref=f1e574]: Дизайнер
+              - generic [ref=f1e575]: Ожидание...
+          - listitem [ref=f1e576]:
+            - generic [ref=f1e579]:
+              - generic [ref=f1e580]: Конвейер
+              - generic [ref=f1e581]: Ожидание...
+        - generic [ref=f1e583]:
+          - generic:
+            - textbox [disabled]:
+              - /placeholder: Заметка активному шагу…
+            - generic:
+              - generic:
+                - button:
+                  - generic: Attach image
+                - button: Tools
+                - generic:
+                  - button [disabled]:
+                    - generic: Record voice
+                  - button [disabled]:
+                    - generic: Send message
+      - dialog [ref=f1e585]:
+        - button "Закрыть" [ref=f1e586]
+        - generic [ref=f1e587]:
+          - generic [ref=f1e588]:
+            - generic [ref=f1e589]:
+              - heading "Создать карусель" [level=2] [ref=f1e590]
+              - tablist "Шаги создания карусели" [ref=f1e591]:
+                - tab "Сценарист" [ref=f1e592]
+                - tab "Дизайнер" [active] [selected] [ref=f1e594]
+                - tab "Публикация" [ref=f1e596]
+            - button "Закрыть" [ref=f1e600]
+          - generic [ref=f1e604]:
+            - generic [ref=f1e605]:
+              - list [ref=f1e607]:
+                - listitem [ref=f1e626]:
+                  - paragraph [ref=f1e628]:
+                    - text: Жду brief от сценариста. После получения задания опишу кадры; затем нажмите
+                    - strong [ref=f1e629]: «Нарисовать»
+                    - text: .
+              - generic [ref=f1e613]:
+                - generic:
+                  - textbox "Правка описания дизайнеру…" [disabled]
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "Голосовой ввод" [disabled]:
+                          - generic: Record voice
+                        - button "Отправить сообщение" [disabled]:
+                          - generic: Send message
+            - paragraph [ref=f1e625]: Карусель появится после «Нарисовать»
+  - alert [ref=f1e584]

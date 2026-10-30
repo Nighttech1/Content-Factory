@@ -1,0 +1,82 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - complementary "Главная навигация" [ref=f2e3]:
+      - generic [ref=f2e6]:
+        - generic [ref=f2e7]: VERNATUN
+        - generic [ref=f2e8]: ARMENIAN CLUB
+      - navigation [ref=f2e10]:
+        - generic [ref=f2e11]:
+          - link "Студия" [ref=f2e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f2e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f2e37] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f2e47]:
+        - paragraph [ref=f2e48]: Роль QA (локально)
+        - generic [ref=f2e49]:
+          - button "OWNER" [ref=f2e50]
+          - button "ADMIN" [ref=f2e51]
+      - button "Изменить ширину боковой панели" [ref=f2e52]
+    - main [ref=f2e54]:
+      - generic [ref=f2e55]:
+        - 'heading "Команда выпуска: Рилс" [level=1] [ref=f2e56]'
+        - generic [ref=f2e58]:
+          - generic [ref=f2e60]:
+            - 'heading "Команда выпуска: Рилс" [level=1] [ref=f2e61]'
+            - paragraph [ref=f2e62]: Пайплайн создания и публикации контента. Кликните на любого агента для детальной настройки.
+          - generic [ref=f2e65]:
+            - img [aria-hidden]:
+              - generic:
+                - generic: запрос
+                - generic: сценарий
+                - generic: медиа
+                - generic: фильтр
+                - generic: выводы
+            - generic [ref=f2e66]:
+              - generic [ref=f2e67]:
+                - generic [ref=f2e68]:
+                  - generic [ref=f2e75]:
+                    - generic [ref=f2e76]:
+                      - generic [ref=f2e77]: Боевой бриф
+                      - generic [ref=f2e78]: Клиент
+                    - heading "Пользователь" [level=3] [ref=f2e79]
+                  - textbox "Боевой бриф модуля…" [ref=f2e81]: "МИССИЯ: вертикальный рилс 15–30с, hook→value→CTA. АУДИТОРИЯ: холодный Recs + тёплые подписчики. ТОН: динамичный, крупные субтитры. СТРУКТУРА: хук 0–2с → ценность → CTA на экране и в подписи. ЗАПРЕТЫ: тихие первые секунды, мелкий текст, водяные знаки. CTA: лайк/коммент/переход по ссылке в шапке."
+                - button "Слайды & Текст Сценарист Хуки и сценарий" [ref=f2e82]:
+                  - generic [ref=f2e94]:
+                    - text: Слайды & Текст
+                    - heading "Сценарист" [level=3] [ref=f2e95]
+                    - generic [ref=f2e96]: Хуки и сценарий
+                - 'button "Визуал & Сетка Монтажёр рилсов Промпты и стили 📄 design.md База Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления." [ref=f2e97]':
+                  - generic [ref=f2e113]:
+                    - text: Визуал & Сетка
+                    - heading "Монтажёр рилсов" [level=3] [ref=f2e114]
+                    - generic [ref=f2e115]: Промпты и стили
+                  - generic [ref=f2e120]:
+                    - generic [ref=f2e121]:
+                      - generic [ref=f2e122]: 📄 design.md
+                      - generic [ref=f2e123]: База
+                    - paragraph [ref=f2e124]: "Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления."
+                - button "Выгрузка & Пост Публицист Дистрибуция каналов" [ref=f2e125]:
+                  - generic [ref=f2e138]:
+                    - text: Выгрузка & Пост
+                    - heading "Публицист" [level=3] [ref=f2e139]
+                    - generic [ref=f2e140]: Дистрибуция каналов
+              - generic [ref=f2e141]:
+                - button "Мониторинг Скаут Тренды & Референсы" [ref=f2e142]:
+                  - generic [ref=f2e155]:
+                    - text: Мониторинг
+                    - heading "Скаут" [level=3] [ref=f2e156]
+                    - generic [ref=f2e157]: Тренды & Референсы
+                - button "Метрики Аналитик ERR & Дочитывания" [ref=f2e158]:
+                  - generic [ref=f2e168]:
+                    - text: Метрики
+                    - heading "Аналитик" [level=3] [ref=f2e169]
+                    - generic [ref=f2e170]: ERR & Дочитывания
+                - button "Обучение Тренер RLHF & Обновление баз" [ref=f2e171]:
+                  - generic [ref=f2e186]:
+                    - text: Обучение
+                    - heading "Тренер" [level=3] [ref=f2e187]
+                    - generic [ref=f2e188]: RLHF & Обновление баз
+  - button "Open Next.js Dev Tools" [ref=f2e194] [cursor=pointer]
+  - alert [ref=f2e198]

@@ -1,0 +1,71 @@
+- generic [ref=f4e2]:
+  - complementary "Главная навигация" [ref=f4e3]:
+    - generic [ref=f4e6]:
+      - generic [ref=f4e7]: VERNATUN
+      - generic [ref=f4e8]: ARMENIAN CLUB
+    - navigation [ref=f4e10]:
+      - generic [ref=f4e11]:
+        - link "Студия" [ref=f4e14] [cursor=pointer]:
+          - /url: /studio
+        - link "Расписание" [ref=f4e27] [cursor=pointer]:
+          - /url: /schedule
+        - link "Настройки" [ref=f4e37] [cursor=pointer]:
+          - /url: /settings
+        - link "Директор" [ref=f4e48] [cursor=pointer]:
+          - /url: /marketing
+    - generic [ref=f4e58]:
+      - paragraph [ref=f4e59]: Роль QA (локально)
+      - generic [ref=f4e60]:
+        - button "OWNER" [ref=f4e61]
+        - button "ADMIN" [ref=f4e62]
+    - button "Изменить ширину боковой панели" [ref=f4e63]
+  - main [ref=f4e65]:
+    - generic [ref=f4e66]:
+      - generic [ref=f4e68]:
+        - heading "Студия" [level=1] [ref=f4e69]
+        - paragraph [ref=f4e70]: Здесь выбираете канал выпуска — карусели, рилсы, статьи на сайт или в Telegram — и открываете рабочее место модуля.
+      - region [ref=f4e71]:
+        - heading "Каналы рендера" [level=2] [ref=f4e73]
+        - generic [ref=f4e74]:
+          - link "Карусели Instagram (4:5) Редакционная карусель 1080×1350 с типографикой и CTA-слайдом. Открыть →" [ref=f4e76] [cursor=pointer]:
+            - /url: /studio/carousel-engine
+            - generic [ref=f4e78]:
+              - generic [ref=f4e79]:
+                - generic [ref=f4e80]: Карусели Instagram (4:5)
+                - paragraph [ref=f4e81]: Редакционная карусель 1080×1350 с типографикой и CTA-слайдом.
+              - generic [ref=f4e82]: Открыть →
+          - link "Полезные картинки & Инфографика Читы, таблицы и quote-тайлы для Telegram и LinkedIn. Открыть →" [ref=f4e84] [cursor=pointer]:
+            - /url: /studio/aesthetic-graphics
+            - generic [ref=f4e86]:
+              - generic [ref=f4e87]:
+                - generic [ref=f4e88]: Полезные картинки & Инфографика
+                - paragraph [ref=f4e89]: Читы, таблицы и quote-тайлы для Telegram и LinkedIn.
+              - generic [ref=f4e90]: Открыть →
+          - link "Мульт-Reels (2D сторителлинг) Иллюстрированный сторителлинг 9:16 с субтитрами. Открыть →" [ref=f4e92] [cursor=pointer]:
+            - /url: /studio/cartoon-reels
+            - generic [ref=f4e94]:
+              - generic [ref=f4e95]:
+                - generic [ref=f4e96]: Мульт-Reels (2D сторителлинг)
+                - paragraph [ref=f4e97]: Иллюстрированный сторителлинг 9:16 с субтитрами.
+              - generic [ref=f4e98]: Открыть →
+          - link "HeyGen AI-Аватар Reels Говорящий аватар с синхроном губ и бренд-палитрой. Открыть →" [ref=f4e100] [cursor=pointer]:
+            - /url: /studio/heygen-reels
+            - generic [ref=f4e102]:
+              - generic [ref=f4e103]:
+                - generic [ref=f4e104]: HeyGen AI-Аватар Reels
+                - paragraph [ref=f4e105]: Говорящий аватар с синхроном губ и бренд-палитрой.
+              - generic [ref=f4e106]: Открыть →
+          - 'link "Статьи на сайт Длинные редакционные материалы для сайта Vernatun: структура, SEO-заголовок и CTA. Открыть →" [ref=f4e108] [cursor=pointer]':
+            - /url: /studio/site-articles
+            - generic [ref=f4e110]:
+              - generic [ref=f4e111]:
+                - generic [ref=f4e112]: Статьи на сайт
+                - paragraph [ref=f4e113]: "Длинные редакционные материалы для сайта Vernatun: структура, SEO-заголовок и CTA."
+              - generic [ref=f4e114]: Открыть →
+          - 'link "Статьи в TG Посты и лонгриды для Telegram-канала: хук, абзацы и кнопка перехода. Открыть →" [ref=f4e116] [cursor=pointer]':
+            - /url: /studio/tg-articles
+            - generic [ref=f4e118]:
+              - generic [ref=f4e119]:
+                - generic [ref=f4e120]: Статьи в TG
+                - paragraph [ref=f4e121]: "Посты и лонгриды для Telegram-канала: хук, абзацы и кнопка перехода."
+              - generic [ref=f4e122]: Открыть →

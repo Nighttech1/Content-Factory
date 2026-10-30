@@ -1,0 +1,50 @@
+{
+  "project": "vernatun",
+  "content_id": "golden-alphabet-mashdots",
+  "contentType": "carousel",
+  "requested_slide_count": 3,
+  "idea": "Маштоц создал не просто буквы — он дал дом языку диаспоры. Армянский алфавит как якорь идентичности для детей вдали от Армении.",
+  "hook": "Буква дышит?",
+  "tone": "vernatun",
+  "cta_type": 2,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Буква дышит?",
+      "secondary_copy": "",
+      "swipe_trigger": "META: philosophical gap — может ли символ быть живым, может ли алфавит быть домом",
+      "visual_prompt": "dark_editorial charcoal texture, single Armenian letter (Ա) hand-drawn with soft gold outline, warm side light from left, no purple glow, breath-like steam wisps around letter, Vernatun mark tiny bottom-left",
+      "alt_text": "Армянская буква Ա с золотым контуром на чёрном фоне"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "point",
+      "primary_copy": "Маштоц дал нам дом",
+      "secondary_copy": "405 год. Святой Маштоц создал армянский алфавит — не просто письмо, а якорь. Для детей в Лос-Анджелесе, Париже, Москве — язык остаётся домом.",
+      "swipe_trigger": "META: historical proof — конкретный момент, когда буква стала защитой диаспоры",
+      "visual_prompt": "dark_editorial bento-style layout, historical vignette: Mashtots silhouette with quill, soft amber accent line crossing vertical to next slide, Armenian alphabet grid faint behind, charcoal depth, no stock illustration",
+      "alt_text": "Маштоц с пером и армянский алфавит в историческом кадре"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta",
+      "primary_copy": "Хочешь ещё такого?",
+      "secondary_copy": "Подписывайся — разборы языка, истории, идентичности. Vernatun.",
+      "swipe_trigger": "META: soft end — subscribe CTA; stop here",
+      "visual_prompt": "dark_editorial gold CTA button solid, Armenian letter Ա glowing soft amber behind button, Vernatun pomegranate mark, premium editorial feel, no purple CTA pill",
+      "alt_text": "CTA подписка на Vernatun",
+      "cta_type": 2
+    }
+  ],
+  "caption": "Маштоц создал не буквы. Он дал дом языку диаспоры. Vernatun.",
+  "hashtags": [
+    "#Vernatun",
+    "#АрмянскийАлфавит",
+    "#Маштоц",
+    "#Диаспора",
+    "#Язык",
+    "#Идентичность"
+  ],
+  "promptForDesigner": "dark_editorial: hand-drawn letter + historical vignette + gold CTA; HTML/CSS-first 3×4:5; warm amber light only; ignore swipe_trigger paint; Vernatun brand mark"
+}

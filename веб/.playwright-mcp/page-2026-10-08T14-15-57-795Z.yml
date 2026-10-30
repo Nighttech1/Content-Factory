@@ -1,0 +1,76 @@
+- generic [ref=f4e2]:
+  - complementary "Главная навигация" [ref=f4e3]:
+    - generic [ref=f4e11]:
+      - generic [ref=f4e12]: VERN·ATUN
+      - generic [ref=f4e13]: Content Factory
+    - navigation [ref=f4e15]:
+      - generic [ref=f4e16]:
+        - link "Студия" [ref=f4e19] [cursor=pointer]:
+          - /url: /studio
+        - link "Команда выпуска" [ref=f4e32] [cursor=pointer]:
+          - /url: /admin/mesh
+        - link "Расписание" [ref=f4e45] [cursor=pointer]:
+          - /url: /schedule
+        - link "Аналитика" [ref=f4e55] [cursor=pointer]:
+          - /url: /analytics
+        - link "Настройки" [ref=f4e68] [cursor=pointer]:
+          - /url: /settings
+    - generic [ref=f4e78]:
+      - paragraph [ref=f4e79]: Роль QA (локально)
+      - generic [ref=f4e80]:
+        - button "OWNER" [ref=f4e81]
+        - button "ADMIN" [ref=f4e82]
+    - button "Изменить ширину боковой панели" [ref=f4e83]
+  - main [ref=f4e85]:
+    - generic [ref=f4e86]:
+      - generic [ref=f4e88]:
+        - heading "Студия" [level=1] [ref=f4e89]
+        - paragraph [ref=f4e90]: Здесь выбираете канал выпуска — карусели, рилсы, статьи на сайт или в Telegram — и открываете рабочее место с лентой «Наши» и «Конкуренты».
+      - region [ref=f4e91]:
+        - heading "Каналы рендера" [level=2] [ref=f4e93]
+        - generic [ref=f4e94]:
+          - link "Карусели Instagram (4:5) Редакционная карусель 1080×1350 с типографикой и CTA-слайдом. Открыть →" [ref=f4e96] [cursor=pointer]:
+            - /url: /studio/carousel-engine
+            - generic [ref=f4e98]:
+              - generic [ref=f4e99]:
+                - generic [ref=f4e100]: Карусели Instagram (4:5)
+                - paragraph [ref=f4e101]: Редакционная карусель 1080×1350 с типографикой и CTA-слайдом.
+              - generic [ref=f4e102]: Открыть →
+          - link "Полезные картинки & Инфографика Читы, таблицы и quote-тайлы для Telegram и LinkedIn. Открыть →" [ref=f4e104] [cursor=pointer]:
+            - /url: /studio/aesthetic-graphics
+            - generic [ref=f4e106]:
+              - generic [ref=f4e107]:
+                - generic [ref=f4e108]: Полезные картинки & Инфографика
+                - paragraph [ref=f4e109]: Читы, таблицы и quote-тайлы для Telegram и LinkedIn.
+              - generic [ref=f4e110]: Открыть →
+          - link "Мульт-Reels (2D сторителлинг) Иллюстрированный сторителлинг 9:16 с субтитрами. Открыть →" [ref=f4e112] [cursor=pointer]:
+            - /url: /studio/cartoon-reels
+            - generic [ref=f4e114]:
+              - generic [ref=f4e115]:
+                - generic [ref=f4e116]: Мульт-Reels (2D сторителлинг)
+                - paragraph [ref=f4e117]: Иллюстрированный сторителлинг 9:16 с субтитрами.
+              - generic [ref=f4e118]: Открыть →
+          - link "HeyGen AI-Аватар Reels Говорящий аватар с синхроном губ и бренд-палитрой. Открыть →" [ref=f4e120] [cursor=pointer]:
+            - /url: /studio/heygen-reels
+            - generic [ref=f4e122]:
+              - generic [ref=f4e123]:
+                - generic [ref=f4e124]: HeyGen AI-Аватар Reels
+                - paragraph [ref=f4e125]: Говорящий аватар с синхроном губ и бренд-палитрой.
+              - generic [ref=f4e126]: Открыть →
+          - 'link "Статьи на сайт Длинные редакционные материалы для сайта Vernatun: структура, SEO-заголовок и CTA. Открыть →" [ref=f4e128] [cursor=pointer]':
+            - /url: /studio/site-articles
+            - generic [ref=f4e130]:
+              - generic [ref=f4e131]:
+                - generic [ref=f4e132]: Статьи на сайт
+                - paragraph [ref=f4e133]: "Длинные редакционные материалы для сайта Vernatun: структура, SEO-заголовок и CTA."
+              - generic [ref=f4e134]: Открыть →
+          - 'link "Статьи в TG Посты и лонгриды для Telegram-канала: хук, абзацы и кнопка перехода. Открыть →" [ref=f4e136] [cursor=pointer]':
+            - /url: /studio/tg-articles
+            - generic [ref=f4e138]:
+              - generic [ref=f4e139]:
+                - generic [ref=f4e140]: Статьи в TG
+                - paragraph [ref=f4e141]: "Посты и лонгриды для Telegram-канала: хук, абзацы и кнопка перехода."
+              - generic [ref=f4e142]: Открыть →
+          - button "+ [+ Добавить модуль]" [ref=f4e144]:
+            - generic [ref=f4e145]: +
+            - generic [ref=f4e146]: "[+ Добавить модуль]"

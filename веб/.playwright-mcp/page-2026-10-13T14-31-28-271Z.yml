@@ -1,0 +1,550 @@
+- generic [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - complementary "Главная навигация" [ref=f2e3]:
+      - generic [ref=f2e6]:
+        - generic [ref=f2e7]: VERNATUN
+        - generic [ref=f2e8]: ARMENIAN CLUB
+      - navigation [ref=f2e10]:
+        - generic [ref=f2e11]:
+          - link "Студия" [ref=f2e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f2e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f2e37] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f2e47]:
+        - paragraph [ref=f2e48]: Роль QA (локально)
+        - generic [ref=f2e49]:
+          - button "OWNER" [ref=f2e50]
+          - button "ADMIN" [ref=f2e51]
+      - button "Изменить ширину боковой панели" [ref=f2e52]
+    - main [ref=f2e54]:
+      - generic [ref=f2e55]:
+        - 'heading "Команда выпуска: Карусели Instagram (4:5)" [level=1] [ref=f2e56]'
+        - generic [ref=f2e58]:
+          - generic [ref=f2e60]:
+            - 'heading "Команда выпуска: Карусели Instagram (4:5)" [level=1] [ref=f2e61]'
+            - paragraph [ref=f2e62]: Пайплайн создания и публикации контента. Кликните на любого агента для детальной настройки.
+          - generic [ref=f2e63]:
+            - generic [ref=f2e65]:
+              - img [aria-hidden]:
+                - generic:
+                  - generic: запрос
+                  - generic: разбор
+                  - generic: сценарий
+                  - generic: медиа
+                  - generic: фильтр
+                  - generic: выводы
+              - generic [ref=f2e66]:
+                - generic [ref=f2e67]:
+                  - generic [ref=f2e68]:
+                    - generic [ref=f2e75]:
+                      - text: Клиент
+                      - heading "Задание" [level=3] [ref=f2e76]
+                    - textbox "Задание" [ref=f2e78]:
+                      - /placeholder: ""
+                  - button "Декомпозиция Разборщик Структура и тезисы" [ref=f2e79]:
+                    - generic [ref=f2e92]:
+                      - text: Декомпозиция
+                      - heading "Разборщик" [level=3] [ref=f2e93]
+                      - generic [ref=f2e94]: Структура и тезисы
+                  - button "Слайды & Текст Копирайтер каруселей Хуки и сценарий" [ref=f2e95]:
+                    - generic [ref=f2e107]:
+                      - text: Слайды & Текст
+                      - heading "Копирайтер каруселей" [level=3] [ref=f2e108]
+                      - generic [ref=f2e109]: Хуки и сценарий
+                  - 'button "Визуал & Сетка Дизайнер карусели Промпты и стили 📄 design.md База Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления." [ref=f2e110]':
+                    - generic [ref=f2e126]:
+                      - text: Визуал & Сетка
+                      - heading "Дизайнер карусели" [level=3] [ref=f2e127]
+                      - generic [ref=f2e128]: Промпты и стили
+                    - generic [ref=f2e133]:
+                      - generic [ref=f2e134]:
+                        - generic [ref=f2e135]: 📄 design.md
+                        - generic [ref=f2e136]: База
+                      - paragraph [ref=f2e137]: "Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления."
+                  - button "Выгрузка & Пост Публицист Дистрибуция каналов" [ref=f2e138]:
+                    - generic [ref=f2e151]:
+                      - text: Выгрузка & Пост
+                      - heading "Публицист" [level=3] [ref=f2e152]
+                      - generic [ref=f2e153]: Дистрибуция каналов
+                - generic [ref=f2e154]:
+                  - button "Мониторинг Скаут Тренды & Референсы" [ref=f2e155]:
+                    - generic [ref=f2e168]:
+                      - text: Мониторинг
+                      - heading "Скаут" [level=3] [ref=f2e169]
+                      - generic [ref=f2e170]: Тренды & Референсы
+                  - button "Метрики Аналитик ERR & Дочитывания" [ref=f2e171]:
+                    - generic [ref=f2e181]:
+                      - text: Метрики
+                      - heading "Аналитик" [level=3] [ref=f2e182]
+                      - generic [ref=f2e183]: ERR & Дочитывания
+                  - button "Обучение Тренер RLHF & Обновление баз" [ref=f2e184]:
+                    - generic [ref=f2e199]:
+                      - text: Обучение
+                      - heading "Тренер" [level=3] [ref=f2e200]
+                      - generic [ref=f2e201]: RLHF & Обновление баз
+            - 'complementary "Инспектор: Дизайнер карусели" [ref=f2e203]':
+              - separator "Изменить ширину инспектора" [ref=f2e204]
+              - generic [ref=f2e205]:
+                - generic [ref=f2e218]:
+                  - generic [ref=f2e219]:
+                    - heading "Дизайнер карусели" [level=2] [ref=f2e220]
+                    - generic [ref=f2e221]: Дизайн / сборка
+                  - paragraph [ref=f2e222]: Назначение агента в пайплайне
+                  - generic [ref=f2e223]:
+                    - checkbox "Активен" [checked] [ref=f2e224]
+                    - text: Активен
+                - button "Закрыть инспектор" [ref=f2e225]
+              - generic [ref=f2e229]:
+                - button "Инструкция" [ref=f2e230]
+                - button "Скиллы & Инструменты" [ref=f2e231]
+                - button "Модель & Параметры" [active] [ref=f2e232]
+              - generic [ref=f2e244]:
+                - generic [ref=f2e245]:
+                  - generic [ref=f2e246]: Языковая модель (LLM)
+                  - combobox [ref=f2e247]:
+                    - option "Claude Sonnet"
+                    - option "GPT-4o"
+                    - option "GPT-4o mini"
+                    - option "Claude Haiku 3.5"
+                    - 'option "Anthropic: Claude Haiku 4.5"'
+                    - 'option "OpenAI: GPT-5.4 Image 2 · image" [selected]'
+                    - 'option "Google: Gemini 2.5 Flash Image (Nano Banana) · image"'
+                    - 'option "Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) · image"'
+                    - 'option "OpenAI: GPT-5 Image Mini · image"'
+                    - 'option "StepFun: Step 5 Preview"'
+                    - 'option "ElevenLabs: Eleven v4"'
+                    - 'option "Anthropic: Claude Haiku 5.5"'
+                    - option "Qwen3 TTS 1.7B Custom Voice"
+                    - option "BGE Multilingual Gemma2"
+                    - 'option "Google: Nano Banana 2.1"'
+                    - 'option "OpenAI: GPT-6.1 Sol"'
+                    - 'option "OpenAI: GPT-6.1 Sol Pro"'
+                    - 'option "Anthropic: Claude Sonnet 5.5"'
+                    - 'option "Perceptron: Perceptron Mk1.5"'
+                    - option "GPT Image 2.5 Flare · image"
+                    - 'option "Fireworks: Ember-1"'
+                    - 'option "Google: Gemini 3.8 Flash TTS"'
+                    - 'option "Google: Gemini 3.8 Flash Lite TTS"'
+                    - 'option "Z.ai: GLM 5.3 Prime"'
+                    - 'option "Qwen: Qwen3.8 Max Prime"'
+                    - 'option "Upstage: Solar Mini 4"'
+                    - option "Gemini Omni 1.1 Flash"
+                    - option "Grok Image 2.0 · image"
+                    - 'option "Qwen: Qwen3.8 Omni Flash"'
+                    - 'option "OpenAI: GPT-6 Luna Pro"'
+                    - 'option "OpenAI: GPT-6 Luna"'
+                    - 'option "OpenAI: GPT-6 Sol Pro"'
+                    - 'option "OpenAI: GPT-6 Sol"'
+                    - 'option "Anthropic: Claude Opus 5.5"'
+                    - 'option "Nex AGI: Nex-N2.5-Pro"'
+                    - 'option "Nex AGI: Nex-N2.5-Mini"'
+                    - 'option "Xiaomi: MiMo-V2.6-Pro"'
+                    - 'option "Xiaomi: MiMo-V2.6-Flash"'
+                    - 'option "Xiaomi: MiMo-V2.6-Pro-UltraSpeed"'
+                    - 'option "SpaceXAI: Grok 4.7"'
+                    - option "Qwen Image 2.1 · image"
+                    - 'option "Z.ai: GLM 5.3 FlashX"'
+                    - option "TypeSafe Jev"
+                    - option "GigaChat-3-Pro"
+                    - 'option "Sakana: Fugu Ultra v2"'
+                    - 'option "Sakana: Fugu Max"'
+                    - 'option "Inference.net: Schematron V2 Small"'
+                    - option "GPT Image 2.5 Sunburst · image"
+                    - 'option "DeepSeek: DeepSeek V4.1 Flash"'
+                    - 'option "OpenAI: GPT-6 Astra Pro"'
+                    - 'option "OpenAI: GPT-6 Astra"'
+                    - 'option "Tencent: Hy-MT2-7B"'
+                    - 'option "Tencent: Hy4 preview"'
+                    - 'option "MiniMax: H3 Max"'
+                    - 'option "Google: Gemini 3.8 Flash"'
+                    - 'option "Anthropic: Claude Fable 5.1"'
+                    - 'option "Alibaba: Wan 3.0 Prime"'
+                    - 'option "Qwen: Qwen3.8 Flash"'
+                    - 'option "Z.ai: GLM 5.3 Flash"'
+                    - 'option "Alibaba: Wan 3.0"'
+                    - option "Seedance 2.5"
+                    - option "Grok Imagine Video 1.5 Preview"
+                    - 'option "DeepSeek: DeepSeek V4 Flash Vision Exp"'
+                    - 'option "Tencent: Hy-MT2-1.8B"'
+                    - 'option "Tencent: Hy-MT2-30B-A3B"'
+                    - 'option "Z.ai: GLM 5.3"'
+                    - 'option "Qwen: Qwen3.8 27B"'
+                    - 'option "Google: Gemini 3.7 Flash"'
+                    - 'option "Qwen: Qwen3 ASR 1.7B"'
+                    - 'option "NVIDIA: Nemotron 3.5 Lightning"'
+                    - 'option "SpaceXAI: Grok 4.6"'
+                    - 'option "DeepSeek: DeepSeek V4 Pro 0813"'
+                    - 'option "DeepSeek: DeepSeek V4 Flash 0731"'
+                    - 'option "Qwen: Qwen3.8 Max"'
+                    - option "Claude Opus 5"
+                    - 'option "Thinking Machines: Inkling"'
+                    - 'option "Microsoft: MAI-Voice-2-Flash"'
+                    - 'option "Poolside: Laguna S 2.1"'
+                    - 'option "Google: Gemini 3.6 Flash"'
+                    - 'option "Google: Gemini 3.5 Flash-Lite"'
+                    - 'option "MiniMax: Speech 2.8 Turbo"'
+                    - 'option "MiniMax: Speech 2.8 HD"'
+                    - 'option "Deepgram: Aura-2"'
+                    - 'option "MoonshotAI: Kimi K3"'
+                    - option "Seedream 5.0 Pro · image"
+                    - 'option "OpenAI: GPT-5.6 Luna Pro"'
+                    - 'option "OpenAI: GPT-5.6 Terra Pro"'
+                    - 'option "OpenAI: GPT-5.6 Sol Pro"'
+                    - 'option "OpenAI: GPT-5.6 Luna"'
+                    - 'option "OpenAI: GPT-5.6 Terra"'
+                    - 'option "OpenAI: GPT-5.6 Sol"'
+                    - 'option "xAI: Grok 4.5"'
+                    - 'option "AionLabs: Aion-3.0-Mini"'
+                    - 'option "AionLabs: Aion-3.0"'
+                    - 'option "Tencent: Hy3"'
+                    - 'option "Poolside: Laguna XS 2.1"'
+                    - option "Seedance 2 Mini"
+                    - 'option "Anthropic: Claude Sonnet 5"'
+                    - option "GigaAM-v3"
+                    - 'option "Sakana: Fugu Ultra"'
+                    - 'option "Alibaba: HappyHorse 1.1"'
+                    - 'option "Alibaba: HappyHorse 1.0"'
+                    - 'option "Google: Nano Banana 2 (Gemini 3.1 Flash Image) · image"'
+                    - option "Aiesa Транскрипция (Молния)"
+                    - option "Aiesa Транскрипция"
+                    - option "Aiesa Pro"
+                    - option "Aiesa Mini"
+                    - 'option "Z.ai: GLM 5.2"'
+                    - 'option "Google: Gemini 3.1 Flash TTS Preview"'
+                    - 'option "Microsoft: MAI-Voice-2"'
+                    - 'option "OpenAI: Whisper Large V3"'
+                    - 'option "OpenAI: Whisper Large V3 Turbo"'
+                    - 'option "Google: Chirp 3"'
+                    - 'option "Mistral: Voxtral Mini Transcribe"'
+                    - 'option "NVIDIA: Parakeet TDT 0.6B v3"'
+                    - 'option "MoonshotAI: Kimi K2.7 Code"'
+                    - 'option "Anthropic: Claude Fable 5"'
+                    - 'option "NVIDIA: Nemotron 3 Ultra"'
+                    - option "YandexGPT Embeddings — Query"
+                    - option "YandexGPT Embeddings — Doc"
+                    - option "GigaChat 2 Max"
+                    - option "GigaChat 2 Pro"
+                    - option "GigaChat 2"
+                    - option "GigaChat Max"
+                    - option "GigaChat Pro"
+                    - option "GigaChat Plus"
+                    - option "GigaChat"
+                    - option "Gemini Omni Video"
+                    - 'option "MiniMax: MiniMax M3"'
+                    - 'option "StepFun: Step 3.7 Flash"'
+                    - 'option "Anthropic: Claude Opus 4.8"'
+                    - option "Suno Sounds"
+                    - option "Suno Mashup"
+                    - 'option "xAI: Grok Build 0.1"'
+                    - 'option "Qwen: Qwen3.7 Max"'
+                    - 'option "Google: Gemini 3.5 Flash"'
+                    - 'option "Perceptron: Perceptron Mk1"'
+                    - 'option "Google: Gemini 3.1 Flash Lite"'
+                    - 'option "Mistral: Mistral Medium 3.5"'
+                    - 'option "xAI: Grok 4.3"'
+                    - 'option "Qwen: Qwen3.5 Plus 2026-04-20"'
+                    - 'option "Qwen: Qwen3.6 Flash"'
+                    - 'option "Qwen: Qwen3.6 35B A3B"'
+                    - 'option "Qwen: Qwen3.6 27B"'
+                    - 'option "OpenAI: GPT-5.5 Pro"'
+                    - 'option "OpenAI: GPT-5.5"'
+                    - 'option "DeepSeek: DeepSeek V4 Pro"'
+                    - 'option "DeepSeek: DeepSeek V4 Flash"'
+                    - option "YandexArt"
+                    - 'option "Xiaomi: MiMo-V2.5-Pro"'
+                    - 'option "Xiaomi: MiMo-V2.5"'
+                    - 'option "MoonshotAI: Kimi K2.6"'
+                    - 'option "Google: Gemini Embedding 2 Preview"'
+                    - 'option "Anthropic: Claude Opus 4.7"'
+                    - option "Seedance 2 Fast"
+                    - option "Seedance 2"
+                    - 'option "Qwen: Qwen3.6 Plus"'
+                    - 'option "Google: Gemma 4 26B A4B"'
+                    - 'option "Z.ai: GLM 5.1"'
+                    - option "YandexGPT Lite 5"
+                    - option "YandexGPT Pro 5.1"
+                    - option "YandexGPT Pro 5"
+                    - option "Alice AI LLM"
+                    - 'option "Google: Gemma 4 31B"'
+                    - 'option "Z.ai: GLM 5V Turbo"'
+                    - 'option "Arcee AI: Trinity Large Thinking"'
+                    - 'option "xAI: Grok 4.20 Multi-Agent"'
+                    - 'option "xAI: Grok 4.20"'
+                    - 'option "Google: Lyria 3 Pro Preview"'
+                    - 'option "Perplexity: Embed V1 4B"'
+                    - 'option "Perplexity: Embed V1 0.6B"'
+                    - option "Reka Edge"
+                    - 'option "Google: Lyria 3 Clip Preview"'
+                    - 'option "MiniMax: MiniMax M2.7"'
+                    - 'option "OpenAI: GPT-5.4 Nano"'
+                    - 'option "OpenAI: GPT-5.4 Mini"'
+                    - 'option "Mistral: Mistral Small 4"'
+                    - option "Qwen Image 2 · image"
+                    - 'option "Z.ai: GLM 5 Turbo"'
+                    - option "Kling 3.0 Motion Control"
+                    - option "Suno Music Generate"
+                    - 'option "ByteDance Seed: Seed-2.0-Lite"'
+                    - 'option "Qwen: Qwen3.5-9B"'
+                    - 'option "OpenAI: GPT-5.4 Pro"'
+                    - 'option "OpenAI: GPT-5.4"'
+                    - 'option "Inception: Mercury 2"'
+                    - 'option "OpenAI: GPT-5.3 Chat"'
+                    - 'option "Google: Gemini 3.1 Flash Lite Preview"'
+                    - 'option "Qwen: Qwen3.5-35B-A3B"'
+                    - 'option "Qwen: Qwen3.5-27B"'
+                    - 'option "Qwen: Qwen3.5-122B-A10B"'
+                    - 'option "Qwen: Qwen3.5-Flash"'
+                    - 'option "Google: Gemini 3.1 Pro Preview Custom Tools"'
+                    - 'option "AionLabs: Aion-2.0"'
+                    - 'option "Upstage: Solar Pro 3"'
+                    - option "Seedream 5.0 Lite"
+                    - 'option "ByteDance Seed: Seed-2.0-Mini"'
+                    - 'option "Google: Nano Banana 2 (Gemini 3.1 Flash Image Preview) · image"'
+                    - 'option "OpenAI: GPT-5.3-Codex"'
+                    - 'option "StepFun: Step 3.5 Flash"'
+                    - option "Topaz Video Upscale"
+                    - option "Topaz Upscale · image"
+                    - option "Qwen Image · image"
+                    - 'option "Anthropic: Claude Sonnet 4.6"'
+                    - option "Z-Image · image"
+                    - option "Kling 2.6 Motion Control"
+                    - option "Seedance 1.5 Pro"
+                    - option "Wan 2.6"
+                    - option "Wan 2.5"
+                    - option "Kling 3.0"
+                    - option "Kling 2.6"
+                    - option "Grok Image · image"
+                    - option "Flux-2 Pro · image"
+                    - option "Flux-2 Flex · image"
+                    - option "Seedream 4.5"
+                    - option "Seedream 4.0"
+                    - option "GPT Image 1.5 · image"
+                    - option "Veo 3.1 Fast"
+                    - option "Veo 3.1 Quality"
+                    - option "gpt 4o mini tts"
+                    - option "gpt 4o mini transcribe"
+                    - option "gpt 4o transcribe"
+                    - option "TTS HD"
+                    - option "TTS"
+                    - option "Whisper 1"
+                    - 'option "Google: Gemini 3.1 Pro Preview"'
+                    - 'option "Qwen: Qwen3.5 Plus 2026-02-15"'
+                    - 'option "Qwen: Qwen3.5 397B A17B"'
+                    - 'option "Qwen: Qwen3 Max Thinking"'
+                    - 'option "MiniMax: MiniMax M2.5"'
+                    - 'option "Z.ai: GLM 5"'
+                    - 'option "Anthropic: Claude Opus 4.6"'
+                    - 'option "Qwen: Qwen3 Coder Next"'
+                    - 'option "Z.AI: GLM 4.7 Flash"'
+                    - 'option "Z.AI: GLM 4.7"'
+                    - 'option "Z.AI: GLM 4.6V"'
+                    - 'option "Z.AI: GLM 4.6"'
+                    - 'option "Z.AI: GLM 4.5V"'
+                    - 'option "Z.AI: GLM 4.5 Air"'
+                    - 'option "Z.AI: GLM 4.5"'
+                    - 'option "Writer: Palmyra X5"'
+                    - option "ReMM SLERP 13B"
+                    - 'option "Thenlper: GTE-Large"'
+                    - 'option "Thenlper: GTE-Base"'
+                    - 'option "TheDrummer: UnslopNemo 12B"'
+                    - 'option "TheDrummer: Skyfall 36B V2"'
+                    - 'option "TheDrummer: Cydonia 24B V4.1"'
+                    - 'option "Tencent: Hunyuan A13B Instruct"'
+                    - 'option "Sentence Transformers: paraphrase-MiniLM-L6-v2"'
+                    - 'option "Sentence Transformers: multi-qa-mpnet-base-dot-v1"'
+                    - 'option "Sentence Transformers: all-mpnet-base-v2"'
+                    - 'option "Sentence Transformers: all-MiniLM-L6-v2"'
+                    - 'option "Sentence Transformers: all-MiniLM-L12-v2"'
+                    - 'option "Sao10K: Llama 3.3 Euryale 70B"'
+                    - 'option "Sao10K: Llama 3.1 Euryale 70B v2.2"'
+                    - 'option "Sao10K: Llama 3 8B Lunaris"'
+                    - 'option "Relace: Relace Search"'
+                    - 'option "Relace: Relace Apply 3"'
+                    - 'option "Qwen: Qwen3 VL 8B Thinking"'
+                    - 'option "Qwen: Qwen3 VL 8B Instruct"'
+                    - 'option "Qwen: Qwen3 VL 30B A3B Thinking"'
+                    - 'option "Qwen: Qwen3 VL 30B A3B Instruct"'
+                    - 'option "Qwen: Qwen3 VL 235B A22B Thinking"'
+                    - 'option "Qwen: Qwen3 VL 235B A22B Instruct"'
+                    - 'option "Qwen: Qwen3 Next 80B A3B Thinking"'
+                    - 'option "Qwen: Qwen3 Next 80B A3B Instruct"'
+                    - 'option "Qwen: Qwen3 Embedding 8B"'
+                    - 'option "Qwen: Qwen3 Embedding 4B"'
+                    - 'option "Qwen: Qwen3 Coder Flash"'
+                    - 'option "Qwen: Qwen3 Coder 30B A3B Instruct"'
+                    - 'option "Qwen: Qwen3 Coder 480B A35B"'
+                    - 'option "Qwen: Qwen3 32B"'
+                    - 'option "Qwen: Qwen3 30B A3B Instruct 2507"'
+                    - 'option "Qwen: Qwen3 30B A3B"'
+                    - 'option "Qwen: Qwen3 235B A22B Thinking 2507"'
+                    - 'option "Qwen: Qwen3 235B A22B Instruct 2507"'
+                    - 'option "Qwen: Qwen3 235B A22B"'
+                    - 'option "Qwen: Qwen3 14B"'
+                    - 'option "Qwen: Qwen2.5 VL 72B Instruct"'
+                    - 'option "Qwen: Qwen Plus 0728"'
+                    - 'option "Qwen: Qwen-Plus"'
+                    - option "Qwen2.5 Coder 32B Instruct"
+                    - 'option "Qwen: Qwen2.5 7B Instruct"'
+                    - option "Qwen2.5 72B Instruct"
+                    - 'option "Perplexity: Sonar Reasoning Pro"'
+                    - 'option "Perplexity: Sonar Pro Search"'
+                    - 'option "Perplexity: Sonar Pro"'
+                    - 'option "Perplexity: Sonar Deep Research"'
+                    - 'option "Perplexity: Sonar"'
+                    - 'option "OpenAI: Text Embedding Ada 002"'
+                    - 'option "OpenAI: Text Embedding 3 Small"'
+                    - 'option "OpenAI: Text Embedding 3 Large"'
+                    - 'option "OpenAI: o4 Mini High"'
+                    - 'option "OpenAI: o4 Mini"'
+                    - 'option "OpenAI: o3 Pro"'
+                    - 'option "OpenAI: o3 Mini High"'
+                    - 'option "OpenAI: o3 Mini"'
+                    - 'option "OpenAI: o3"'
+                    - 'option "OpenAI: o1-pro"'
+                    - 'option "OpenAI: o1"'
+                    - 'option "OpenAI: gpt-oss-safeguard-20b"'
+                    - 'option "OpenAI: gpt-oss-20b"'
+                    - 'option "OpenAI: gpt-oss-120b"'
+                    - 'option "OpenAI: GPT-5.2 Pro"'
+                    - 'option "OpenAI: GPT-5.2-Codex"'
+                    - 'option "OpenAI: GPT-5.2 Chat"'
+                    - 'option "OpenAI: GPT-5.2"'
+                    - 'option "OpenAI: GPT-5.1-Codex-Mini"'
+                    - 'option "OpenAI: GPT-5.1-Codex-Max"'
+                    - 'option "OpenAI: GPT-5.1-Codex"'
+                    - 'option "OpenAI: GPT-5.1"'
+                    - 'option "OpenAI: GPT-5 Pro"'
+                    - 'option "OpenAI: GPT-5 Nano"'
+                    - 'option "OpenAI: GPT-5 Mini"'
+                    - 'option "OpenAI: GPT-5 Image · image"'
+                    - 'option "OpenAI: GPT-5"'
+                    - 'option "OpenAI: GPT-4o-mini (2024-07-18)"'
+                    - 'option "OpenAI: GPT-4o-mini"'
+                    - 'option "OpenAI: GPT-4o (2024-11-20)"'
+                    - 'option "OpenAI: GPT-4o (2024-08-06)"'
+                    - 'option "OpenAI: GPT-4o (2024-05-13)"'
+                    - 'option "OpenAI: GPT-4o"'
+                    - 'option "OpenAI: GPT-4.1 Nano"'
+                    - 'option "OpenAI: GPT-4.1 Mini"'
+                    - 'option "OpenAI: GPT-4.1"'
+                    - 'option "OpenAI: GPT-4 Turbo"'
+                    - 'option "OpenAI: GPT-4"'
+                    - 'option "OpenAI: GPT-3.5 Turbo 16k"'
+                    - 'option "OpenAI: GPT-3.5 Turbo (older v0613)"'
+                    - 'option "OpenAI: GPT-3.5 Turbo"'
+                    - 'option "OpenAI: ChatGPT-4o"'
+                    - 'option "NVIDIA: Nemotron 3 Nano 30B A3B"'
+                    - 'option "Nous: Hermes 4 405B"'
+                    - 'option "Nous: Hermes 3 70B Instruct"'
+                    - 'option "Nous: Hermes 3 405B Instruct"'
+                    - 'option "Morph: Morph V3 Large"'
+                    - 'option "Morph: Morph V3 Fast"'
+                    - 'option "MoonshotAI: Kimi K2.5"'
+                    - 'option "MoonshotAI: Kimi K2 Thinking"'
+                    - 'option "MoonshotAI: Kimi K2 0905"'
+                    - 'option "MoonshotAI: Kimi K2 0711"'
+                    - 'option "Mistral: Voxtral Small 24B 2507"'
+                    - 'option "Mistral: Mixtral 8x22B Instruct"'
+                    - 'option "Mistral: Mistral Small 3.2 24B"'
+                    - 'option "Mistral: Mistral Small 3.1 24B"'
+                    - 'option "Mistral: Mistral Small 3"'
+                    - 'option "Mistral: Saba"'
+                    - 'option "Mistral: Mistral Nemo"'
+                    - 'option "Mistral: Mistral Medium 3.1"'
+                    - 'option "Mistral: Mistral Medium 3"'
+                    - 'option "Mistral: Mistral Large 3 2512"'
+                    - option "Mistral Large 2407"
+                    - option "Mistral Large"
+                    - 'option "Mistral: Mistral Embed 2312"'
+                    - 'option "Mistral: Ministral 3 8B 2512"'
+                    - 'option "Mistral: Ministral 3 3B 2512"'
+                    - 'option "Mistral: Ministral 3 14B 2512"'
+                    - 'option "Mistral: Devstral 2 2512"'
+                    - 'option "Mistral: Codestral Embed 2505"'
+                    - 'option "Mistral: Codestral 2508"'
+                    - 'option "MiniMax: MiniMax M2.1"'
+                    - 'option "MiniMax: MiniMax M2-her"'
+                    - 'option "MiniMax: MiniMax M2"'
+                    - 'option "MiniMax: MiniMax M1"'
+                    - 'option "MiniMax: MiniMax-01"'
+                    - option "WizardLM-2 8x22B"
+                    - 'option "Microsoft: Phi 4"'
+                    - 'option "Meta: Llama Guard 4 12B"'
+                    - 'option "Meta: Llama 4 Scout"'
+                    - 'option "Meta: Llama 4 Maverick"'
+                    - 'option "Meta: Llama 3.3 70B Instruct"'
+                    - 'option "Meta: Llama 3.2 3B Instruct"'
+                    - 'option "Meta: Llama 3.2 1B Instruct"'
+                    - 'option "Meta: Llama 3.1 8B Instruct"'
+                    - 'option "Meta: Llama 3.1 70B Instruct"'
+                    - 'option "Mancer: Weaver (alpha)"'
+                    - 'option "Intfloat: Multilingual-E5-Large"'
+                    - 'option "Intfloat: E5-Large-v2"'
+                    - 'option "Intfloat: E5-Base-v2"'
+                    - 'option "IBM: Granite 4.0 Micro"'
+                    - option "MythoMax 13B"
+                    - 'option "Google: Gemma 3 4B"'
+                    - 'option "Google: Gemma 3 27B"'
+                    - 'option "Google: Gemma 3 12B"'
+                    - 'option "Google: Gemma 2 27B"'
+                    - 'option "Google: Gemini Embedding 001"'
+                    - 'option "Google: Gemini 3 Pro Preview"'
+                    - 'option "Google: Nano Banana Pro (Gemini 3 Pro Image Preview) · image"'
+                    - 'option "Google: Gemini 3 Flash Preview"'
+                    - 'option "Google: Gemini 2.5 Pro Preview 05-06"'
+                    - 'option "Google: Gemini 2.5 Pro Preview 06-05"'
+                    - 'option "Google: Gemini 2.5 Pro"'
+                    - 'option "Google: Gemini 2.5 Flash Lite"'
+                    - 'option "Google: Gemini 2.5 Flash"'
+                    - 'option "DeepSeek: DeepSeek V3.2 Exp"'
+                    - 'option "DeepSeek: DeepSeek V3.2"'
+                    - 'option "DeepSeek: DeepSeek V3.1 Terminus"'
+                    - 'option "DeepSeek: R1 0528"'
+                    - 'option "DeepSeek: R1"'
+                    - 'option "DeepSeek: DeepSeek V3.1"'
+                    - 'option "DeepSeek: DeepSeek V3 0324"'
+                    - 'option "DeepSeek: DeepSeek V3"'
+                    - 'option "Cohere: Command R7B (12-2024)"'
+                    - 'option "Cohere: Command R+ (08-2024)"'
+                    - 'option "Cohere: Command R (08-2024)"'
+                    - 'option "Cohere: Command A"'
+                    - 'option "ByteDance: UI-TARS 7B"'
+                    - 'option "ByteDance Seed: Seed 1.6 Flash"'
+                    - 'option "ByteDance Seed: Seed 1.6"'
+                    - 'option "BAAI: bge-m3"'
+                    - 'option "BAAI: bge-large-en-v1.5"'
+                    - 'option "BAAI: bge-base-en-v1.5"'
+                    - 'option "Anthropic: Claude Sonnet 4.5"'
+                    - 'option "Anthropic: Claude Sonnet 4"'
+                    - 'option "Anthropic: Claude Opus 4.5"'
+                    - 'option "Anthropic: Claude Opus 4.1"'
+                    - option "Magnum v4 72B"
+                    - 'option "Amazon: Nova Pro 1.0"'
+                    - 'option "Amazon: Nova Micro 1.0"'
+                    - 'option "Amazon: Nova Lite 1.0"'
+                    - 'option "Amazon: Nova 2 Lite"'
+                    - 'option "AionLabs: Aion-RP 1.0 (8B)"'
+                - generic [ref=f2e248]:
+                  - generic [ref=f2e249]:
+                    - generic [ref=f2e250]: Температура (Temperature)
+                    - generic [ref=f2e251]: "0.35"
+                  - slider [ref=f2e252]: "0.35"
+                  - generic [ref=f2e253]:
+                    - generic [ref=f2e254]: 0.0 (Детерминированный)
+                    - generic [ref=f2e255]: 1.0 (Креативный)
+                - generic [ref=f2e256]:
+                  - generic [ref=f2e257]: Max Tokens (Лимит генерации)
+                  - spinbutton [ref=f2e258]: "4096"
+                - generic [ref=f2e259]:
+                  - generic [ref=f2e260]:
+                    - paragraph [ref=f2e261]: Thinking / reasoning
+                    - paragraph [ref=f2e262]: Для Сценариста (Haiku) — сильный hook. Best-effort на агрегаторе.
+                  - generic [ref=f2e263] [cursor=pointer]:
+                    - generic [ref=f2e264]: Thinking
+                    - checkbox "Thinking" [ref=f2e265]
+              - generic [ref=f2e240]:
+                - button "Сбросить" [ref=f2e241]
+                - button "Сохранить изменения" [ref=f2e243]
+  - alert [ref=f2e202]

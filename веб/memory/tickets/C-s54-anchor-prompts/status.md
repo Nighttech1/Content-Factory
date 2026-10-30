@@ -1,0 +1,9 @@
+# Status — C-s54-anchor-prompts
+
+| Field | Value |
+|-------|-------|
+| **Status** | `open` |
+| **Owner** | AI Bridge |
+| **Wave** | `2026-10-17-anchor-ref-bakeoff` |
+| **Opened** | 2026-10-17 |
+| **Guard** | pending |

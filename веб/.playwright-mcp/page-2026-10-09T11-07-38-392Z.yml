@@ -1,0 +1,429 @@
+- generic [active] [ref=f9e1]:
+  - generic [ref=f9e2]:
+    - complementary "Главная навигация" [ref=f9e3]:
+      - generic [ref=f9e11]:
+        - generic [ref=f9e12]: VERN·ATUN
+        - generic [ref=f9e13]: Content Factory
+      - navigation [ref=f9e15]:
+        - generic [ref=f9e16]:
+          - link "Студия" [ref=f9e19] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f9e32] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f9e45] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f9e55] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f9e68] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f9e78]:
+        - paragraph [ref=f9e79]: Роль QA (локально)
+        - generic [ref=f9e80]:
+          - button "OWNER" [ref=f9e81]
+          - button "ADMIN" [ref=f9e82]
+      - button "Изменить ширину боковой панели" [ref=f9e83]
+    - main [ref=f9e85]:
+      - generic [ref=f9e86]:
+        - generic [ref=f9e87]:
+          - heading "Настройки" [level=1] [ref=f9e88]
+          - paragraph [ref=f9e89]: Дизайн, площадки, промпты агентов, LLM и рилсы. Правки — в браузере.
+        - complementary [ref=f9e90]:
+          - navigation [ref=f9e91]:
+            - generic [ref=f9e92]: Навигация
+            - list [ref=f9e93]:
+              - listitem [ref=f9e94]:
+                - button "Дизайн" [ref=f9e95]
+              - listitem [ref=f9e101]:
+                - button "Площадки" [ref=f9e102]
+              - listitem [ref=f9e107]:
+                - button "Расписание" [ref=f9e108]
+              - listitem [ref=f9e112]:
+                - button "Разведка" [ref=f9e113]
+              - listitem [ref=f9e120]:
+                - button "Агенты" [ref=f9e121]
+              - listitem [ref=f9e126]:
+                - button "LLM" [ref=f9e127]
+              - listitem [ref=f9e132]:
+                - button "Рилсы" [ref=f9e133]
+        - region [ref=f9e137]:
+          - generic [ref=f9e138]:
+            - heading "Дизайн" [level=2] [ref=f9e139]
+            - paragraph [ref=f9e140]: Текущий файл дизайн-системы для дизайнера.
+          - paragraph [ref=f9e141]:
+            - text: DESIGN.md
+            - generic [ref=f9e142]: docs/DESIGN.md · 14343 символов
+          - generic [ref=f9e143] [cursor=pointer]:
+            - text: Загрузить новый файл
+            - button "Загрузить новый файл" [ref=f9e144]
+        - region [ref=f9e145]:
+          - generic [ref=f9e146]:
+            - generic [ref=f9e147]:
+              - heading "Площадки публикации" [level=2] [ref=f9e148]
+              - paragraph [ref=f9e149]: Ключи API только в браузере. Зелёный блок — публицист может публиковать; красный — подключение не подтверждено.
+            - button "Добавить площадку" [ref=f9e150]
+          - list [ref=f9e477]:
+            - listitem [ref=f9e478]:
+              - generic [ref=f9e479]:
+                - paragraph [ref=f9e480]: Instagram · основной
+                - paragraph [ref=f9e481]: Instagram · нет связи · без ключа
+              - generic [ref=f9e482]:
+                - button "Проверить подключение" [ref=f9e483]
+                - button "Изменить" [ref=f9e484]
+                - button "Удалить" [ref=f9e485]
+            - listitem [ref=f9e486]:
+              - generic [ref=f9e487]:
+                - paragraph [ref=f9e488]: Telegram · канал
+                - paragraph [ref=f9e489]: Telegram · нет связи · без ключа
+              - generic [ref=f9e490]:
+                - button "Проверить подключение" [ref=f9e491]
+                - button "Изменить" [ref=f9e492]
+                - button "Удалить" [ref=f9e493]
+            - listitem [ref=f9e494]:
+              - generic [ref=f9e495]:
+                - paragraph [ref=f9e496]: YouTube
+                - paragraph [ref=f9e497]: YouTube · нет связи · без ключа
+              - generic [ref=f9e498]:
+                - button "Проверить подключение" [ref=f9e499]
+                - button "Изменить" [ref=f9e500]
+                - button "Удалить" [ref=f9e501]
+            - listitem [ref=f9e502]:
+              - generic [ref=f9e503]:
+                - paragraph [ref=f9e504]: Сайт Vernatun
+                - paragraph [ref=f9e505]: Сайт · нет связи · без ключа
+              - generic [ref=f9e506]:
+                - button "Проверить подключение" [ref=f9e507]
+                - button "Изменить" [ref=f9e508]
+                - button "Удалить" [ref=f9e509]
+        - generic [ref=f9e152]:
+          - generic [ref=f9e153]:
+            - generic [ref=f9e154]:
+              - heading "Расписание" [level=2] [ref=f9e155]
+              - paragraph [ref=f9e156]: Правила автозаполнения календаря публициста. Готовый контент встаёт в слоты по правилам; ручной перенос в календаре важнее правила.
+            - button "Создать правило" [ref=f9e157]
+          - list [ref=f9e158]:
+            - listitem [ref=f9e159]: Правил пока нет.
+        - generic [ref=f9e160]:
+          - generic [ref=f9e161]:
+            - heading "Разведка" [level=2] [ref=f9e162]
+            - paragraph [ref=f9e163]: Параметры автоматического поиска. У каждого типа контента — иконка площадки. Скрипт без LLM.
+          - group [ref=f9e165]:
+            - button "Карусели Instagram (4:5) · Instagram" [ref=f9e166] [cursor=pointer]
+            - button "Полезные картинки & Инфографика · Instagram" [ref=f9e173] [cursor=pointer]
+            - button "Мульт-Reels (2D сторителлинг) · Instagram / TikTok" [ref=f9e182] [cursor=pointer]
+            - button "HeyGen AI-Аватар Reels · Instagram / YouTube" [ref=f9e188] [cursor=pointer]
+            - button "Статьи на сайт · Сайт" [ref=f9e194] [cursor=pointer]
+            - button "Статьи в TG · Telegram" [ref=f9e200] [cursor=pointer]
+            - button "Рилс · Instagram / TikTok" [ref=f9e206] [cursor=pointer]
+            - button "Нарезки с видео в рилсы · Instagram / YouTube" [ref=f9e214] [cursor=pointer]
+            - button "Информационное видео · YouTube" [ref=f9e223] [cursor=pointer]
+          - paragraph [ref=f9e228]:
+            - text: "Выбрано:"
+            - strong [ref=f9e229]: Карусели Instagram (4:5)
+            - text: · площадка Instagram
+          - generic [ref=f9e230]:
+            - generic [ref=f9e231]: Тема по умолчанию
+            - textbox "Тема по умолчанию" [ref=f9e232]:
+              - /placeholder: "например: армянская кухня"
+          - generic [ref=f9e233]:
+            - generic [ref=f9e234]:
+              - generic [ref=f9e235]: Глубина, дней
+              - spinbutton "Глубина, дней" [ref=f9e236]: "7"
+            - generic [ref=f9e237]:
+              - generic [ref=f9e238]: Мин. просмотры
+              - spinbutton "Мин. просмотры" [ref=f9e239]: "10000"
+          - generic [ref=f9e240]:
+            - checkbox "Автозапуск разведки по расписанию параметров" [ref=f9e241]
+            - text: Автозапуск разведки по расписанию параметров
+          - button "Сохранить параметры" [ref=f9e242]
+        - region [ref=f9e243]:
+          - generic [ref=f9e244]:
+            - 'heading "Агенты: промпты и правила" [level=2] [ref=f9e245]'
+            - paragraph [ref=f9e246]:
+              - text: Skills / prompt.md / agents/*.md. Промпты разные по типу контента (ключ
+              - code [ref=f9e247]: agentId::contentType
+              - text: ). Правки — в localStorage; ими же пользуется панель «Команда выпуска».
+          - group "Тип контента" [ref=f9e248]:
+            - group [ref=f9e249]:
+              - button "Общий" [ref=f9e250] [cursor=pointer]
+              - button "Карусели Instagram (4:5)" [ref=f9e257] [cursor=pointer]
+              - button "Полезные картинки & Инфографика" [ref=f9e264] [cursor=pointer]
+              - button "Мульт-Reels (2D сторителлинг)" [ref=f9e271] [cursor=pointer]
+              - button "HeyGen AI-Аватар Reels" [ref=f9e278] [cursor=pointer]
+              - button "Статьи на сайт" [ref=f9e285] [cursor=pointer]
+              - button "Статьи в TG" [ref=f9e292] [cursor=pointer]
+              - button "Рилс" [ref=f9e299] [cursor=pointer]
+              - button "Нарезки с видео в рилсы" [ref=f9e306] [cursor=pointer]
+              - button "Информационное видео" [ref=f9e313] [cursor=pointer]
+          - group "Агент" [ref=f9e319]:
+            - group [ref=f9e320]:
+              - button "Скаут" [ref=f9e321] [cursor=pointer]
+              - button "Аналитик" [ref=f9e327] [cursor=pointer]
+              - button "Тренер команды" [ref=f9e333] [cursor=pointer]
+              - button "Разборщик" [ref=f9e339] [cursor=pointer]
+              - button "Копирайтер" [ref=f9e345] [cursor=pointer]
+              - button "Копирайтер" [ref=f9e351] [cursor=pointer]
+              - button "Копирайтер" [ref=f9e357] [cursor=pointer]
+              - button "Копирайтер" [ref=f9e363] [cursor=pointer]
+              - button "Копирайтер" [ref=f9e369] [cursor=pointer]
+              - button "Копирайтер" [ref=f9e375] [cursor=pointer]
+              - button "Копирайтер" [ref=f9e381] [cursor=pointer]
+              - button "Копирайтер" [ref=f9e387] [cursor=pointer]
+              - button "Копирайтер" [ref=f9e393] [cursor=pointer]
+              - button "Сценарист (legacy)" [ref=f9e399] [cursor=pointer]
+              - button "Дизайнер" [ref=f9e405] [cursor=pointer]
+              - button "Публицист" [ref=f9e411] [cursor=pointer]
+              - button "Исследователь" [ref=f9e417] [cursor=pointer]
+              - button "Хук-райтер" [ref=f9e423] [cursor=pointer]
+              - button "Роутер" [ref=f9e429] [cursor=pointer]
+              - button "Рендерер" [ref=f9e435] [cursor=pointer]
+          - generic [ref=f9e440]:
+            - paragraph [ref=f9e441]: Skills / плагины / MCP
+            - list [ref=f9e442]:
+              - listitem [ref=f9e443]:
+                - generic [ref=f9e444]: "skill:"
+                - text: content-factory-analytics
+              - listitem [ref=f9e445]:
+                - generic [ref=f9e446]: "mcp:"
+                - text: playwright
+            - paragraph [ref=f9e447]: agents/scout.md · workers/scout/SKILL.md
+          - generic [ref=f9e448]:
+            - generic [ref=f9e449]:
+              - generic [ref=f9e450]: Промпт (MD)
+              - paragraph [ref=f9e451]: prompt.md
+              - generic [ref=f9e452] [cursor=pointer]:
+                - text: Загрузить MD промпт
+                - button "Загрузить MD промпт" [ref=f9e453]
+            - generic [ref=f9e454]:
+              - generic [ref=f9e455]: Правила / инструкции (MD)
+              - paragraph [ref=f9e456]: SKILL.md
+              - generic [ref=f9e457] [cursor=pointer]:
+                - text: Загрузить MD правила
+                - button "Загрузить MD правила" [ref=f9e458]
+          - button "Сохранить пакет агента" [ref=f9e459]
+        - region [ref=f9e460]:
+          - generic [ref=f9e461]:
+            - heading "LLM по агентам" [level=2] [ref=f9e462]
+            - paragraph [ref=f9e463]: Подключите агрегатор (URL + ключ) — он подберёт маршрут к модели. В списке агента доступны все модели каталога, не только 4 стоковых.
+          - generic [ref=f9e464]:
+            - generic [ref=f9e465]:
+              - generic [ref=f9e466]: URL провайдера / агрегатора
+              - textbox "URL провайдера / агрегатора" [ref=f9e467]:
+                - /placeholder: https://api.example.com/v1
+            - generic [ref=f9e468]:
+              - generic [ref=f9e469]: API-ключ агрегатора
+              - textbox "API-ключ агрегатора" [ref=f9e470]:
+                - /placeholder: хранится только в браузере
+          - list [ref=f9e510]:
+            - listitem [ref=f9e511]:
+              - generic [ref=f9e512]:
+                - paragraph [ref=f9e513]: Исследователь
+                - paragraph [ref=f9e514]: Тренды, источники, ниша
+              - generic [ref=f9e515]:
+                - generic [ref=f9e516]: Модель
+                - combobox "Модель для Исследователь" [ref=f9e517]:
+                  - option "GPT-4o mini · OpenAI" [selected]
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic"
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f9e518]:
+              - generic [ref=f9e519]:
+                - paragraph [ref=f9e520]: Автор хуков
+                - paragraph [ref=f9e521]: Хуки и оценка вирусности
+              - generic [ref=f9e522]:
+                - generic [ref=f9e523]: Модель
+                - combobox "Модель для Автор хуков" [ref=f9e524]:
+                  - option "GPT-4o mini · OpenAI"
+                  - option "GPT-4o · OpenAI" [selected]
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic"
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f9e525]:
+              - generic [ref=f9e526]:
+                - paragraph [ref=f9e527]: Сценарист
+                - paragraph [ref=f9e528]: Idea-brief / сценарий
+              - generic [ref=f9e529]:
+                - generic [ref=f9e530]: Модель
+                - combobox "Модель для Сценарист" [ref=f9e531]:
+                  - option "GPT-4o mini · OpenAI"
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic" [selected]
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f9e532]:
+              - generic [ref=f9e533]:
+                - paragraph [ref=f9e534]: Аналитик
+                - paragraph [ref=f9e535]: Метрики → инсайты (/analytics)
+              - generic [ref=f9e536]:
+                - generic [ref=f9e537]: Модель
+                - combobox "Модель для Аналитик" [ref=f9e538]:
+                  - option "GPT-4o mini · OpenAI" [selected]
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic"
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f9e539]:
+              - generic [ref=f9e540]:
+                - paragraph [ref=f9e541]: Дизайнер
+                - paragraph [ref=f9e542]: Визуал / макеты
+              - generic [ref=f9e543]:
+                - generic [ref=f9e544]: Модель
+                - combobox "Модель для Дизайнер" [ref=f9e545]:
+                  - option "GPT-4o mini · OpenAI"
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic" [selected]
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f9e546]:
+              - generic [ref=f9e547]:
+                - paragraph [ref=f9e548]: Рендерер
+                - paragraph [ref=f9e549]: Remotion / HeyGen / Satori
+              - generic [ref=f9e550]:
+                - generic [ref=f9e551]: Модель
+                - combobox "Модель для Рендерер" [ref=f9e552]:
+                  - option "GPT-4o mini · OpenAI" [selected]
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic"
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f9e553]:
+              - generic [ref=f9e554]:
+                - paragraph [ref=f9e555]: Публицист
+                - paragraph [ref=f9e556]: Слоты и площадки после HITL
+              - generic [ref=f9e557]:
+                - generic [ref=f9e558]: Модель
+                - combobox "Модель для Публицист" [ref=f9e559]:
+                  - option "GPT-4o mini · OpenAI" [selected]
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic"
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google"
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+            - listitem [ref=f9e560]:
+              - generic [ref=f9e561]:
+                - paragraph [ref=f9e562]: Маршрутизатор
+                - paragraph [ref=f9e563]: Выбор модуля пайплайна
+              - generic [ref=f9e564]:
+                - generic [ref=f9e565]: Модель
+                - combobox "Модель для Маршрутизатор" [ref=f9e566]:
+                  - option "GPT-4o mini · OpenAI"
+                  - option "GPT-4o · OpenAI"
+                  - option "GPT-4.1 · OpenAI"
+                  - option "GPT-4.1 mini · OpenAI"
+                  - option "o3-mini · OpenAI"
+                  - option "Claude Sonnet 4 · Anthropic"
+                  - option "Claude Opus 4 · Anthropic"
+                  - option "Claude Haiku 3.5 · Anthropic"
+                  - option "Gemini 2.0 Flash · Google" [selected]
+                  - option "Gemini 2.5 Pro · Google"
+                  - option "Gemini Flash Lite · Google"
+                  - option "DeepSeek Chat · DeepSeek"
+                  - option "DeepSeek Reasoner · DeepSeek"
+                  - option "Mistral Large · Mistral"
+                  - option "Mistral Small · Mistral"
+                  - option "Llama 3.3 70B · Meta"
+                  - option "Qwen Max · Alibaba"
+                  - option "Grok 2 · xAI"
+        - region [ref=f9e472]:
+          - generic [ref=f9e473]:
+            - heading "Рилсы" [level=2] [ref=f9e474]
+            - paragraph [ref=f9e475]: Сколько карточек в dual-feed (Наши и Конкуренты).
+          - generic [ref=f9e567]:
+            - generic [ref=f9e568]:
+              - paragraph [ref=f9e569]: Отображение рилсов (количество на странице)
+              - paragraph [ref=f9e570]: От 4 до 48. По умолчанию 12.
+            - generic [ref=f9e571]:
+              - generic [ref=f9e572]: На странице
+              - spinbutton "Отображение рилсов (количество на странице)" [ref=f9e573]: "12"
+  - button "Open Next.js Dev Tools" [ref=f9e579] [cursor=pointer]
+  - alert [ref=f9e583]

@@ -1,0 +1,42 @@
+# === Dependencies / build ===
+node_modules/
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# === Secrets / env (NEVER commit) ===
+.env
+.env.*
+!.env.example
+
+# === Runtime output / generated media (NOT source code) ===
+generatedMedia/
+public/generated/
+public/generatedMedia/
+public/vernatun-jobs/
+public/logo-placement-v2-smoke/
+public/vernatun-preview-final-ready/
+public/phase2-vision-prompt-smoke/
+public/pipeline-practice-higven-3/
+docs/карусель тест/
+data/local/
+
+# === Session / scratch / screenshots ===
+tasks/
+client-*.png
+*.log
+.turbo/
+
+# === Non-code artifacts (past generation screenshots / removed Mode A stock) ===
+memory/client-accept/
+memory/**/artifacts/
+brand/vernatun-curated/
+
+# === OS / editor ===
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

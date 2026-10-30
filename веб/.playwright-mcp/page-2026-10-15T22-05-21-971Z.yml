@@ -1,0 +1,260 @@
+- generic [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - complementary "Главная навигация" [ref=f2e3]:
+      - generic [ref=f2e6]:
+        - generic [ref=f2e7]: VERNATUN
+        - generic [ref=f2e8]: ARMENIAN CLUB
+      - navigation [ref=f2e10]:
+        - generic [ref=f2e11]:
+          - link "Студия" [ref=f2e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f2e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f2e37] [cursor=pointer]:
+            - /url: /settings
+          - link "Директор" [ref=f2e48] [cursor=pointer]:
+            - /url: /marketing
+      - generic [ref=f2e58]:
+        - paragraph [ref=f2e59]: Роль QA (локально)
+        - generic [ref=f2e60]:
+          - button "OWNER" [ref=f2e61]
+          - button "ADMIN" [ref=f2e62]
+      - button "Изменить ширину боковой панели" [ref=f2e63]
+    - main [ref=f2e65]:
+      - generic [ref=f2e66]:
+        - generic [ref=f2e68]:
+          - heading "Карусели Instagram" [level=1] [ref=f2e69]
+          - generic [ref=f2e70]:
+            - link "Команда выпуска" [ref=f2e71] [cursor=pointer]:
+              - /url: /studio/carousel-engine/mesh
+            - link "Аналитика" [ref=f2e72] [cursor=pointer]:
+              - /url: /studio/carousel-engine/analytics
+            - button "Создать карусель" [ref=f2e73]
+        - generic [ref=f2e76]:
+          - generic [ref=f2e77]:
+            - generic [ref=f2e78]:
+              - generic [ref=f2e79]:
+                - heading "Наши" [level=2] [ref=f2e80]
+                - generic [ref=f2e82]: "22"
+              - tablist "Вкладки нашей ленты" [ref=f2e85]:
+                - tab "Опубликовано" [ref=f2e86]
+                - tab "Черновики22" [selected] [ref=f2e255]
+            - generic [ref=f2e258]:
+              - heading "Черновики" [level=3] [ref=f2e259]
+              - list [ref=f2e260]:
+                - listitem [ref=f2e261]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX B: Silence louder (clean poster)" [ref=f2e263] [cursor=pointer]':
+                    - generic [ref=f2e264]:
+                      - button "Предыдущий слайд" [ref=f2e266]
+                      - button "Следующий слайд" [ref=f2e269]
+                    - 'heading "AUDIT-FIX B: Silence louder (clean poster)" [level=3] [ref=f2e273]'
+                - listitem [ref=f2e274]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX A: Coffee ritual (dark notes)" [active] [ref=f2e276] [cursor=pointer]':
+                    - generic [ref=f2e277]:
+                      - button "Предыдущий слайд" [ref=f2e279]
+                      - button "Следующий слайд" [ref=f2e282]
+                    - 'heading "AUDIT-FIX A: Coffee ritual (dark notes)" [level=3] [ref=f2e286]'
+                - listitem [ref=f2e287]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX B: Silence louder (clean poster)" [ref=f2e289] [cursor=pointer]':
+                    - generic [ref=f2e290]:
+                      - button "Предыдущий слайд" [ref=f2e292]
+                      - button "Следующий слайд" [ref=f2e295]
+                    - 'heading "AUDIT-FIX B: Silence louder (clean poster)" [level=3] [ref=f2e299]'
+                - listitem [ref=f2e300]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX A: Coffee ritual (dark notes)" [ref=f2e302] [cursor=pointer]':
+                    - generic [ref=f2e303]:
+                      - button "Предыдущий слайд" [ref=f2e305]
+                      - button "Следующий слайд" [ref=f2e308]
+                    - 'heading "AUDIT-FIX A: Coffee ritual (dark notes)" [level=3] [ref=f2e312]'
+                - listitem [ref=f2e313]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX B: Silence louder (clean poster)" [ref=f2e315] [cursor=pointer]':
+                    - generic [ref=f2e316]:
+                      - button "Предыдущий слайд" [ref=f2e318]
+                      - button "Следующий слайд" [ref=f2e321]
+                    - 'heading "AUDIT-FIX B: Silence louder (clean poster)" [level=3] [ref=f2e325]'
+                - listitem [ref=f2e326]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX A: Coffee ritual (dark notes)" [ref=f2e328] [cursor=pointer]':
+                    - generic [ref=f2e329]:
+                      - button "Предыдущий слайд" [ref=f2e331]
+                      - button "Следующий слайд" [ref=f2e334]
+                    - 'heading "AUDIT-FIX A: Coffee ritual (dark notes)" [level=3] [ref=f2e338]'
+                - listitem [ref=f2e339]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX B: Silence louder (clean poster)" [ref=f2e341] [cursor=pointer]':
+                    - generic [ref=f2e342]:
+                      - button "Предыдущий слайд" [ref=f2e344]
+                      - button "Следующий слайд" [ref=f2e347]
+                    - 'heading "AUDIT-FIX B: Silence louder (clean poster)" [level=3] [ref=f2e351]'
+                - listitem [ref=f2e352]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX A: Coffee ritual (dark notes)" [ref=f2e354] [cursor=pointer]':
+                    - generic [ref=f2e355]:
+                      - button "Предыдущий слайд" [ref=f2e357]
+                      - button "Следующий слайд" [ref=f2e360]
+                    - 'heading "AUDIT-FIX A: Coffee ritual (dark notes)" [level=3] [ref=f2e364]'
+                - listitem [ref=f2e365]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX B: Silence louder (clean poster)" [ref=f2e367] [cursor=pointer]':
+                    - generic [ref=f2e368]:
+                      - button "Предыдущий слайд" [ref=f2e370]
+                      - button "Следующий слайд" [ref=f2e373]
+                    - 'heading "AUDIT-FIX B: Silence louder (clean poster)" [level=3] [ref=f2e377]'
+                - listitem [ref=f2e378]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX A: Coffee ritual (dark notes)" [ref=f2e380] [cursor=pointer]':
+                    - generic [ref=f2e381]:
+                      - button "Предыдущий слайд" [ref=f2e383]
+                      - button "Следующий слайд" [ref=f2e386]
+                    - 'heading "AUDIT-FIX A: Coffee ritual (dark notes)" [level=3] [ref=f2e390]'
+                - listitem [ref=f2e391]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX B: Silence louder (clean poster)" [ref=f2e393] [cursor=pointer]':
+                    - generic [ref=f2e394]:
+                      - button "Предыдущий слайд" [ref=f2e396]
+                      - button "Следующий слайд" [ref=f2e399]
+                    - 'heading "AUDIT-FIX B: Silence louder (clean poster)" [level=3] [ref=f2e403]'
+                - listitem [ref=f2e404]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX A: Coffee ritual (dark notes)" [ref=f2e406] [cursor=pointer]':
+                    - generic [ref=f2e407]:
+                      - button "Предыдущий слайд" [ref=f2e409]
+                      - button "Следующий слайд" [ref=f2e412]
+                    - 'heading "AUDIT-FIX A: Coffee ritual (dark notes)" [level=3] [ref=f2e416]'
+                - listitem [ref=f2e417]:
+                  - 'button "Предыдущий слайд Следующий слайд LIVE-GEN R3: LG-C Heritage tips" [ref=f2e419] [cursor=pointer]':
+                    - generic [ref=f2e420]:
+                      - button "Предыдущий слайд" [ref=f2e422]
+                      - button "Следующий слайд" [ref=f2e425]
+                    - 'heading "LIVE-GEN R3: LG-C Heritage tips" [level=3] [ref=f2e429]'
+                - listitem [ref=f2e430]:
+                  - 'button "Предыдущий слайд Следующий слайд LIVE-GEN R3: LG-B Community energy" [ref=f2e432] [cursor=pointer]':
+                    - generic [ref=f2e433]:
+                      - button "Предыдущий слайд" [ref=f2e435]
+                      - button "Следующий слайд" [ref=f2e438]
+                    - 'heading "LIVE-GEN R3: LG-B Community energy" [level=3] [ref=f2e442]'
+                - listitem [ref=f2e443]:
+                  - 'button "Предыдущий слайд Следующий слайд LIVE-GEN R3: LG-A Coffee ritual" [ref=f2e445] [cursor=pointer]':
+                    - generic [ref=f2e446]:
+                      - button "Предыдущий слайд" [ref=f2e448]
+                      - button "Следующий слайд" [ref=f2e451]
+                    - 'heading "LIVE-GEN R3: LG-A Coffee ritual" [level=3] [ref=f2e455]'
+                - listitem [ref=f2e456]:
+                  - button "S8 Client Persist 372562" [ref=f2e458] [cursor=pointer]:
+                    - heading "S8 Client Persist 372562" [level=3] [ref=f2e462]
+                - listitem [ref=f2e463]:
+                  - button [ref=f2e465] [cursor=pointer]:
+                    - heading "HTTP guard" [level=3] [ref=f2e469]
+                - listitem [ref=f2e470]:
+                  - generic [ref=f2e471]:
+                    - button "Mig once" [ref=f2e472] [cursor=pointer]:
+                      - heading "Mig once" [level=3] [ref=f2e476]
+                    - paragraph [ref=f2e477]: 15 октября 2026 г. в 17:41
+                - listitem [ref=f2e478]:
+                  - generic [ref=f2e479]:
+                    - button "Guard persist draft" [ref=f2e480] [cursor=pointer]:
+                      - heading "Guard persist draft" [level=3] [ref=f2e484]
+                    - paragraph [ref=f2e485]: 15 октября 2026 г. в 17:41
+                - listitem [ref=f2e486]:
+                  - generic [ref=f2e487]:
+                    - button [ref=f2e488] [cursor=pointer]:
+                      - heading "Smoke draft 2" [level=3] [ref=f2e492]
+                    - paragraph [ref=f2e493]: 15 октября 2026 г. в 17:39
+                - listitem [ref=f2e494]:
+                  - generic [ref=f2e495]:
+                    - button "Mig once" [ref=f2e496] [cursor=pointer]:
+                      - heading "Mig once" [level=3] [ref=f2e500]
+                    - paragraph [ref=f2e501]: 15 октября 2026 г. в 17:38
+                - listitem [ref=f2e502]:
+                  - generic [ref=f2e503]:
+                    - button "Guard persist draft" [ref=f2e504] [cursor=pointer]:
+                      - heading "Guard persist draft" [level=3] [ref=f2e508]
+                    - paragraph [ref=f2e509]: 15 октября 2026 г. в 17:38
+          - generic [ref=f2e213]:
+            - generic [ref=f2e214]:
+              - generic [ref=f2e215]:
+                - heading "Конкуренты" [level=2] [ref=f2e216]
+                - generic [ref=f2e217]: "0"
+              - generic [ref=f2e219]:
+                - tablist "Конкуренты или доски" [ref=f2e220]:
+                  - tab "Конкуренты" [selected] [ref=f2e221]
+                  - tab "Mig board" [ref=f2e510]
+                - generic [ref=f2e234]:
+                  - button "Сортировка" [ref=f2e236]
+                  - button "Фильтр" [ref=f2e241]
+                  - button "Загрузить" [disabled] [ref=f2e244]
+                  - searchbox "Поиск конкурентов" [ref=f2e252]
+            - paragraph [ref=f2e254]: Пока нет каруселей ниши
+      - button "Закрыть панель генерации"
+      - complementary [aria-hidden] [ref=f2e511]:
+        - generic [ref=f2e512]:
+          - generic [ref=f2e513]:
+            - paragraph [ref=f2e514]: Журнал генерации
+            - heading [level=2] [ref=f2e515]: Конвейер агентов
+          - button [ref=f2e516]: Закрыть
+        - generic [ref=f2e517]:
+          - generic [ref=f2e518]:
+            - generic [ref=f2e519]: Прогресс
+            - generic [ref=f2e520]: 0%
+          - progressbar [ref=f2e521]
+        - list [ref=f2e522]:
+          - listitem [ref=f2e523]:
+            - generic [ref=f2e526]:
+              - generic [ref=f2e527]: Исследователь
+              - generic [ref=f2e528]: Ожидание...
+          - listitem [ref=f2e529]:
+            - generic [ref=f2e532]:
+              - generic [ref=f2e533]: Автор хуков
+              - generic [ref=f2e534]: Ожидание...
+          - listitem [ref=f2e535]:
+            - generic [ref=f2e538]:
+              - generic [ref=f2e539]: Сценарист
+              - generic [ref=f2e540]: Ожидание...
+          - listitem [ref=f2e541]:
+            - generic [ref=f2e544]:
+              - generic [ref=f2e545]: Дизайнер
+              - generic [ref=f2e546]: Ожидание...
+          - listitem [ref=f2e547]:
+            - generic [ref=f2e550]:
+              - generic [ref=f2e551]: Конвейер
+              - generic [ref=f2e552]: Ожидание...
+        - generic [ref=f2e553]:
+          - generic:
+            - textbox [disabled]:
+              - /placeholder: Заметка активному шагу…
+            - generic:
+              - generic:
+                - generic:
+                  - button [disabled]:
+                    - generic: Record voice
+                  - button [disabled]:
+                    - generic: Send message
+      - button "Закрыть разбор" [ref=f2e555]
+      - dialog [ref=f2e556]:
+        - generic [ref=f2e557]:
+          - heading "Разбор конкурента · carousel-engine" [level=2] [ref=f2e559]
+          - button "Закрыть" [ref=f2e560]
+        - generic [ref=f2e564]:
+          - generic [ref=f2e565]:
+            - tablist "Агенты разбора" [ref=f2e567]:
+              - tab "Разборщик" [selected] [ref=f2e568]
+              - tab "Сценарист" [ref=f2e576]
+              - tab "Дизайнер" [ref=f2e585]
+              - tab "Публицист" [ref=f2e598]
+            - list [ref=f2e609]:
+              - listitem [ref=f2e610]: Привет! Я Разборщик Vernatun. Нажмите «Начать разбор», когда будете готовы.
+            - generic [ref=f2e611]:
+              - button "Начать разбор" [ref=f2e613]
+              - generic [ref=f2e614]:
+                - textbox "Сообщение" [ref=f2e615]
+                - generic [ref=f2e618]:
+                  - button "Передать сценаристу" [disabled] [ref=f2e620]
+                  - button "Голосовой ввод" [ref=f2e627]:
+                    - generic [ref=f2e631]: Record voice
+                  - button "Отправить сообщение" [disabled]:
+                    - generic: Send message
+          - generic [ref=f2e632]:
+            - tablist "Карусель" [ref=f2e634]:
+              - tab "Конкуренты" [selected] [ref=f2e635]
+              - tab "Наши" [ref=f2e637]
+            - generic [ref=f2e640]:
+              - generic [ref=f2e641]:
+                - button "Предыдущий слайд" [ref=f2e642]
+                - generic [ref=f2e645]:
+                  - 'img "AUDIT-FIX A: Coffee ritual (dark notes)"'
+                - button "Следующий слайд" [ref=f2e646]
+              - paragraph [ref=f2e649]: 1/4
+  - alert [ref=f2e554]

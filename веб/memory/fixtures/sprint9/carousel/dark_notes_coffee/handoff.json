@@ -1,0 +1,43 @@
+{
+  "contentType": "carousel",
+  "project": "vernatun",
+  "content_id": "golden-dark-notes-coffee",
+  "requested_slide_count": 3,
+  "idea": "Утренний ритуал клуба: кофе + честный разговор вместо инфобиз-советов",
+  "hook": "Кофе врёт?",
+  "tone": "vernatun",
+  "cta_type": 4,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Кофе врёт?",
+      "secondary_copy": "",
+      "swipe_trigger": "META: curiosity — зритель хочет узнать, что именно врёт кофе про «продуктивность»",
+      "visual_prompt": "dark_notes chalk grid charcoal wall, yellow marker underline under empty coffee cup outline, soft steam doodle crossing right cut, Vernatun pomegranate mark tiny bottom-left, warm side light, no purple glow",
+      "alt_text": "Меловая доска с чашкой кофе и вопросом"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "point",
+      "primary_copy": "Ритуал важнее рецепта",
+      "secondary_copy": "В Vernatun кофе — пауза, чтобы услышать друг друга. Не «система на 6 фигур».",
+      "swipe_trigger": "META: proof beat — зритель листает за конкретным жестом клуба",
+      "visual_prompt": "dark_notes checklist boxes hand-drawn, yellow marker highlight on one checked line, coffee steam bridge arrow continuing from slide 1, charcoal texture, warm amber accent only",
+      "alt_text": "Чеклист ритуала на меловой доске"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta",
+      "primary_copy": "Сохрани ритуал",
+      "secondary_copy": "Лайк + сохранить — чтобы не потерять паузу на неделе.",
+      "swipe_trigger": "META: soft end — CTA save; дальше листать не нужно",
+      "visual_prompt": "dark_notes cta frame, gold-soft chalk CTA block, doodle arrow pointing to save gesture icon, seamless leftover steam from prior slide, no stock Inter poster look",
+      "alt_text": "Призыв сохранить ритуал",
+      "cta_type": 4
+    }
+  ],
+  "caption": "Кофе не про продуктивность. Про паузу. Vernatun.",
+  "hashtags": ["#Vernatun", "#АрмянскийКлуб", "#Ритуал", "#Кофе"],
+  "promptForDesigner": "dark_notes class: marker/doodle/bridges; panorama→slice 3×4:5; ignore swipe_trigger paint"
+}

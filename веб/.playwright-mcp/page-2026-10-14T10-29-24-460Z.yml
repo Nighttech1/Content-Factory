@@ -1,0 +1,178 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e2]:
+    - complementary "Главная навигация" [ref=f7e3]:
+      - generic [ref=f7e6]:
+        - generic [ref=f7e7]: VERNATUN
+        - generic [ref=f7e8]: ARMENIAN CLUB
+      - navigation [ref=f7e10]:
+        - generic [ref=f7e11]:
+          - link "Студия" [ref=f7e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f7e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f7e37] [cursor=pointer]:
+            - /url: /settings
+          - link "Директор" [ref=f7e48] [cursor=pointer]:
+            - /url: /marketing
+      - generic [ref=f7e58]:
+        - paragraph [ref=f7e59]: Роль QA (локально)
+        - generic [ref=f7e60]:
+          - button "OWNER" [ref=f7e61]
+          - button "ADMIN" [ref=f7e62]
+      - button "Изменить ширину боковой панели" [ref=f7e63]
+    - main [ref=f7e65]:
+      - generic [ref=f7e66]:
+        - generic [ref=f7e67]:
+          - generic [ref=f7e68]:
+            - heading "Полезные картинки & Инфографика" [level=1] [ref=f7e69]
+            - generic [ref=f7e70]:
+              - link "Команда выпуска" [ref=f7e71] [cursor=pointer]:
+                - /url: /studio/aesthetic-graphics/mesh
+              - link "Аналитика" [ref=f7e72] [cursor=pointer]:
+                - /url: /studio/aesthetic-graphics/analytics
+              - button "Создать" [ref=f7e73]
+          - paragraph [ref=f7e75]: Читы, таблицы и quote-тайлы для Telegram и LinkedIn.
+        - generic [ref=f7e77]:
+          - generic [ref=f7e78]:
+            - generic [ref=f7e79]:
+              - generic [ref=f7e80]:
+                - heading "Наши" [level=2] [ref=f7e82]
+                - generic [ref=f7e84]: "3"
+              - tablist "Вкладки нашей ленты" [ref=f7e86]:
+                - tab "Опубликовано" [selected] [ref=f7e87]
+                - tab "Черновики" [ref=f7e89]
+            - generic [ref=f7e90]:
+              - article [ref=f7e91]:
+                - generic [ref=f7e92]:
+                  - generic [ref=f7e94]:
+                    - generic [ref=f7e95]: "@vernatun.club"
+                    - generic "Подписчики" [ref=f7e96]: 868к
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 22K
+                      - listitem "Лайки":
+                        - generic: 1.6K
+                      - listitem "Комментарии":
+                        - generic: "41"
+                      - listitem "Репосты":
+                        - generic: "62"
+                      - listitem "Сохранения":
+                        - generic: "100"
+              - article [ref=f7e97]:
+                - generic [ref=f7e98]:
+                  - generic [ref=f7e100]:
+                    - generic [ref=f7e101]: "@vernatun.club"
+                    - generic "Подписчики" [ref=f7e102]: 868к
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 9.8K
+                      - listitem "Лайки":
+                        - generic: "720"
+                      - listitem "Комментарии":
+                        - generic: "18"
+                      - listitem "Репосты":
+                        - generic: "29"
+                      - listitem "Сохранения":
+                        - generic: "46"
+              - article [ref=f7e103]:
+                - generic [ref=f7e104]:
+                  - generic [ref=f7e106]:
+                    - generic [ref=f7e107]: "@vernatun.club"
+                    - generic "Подписчики" [ref=f7e108]: 868к
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 17K
+                      - listitem "Лайки":
+                        - generic: 1.1K
+                      - listitem "Комментарии":
+                        - generic: "27"
+                      - listitem "Репосты":
+                        - generic: "44"
+                      - listitem "Сохранения":
+                        - generic: "70"
+          - generic [ref=f7e109]:
+            - generic [ref=f7e110]:
+              - generic [ref=f7e111]:
+                - heading "Конкуренты" [level=2] [ref=f7e113]
+                - generic [ref=f7e115]: "4"
+              - group [ref=f7e117]:
+                - button "Конкуренты" [ref=f7e118] [cursor=pointer]
+                - button "Доски" [ref=f7e126] [cursor=pointer]
+              - searchbox "Поиск конкурентов" [ref=f7e138]
+            - generic [ref=f7e139]:
+              - article [ref=f7e140]:
+                - generic [ref=f7e141]:
+                  - generic [ref=f7e143]:
+                    - generic [ref=f7e144]: "@rival_g-01"
+                    - generic "Подписчики" [ref=f7e145]: 794к
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 44K
+                      - listitem "Лайки":
+                        - generic: 2.9K
+                      - listitem "Комментарии":
+                        - generic: "76"
+                      - listitem "Репосты":
+                        - generic: "118"
+                      - listitem "Сохранения":
+                        - generic: "185"
+                - button "Разбор" [ref=f7e147]
+              - article [ref=f7e148]:
+                - generic [ref=f7e149]:
+                  - generic [ref=f7e151]:
+                    - generic [ref=f7e152]: "@rival_g-02"
+                    - generic "Подписчики" [ref=f7e153]: 794к
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 20K
+                      - listitem "Лайки":
+                        - generic: 1.3K
+                      - listitem "Комментарии":
+                        - generic: "33"
+                      - listitem "Репосты":
+                        - generic: "54"
+                      - listitem "Сохранения":
+                        - generic: "85"
+                - button "Разбор" [ref=f7e155]
+              - article [ref=f7e156]:
+                - generic [ref=f7e157]:
+                  - generic [ref=f7e159]:
+                    - generic [ref=f7e160]: "@rival_g-03"
+                    - generic "Подписчики" [ref=f7e161]: 794к
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 36K
+                      - listitem "Лайки":
+                        - generic: 2.1K
+                      - listitem "Комментарии":
+                        - generic: "54"
+                      - listitem "Репосты":
+                        - generic: "86"
+                      - listitem "Сохранения":
+                        - generic: "134"
+                - button "Разбор" [ref=f7e163]
+              - article [ref=f7e164]:
+                - generic [ref=f7e165]:
+                  - generic [ref=f7e167]:
+                    - generic [ref=f7e168]: "@rival_g-04"
+                    - generic "Подписчики" [ref=f7e169]: 794к
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 12K
+                      - listitem "Лайки":
+                        - generic: "880"
+                      - listitem "Комментарии":
+                        - generic: "19"
+                      - listitem "Репосты":
+                        - generic: "35"
+                      - listitem "Сохранения":
+                        - generic: "56"
+                - button "Разбор" [ref=f7e171]
+  - alert [ref=f7e172]

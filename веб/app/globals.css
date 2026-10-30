@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+/* C-26: Century Gothic via OS local() — no proprietary woff in repo yet */
+@font-face {
+  font-family: "Century Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Century Gothic"),
+    local("CenturyGothic");
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("Century Gothic Bold"),
+    local("CenturyGothic-Bold"),
+    local("Century Gothic"),
+    local("CenturyGothic");
+}
+
+:root {
+  /* Deep Matte Dark Luxury — ARCHITECTURE §2 */
+  --bg-canvas: #08090a;
+  --bg-elevated: #0d0f12;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-hover: rgba(255, 255, 255, 0.06);
+
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-active: rgba(255, 255, 255, 0.16);
+
+  --accent-blue: #2563eb;
+  --accent-blue-bright: #3b82f6;
+  --accent-gold: #d4a359;
+  --accent-gold-bright: #f59e0b;
+  --accent-terracotta: #c86446;
+
+  --text-primary: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-mono: #6b7280;
+
+  /* C-26: UI sans — Century Gothic (OS local); Inter removed */
+  --font-ui: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  /* C-132 / C-134 — alias for Century Gothic token (same stack as --font-ui) */
+  --font-century-gothic: var(--font-ui);
+}
+
+@theme inline {
+  --color-canvas: var(--bg-canvas);
+  --color-elevated: var(--bg-elevated);
+  --color-card: var(--bg-card);
+  --color-hover: var(--bg-hover);
+  --color-border-glass: var(--border-glass);
+  --color-border-active: var(--border-active);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-gold: var(--accent-gold);
+  --color-accent-terracotta: var(--accent-terracotta);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-text-mono: var(--text-mono);
+
+  --font-sans: var(--font-ui);
+  --font-mono: var(--font-mono-jb);
+  --font-armenian: var(--font-hy);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-ui), var(--font-hy), system-ui, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent-blue) 40%, transparent);
+  color: var(--text-primary);
+}
+
+/* C-132 — feed card meta/caption: Century Gothic white 12px (all modules) */
+.cf-card-meta {
+  font-family: var(--font-ui), "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+/* C-134 — system / Razbor source titles: Century Gothic white 16px */
+.cf-system-title {
+  font-family: var(--font-century-gothic), var(--font-hy), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* C-62 — Claude-like chat: hide scrollbar, keep overflow scroll */
+.cf-hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cf-hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* C-139 — static flowchart canvas grid + dashed Trainer feedback */
+.bg-grid-canvas {
+  background-image: radial-gradient(
+    color-mix(in srgb, var(--accent-blue-bright) 12%, transparent) 1.2px,
+    transparent 1.2px
+  );
+  background-size: 28px 28px;
+}
+
+@keyframes dashflow {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+.flow-dashed {
+  stroke-dasharray: 6, 6;
+  animation: dashflow 1.8s linear infinite;
+}
+
+.flow-dashed-static {
+  stroke-dasharray: 6, 6;
+}
+
+.node-selected {
+  border-color: var(--accent-blue-bright) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-dashed {
+    animation: none;
+  }
+
+  [data-testid="schedule-calendar"],
+  [data-testid="schedule-slot-label"] {
+    animation: none;
+    transition: none;
+  }
+}

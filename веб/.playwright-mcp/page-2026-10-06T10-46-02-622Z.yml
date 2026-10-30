@@ -1,0 +1,169 @@
+- generic [active] [ref=f12e1]:
+  - generic [ref=f12e2]:
+    - complementary "Главная навигация" [ref=f12e3]:
+      - generic [ref=f12e11]:
+        - generic [ref=f12e12]: VERN·ATUN
+        - generic [ref=f12e13]: Content Factory
+      - generic [ref=f12e14]:
+        - paragraph [ref=f12e15]: Пайплайны и ноды
+        - navigation [ref=f12e16]:
+          - generic [ref=f12e18]:
+            - link "Студия" [ref=f12e19] [cursor=pointer]:
+              - /url: /studio
+            - button "Развернуть модули Студии" [ref=f12e26]
+          - link "Холст" [ref=f12e31] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f12e39] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f12e44] [cursor=pointer]:
+            - /url: /analytics
+          - link "Бренд-кит" [ref=f12e52] [cursor=pointer]:
+            - /url: /brand-kit
+          - link "Настройки" [ref=f12e61] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f12e66]:
+        - paragraph [ref=f12e67]: Բարև · Vernatun
+        - generic [ref=f12e68]:
+          - paragraph [ref=f12e69]: Роль QA (локально)
+          - generic [ref=f12e70]:
+            - button "OWNER" [ref=f12e71]
+            - button "ADMIN" [ref=f12e72]
+    - main [ref=f12e74]:
+      - generic [ref=f12e75]:
+        - generic [ref=f12e77]:
+          - paragraph [ref=f12e78]: // Только владелец · Сетка агентов
+          - heading "Холст сетки агентов" [level=1] [ref=f12e79]
+        - generic [ref=f12e80]:
+          - generic [ref=f12e81]:
+            - generic [ref=f12e82]:
+              - generic [ref=f12e83]:
+                - paragraph [ref=f12e84]: Активные задачи
+                - paragraph [ref=f12e85]: "4"
+              - generic [ref=f12e86]:
+                - paragraph [ref=f12e87]: Задержка
+                - paragraph [ref=f12e88]: 180ms
+              - generic [ref=f12e89]:
+                - paragraph [ref=f12e90]: GPU
+                - paragraph [ref=f12e91]: Активен
+            - button "Добавить модуль пайплайна" [ref=f12e92]
+            - tablist "Пайплайн вида контента" [ref=f12e94]:
+              - tab "Карусели Instagram (4:5)" [selected] [ref=f12e95]
+              - tab "Полезные картинки & Инфографика" [ref=f12e97]
+              - tab "Мульт-Reels (2D сторителлинг)" [ref=f12e98]
+              - tab "HeyGen AI-Аватар Reels" [ref=f12e99]
+              - tab "Рилс" [ref=f12e100]
+              - tab "Нарезки с видео в рилсы" [ref=f12e101]
+              - tab "Информационное видео" [ref=f12e102]
+          - application [ref=f12e104]:
+            - generic [ref=f12e106]:
+              - generic:
+                - generic:
+                  - img:
+                    - group "Edge from researcher to hook" [ref=f12e123] [cursor=pointer]
+                  - img:
+                    - group "Edge from hook to script" [ref=f12e126] [cursor=pointer]
+                  - img:
+                    - group "Edge from script to router" [ref=f12e129] [cursor=pointer]
+                  - img:
+                    - group "Edge from router to queue" [ref=f12e132] [cursor=pointer]
+                  - img:
+                    - group "Edge from queue to designer" [ref=f12e135] [cursor=pointer]
+                  - img:
+                    - group "Edge from designer to hitl" [ref=f12e138] [cursor=pointer]
+                  - img:
+                    - group "Edge from hitl to publisher" [ref=f12e141] [cursor=pointer]
+                  - img:
+                    - group "Edge from publisher to analyst"
+                - generic:
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                  - generic: json
+                - generic:
+                  - group [ref=f12e144]:
+                    - generic [ref=f12e148]:
+                      - generic [aria-hidden] [ref=f12e149]: R
+                      - generic [ref=f12e150]:
+                        - generic [ref=f12e151]: Исследователь
+                        - generic [ref=f12e152]:
+                          - generic [ref=f12e153]: сканирует
+                          - generic [ref=f12e154]: "задачи: 3"
+                  - group [ref=f12e156]:
+                    - generic [ref=f12e160]:
+                      - generic [aria-hidden] [ref=f12e161]: H
+                      - generic [ref=f12e162]:
+                        - generic [ref=f12e163]: Автор хуков
+                        - generic [ref=f12e164]:
+                          - generic [ref=f12e165]: отбирает
+                          - generic [ref=f12e166]: "задачи: 10"
+                  - group [ref=f12e168]:
+                    - generic [ref=f12e172]:
+                      - generic [aria-hidden] [ref=f12e173]: S
+                      - generic [ref=f12e174]:
+                        - generic [ref=f12e175]: Сценарист
+                        - generic [ref=f12e176]:
+                          - generic [ref=f12e177]: простой
+                          - generic [ref=f12e178]: "задачи: 1"
+                  - group [ref=f12e180]:
+                    - generic [ref=f12e183]:
+                      - paragraph [ref=f12e184]: Маршрут
+                      - paragraph [ref=f12e185]: Маршрутизатор карусели
+                      - generic [ref=f12e186]:
+                        - generic [ref=f12e187]: обложка
+                        - generic [ref=f12e188]: слайды
+                        - generic [ref=f12e189]: призыв
+                  - group [ref=f12e191]:
+                    - generic [ref=f12e194]:
+                      - paragraph [ref=f12e195]: Очередь
+                      - paragraph [ref=f12e196]: Очередь задач
+                      - generic [ref=f12e197]:
+                        - generic [ref=f12e198]:
+                          - term [ref=f12e199]: акт.
+                          - definition [ref=f12e200]: "4"
+                        - generic [ref=f12e201]:
+                          - term [ref=f12e202]: ожид.
+                          - definition [ref=f12e203]: "2"
+                        - generic [ref=f12e204]:
+                          - term [ref=f12e205]: пауза
+                          - definition [ref=f12e206]: "1"
+                  - group [ref=f12e208]:
+                    - generic [ref=f12e212]:
+                      - generic [aria-hidden] [ref=f12e213]: C
+                      - generic [ref=f12e214]:
+                        - generic [ref=f12e215]: Дизайнер карусели
+                        - generic [ref=f12e216]:
+                          - generic [ref=f12e217]: собирает
+                          - generic [ref=f12e218]: "задачи: 2"
+                  - group [ref=f12e220]:
+                    - generic [ref=f12e223]:
+                      - paragraph [ref=f12e224]: Согласование
+                      - paragraph [ref=f12e225]: Шлюз согласования
+                      - generic [ref=f12e226]: "ждут: 1"
+                  - group [ref=f12e229]:
+                    - generic [ref=f12e233]:
+                      - generic [aria-hidden] [ref=f12e234]: P
+                      - generic [ref=f12e235]:
+                        - generic [ref=f12e236]: Издатель
+                        - generic [ref=f12e237]:
+                          - generic [ref=f12e238]: готов
+                          - generic [ref=f12e239]: "задачи: 0"
+                  - group [ref=f12e241]:
+                    - generic [ref=f12e245]:
+                      - generic [aria-hidden] [ref=f12e246]: A
+                      - generic [ref=f12e247]:
+                        - generic [ref=f12e248]: Аналитик
+                        - generic [ref=f12e249]:
+                          - generic [ref=f12e250]: учится
+                          - generic [ref=f12e251]: "задачи: 5"
+            - generic "Control Panel" [ref=f12e107]:
+              - button "Zoom In" [ref=f12e108] [cursor=pointer]
+              - button "Zoom Out" [ref=f12e111] [cursor=pointer]
+              - button "Fit View" [ref=f12e114] [cursor=pointer]
+              - button "Toggle Interactivity" [ref=f12e117] [cursor=pointer]
+            - img "Mini Map" [ref=f12e121]
+  - button "Open Next.js Dev Tools" [ref=f12e267] [cursor=pointer]
+  - alert [ref=f12e271]

@@ -1,0 +1,27 @@
+- generic [ref=f16e2]:
+  - complementary "Главная навигация" [ref=f16e3]:
+    - generic [ref=f16e6]:
+      - generic [ref=f16e7]: VERNATUN
+      - generic [ref=f16e8]: ARMENIAN CLUB
+    - navigation [ref=f16e10]:
+      - generic [ref=f16e11]:
+        - link "Студия" [ref=f16e14] [cursor=pointer]:
+          - /url: /studio
+        - link "Команда выпуска" [ref=f16e27] [cursor=pointer]:
+          - /url: /admin/mesh
+        - link "Расписание" [ref=f16e40] [cursor=pointer]:
+          - /url: /schedule
+        - link "Аналитика" [ref=f16e50] [cursor=pointer]:
+          - /url: /analytics
+        - link "Настройки" [ref=f16e63] [cursor=pointer]:
+          - /url: /settings
+    - generic [ref=f16e73]:
+      - paragraph [ref=f16e74]: Роль QA (локально)
+      - generic [ref=f16e75]:
+        - button "OWNER" [ref=f16e76]
+        - button "ADMIN" [ref=f16e77]
+    - button "Изменить ширину боковой панели" [ref=f16e78]
+  - main [ref=f16e80]:
+    - generic [ref=f16e81]:
+      - heading "Команда выпуска" [level=1] [ref=f16e82]
+      - generic "Загрузка команды выпуска" [ref=f16e83]

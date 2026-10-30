@@ -1,0 +1,117 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary "Главная навигация" [ref=f1e3]:
+      - generic [ref=f1e6]:
+        - generic [ref=f1e7]: VERNATUN
+        - generic [ref=f1e8]: ARMENIAN CLUB
+      - navigation [ref=f1e10]:
+        - generic [ref=f1e11]:
+          - link "Студия" [ref=f1e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [active] [ref=f1e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f1e37] [cursor=pointer]:
+            - /url: /settings
+          - link "Директор" [ref=f1e48] [cursor=pointer]:
+            - /url: /marketing
+      - generic [ref=f1e58]:
+        - paragraph [ref=f1e59]: Роль QA (локально)
+        - generic [ref=f1e60]:
+          - button "OWNER" [ref=f1e61]
+          - button "ADMIN" [ref=f1e62]
+      - button "Изменить ширину боковой панели" [ref=f1e63]
+    - main [ref=f1e65]:
+      - generic [ref=f1e360]:
+        - generic [ref=f1e361]:
+          - heading "Расписание" [level=1] [ref=f1e362]
+          - paragraph [ref=f1e363]: Календарь слотов для готовых постов. Назначение даты — только очередь в студии, без публикации в соцсети.
+        - generic [ref=f1e364]:
+          - generic [ref=f1e365]:
+            - generic [ref=f1e366]:
+              - generic [ref=f1e367]:
+                - button "Предыдущий месяц" [ref=f1e368]
+                - heading "октябрь 2026 г." [level=2] [ref=f1e371]
+                - button "Следующий месяц" [ref=f1e372]
+              - button "Сегодня" [ref=f1e375]
+            - generic [ref=f1e376]:
+              - paragraph [ref=f1e377]: Пн
+              - paragraph [ref=f1e378]: Вт
+              - paragraph [ref=f1e379]: Ср
+              - paragraph [ref=f1e380]: Чт
+              - paragraph [ref=f1e381]: Пт
+              - paragraph [ref=f1e382]: Сб
+              - paragraph [ref=f1e383]: Вс
+              - generic [ref=f1e384]:
+                - generic [ref=f1e385] [cursor=pointer]: "28"
+                - generic [ref=f1e388] [cursor=pointer]: "29"
+                - generic [ref=f1e391] [cursor=pointer]: "30"
+                - generic [ref=f1e394] [cursor=pointer]: "1"
+                - generic [ref=f1e397] [cursor=pointer]: "2"
+                - generic [ref=f1e400] [cursor=pointer]: "3"
+                - generic [ref=f1e403] [cursor=pointer]: "4"
+                - generic [ref=f1e406] [cursor=pointer]: "5"
+                - generic [ref=f1e409] [cursor=pointer]: "6"
+                - generic [ref=f1e412] [cursor=pointer]: "7"
+                - generic [ref=f1e415] [cursor=pointer]: "8"
+                - generic [ref=f1e418] [cursor=pointer]: "9"
+                - generic [ref=f1e421] [cursor=pointer]: "10"
+                - generic [ref=f1e424] [cursor=pointer]: "11"
+                - generic [ref=f1e427] [cursor=pointer]: "12"
+                - generic [ref=f1e430] [cursor=pointer]: "13"
+                - generic [ref=f1e433] [cursor=pointer]: "14"
+                - generic [ref=f1e436] [cursor=pointer]:
+                  - generic [ref=f1e437]: "15"
+                  - generic [ref=f1e438]:
+                    - button "Черновик разбора" [ref=f1e439]
+                    - button "Черновик разбора" [ref=f1e444]
+                    - button "Черновик разбора" [ref=f1e449]
+                    - generic [ref=f1e454]: "+2"
+                - generic [ref=f1e455] [cursor=pointer]: "16"
+                - generic [ref=f1e458] [cursor=pointer]: "17"
+                - generic [ref=f1e461] [cursor=pointer]: "18"
+                - generic [ref=f1e464] [cursor=pointer]: "19"
+                - generic [ref=f1e467] [cursor=pointer]: "20"
+                - generic [ref=f1e470] [cursor=pointer]: "21"
+                - generic [ref=f1e473] [cursor=pointer]: "22"
+                - generic [ref=f1e476] [cursor=pointer]: "23"
+                - generic [ref=f1e479] [cursor=pointer]: "24"
+                - generic [ref=f1e482] [cursor=pointer]: "25"
+                - generic [ref=f1e485] [cursor=pointer]: "26"
+                - generic [ref=f1e488] [cursor=pointer]: "27"
+                - generic [ref=f1e491] [cursor=pointer]: "28"
+                - generic [ref=f1e494] [cursor=pointer]: "29"
+                - generic [ref=f1e497] [cursor=pointer]: "30"
+                - generic [ref=f1e500] [cursor=pointer]: "31"
+                - generic [ref=f1e503] [cursor=pointer]: "1"
+                - generic [ref=f1e506] [cursor=pointer]: "2"
+                - generic [ref=f1e509] [cursor=pointer]: "3"
+                - generic [ref=f1e512] [cursor=pointer]: "4"
+                - generic [ref=f1e515] [cursor=pointer]: "5"
+                - generic [ref=f1e518] [cursor=pointer]: "6"
+                - generic [ref=f1e521] [cursor=pointer]: "7"
+                - generic [ref=f1e524] [cursor=pointer]: "8"
+          - separator "Ширина модулей студии" [ref=f1e527]
+          - complementary [ref=f1e528]:
+            - generic [ref=f1e529]:
+              - paragraph [ref=f1e530]: Очередь
+              - heading "Модули студии" [level=2] [ref=f1e531]
+            - tree [ref=f1e533]:
+              - treeitem [ref=f1e534]:
+                - button "Карусели Instagram" [ref=f1e535]
+              - treeitem [ref=f1e542]:
+                - button "Полезные картинки & Инфографика" [ref=f1e543]
+              - treeitem [ref=f1e550]:
+                - button "Мульт-Reels (2D сторителлинг)" [ref=f1e551]
+              - treeitem [ref=f1e558]:
+                - button "HeyGen AI-Аватар Reels" [ref=f1e559]
+              - treeitem [ref=f1e566]:
+                - button "Статьи на сайт" [ref=f1e567]
+              - treeitem [ref=f1e574]:
+                - button "Статьи в TG" [ref=f1e575]
+              - treeitem [ref=f1e582]:
+                - button "Рилс" [ref=f1e583]
+              - treeitem [ref=f1e590]:
+                - button "Нарезки с видео в рилсы" [ref=f1e591]
+              - treeitem [ref=f1e598]:
+                - button "Информационное видео" [ref=f1e599]
+  - alert [ref=f1e359]

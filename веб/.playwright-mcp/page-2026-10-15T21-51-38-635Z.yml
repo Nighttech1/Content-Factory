@@ -1,0 +1,165 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary "Главная навигация" [ref=f1e3]:
+      - generic [ref=f1e6]:
+        - generic [ref=f1e7]: VERNATUN
+        - generic [ref=f1e8]: ARMENIAN CLUB
+      - navigation [ref=f1e10]:
+        - generic [ref=f1e11]:
+          - link "Студия" [ref=f1e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f1e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f1e37] [cursor=pointer]:
+            - /url: /settings
+          - link "Директор" [ref=f1e48] [cursor=pointer]:
+            - /url: /marketing
+      - generic [ref=f1e58]:
+        - paragraph [ref=f1e59]: Роль QA (локально)
+        - generic [ref=f1e60]:
+          - button "OWNER" [ref=f1e61]
+          - button "ADMIN" [ref=f1e62]
+      - button "Изменить ширину боковой панели" [ref=f1e63]
+    - main [ref=f1e65]:
+      - generic [ref=f1e148]:
+        - generic [ref=f1e150]:
+          - heading "Карусели Instagram" [level=1] [ref=f1e151]
+          - generic [ref=f1e152]:
+            - link "Команда выпуска" [ref=f1e153] [cursor=pointer]:
+              - /url: /studio/carousel-engine/mesh
+            - link "Аналитика" [ref=f1e154] [cursor=pointer]:
+              - /url: /studio/carousel-engine/analytics
+            - button "Создать карусель" [ref=f1e155]
+        - generic [ref=f1e158]:
+          - generic [ref=f1e159]:
+            - generic [ref=f1e160]:
+              - generic [ref=f1e161]:
+                - heading "Наши" [level=2] [ref=f1e162]
+                - generic [ref=f1e164]: "12"
+              - tablist "Вкладки нашей ленты" [ref=f1e167]:
+                - tab "Опубликовано" [ref=f1e168]
+                - tab "Черновики12" [selected] [ref=f1e385]
+            - generic [ref=f1e390]:
+              - heading "Черновики" [level=3] [ref=f1e391]
+              - list [ref=f1e392]:
+                - listitem [ref=f1e393]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX B: Silence louder (clean poster)" [ref=f1e395] [cursor=pointer]':
+                    - generic [ref=f1e396]:
+                      - button "Предыдущий слайд" [ref=f1e398]
+                      - button "Следующий слайд" [active] [ref=f1e401]
+                    - 'heading "AUDIT-FIX B: Silence louder (clean poster)" [level=3] [ref=f1e405]'
+                - listitem [ref=f1e406]:
+                  - 'button "Предыдущий слайд Следующий слайд AUDIT-FIX A: Coffee ritual (dark notes)" [ref=f1e408] [cursor=pointer]':
+                    - generic [ref=f1e409]:
+                      - button "Предыдущий слайд" [ref=f1e411]
+                      - button "Следующий слайд" [ref=f1e414]
+                    - 'heading "AUDIT-FIX A: Coffee ritual (dark notes)" [level=3] [ref=f1e418]'
+                - listitem [ref=f1e419]:
+                  - 'button "Предыдущий слайд Следующий слайд LIVE-GEN R3: LG-C Heritage tips" [ref=f1e421] [cursor=pointer]':
+                    - generic [ref=f1e422]:
+                      - button "Предыдущий слайд" [ref=f1e424]
+                      - button "Следующий слайд" [ref=f1e427]
+                    - 'heading "LIVE-GEN R3: LG-C Heritage tips" [level=3] [ref=f1e431]'
+                - listitem [ref=f1e432]:
+                  - 'button "Предыдущий слайд Следующий слайд LIVE-GEN R3: LG-B Community energy" [ref=f1e434] [cursor=pointer]':
+                    - generic [ref=f1e435]:
+                      - button "Предыдущий слайд" [ref=f1e437]
+                      - button "Следующий слайд" [ref=f1e440]
+                    - 'heading "LIVE-GEN R3: LG-B Community energy" [level=3] [ref=f1e444]'
+                - listitem [ref=f1e445]:
+                  - 'button "Предыдущий слайд Следующий слайд LIVE-GEN R3: LG-A Coffee ritual" [ref=f1e447] [cursor=pointer]':
+                    - generic [ref=f1e448]:
+                      - button "Предыдущий слайд" [ref=f1e450]
+                      - button "Следующий слайд" [ref=f1e453]
+                    - 'heading "LIVE-GEN R3: LG-A Coffee ritual" [level=3] [ref=f1e457]'
+                - listitem [ref=f1e458]:
+                  - button "S8 Client Persist 372562" [ref=f1e460] [cursor=pointer]:
+                    - heading "S8 Client Persist 372562" [level=3] [ref=f1e464]
+                - listitem [ref=f1e465]:
+                  - button [ref=f1e467] [cursor=pointer]:
+                    - heading "HTTP guard" [level=3] [ref=f1e471]
+                - listitem [ref=f1e472]:
+                  - generic [ref=f1e473]:
+                    - button "Mig once" [ref=f1e474] [cursor=pointer]:
+                      - heading "Mig once" [level=3] [ref=f1e478]
+                    - paragraph [ref=f1e479]: 15 октября 2026 г. в 17:41
+                - listitem [ref=f1e480]:
+                  - generic [ref=f1e481]:
+                    - button "Guard persist draft" [ref=f1e482] [cursor=pointer]:
+                      - heading "Guard persist draft" [level=3] [ref=f1e486]
+                    - paragraph [ref=f1e487]: 15 октября 2026 г. в 17:41
+                - listitem [ref=f1e488]:
+                  - generic [ref=f1e489]:
+                    - button [ref=f1e490] [cursor=pointer]:
+                      - heading "Smoke draft 2" [level=3] [ref=f1e494]
+                    - paragraph [ref=f1e495]: 15 октября 2026 г. в 17:39
+                - listitem [ref=f1e496]:
+                  - generic [ref=f1e497]:
+                    - button "Mig once" [ref=f1e498] [cursor=pointer]:
+                      - heading "Mig once" [level=3] [ref=f1e502]
+                    - paragraph [ref=f1e503]: 15 октября 2026 г. в 17:38
+                - listitem [ref=f1e504]:
+                  - generic [ref=f1e505]:
+                    - button "Guard persist draft" [ref=f1e506] [cursor=pointer]:
+                      - heading "Guard persist draft" [level=3] [ref=f1e510]
+                    - paragraph [ref=f1e511]: 15 октября 2026 г. в 17:38
+          - generic [ref=f1e295]:
+            - generic [ref=f1e296]:
+              - generic [ref=f1e297]:
+                - heading "Конкуренты" [level=2] [ref=f1e298]
+                - generic [ref=f1e299]: "0"
+              - generic [ref=f1e301]:
+                - tablist "Конкуренты или доски" [ref=f1e302]:
+                  - tab "Конкуренты" [selected] [ref=f1e303]
+                  - tab "Mig board" [ref=f1e386]
+                - generic [ref=f1e316]:
+                  - button "Сортировка" [ref=f1e318]
+                  - button "Фильтр" [ref=f1e323]
+                  - button "Загрузить" [disabled] [ref=f1e326]
+                  - searchbox "Поиск конкурентов" [ref=f1e334]
+            - paragraph [ref=f1e387]: Пока нет каруселей ниши
+      - button "Закрыть панель генерации"
+      - complementary [aria-hidden] [ref=f1e342]:
+        - generic [ref=f1e343]:
+          - generic [ref=f1e344]:
+            - paragraph [ref=f1e345]: Журнал генерации
+            - heading [level=2] [ref=f1e346]: Конвейер агентов
+          - button [ref=f1e347]: Закрыть
+        - generic [ref=f1e348]:
+          - generic [ref=f1e349]:
+            - generic [ref=f1e350]: Прогресс
+            - generic [ref=f1e351]: 0%
+          - progressbar [ref=f1e352]
+        - list [ref=f1e353]:
+          - listitem [ref=f1e354]:
+            - generic [ref=f1e357]:
+              - generic [ref=f1e358]: Исследователь
+              - generic [ref=f1e359]: Ожидание...
+          - listitem [ref=f1e360]:
+            - generic [ref=f1e363]:
+              - generic [ref=f1e364]: Автор хуков
+              - generic [ref=f1e365]: Ожидание...
+          - listitem [ref=f1e366]:
+            - generic [ref=f1e369]:
+              - generic [ref=f1e370]: Сценарист
+              - generic [ref=f1e371]: Ожидание...
+          - listitem [ref=f1e372]:
+            - generic [ref=f1e375]:
+              - generic [ref=f1e376]: Дизайнер
+              - generic [ref=f1e377]: Ожидание...
+          - listitem [ref=f1e378]:
+            - generic [ref=f1e381]:
+              - generic [ref=f1e382]: Конвейер
+              - generic [ref=f1e383]: Ожидание...
+        - generic [ref=f1e384]:
+          - generic:
+            - textbox [disabled]:
+              - /placeholder: Заметка активному шагу…
+            - generic:
+              - generic:
+                - generic:
+                  - button [disabled]:
+                    - generic: Record voice
+                  - button [disabled]:
+                    - generic: Send message
+  - alert [ref=f1e123]

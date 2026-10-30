@@ -1,0 +1,43 @@
+{
+  "contentType": "carousel",
+  "project": "vernatun",
+  "content_id": "golden-bold-poster-invite",
+  "requested_slide_count": 3,
+  "idea": "Постерный ритм: короткий удар → смысл → вопрос в комментарии",
+  "hook": "Тишина громче поста?",
+  "tone": "vernatun",
+  "cta_type": 1,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Тишина громче поста?",
+      "secondary_copy": "",
+      "swipe_trigger": "META: paradox — почему тишина важнее контента",
+      "visual_prompt": "bold_poster high-contrast solid charcoal blocks, large type only, minimal chrome, warm cream accent bar, no purple gradient, no Inter stock look",
+      "alt_text": "Постер с парадоксом про тишину"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "point",
+      "primary_copy": "Стол без камеры",
+      "secondary_copy": "Лучшие фразы клуба не попали в рилс. Они остались за столом.",
+      "swipe_trigger": "META: insight — ценность офлайн-стола",
+      "visual_prompt": "bold_poster solid color fields, short type blocks, subtle pomegranate mark, continuous accent bar crossing cut from cover",
+      "alt_text": "Постер про стол без камеры"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta",
+      "primary_copy": "А у тебя?",
+      "secondary_copy": "Напиши в комментариях: где твоя тишина громче ленты?",
+      "swipe_trigger": "META: soft end — comment CTA; stop",
+      "visual_prompt": "bold_poster solid CTA block high contrast, large question type, no purple pill, Vernatun mark corner",
+      "alt_text": "CTA вопрос в комментарии",
+      "cta_type": 1
+    }
+  ],
+  "caption": "Тишина громче поста. А у тебя? Пиши в комментариях. Vernatun.",
+  "hashtags": ["#Vernatun", "#Клуб", "#Тишина", "#Комментарии"],
+  "promptForDesigner": "bold_poster: high-contrast type blocks; panorama→slice; CTA type 1 comments"
+}

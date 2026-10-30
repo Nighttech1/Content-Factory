@@ -1,0 +1,88 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Главная навигация" [ref=e3]:
+      - generic [ref=e11]:
+        - generic [ref=e12]: VERN·ATUN
+        - generic [ref=e13]: Content Factory
+      - generic [ref=e14]:
+        - paragraph [ref=e15]: Пайплайны и ноды
+        - navigation [ref=e16]:
+          - generic [ref=e17]:
+            - link "Студия" [ref=e20] [cursor=pointer]:
+              - /url: /studio
+            - link "Команда выпуска" [ref=e33] [cursor=pointer]:
+              - /url: /admin/mesh
+            - link "Расписание" [ref=e46] [cursor=pointer]:
+              - /url: /schedule
+            - link "Аналитика" [ref=e56] [cursor=pointer]:
+              - /url: /analytics
+            - link "Бренд-кит" [ref=e69] [cursor=pointer]:
+              - /url: /brand-kit
+            - link "Настройки" [ref=e83] [cursor=pointer]:
+              - /url: /settings
+      - generic [ref=e92]:
+        - paragraph [ref=e93]: Բարև · Vernatun
+        - generic [ref=e94]:
+          - paragraph [ref=e95]: Роль QA (локально)
+          - generic [ref=e96]:
+            - button "OWNER" [ref=e97]
+            - button "ADMIN" [ref=e98]
+      - button "Изменить ширину боковой панели" [ref=e99]
+    - main [ref=e101]:
+      - generic [ref=e102]:
+        - generic [ref=e104]:
+          - heading "Карусели Instagram (4:5)" [level=1] [ref=e105]
+          - button "Создать карусель" [ref=e106]
+        - generic [ref=e109]:
+          - generic [ref=e111]:
+            - generic [ref=e112]:
+              - heading "Наши" [level=2] [ref=e114]
+              - generic [ref=e115]: "0"
+            - tablist "Вкладки нашей ленты" [ref=e117]:
+              - tab "Опубликовано" [selected] [ref=e118]
+              - tab "Черновики" [ref=e120]
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - heading "Конкуренты" [level=2] [ref=e129]
+              - generic [ref=e130]: "0"
+            - searchbox "Поиск каруселей конкурентов" [ref=e136]
+      - button "Закрыть панель генерации"
+      - complementary [aria-hidden] [ref=e141]:
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - paragraph [ref=e144]: Журнал генерации
+            - heading [level=2] [ref=e145]: Конвейер агентов
+          - button [ref=e146]: Закрыть
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]: Прогресс
+            - generic [ref=e150]: 0%
+          - progressbar [ref=e151]
+        - list [ref=e152]:
+          - listitem [ref=e153]:
+            - generic [ref=e156]:
+              - generic [ref=e157]: Исследователь
+              - generic [ref=e158]: Ожидание...
+          - listitem [ref=e159]:
+            - generic [ref=e162]:
+              - generic [ref=e163]: Автор хуков
+              - generic [ref=e164]: Ожидание...
+          - listitem [ref=e165]:
+            - generic [ref=e168]:
+              - generic [ref=e169]: Сценарист
+              - generic [ref=e170]: Ожидание...
+          - listitem [ref=e171]:
+            - generic [ref=e174]:
+              - generic [ref=e175]: Дизайнер
+              - generic [ref=e176]: Ожидание...
+          - listitem [ref=e177]:
+            - generic [ref=e180]:
+              - generic [ref=e181]: Конвейер
+              - generic [ref=e182]: Ожидание...
+        - generic [ref=e184]:
+          - textbox [disabled] [ref=e185]:
+            - /placeholder: Заметка активному шагу…
+          - button [disabled] [ref=e186]
+          - button [disabled] [ref=e191]: →
+  - button "Open Next.js Dev Tools" [ref=e197] [cursor=pointer]
+  - alert [ref=e201]

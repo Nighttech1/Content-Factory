@@ -1,0 +1,142 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary "Главная навигация" [ref=f1e3]:
+      - generic [ref=f1e11]:
+        - generic [ref=f1e12]: VERN·ATUN
+        - generic [ref=f1e13]: Content Factory
+      - generic [ref=f1e14]:
+        - paragraph [ref=f1e15]: Пайплайны и ноды
+        - navigation [ref=f1e16]:
+          - generic [ref=f1e17]:
+            - link "Студия" [ref=f1e20] [cursor=pointer]:
+              - /url: /studio
+            - link "Команда выпуска" [ref=f1e33] [cursor=pointer]:
+              - /url: /admin/mesh
+            - link "Расписание" [ref=f1e46] [cursor=pointer]:
+              - /url: /schedule
+            - link "Аналитика" [ref=f1e56] [cursor=pointer]:
+              - /url: /analytics
+            - link "Бренд-кит" [ref=f1e69] [cursor=pointer]:
+              - /url: /brand-kit
+            - link "Настройки" [ref=f1e83] [cursor=pointer]:
+              - /url: /settings
+      - generic [ref=f1e92]:
+        - paragraph [ref=f1e93]: Բարև · Vernatun
+        - generic [ref=f1e94]:
+          - paragraph [ref=f1e95]: Роль QA (локально)
+          - generic [ref=f1e96]:
+            - button "OWNER" [ref=f1e97]
+            - button "ADMIN" [ref=f1e98]
+      - button "Изменить ширину боковой панели" [ref=f1e99]
+    - main [ref=f1e101]:
+      - generic [ref=f1e102]:
+        - generic [ref=f1e103]:
+          - paragraph [ref=f1e104]: // Расписание
+          - heading "Расписание" [level=1] [ref=f1e105]
+          - paragraph [ref=f1e106]: Календарь слотов для готовых постов. Назначение даты — только очередь в студии, без публикации в соцсети.
+        - generic [ref=f1e108]:
+          - generic [ref=f1e109]:
+            - generic [ref=f1e110]:
+              - generic [ref=f1e111]:
+                - button "Предыдущий месяц" [ref=f1e112]
+                - heading "октябрь 2026 г." [level=2] [ref=f1e115]
+                - button "Следующий месяц" [ref=f1e116]
+              - button "Сегодня" [ref=f1e119]
+            - generic [ref=f1e120]:
+              - paragraph [ref=f1e121]: Пн
+              - paragraph [ref=f1e122]: Вт
+              - paragraph [ref=f1e123]: Ср
+              - paragraph [ref=f1e124]: Чт
+              - paragraph [ref=f1e125]: Пт
+              - paragraph [ref=f1e126]: Сб
+              - paragraph [ref=f1e127]: Вс
+              - generic [ref=f1e128]:
+                - button "28" [ref=f1e129]
+                - button "29" [ref=f1e130]
+                - button "30" [ref=f1e131]
+                - button "1" [ref=f1e132]
+                - button "2" [ref=f1e133]
+                - button "3" [ref=f1e134]
+                - button "4" [ref=f1e135]
+                - button "5" [ref=f1e136]
+                - button "6" [ref=f1e137]
+                - button "7" [ref=f1e138]
+                - button "8" [ref=f1e139]
+                - button "9" [ref=f1e140]
+                - button "10" [ref=f1e141]
+                - button "11" [ref=f1e142]
+                - button "12" [ref=f1e143]
+                - button "13" [ref=f1e144]
+                - button "14" [ref=f1e145]
+                - button "15" [ref=f1e146]
+                - button "16" [ref=f1e147]
+                - button "17" [ref=f1e148]
+                - button "18" [ref=f1e149]
+                - button "19" [ref=f1e150]
+                - button "20" [ref=f1e151]
+                - button "21" [ref=f1e152]
+                - button "22" [ref=f1e153]
+                - button "23" [ref=f1e154]
+                - button "24" [ref=f1e155]
+                - button "25" [ref=f1e156]
+                - button "26" [ref=f1e157]
+                - button "27" [ref=f1e158]
+                - button "28" [ref=f1e159]
+                - button "29" [ref=f1e160]
+                - button "30" [ref=f1e161]
+                - button "31" [ref=f1e162]
+                - button "1" [ref=f1e163]
+                - button "2" [ref=f1e164]
+                - button "3" [ref=f1e165]
+                - button "4" [ref=f1e166]
+                - button "5" [ref=f1e167]
+                - button "6" [ref=f1e168]
+                - button "7" [ref=f1e169]
+                - button "8" [ref=f1e170]
+            - generic [ref=f1e171]:
+              - generic [ref=f1e172]:
+                - generic [ref=f1e173]: Время слота
+                - textbox "Время слота" [ref=f1e174]: 12:00
+              - paragraph [ref=f1e175]: Сначала выберите готовый пост справа, затем день в календаре.
+          - complementary [ref=f1e176]:
+            - generic [ref=f1e177]:
+              - paragraph [ref=f1e178]: Очередь
+              - heading "Модули студии" [level=2] [ref=f1e179]
+            - tree [ref=f1e181]:
+              - treeitem [ref=f1e182]:
+                - button "4:5 · PNG Карусели Instagram (4:5)" [ref=f1e183]:
+                  - generic [ref=f1e190]:
+                    - generic [ref=f1e191]: 4:5 · PNG
+                    - generic [ref=f1e192]: Карусели Instagram (4:5)
+              - treeitem [ref=f1e193]:
+                - button "Bilingual Полезные картинки & Инфографика" [ref=f1e194]:
+                  - generic [ref=f1e201]:
+                    - generic [ref=f1e202]: Bilingual
+                    - generic [ref=f1e203]: Полезные картинки & Инфографика
+              - treeitem [ref=f1e204]:
+                - button "9:16 · 2D Мульт-Reels (2D сторителлинг)" [ref=f1e205]:
+                  - generic [ref=f1e212]:
+                    - generic [ref=f1e213]: 9:16 · 2D
+                    - generic [ref=f1e214]: Мульт-Reels (2D сторителлинг)
+              - treeitem [ref=f1e215]:
+                - button "HeyGen HeyGen AI-Аватар Reels" [ref=f1e216]:
+                  - generic [ref=f1e223]:
+                    - generic [ref=f1e224]: HeyGen
+                    - generic [ref=f1e225]: HeyGen AI-Аватар Reels
+              - treeitem [ref=f1e226]:
+                - button "9:16 Рилс" [ref=f1e227]:
+                  - generic [ref=f1e234]:
+                    - generic [ref=f1e235]: 9:16
+                    - generic [ref=f1e236]: Рилс
+              - treeitem [ref=f1e237]:
+                - button "9:16 Нарезки с видео в рилсы" [ref=f1e238]:
+                  - generic [ref=f1e245]:
+                    - generic [ref=f1e246]: 9:16
+                    - generic [ref=f1e247]: Нарезки с видео в рилсы
+              - treeitem [ref=f1e248]:
+                - button "9:16 Информационное видео" [ref=f1e249]:
+                  - generic [ref=f1e256]:
+                    - generic [ref=f1e257]: 9:16
+                    - generic [ref=f1e258]: Информационное видео
+  - button "Open Next.js Dev Tools" [ref=f1e264] [cursor=pointer]
+  - alert [ref=f1e268]

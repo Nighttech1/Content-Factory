@@ -1,0 +1,116 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Главная навигация" [ref=e3]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: VERNATUN
+        - generic [ref=e8]: ARMENIAN CLUB
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - link "Студия" [ref=e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=e37] [cursor=pointer]:
+            - /url: /settings
+          - link "Директор" [ref=e48] [cursor=pointer]:
+            - /url: /marketing
+      - generic [ref=e58]:
+        - paragraph [ref=e59]: Роль QA (локально)
+        - generic [ref=e60]:
+          - button "OWNER" [ref=e61]
+          - button "ADMIN" [ref=e62]
+      - button "Изменить ширину боковой панели" [ref=e63]
+    - main [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e68]:
+          - heading "Карусели Instagram" [level=1] [ref=e69]
+          - generic [ref=e70]:
+            - link "Команда выпуска" [ref=e71] [cursor=pointer]:
+              - /url: /studio/carousel-engine/mesh
+            - link "Аналитика" [ref=e72] [cursor=pointer]:
+              - /url: /studio/carousel-engine/analytics
+            - button "Создать карусель" [ref=e73]
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - generic [ref=e79]:
+                - heading "Наши" [level=2] [ref=e80]
+                - generic [ref=e82]: "2"
+              - tablist "Вкладки нашей ленты" [ref=e85]:
+                - tab "Опубликовано" [ref=e86]
+                - tab "Черновики2" [active] [selected] [ref=e256]
+            - generic [ref=e302]:
+              - heading "Черновики" [level=3] [ref=e303]
+              - list [ref=e304]:
+                - listitem [ref=e305]:
+                  - 'button "Предыдущий слайд Следующий слайд E2E B: ????? / ??????" [ref=e307] [cursor=pointer]':
+                    - generic [ref=e308]:
+                      - button "Предыдущий слайд" [ref=e310]
+                      - button "Следующий слайд" [ref=e313]
+                    - 'heading "E2E B: ????? / ??????" [level=3] [ref=e317]'
+                - listitem [ref=e318]:
+                  - 'button "Предыдущий слайд Следующий слайд E2E A: ??????? / ??????" [ref=e320] [cursor=pointer]':
+                    - generic [ref=e321]:
+                      - button "Предыдущий слайд" [ref=e323]
+                      - button "Следующий слайд" [ref=e326]
+                    - 'heading "E2E A: ??????? / ??????" [level=3] [ref=e330]'
+          - generic [ref=e213]:
+            - generic [ref=e214]:
+              - generic [ref=e215]:
+                - heading "Конкуренты" [level=2] [ref=e216]
+                - generic [ref=e217]: "0"
+              - generic [ref=e219]:
+                - tablist "Конкуренты или доски" [ref=e220]:
+                  - tab "Конкуренты" [selected] [ref=e221]
+                  - tab "Доски" [ref=e224]
+                - generic [ref=e234]:
+                  - button "Сортировка" [ref=e236]
+                  - button "Фильтр" [ref=e241]
+                  - button "Загрузить" [disabled] [ref=e244]
+                  - searchbox "Поиск конкурентов" [ref=e252]
+            - paragraph [ref=e254]: Пока нет каруселей ниши
+      - button "Закрыть панель генерации"
+      - complementary [aria-hidden] [ref=e257]:
+        - generic [ref=e258]:
+          - generic [ref=e259]:
+            - paragraph [ref=e260]: Журнал генерации
+            - heading [level=2] [ref=e261]: Конвейер агентов
+          - button [ref=e262]: Закрыть
+        - generic [ref=e263]:
+          - generic [ref=e264]:
+            - generic [ref=e265]: Прогресс
+            - generic [ref=e266]: 0%
+          - progressbar [ref=e267]
+        - list [ref=e268]:
+          - listitem [ref=e269]:
+            - generic [ref=e272]:
+              - generic [ref=e273]: Исследователь
+              - generic [ref=e274]: Ожидание...
+          - listitem [ref=e275]:
+            - generic [ref=e278]:
+              - generic [ref=e279]: Автор хуков
+              - generic [ref=e280]: Ожидание...
+          - listitem [ref=e281]:
+            - generic [ref=e284]:
+              - generic [ref=e285]: Сценарист
+              - generic [ref=e286]: Ожидание...
+          - listitem [ref=e287]:
+            - generic [ref=e290]:
+              - generic [ref=e291]: Дизайнер
+              - generic [ref=e292]: Ожидание...
+          - listitem [ref=e293]:
+            - generic [ref=e296]:
+              - generic [ref=e297]: Конвейер
+              - generic [ref=e298]: Ожидание...
+        - generic [ref=e299]:
+          - generic:
+            - textbox [disabled]:
+              - /placeholder: Заметка активному шагу…
+            - generic:
+              - generic:
+                - generic:
+                  - button [disabled]:
+                    - generic: Record voice
+                  - button [disabled]:
+                    - generic: Send message
+  - alert [ref=e255]

@@ -1,0 +1,46 @@
+{
+  "contentType": "carousel",
+  "requested_slide_count": 3,
+  "idea": "Арагац — четыре вершины, один горизонт",
+  "hook": "Вершина молчит?",
+  "tone": "vernatun",
+  "cta_type": 1,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Вершина *молчит*?",
+      "secondary_copy": "Арагац",
+      "swipe_trigger": "META: curiosity — swipe for aragats value beat",
+      "visual_prompt": "CINEMATIC mountain landscape photograph: Mount Aragats four peaks Armenia, snow patches, wide sky, epic travel editorial. FULL-BLEED photoreal/cinematic hero image. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, HTML, CTA, TIP, HOOK, stacked placeholder digits. Photoreal or cinematic illustration only. No purple glow.",
+      "alt_text": "Cover: Арагац"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "body_slide",
+      "primary_copy": "Четыре пика — *один*",
+      "secondary_copy": "Арагац учит не спешить к вершине.",
+      "swipe_trigger": "META: value beat — swipe for CTA",
+      "visual_prompt": "CINEMATIC alpine meadow foreground with Aragats massif distant, soft morning light, no logos. CINEMATIC photograph illustration, photoreal scene. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, HTML, CTA, TIP, HOOK, stacked placeholder digits. Photoreal or cinematic illustration only. No purple glow.",
+      "alt_text": "Body: Арагац"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta_slide",
+      "primary_copy": "А у *тебя*?",
+      "secondary_copy": "Какая вершина ждёт? Пиши в комментариях.",
+      "swipe_trigger": "META: soft end after CTA",
+      "visual_prompt": "CINEMATIC ridge silhouette against dusk gradient, empty lower field for CTA button overlay. CINEMATIC photograph, empty space for HTML CTA overlay. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, HTML, CTA, TIP, HOOK, stacked placeholder digits. Photoreal or cinematic illustration only. No purple glow.",
+      "alt_text": "CTA: Арагац",
+      "cta_type": 1
+    }
+  ],
+  "caption": "Арагац — четыре вершины, один горизонт Vernatun.",
+  "hashtags": [
+    "#Vernatun",
+    "#Арагац",
+    "#Горы",
+    "#Армения"
+  ],
+  "promptForDesigner": "S52 cinematic_scene + image-2 bg; HTML/CSS text overlay; TOPIC from theme not coffee."
+}

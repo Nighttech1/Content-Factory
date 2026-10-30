@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-error-container":"#ffdad6","error-container":"#93000a","secondary-container":"#7e5700","secondary":"#f3be64","tertiary-fixed":"#cfe5ff","surface":"#111317","background":"#111317","on-background":"#e2e2e6","surface-container-high":"#282a2d","on-surface":"#e2e2e6","on-primary":"#561f00","primary":"#ffb694","surface-container-lowest":"#0c0e11","primary-fixed-dim":"#ffb694","tertiary-fixed-dim":"#9ecbfb","tertiary-container":"#6894c2","inverse-primary":"#9d430c","tertiary":"#9ecbfb","on-tertiary-fixed":"#001d34","secondary-fixed":"#ffdeac","surface-tint":"#ffb694","on-secondary-container":"#ffd28a","on-tertiary-container":"#002c4a","surface-container":"#1e2023","outline":"#a48c81","on-secondary-fixed-variant":"#604100","on-surface-variant":"#ddc1b5","surface-variant":"#333538","on-tertiary-fixed-variant":"#154a73","surface-bright":"#37393d","on-error":"#690005","on-secondary-fixed":"#281900","surface-dim":"#111317","on-tertiary":"#003355","outline-variant":"#56423a","surface-container-low":"#1a1c1f","secondary-fixed-dim":"#f3be64","on-secondary":"#432c00","on-primary-container":"#4c1a00","on-primary-fixed":"#351000","surface-container-highest":"#333538","inverse-on-surface":"#2f3034","primary-container":"#de733c","error":"#ffb4ab","primary-fixed":"#ffdbcc","on-primary-fixed-variant":"#7b2f00","inverse-surface":"#e2e2e6"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"0.75rem","space-sm":"0.5rem","space-md":"0.75rem","space-xs":"0.25rem","margin":"1.5rem","space-lg":"1.25rem","space-xl":"2rem","margin-mobile":"1rem","gutter":"1rem"},"fontFamily":{"label-md":["JetBrains Mono"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"code-sm":["JetBrains Mono"],"body-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["JetBrains Mono"],"body-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"code-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.025em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.40)]"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[22px]">token</span><span class="absolute -top-0.5 -right-0.5 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><div class="flex flex-col"><span class="font-headline-md text-label-md tracking-wider text-on-surface font-semibold">VERN·ATUN AI</span><span class="font-label-sm text-label-sm tracking-widest text-on-surface-variant">CONTENT FACTORY</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container border border-surface-bright"><span class="material-symbols-outlined text-tertiary text-[14px]">terminal</span><span class="font-label-sm text-label-sm text-tertiary font-medium">PRODUCTION MESH v2.4</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(194,94,40,0.30)]"><a aria-current="page" class="px-space-md py-space-xs transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(194,94,40,0.30)]" data-path="agent-mesh" href="#">Agent Mesh</a><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="studio-launchpad" href="#">Studio Launchpad</a><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="inspector-hitl" href="#">Inspector &amp; HITL</a><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="self-learning-engine" href="#">Self-Learning Engine</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden 2xl:flex items-center gap-space-md px-space-md py-space-xs rounded bg-surface-container-low border border-surface-container-high"><div class="flex items-center gap-space-xs"><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Workers:</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">4/8</span></div><div class="h-3 w-[1px] bg-surface-variant"></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">Latency:</span><span class="font-label-sm text-label-sm text-tertiary font-semibold">180ms</span></div><div class="h-3 w-[1px] bg-surface-variant"></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">GPU:</span><span class="font-label-sm text-label-sm text-secondary font-semibold">42%</span></div></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary transition-all font-body-sm text-body-sm font-semibold shadow-[0_0_12px_rgba(222,115,60,0.25)]" type="button"><span class="material-symbols-outlined text-[16px]">extension</span><span class="hidden sm:inline">+ New Module Plugin</span></button><a class="p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center justify-center" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span></a><div class="flex items-center gap-space-xs pl-space-xs"><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-1 ring-primary/40"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div><div class="hidden md:flex flex-col"><span class="font-label-sm text-[10px] uppercase font-semibold text-secondary-container bg-secondary-fixed/90 px-1 rounded">Superadmin</span></div></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md border-r border-surface-container"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/70">Pipelines &amp; Nodes</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-semibold rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-surface-container-high text-primary font-semibold rounded-lg" data-path="agent-mesh" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span>Node Canvas</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="studio-launchpad" href="#"><span class="material-symbols-outlined text-[18px]">rocket_launch</span><span>Production Portal</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="inspector-hitl" href="#"><span class="material-symbols-outlined text-[18px]">rule</span><span>HITL Studio</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="self-learning-engine" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span>Engine Analytics</span></a></nav><div class="mt-space-md px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/70">Cluster Telemetry</span></div><div class="flex flex-col gap-space-xs px-space-sm"><div class="flex justify-between items-center py-space-xs font-label-sm text-label-sm"><span class="text-on-surface-variant">Context Capacity</span><span class="text-secondary font-mono">78%</span></div><div class="w-full h-1 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-secondary w-[78%]"></div></div><div class="flex justify-between items-center py-space-xs font-label-sm text-label-sm"><span class="text-on-surface-variant">Throughput</span><span class="text-tertiary font-mono">1,240 t/s</span></div></div></div><div class="px-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Autonomous Run</span><span class="font-label-sm text-[10px] text-tertiary">Synchronized</span></div><span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span></div></div></aside><div class="pl-64"><main class="relative w-full pt-16 bg-surface min-h-screen px-gutter py-margin"><div class="flex flex-col w-full">
+<!-- Interactive Workbench Control Bar -->
+<div class="w-full flex flex-col xl:flex-row xl:items-center justify-between gap-space-md p-space-md rounded-xl bg-surface-container-low shadow-xl mb-space-lg">
+<div class="flex flex-wrap items-center gap-space-md min-w-0">
+<div class="flex items-center gap-space-xs font-label-md text-label-md">
+<span class="text-on-surface-variant/70">Orchestrator</span>
+<span class="text-outline-variant font-mono">/</span>
+<span class="text-on-surface-variant font-medium">Main Autonomous Mesh</span>
+<span class="text-outline-variant font-mono">/</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-primary font-mono text-[10px] tracking-wide">v2.4_live</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-sm pl-space-md">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-mono">Cluster: 99.8% Nominal</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high">
+<span class="material-symbols-outlined text-tertiary text-[14px]">speed</span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">180ms</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high">
+<span class="material-symbols-outlined text-secondary text-[14px]">bolt</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono"><strong class="text-secondary font-semibold">4</strong> active · <strong class="text-on-surface font-semibold">1</strong> queued</span>
+</div>
+</div>
+</div>
+<!-- Actions & Filter Group -->
+<div class="flex items-center gap-space-sm self-end xl:self-auto">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-on-surface-variant text-[16px]">search</span>
+<input class="pl-8 pr-3 py-1.5 rounded bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/50 font-body-sm text-body-sm focus:outline-none focus:ring-0 w-44 md:w-60" placeholder="Filter nodes by tag or ID..." type="text"/>
+<kbd class="hidden md:inline absolute right-2 px-1 rounded bg-surface-container font-label-sm text-[9px] text-on-surface-variant font-mono">⌘K</kbd>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-body-sm text-body-sm font-medium" id="btn-add-node" type="button">
+<span class="material-symbols-outlined text-primary text-[16px]">add_circle</span>
+<span>Node Plugin</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-lg py-1.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-body-sm text-body-sm font-semibold transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+<span>Deploy Changes</span>
+</button>
+</div>
+</div>
+<!-- Main Canvas Container -->
+<div class="relative w-full rounded-2xl bg-surface-container-lowest overflow-hidden shadow-2xl min-h-[960px] flex">
+<!-- Deep Technical Dot Grid Matrix Background -->
+<div class="absolute inset-0 pointer-events-none opacity-40" style="background-image: radial-gradient(#333538 1px, transparent 1px); background-size: 24px 24px;"></div>
+<!-- Ambient Radial Atmospheric Flares -->
+<div class="absolute top-1/4 left-1/5 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] rounded-full bg-tertiary/5 blur-3xl pointer-events-none"></div>
+<!-- Active Luminous SVG Bezier Wires Canvas -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-10" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Wire Gradients -->
+<lineargradient id="wirePulseWarm" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#de733c" stop-opacity="0.8"></stop>
+<stop offset="50%" stop-color="#f3be64" stop-opacity="1"></stop>
+<stop offset="100%" stop-color="#de733c" stop-opacity="0.8"></stop>
+</lineargradient>
+<lineargradient id="wirePulseAzure" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#6894c2" stop-opacity="0.9"></stop>
+<stop offset="50%" stop-color="#9ecbfb" stop-opacity="1"></stop>
+<stop offset="100%" stop-color="#6894c2" stop-opacity="0.9"></stop>
+</lineargradient>
+<!-- Dynamic Marker Glow -->
+<filter height="140%" id="glow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+</defs>
+<!-- Connection 1: Research Agent to Hook Writer -->
+<path d="M 330 180 C 420 180, 430 320, 520 320" fill="none" stroke="#282a2d" stroke-linecap="round" stroke-width="3"></path>
+<path class="animate-[dash_2s_linear_infinite]" d="M 330 180 C 420 180, 430 320, 520 320" fill="none" stroke="url(#wirePulseWarm)" stroke-dasharray="8 12" stroke-linecap="round" stroke-width="2"></path>
+<!-- Connection 2: Hook Writer to Script Synthesizer -->
+<path d="M 850 320 C 930 320, 950 210, 1030 210" fill="none" stroke="#282a2d" stroke-linecap="round" stroke-width="3"></path>
+<path d="M 850 320 C 930 320, 950 210, 1030 210" fill="none" stroke="url(#wirePulseWarm)" stroke-dasharray="6 14" stroke-linecap="round" stroke-width="2"></path>
+<!-- Connection 3: Script Synthesizer to Router Node -->
+<path d="M 1360 210 C 1440 210, 1460 380, 1540 380" fill="none" stroke="#282a2d" stroke-linecap="round" stroke-width="3"></path>
+<path d="M 1360 210 C 1440 210, 1460 380, 1540 380" fill="none" filter="url(#glow)" stroke="url(#wirePulseAzure)" stroke-dasharray="10 16" stroke-width="2.5"></path>
+<!-- Multi-modal Router Branches -->
+<!-- Branch A: to Carousel Engine -->
+<path d="M 1870 360 C 1950 360, 1960 260, 2040 260" fill="none" stroke="#de733c" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Branch B: to Visual Graphic -->
+<path d="M 1870 380 C 1960 380, 1970 350, 2040 350" fill="none" stroke="#7e5700" stroke-dasharray="6 8" stroke-width="1.5"></path>
+<!-- Branch C: to Motion Toon -->
+<path d="M 1870 400 C 1960 400, 1970 440, 2040 440" fill="none" stroke="#333538" stroke-width="1.5"></path>
+<!-- Branch D: Router to HeyGen Streamer Node (Extended downwards left-loop) -->
+<path d="M 1870 420 C 1980 420, 1990 620, 1870 650 L 1400 650 C 1320 650, 1310 740, 1230 740" fill="none" stroke="url(#wirePulseAzure)" stroke-dasharray="6 10" stroke-width="2.5"></path>
+<!-- Connection 5: HeyGen Streamer to QA Human-in-the-Loop Node -->
+<path d="M 900 740 C 820 740, 780 740, 700 740" fill="none" stroke="#f3be64" stroke-dasharray="8 6" stroke-width="2.5"></path>
+<!-- Connection 6: QA HITL Node to Omni-Publisher -->
+<path d="M 370 740 C 290 740, 260 740, 180 740" fill="none" stroke="#282a2d" stroke-width="2"></path>
+</svg>
+<!-- Node Spatial Canvas Plane -->
+<div class="relative z-20 w-full min-h-[960px] p-space-xl overflow-x-auto select-none" id="canvas-matrix">
+<!-- ================= NODE 1: RESEARCH AGENT ================= -->
+<div class="node-card group absolute left-8 top-16 w-80 rounded-xl bg-surface-container-low p-space-md shadow-2xl transition-all duration-200 hover:-translate-y-0.5 cursor-pointer" data-node-id="node-1">
+<!-- Right Output Socket Port -->
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center shadow">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+<!-- Node Header -->
+<div class="flex items-center justify-between gap-space-xs pb-space-sm mb-space-sm bg-surface-container/40 p-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">travel_explore</span>
+<span class="font-headline-md text-label-md font-semibold text-on-surface tracking-wide">Research Agent</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container/60 text-secondary font-label-sm text-[10px] uppercase font-mono tracking-wider">Trigger / Cron</span>
+</div>
+<!-- Content Body -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Scan Frequency:</span>
+<span class="text-on-surface font-mono">Every 15m</span>
+</div>
+<!-- Trend Analysis Badge -->
+<div class="p-space-xs rounded bg-surface-container-high flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-[10px]">
+<span class="text-on-surface-variant uppercase tracking-wider">Surging Vector</span>
+<span class="text-secondary font-semibold font-mono">Score 98/100</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium truncate">Yerevan Pop Culture &amp; Language Trends</p>
+</div>
+<!-- Live Channels -->
+<div class="grid grid-cols-3 gap-1 pt-1 font-label-sm text-[10px] text-center font-mono">
+<span class="p-1 rounded bg-surface-container-lowest text-tertiary">X/Twitter</span>
+<span class="p-1 rounded bg-surface-container-lowest text-tertiary">Telegram</span>
+<span class="p-1 rounded bg-surface-container-lowest text-tertiary">RSS News</span>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-label-sm text-[10px] text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              48 sources indexed/min
+            </span>
+<span class="font-mono text-outline">ID: #RS-01</span>
+</div>
+</div>
+</div>
+<!-- ================= NODE 2: HOOK WRITER NODE ================= -->
+<div class="node-card group absolute left-[520px] top-[210px] w-80 rounded-xl bg-surface-container-low p-space-md shadow-2xl transition-all duration-200 hover:-translate-y-0.5 cursor-pointer" data-node-id="node-2">
+<!-- Input Socket Port (Left) -->
+<div class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center shadow">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+<!-- Output Socket Port (Right) -->
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center shadow">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<!-- Node Header -->
+<div class="flex items-center justify-between gap-space-xs pb-space-sm mb-space-sm bg-surface-container/40 p-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">psychology</span>
+<span class="font-headline-md text-label-md font-semibold text-on-surface tracking-wide">Hook Writer</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-[10px] uppercase font-mono tracking-wider">Agent Core</span>
+</div>
+<!-- Funnel Metric -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-lowest font-label-sm text-[11px] font-mono">
+<span class="text-on-surface-variant">Generation Funnel:</span>
+<span class="text-primary font-semibold">10 Drafts → 3 Final → 1 Top</span>
+</div>
+<!-- Selected Hook Excerpt -->
+<div class="p-space-sm rounded bg-surface-container-high flex flex-col gap-1">
+<span class="font-label-sm text-[10px] uppercase tracking-wider text-secondary">Winning Hook Selected:</span>
+<p class="font-body-sm text-body-sm text-on-surface italic line-clamp-2">"Did you know in 1900 Tbilisi, Tumanyan gathered the sharpest minds to debate immortality?..."</p>
+</div>
+<div class="flex items-center justify-between pt-1 font-label-sm text-[11px]">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+              Synthesized (0.8s)
+            </span>
+<span class="text-outline font-mono">Engage: 94.2%</span>
+</div>
+</div>
+</div>
+<!-- ================= NODE 3: SCRIPT SYNTHESIZER ================= -->
+<div class="node-card group absolute left-[1030px] top-[100px] w-80 rounded-xl bg-surface-container-low p-space-md shadow-2xl transition-all duration-200 hover:-translate-y-0.5 cursor-pointer" data-node-id="node-3">
+<div class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center shadow">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center shadow">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+</div>
+<div class="flex items-center justify-between gap-space-xs pb-space-sm mb-space-sm bg-surface-container/40 p-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">memory</span>
+<span class="font-headline-md text-label-md font-semibold text-on-surface tracking-wide">Script Synthesizer</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-[10px] uppercase font-mono tracking-wider">LLM Cluster</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Foundation Engine:</span>
+<span class="text-tertiary font-mono font-medium">Claude 3.5 Sonnet</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Validation Schema:</span>
+<span class="text-secondary font-mono">RFC-8259 Strict Valid</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high flex flex-col gap-1 font-body-sm text-body-sm">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Structured Artifacts</span>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px]">view_carousel</span>
+<span>8-slide structured carousel</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">movie</span>
+<span>45s high-retention reel script</span>
+</div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-[10px] pt-1">
+<span>Tokens: 1,420 in / 890 out</span>
+<span class="font-mono text-tertiary">1.24s total</span>
+</div>
+</div>
+</div>
+<!-- ================= NODE 4: MULTI-MODAL SPLITTER ROUTER ================= -->
+<div class="node-card group absolute left-[1540px] top-[270px] w-80 rounded-xl bg-surface-container-low p-space-md shadow-2xl transition-all duration-200 hover:-translate-y-0.5 cursor-pointer" data-node-id="node-4">
+<div class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center shadow">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+</div>
+<!-- 4 Output Ports on Right Edge -->
+<div class="absolute -right-2 top-[24%] w-3.5 h-3.5 rounded-full bg-surface-container-highest flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<div class="absolute -right-2 top-[44%] w-3.5 h-3.5 rounded-full bg-surface-container-highest flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+<div class="absolute -right-2 top-[64%] w-3.5 h-3.5 rounded-full bg-surface-container-highest flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-outline"></div>
+</div>
+<div class="absolute -right-2 top-[84%] w-3.5 h-3.5 rounded-full bg-surface-container-highest flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+</div>
+<div class="flex items-center justify-between gap-space-xs pb-space-sm mb-space-sm bg-surface-container/40 p-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">alt_route</span>
+<span class="font-headline-md text-label-md font-semibold text-on-surface tracking-wide">Router Node</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-[10px] uppercase font-mono tracking-wider">Multi-Modal Split</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Branch A -->
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-high text-body-sm">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              Carousel Engine
+            </span>
+<span class="font-label-sm text-[10px] text-primary font-mono font-medium">Active (Rendering)</span>
+</div>
+<!-- Branch B -->
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-high text-body-sm">
+<span class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Visual Graphic
+            </span>
+<span class="font-label-sm text-[10px] text-secondary font-mono">Queued (#2)</span>
+</div>
+<!-- Branch C -->
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container text-body-sm opacity-60">
+<span class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+              Motion Toon
+            </span>
+<span class="font-label-sm text-[10px] text-outline font-mono">Idle / Bypass</span>
+</div>
+<!-- Branch D -->
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-high text-body-sm">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+              HeyGen Avatar
+            </span>
+<span class="font-label-sm text-[10px] text-tertiary font-mono">Streaming 180ms</span>
+</div>
+</div>
+</div>
+<!-- ================= NODE 5: HEYGEN STREAMER NODE ================= -->
+<div class="node-card group absolute left-[910px] top-[630px] w-80 rounded-xl bg-surface-container-low p-space-md shadow-2xl transition-all duration-200 hover:-translate-y-0.5 cursor-pointer" data-node-id="node-5">
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center shadow">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+</div>
+<div class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center shadow">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+<div class="flex items-center justify-between gap-space-xs pb-space-sm mb-space-sm bg-surface-container/40 p-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">record_voice_over</span>
+<span class="font-headline-md text-label-md font-semibold text-on-surface tracking-wide">HeyGen Streamer</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-[10px] uppercase font-mono tracking-wider">Video Synthesis</span>
+</div>
+<!-- Media Preview Card -->
+<div class="relative w-full h-28 rounded-lg overflow-hidden bg-surface-container-lowest mb-space-sm group/thumb">
+<img class="w-full h-full object-cover opacity-85 group-hover/thumb:scale-105 transition-transform duration-500" data-alt="Photorealistic synthetic digital human spokesperson with warm studio rim-lighting against an obsidian dark tech laboratory backdrop, armenian cultural features, talking head cinematic framing with soft lens blur and orange amber atmospheric keylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTsexY8bTVskDknw85g4JzIVLgoGluur3ZJypEQCp-Mr0tSoraPtEA19EZ7kGMsltzolXZEn9QxePyh7exPkTcgxoNRwFGG5N3cuF4MVGn48KKY1nkviiImc9V-xM2E2j0qHywwWyXxQiDOUJpPCKmN-sqQY4l9W8queG48ib02e6FYtwUPS9xW6wNqjn1xLEgb20oMpVCJkbJYmYWfGrF2S-nDHikfeKUBPYNCS-E6Il3liIyJFKl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent flex items-end justify-between p-2">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-label-sm text-[10px] text-on-surface font-mono flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+              Live Frame #842
+            </span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/20 text-tertiary font-label-sm text-[10px] font-mono">1080p 60fps</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 font-label-sm text-[11px]">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Voice Profile:</span>
+<span class="text-on-surface font-mono">Deep Armenian Baritone</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Stream Buffer / Latency:</span>
+<span class="text-tertiary font-mono">94% · 180ms</span>
+</div>
+</div>
+</div>
+<!-- ================= NODE 6: QA & HUMAN-IN-THE-LOOP ================= -->
+<div class="node-card group absolute left-[380px] top-[630px] w-80 rounded-xl bg-surface-container-low p-space-md shadow-2xl transition-all duration-200 hover:-translate-y-0.5 cursor-pointer" data-node-id="node-6">
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center shadow">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+<div class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center shadow">
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+</div>
+<div class="flex items-center justify-between gap-space-xs pb-space-sm mb-space-sm bg-surface-container/40 p-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span class="font-headline-md text-label-md font-semibold text-on-surface tracking-wide">QA &amp; HITL Gate</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-mono tracking-wider">Gatekeeper</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Pending Approval Warning Pill -->
+<div class="p-space-xs rounded bg-surface-container-highest flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-secondary font-semibold uppercase tracking-wider">Awaiting Approval</span>
+<span class="font-label-sm text-[11px] text-on-surface font-mono">Job Batch #409</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-[11px]">
+<span>Automated QA Confidence:</span>
+<span class="text-secondary font-semibold font-mono">96.4%</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center justify-between">
+<span class="text-on-surface-variant text-label-sm">Authorized Reviewer:</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-semibold">Superadmin</span>
+</div>
+<!-- Quick Decision Actions -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="py-1 rounded bg-surface-container-highest text-error font-body-sm text-body-sm hover:bg-surface-bright transition-colors font-medium" type="button">Reject</button>
+<button class="py-1 rounded bg-secondary text-on-secondary font-body-sm text-body-sm font-semibold hover:bg-secondary-fixed transition-colors" type="button">Approve Run</button>
+</div>
+</div>
+</div>
+<!-- ================= NODE 7: OMNI-PUBLISHER ================= -->
+<div class="node-card group absolute left-8 top-[630px] w-72 rounded-xl bg-surface-container-low p-space-md shadow-2xl transition-all duration-200 hover:-translate-y-0.5 cursor-pointer" data-node-id="node-7">
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center shadow">
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+</div>
+<div class="flex items-center justify-between gap-space-xs pb-space-sm mb-space-sm bg-surface-container/40 p-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">share_windows</span>
+<span class="font-headline-md text-label-md font-semibold text-on-surface tracking-wide">Omni-Publisher</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] uppercase font-mono tracking-wider">Sink Node</span>
+</div>
+<div class="flex flex-col gap-space-xs font-label-sm text-[11px]">
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-high">
+<span class="text-on-surface flex items-center gap-1">Instagram Reels</span>
+<span class="text-secondary flex items-center gap-1 font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Ready
+            </span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-high">
+<span class="text-on-surface flex items-center gap-1">TikTok Global</span>
+<span class="text-secondary flex items-center gap-1 font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Ready
+            </span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-high">
+<span class="text-on-surface-variant flex items-center gap-1">YouTube Shorts</span>
+<span class="text-tertiary flex items-center gap-1 font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              Standby
+            </span>
+</div>
+<div class="pt-2 text-center text-on-surface-variant/70 font-mono text-[10px]">
+            Sync schedule: Immediate on HITL sign-off
+          </div>
+</div>
+</div>
+</div>
+<!-- Floating Interactive Mini-Map Navigator Widget -->
+<div class="absolute bottom-6 right-6 z-30 flex flex-col gap-space-xs p-space-xs rounded-xl bg-surface-container-low/95 backdrop-blur-md shadow-2xl">
+<!-- Mini Map Graphic Preview -->
+<div class="relative w-44 h-28 rounded-lg bg-surface-container-lowest overflow-hidden">
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#6894c2 1px, transparent 1px); background-size: 8px 8px;"></div>
+<!-- Node Dots on Mini-Map -->
+<div class="absolute top-2 left-2 w-3.5 h-2 rounded bg-secondary"></div>
+<div class="absolute top-6 left-12 w-3.5 h-2 rounded bg-primary"></div>
+<div class="absolute top-2 left-24 w-3.5 h-2 rounded bg-tertiary"></div>
+<div class="absolute top-7 left-36 w-3.5 h-2 rounded bg-secondary"></div>
+<div class="absolute top-16 left-24 w-3.5 h-2 rounded bg-tertiary"></div>
+<div class="absolute top-16 left-10 w-3.5 h-2 rounded bg-secondary"></div>
+<div class="absolute top-16 left-2 w-3 h-2 rounded bg-primary"></div>
+<!-- Viewport Boundary Indicator -->
+<div class="absolute inset-1 rounded bg-primary/10"></div>
+</div>
+<!-- Navigation & Zoom Controls -->
+<div class="flex items-center justify-between px-1 py-0.5">
+<div class="flex items-center gap-1">
+<button class="w-6 h-6 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface text-label-md" title="Zoom In" type="button">+</button>
+<button class="w-6 h-6 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface text-label-md" title="Zoom Out" type="button">-</button>
+<button class="w-6 h-6 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface" title="Reset Zoom" type="button">
+<span class="material-symbols-outlined text-[13px]">refresh</span>
+</button>
+</div>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-[10px] font-mono" type="button">Fit (100%)</button>
+</div>
+</div>
+<!-- Live Slide-Over Node Telemetry & Inspector Panel -->
+<div class="absolute right-0 top-0 bottom-0 w-96 z-40 bg-surface-container-low shadow-2xl p-space-md flex flex-col justify-between overflow-y-auto transform transition-transform duration-300" id="telemetry-panel">
+<div class="flex flex-col gap-space-md">
+<!-- Panel Header -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-semibold text-on-surface">Node Telemetry</span>
+<span class="font-label-sm text-[10px] text-tertiary font-mono">SELECTED: [Script Synthesizer #03]</span>
+</div>
+</div>
+<button class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="close-telemetry" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Live Latency Sparkline Graph -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Cluster Inference Latency</span>
+<span class="text-secondary font-mono font-semibold">180ms avg</span>
+</div>
+<!-- SVG Sparkline Chart under 1KB -->
+<div class="w-full h-14 overflow-hidden flex items-end">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 200 60">
+<path d="M0 45 L 20 42 L 40 48 L 60 25 L 80 30 L 100 18 L 120 22 L 140 12 L 160 20 L 180 15 L 200 10" stroke="#f3be64" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M0 45 L 20 42 L 40 48 L 60 25 L 80 30 L 100 18 L 120 22 L 140 12 L 160 20 L 180 15 L 200 10 L 200 60 L 0 60 Z" fill="url(#latencyGradient)" opacity="0.15"></path>
+<defs>
+<lineargradient id="latencyGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#f3be64"></stop>
+<stop offset="100%" stop-color="transparent"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<div class="flex justify-between font-label-sm text-[10px] text-on-surface-variant font-mono">
+<span>T-60s</span>
+<span>T-30s</span>
+<span>Live (now)</span>
+</div>
+</div>
+<!-- Node Parameters & Config Table -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Engine Hyperparameters</span>
+<div class="flex flex-col rounded-lg bg-surface-container-lowest overflow-hidden font-label-sm text-[11px]">
+<div class="flex justify-between items-center px-3 py-2 bg-surface-container-high/40">
+<span class="text-on-surface-variant">model</span>
+<span class="text-on-surface font-mono">claude-3-5-sonnet-20241022</span>
+</div>
+<div class="flex justify-between items-center px-3 py-2">
+<span class="text-on-surface-variant">temperature</span>
+<span class="text-secondary font-mono">0.68</span>
+</div>
+<div class="flex justify-between items-center px-3 py-2 bg-surface-container-high/40">
+<span class="text-on-surface-variant">top_p</span>
+<span class="text-on-surface font-mono">0.92</span>
+</div>
+<div class="flex justify-between items-center px-3 py-2">
+<span class="text-on-surface-variant">max_tokens</span>
+<span class="text-tertiary font-mono">4,096</span>
+</div>
+<div class="flex justify-between items-center px-3 py-2 bg-surface-container-high/40">
+<span class="text-on-surface-variant">stream_mode</span>
+<span class="text-primary font-mono">true (WebSocket)</span>
+</div>
+</div>
+</div>
+<!-- Node Real-time Execution Log Stream -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Event Stream</span>
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-lowest font-code-sm text-[10px] text-on-surface-variant flex flex-col gap-1 max-h-36 overflow-y-auto">
+<div class="text-secondary font-mono">[14:32:01.09] Ingress vector tokenized.</div>
+<div class="text-on-surface font-mono">[14:32:01.42] JSON RFC-8259 parsed successfully.</div>
+<div class="text-tertiary font-mono">[14:32:02.18] 8 carousel slides committed.</div>
+<div class="text-outline font-mono">[14:32:02.26] Dispatched payload to Multi-Modal Splitter.</div>
+</div>
+</div>
+</div>
+<!-- Action Bottom Deck -->
+<div class="pt-space-md flex items-center gap-space-sm">
+<button class="flex-1 py-2 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-body-sm text-body-sm font-medium transition-colors" type="button">Test Run Node</button>
+<button class="flex-1 py-2 rounded-lg bg-primary-container text-on-primary-container font-body-sm text-body-sm font-semibold hover:bg-primary hover:text-on-primary transition-all shadow" type="button">Save Config</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for inspector panel toggle & card click highlight
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.node-card');
+    const panel = document.getElementById('telemetry-panel');
+    const closeBtn = document.getElementById('close-telemetry');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        cards.forEach(c => c.classList.remove('ring-2', 'ring-secondary', 'bg-surface-container'));
+        card.classList.add('ring-2', 'ring-secondary', 'bg-surface-container');
+        if (panel) {
+          panel.classList.remove('translate-x-full');
+        }
+      });
+    });
+
+    if (closeBtn && panel) {
+      closeBtn.addEventListener('click', () => {
+        panel.classList.add('translate-x-full');
+      });
+    }
+  });
+</script></main></div></body></html>

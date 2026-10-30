@@ -1,0 +1,38 @@
+{
+  "contentType": "reels",
+  "durationSec": 22,
+  "hook": {
+    "t0": 0,
+    "t1": 2,
+    "onScreen": "Кофе врёт?",
+    "vo": "Кофе тебе врёт."
+  },
+  "beats": [
+    {
+      "t0": 2,
+      "t1": 8,
+      "label": "paradox",
+      "onScreen": "Не про продуктивность",
+      "vo": "Он обещает продуктивность. А даёт только шум в голове."
+    },
+    {
+      "t0": 8,
+      "t1": 16,
+      "label": "insight",
+      "onScreen": "Ритуал = пауза",
+      "vo": "В Vernatun кофе — пауза услышать человека рядом. Не система на шесть фигур."
+    }
+  ],
+  "cta": {
+    "t0": 16,
+    "t1": 22,
+    "onScreen": "СОХРАНИ РИТУАЛ",
+    "vo": "Сохрани, если пауза тебе нужнее ленты.",
+    "captionLine": "Сохрани ритуал. Vernatun — армянский разговорный клуб."
+  },
+  "roles": ["host"],
+  "location": "cafe table, warm side light",
+  "caption": "Кофе врёт про продуктивность. Ритуал — про паузу. Vernatun.",
+  "hashtags": ["#Vernatun", "#Reels", "#Кофе", "#Клуб"],
+  "promptForMontage": "0–2s tight CU coffee steam + bold on-screen; 2–8 cut to host face mid-shot; 8–16 B-roll hands cup + table; 16–22 end-card bold CTA burn-in mute-proof; subtitle style: large Century Gothic, white w/ soft shadow; no carousel slides."
+}

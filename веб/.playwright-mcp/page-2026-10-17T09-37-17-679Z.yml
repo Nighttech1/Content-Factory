@@ -1,0 +1,93 @@
+- generic [ref=f4e2]:
+  - complementary "Главная навигация" [ref=f4e3]:
+    - generic [ref=f4e6]:
+      - generic [ref=f4e7]: VERNATUN
+      - generic [ref=f4e8]: ARMENIAN CLUB
+    - navigation [ref=f4e10]:
+      - generic [ref=f4e11]:
+        - link "Студия" [ref=f4e14] [cursor=pointer]:
+          - /url: /studio
+        - link "Расписание" [ref=f4e27] [cursor=pointer]:
+          - /url: /schedule
+        - link "Настройки" [ref=f4e37] [cursor=pointer]:
+          - /url: /settings
+        - link "Директор" [ref=f4e48] [cursor=pointer]:
+          - /url: /marketing
+    - generic [ref=f4e58]:
+      - paragraph [ref=f4e59]: Роль QA (локально)
+      - generic [ref=f4e60]:
+        - button "OWNER" [ref=f4e61]
+        - button "ADMIN" [ref=f4e62]
+    - button "Изменить ширину боковой панели" [ref=f4e63]
+  - main [ref=f4e65]:
+    - generic [ref=f4e66]:
+      - generic [ref=f4e67]:
+        - heading "Настройки" [level=1] [ref=f4e68]
+        - paragraph [ref=f4e69]: Дизайн, бренд, пейзажи, площадки, расписание и рилсы. Разведка и модели агентов — в «Команда выпуска».
+      - complementary [ref=f4e70]:
+        - navigation [ref=f4e71]:
+          - generic [ref=f4e72]: Навигация
+          - list [ref=f4e73]:
+            - listitem [ref=f4e74]:
+              - button "Дизайн" [ref=f4e75]
+            - listitem [ref=f4e81]:
+              - button "Бренд" [ref=f4e82]
+            - listitem [ref=f4e87]:
+              - button "Пейзажи" [ref=f4e88]
+            - listitem [ref=f4e95]:
+              - button "Площадки" [ref=f4e96]
+            - listitem [ref=f4e101]:
+              - button "Расписание" [ref=f4e102]
+            - listitem [ref=f4e106]:
+              - button "Публицист" [ref=f4e107]
+            - listitem [ref=f4e112]:
+              - button "Рилсы" [ref=f4e113]
+      - region [ref=f4e117]:
+        - generic [ref=f4e118]:
+          - generic [ref=f4e119]:
+            - heading "Дизайн" [level=2] [ref=f4e120]
+            - generic [ref=f4e121]:
+              - generic [ref=f4e122] [cursor=pointer]:
+                - generic [ref=f4e123]: референс
+                - button "референс" [ref=f4e127]
+              - generic [ref=f4e128] [cursor=pointer]:
+                - generic [ref=f4e129]: новый дизайн
+                - button "новый дизайн" [ref=f4e134]
+              - button "код дизайн мд" [disabled] [ref=f4e135]
+          - paragraph [ref=f4e139]: Загрузка библиотеки дизайнов…
+        - paragraph [ref=f4e140]: Только токены (цвета · типографика · текст-блоки · мелкие элементы) — разметку придумает Дизайнер
+      - region [ref=f4e141]:
+        - generic [ref=f4e142]:
+          - heading "Бренд" [level=2] [ref=f4e143]
+          - paragraph [ref=f4e144]: Название и логотип для плейсхолдеров карусели. Идут сразу после «Дизайн».
+        - paragraph [ref=f4e145]: Загрузка…
+      - region [ref=f4e146]:
+        - generic [ref=f4e147]:
+          - heading "Пейзажи" [level=2] [ref=f4e148]
+          - paragraph [ref=f4e149]: "Каталог персонажей: имя и фото с разных ракурсов. Номер = поле hero в таблице."
+        - paragraph [ref=f4e150]: Загрузка…
+      - region [ref=f4e151]:
+        - generic [ref=f4e152]:
+          - generic [ref=f4e153]:
+            - heading "Площадки публикации" [level=2] [ref=f4e154]
+            - paragraph [ref=f4e155]: Ключи API только в браузере. Зелёный блок — публицист может публиковать; красный — подключение не подтверждено.
+          - button "Добавить площадку" [ref=f4e156]
+        - paragraph [ref=f4e157]: Загрузка…
+      - generic [ref=f4e158]:
+        - generic [ref=f4e159]:
+          - generic [ref=f4e160]:
+            - heading "Расписание" [level=2] [ref=f4e161]
+            - paragraph [ref=f4e162]: Правила автозаполнения календаря публициста. Готовый контент встаёт в слоты по правилам; ручной перенос в календаре важнее правила.
+          - button "Создать правило" [ref=f4e163]
+        - list [ref=f4e164]:
+          - listitem [ref=f4e165]: Правил пока нет.
+      - region [ref=f4e166]:
+        - generic [ref=f4e167]:
+          - heading "Публицист" [level=2] [ref=f4e168]
+          - paragraph [ref=f4e169]: Авто-слот по умолчанию или ручное время на черновике. Соцсети — только через HITL.
+        - paragraph [ref=f4e170]: Загрузка…
+      - region [ref=f4e171]:
+        - generic [ref=f4e172]:
+          - heading "Рилсы" [level=2] [ref=f4e173]
+          - paragraph [ref=f4e174]: Сколько карточек в dual-feed (Наши и Конкуренты).
+        - paragraph [ref=f4e175]: Загрузка…

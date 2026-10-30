@@ -1,0 +1,72 @@
+- generic [ref=f2e2]:
+  - complementary "Главная навигация" [ref=f2e3]:
+    - generic [ref=f2e6]:
+      - generic [ref=f2e7]: VERNATUN
+      - generic [ref=f2e8]: ARMENIAN CLUB
+    - navigation [ref=f2e10]:
+      - generic [ref=f2e11]:
+        - link "Студия" [ref=f2e14] [cursor=pointer]:
+          - /url: /studio
+        - link "Расписание" [ref=f2e27] [cursor=pointer]:
+          - /url: /schedule
+        - link "Настройки" [ref=f2e37] [cursor=pointer]:
+          - /url: /settings
+        - link "Директор" [ref=f2e48] [cursor=pointer]:
+          - /url: /marketing
+    - generic [ref=f2e58]:
+      - paragraph [ref=f2e59]: Роль QA (локально)
+      - generic [ref=f2e60]:
+        - button "OWNER" [ref=f2e61]
+        - button "ADMIN" [ref=f2e62]
+    - button "Изменить ширину боковой панели" [ref=f2e63]
+  - main [ref=f2e65]:
+    - generic [ref=f2e66]:
+      - generic [ref=f2e67]:
+        - heading "Настройки" [level=1] [ref=f2e68]
+        - paragraph [ref=f2e69]: Дизайн, площадки, расписание и рилсы. Параметры разведки и модели агентов — в «Команда выпуска».
+      - complementary [ref=f2e70]:
+        - navigation [ref=f2e71]:
+          - generic [ref=f2e72]: Навигация
+          - list [ref=f2e73]:
+            - listitem [ref=f2e74]:
+              - button "Дизайн" [ref=f2e75]
+            - listitem [ref=f2e81]:
+              - button "Площадки" [ref=f2e82]
+            - listitem [ref=f2e87]:
+              - button "Расписание" [ref=f2e88]
+            - listitem [ref=f2e92]:
+              - button "Рилсы" [ref=f2e93]
+      - region [ref=f2e97]:
+        - generic [ref=f2e98]:
+          - generic [ref=f2e99]:
+            - heading "Дизайн" [level=2] [ref=f2e100]
+            - generic [ref=f2e101]:
+              - generic [ref=f2e102] [cursor=pointer]:
+                - generic [ref=f2e103]: референс
+                - button "референс" [ref=f2e107]
+              - generic [ref=f2e108] [cursor=pointer]:
+                - generic [ref=f2e109]: новый дизайн
+                - button "новый дизайн" [ref=f2e114]
+              - button "код дизайн мд" [disabled] [ref=f2e115]
+          - paragraph [ref=f2e119]: Загрузка библиотеки дизайнов…
+        - paragraph [ref=f2e120]: Только токены (цвета · типографика · текст-блоки · мелкие элементы) — разметку придумает Дизайнер
+      - region [ref=f2e121]:
+        - generic [ref=f2e122]:
+          - generic [ref=f2e123]:
+            - heading "Площадки публикации" [level=2] [ref=f2e124]
+            - paragraph [ref=f2e125]: Ключи API только в браузере. Зелёный блок — публицист может публиковать; красный — подключение не подтверждено.
+          - button "Добавить площадку" [ref=f2e126]
+        - paragraph [ref=f2e127]: Загрузка…
+      - generic [ref=f2e128]:
+        - generic [ref=f2e129]:
+          - generic [ref=f2e130]:
+            - heading "Расписание" [level=2] [ref=f2e131]
+            - paragraph [ref=f2e132]: Правила автозаполнения календаря публициста. Готовый контент встаёт в слоты по правилам; ручной перенос в календаре важнее правила.
+          - button "Создать правило" [ref=f2e133]
+        - list [ref=f2e134]:
+          - listitem [ref=f2e135]: Правил пока нет.
+      - region [ref=f2e136]:
+        - generic [ref=f2e137]:
+          - heading "Рилсы" [level=2] [ref=f2e138]
+          - paragraph [ref=f2e139]: Сколько карточек в dual-feed (Наши и Конкуренты).
+        - paragraph [ref=f2e140]: Загрузка…

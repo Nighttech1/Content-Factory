@@ -1,0 +1,75 @@
+- generic [ref=e2]:
+  - complementary "Главная навигация" [ref=e3]:
+    - generic [ref=e4]:
+      - img "Vernatun" [ref=e5]
+      - generic [ref=e6]:
+        - generic [ref=e7]: VERNATUN
+        - generic [ref=e8]: ARMENIAN CLUB
+    - navigation [ref=e10]:
+      - generic [ref=e11]:
+        - link "Студия" [ref=e14] [cursor=pointer]:
+          - /url: /studio
+        - link "Команда выпуска" [ref=e27] [cursor=pointer]:
+          - /url: /admin/mesh
+        - link "Расписание" [ref=e40] [cursor=pointer]:
+          - /url: /schedule
+        - link "Аналитика" [ref=e50] [cursor=pointer]:
+          - /url: /analytics
+        - link "Настройки" [ref=e63] [cursor=pointer]:
+          - /url: /settings
+    - generic [ref=e73]:
+      - paragraph [ref=e74]: Роль QA (локально)
+      - generic [ref=e75]:
+        - button "OWNER" [ref=e76]
+        - button "ADMIN" [ref=e77]
+    - button "Изменить ширину боковой панели" [ref=e78]
+  - main [ref=e80]:
+    - generic [ref=e81]:
+      - generic [ref=e83]:
+        - heading "Студия" [level=1] [ref=e84]
+        - paragraph [ref=e85]: Здесь выбираете канал выпуска — карусели, рилсы, статьи на сайт или в Telegram — и открываете рабочее место модуля.
+      - region [ref=e86]:
+        - heading "Каналы рендера" [level=2] [ref=e88]
+        - generic [ref=e89]:
+          - link "Карусели Instagram (4:5) Редакционная карусель 1080×1350 с типографикой и CTA-слайдом. Открыть →" [ref=e91] [cursor=pointer]:
+            - /url: /studio/carousel-engine
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - generic [ref=e95]: Карусели Instagram (4:5)
+                - paragraph [ref=e96]: Редакционная карусель 1080×1350 с типографикой и CTA-слайдом.
+              - generic [ref=e97]: Открыть →
+          - link "Полезные картинки & Инфографика Читы, таблицы и quote-тайлы для Telegram и LinkedIn. Открыть →" [ref=e99] [cursor=pointer]:
+            - /url: /studio/aesthetic-graphics
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - generic [ref=e103]: Полезные картинки & Инфографика
+                - paragraph [ref=e104]: Читы, таблицы и quote-тайлы для Telegram и LinkedIn.
+              - generic [ref=e105]: Открыть →
+          - link "Мульт-Reels (2D сторителлинг) Иллюстрированный сторителлинг 9:16 с субтитрами. Открыть →" [ref=e107] [cursor=pointer]:
+            - /url: /studio/cartoon-reels
+            - generic [ref=e109]:
+              - generic [ref=e110]:
+                - generic [ref=e111]: Мульт-Reels (2D сторителлинг)
+                - paragraph [ref=e112]: Иллюстрированный сторителлинг 9:16 с субтитрами.
+              - generic [ref=e113]: Открыть →
+          - link "HeyGen AI-Аватар Reels Говорящий аватар с синхроном губ и бренд-палитрой. Открыть →" [ref=e115] [cursor=pointer]:
+            - /url: /studio/heygen-reels
+            - generic [ref=e117]:
+              - generic [ref=e118]:
+                - generic [ref=e119]: HeyGen AI-Аватар Reels
+                - paragraph [ref=e120]: Говорящий аватар с синхроном губ и бренд-палитрой.
+              - generic [ref=e121]: Открыть →
+          - 'link "Статьи на сайт Длинные редакционные материалы для сайта Vernatun: структура, SEO-заголовок и CTA. Открыть →" [ref=e123] [cursor=pointer]':
+            - /url: /studio/site-articles
+            - generic [ref=e125]:
+              - generic [ref=e126]:
+                - generic [ref=e127]: Статьи на сайт
+                - paragraph [ref=e128]: "Длинные редакционные материалы для сайта Vernatun: структура, SEO-заголовок и CTA."
+              - generic [ref=e129]: Открыть →
+          - 'link "Статьи в TG Посты и лонгриды для Telegram-канала: хук, абзацы и кнопка перехода. Открыть →" [ref=e131] [cursor=pointer]':
+            - /url: /studio/tg-articles
+            - generic [ref=e133]:
+              - generic [ref=e134]:
+                - generic [ref=e135]: Статьи в TG
+                - paragraph [ref=e136]: "Посты и лонгриды для Telegram-канала: хук, абзацы и кнопка перехода."
+              - generic [ref=e137]: Открыть →

@@ -1,0 +1,468 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Главная навигация" [ref=e3]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: VERNATUN
+        - generic [ref=e8]: ARMENIAN CLUB
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - link "Студия" [ref=e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=e37] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=e47]:
+        - paragraph [ref=e48]: Роль QA (локально)
+        - generic [ref=e49]:
+          - button "OWNER" [ref=e50]
+          - button "ADMIN" [ref=e51]
+      - button "Изменить ширину боковой панели" [ref=e52]
+    - main [ref=e54]:
+      - generic [ref=e55]:
+        - generic [ref=e57]:
+          - heading "Карусели Instagram (4:5)" [level=1] [ref=e58]
+          - generic [ref=e59]:
+            - link "Команда выпуска" [ref=e60] [cursor=pointer]:
+              - /url: /studio/carousel-engine/mesh
+            - link "Аналитика" [ref=e61] [cursor=pointer]:
+              - /url: /studio/carousel-engine/analytics
+            - button "Создать карусель" [ref=e62]
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - generic [ref=e68]:
+                - heading "Наши" [level=2] [ref=e70]
+                - generic [ref=e72]: "12"
+              - tablist "Вкладки нашей ленты" [ref=e74]:
+                - tab "Опубликовано" [selected] [ref=e75]
+                - tab "Черновики" [ref=e77]
+            - generic [ref=e78]:
+              - article [ref=e79]:
+                - generic [ref=e80]:
+                  - generic [ref=e82]: "@vernatun.club"
+                  - button "Предыдущий слайд" [ref=e83]
+                  - button "Следующий слайд" [ref=e86]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 19K
+                      - listitem "Лайки":
+                        - generic: 1.2K
+                      - listitem "Комментарии":
+                        - generic: "48"
+                      - listitem "Репосты":
+                        - generic: "53"
+                      - listitem "Сохранения":
+                        - generic: "82"
+              - article [ref=e89]:
+                - generic [ref=e90]:
+                  - generic [ref=e92]: "@vernatun.club"
+                  - button "Предыдущий слайд" [ref=e93]
+                  - button "Следующий слайд" [ref=e96]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 14K
+                      - listitem "Лайки":
+                        - generic: "890"
+                      - listitem "Комментарии":
+                        - generic: "31"
+                      - listitem "Репосты":
+                        - generic: "37"
+                      - listitem "Сохранения":
+                        - generic: "58"
+              - article [ref=e99]:
+                - generic [ref=e100]:
+                  - generic [ref=e102]: "@vernatun.club"
+                  - button "Предыдущий слайд" [ref=e103]
+                  - button "Следующий слайд" [ref=e106]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 28K
+                      - listitem "Лайки":
+                        - generic: 2.1K
+                      - listitem "Комментарии":
+                        - generic: "72"
+                      - listitem "Репосты":
+                        - generic: "88"
+                      - listitem "Сохранения":
+                        - generic: "137"
+              - article [ref=e109]:
+                - generic [ref=e110]:
+                  - generic [ref=e112]: "@vernatun.club"
+                  - button "Предыдущий слайд" [ref=e113]
+                  - button "Следующий слайд" [ref=e116]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 22K
+                      - listitem "Лайки":
+                        - generic: 1.6K
+                      - listitem "Комментарии":
+                        - generic: "44"
+                      - listitem "Репосты":
+                        - generic: "63"
+                      - listitem "Сохранения":
+                        - generic: "100"
+              - article [ref=e119]:
+                - generic [ref=e120]:
+                  - generic [ref=e122]: "@vernatun.club"
+                  - button "Предыдущий слайд" [ref=e123]
+                  - button "Следующий слайд" [ref=e126]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 15K
+                      - listitem "Лайки":
+                        - generic: "980"
+                      - listitem "Комментарии":
+                        - generic: "29"
+                      - listitem "Репосты":
+                        - generic: "40"
+                      - listitem "Сохранения":
+                        - generic: "63"
+              - article [ref=e129]:
+                - generic [ref=e130]:
+                  - generic [ref=e132]: "@vernatun.club"
+                  - button "Предыдущий слайд" [ref=e133]
+                  - button "Следующий слайд" [ref=e136]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 27K
+                      - listitem "Лайки":
+                        - generic: 1.8K
+                      - listitem "Комментарии":
+                        - generic: "61"
+                      - listitem "Репосты":
+                        - generic: "75"
+                      - listitem "Сохранения":
+                        - generic: "116"
+              - article [ref=e139]:
+                - generic [ref=e140]:
+                  - generic [ref=e142]: "@vernatun.club"
+                  - button "Предыдущий слайд" [ref=e143]
+                  - button "Следующий слайд" [ref=e146]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 41K
+                      - listitem "Лайки":
+                        - generic: 2.3K
+                      - listitem "Комментарии":
+                        - generic: "88"
+                      - listitem "Репосты":
+                        - generic: "100"
+                      - listitem "Сохранения":
+                        - generic: "154"
+              - article [ref=e149]:
+                - generic [ref=e150]:
+                  - generic [ref=e152]: "@vernatun.club"
+                  - button "Предыдущий слайд" [ref=e153]
+                  - button "Следующий слайд" [ref=e156]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 19K
+                      - listitem "Лайки":
+                        - generic: 1.1K
+                      - listitem "Комментарии":
+                        - generic: "35"
+                      - listitem "Репосты":
+                        - generic: "46"
+                      - listitem "Сохранения":
+                        - generic: "72"
+              - article [ref=e159]:
+                - generic [ref=e160]:
+                  - generic [ref=e162]: "@vernatun.club"
+                  - button "Предыдущий слайд" [ref=e163]
+                  - button "Следующий слайд" [ref=e166]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 12K
+                      - listitem "Лайки":
+                        - generic: "760"
+                      - listitem "Комментарии":
+                        - generic: "22"
+                      - listitem "Репосты":
+                        - generic: "31"
+                      - listitem "Сохранения":
+                        - generic: "49"
+              - article [ref=e169]:
+                - generic [ref=e170]:
+                  - generic [ref=e172]: "@vernatun.club"
+                  - button "Предыдущий слайд" [ref=e173]
+                  - button "Следующий слайд" [ref=e176]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 34K
+                      - listitem "Лайки":
+                        - generic: 1.9K
+                      - listitem "Комментарии":
+                        - generic: "70"
+                      - listitem "Репосты":
+                        - generic: "80"
+                      - listitem "Сохранения":
+                        - generic: "124"
+              - article [ref=e179]:
+                - generic [ref=e180]:
+                  - generic [ref=e182]: "@vernatun.club"
+                  - button "Предыдущий слайд" [ref=e183]
+                  - button "Следующий слайд" [ref=e186]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 20K
+                      - listitem "Лайки":
+                        - generic: 1.3K
+                      - listitem "Комментарии":
+                        - generic: "41"
+                      - listitem "Репосты":
+                        - generic: "55"
+                      - listitem "Сохранения":
+                        - generic: "87"
+              - article [ref=e189]:
+                - generic [ref=e190]:
+                  - generic [ref=e192]: "@vernatun.club"
+                  - button "Предыдущий слайд" [ref=e193]
+                  - button "Следующий слайд" [ref=e196]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 15K
+                      - listitem "Лайки":
+                        - generic: "920"
+                      - listitem "Комментарии":
+                        - generic: "27"
+                      - listitem "Репосты":
+                        - generic: "38"
+                      - listitem "Сохранения":
+                        - generic: "59"
+          - generic [ref=e199]:
+            - generic [ref=e200]:
+              - generic [ref=e201]:
+                - heading "Конкуренты" [level=2] [ref=e203]
+                - generic [ref=e205]: "12"
+              - searchbox "Поиск конкурентов" [ref=e211]
+            - generic [ref=e212]:
+              - article [ref=e213]:
+                - generic [ref=e214]:
+                  - generic [ref=e216]: "@rival_e-01"
+                  - button "Предыдущий слайд" [ref=e217]
+                  - button "Следующий слайд" [ref=e220]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 52K
+                      - listitem "Лайки":
+                        - generic: 3.4K
+                      - listitem "Комментарии":
+                        - generic: "110"
+                      - listitem "Репосты":
+                        - generic: "141"
+                      - listitem "Сохранения":
+                        - generic: "221"
+                - button "Разбор" [ref=e224]
+              - article [ref=e225]:
+                - generic [ref=e226]:
+                  - generic [ref=e228]: "@rival_e-02"
+                  - button "Предыдущий слайд" [ref=e229]
+                  - button "Следующий слайд" [ref=e232]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 31K
+                      - listitem "Лайки":
+                        - generic: 1.8K
+                      - listitem "Комментарии":
+                        - generic: "64"
+                      - listitem "Репосты":
+                        - generic: "76"
+                      - listitem "Сохранения":
+                        - generic: "118"
+                - button "Разбор" [ref=e236]
+              - article [ref=e237]:
+                - generic [ref=e238]:
+                  - generic [ref=e240]: "@rival_e-03"
+                  - button "Предыдущий слайд" [ref=e241]
+                  - button "Следующий слайд" [ref=e244]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 16K
+                      - listitem "Лайки":
+                        - generic: "960"
+                      - listitem "Комментарии":
+                        - generic: "22"
+                      - listitem "Репосты":
+                        - generic: "38"
+                      - listitem "Сохранения":
+                        - generic: "61"
+                - button "Разбор" [ref=e248]
+              - article [ref=e249]:
+                - generic [ref=e250]:
+                  - generic [ref=e252]: "@rival_e-04"
+                  - button "Предыдущий слайд" [ref=e253]
+                  - button "Следующий слайд" [ref=e256]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 68K
+                      - listitem "Лайки":
+                        - generic: 4.2K
+                      - listitem "Комментарии":
+                        - generic: "95"
+                      - listitem "Репосты":
+                        - generic: "166"
+                      - listitem "Сохранения":
+                        - generic: "266"
+                - button "Разбор" [ref=e260]
+              - article [ref=e261]:
+                - generic [ref=e262]:
+                  - generic [ref=e264]: "@rival_e-05"
+                  - button "Предыдущий слайд" [ref=e265]
+                  - button "Следующий слайд" [ref=e268]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 41K
+                      - listitem "Лайки":
+                        - generic: 2.7K
+                      - listitem "Комментарии":
+                        - generic: "88"
+                      - listitem "Репосты":
+                        - generic: "112"
+                      - listitem "Сохранения":
+                        - generic: "175"
+                - button "Разбор" [ref=e272]
+              - article [ref=e273]:
+                - generic [ref=e274]:
+                  - generic [ref=e276]: "@rival_e-06"
+                  - button "Предыдущий слайд" [ref=e277]
+                  - button "Следующий слайд" [ref=e280]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 36K
+                      - listitem "Лайки":
+                        - generic: 2.1K
+                      - listitem "Комментарии":
+                        - generic: "71"
+                      - listitem "Репосты":
+                        - generic: "88"
+                      - listitem "Сохранения":
+                        - generic: "137"
+                - button "Разбор" [ref=e284]
+              - article [ref=e285]:
+                - generic [ref=e286]:
+                  - generic [ref=e288]: "@rival_e-07"
+                  - button "Предыдущий слайд" [ref=e289]
+                  - button "Следующий слайд" [ref=e292]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 30K
+                      - listitem "Лайки":
+                        - generic: 1.9K
+                      - listitem "Комментарии":
+                        - generic: "58"
+                      - listitem "Репосты":
+                        - generic: "78"
+                      - listitem "Сохранения":
+                        - generic: "123"
+                - button "Разбор" [ref=e296]
+              - article [ref=e297]:
+                - generic [ref=e298]:
+                  - generic [ref=e300]: "@rival_e-08"
+                  - button "Предыдущий слайд" [ref=e301]
+                  - button "Следующий слайд" [ref=e304]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 24K
+                      - listitem "Лайки":
+                        - generic: 1.5K
+                      - listitem "Комментарии":
+                        - generic: "49"
+                      - listitem "Репосты":
+                        - generic: "62"
+                      - listitem "Сохранения":
+                        - generic: "97"
+                - button "Разбор" [ref=e308]
+              - article [ref=e309]:
+                - generic [ref=e310]:
+                  - generic [ref=e312]: "@rival_e-09"
+                  - button "Предыдущий слайд" [ref=e313]
+                  - button "Следующий слайд" [ref=e316]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 20K
+                      - listitem "Лайки":
+                        - generic: 1.3K
+                      - listitem "Комментарии":
+                        - generic: "36"
+                      - listitem "Репосты":
+                        - generic: "52"
+                      - listitem "Сохранения":
+                        - generic: "82"
+                - button "Разбор" [ref=e320]
+              - article [ref=e321]:
+                - generic [ref=e322]:
+                  - generic [ref=e324]: "@rival_e-10"
+                  - button "Предыдущий слайд" [ref=e325]
+                  - button "Следующий слайд" [ref=e328]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 28K
+                      - listitem "Лайки":
+                        - generic: 1.8K
+                      - listitem "Комментарии":
+                        - generic: "62"
+                      - listitem "Репосты":
+                        - generic: "74"
+                      - listitem "Сохранения":
+                        - generic: "114"
+                - button "Разбор" [ref=e332]
+              - article [ref=e333]:
+                - generic [ref=e334]:
+                  - generic [ref=e336]: "@rival_e-11"
+                  - button "Предыдущий слайд" [ref=e337]
+                  - button "Следующий слайд" [ref=e340]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 39K
+                      - listitem "Лайки":
+                        - generic: 2.3K
+                      - listitem "Комментарии":
+                        - generic: "80"
+                      - listitem "Репосты":
+                        - generic: "97"
+                      - listitem "Сохранения":
+                        - generic: "150"
+                - button "Разбор" [ref=e344]
+              - article [ref=e345]:
+                - generic [ref=e346]:
+                  - generic [ref=e348]: "@rival_e-12"
+                  - button "Предыдущий слайд" [ref=e349]
+                  - button "Следующий слайд" [ref=e352]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 14K
+                      - listitem "Лайки":
+                        - generic: "880"
+                      - listitem "Комментарии":
+                        - generic: "24"
+                      - listitem "Репосты":
+                        - generic: "36"
+                      - listitem "Сохранения":
+                        - generic: "56"
+                - button "Разбор" [ref=e356]
+  - alert [ref=e357]

@@ -1,0 +1,45 @@
+{
+  "id": "seed-dark-notes",
+  "preset": "dark_notes",
+  "name": "Dark Notes",
+  "designMdPath": "./seed-dark-notes.DESIGN.md",
+  "colors": {
+    "bg": "#121212",
+    "surface": "#1A1A1A",
+    "text": "#FFFFFF",
+    "muted": "#A0A0A0",
+    "accent": "#F5D742",
+    "accentSoft": "rgba(245, 215, 66, 0.35)"
+  },
+  "typography": {
+    "display": "Geist Sans, Manrope, system-ui, sans-serif",
+    "body": "Geist Mono, ui-monospace, monospace",
+    "mono": "Geist Mono, ui-monospace, monospace",
+    "armenianSafe": "Noto Sans Armenian, Manrope, sans-serif",
+    "scale": { "cover": 56, "h2": 36, "body": 22, "caption": 16 }
+  },
+  "components": {
+    "card": {
+      "glass": false,
+      "radius": "4px",
+      "border": "1px solid rgba(255,255,255,0.08)"
+    },
+    "buttonCta": { "glow": false, "radius": "6px" },
+    "markerHighlight": { "color": "#F5D742", "ragged": true },
+    "doodle": { "enabled": true, "ink": "#FFFFFF" },
+    "checkbox": { "style": "hand", "stroke": "#FFFFFF" },
+    "logoMark": "vernatun_pomegranate",
+    "seamlessConnector": {
+      "enabled": true,
+      "style": "arrow",
+      "color": "#F5D742"
+    }
+  },
+  "cssVarOverrides": {
+    "--cf-design-grid": "rgba(255, 255, 255, 0.05)",
+    "--cf-design-marker": "#F5D742",
+    "--cf-design-inverse": "#121212"
+  },
+  "referenceImageUrl": "assets/Gemini_Generated_Image_bzhak3bzhak3bzha",
+  "version": 1
+}

@@ -1,0 +1,56 @@
+- generic [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - complementary "Главная навигация" [ref=f3e3]:
+      - generic [ref=f3e6]:
+        - generic [ref=f3e7]: VERNATUN
+        - generic [ref=f3e8]: ARMENIAN CLUB
+      - navigation [ref=f3e10]:
+        - generic [ref=f3e11]:
+          - link "Студия" [ref=f3e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f3e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f3e37] [cursor=pointer]:
+            - /url: /settings
+          - link "Директор" [active] [ref=f3e48] [cursor=pointer]:
+            - /url: /marketing
+      - generic [ref=f3e58]:
+        - paragraph [ref=f3e59]: Роль QA (локально)
+        - generic [ref=f3e60]:
+          - button "OWNER" [ref=f3e61]
+          - button "ADMIN" [ref=f3e62]
+      - button "Изменить ширину боковой панели" [ref=f3e63]
+    - main [ref=f3e65]:
+      - generic [ref=f3e477]:
+        - complementary "Проекты маркетинга" [ref=f3e478]:
+          - generic [ref=f3e479]:
+            - heading "Проекты" [level=2] [ref=f3e480]
+            - button "Новый проект" [ref=f3e481]
+          - generic [ref=f3e483]:
+            - generic [ref=f3e484]:
+              - button "Основной" [ref=f3e485]
+              - button "Переименовать проект" [ref=f3e486]
+              - button "Удалить проект" [ref=f3e487]
+              - button "Новый чат" [ref=f3e488]
+            - list [ref=f3e489]:
+              - listitem [ref=f3e490]:
+                - button "Новый чат" [ref=f3e491]
+        - generic [ref=f3e492]:
+          - generic [ref=f3e493]:
+            - heading "Маркетинг-директор" [level=1] [ref=f3e494]
+            - paragraph [ref=f3e495]: Стратегия контента · календарь · порядок публикаций · Haiku 4.5
+          - generic [ref=f3e497]:
+            - generic [ref=f3e498]:
+              - paragraph [ref=f3e499]: Чем займёмся сегодня?
+              - paragraph [ref=f3e500]: Стратегия ниши, карусели и рилсы, хуки, CTA, календарь идей и порядок постинга Vernatun. Спросите — при необходимости я поищу черновики и модули в фабрике.
+            - generic [ref=f3e503]:
+              - textbox "Сообщение директору" [ref=f3e504]:
+                - /placeholder: Сообщение
+              - generic [ref=f3e505]:
+                - button "Добавить" [ref=f3e506]
+                - combobox "Модель" [ref=f3e507]:
+                  - generic: Claude Haiku 4.5
+                - generic [ref=f3e510]:
+                  - button "Голосовой ввод" [ref=f3e511]
+                  - button "Отправить" [disabled]
+  - alert [ref=f3e433]: Маркетинг-директор · Vernatun

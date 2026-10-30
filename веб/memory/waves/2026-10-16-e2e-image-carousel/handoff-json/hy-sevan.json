@@ -1,0 +1,49 @@
+{
+  "project": "vernatun",
+  "content_id": "sevam-silence-pause",
+  "contentType": "carousel",
+  "requested_slide_count": 3,
+  "idea": "Озеро Севан как метафора паузы: вода, ветер, тишина вместо суеты. Приглашение в комментарии — что значит для тебя пауза.",
+  "hook": "Вода помнит?",
+  "tone": "vernatun",
+  "cta_type": 1,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Вода помнит?",
+      "secondary_copy": "",
+      "swipe_trigger": "META: curiosity — зритель хочет узнать, что именно помнит вода Севана и почему это важно",
+      "visual_prompt": "sevam_silence cinematic wide shot озера Севан на рассвете, мягкий свет сбоку, ripple pattern на воде, минималистичная композиция, no purple grade, тёплый золотой час, дымка над водой",
+      "alt_text": "Озеро Севан на рассвете с рябью на воде"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "point",
+      "primary_copy": "Пауза — это не потеря времени",
+      "secondary_copy": "На Севане ветер говорит громче, чем голос. Вода учит молчать, чтобы услышать себя.",
+      "swipe_trigger": "META: proof beat — зритель листает за конкретным жестом паузы, за философией воды",
+      "visual_prompt": "sevam_silence close-up water surface с ветровыми волнами, мягкий боковой свет, editorial typography overlay в тёплом золоте, no stock gradient, charcoal depth, ripple bridge continuing from slide 1",
+      "alt_text": "Близкий план воды Севана с ветровыми волнами"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta",
+      "primary_copy": "Что для тебя — пауза?",
+      "secondary_copy": "Напиши в комментариях. Может быть, это тоже озеро, или стол, или молчание рядом с близким человеком.",
+      "swipe_trigger": "META: soft end — comments CTA; зритель приглашён поделиться личным смыслом паузы",
+      "visual_prompt": "sevam_silence wide озеро на закате, soft gold rim light, CTA text block in warm amber, Vernatun mark subtle bottom-left, editorial not purple pill, water still and reflective",
+      "alt_text": "Озеро Севан на закате с приглашением в комментарии",
+      "cta_type": 1
+    }
+  ],
+  "caption": "Озеро Севан помнит. Вода учит молчать, чтобы услышать. Что для тебя — пауза? Напиши в комментариях.",
+  "hashtags": [
+    "#Vernatun",
+    "#ОзероСеван",
+    "#Пауза",
+    "#Тишина",
+    "#Армения"
+  ],
+  "promptForDesigner": "sevam_silence: cinematic water + editorial gold + comments CTA; HTML/CSS-first 3×4:5; ignore swipe_trigger paint; focus on ripple continuity and warm light bridge across cuts"
+}

@@ -1,0 +1,86 @@
+- generic [active] [ref=f12e1]:
+  - generic [ref=f12e2]:
+    - complementary "Главная навигация" [ref=f12e3]:
+      - generic [ref=f12e6]:
+        - generic [ref=f12e7]: VERNATUN
+        - generic [ref=f12e8]: ARMENIAN CLUB
+      - navigation [ref=f12e10]:
+        - generic [ref=f12e11]:
+          - link "Студия" [ref=f12e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f12e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f12e37] [cursor=pointer]:
+            - /url: /settings
+          - link "Директор" [ref=f12e48] [cursor=pointer]:
+            - /url: /marketing
+      - generic [ref=f12e58]:
+        - paragraph [ref=f12e59]: Роль QA (локально)
+        - generic [ref=f12e60]:
+          - button "OWNER" [ref=f12e61]
+          - button "ADMIN" [ref=f12e62]
+      - button "Изменить ширину боковой панели" [ref=f12e63]
+    - main [ref=f12e65]:
+      - generic [ref=f12e66]:
+        - 'heading "Команда выпуска: Карусели Instagram (4:5)" [level=1] [ref=f12e67]'
+        - generic [ref=f12e69]:
+          - generic [ref=f12e71]:
+            - 'heading "Команда выпуска: Карусели Instagram (4:5)" [level=1] [ref=f12e72]'
+            - paragraph [ref=f12e73]: Пайплайн создания и публикации контента. Кликните на любого агента для детальной настройки.
+          - generic [ref=f12e76]:
+            - img [aria-hidden]:
+              - generic:
+                - generic: запрос
+                - generic: разбор
+                - generic: сценарий
+                - generic: медиа
+                - generic: фильтр
+                - generic: выводы
+            - generic [ref=f12e77]:
+              - generic [ref=f12e78]:
+                - generic [ref=f12e86]:
+                  - text: Клиент
+                  - heading "User" [level=3] [ref=f12e87]
+                  - paragraph [ref=f12e88]: Тема и бриф — только в чате Create / Studio
+                - button "Декомпозиция Разборщик Структура и тезисы" [ref=f12e89]:
+                  - generic [ref=f12e102]:
+                    - text: Декомпозиция
+                    - heading "Разборщик" [level=3] [ref=f12e103]
+                    - generic [ref=f12e104]: Структура и тезисы
+                - button "Слайды & Текст Копирайтер каруселей Хуки и сценарий" [ref=f12e105]:
+                  - generic [ref=f12e117]:
+                    - text: Слайды & Текст
+                    - heading "Копирайтер каруселей" [level=3] [ref=f12e118]
+                    - generic [ref=f12e119]: Хуки и сценарий
+                - 'button "Визуал & Сетка Дизайнер карусели Промпты и стили 📄 design.md База Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления." [ref=f12e120]':
+                  - generic [ref=f12e136]:
+                    - text: Визуал & Сетка
+                    - heading "Дизайнер карусели" [level=3] [ref=f12e137]
+                    - generic [ref=f12e138]: Промпты и стили
+                  - generic [ref=f12e143]:
+                    - generic [ref=f12e144]:
+                      - generic [ref=f12e145]: 📄 design.md
+                      - generic [ref=f12e146]: База
+                    - paragraph [ref=f12e147]: "Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления."
+                - button "Выгрузка & Пост Публицист Дистрибуция каналов" [ref=f12e148]:
+                  - generic [ref=f12e161]:
+                    - text: Выгрузка & Пост
+                    - heading "Публицист" [level=3] [ref=f12e162]
+                    - generic [ref=f12e163]: Дистрибуция каналов
+              - generic [ref=f12e164]:
+                - button "Мониторинг Скаут Тренды & Референсы" [ref=f12e165]:
+                  - generic [ref=f12e178]:
+                    - text: Мониторинг
+                    - heading "Скаут" [level=3] [ref=f12e179]
+                    - generic [ref=f12e180]: Тренды & Референсы
+                - button "Метрики Аналитик ERR & Дочитывания" [ref=f12e181]:
+                  - generic [ref=f12e191]:
+                    - text: Метрики
+                    - heading "Аналитик" [level=3] [ref=f12e192]
+                    - generic [ref=f12e193]: ERR & Дочитывания
+                - button "Обучение Тренер RLHF & Обновление баз" [ref=f12e194]:
+                  - generic [ref=f12e209]:
+                    - text: Обучение
+                    - heading "Тренер" [level=3] [ref=f12e210]
+                    - generic [ref=f12e211]: RLHF & Обновление баз
+  - alert [ref=f12e212]

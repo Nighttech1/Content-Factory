@@ -1,0 +1,62 @@
+- generic [ref=f2e2]:
+  - complementary "Главная навигация" [ref=f2e3]:
+    - generic [ref=f2e11]:
+      - generic [ref=f2e12]: VERN·ATUN
+      - generic [ref=f2e13]: Content Factory
+    - generic [ref=f2e14]:
+      - paragraph [ref=f2e15]: Пайплайны и ноды
+      - navigation [ref=f2e16]:
+        - generic [ref=f2e18]:
+          - link "Студия" [ref=f2e19] [cursor=pointer]:
+            - /url: /studio
+          - button "Развернуть модули Студии" [ref=f2e26]
+        - link "Холст" [ref=f2e31] [cursor=pointer]:
+          - /url: /admin/mesh
+        - link "Расписание" [ref=f2e39] [cursor=pointer]:
+          - /url: /schedule
+        - link "Аналитика" [ref=f2e44] [cursor=pointer]:
+          - /url: /analytics
+        - link "Бренд-кит" [ref=f2e52] [cursor=pointer]:
+          - /url: /brand-kit
+        - link "Настройки" [ref=f2e61] [cursor=pointer]:
+          - /url: /settings
+    - generic [ref=f2e66]:
+      - paragraph [ref=f2e67]: Բարև · Vernatun
+      - generic [ref=f2e68]:
+        - paragraph [ref=f2e69]: Роль QA (локально)
+        - generic [ref=f2e70]:
+          - button "OWNER" [ref=f2e71]
+          - button "ADMIN" [ref=f2e72]
+  - main [ref=f2e74]:
+    - generic [ref=f2e75]:
+      - generic [ref=f2e77]:
+        - paragraph [ref=f2e78]: // Только владелец · Сетка агентов
+        - heading "Холст сетки агентов" [level=1] [ref=f2e79]
+      - generic [ref=f2e80]:
+        - generic [ref=f2e81]:
+          - generic [ref=f2e82]:
+            - generic [ref=f2e83]:
+              - paragraph [ref=f2e84]: Активные задачи
+              - paragraph [ref=f2e85]: "4"
+            - generic [ref=f2e86]:
+              - paragraph [ref=f2e87]: Задержка
+              - paragraph [ref=f2e88]: 180ms
+            - generic [ref=f2e89]:
+              - paragraph [ref=f2e90]: GPU
+              - paragraph [ref=f2e91]: Активен
+          - button "Добавить модуль пайплайна" [ref=f2e92]
+          - tablist "Пайплайн вида контента" [ref=f2e94]:
+            - tab "Карусели Instagram (4:5)" [selected] [ref=f2e95]
+            - tab "Полезные картинки & Инфографика" [ref=f2e97]
+            - tab "Мульт-Reels (2D сторителлинг)" [ref=f2e98]
+            - tab "HeyGen AI-Аватар Reels" [ref=f2e99]
+            - tab "Рилс" [ref=f2e100]
+            - tab "Нарезки с видео в рилсы" [ref=f2e101]
+            - tab "Информационное видео" [ref=f2e102]
+        - application [ref=f2e104]:
+          - generic "Control Panel" [ref=f2e107]:
+            - button "Zoom In" [ref=f2e108] [cursor=pointer]
+            - button "Zoom Out" [ref=f2e111] [cursor=pointer]
+            - button "Fit View" [ref=f2e114] [cursor=pointer]
+            - button "Toggle Interactivity" [ref=f2e117] [cursor=pointer]
+          - img "Mini Map" [ref=f2e121]

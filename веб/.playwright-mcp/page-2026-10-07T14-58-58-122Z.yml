@@ -1,0 +1,84 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e2]:
+    - complementary "Главная навигация" [ref=f7e3]:
+      - generic [ref=f7e11]:
+        - generic [ref=f7e12]: VERN·ATUN
+        - generic [ref=f7e13]: Content Factory
+      - navigation [ref=f7e15]:
+        - generic [ref=f7e16]:
+          - link "Студия" [ref=f7e19] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f7e32] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f7e45] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f7e55] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f7e68] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f7e78]:
+        - paragraph [ref=f7e79]: Роль QA (локально)
+        - generic [ref=f7e80]:
+          - button "OWNER" [ref=f7e81]
+          - button "ADMIN" [ref=f7e82]
+      - button "Изменить ширину боковой панели" [ref=f7e83]
+    - main [ref=f7e85]:
+      - generic [ref=f7e86]:
+        - generic [ref=f7e88]:
+          - heading "Карусели Instagram (4:5)" [level=1] [ref=f7e89]
+          - button "Создать карусель" [ref=f7e90]
+        - generic [ref=f7e93]:
+          - generic [ref=f7e95]:
+            - generic [ref=f7e96]:
+              - heading "Наши" [level=2] [ref=f7e98]
+              - generic [ref=f7e99]: "0"
+            - tablist "Вкладки нашей ленты" [ref=f7e101]:
+              - tab "Опубликовано" [selected] [ref=f7e102]
+              - tab "Черновики" [ref=f7e104]
+          - generic [ref=f7e110]:
+            - generic [ref=f7e111]:
+              - heading "Конкуренты" [level=2] [ref=f7e113]
+              - generic [ref=f7e114]: "0"
+            - searchbox "Поиск каруселей конкурентов" [ref=f7e120]
+      - button "Закрыть панель генерации"
+      - complementary [aria-hidden] [ref=f7e125]:
+        - generic [ref=f7e126]:
+          - generic [ref=f7e127]:
+            - paragraph [ref=f7e128]: Журнал генерации
+            - heading [level=2] [ref=f7e129]: Конвейер агентов
+          - button [ref=f7e130]: Закрыть
+        - generic [ref=f7e131]:
+          - generic [ref=f7e132]:
+            - generic [ref=f7e133]: Прогресс
+            - generic [ref=f7e134]: 0%
+          - progressbar [ref=f7e135]
+        - list [ref=f7e136]:
+          - listitem [ref=f7e137]:
+            - generic [ref=f7e140]:
+              - generic [ref=f7e141]: Исследователь
+              - generic [ref=f7e142]: Ожидание...
+          - listitem [ref=f7e143]:
+            - generic [ref=f7e146]:
+              - generic [ref=f7e147]: Автор хуков
+              - generic [ref=f7e148]: Ожидание...
+          - listitem [ref=f7e149]:
+            - generic [ref=f7e152]:
+              - generic [ref=f7e153]: Сценарист
+              - generic [ref=f7e154]: Ожидание...
+          - listitem [ref=f7e155]:
+            - generic [ref=f7e158]:
+              - generic [ref=f7e159]: Дизайнер
+              - generic [ref=f7e160]: Ожидание...
+          - listitem [ref=f7e161]:
+            - generic [ref=f7e164]:
+              - generic [ref=f7e165]: Конвейер
+              - generic [ref=f7e166]: Ожидание...
+        - generic [ref=f7e167]:
+          - generic [ref=f7e168]:
+            - textbox [disabled] [ref=f7e169]:
+              - /placeholder: Заметка активному шагу…
+            - group [ref=f7e170]:
+              - button [disabled] [ref=f7e171]
+              - button [disabled] [ref=f7e176]
+          - paragraph [ref=f7e181]: Голос недоступен — введите правку текстом
+  - alert [ref=f7e182]

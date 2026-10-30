@@ -1,0 +1,95 @@
+- generic [ref=f9e2]:
+  - complementary "Главная навигация" [ref=f9e3]:
+    - generic [ref=f9e11]:
+      - generic [ref=f9e12]: VERN·ATUN
+      - generic [ref=f9e13]: Content Factory
+    - generic [ref=f9e14]:
+      - paragraph [ref=f9e15]: Пайплайны и ноды
+      - navigation [ref=f9e16]:
+        - generic [ref=f9e17]:
+          - generic [ref=f9e18]:
+            - link "Студия" [ref=f9e19] [cursor=pointer]:
+              - /url: /studio
+            - button "Свернуть модули Студии" [expanded] [ref=f9e26]
+          - list [ref=f9e30]:
+            - listitem [ref=f9e31]:
+              - link "Карусели Instagram (4:5)" [ref=f9e32] [cursor=pointer]:
+                - /url: /studio/carousel-engine
+            - listitem [ref=f9e33]:
+              - link "Полезные картинки & Инфографика" [ref=f9e34] [cursor=pointer]:
+                - /url: /studio/aesthetic-graphics
+            - listitem [ref=f9e35]:
+              - link "Мульт-Reels (2D сторителлинг)" [ref=f9e36] [cursor=pointer]:
+                - /url: /studio/cartoon-reels
+            - listitem [ref=f9e37]:
+              - link "HeyGen AI-Аватар Reels" [ref=f9e38] [cursor=pointer]:
+                - /url: /studio/heygen-reels
+        - link "Холст" [ref=f9e40] [cursor=pointer]:
+          - /url: /admin/mesh
+        - link "Расписание" [ref=f9e48] [cursor=pointer]:
+          - /url: /schedule
+        - link "Аналитика" [ref=f9e53] [cursor=pointer]:
+          - /url: /analytics
+        - link "Бренд-кит" [ref=f9e61] [cursor=pointer]:
+          - /url: /brand-kit
+        - link "Настройки" [ref=f9e70] [cursor=pointer]:
+          - /url: /settings
+    - generic [ref=f9e75]:
+      - paragraph [ref=f9e76]: Բարև · Vernatun
+      - generic [ref=f9e77]:
+        - paragraph [ref=f9e78]: Роль QA (локально)
+        - generic [ref=f9e79]:
+          - button "OWNER" [ref=f9e80]
+          - button "ADMIN" [ref=f9e81]
+  - main [ref=f9e83]:
+    - generic [ref=f9e84]:
+      - generic [ref=f9e85]:
+        - paragraph [ref=f9e86]: // Рабочая страница модуля
+        - heading "Мульт-Reels (2D сторителлинг)" [level=1] [ref=f9e87]
+        - paragraph [ref=f9e88]: Иллюстрированный сторителлинг 9:16 с субтитрами.
+      - generic [ref=f9e90]:
+        - generic [ref=f9e92]:
+          - generic [ref=f9e93]:
+            - heading "Наши" [level=2] [ref=f9e95]
+            - generic [ref=f9e96]: …
+          - tablist "Вкладки нашей ленты" [ref=f9e98]:
+            - tab "Опубликовано" [selected] [ref=f9e99]
+            - tab "Черновики" [ref=f9e101]
+        - generic [ref=f9e107]:
+          - generic [ref=f9e108]:
+            - heading "Конкуренты" [level=2] [ref=f9e110]
+            - generic [ref=f9e111]: …
+          - searchbox "Поиск каруселей конкурентов" [ref=f9e117]
+    - button "Закрыть панель генерации"
+    - complementary [aria-hidden] [ref=f9e122]:
+      - generic [ref=f9e123]:
+        - generic [ref=f9e124]:
+          - paragraph [ref=f9e125]: Журнал генерации
+          - heading [level=2] [ref=f9e126]: Конвейер агентов
+        - button [ref=f9e127]: Закрыть
+      - generic [ref=f9e128]:
+        - generic [ref=f9e129]:
+          - generic [ref=f9e130]: Прогресс
+          - generic [ref=f9e131]: 0%
+        - progressbar [ref=f9e132]
+      - list [ref=f9e133]:
+        - listitem [ref=f9e134]:
+          - generic [ref=f9e137]:
+            - generic [ref=f9e138]: Исследователь
+            - generic [ref=f9e139]: Ожидание...
+        - listitem [ref=f9e140]:
+          - generic [ref=f9e143]:
+            - generic [ref=f9e144]: Автор хуков
+            - generic [ref=f9e145]: Ожидание...
+        - listitem [ref=f9e146]:
+          - generic [ref=f9e149]:
+            - generic [ref=f9e150]: Сценарист
+            - generic [ref=f9e151]: Ожидание...
+        - listitem [ref=f9e152]:
+          - generic [ref=f9e155]:
+            - generic [ref=f9e156]: Дизайнер
+            - generic [ref=f9e157]: Ожидание...
+        - listitem [ref=f9e158]:
+          - generic [ref=f9e161]:
+            - generic [ref=f9e162]: Конвейер
+            - generic [ref=f9e163]: Ожидание...

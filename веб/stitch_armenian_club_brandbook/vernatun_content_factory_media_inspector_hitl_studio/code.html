@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-error-container":"#ffdad6","error-container":"#93000a","secondary-container":"#7e5700","secondary":"#f3be64","tertiary-fixed":"#cfe5ff","surface":"#111317","background":"#111317","on-background":"#e2e2e6","surface-container-high":"#282a2d","on-surface":"#e2e2e6","on-primary":"#561f00","primary":"#ffb694","surface-container-lowest":"#0c0e11","primary-fixed-dim":"#ffb694","tertiary-fixed-dim":"#9ecbfb","tertiary-container":"#6894c2","inverse-primary":"#9d430c","tertiary":"#9ecbfb","on-tertiary-fixed":"#001d34","secondary-fixed":"#ffdeac","surface-tint":"#ffb694","on-secondary-container":"#ffd28a","on-tertiary-container":"#002c4a","surface-container":"#1e2023","outline":"#a48c81","on-secondary-fixed-variant":"#604100","on-surface-variant":"#ddc1b5","surface-variant":"#333538","on-tertiary-fixed-variant":"#154a73","surface-bright":"#37393d","on-error":"#690005","on-secondary-fixed":"#281900","surface-dim":"#111317","on-tertiary":"#003355","outline-variant":"#56423a","surface-container-low":"#1a1c1f","secondary-fixed-dim":"#f3be64","on-secondary":"#432c00","on-primary-container":"#4c1a00","on-primary-fixed":"#351000","surface-container-highest":"#333538","inverse-on-surface":"#2f3034","primary-container":"#de733c","error":"#ffb4ab","primary-fixed":"#ffdbcc","on-primary-fixed-variant":"#7b2f00","inverse-surface":"#e2e2e6"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"0.75rem","space-sm":"0.5rem","space-md":"0.75rem","space-xs":"0.25rem","margin":"1.5rem","space-lg":"1.25rem","space-xl":"2rem","margin-mobile":"1rem","gutter":"1rem"},"fontFamily":{"label-md":["JetBrains Mono"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"code-sm":["JetBrains Mono"],"body-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["JetBrains Mono"],"body-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"code-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.025em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.40)]"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[22px]">token</span><span class="absolute -top-0.5 -right-0.5 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><div class="flex flex-col"><span class="font-headline-md text-label-md tracking-wider text-on-surface font-semibold">VERN·ATUN AI</span><span class="font-label-sm text-label-sm tracking-widest text-on-surface-variant">CONTENT FACTORY</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container border border-surface-bright"><span class="material-symbols-outlined text-tertiary text-[14px]">terminal</span><span class="font-label-sm text-label-sm text-tertiary font-medium">PRODUCTION MESH v2.4</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(194,94,40,0.30)]"><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="agent-mesh" href="#">Agent Mesh</a><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="studio-launchpad" href="#">Studio Launchpad</a><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="inspector-hitl" href="#">Inspector &amp; HITL</a><a class="px-space-md py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="self-learning-engine" href="#">Self-Learning Engine</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden 2xl:flex items-center gap-space-md px-space-md py-space-xs rounded bg-surface-container-low border border-surface-container-high"><div class="flex items-center gap-space-xs"><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Workers:</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">4/8</span></div><div class="h-3 w-[1px] bg-surface-variant"></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">Latency:</span><span class="font-label-sm text-label-sm text-tertiary font-semibold">180ms</span></div><div class="h-3 w-[1px] bg-surface-variant"></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">GPU:</span><span class="font-label-sm text-label-sm text-secondary font-semibold">42%</span></div></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary transition-all font-body-sm text-body-sm font-semibold shadow-[0_0_12px_rgba(222,115,60,0.25)]" type="button"><span class="material-symbols-outlined text-[16px]">extension</span><span class="hidden sm:inline">+ New Module Plugin</span></button><a class="p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center justify-center" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span></a><div class="flex items-center gap-space-xs pl-space-xs"><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-1 ring-primary/40"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div><div class="hidden md:flex flex-col"><span class="font-label-sm text-[10px] uppercase font-semibold text-secondary-container bg-secondary-fixed/90 px-1 rounded">Superadmin</span></div></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md border-r border-surface-container"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/70">Pipelines &amp; Nodes</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="agent-mesh" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span>Node Canvas</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="studio-launchpad" href="#"><span class="material-symbols-outlined text-[18px]">rocket_launch</span><span>Production Portal</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="inspector-hitl" href="#"><span class="material-symbols-outlined text-[18px]">rule</span><span>HITL Studio</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="self-learning-engine" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span>Engine Analytics</span></a></nav><div class="mt-space-md px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/70">Cluster Telemetry</span></div><div class="flex flex-col gap-space-xs px-space-sm"><div class="flex justify-between items-center py-space-xs font-label-sm text-label-sm"><span class="text-on-surface-variant">Context Capacity</span><span class="text-secondary font-mono">78%</span></div><div class="w-full h-1 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-secondary w-[78%]"></div></div><div class="flex justify-between items-center py-space-xs font-label-sm text-label-sm"><span class="text-on-surface-variant">Throughput</span><span class="text-tertiary font-mono">1,240 t/s</span></div></div></div><div class="px-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Autonomous Run</span><span class="font-label-sm text-[10px] text-tertiary">Synchronized</span></div><span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span></div></div></aside><div class="pl-64"><main class="relative w-full pt-16 bg-surface min-h-screen px-gutter py-margin"><div class="flex flex-col w-full">
+<!-- Sub-header Breadcrumb Bar & Job Telemetry -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pb-space-lg">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">tune</span>
+<span>STAGE 04</span>
+<span class="text-surface-bright">/</span>
+<span class="text-primary font-semibold">HUMAN-IN-THE-LOOP VERIFICATION</span>
+</div>
+<span class="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-surface-bright"></span>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant truncate">
+<span>Pipeline:</span>
+<span class="text-on-surface font-mono">Vernatun_Salon_Omni_v3.4</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Batch Token Cost:</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold font-mono">1,840 $VTN</span>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-all font-body-sm text-body-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">history</span>
+<span>Version Diff (v2)</span>
+</button>
+</div>
+</div>
+<!-- Primary Split-Screen Stage: 55% Left, 45% Right -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Stage Deck & Video Reel Preview (7 cols = ~58%) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Preview Segmented Mode Toggle -->
+<div class="flex items-center justify-between p-space-xs rounded-xl bg-surface-container-lowest">
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary-container font-body-sm text-body-sm font-semibold transition-all shadow-[0_0_12px_rgba(222,115,60,0.25)]" id="tabVideo" onclick="switchPreviewMode('video')" type="button">
+<span class="material-symbols-outlined text-[17px]">movie</span>
+<span>Video Reel Preview</span>
+<span class="px-1.5 py-0.2 rounded bg-primary text-on-primary font-label-sm text-[10px]">9:16</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-body-sm text-body-sm font-medium" id="tabCarousel" onclick="switchPreviewMode('carousel')" type="button">
+<span class="material-symbols-outlined text-[17px]">auto_stories</span>
+<span>Carousel Deck</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px]">8 Slides</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs pr-space-xs">
+<button class="p-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center" title="Rotate aspect guide" type="button">
+<span class="material-symbols-outlined text-[18px]">aspect_ratio</span>
+</button>
+<button class="p-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center" title="Full canvas mode" type="button">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Main Player Viewport Card -->
+<div class="relative w-full rounded-xl bg-surface-container-lowest overflow-hidden flex flex-col items-center justify-center p-space-md group">
+<!-- Ambient Atmospheric Glow beneath frame -->
+<div class="absolute -inset-1 bg-gradient-to-tr from-primary-container/20 via-secondary-container/10 to-transparent blur-2xl pointer-events-none opacity-60"></div>
+<!-- 9:16 Vertical Video Rig -->
+<div class="relative w-full max-w-[340px] aspect-[9/16] rounded-lg overflow-hidden shadow-2xl bg-surface-container-low flex flex-col justify-between">
+<!-- Simulated Photorealistic Presenter Background -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Photorealistic Armenian female literary curator presenter Anna speaking warmly in a moody ambient Vernatun intellectual salon library, surrounded by dark walnut wood bookshelves filled with rare books, soft architectural cognac illumination, cinematic shallow depth of field, warm sun gold backlighting, raycast developer precision aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLNwi0mG8dXDIfpnr8xgvDybKLbLbw4a_qBX9028xG7JoGGsGyHdSbWrhcJJmLMmTAUdyah3wlJhRsQ3wpgRIQNSgA1tegphAxrJRSog-10jb4GdVCAai27lQi6krW0BbwiC3cVHFJi8Ph2rqubwvzRBys0hDx9wCif0DFxQEssqVd_hK6qP8zytOyHMosfo2aPPcXb5igfqH3TKCZr4mfInZSpI0akFMpkRemZx10ANOL210tujoQ')">
+<!-- Film Grain & Lighting Scrim -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-surface-container-lowest/70"></div>
+</div>
+<!-- Top Overlay: Live Telemetry & Badges -->
+<div class="relative z-10 p-space-md flex items-center justify-between w-full">
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-on-surface">
+<span class="h-2 w-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm font-mono tracking-wider text-secondary">SYNTH·AI 60fps</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high/90 text-on-surface font-label-sm text-[10px] uppercase font-mono tracking-tight">1080x1920</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high/90 text-tertiary font-label-sm text-[10px] font-mono">ProRes</span>
+</div>
+</div>
+<!-- Mid Section: Simulated Kinetic Armenian/Russian Karaoke Captions -->
+<div class="relative z-10 px-space-md flex flex-col items-center text-center gap-space-xs mb-space-xl">
+<div class="px-space-md py-space-xs rounded-lg bg-surface-container-lowest/85 backdrop-blur-xl shadow-lg max-w-[280px]">
+<p class="font-headline-md text-body-lg font-bold text-on-surface leading-tight tracking-tight">
+                «Ի՞նչն է քեզ <span class="text-primary underline decoration-secondary decoration-2 underline-offset-4">երջանիկ</span> դարձնում...»
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-1">
+                «Что на самом деле зажигает огонь спора?»
+              </p>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="inline-block h-1 w-8 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-[10px] text-secondary font-mono tracking-widest uppercase">Word Sync ±4ms</span>
+</div>
+</div>
+<!-- Bottom Floating Controls Overlay -->
+<div class="relative z-10 p-space-md w-full bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/90 to-transparent flex flex-col gap-space-xs">
+<!-- Scrub Bar with Mini Dynamic Audio Waveform -->
+<div class="flex flex-col gap-1 w-full">
+<!-- Inline Audio Wave Indicator -->
+<div class="flex items-end justify-between h-4 w-full px-0.5 opacity-80">
+<span class="w-0.5 h-2 bg-primary rounded-full"></span>
+<span class="w-0.5 h-3.5 bg-primary rounded-full"></span>
+<span class="w-0.5 h-1.5 bg-primary rounded-full"></span>
+<span class="w-0.5 h-4 bg-primary rounded-full"></span>
+<span class="w-0.5 h-2.5 bg-primary rounded-full"></span>
+<span class="w-0.5 h-3 bg-secondary rounded-full"></span>
+<span class="w-0.5 h-4 bg-secondary rounded-full"></span>
+<span class="w-0.5 h-2 bg-secondary rounded-full"></span>
+<span class="w-0.5 h-1.5 bg-surface-variant rounded-full"></span>
+<span class="w-0.5 h-3 bg-surface-variant rounded-full"></span>
+<span class="w-0.5 h-2 bg-surface-variant rounded-full"></span>
+<span class="w-0.5 h-3.5 bg-surface-variant rounded-full"></span>
+<span class="w-0.5 h-1 bg-surface-variant rounded-full"></span>
+<span class="w-0.5 h-2.5 bg-surface-variant rounded-full"></span>
+<span class="w-0.5 h-3 bg-surface-variant rounded-full"></span>
+<span class="w-0.5 h-1.5 bg-surface-variant rounded-full"></span>
+</div>
+<!-- Progress Track -->
+<div class="relative w-full h-1.5 bg-surface-container-highest rounded-full cursor-pointer group/scrub">
+<div class="absolute left-0 top-0 bottom-0 w-[53%] bg-primary rounded-full"></div>
+<div class="absolute left-[53%] top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-secondary shadow-md ring-2 ring-surface-container-lowest group-hover/scrub:scale-125 transition-transform"></div>
+</div>
+</div>
+<!-- Play Controls & Timecode -->
+<div class="flex items-center justify-between text-on-surface pt-1">
+<div class="flex items-center gap-space-xs">
+<button class="h-8 w-8 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface flex items-center justify-center transition-all" id="playPauseBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">pause</span>
+</button>
+<button class="h-8 w-8 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">replay_10</span>
+</button>
+<div class="flex items-center font-label-sm text-label-sm font-mono pl-space-xs">
+<span class="text-on-surface font-semibold">00:24</span>
+<span class="text-on-surface-variant/60 mx-1">/</span>
+<span class="text-on-surface-variant">00:45</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 w-8 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+<button class="h-8 w-8 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Carousel Mini-Deck Strip (Slides 01 to 08) -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-lowest">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">view_carousel</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Carousel Synchronized Deck</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-[10px] font-mono">8 Assets</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Drag to reorder sequence</span>
+<button class="text-on-surface-variant hover:text-on-surface p-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+</button>
+</div>
+</div>
+<!-- Horizontal Scrollable Thumbnail Bay -->
+<div class="flex items-center gap-space-sm overflow-x-auto py-space-xs no-scrollbar">
+<!-- Slide 01 (Active) -->
+<div class="relative shrink-0 w-24 h-32 rounded-lg bg-surface-container overflow-hidden group cursor-pointer ring-2 ring-primary shadow-[0_0_12px_rgba(222,115,60,0.30)]">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Editorial visual for slide 1: Armenian historic architecture in Yerevan with atmospheric warm sunset glow, high contrast typography teaser, elegant minimal composition." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOn_bQ-9oU51kOH0KaXW4md9ExbHOeB7UooSRCIQ9OfoTrdIZP_MOQTzNJSzewylppfUlZgTcdL31gcXkhv5aAm8gkLOa2miWdapOs6GULClkG8dy_Rk1yGvkq8Nybdb_1SpKreKNavQnT8Mig7s3BrEYT4-2i_WARblcqKQULZVhT65yJOQx2dImYT6VD5VAIITYQCmXIVvoukUx8yp472YH3wmp-6_8Urr_usJMCMJK4EPSEcxYb')"></div>
+<div class="absolute top-1 left-1 px-1 rounded bg-surface-container-lowest/90 font-label-sm text-[9px] font-mono text-primary font-bold">01·HOOK</div>
+<div class="absolute top-1 right-1 h-3.5 w-3.5 rounded-full bg-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary text-[10px]">check</span>
+</div>
+<div class="absolute inset-x-0 bottom-0 p-1 bg-surface-container-lowest/90 backdrop-blur-sm">
+<span class="font-label-sm text-[9px] text-on-surface block truncate font-mono">Cover_Hook.png</span>
+</div>
+</div>
+<!-- Slide 02 -->
+<div class="relative shrink-0 w-24 h-32 rounded-lg bg-surface-container overflow-hidden group cursor-pointer hover:ring-1 hover:ring-surface-bright transition-all">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Editorial slide 2: Antique Armenian books laid out on dark polished walnut table with coffee cup, steam rising, intellectual Vernatun ambiance." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAay77LUSBH6U9nJYkWetJv93t2LmMiQcsRTBKqdkkKMK9wSlFE9vDo_elmIaIMwAGCpo4fVC6dyZCFgBzqWWbNUZat9nXvauVUFTnnyc24a0wwQTE2O1ZBVvKRRw_uVfP0PNn3h7fso36475-8RtgkW7AgNJoJsyVc1M7GvC0boyFhbfaoMk86CnNMEXh4NUyqbusY-9x01A3bDc-F4K1cHOQDhiC-398aiUIQRZ3w1CNB295FZ_Pc')"></div>
+<div class="absolute top-1 left-1 px-1 rounded bg-surface-container-lowest/90 font-label-sm text-[9px] font-mono text-on-surface-variant">02</div>
+<div class="absolute inset-x-0 bottom-0 p-1 bg-surface-container-lowest/90 backdrop-blur-sm">
+<span class="font-label-sm text-[9px] text-on-surface-variant block truncate font-mono">Historical_Context.png</span>
+</div>
+</div>
+<!-- Slide 03 -->
+<div class="relative shrink-0 w-24 h-32 rounded-lg bg-surface-container-low overflow-hidden group cursor-pointer hover:ring-1 hover:ring-surface-bright transition-all">
+<div class="absolute inset-0 flex flex-col justify-center items-center p-2 bg-gradient-to-b from-surface-container-high to-surface-container">
+<span class="material-symbols-outlined text-tertiary text-[20px] mb-1">format_quote</span>
+<p class="font-headline-md text-[10px] text-center text-on-surface line-clamp-3">«Խոսքը ուժ է...»</p>
+</div>
+<div class="absolute top-1 left-1 px-1 rounded bg-surface-container-lowest/90 font-label-sm text-[9px] font-mono text-on-surface-variant">03</div>
+<div class="absolute inset-x-0 bottom-0 p-1 bg-surface-container-lowest/90 backdrop-blur-sm">
+<span class="font-label-sm text-[9px] text-on-surface-variant block truncate font-mono">Quote_Card.png</span>
+</div>
+</div>
+<!-- Slide 04 -->
+<div class="relative shrink-0 w-24 h-32 rounded-lg bg-surface-container overflow-hidden group cursor-pointer hover:ring-1 hover:ring-surface-bright transition-all">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Editorial slide 4: Yerevan cafe terrace in evening lights, group of thinkers in engaging discourse, cinematic documentary tone." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqy8GJL65Wju1HagqSAzOlOkX6OBZIw2Kw0ftsBrJrDJFVzQE9v9u9lltm5tF8Z1PHWtUncwe2sLWkvQUBE5kq7OB81-uLNcfZ69ZDHxc5-LtIJXqURUXpkZ7ChysBc1afr8EhpNLipcyare4_e58rD1rJ3N676abYHRkflhe1nvHIXm4aboOpm7g273H8gwC5JyDfas6pv6DTmh7Qnv6Kv0-Bu5IBgMkD-C3UhqmqUhoP1RGNvqzt')"></div>
+<div class="absolute top-1 left-1 px-1 rounded bg-surface-container-lowest/90 font-label-sm text-[9px] font-mono text-on-surface-variant">04</div>
+<div class="absolute inset-x-0 bottom-0 p-1 bg-surface-container-lowest/90 backdrop-blur-sm">
+<span class="font-label-sm text-[9px] text-on-surface-variant block truncate font-mono">Cafe_Debate.png</span>
+</div>
+</div>
+<!-- Slide 05 -->
+<div class="relative shrink-0 w-24 h-32 rounded-lg bg-surface-container overflow-hidden group cursor-pointer hover:ring-1 hover:ring-surface-bright transition-all">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Editorial slide 5: Stylized infographic showing linguistic transition maps between Old Armenian and conversational contemporary dialect." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwgBONfobmwSgx2PqvYXHEXlcFoj4CqsaXywktmvQqtOCVt7wEuocdag83lz09A7A4aKgFg_HavrGYUHnIdO3V5RPg6NpaluLJvq-hSMgNuYgAwIBF_IdZH8dFSnCoQQi82TK-cOPA-z_n_0fgYS9dFZaVfv2_VRzt7ZaVWyESugNdEtzS92MqzVTDZVDAJAunYBvuIyGYJKxkxC3oobi3aQPL6md-jKB5PsZv21DF15YFEs-i5tHL')"></div>
+<div class="absolute top-1 left-1 px-1 rounded bg-surface-container-lowest/90 font-label-sm text-[9px] font-mono text-on-surface-variant">05</div>
+<div class="absolute inset-x-0 bottom-0 p-1 bg-surface-container-lowest/90 backdrop-blur-sm">
+<span class="font-label-sm text-[9px] text-on-surface-variant block truncate font-mono">Infographic_Map.png</span>
+</div>
+</div>
+<!-- Slide 06 -->
+<div class="relative shrink-0 w-24 h-32 rounded-lg bg-surface-container-low overflow-hidden group cursor-pointer hover:ring-1 hover:ring-surface-bright transition-all">
+<div class="absolute inset-0 flex flex-col justify-center items-center p-2 bg-surface-container">
+<span class="material-symbols-outlined text-secondary text-[20px] mb-1">psychology</span>
+<span class="font-label-sm text-[10px] text-on-surface font-semibold text-center">3 Golden Rules</span>
+</div>
+<div class="absolute top-1 left-1 px-1 rounded bg-surface-container-lowest/90 font-label-sm text-[9px] font-mono text-on-surface-variant">06</div>
+<div class="absolute inset-x-0 bottom-0 p-1 bg-surface-container-lowest/90 backdrop-blur-sm">
+<span class="font-label-sm text-[9px] text-on-surface-variant block truncate font-mono">Rules_Breakdown.png</span>
+</div>
+</div>
+<!-- Slide 07 -->
+<div class="relative shrink-0 w-24 h-32 rounded-lg bg-surface-container overflow-hidden group cursor-pointer hover:ring-1 hover:ring-surface-bright transition-all">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Editorial slide 7: Close up shot of hands holding vintage fountain pen writing notes in leather journal, warm studio lights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrkQ8hrgMz32s4ugZ__WGF9qggDBxQ0405kGTsoohDV-9UCSiqqmaywkzD59uIG1FTmnUT6lZ3mEgWxwVrlY_N29e63cCPhn-qBMdCRpt7ocpb8MHq-jPPJbpcLsZOTAfHbN0FcSYlvcJHXRwZjEQN1Dcc5KZ2Z9dTHB-Zw88K8nRfj75yO08Mqfqdlzd2FcS_MJUi5OTNNYH2c0SBNYP0Dudo24IR9_7RFIzdCmKLpb0xuEa-Rg_i')"></div>
+<div class="absolute top-1 left-1 px-1 rounded bg-surface-container-lowest/90 font-label-sm text-[9px] font-mono text-on-surface-variant">07</div>
+<div class="absolute inset-x-0 bottom-0 p-1 bg-surface-container-lowest/90 backdrop-blur-sm">
+<span class="font-label-sm text-[9px] text-on-surface-variant block truncate font-mono">Takeaway_Note.png</span>
+</div>
+</div>
+<!-- Slide 08 (CTA) -->
+<div class="relative shrink-0 w-24 h-32 rounded-lg bg-surface-container-low overflow-hidden group cursor-pointer hover:ring-1 hover:ring-secondary transition-all">
+<div class="absolute inset-0 flex flex-col justify-center items-center p-2 bg-gradient-to-t from-primary-container/30 to-surface-container-high">
+<span class="material-symbols-outlined text-primary text-[22px] mb-1">rocket_launch</span>
+<span class="font-label-sm text-[10px] text-primary font-bold text-center">JOIN VERNATUN</span>
+</div>
+<div class="absolute top-1 left-1 px-1 rounded bg-surface-container-lowest/90 font-label-sm text-[9px] font-mono text-secondary font-bold">08·CTA</div>
+<div class="absolute inset-x-0 bottom-0 p-1 bg-surface-container-lowest/90 backdrop-blur-sm">
+<span class="font-label-sm text-[9px] text-on-surface block truncate font-mono">End_Callout.png</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Agent Output Inspector & HITL Tuning Suite (5 cols = ~42%) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Top Inspector Header: Job Status & Engagement Score -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md font-mono text-primary font-semibold">#JOB-8842</span>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container/60 text-on-secondary-container font-label-sm text-[11px] font-medium flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span>
+              Awaiting Sign-Off
+            </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Agent: v-writer-4o</span>
+</div>
+<!-- Metric Highlight: Glowing Circular Ring / Score Gauge -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low mt-space-xs">
+<div class="flex items-center gap-space-md">
+<!-- Inline SVG Gauge -->
+<div class="relative w-12 h-12 flex items-center justify-center shrink-0">
+<svg class="w-12 h-12 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="94, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-label-md text-label-md font-bold text-on-surface font-mono">94</div>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-body-md font-semibold text-on-surface">Predicted Hook Score</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Top 4% Engagement Tier (Armenian Cultural Category)</span>
+</div>
+</div>
+<div class="hidden sm:flex flex-col items-end text-right font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Retention 3s:</span>
+<span class="text-tertiary font-mono font-semibold">78.4%</span>
+</div>
+</div>
+</div>
+<!-- Alternative Hook Selector (One-Click Dynamic Swap) -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">electric_bolt</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Alternative Hook Selector</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Click to instant swap</span>
+</div>
+<div class="flex flex-col gap-space-xs mt-1">
+<!-- Hook Card 1 (Selected) -->
+<div class="p-space-sm rounded-lg bg-surface-container-high text-on-surface cursor-pointer ring-1 ring-primary transition-all flex items-start gap-space-sm relative group" onclick="selectHook(this)">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col gap-0.5 min-w-0 pr-12">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface leading-snug">«Did you know Yerevan evening cafe debates have a 100-year history?»</span>
+<span class="font-label-sm text-[10px] text-secondary font-mono">+42% Expected Retention · High Emotional Resonance</span>
+</div>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-[9px] font-bold">ACTIVE</span>
+</div>
+<!-- Hook Card 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface cursor-pointer transition-all flex items-start gap-space-sm relative group" onclick="selectHook(this)">
+<span class="material-symbols-outlined text-surface-bright text-[18px] shrink-0 mt-0.5 group-hover:text-on-surface-variant">radio_button_unchecked</span>
+<div class="flex flex-col gap-0.5 min-w-0 pr-12">
+<span class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">«Stop studying Armenian grammar rules. Here is how people actually speak.»</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-mono">+29% Retention · Contrarian / Educational</span>
+</div>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[9px] font-mono">SWAP</span>
+</div>
+<!-- Hook Card 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface cursor-pointer transition-all flex items-start gap-space-sm relative group" onclick="selectHook(this)">
+<span class="material-symbols-outlined text-surface-bright text-[18px] shrink-0 mt-0.5 group-hover:text-on-surface-variant">radio_button_unchecked</span>
+<div class="flex flex-col gap-0.5 min-w-0 pr-12">
+<span class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">«What happens when 12 strangers gather in an antique salon in Moscow?»</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-mono">+35% Retention · Mystery / Diaspora Story</span>
+</div>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[9px] font-mono">SWAP</span>
+</div>
+</div>
+</div>
+<!-- Editable Interactive Script Editor with Sentiment Markup -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">edit_note</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Bilingual Voice Script</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>
+<span>Markup Legend:</span>
+<span class="text-secondary font-mono">Culture</span>
+<span class="text-surface-variant">/</span>
+<span class="text-tertiary font-mono">Slang</span>
+<span class="text-surface-variant">/</span>
+<span class="text-primary font-mono">CTA</span>
+</div>
+</div>
+<!-- Highlighted Editable Script Container -->
+<div class="relative flex flex-col rounded-lg bg-surface-container-low p-space-sm">
+<div class="min-h-[110px] p-space-xs font-body-sm text-body-sm text-on-surface leading-relaxed focus:outline-none focus:ring-1 focus:ring-primary rounded" contenteditable="true" spellcheck="false">
+            «Գիտեի՞ք արդյոք, որ <span class="bg-secondary/20 text-secondary px-1 py-0.5 rounded font-medium">Երևանի սրճարանային վեճերը</span> ունեն ավելի քան 100 տարվա պատմություն: Այստեղ խոսքը ոչ թե ձանձրալի կանոնների մասին է, այլ նրա, թե ինչպես են մարդիկ <span class="bg-tertiary/20 text-tertiary px-1 py-0.5 rounded font-medium">իրականում շփվում</span> քաղաքի սրտում: Միացիր մեզ այս շաբաթ օրը. <span class="bg-primary-container text-on-primary-container px-1 py-0.5 rounded font-semibold">գրանցվիր հղումով bio-ում</span> և դարձիր Վերնատան հերթական հանդիպման մասնակիցը:»
+          </div>
+<!-- Script Telemetry Bar -->
+<div class="flex flex-wrap items-center justify-between pt-space-sm mt-space-xs bg-surface-container-high/40 px-space-xs py-1 rounded">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant font-mono">
+<span class="text-on-surface font-semibold">84 words</span>
+<span>·</span>
+<span class="text-tertiary">34 sec spoken</span>
+<span>·</span>
+<span class="text-secondary">148 wpm</span>
+</div>
+<span class="font-label-sm text-[10px] uppercase tracking-wider text-secondary font-mono">Natural conversational pace</span>
+</div>
+</div>
+</div>
+<!-- HeyGen & Voice Synthesizer Controls -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">record_voice_over</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Synthesizer &amp; Persona Rig</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">HeyGen v2 API</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm mt-1">
+<!-- Digital Persona Dropdown -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-[11px] text-on-surface-variant font-medium">Digital Human Persona</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm py-space-xs px-space-sm rounded-lg pr-8 focus:outline-none focus:ring-1 focus:ring-primary">
+<option selected="">Anna (Literary Curator)</option>
+<option>Gevorg (Casual Yerevan Native)</option>
+<option>Lilit (Modern Tech Strategist)</option>
+<option>Aram (Vintage Archival Historian)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Timbre & Dialect -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-[11px] text-on-surface-variant font-medium">Timbre &amp; Dialect Pitch</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm py-space-xs px-space-sm rounded-lg pr-8 focus:outline-none focus:ring-1 focus:ring-primary">
+<option selected="">Deep Baritone · Eastern Armenian</option>
+<option>Warm Alto · Literary Yerevan</option>
+<option>Energetic Tenor · Diaspora Blend</option>
+<option>Documentary Soft · Bilingual Russian</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Micro Modulation Sliders -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-xs">
+<div class="flex flex-col gap-1 bg-surface-container-low p-space-xs rounded">
+<div class="flex justify-between font-label-sm text-[10px]">
+<span class="text-on-surface-variant">Emotion Expressiveness</span>
+<span class="text-secondary font-mono">0.82</span>
+</div>
+<input class="w-full accent-primary h-1 bg-surface-container rounded cursor-pointer" max="1" min="0" step="0.05" type="range" value="0.82"/>
+</div>
+<div class="flex flex-col gap-1 bg-surface-container-low p-space-xs rounded">
+<div class="flex justify-between font-label-sm text-[10px]">
+<span class="text-on-surface-variant">Cadence Stability</span>
+<span class="text-tertiary font-mono">0.94</span>
+</div>
+<input class="w-full accent-tertiary h-1 bg-surface-container rounded cursor-pointer" max="1" min="0" step="0.05" type="range" value="0.94"/>
+</div>
+</div>
+</div>
+<!-- Action Footer: HITL Decisions & Omni-Publishing Trigger -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex flex-col gap-space-md">
+<!-- Secondary HITL Actions -->
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="flex items-center justify-center gap-1 py-space-xs px-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface-variant font-body-sm text-[11px] font-medium transition-all" type="button">
+<span class="material-symbols-outlined text-[15px] text-tertiary">sync</span>
+<span>Re-roll Slide</span>
+</button>
+<button class="flex items-center justify-center gap-1 py-space-xs px-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface-variant font-body-sm text-[11px] font-medium transition-all" type="button">
+<span class="material-symbols-outlined text-[15px] text-secondary">subtitles</span>
+<span>Edit Subtitles</span>
+</button>
+<button class="flex items-center justify-center gap-1 py-space-xs px-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface-variant font-body-sm text-[11px] font-medium transition-all" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">science</span>
+<span>A/B Variant</span>
+</button>
+</div>
+<!-- High-Impact Glowing Primary CTA -->
+<div class="flex flex-col gap-space-xs">
+<button class="w-full flex items-center justify-center gap-space-sm py-space-md px-space-lg rounded-xl bg-primary-container hover:bg-primary text-on-primary font-headline-md text-headline-md font-bold shadow-[0_0_24px_rgba(222,115,60,0.40)] hover:shadow-[0_0_32px_rgba(222,115,60,0.60)] transition-all transform active:scale-[0.99]" id="approveBtn" onclick="triggerApproveFlow()" type="button">
+<span class="material-symbols-outlined text-[24px]">send</span>
+<span>Approve &amp; Schedule Post</span>
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+</button>
+<!-- Omnichannel Destination Indicator Tags -->
+<div class="flex items-center justify-between px-space-xs pt-1 text-on-surface-variant">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant font-medium">Publishing Matrix:</span>
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-1 font-label-sm text-[11px] text-on-surface">
+<span class="h-2 w-2 rounded-full bg-secondary"></span>
+                Instagram Reels
+              </span>
+<span class="flex items-center gap-1 font-label-sm text-[11px] text-on-surface">
+<span class="h-2 w-2 rounded-full bg-secondary"></span>
+                TikTok Global
+              </span>
+<span class="flex items-center gap-1 font-label-sm text-[11px] text-on-surface">
+<span class="h-2 w-2 rounded-full bg-secondary"></span>
+                YouTube Shorts
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchPreviewMode(mode) {
+    const tabVideo = document.getElementById('tabVideo');
+    const tabCarousel = document.getElementById('tabCarousel');
+    
+    if (mode === 'video') {
+      tabVideo.className = "flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary-container font-body-sm text-body-sm font-semibold transition-all shadow-[0_0_12px_rgba(222,115,60,0.25)]";
+      tabCarousel.className = "flex items-center gap-space-xs px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-body-sm text-body-sm font-medium";
+    } else {
+      tabCarousel.className = "flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary-container font-body-sm text-body-sm font-semibold transition-all shadow-[0_0_12px_rgba(222,115,60,0.25)]";
+      tabVideo.className = "flex items-center gap-space-xs px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-body-sm text-body-sm font-medium";
+    }
+  }
+
+  function selectHook(element) {
+    const parent = element.parentElement;
+    const cards = parent.querySelectorAll('div[onclick]');
+    
+    cards.forEach(card => {
+      card.className = "p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface cursor-pointer transition-all flex items-start gap-space-sm relative group";
+      const icon = card.querySelector('.material-symbols-outlined');
+      if (icon) {
+        icon.textContent = "radio_button_unchecked";
+        icon.className = "material-symbols-outlined text-surface-bright text-[18px] shrink-0 mt-0.5 group-hover:text-on-surface-variant";
+      }
+      const tag = card.querySelector('span.absolute');
+      if (tag) {
+        tag.className = "absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[9px] font-mono";
+        tag.textContent = "SWAP";
+      }
+    });
+
+    element.className = "p-space-sm rounded-lg bg-surface-container-high text-on-surface cursor-pointer ring-1 ring-primary transition-all flex items-start gap-space-sm relative group";
+    const activeIcon = element.querySelector('.material-symbols-outlined');
+    if (activeIcon) {
+      activeIcon.textContent = "check_circle";
+      activeIcon.className = "material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5";
+    }
+    const activeTag = element.querySelector('span.absolute');
+    if (activeTag) {
+      activeTag.className = "absolute top-2 right-2 px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-[9px] font-bold";
+      activeTag.textContent = "ACTIVE";
+    }
+  }
+
+  function triggerApproveFlow() {
+    const btn = document.getElementById('approveBtn');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[22px] animate-spin">sync</span><span>Dispatched to Omni-Cluster...</span>';
+    btn.classList.remove('bg-primary-container', 'hover:bg-primary');
+    btn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[22px]">check_circle</span><span>Scheduled for 19:30 GMT+4 · Live on 3 Networks</span>';
+      btn.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+      btn.classList.add('bg-surface-container-highest', 'text-secondary');
+    }, 1200);
+  }
+
+  // Basic Play/Pause micro-interaction
+  const playBtn = document.getElementById('playPauseBtn');
+  if (playBtn) {
+    playBtn.addEventListener('click', function() {
+      const icon = this.querySelector('.material-symbols-outlined');
+      if (icon.textContent === 'pause') {
+        icon.textContent = 'play_arrow';
+      } else {
+        icon.textContent = 'pause';
+      }
+    });
+  }
+</script></main></div></body></html>

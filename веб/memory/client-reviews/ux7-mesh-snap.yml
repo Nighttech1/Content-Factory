@@ -1,0 +1,18 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary "Главная навигация" [ref=f1e3]:
+      - generic [ref=f1e11]:
+        - generic [ref=f1e12]: VERN·ATUN
+        - generic [ref=f1e13]: Content Factory
+      - navigation [ref=f1e15]:
+        - generic [ref=f1e16]
+      - generic [ref=f1e78]:
+        - paragraph [ref=f1e79]: Роль QA (локально)
+        - generic [ref=f1e80]
+      - button "Изменить ширину боковой панели" [ref=f1e83]
+    - main [ref=f1e85]:
+      - generic [ref=f1e86]:
+        - heading "Команда выпуска" [level=1] [ref=f1e87]
+        - generic [ref=f1e89]
+  - button "Open Next.js Dev Tools" [ref=f1e250] [cursor=pointer]
+  - alert [ref=f1e254]

@@ -1,0 +1,4 @@
+﻿Vendored copy for Aedifica.Core.
+Upstream: https://github.com/ibelick/ui-skills (skills/fixing-motion-performance)
+Do not treat CSS/Tailwind/Framer Motion examples as executable in this Flutter repo.
+Canonical product tokens: DESIGN.md at repo root.

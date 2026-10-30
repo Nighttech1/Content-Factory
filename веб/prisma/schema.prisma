@@ -1,0 +1,167 @@
+// Content Factory — canonical schema (ARCHITECTURE §6)
+// Provider is postgresql only. Localhost without DATABASE_URL uses
+// lib/db analytics-repository JSON fallback (not a second Prisma provider).
+// Sprint 8: Draft / Board / ScheduleSlot / DesignSlot (additive SoT).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String         @id @default(cuid())
+  email         String         @unique
+  name          String
+  role          Role           @default(ADMIN)
+  contentJobs   ContentJob[]
+  drafts        Draft[]
+  boards        Board[]
+  scheduleSlots ScheduleSlot[]
+  designSlots   DesignSlot[]
+  createdAt     DateTime       @default(now())
+}
+
+enum Role {
+  OWNER
+  ADMIN
+}
+
+model ContentJob {
+  id             String          @id @default(cuid())
+  moduleId       String
+  topic          String
+  status         JobStatus       @default(QUEUED)
+  hookScore      Int?
+  rawScript      Json
+  generatedMedia Json?
+  feedbackLogs   Json?
+  scheduledFor   DateTime?
+  publishedAt    DateTime?
+  userId         String
+  user           User            @relation(fields: [userId], references: [id])
+  analytics      PostAnalytics[]
+  drafts         Draft[]
+  scheduleSlots  ScheduleSlot[]
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+
+  @@index([userId])
+  @@index([status])
+  @@index([moduleId])
+  @@index([createdAt])
+}
+
+enum JobStatus {
+  QUEUED
+  RESEARCHING
+  GENERATING_COPY
+  RENDERING_MEDIA
+  AWAITING_APPROVAL
+  READY_TO_PUBLISH
+  PUBLISHED
+  FAILED
+}
+
+/// Metric snapshots for live Analyst (DEV_PLAN 5.5).
+model PostAnalytics {
+  id             String      @id @default(cuid())
+  postId         String
+  platform       String
+  views          Int         @default(0)
+  saves          Int         @default(0)
+  shares         Int         @default(0)
+  retentionCurve Json?
+  capturedAt     DateTime    @default(now())
+  contentJobId   String?
+  contentJob     ContentJob? @relation(fields: [contentJobId], references: [id])
+
+  @@index([postId, platform, capturedAt])
+}
+
+/// Carousel draft SoT (DEV_PLAN 8.1 / C-s8-01). Client may supply id on import.
+model Draft {
+  id            String         @id
+  userId        String
+  user          User           @relation(fields: [userId], references: [id])
+  moduleId      String         @default("carousel-engine")
+  status        DraftStatus    @default(UNPUBLISHED)
+  title         String
+  slides        Json
+  scenario      String?
+  payload       Json?
+  contentJobId  String?
+  contentJob    ContentJob?    @relation(fields: [contentJobId], references: [id])
+  scheduleSlots ScheduleSlot[]
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  @@index([userId, moduleId])
+  @@index([userId, updatedAt])
+}
+
+enum DraftStatus {
+  UNPUBLISHED
+  SCHEDULED
+}
+
+/// Reference board SoT — slideUrls are storage URL/path refs (not base64).
+model Board {
+  id        String   @id
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  title     String
+  slideUrls Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+}
+
+/// Calendar slot ↔ Draft / ContentJob. HITL → DRAFT|SCHEDULED only (no social publish).
+model ScheduleSlot {
+  id           String             @id @default(cuid())
+  userId       String
+  user         User               @relation(fields: [userId], references: [id])
+  moduleId     String
+  startsAt     DateTime
+  postId       String
+  draftId      String?
+  draft        Draft?             @relation(fields: [draftId], references: [id])
+  contentJobId String?
+  contentJob   ContentJob?        @relation(fields: [contentJobId], references: [id])
+  platformId   String?
+  status       ScheduleSlotStatus @default(DRAFT)
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+
+  @@unique([userId, postId])
+  @@index([userId, startsAt])
+}
+
+enum ScheduleSlotStatus {
+  DRAFT
+  SCHEDULED
+}
+
+/// Design library slot ≤10 per user (API enforce). Active → draw path.
+model DesignSlot {
+  id         String   @id
+  userId     String
+  user       User     @relation(fields: [userId], references: [id])
+  label      String
+  markdown   String
+  html       String?
+  previewUrl String?
+  brandbook  Json?
+  isActive   Boolean  @default(false)
+  sortOrder  Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([userId])
+  @@index([userId, isActive])
+}

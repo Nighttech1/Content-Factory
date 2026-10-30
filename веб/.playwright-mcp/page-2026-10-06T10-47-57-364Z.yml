@@ -1,0 +1,316 @@
+- generic [ref=f13e1]:
+  - generic [ref=f13e2]:
+    - complementary "Главная навигация" [ref=f13e3]:
+      - generic [ref=f13e11]:
+        - generic [ref=f13e12]: VERN·ATUN
+        - generic [ref=f13e13]: Content Factory
+      - generic [ref=f13e14]:
+        - paragraph [ref=f13e15]: Пайплайны и ноды
+        - navigation [ref=f13e16]:
+          - generic [ref=f13e17]:
+            - generic [ref=f13e18]:
+              - link "Студия" [ref=f13e19] [cursor=pointer]:
+                - /url: /studio
+              - button "Свернуть модули Студии" [expanded] [ref=f13e272]
+            - list [ref=f13e273]:
+              - listitem [ref=f13e274]:
+                - link "Карусели Instagram (4:5)" [ref=f13e275] [cursor=pointer]:
+                  - /url: /studio/carousel-engine
+              - listitem [ref=f13e276]:
+                - link "Полезные картинки & Инфографика" [ref=f13e277] [cursor=pointer]:
+                  - /url: /studio/aesthetic-graphics
+              - listitem [ref=f13e278]:
+                - link "Мульт-Reels (2D сторителлинг)" [ref=f13e279] [cursor=pointer]:
+                  - /url: /studio/cartoon-reels
+              - listitem [ref=f13e280]:
+                - link "HeyGen AI-Аватар Reels" [ref=f13e281] [cursor=pointer]:
+                  - /url: /studio/heygen-reels
+              - listitem [ref=f13e282]:
+                - link "Рилс" [ref=f13e283] [cursor=pointer]:
+                  - /url: /studio/custom-reels
+              - listitem [ref=f13e284]:
+                - link "Нарезки с видео в рилсы" [ref=f13e285] [cursor=pointer]:
+                  - /url: /studio/custom-clips-to-reels
+              - listitem [ref=f13e286]:
+                - link "Информационное видео" [ref=f13e287] [cursor=pointer]:
+                  - /url: /studio/custom-info-video
+          - link "Холст" [ref=f13e375] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [active] [ref=f13e39] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f13e44] [cursor=pointer]:
+            - /url: /analytics
+          - link "Бренд-кит" [ref=f13e52] [cursor=pointer]:
+            - /url: /brand-kit
+          - link "Настройки" [ref=f13e61] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f13e66]:
+        - paragraph [ref=f13e67]: Բարև · Vernatun
+        - generic [ref=f13e68]:
+          - paragraph [ref=f13e69]: Роль QA (локально)
+          - generic [ref=f13e70]:
+            - button "OWNER" [ref=f13e71]
+            - button "ADMIN" [ref=f13e72]
+    - main [ref=f13e74]:
+      - generic [ref=f13e382]:
+        - generic [ref=f13e383]:
+          - paragraph [ref=f13e384]: // Расписание
+          - heading "Расписание" [level=1] [ref=f13e385]
+          - paragraph [ref=f13e386]: Календарь слотов для готовых постов. Назначение даты — только очередь в студии, без публикации в соцсети.
+        - generic [ref=f13e387]:
+          - generic [ref=f13e388]:
+            - generic [ref=f13e389]:
+              - heading "октябрь 2026 г." [level=2] [ref=f13e390]
+              - generic [ref=f13e391]:
+                - button "Предыдущий месяц" [ref=f13e392]
+                - button "Сегодня" [ref=f13e395]
+                - button "Следующий месяц" [ref=f13e396]
+            - generic [ref=f13e399]:
+              - button "Чт 1" [ref=f13e400]:
+                - generic [ref=f13e401]: Чт
+                - generic [ref=f13e402]: "1"
+              - button "Пт 2" [ref=f13e404]:
+                - generic [ref=f13e405]: Пт
+                - generic [ref=f13e406]: "2"
+              - button "Сб 3" [ref=f13e408]:
+                - generic [ref=f13e409]: Сб
+                - generic [ref=f13e410]: "3"
+              - button "Вс 4" [ref=f13e412]:
+                - generic [ref=f13e413]: Вс
+                - generic [ref=f13e414]: "4"
+              - button "Пн 5" [ref=f13e416]:
+                - generic [ref=f13e417]: Пн
+                - generic [ref=f13e418]: "5"
+              - button "Вт 6" [ref=f13e420]:
+                - generic [ref=f13e421]: Вт
+                - generic [ref=f13e422]: "6"
+              - button "Ср 7" [ref=f13e424]:
+                - generic [ref=f13e425]: Ср
+                - generic [ref=f13e426]: "7"
+              - button "Чт 8" [ref=f13e428]:
+                - generic [ref=f13e429]: Чт
+                - generic [ref=f13e430]: "8"
+              - button "Пт 9" [ref=f13e432]:
+                - generic [ref=f13e433]: Пт
+                - generic [ref=f13e434]: "9"
+              - button "Сб 10" [ref=f13e436]:
+                - generic [ref=f13e437]: Сб
+                - generic [ref=f13e438]: "10"
+              - button "Вс 11" [ref=f13e440]:
+                - generic [ref=f13e441]: Вс
+                - generic [ref=f13e442]: "11"
+              - button "Пн 12" [ref=f13e444]:
+                - generic [ref=f13e445]: Пн
+                - generic [ref=f13e446]: "12"
+              - button "Вт 13" [ref=f13e448]:
+                - generic [ref=f13e449]: Вт
+                - generic [ref=f13e450]: "13"
+              - button "Ср 14" [ref=f13e452]:
+                - generic [ref=f13e453]: Ср
+                - generic [ref=f13e454]: "14"
+              - button "Чт 15" [ref=f13e456]:
+                - generic [ref=f13e457]: Чт
+                - generic [ref=f13e458]: "15"
+              - button "Пт 16" [ref=f13e460]:
+                - generic [ref=f13e461]: Пт
+                - generic [ref=f13e462]: "16"
+              - button "Сб 17" [ref=f13e464]:
+                - generic [ref=f13e465]: Сб
+                - generic [ref=f13e466]: "17"
+              - button "Вс 18" [ref=f13e468]:
+                - generic [ref=f13e469]: Вс
+                - generic [ref=f13e470]: "18"
+              - button "Пн 19" [ref=f13e472]:
+                - generic [ref=f13e473]: Пн
+                - generic [ref=f13e474]: "19"
+              - button "Вт 20" [ref=f13e476]:
+                - generic [ref=f13e477]: Вт
+                - generic [ref=f13e478]: "20"
+              - button "Ср 21" [ref=f13e480]:
+                - generic [ref=f13e481]: Ср
+                - generic [ref=f13e482]: "21"
+              - button "Чт 22" [ref=f13e484]:
+                - generic [ref=f13e485]: Чт
+                - generic [ref=f13e486]: "22"
+              - button "Пт 23" [ref=f13e488]:
+                - generic [ref=f13e489]: Пт
+                - generic [ref=f13e490]: "23"
+              - button "Сб 24" [ref=f13e492]:
+                - generic [ref=f13e493]: Сб
+                - generic [ref=f13e494]: "24"
+              - button "Вс 25" [ref=f13e496]:
+                - generic [ref=f13e497]: Вс
+                - generic [ref=f13e498]: "25"
+              - button "Пн 26" [ref=f13e500]:
+                - generic [ref=f13e501]: Пн
+                - generic [ref=f13e502]: "26"
+              - button "Вт 27" [ref=f13e504]:
+                - generic [ref=f13e505]: Вт
+                - generic [ref=f13e506]: "27"
+              - button "Ср 28" [ref=f13e508]:
+                - generic [ref=f13e509]: Ср
+                - generic [ref=f13e510]: "28"
+              - button "Чт 29" [ref=f13e512]:
+                - generic [ref=f13e513]: Чт
+                - generic [ref=f13e514]: "29"
+              - button "Пт 30" [ref=f13e516]:
+                - generic [ref=f13e517]: Пт
+                - generic [ref=f13e518]: "30"
+              - button "Сб 31" [ref=f13e520]:
+                - generic [ref=f13e521]: Сб
+                - generic [ref=f13e522]: "31"
+            - generic [ref=f13e524]:
+              - paragraph [ref=f13e525]: Пн
+              - paragraph [ref=f13e526]: Вт
+              - paragraph [ref=f13e527]: Ср
+              - paragraph [ref=f13e528]: Чт
+              - paragraph [ref=f13e529]: Пт
+              - paragraph [ref=f13e530]: Сб
+              - paragraph [ref=f13e531]: Вс
+              - generic [ref=f13e532]:
+                - button "28" [ref=f13e533]
+                - button "29" [ref=f13e534]
+                - button "30" [ref=f13e535]
+                - button "1" [ref=f13e536]
+                - button "2" [ref=f13e537]
+                - button "3" [ref=f13e538]
+                - button "4" [ref=f13e539]
+                - button "5" [ref=f13e540]
+                - button "6" [ref=f13e541]
+                - button "7" [ref=f13e542]
+                - button "8" [ref=f13e543]
+                - button "9" [ref=f13e544]
+                - button "10" [ref=f13e545]
+                - button "11" [ref=f13e546]
+                - button "12" [ref=f13e547]
+                - button "13" [ref=f13e548]
+                - button "14" [ref=f13e549]
+                - button "15" [ref=f13e550]
+                - button "16" [ref=f13e552]
+                - button "17" [ref=f13e553]
+                - button "18" [ref=f13e554]
+                - button "19" [ref=f13e555]
+                - button "20" [ref=f13e556]
+                - button "21" [ref=f13e557]
+                - button "22" [ref=f13e558]
+                - button "23" [ref=f13e559]
+                - button "24" [ref=f13e560]
+                - button "25" [ref=f13e561]
+                - button "26" [ref=f13e562]
+                - button "27" [ref=f13e563]
+                - button "28" [ref=f13e564]
+                - button "29" [ref=f13e565]
+                - button "30" [ref=f13e566]
+                - button "31" [ref=f13e567]
+                - button "1" [ref=f13e568]
+                - button "2" [ref=f13e569]
+                - button "3" [ref=f13e570]
+                - button "4" [ref=f13e571]
+                - button "5" [ref=f13e572]
+                - button "6" [ref=f13e573]
+                - button "7" [ref=f13e574]
+                - button "8" [ref=f13e575]
+            - generic [ref=f13e576]:
+              - generic [ref=f13e577]:
+                - generic [ref=f13e578]: Время слота
+                - textbox "Время слота" [ref=f13e579]: 12:00
+              - paragraph [ref=f13e580]: Сначала выберите готовый пост справа, затем день в календаре.
+          - complementary [ref=f13e581]:
+            - generic [ref=f13e582]:
+              - paragraph [ref=f13e583]: Очередь
+              - heading "Модули студии" [level=2] [ref=f13e584]
+            - generic [ref=f13e585]:
+              - generic [ref=f13e586]:
+                - generic [ref=f13e587]:
+                  - generic [ref=f13e588]: 4:5 · PNG
+                  - heading "Карусели Instagram (4:5)" [level=3] [ref=f13e589]
+                - list [ref=f13e590]:
+                  - listitem [ref=f13e591]:
+                    - button "Armenian Club — 5 tips for guest night 15 октября 2026 г. в 12:00" [ref=f13e592]:
+                      - generic [ref=f13e593]: Armenian Club — 5 tips for guest night
+                      - generic [ref=f13e594]: 15 октября 2026 г. в 12:00
+                    - button "Снять слот" [ref=f13e596]
+                  - listitem [ref=f13e597]:
+                    - 'button "Carousel: menu highlights this week Слот не назначен" [ref=f13e598]':
+                      - generic [ref=f13e599]: "Carousel: menu highlights this week"
+                      - generic [ref=f13e600]: Слот не назначен
+                  - listitem [ref=f13e602]:
+                    - button "Behind the bar — signature cocktails Слот не назначен" [ref=f13e603]:
+                      - generic [ref=f13e604]: Behind the bar — signature cocktails
+                      - generic [ref=f13e605]: Слот не назначен
+                  - listitem [ref=f13e607]:
+                    - 'button "Wine flight: three Armenian reds Слот не назначен" [ref=f13e608]':
+                      - generic [ref=f13e609]: "Wine flight: three Armenian reds"
+                      - generic [ref=f13e610]: Слот не назначен
+                  - listitem [ref=f13e612]:
+                    - button "Table styling for Saturday dinner Слот не назначен" [ref=f13e613]:
+                      - generic [ref=f13e614]: Table styling for Saturday dinner
+                      - generic [ref=f13e615]: Слот не назначен
+              - generic [ref=f13e617]:
+                - generic [ref=f13e618]:
+                  - generic [ref=f13e619]: Bilingual
+                  - heading "Полезные картинки & Инфографика" [level=3] [ref=f13e620]
+                - list [ref=f13e621]:
+                  - listitem [ref=f13e622]:
+                    - button "Bilingual poster — Armenian Heritage Month Слот не назначен" [ref=f13e623]:
+                      - generic [ref=f13e624]: Bilingual poster — Armenian Heritage Month
+                      - generic [ref=f13e625]: Слот не назначен
+                  - listitem [ref=f13e627]:
+                    - 'button "Quote card: hospitality values Слот не назначен" [ref=f13e628]':
+                      - generic [ref=f13e629]: "Quote card: hospitality values"
+                      - generic [ref=f13e630]: Слот не назначен
+                  - listitem [ref=f13e632]:
+                    - 'button "Infographic: tasting flight map Слот не назначен" [ref=f13e633]':
+                      - generic [ref=f13e634]: "Infographic: tasting flight map"
+                      - generic [ref=f13e635]: Слот не назначен
+              - generic [ref=f13e637]:
+                - generic [ref=f13e638]:
+                  - generic [ref=f13e639]: 9:16 · 2D
+                  - heading "Мульт-Reels (2D сторителлинг)" [level=3] [ref=f13e640]
+                - list [ref=f13e641]:
+                  - listitem [ref=f13e642]:
+                    - 'button "2D reel: guest arrives at the club Слот не назначен" [ref=f13e643]':
+                      - generic [ref=f13e644]: "2D reel: guest arrives at the club"
+                      - generic [ref=f13e645]: Слот не назначен
+                  - listitem [ref=f13e647]:
+                    - button "Cartoon chef vs spicy challenge Слот не назначен" [ref=f13e648]:
+                      - generic [ref=f13e649]: Cartoon chef vs spicy challenge
+                      - generic [ref=f13e650]: Слот не назначен
+                  - listitem [ref=f13e652]:
+                    - button "Mascot dance for weekend promo Слот не назначен" [ref=f13e653]:
+                      - generic [ref=f13e654]: Mascot dance for weekend promo
+                      - generic [ref=f13e655]: Слот не назначен
+              - generic [ref=f13e657]:
+                - generic [ref=f13e658]:
+                  - generic [ref=f13e659]: HeyGen
+                  - heading "HeyGen AI-Аватар Reels" [level=3] [ref=f13e660]
+                - list [ref=f13e661]:
+                  - listitem [ref=f13e662]:
+                    - 'button "Avatar host: tonight’s lineup Слот не назначен" [ref=f13e663]':
+                      - generic [ref=f13e664]: "Avatar host: tonight’s lineup"
+                      - generic [ref=f13e665]: Слот не назначен
+                  - listitem [ref=f13e667]:
+                    - 'button "HeyGen tip: reserving a table Слот не назначен" [ref=f13e668]':
+                      - generic [ref=f13e669]: "HeyGen tip: reserving a table"
+                      - generic [ref=f13e670]: Слот не назначен
+                  - listitem [ref=f13e672]:
+                    - button "Brand story — why we cook Armenian Слот не назначен" [ref=f13e673]:
+                      - generic [ref=f13e674]: Brand story — why we cook Armenian
+                      - generic [ref=f13e675]: Слот не назначен
+              - generic [ref=f13e677]:
+                - generic [ref=f13e678]:
+                  - generic [ref=f13e679]: 9:16
+                  - heading "Рилс" [level=3] [ref=f13e680]
+                - paragraph [ref=f13e681]: Нет готовых постов
+              - generic [ref=f13e682]:
+                - generic [ref=f13e683]:
+                  - generic [ref=f13e684]: 9:16
+                  - heading "Нарезки с видео в рилсы" [level=3] [ref=f13e685]
+                - paragraph [ref=f13e686]: Нет готовых постов
+              - generic [ref=f13e687]:
+                - generic [ref=f13e688]:
+                  - generic [ref=f13e689]: 9:16
+                  - heading "Информационное видео" [level=3] [ref=f13e690]
+                - paragraph [ref=f13e691]: Нет готовых постов
+  - button "Open Next.js Dev Tools" [ref=f13e267] [cursor=pointer]
+  - alert [ref=f13e271]

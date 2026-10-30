@@ -1,0 +1,76 @@
+- generic [ref=e2]:
+  - complementary "Главная навигация" [ref=e3]:
+    - generic [ref=e11]:
+      - generic [ref=e12]: VERN·ATUN
+      - generic [ref=e13]: Content Factory
+    - navigation [ref=e15]:
+      - generic [ref=e16]:
+        - link "Студия" [ref=e19] [cursor=pointer]:
+          - /url: /studio
+        - link "Команда выпуска" [ref=e32] [cursor=pointer]:
+          - /url: /admin/mesh
+        - link "Расписание" [ref=e45] [cursor=pointer]:
+          - /url: /schedule
+        - link "Аналитика" [ref=e55] [cursor=pointer]:
+          - /url: /analytics
+        - link "Настройки" [ref=e68] [cursor=pointer]:
+          - /url: /settings
+    - generic [ref=e78]:
+      - paragraph [ref=e79]: Роль QA (локально)
+      - generic [ref=e80]:
+        - button "OWNER" [ref=e81]
+        - button "ADMIN" [ref=e82]
+    - button "Изменить ширину боковой панели" [ref=e83]
+  - main [ref=e85]:
+    - generic [ref=e86]:
+      - generic [ref=e88]:
+        - heading "Студия" [level=1] [ref=e89]
+        - paragraph [ref=e90]: Здесь выбираете канал выпуска — карусели, рилсы, статьи на сайт или в Telegram — и открываете рабочее место с лентой «Наши» и «Конкуренты».
+      - region [ref=e91]:
+        - heading "Каналы рендера" [level=2] [ref=e93]
+        - generic [ref=e94]:
+          - link "Карусели Instagram (4:5) Редакционная карусель 1080×1350 с типографикой и CTA-слайдом. Открыть →" [ref=e96] [cursor=pointer]:
+            - /url: /studio/carousel-engine
+            - generic [ref=e98]:
+              - generic [ref=e99]:
+                - generic [ref=e100]: Карусели Instagram (4:5)
+                - paragraph [ref=e101]: Редакционная карусель 1080×1350 с типографикой и CTA-слайдом.
+              - generic [ref=e102]: Открыть →
+          - link "Полезные картинки & Инфографика Читы, таблицы и quote-тайлы для Telegram и LinkedIn. Открыть →" [ref=e104] [cursor=pointer]:
+            - /url: /studio/aesthetic-graphics
+            - generic [ref=e106]:
+              - generic [ref=e107]:
+                - generic [ref=e108]: Полезные картинки & Инфографика
+                - paragraph [ref=e109]: Читы, таблицы и quote-тайлы для Telegram и LinkedIn.
+              - generic [ref=e110]: Открыть →
+          - link "Мульт-Reels (2D сторителлинг) Иллюстрированный сторителлинг 9:16 с субтитрами. Открыть →" [ref=e112] [cursor=pointer]:
+            - /url: /studio/cartoon-reels
+            - generic [ref=e114]:
+              - generic [ref=e115]:
+                - generic [ref=e116]: Мульт-Reels (2D сторителлинг)
+                - paragraph [ref=e117]: Иллюстрированный сторителлинг 9:16 с субтитрами.
+              - generic [ref=e118]: Открыть →
+          - link "HeyGen AI-Аватар Reels Говорящий аватар с синхроном губ и бренд-палитрой. Открыть →" [ref=e120] [cursor=pointer]:
+            - /url: /studio/heygen-reels
+            - generic [ref=e122]:
+              - generic [ref=e123]:
+                - generic [ref=e124]: HeyGen AI-Аватар Reels
+                - paragraph [ref=e125]: Говорящий аватар с синхроном губ и бренд-палитрой.
+              - generic [ref=e126]: Открыть →
+          - 'link "Статьи на сайт Длинные редакционные материалы для сайта Vernatun: структура, SEO-заголовок и CTA. Открыть →" [ref=e128] [cursor=pointer]':
+            - /url: /studio/site-articles
+            - generic [ref=e130]:
+              - generic [ref=e131]:
+                - generic [ref=e132]: Статьи на сайт
+                - paragraph [ref=e133]: "Длинные редакционные материалы для сайта Vernatun: структура, SEO-заголовок и CTA."
+              - generic [ref=e134]: Открыть →
+          - 'link "Статьи в TG Посты и лонгриды для Telegram-канала: хук, абзацы и кнопка перехода. Открыть →" [ref=e136] [cursor=pointer]':
+            - /url: /studio/tg-articles
+            - generic [ref=e138]:
+              - generic [ref=e139]:
+                - generic [ref=e140]: Статьи в TG
+                - paragraph [ref=e141]: "Посты и лонгриды для Telegram-канала: хук, абзацы и кнопка перехода."
+              - generic [ref=e142]: Открыть →
+          - button "+ [+ Добавить модуль]" [ref=e144]:
+            - generic [ref=e145]: +
+            - generic [ref=e146]: "[+ Добавить модуль]"

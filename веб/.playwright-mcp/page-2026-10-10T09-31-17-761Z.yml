@@ -1,0 +1,30 @@
+- generic [active] [ref=f14e1]:
+  - generic [ref=f14e2]:
+    - complementary "Главная навигация" [ref=f14e3]:
+      - generic [ref=f14e6]:
+        - generic [ref=f14e7]: VERNATUN
+        - generic [ref=f14e8]: ARMENIAN CLUB
+      - navigation [ref=f14e10]:
+        - generic [ref=f14e11]:
+          - link "Студия" [ref=f14e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f14e27] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f14e40] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f14e50] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f14e63] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f14e73]:
+        - paragraph [ref=f14e74]: Роль QA (локально)
+        - generic [ref=f14e75]:
+          - button "OWNER" [ref=f14e76]
+          - button "ADMIN" [ref=f14e77]
+      - button "Изменить ширину боковой панели" [ref=f14e78]
+    - main [ref=f14e80]:
+      - generic [ref=f14e81]:
+        - heading "Команда выпуска" [level=1] [ref=f14e82]
+        - generic "Загрузка команды выпуска" [ref=f14e83]
+  - button "Open Next.js Dev Tools" [ref=f14e89] [cursor=pointer]
+  - alert [ref=f14e93]

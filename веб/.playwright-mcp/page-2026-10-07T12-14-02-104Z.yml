@@ -1,0 +1,85 @@
+- generic [ref=f2e2]:
+  - complementary "Главная навигация" [ref=f2e3]:
+    - generic [ref=f2e11]:
+      - generic [ref=f2e12]: VERN·ATUN
+      - generic [ref=f2e13]: Content Factory
+    - generic [ref=f2e14]:
+      - paragraph [ref=f2e15]: Пайплайны и ноды
+      - navigation [ref=f2e16]:
+        - generic [ref=f2e17]:
+          - link "Студия" [ref=f2e20] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f2e33] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f2e46] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f2e56] [cursor=pointer]:
+            - /url: /analytics
+          - link "Настройки" [ref=f2e69] [cursor=pointer]:
+            - /url: /settings
+    - generic [ref=f2e78]:
+      - paragraph [ref=f2e79]: Բարև · Vernatun
+      - generic [ref=f2e80]:
+        - paragraph [ref=f2e81]: Роль QA (локально)
+        - generic [ref=f2e82]:
+          - button "OWNER" [ref=f2e83]
+          - button "ADMIN" [ref=f2e84]
+    - button "Изменить ширину боковой панели" [ref=f2e85]
+  - main [ref=f2e87]:
+    - generic [ref=f2e88]:
+      - generic [ref=f2e90]:
+        - heading "Карусели Instagram (4:5)" [level=1] [ref=f2e91]
+        - button "Создать карусель" [ref=f2e92]
+      - generic [ref=f2e95]:
+        - generic [ref=f2e97]:
+          - generic [ref=f2e98]:
+            - heading "Наши" [level=2] [ref=f2e100]
+            - generic [ref=f2e101]: "0"
+          - tablist "Вкладки нашей ленты" [ref=f2e103]:
+            - tab "Опубликовано" [selected] [ref=f2e104]
+            - tab "Черновики" [ref=f2e106]
+        - generic [ref=f2e112]:
+          - generic [ref=f2e113]:
+            - heading "Конкуренты" [level=2] [ref=f2e115]
+            - generic [ref=f2e116]: "0"
+          - searchbox "Поиск каруселей конкурентов" [ref=f2e122]
+    - button "Закрыть панель генерации"
+    - complementary [aria-hidden] [ref=f2e127]:
+      - generic [ref=f2e128]:
+        - generic [ref=f2e129]:
+          - paragraph [ref=f2e130]: Журнал генерации
+          - heading [level=2] [ref=f2e131]: Конвейер агентов
+        - button [ref=f2e132]: Закрыть
+      - generic [ref=f2e133]:
+        - generic [ref=f2e134]:
+          - generic [ref=f2e135]: Прогресс
+          - generic [ref=f2e136]: 0%
+        - progressbar [ref=f2e137]
+      - list [ref=f2e138]:
+        - listitem [ref=f2e139]:
+          - generic [ref=f2e142]:
+            - generic [ref=f2e143]: Исследователь
+            - generic [ref=f2e144]: Ожидание...
+        - listitem [ref=f2e145]:
+          - generic [ref=f2e148]:
+            - generic [ref=f2e149]: Автор хуков
+            - generic [ref=f2e150]: Ожидание...
+        - listitem [ref=f2e151]:
+          - generic [ref=f2e154]:
+            - generic [ref=f2e155]: Сценарист
+            - generic [ref=f2e156]: Ожидание...
+        - listitem [ref=f2e157]:
+          - generic [ref=f2e160]:
+            - generic [ref=f2e161]: Дизайнер
+            - generic [ref=f2e162]: Ожидание...
+        - listitem [ref=f2e163]:
+          - generic [ref=f2e166]:
+            - generic [ref=f2e167]: Конвейер
+            - generic [ref=f2e168]: Ожидание...
+      - generic [ref=f2e169]:
+        - generic [ref=f2e170]:
+          - textbox [disabled] [ref=f2e171]:
+            - /placeholder: Заметка активному шагу…
+          - button [disabled] [ref=f2e172]
+          - button [disabled] [ref=f2e177]: →
+        - paragraph [ref=f2e178]: Голос недоступен — введите правку текстом

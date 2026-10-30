@@ -1,0 +1,86 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Главная навигация" [ref=e3]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: VERNATUN
+        - generic [ref=e8]: ARMENIAN CLUB
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - link "Студия" [ref=e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=e37] [cursor=pointer]:
+            - /url: /settings
+          - link "Директор" [ref=e48] [cursor=pointer]:
+            - /url: /marketing
+      - generic [ref=e58]:
+        - paragraph [ref=e59]: Роль QA (локально)
+        - generic [ref=e60]:
+          - button "OWNER" [ref=e61]
+          - button "ADMIN" [ref=e62]
+      - button "Изменить ширину боковой панели" [ref=e63]
+    - main [ref=e65]:
+      - generic [ref=e301]:
+        - 'heading "Команда выпуска: Карусели Instagram" [level=1] [ref=e302]'
+        - generic [ref=e303]:
+          - generic [ref=e305]:
+            - 'heading "Команда выпуска: Карусели Instagram" [level=1] [ref=e306]'
+            - paragraph [ref=e307]: Пайплайн создания и публикации контента. Кликните на любого агента для детальной настройки.
+          - generic [ref=e310]:
+            - img [aria-hidden]:
+              - generic:
+                - generic: запрос
+                - generic: разбор
+                - generic: сценарий
+                - generic: медиа
+                - generic: фильтр
+                - generic: выводы
+            - generic [ref=e311]:
+              - generic [ref=e312]:
+                - generic [ref=e320]:
+                  - text: Клиент
+                  - heading "User" [level=3] [ref=e321]
+                  - paragraph [ref=e322]: Тема и бриф — только в чате Create / Studio
+                - button "Декомпозиция Разборщик Структура и тезисы" [ref=e323]:
+                  - generic [ref=e336]:
+                    - text: Декомпозиция
+                    - heading "Разборщик" [level=3] [ref=e337]
+                    - generic [ref=e338]: Структура и тезисы
+                - button "Слайды & Текст Копирайтер каруселей Хуки и сценарий" [ref=e339]:
+                  - generic [ref=e351]:
+                    - text: Слайды & Текст
+                    - heading "Копирайтер каруселей" [level=3] [ref=e352]
+                    - generic [ref=e353]: Хуки и сценарий
+                - 'button "Визуал & Сетка Дизайнер карусели Промпты и стили 📄 design.md База Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления." [ref=e354]':
+                  - generic [ref=e370]:
+                    - text: Визуал & Сетка
+                    - heading "Дизайнер карусели" [level=3] [ref=e371]
+                    - generic [ref=e372]: Промпты и стили
+                  - generic [ref=e377]:
+                    - generic [ref=e378]:
+                      - generic [ref=e379]: 📄 design.md
+                      - generic [ref=e380]: База
+                    - paragraph [ref=e381]: "Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления."
+                - button "Выгрузка & Пост Публицист Дистрибуция каналов" [ref=e382]:
+                  - generic [ref=e395]:
+                    - text: Выгрузка & Пост
+                    - heading "Публицист" [level=3] [ref=e396]
+                    - generic [ref=e397]: Дистрибуция каналов
+              - generic [ref=e398]:
+                - button "Мониторинг Скаут Тренды & Референсы" [ref=e399]:
+                  - generic [ref=e412]:
+                    - text: Мониторинг
+                    - heading "Скаут" [level=3] [ref=e413]
+                    - generic [ref=e414]: Тренды & Референсы
+                - button "Метрики Аналитик ERR & Дочитывания" [ref=e415]:
+                  - generic [ref=e425]:
+                    - text: Метрики
+                    - heading "Аналитик" [level=3] [ref=e426]
+                    - generic [ref=e427]: ERR & Дочитывания
+                - button "Обучение Тренер RLHF & Обновление баз" [ref=e428]:
+                  - generic [ref=e443]:
+                    - text: Обучение
+                    - heading "Тренер" [level=3] [ref=e444]
+                    - generic [ref=e445]: RLHF & Обновление баз
+  - alert [ref=e255]

@@ -1,0 +1,230 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Главная навигация" [ref=e3]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: VERNATUN
+        - generic [ref=e8]: ARMENIAN CLUB
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - link "Студия" [ref=e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=e37] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=e47]:
+        - paragraph [ref=e48]: Роль QA (локально)
+        - generic [ref=e49]:
+          - button "OWNER" [ref=e50]
+          - button "ADMIN" [ref=e51]
+      - button "Изменить ширину боковой панели" [ref=e52]
+    - main [ref=e54]:
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - heading "Настройки" [level=1] [ref=e57]
+          - paragraph [ref=e58]: Дизайн, площадки, расписание и рилсы. Параметры разведки и модели агентов — в «Команда выпуска».
+        - complementary [ref=e59]:
+          - navigation [ref=e60]:
+            - generic [ref=e61]: Навигация
+            - list [ref=e62]:
+              - listitem [ref=e63]:
+                - button "Дизайн" [ref=e64]
+              - listitem [ref=e70]:
+                - button "Площадки" [ref=e71]
+              - listitem [ref=e76]:
+                - button "Расписание" [ref=e77]
+              - listitem [ref=e81]:
+                - button "Рилсы" [ref=e82]
+        - region [ref=e86]:
+          - generic [ref=e87]:
+            - heading "Дизайн" [level=2] [ref=e88]
+            - paragraph [ref=e89]: Библиотека до 10 слотов · превью 3×4:5 (cover/body/cta) · Quick Theme Tuner. Активный пресет читает Дизайнер в Create.
+          - generic [ref=e117]:
+            - region [ref=e119]:
+              - generic [ref=e121]:
+                - group [ref=e122]:
+                  - button "cover ՍՈՒՐՃԻ ԴՈԿՏՐԻՆԱ Кофе на бегу — капитуляция body 1. Ռիտուալը паузы в реальности ✕ пауза cta Готов замедлиться? CTA VERNATUN Изменить surface Изменить accent Изменить text Tuner DESIGN.md Активный Dark Notes · dark_notes" [ref=e123] [cursor=pointer]:
+                    - button "cover ՍՈՒՐՃԻ ԴՈԿՏՐԻՆԱ Кофе на бегу — капитуляция body 1. Ռիտուալը паузы в реальности ✕ пауза cta Готов замедлиться? CTA VERNATUN" [ref=e124]:
+                      - generic [ref=e126]:
+                        - generic [ref=e127]: cover
+                        - generic [ref=e128]: ՍՈՒՐՃԻ ԴՈԿՏՐԻՆԱ
+                        - paragraph [ref=e129]: Кофе на бегу — капитуляция
+                      - generic [ref=e141]:
+                        - generic [ref=e142]: body
+                        - generic [ref=e143]: 1. Ռիտուալը
+                        - paragraph [ref=e144]: паузы в реальности
+                        - generic [ref=e145]:
+                          - generic [ref=e146]: ✕
+                          - generic [ref=e147]: пауза
+                      - generic [ref=e151]:
+                        - generic [ref=e152]: cta
+                        - paragraph [ref=e153]: Готов замедлиться?
+                        - generic [ref=e154]: CTA
+                        - generic [ref=e155]: VERNATUN
+                    - generic [ref=e160]:
+                      - button "Изменить surface" [ref=e161]
+                      - button "Изменить accent" [ref=e162]
+                      - button "Изменить text" [ref=e163]
+                      - button "Tuner" [ref=e164]
+                    - button "DESIGN.md" [ref=e165]
+                    - generic [ref=e166]: Активный
+                    - paragraph [ref=e167]: Dark Notes · dark_notes
+                - group [ref=e168]:
+                  - button [ref=e169] [cursor=pointer]:
+                    - button "cover 01 / hook Coffee Doctrine Кофе на бегу — капитуляция body 02 / paradox Pulse · 00:45 Telemetry bento 00:45 ritual 00:03 rush cta Сохранить ритуал CTA VERNATUN" [ref=e170]:
+                      - generic [ref=e172]:
+                        - generic [ref=e173]: cover
+                        - generic [ref=e174]: 01 / hook
+                        - generic [ref=e175]: Coffee Doctrine
+                        - paragraph [ref=e176]: Кофе на бегу — капитуляция
+                      - generic [ref=e182]:
+                        - generic [ref=e183]: body
+                        - generic [ref=e184]: 02 / paradox
+                        - generic [ref=e185]: Pulse · 00:45
+                        - paragraph [ref=e186]: Telemetry bento
+                        - generic [ref=e187]:
+                          - generic [ref=e188]:
+                            - generic [ref=e189]: 00:45
+                            - generic [ref=e190]: ritual
+                          - generic [ref=e191]:
+                            - generic [ref=e192]: 00:03
+                            - generic [ref=e193]: rush
+                      - generic [ref=e195]:
+                        - generic [ref=e196]: cta
+                        - paragraph [ref=e197]: Сохранить ритуал
+                        - generic [ref=e198]: CTA
+                        - generic [ref=e199]: VERNATUN
+                    - generic [ref=e204]:
+                      - button "Изменить surface" [ref=e205]
+                      - button "Изменить accent" [ref=e206]
+                      - button "Изменить text" [ref=e207]
+                      - button "Tuner" [ref=e208]
+                    - button "DESIGN.md" [ref=e209]
+                    - paragraph [ref=e210]: Bento Glass · bento_glass
+              - button "Предыдущий дизайн" [disabled]
+              - button "Следующий дизайн" [ref=e211]
+            - paragraph [ref=e213]: "Слотов: 2/10 · активный: Dark Notes"
+            - generic [ref=e214]:
+              - generic [ref=e215] [cursor=pointer]:
+                - generic [ref=e216]: Загрузить DESIGN.md
+                - button "Загрузить DESIGN.md" [ref=e220]
+              - generic [ref=e221] [cursor=pointer]:
+                - generic [ref=e222]: Создать из референса
+                - button "Создать из референса" [ref=e226]
+              - generic [ref=e227] [cursor=pointer]:
+                - generic [ref=e228]: Добавить новый дизайн
+                - button "Добавить новый дизайн" [ref=e233]
+            - generic [ref=e274]:
+              - button "Закрыть тюнер" [ref=e275]
+              - dialog "Quick Theme Tuner" [ref=e276]:
+                - generic [ref=e277]:
+                  - generic [ref=e278]:
+                    - heading "Quick Theme Tuner" [level=3] [ref=e279]
+                    - paragraph [ref=e280]: Dark Notes — live CSS vars на 3×4:5
+                  - button "Закрыть" [ref=e281]
+                - generic [ref=e285]:
+                  - generic [ref=e287]:
+                    - generic [ref=e288]: cover
+                    - generic [ref=e289]: ՍՈՒՐՃԻ ԴՈԿՏՐԻՆԱ
+                    - paragraph [ref=e290]: Кофе на бегу — капитуляция
+                  - generic [ref=e302]:
+                    - generic [ref=e303]: body
+                    - generic [ref=e304]: 1. Ռիտուալը
+                    - paragraph [ref=e305]: паузы в реальности
+                    - generic [ref=e306]:
+                      - generic [ref=e307]: ✕
+                      - generic [ref=e308]: пауза
+                  - generic [ref=e312]:
+                    - generic [ref=e313]: cta
+                    - paragraph [ref=e314]: Готов замедлиться?
+                    - generic [ref=e315]: CTA
+                    - generic [ref=e316]: VERNATUN
+                - generic [ref=e321]:
+                  - generic [ref=e322] [cursor=pointer]:
+                    - generic [ref=e323]: Accent
+                    - textbox "Accent" [ref=e324]: "#f5d742"
+                  - generic [ref=e325] [cursor=pointer]:
+                    - generic [ref=e326]: Background
+                    - textbox "Background" [ref=e327]: "#121212"
+                  - generic [ref=e328] [cursor=pointer]:
+                    - generic [ref=e329]: Surface
+                    - textbox "Surface" [ref=e330]: "#1a1a1a"
+                  - generic [ref=e331] [cursor=pointer]:
+                    - generic [ref=e332]: Text
+                    - textbox "Text" [ref=e333]: "#ffffff"
+                - generic [ref=e334]:
+                  - generic [ref=e335]:
+                    - text: Accent
+                    - textbox "Accent" [active] [ref=e336]: "#F5D742"
+                  - generic [ref=e337]:
+                    - text: Background
+                    - textbox "Background" [ref=e338]: "#121212"
+                  - generic [ref=e339]:
+                    - text: Surface
+                    - textbox "Surface" [ref=e340]: "#1A1A1A"
+                  - generic [ref=e341]:
+                    - text: Text
+                    - textbox "Text" [ref=e342]: "#FFFFFF"
+                - generic [ref=e343]:
+                  - button "Отмена" [ref=e344]
+                  - button "Сохранить" [ref=e345]
+          - button "Превью design.md" [ref=e92]
+        - region [ref=e96]:
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - heading "Площадки публикации" [level=2] [ref=e99]
+              - paragraph [ref=e100]: Ключи API только в браузере. Зелёный блок — публицист может публиковать; красный — подключение не подтверждено.
+            - button "Добавить площадку" [ref=e101]
+          - list [ref=e234]:
+            - listitem [ref=e235]:
+              - generic [ref=e236]:
+                - paragraph [ref=e237]: Instagram · основной
+                - paragraph [ref=e238]: Instagram · нет связи · без ключа
+              - generic [ref=e239]:
+                - button "Проверить подключение" [ref=e240]
+                - button "Изменить" [ref=e241]
+                - button "Удалить" [ref=e242]
+            - listitem [ref=e243]:
+              - generic [ref=e244]:
+                - paragraph [ref=e245]: Telegram · канал
+                - paragraph [ref=e246]: Telegram · нет связи · без ключа
+              - generic [ref=e247]:
+                - button "Проверить подключение" [ref=e248]
+                - button "Изменить" [ref=e249]
+                - button "Удалить" [ref=e250]
+            - listitem [ref=e251]:
+              - generic [ref=e252]:
+                - paragraph [ref=e253]: YouTube
+                - paragraph [ref=e254]: YouTube · нет связи · без ключа
+              - generic [ref=e255]:
+                - button "Проверить подключение" [ref=e256]
+                - button "Изменить" [ref=e257]
+                - button "Удалить" [ref=e258]
+            - listitem [ref=e259]:
+              - generic [ref=e260]:
+                - paragraph [ref=e261]: Сайт Vernatun
+                - paragraph [ref=e262]: Сайт · нет связи · без ключа
+              - generic [ref=e263]:
+                - button "Проверить подключение" [ref=e264]
+                - button "Изменить" [ref=e265]
+                - button "Удалить" [ref=e266]
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - heading "Расписание" [level=2] [ref=e106]
+              - paragraph [ref=e107]: Правила автозаполнения календаря публициста. Готовый контент встаёт в слоты по правилам; ручной перенос в календаре важнее правила.
+            - button "Создать правило" [ref=e108]
+          - list [ref=e109]:
+            - listitem [ref=e110]: Правил пока нет.
+        - region [ref=e111]:
+          - generic [ref=e112]:
+            - heading "Рилсы" [level=2] [ref=e113]
+            - paragraph [ref=e114]: Сколько карточек в dual-feed (Наши и Конкуренты).
+          - generic [ref=e267]:
+            - generic [ref=e268]:
+              - paragraph [ref=e269]: Отображение рилсов (количество на странице)
+              - paragraph [ref=e270]: От 4 до 48. По умолчанию 12.
+            - generic [ref=e271]:
+              - generic [ref=e272]: На странице
+              - spinbutton "Отображение рилсов (количество на странице)" [ref=e273]: "12"
+  - alert [ref=e116]

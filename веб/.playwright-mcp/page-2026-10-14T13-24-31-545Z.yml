@@ -1,0 +1,300 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Главная навигация" [ref=e3]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: VERNATUN
+        - generic [ref=e8]: ARMENIAN CLUB
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - link "Студия" [ref=e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=e37] [cursor=pointer]:
+            - /url: /settings
+          - link "Директор" [ref=e48] [cursor=pointer]:
+            - /url: /marketing
+      - generic [ref=e58]:
+        - paragraph [ref=e59]: Роль QA (локально)
+        - generic [ref=e60]:
+          - button "OWNER" [ref=e61]
+          - button "ADMIN" [ref=e62]
+      - button "Изменить ширину боковой панели" [ref=e63]
+    - main [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e68]:
+          - heading "Карусели Instagram" [level=1] [ref=e69]
+          - generic [ref=e70]:
+            - link "Команда выпуска" [ref=e71] [cursor=pointer]:
+              - /url: /studio/carousel-engine/mesh
+            - link "Аналитика" [ref=e72] [cursor=pointer]:
+              - /url: /studio/carousel-engine/analytics
+            - button "Создать карусель" [ref=e73]
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - generic [ref=e79]:
+                - heading "Наши" [level=2] [ref=e80]
+                - generic [ref=e82]: "12"
+              - generic [ref=e84]:
+                - tablist "Вкладки нашей ленты" [ref=e85]:
+                  - tab "Опубликовано" [selected] [ref=e86]
+                  - tab "Черновики" [ref=e88]
+                - generic [ref=e89]:
+                  - button "Сортировка" [ref=e91]
+                  - button "Фильтр" [ref=e96]
+                  - searchbox "Поиск наших постов" [ref=e103]
+            - generic [ref=e104]:
+              - article [ref=e105]:
+                - generic [ref=e106]:
+                  - button "Предыдущий слайд" [ref=e108]
+                  - button "Следующий слайд" [ref=e111]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 19K
+                      - listitem "Лайки":
+                        - generic: 1.2K
+                      - listitem "Комментарии":
+                        - generic: "48"
+                      - listitem "Репосты":
+                        - generic: "53"
+                      - listitem "Сохранения":
+                        - generic: "82"
+              - article [ref=e114]:
+                - generic [ref=e115]:
+                  - button "Предыдущий слайд" [ref=e117]
+                  - button "Следующий слайд" [ref=e120]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 14K
+                      - listitem "Лайки":
+                        - generic: "890"
+                      - listitem "Комментарии":
+                        - generic: "31"
+                      - listitem "Репосты":
+                        - generic: "37"
+                      - listitem "Сохранения":
+                        - generic: "58"
+              - article [ref=e123]:
+                - generic [ref=e124]:
+                  - button "Предыдущий слайд" [ref=e126]
+                  - button "Следующий слайд" [ref=e129]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 28K
+                      - listitem "Лайки":
+                        - generic: 2.1K
+                      - listitem "Комментарии":
+                        - generic: "72"
+                      - listitem "Репосты":
+                        - generic: "88"
+                      - listitem "Сохранения":
+                        - generic: "137"
+              - article [ref=e132]:
+                - generic [ref=e133]:
+                  - button "Предыдущий слайд" [ref=e135]
+                  - button "Следующий слайд" [ref=e138]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 22K
+                      - listitem "Лайки":
+                        - generic: 1.6K
+                      - listitem "Комментарии":
+                        - generic: "44"
+                      - listitem "Репосты":
+                        - generic: "63"
+                      - listitem "Сохранения":
+                        - generic: "100"
+              - article [ref=e141]:
+                - generic [ref=e142]:
+                  - button "Предыдущий слайд" [ref=e144]
+                  - button "Следующий слайд" [ref=e147]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 15K
+                      - listitem "Лайки":
+                        - generic: "980"
+                      - listitem "Комментарии":
+                        - generic: "29"
+                      - listitem "Репосты":
+                        - generic: "40"
+                      - listitem "Сохранения":
+                        - generic: "63"
+              - article [ref=e150]:
+                - generic [ref=e151]:
+                  - button "Предыдущий слайд" [ref=e153]
+                  - button "Следующий слайд" [ref=e156]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 27K
+                      - listitem "Лайки":
+                        - generic: 1.8K
+                      - listitem "Комментарии":
+                        - generic: "61"
+                      - listitem "Репосты":
+                        - generic: "75"
+                      - listitem "Сохранения":
+                        - generic: "116"
+              - article [ref=e159]:
+                - generic [ref=e160]:
+                  - button "Предыдущий слайд" [ref=e162]
+                  - button "Следующий слайд" [ref=e165]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 41K
+                      - listitem "Лайки":
+                        - generic: 2.3K
+                      - listitem "Комментарии":
+                        - generic: "88"
+                      - listitem "Репосты":
+                        - generic: "100"
+                      - listitem "Сохранения":
+                        - generic: "154"
+              - article [ref=e168]:
+                - generic [ref=e169]:
+                  - button "Предыдущий слайд" [ref=e171]
+                  - button "Следующий слайд" [ref=e174]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 19K
+                      - listitem "Лайки":
+                        - generic: 1.1K
+                      - listitem "Комментарии":
+                        - generic: "35"
+                      - listitem "Репосты":
+                        - generic: "46"
+                      - listitem "Сохранения":
+                        - generic: "72"
+              - article [ref=e177]:
+                - generic [ref=e178]:
+                  - button "Предыдущий слайд" [ref=e180]
+                  - button "Следующий слайд" [ref=e183]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 12K
+                      - listitem "Лайки":
+                        - generic: "760"
+                      - listitem "Комментарии":
+                        - generic: "22"
+                      - listitem "Репосты":
+                        - generic: "31"
+                      - listitem "Сохранения":
+                        - generic: "49"
+              - article [ref=e186]:
+                - generic [ref=e187]:
+                  - button "Предыдущий слайд" [ref=e189]
+                  - button "Следующий слайд" [ref=e192]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 34K
+                      - listitem "Лайки":
+                        - generic: 1.9K
+                      - listitem "Комментарии":
+                        - generic: "70"
+                      - listitem "Репосты":
+                        - generic: "80"
+                      - listitem "Сохранения":
+                        - generic: "124"
+              - article [ref=e195]:
+                - generic [ref=e196]:
+                  - button "Предыдущий слайд" [ref=e198]
+                  - button "Следующий слайд" [ref=e201]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 20K
+                      - listitem "Лайки":
+                        - generic: 1.3K
+                      - listitem "Комментарии":
+                        - generic: "41"
+                      - listitem "Репосты":
+                        - generic: "55"
+                      - listitem "Сохранения":
+                        - generic: "87"
+              - article [ref=e204]:
+                - generic [ref=e205]:
+                  - button "Предыдущий слайд" [ref=e207]
+                  - button "Следующий слайд" [ref=e210]
+                  - generic:
+                    - list:
+                      - listitem "Просмотры":
+                        - generic: 15K
+                      - listitem "Лайки":
+                        - generic: "920"
+                      - listitem "Комментарии":
+                        - generic: "27"
+                      - listitem "Репосты":
+                        - generic: "38"
+                      - listitem "Сохранения":
+                        - generic: "59"
+          - generic [ref=e213]:
+            - generic [ref=e214]:
+              - generic [ref=e215]:
+                - heading "Конкуренты" [level=2] [ref=e216]
+                - generic [ref=e217]: "0"
+              - generic [ref=e219]:
+                - tablist "Конкуренты или доски" [ref=e220]:
+                  - tab "Конкуренты" [ref=e221]
+                  - tab "Доски" [active] [selected] [ref=e224]
+                - generic [ref=e231]:
+                  - button "Сортировка" [ref=e233]
+                  - button "Фильтр" [ref=e238]
+                  - button "Загрузить" [ref=e293]
+                  - button "Доски" [ref=e298]
+                  - searchbox "Поиск по доскам" [ref=e307]
+            - paragraph [ref=e316]: Выберите доску или нажмите «Загрузить» / «Создать доску»
+      - button "Закрыть панель генерации"
+      - complementary [aria-hidden] [ref=e249]:
+        - generic [ref=e250]:
+          - generic [ref=e251]:
+            - paragraph [ref=e252]: Журнал генерации
+            - heading [level=2] [ref=e253]: Конвейер агентов
+          - button [ref=e254]: Закрыть
+        - generic [ref=e255]:
+          - generic [ref=e256]:
+            - generic [ref=e257]: Прогресс
+            - generic [ref=e258]: 0%
+          - progressbar [ref=e259]
+        - list [ref=e260]:
+          - listitem [ref=e261]:
+            - generic [ref=e264]:
+              - generic [ref=e265]: Исследователь
+              - generic [ref=e266]: Ожидание...
+          - listitem [ref=e267]:
+            - generic [ref=e270]:
+              - generic [ref=e271]: Автор хуков
+              - generic [ref=e272]: Ожидание...
+          - listitem [ref=e273]:
+            - generic [ref=e276]:
+              - generic [ref=e277]: Сценарист
+              - generic [ref=e278]: Ожидание...
+          - listitem [ref=e279]:
+            - generic [ref=e282]:
+              - generic [ref=e283]: Дизайнер
+              - generic [ref=e284]: Ожидание...
+          - listitem [ref=e285]:
+            - generic [ref=e288]:
+              - generic [ref=e289]: Конвейер
+              - generic [ref=e290]: Ожидание...
+        - generic [ref=e291]:
+          - generic:
+            - textbox [disabled]:
+              - /placeholder: Заметка активному шагу…
+            - generic:
+              - generic:
+                - generic:
+                  - button [disabled]:
+                    - generic: Record voice
+                  - button [disabled]:
+                    - generic: Send message
+  - alert [ref=e248]

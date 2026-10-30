@@ -1,0 +1,88 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - complementary "Главная навигация" [ref=f3e3]:
+      - generic [ref=f3e6]:
+        - generic [ref=f3e7]: VERNATUN
+        - generic [ref=f3e8]: ARMENIAN CLUB
+      - navigation [ref=f3e10]:
+        - generic [ref=f3e11]:
+          - link "Студия" [ref=f3e14] [cursor=pointer]:
+            - /url: /studio
+          - link "Расписание" [ref=f3e27] [cursor=pointer]:
+            - /url: /schedule
+          - link "Настройки" [ref=f3e37] [cursor=pointer]:
+            - /url: /settings
+      - generic [ref=f3e47]:
+        - paragraph [ref=f3e48]: Роль QA (локально)
+        - generic [ref=f3e49]:
+          - button "OWNER" [ref=f3e50]
+          - button "ADMIN" [ref=f3e51]
+      - button "Изменить ширину боковой панели" [ref=f3e52]
+    - main [ref=f3e54]:
+      - generic [ref=f3e55]:
+        - 'heading "Команда выпуска: Карусели Instagram (4:5)" [level=1] [ref=f3e56]'
+        - generic [ref=f3e59]:
+          - generic [ref=f3e61]:
+            - 'heading "Команда выпуска: Карусели Instagram (4:5)" [level=1] [ref=f3e62]'
+            - paragraph [ref=f3e63]: Пайплайн создания и публикации контента. Кликните на любого агента для детальной настройки.
+          - generic [ref=f3e66]:
+            - img [aria-hidden]:
+              - generic:
+                - generic: запрос
+                - generic: разбор
+                - generic: сценарий
+                - generic: медиа
+                - generic: фильтр
+                - generic: выводы
+            - generic [ref=f3e67]:
+              - generic [ref=f3e68]:
+                - generic [ref=f3e69]:
+                  - generic [ref=f3e76]:
+                    - generic [ref=f3e77]:
+                      - generic [ref=f3e78]: Боевой бриф
+                      - generic [ref=f3e79]: Клиент
+                    - heading "Пользователь" [level=3] [ref=f3e80]
+                  - textbox "Боевой бриф модуля…" [ref=f3e82]: "МИССИЯ: карусель Instagram 4:5 (5 слайдов) про гостевой вечер клуба. АУДИТОРИЯ: 25–45, премиальный отдых, авторские напитки. ТОН: тёплый клубный; джаз/атмосфера — как пример, не клише. СТРУКТУРА: обложка-хук → ценность ×3 → CTA «забронировать стол». ЗАПРЕТЫ: нет стоковых фраз «лучший вечер в городе», нет чужих логотипов. CTA: бронь стола / запись в сторис."
+                - button "Декомпозиция Разборщик Структура и тезисы" [ref=f3e83]:
+                  - generic [ref=f3e96]:
+                    - text: Декомпозиция
+                    - heading "Разборщик" [level=3] [ref=f3e97]
+                    - generic [ref=f3e98]: Структура и тезисы
+                - button "Слайды & Текст Копирайтер каруселей Хуки и сценарий" [ref=f3e99]:
+                  - generic [ref=f3e111]:
+                    - text: Слайды & Текст
+                    - heading "Копирайтер каруселей" [level=3] [ref=f3e112]
+                    - generic [ref=f3e113]: Хуки и сценарий
+                - 'button "Визуал & Сетка Дизайнер карусели Промпты и стили 📄 design.md База Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления." [ref=f3e114]':
+                  - generic [ref=f3e130]:
+                    - text: Визуал & Сетка
+                    - heading "Дизайнер карусели" [level=3] [ref=f3e131]
+                    - generic [ref=f3e132]: Промпты и стили
+                  - generic [ref=f3e137]:
+                    - generic [ref=f3e138]:
+                      - generic [ref=f3e139]: 📄 design.md
+                      - generic [ref=f3e140]: База
+                    - paragraph [ref=f3e141]: "Опирается на файл: цветовая палитра клуба, шрифты и гайдлайн оформления."
+                - button "Выгрузка & Пост Публицист Дистрибуция каналов" [ref=f3e142]:
+                  - generic [ref=f3e155]:
+                    - text: Выгрузка & Пост
+                    - heading "Публицист" [level=3] [ref=f3e156]
+                    - generic [ref=f3e157]: Дистрибуция каналов
+              - generic [ref=f3e158]:
+                - button "Мониторинг Скаут Тренды & Референсы" [ref=f3e159]:
+                  - generic [ref=f3e172]:
+                    - text: Мониторинг
+                    - heading "Скаут" [level=3] [ref=f3e173]
+                    - generic [ref=f3e174]: Тренды & Референсы
+                - button "Метрики Аналитик ERR & Дочитывания" [ref=f3e175]:
+                  - generic [ref=f3e185]:
+                    - text: Метрики
+                    - heading "Аналитик" [level=3] [ref=f3e186]
+                    - generic [ref=f3e187]: ERR & Дочитывания
+                - button "Обучение Тренер RLHF & Обновление баз" [ref=f3e188]:
+                  - generic [ref=f3e203]:
+                    - text: Обучение
+                    - heading "Тренер" [level=3] [ref=f3e204]
+                    - generic [ref=f3e205]: RLHF & Обновление баз
+  - button "Open Next.js Dev Tools" [ref=f3e211] [cursor=pointer]
+  - alert [ref=f3e58]

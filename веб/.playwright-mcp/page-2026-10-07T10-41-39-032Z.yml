@@ -1,0 +1,36 @@
+- generic [ref=f1e2]:
+  - complementary "Главная навигация" [ref=f1e3]:
+    - generic [ref=f1e11]:
+      - generic [ref=f1e12]: VERN·ATUN
+      - generic [ref=f1e13]: Content Factory
+    - generic [ref=f1e14]:
+      - paragraph [ref=f1e15]: Пайплайны и ноды
+      - navigation [ref=f1e16]:
+        - generic [ref=f1e17]:
+          - link "Студия" [ref=f1e20] [cursor=pointer]:
+            - /url: /studio
+          - link "Команда выпуска" [ref=f1e33] [cursor=pointer]:
+            - /url: /admin/mesh
+          - link "Расписание" [ref=f1e46] [cursor=pointer]:
+            - /url: /schedule
+          - link "Аналитика" [ref=f1e56] [cursor=pointer]:
+            - /url: /analytics
+          - link "Бренд-кит" [ref=f1e69] [cursor=pointer]:
+            - /url: /brand-kit
+          - link "Настройки" [ref=f1e83] [cursor=pointer]:
+            - /url: /settings
+    - generic [ref=f1e92]:
+      - paragraph [ref=f1e93]: Բարև · Vernatun
+      - generic [ref=f1e94]:
+        - paragraph [ref=f1e95]: Роль QA (локально)
+        - generic [ref=f1e96]:
+          - button "OWNER" [ref=f1e97]
+          - button "ADMIN" [ref=f1e98]
+    - button "Изменить ширину боковой панели" [ref=f1e99]
+  - main [ref=f1e101]:
+    - generic [ref=f1e102]:
+      - generic [ref=f1e103]:
+        - paragraph [ref=f1e104]: // Расписание
+        - heading "Расписание" [level=1] [ref=f1e105]
+        - paragraph [ref=f1e106]: Календарь слотов для готовых постов. Назначение даты — только очередь в студии, без публикации в соцсети.
+      - paragraph [ref=f1e107]: Загрузка…

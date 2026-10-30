@@ -1,0 +1,106 @@
+{
+  "mcpServers": {
+    "21st": {
+      "url": "https://21st.dev/api/mcp",
+      "headers": {
+        "x-api-key": "${API_KEY_21ST}"
+      }
+    },
+    "playwright": {
+      "command": "C:\\Windows\\System32\\cmd.exe",
+      "args": [
+        "/c",
+        "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs\\npx.cmd",
+        "-y",
+        "@playwright/mcp@latest",
+        "--headless",
+        "--isolated",
+        "--caps=vision",
+        "--viewport-size=1440x900"
+      ],
+      "env": {
+        "PATH": "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs;C:\\Windows\\System32;C:\\Windows"
+      }
+    },
+    "playwright-iphone": {
+      "command": "C:\\Windows\\System32\\cmd.exe",
+      "args": [
+        "/c",
+        "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs\\npx.cmd",
+        "-y",
+        "@playwright/mcp@latest",
+        "--headless",
+        "--isolated",
+        "--caps=vision",
+        "--device=iPhone 15"
+      ],
+      "env": {
+        "PATH": "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs;C:\\Windows\\System32;C:\\Windows"
+      }
+    },
+    "playwright-android": {
+      "command": "C:\\Windows\\System32\\cmd.exe",
+      "args": [
+        "/c",
+        "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs\\npx.cmd",
+        "-y",
+        "@playwright/mcp@latest",
+        "--headless",
+        "--isolated",
+        "--caps=vision",
+        "--device=Pixel 7"
+      ],
+      "env": {
+        "PATH": "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs;C:\\Windows\\System32;C:\\Windows"
+      }
+    },
+    "chrome-devtools": {
+      "command": "C:\\Windows\\System32\\cmd.exe",
+      "args": [
+        "/c",
+        "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs\\npx.cmd",
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ],
+      "env": {
+        "PATH": "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs;C:\\Windows\\System32;C:\\Windows"
+      }
+    },
+    "image-compare": {
+      "command": "C:\\Windows\\System32\\cmd.exe",
+      "args": [
+        "/c",
+        "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs\\npx.cmd",
+        "-y",
+        "mcp-image-compare-server"
+      ],
+      "env": {
+        "PATH": "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs;C:\\Windows\\System32;C:\\Windows"
+      }
+    },
+    "a11y": {
+      "command": "C:\\Windows\\System32\\cmd.exe",
+      "args": [
+        "/c",
+        "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs\\npx.cmd",
+        "-y",
+        "a11y-mcp-server"
+      ],
+      "env": {
+        "PATH": "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs;C:\\Windows\\System32;C:\\Windows"
+      }
+    },
+    "lighthouse": {
+      "command": "C:\\Windows\\System32\\cmd.exe",
+      "args": [
+        "/c",
+        "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs\\npx.cmd",
+        "-y",
+        "@danielsogl/lighthouse-mcp@latest"
+      ],
+      "env": {
+        "PATH": "C:\\Users\\alexk\\AppData\\Local\\Programs\\nodejs;C:\\Windows\\System32;C:\\Windows"
+      }
+    }
+  }
+}

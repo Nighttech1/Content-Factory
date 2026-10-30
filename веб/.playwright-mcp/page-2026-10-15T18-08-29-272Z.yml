@@ -1,0 +1,23 @@
+- generic [ref=f1e2]:
+  - complementary "Главная навигация" [ref=f1e3]:
+    - generic [ref=f1e6]:
+      - generic [ref=f1e7]: VERNATUN
+      - generic [ref=f1e8]: ARMENIAN CLUB
+    - navigation [ref=f1e10]:
+      - generic [ref=f1e11]:
+        - link "Студия" [ref=f1e14] [cursor=pointer]:
+          - /url: /studio
+        - link "Расписание" [ref=f1e27] [cursor=pointer]:
+          - /url: /schedule
+        - link "Настройки" [ref=f1e37] [cursor=pointer]:
+          - /url: /settings
+        - link "Директор" [ref=f1e48] [cursor=pointer]:
+          - /url: /marketing
+    - generic [ref=f1e58]:
+      - paragraph [ref=f1e59]: Роль QA (локально)
+      - generic [ref=f1e60]:
+        - button "OWNER" [ref=f1e61]
+        - button "ADMIN" [ref=f1e62]
+    - button "Изменить ширину боковой панели" [ref=f1e63]
+  - main [ref=f1e65]:
+    - generic "Загрузка раздела" [ref=f1e66]

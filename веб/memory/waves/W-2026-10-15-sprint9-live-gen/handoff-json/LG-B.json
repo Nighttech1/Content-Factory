@@ -1,0 +1,46 @@
+{
+  "contentType": "carousel",
+  "requested_slide_count": 3,
+  "idea": "Сила сообщества Vernatun — кинематограф",
+  "hook": "Один голос — *слабо*",
+  "tone": "vernatun",
+  "cta_type": 3,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Один голос — *слабо*",
+      "secondary_copy": "Вместе — клуб, который слышно",
+      "swipe_trigger": "META: drama hook — swipe for community proof",
+      "visual_prompt": "CINEMATIC full-bleed 4:5 scene: group of real people seated at a long dark club table, faces partially lit by dramatic warm orange rim light, shallow depth of field, steam and atmosphere like a sports-poster still — NOT a gym brand. Strong human presence IN the frame. FORBIDDEN: coffee line-icon plate, coffee-product UI tile, ritual clocks, to-go rush, paper sprint gauges, glass bento metrics. No logos. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, the word HTML, ESPRESSO, CTA, TIP, HOOK, stacked placeholder digits 1/2/CTA, UI chips, watermarks. Photoreal or clean graphic only. No purple.",
+      "alt_text": "Кино: люди за столом Vernatun"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "body_slide",
+      "primary_copy": "Здесь звучит *армянский*",
+      "secondary_copy": "Смех, споры, поддержка — живой круг",
+      "swipe_trigger": "META: after vibe, swipe for TG meets CTA",
+      "visual_prompt": "CINEMATIC mid-scene: close dramatic shot of people talking and laughing over shared bread and coffee — hands and faces in warm orange practical light, dark club interior, energy of togetherness. Metaphor of circle/community strong. FORBIDDEN: coffee icon plate, ritual clock tiles, to-go rush timers, telemetry charts, marble clutter. Photoreal people-in-scene only. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, the word HTML, ESPRESSO, CTA, TIP, HOOK, stacked placeholder digits 1/2/CTA, UI chips, watermarks. Photoreal or clean graphic only. No purple.",
+      "alt_text": "Кино mid: живой круг Vernatun"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta_slide",
+      "primary_copy": "Приходи в *круг*",
+      "secondary_copy": "Живые встречи — ссылка в TG в шапке",
+      "swipe_trigger": "META: soft end after community CTA",
+      "visual_prompt": "CINEMATIC CTA still: near-black corridor with glowing orange doorway into a warm room where silhouettes of people gather — invitation metaphor, drama light. Large empty upper third for overlay typography only (no painted letters). FORBIDDEN: coffee-product plate, clocks, gauges, line icons. No gym logo. ABSOLUTELY FORBIDDEN in image pixels: readable text, letters, acronyms, the word HTML, ESPRESSO, CTA, TIP, HOOK, stacked placeholder digits 1/2/CTA, UI chips, watermarks. Photoreal or clean graphic only. No purple.",
+      "alt_text": "CTA кино: приглашение в круг",
+      "cta_type": 3
+    }
+  ],
+  "caption": "В Vernatun сила — в круге. Ждём на живых встречах в TG 🧡",
+  "hashtags": [
+    "#Vernatun",
+    "#Сообщество",
+    "#АрмянскийКруг",
+    "#ЖивыеВстречи"
+  ],
+  "promptForDesigner": "REF-B cinematic_scene R3: people/metaphor IN frame, drama orange light, ZERO coffee-plate / baked HTML."
+}

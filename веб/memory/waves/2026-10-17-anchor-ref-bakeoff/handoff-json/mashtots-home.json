@@ -1,0 +1,49 @@
+{
+  "project": "vernatun",
+  "content_id": "golden-language-mashtotsian-home",
+  "contentType": "carousel",
+  "requested_slide_count": 3,
+  "idea": "Маштоц и алфавит как физический дом для детей диаспоры — буква не упражнение, а убежище памяти",
+  "hook": "Буква дышит?",
+  "tone": "vernatun",
+  "cta_type": 2,
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_variant": "cover",
+      "primary_copy": "Буква дышит?",
+      "secondary_copy": "",
+      "swipe_trigger": "META: paradox — может ли алфавит быть живым домом, а не учебником",
+      "visual_prompt": "dark_editorial charcoal wall, hand-drawn Armenian letter (Ա) outline in gold chalk, soft breath-like doodle lines radiating from center, warm amber side light, no purple glow, cinematic grain texture",
+      "alt_text": "Армянская буква Ա на меловой доске с дыханием света"
+    },
+    {
+      "slide_number": 2,
+      "layout_variant": "point",
+      "primary_copy": "Маштоц дал не слова — дал дом",
+      "secondary_copy": "Каждая буква — комната памяти. Для ребёнка в Берлине, Лос-Анджелесе, Москве. Когда город чужой — алфавит остаётся.",
+      "swipe_trigger": "META: emotional proof — конкретика: буква как убежище диаспоры, не романтика",
+      "visual_prompt": "dark_editorial bento-like grid of Armenian letters (Բ, Գ, Դ, Ե) in soft gold outline, each letter as a small room/chamber silhouette, charcoal depth, warm accent line crossing vertical cut to next slide, no stock typography",
+      "alt_text": "Сетка армянских букв как комнаты дома"
+    },
+    {
+      "slide_number": 3,
+      "layout_variant": "cta",
+      "primary_copy": "Хочешь ещё такого?",
+      "secondary_copy": "Подписывайся — разборы языка как дома, не как курса.",
+      "swipe_trigger": "META: soft end — subscribe CTA; stop here",
+      "visual_prompt": "dark_editorial gold CTA button solid, Armenian letter Ա watermark soft behind, Vernatun mark bottom-left, premium editorial feel not purple CTA pill, warm amber glow frame",
+      "alt_text": "CTA подписка на разборы языка",
+      "cta_type": 2
+    }
+  ],
+  "caption": "Маштоц дал не слова — дал дом. Для каждого ребёнка диаспоры буква остаётся. Vernatun.",
+  "hashtags": [
+    "#Vernatun",
+    "#АрмянскийЯзык",
+    "#Маштоц",
+    "#Диаспора",
+    "#Алфавит"
+  ],
+  "promptForDesigner": "dark_editorial: Armenian letters as rooms/chambers; gold accent + charcoal depth; HTML/CSS-first 3×4:5; ignore swipe_trigger text on-slide"
+}
