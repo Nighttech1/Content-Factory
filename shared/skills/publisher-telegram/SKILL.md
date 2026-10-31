@@ -27,6 +27,26 @@ curl -s "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
   --data-urlencode 'reply_markup={"inline_keyboard":[[{"text":"Записаться","url":"https://t.me/vernatunbot"}]]}'
 ```
 
+## Красивая СТАТЬЯ в канал — Telegra.ph (Instant View) ⭐
+Для статьи с картинками/видео **внутри текста** обычный пост не годится (всё слипнется). Используем **Telegra.ph**: отдельная статья-читалка, где текст и медиа идут **по порядку, вперемешку, красиво**; ссылку постим в канал — открывается как Instant View (всплывающее чистое окно).
+
+Поток (бесплатно, без боли с OAuth):
+1. Разово: `createAccount` → `TELEGRAPH_ACCESS_TOKEN` (в окружение).
+2. На каждую статью: `createPage(access_token, title, content[])`, где `content` — **упорядоченный массив блоков** из структуры статьи: `{tag:"p",children:[...]}`, `{tag:"h3",...}`, `{tag:"figure",children:[{tag:"img",attrs:{src:"<url>"}}]}`, видео — `{tag:"iframe",attrs:{src:"<youtube/vimeo>"}}`. Картинки — **по URL из нашего хранилища** (медиа лежат в R2/S3, в статью идёт ссылка).
+3. Берём `url` страницы (`https://telegra.ph/...`) → постим в канал `sendMessage` с этой ссылкой → Telegram сам покажет Instant View.
+
+```bash
+# 1) токен (разово)
+curl -s "https://api.telegra.ph/createAccount?short_name=vernatun&author_name=Вернатун"  # → access_token
+# 2) страница (content — JSON-массив блоков по порядку: p/h3/figure>img/iframe)
+curl -s "https://api.telegra.ph/createPage" \
+  --data-urlencode "access_token=$TELEGRAPH_ACCESS_TOKEN" \
+  --data-urlencode "title=Куда сходить армянину в Москве" \
+  --data-urlencode 'content=[{"tag":"p","children":["Вступление…"]},{"tag":"figure","children":[{"tag":"img","attrs":{"src":"https://<наше-хранилище>/cover.jpg"}}]},{"tag":"h3","children":["Поесть по-домашнему"]},{"tag":"p","children":["…"]}]'
+# → .result.url = https://telegra.ph/... → постим ссылку в канал
+```
+Картинки хостим сами (наше хранилище/публичный бакет) — Telegraph берёт их по URL. Загрузка напрямую в telegra.ph ненадёжна — не полагаемся.
+
 ## ⚠️ Что бот НЕ умеет
 - **Stories в канал** — Bot API не постит истории каналов (методы историй — для бизнес-аккаунтов). Сторис: медиа готовим пайплайнами, **выкладывает человек** (или позже отдельное решение). В TG-план недели сторис помечаем «вручную».
 
