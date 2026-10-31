@@ -63,6 +63,37 @@ PY
 - IG Graph API подключаем позже, когда нужны saves/reach/демография (разовая настройка под свой Business-аккаунт).
 - Умеренность: свой аккаунт тоже ≤1–2 прогона/день, `resultsLimit ≤50`; публичный профиль — риск низкий, но не частить.
 
+## Свой аккаунт всегда в выборке + разделение ours/competitors (ОБЯЗАТЕЛЬНО)
+`SELF_HANDLE="mosarmclub"` — наш IG. К **любой** IG-разведке добавляй свой профиль и помечай его показатели «НАШИ», отдельно от конкурентов.
+
+```bash
+APIFY="${APIFY_TOKEN:-${APIFY_API_KEY:-}}"
+SELF_HANDLE="mosarmclub"
+# Свой профиль (всегда): профиль + последние посты (followers через addParentData)
+curl -s -X POST "https://api.apify.com/v2/acts/apify~instagram-scraper/run-sync-get-dataset-items?token=$APIFY&timeout=180" \
+  -H "Content-Type: application/json" \
+  -d "{\"directUrls\":[\"https://www.instagram.com/$SELF_HANDLE/\"],\"resultsType\":\"posts\",\"resultsLimit\":12,\"addParentData\":true}" \
+  > /tmp/apify-ours.json
+```
+
+Разбор: всё, где `ownerUsername == SELF_HANDLE` → блок **«НАШИ»**; остальное (хэштеги/конкуренты из других прогонов) → **«Конкуренты»**.
+```bash
+python3 - <<PY
+import json,os
+SELF=os.environ.get("SELF_HANDLE","mosarmclub").lower()
+ours=json.load(open('/tmp/apify-ours.json'))
+posts=[p for p in ours if (p.get('ownerUsername') or '').lower()==SELF]
+likes=sum((p.get('likesCount') or 0) for p in posts)
+views=sum((p.get('videoViewCount') or 0) for p in posts)
+comm=sum((p.get('commentsCount') or 0) for p in posts)
+foll=next((p.get('ownerFullName') and (p.get('ownerFollowersCount') or p.get('followersCount')) for p in ours), None)
+print(f"НАШИ @{SELF}: постов={len(posts)} лайки={likes} просмотры={views} комменты={comm} подписчиков={foll}")
+print("Нет данных (только IG Graph API): saves, reach, шеры, демография — НЕ выдумывать.")
+PY
+```
+> В отчёте Аналитику/Директору: два раздела — «НАШИ (@mosarmclub)» и «Конкуренты». Свой профиль в выборку добавляется **автоматически**, даже если директор просил «найди конкурентов».
+> Экономия: свой профиль — один дешёвый прогон, `resultsLimit ≤12`; не частить.
+
 ## После прогона
 - Снапшот — во временную папку (`/tmp`), НЕ в git. В `brand/competitors.md` — только итог (топ-аккаунты + почему интересны).
 - В отчёте указать: сколько постов стянули, сколько прогонов (должно быть **1**), прикидку расхода (runs × CU × $/CU) — без значения ключа.
