@@ -10,7 +10,12 @@
 | `YOUTUBE_API_KEY` | YouTube Data API: свой канал + конкуренты (Разведчик/Аналитик) | Google Cloud → YouTube Data API v3 | ✅ в окружении |
 | `OPENAI_API_KEY` | генерация картинок (gpt-image) для каруселей/статей | platform.openai.com | ☐ нужен для Фазы 4 |
 | `APIFY_TOKEN` *(или `APIFY_API_KEY`)* | скрапинг IG/TikTok (Разведчик). Нужен **только токен**; `APIFY_ID` для вызовов не требуется | apify.com (free-план) | ✅ добавлен владельцем 2026-10-30 (вступит в силу в НОВОЙ сессии — секреты подхватываются на старте) |
-| `ELEVENLABS_API_KEY` | озвучка/голос для «обезличенных» роликов | elevenlabs.io | ☐ позже (Фаза 5/6); free ~10 мин/мес без коммерч. прав — только тест |
+| `ELEVENLABS_API_KEY` | озвучка/голос | elevenlabs.io | ⏸ **НЕ сейчас** — до модуля говорящих голов (HeyGen). Отложено |
+| API сайта (`SITE_API_*`) | автозаливка статей на `vernatunspeakclub.com` (оригинал) | свой VPS | 🔧 токен **готовится владельцем** (проектируем подключение) |
+| `TELEGRAM_BOT_TOKEN` | автопост статей/анонсов в TG @mosarmclub (+ цепочка в Дзен через бот Яндекса) | @BotFather | ☐ получить (просто) — рекомендуется первым для кросс-постинга |
+| `VK_GROUP_TOKEN` (+ app) | автопост тизера+ссылки статьи на стену VK-группы | vk.com/dev (app + токен группы, право «стена») | ☐ позже, по желанию |
+
+> Кросс-постинг статей (детали/статус API площадок) — `shared/pipelines/article/README.md`. Дзен — без ключа (TG-бот/RSS). VC.ru / Пикабу / Teletype — публичного API публикации нет → вручную.
 | IG Graph API (`IG_USER_ID`/`IG_ACCESS_TOKEN`) | свои IG saves/reach/демография/Stories | Facebook/IG Business | ☐ **ПОЗЖЕ** — сейчас свои метрики берём scraping'ом через Apify (решено; теряем saves/reach/демографию — см. `scout-apify`) |
 
 > Картинки: если вместо OpenAI выберем Ideogram/Flux — добавить `IDEOGRAM_API_KEY` / провайдера Flux (напр. `REPLICATE_API_TOKEN`).
