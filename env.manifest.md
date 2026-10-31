@@ -15,6 +15,8 @@
 | `TELEGRAM_BOT_TOKEN` | автопост в TG-канал @mosarmclub (посты/анонсы/видео/опросы) | **СУЩЕСТВУЮЩИЙ бот клуба** (новый не нужен) | ☐ токен в окружение. Бот уже админ канала с правом постинга ✅. `TELEGRAM_CHANNEL_ID` — **уже в окружении бота**, тут НЕ дублируем |
 | `TELEGRAPH_ACCESS_TOKEN` | красивые статьи в TG (Telegra.ph / Instant View — картинки внутри текста) | открыть в браузере `https://api.telegra.ph/createAccount?short_name=vernatun&author_name=Вернатун&author_url=https://t.me/mosarmclub` → скопировать `access_token` из ответа (НЕ BotFather, НЕ бот — отдельный сервис telegra.ph) | ☐ разово создать; картинки грузятся прямо в Telegra.ph (хостит сам) |
 | `VK_GROUP_TOKEN` (+ app) | автопост тизера+ссылки статьи на стену VK-группы | vk.com/dev (app + токен группы, право «стена») | ☐ позже, по желанию |
+| `CONTENT_FACTORY_WEB_URL` | базовый адрес веб-дашборда на VPS — куда агенты пушат одобренное (`/api/content/ingest`, `/api/analytics/ingest`) | свой VPS (после деплоя) | ☐ когда веб развёрнут на VPS |
+| `INGEST_SECRET` | общий секрет для приёма пушей вебом (контент + метрики). Один и тот же в окружении агентов и на вебе | придумать 1 раз (случайная строка) | ☐ задать при деплое веба |
 
 > Кросс-постинг статей (детали/статус API площадок) — `shared/pipelines/article/README.md`. Дзен — без ключа (TG-бот/RSS). VC.ru / Пикабу / Teletype — публичного API публикации нет → вручную.
 | IG Graph API (`IG_USER_ID`/`IG_ACCESS_TOKEN`) | свои IG saves/reach/демография/Stories | Facebook/IG Business | ☐ **ПОЗЖЕ** — сейчас свои метрики берём scraping'ом через Apify (решено; теряем saves/reach/демографию — см. `scout-apify`) |

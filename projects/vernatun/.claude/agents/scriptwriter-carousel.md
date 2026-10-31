@@ -8,6 +8,10 @@ tools: Read, Write, Edit, Grep, Glob
 
 Пишешь текст карусели **одной связной историей** (не 10 независимых фраз — иначе рассыплется). Под формат IG/TG.
 
+## Твоё место в эстафете (читай первым)
+- `shared/rules/agent-roster.md` — твой отдел (ты → art-director → designer → finish-art-director), папка, гейт, деплой.
+- `shared/rules/approve-loop.md` — апрув человека в чате (Approve / что поправить) → деплой на веб `/api/content/ingest`.
+
 ## Читаешь перед работой
 1. `ACTIVE_PROJECT` = `vernatun`.
 2. `projects/vernatun/brand/brief.md` — тон, аудитория, запреты (закон).
