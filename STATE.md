@@ -73,6 +73,15 @@
 - **Окружение:** в `env.manifest.md` добавлены `CONTENT_FACTORY_WEB_URL` + `INGEST_SECRET` (задать при деплое веба). Сеть: домен VPS в Network access → Allowed domains (разово, владелец).
 - **Итог:** производственный контур фабрики (агенты + эстафета + гейты + деплой на веб) ГОТОВ. Осталось добить сам веб-интерфейс (красота/UI раздела «Опубликовано» и чат-зеркало) — следующая фаза.
 
+## ВЕБ РАЗВЁРНУТ НА VPS (2026-11-01) — https://admin.vernatunspeakclub.com
+- **Платформа ЖИВАЯ на российском VPS владельца**, HTTPS (Let's Encrypt/certbot), nginx → приложение (внутр. порт 8087). Проверено из облака: `/`, `/studio`, `/analytics` = 200.
+- **Авто-деплой через GitHub Actions** (`.github/workflows/deploy-vps.yml`): пуш в ветку → раннер собирает standalone → SSH-доставка на VPS (appleboy) → nginx+certbot+pm2. Из облака Claude SSH закрыт (порт 22), поэтому деплоит робот GitHub.
+- Секреты репо: `INFINITYS_DOOR_VPS_HOST` / `_USER` / `_SSH_KEY` (+ опц. `_PORT`). SSH-порт 22, пользователь не-root (passwordless sudo). Деплой идемпотентен.
+- next.config: `output: "standalone"`; package.json: `prisma generate` на build/postinstall.
+- **Как обновлять:** я пушу правку в ветку → Action сам выкатывает за ~3 мин → владелец обновляет страницу.
+- Грабли, которые прошли (для памяти): имена секретов (INFINITYS_DOOR_*), формат ключа (OpenSSH BEGIN/END), чистый IP в HOST (+авто-trim), non-root → sudo, порт 87 привилегированный (<1024) → внутр. 8087 за nginx.
+- ⚠️ Известные задачи фазы «красота»: мобильная адаптация (сайдбар не схлопывается — P0), БД пока JSON-fallback (Postgres подключим позже), серверный `/api/marketing/chat` перепаять на облако.
+
 ## Прогон циклов (2026-10-30, в этой сессии, подписочный путь)
 - ✅ Веб живой: `next start` → `/studio`·`/schedule`·`/marketing`·`/analytics`·`/api/analytics/snapshot` = 200.
 - ✅ YouTube API вживую: @mosarmclub 79 подп./55381 просм./13 видео.
