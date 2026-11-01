@@ -1,5 +1,9 @@
-import { SchedulePageClient } from "@/components/schedule/SchedulePageClient";
+import { ScheduleListShell } from "@/components/schedule/ScheduleListShell";
+
+export const metadata = {
+  title: "Расписание · Vernatun",
+};
 
 export default function SchedulePage() {
-  return <SchedulePageClient />;
+  return <ScheduleListShell />;
 }

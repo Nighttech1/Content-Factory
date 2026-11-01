@@ -33,6 +33,8 @@ export type FeedPost = {
   sourceMode: FeedSourceMode;
   /** IG handle when known (ours or competitor). */
   username?: string;
+  /** true — это карусель-образец, присланная владельцем агенту («сделай так же»). Пинится первой в конкурентах. */
+  isReference?: boolean;
   /**
    * S48 — account followers / subscribers for plaque (RU compact `Nk`).
    * Backend may map from Graph `followers_count` / Apify subscribers.

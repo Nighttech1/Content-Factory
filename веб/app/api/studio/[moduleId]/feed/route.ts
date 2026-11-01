@@ -8,9 +8,28 @@ import {
 } from "@/lib/studio/ig-scraper-config";
 import { isCustomModuleId, isFeedCoreModuleId } from "@/lib/studio/feed-types";
 import type { FeedResponse } from "@/lib/studio/feed-types";
+import { readCarouselReferences } from "@/lib/studio/carousel-references";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+
+/** Карусели: образцы владельца («сделай так же») идут ПЕРВЫМИ в конкурентах. */
+async function withCarouselReferences(
+  moduleId: string,
+  feed: FeedResponse,
+): Promise<FeedResponse> {
+  if (moduleId !== "carousel-engine") return feed;
+  const refs = await readCarouselReferences();
+  if (refs.length === 0) return feed;
+  const refIds = new Set(refs.map((r) => r.id));
+  return {
+    ...feed,
+    competitors: [
+      ...refs,
+      ...feed.competitors.filter((p) => !refIds.has(p.id)),
+    ],
+  };
+}
 
 type RouteCtx = { params: Promise<{ moduleId: string }> };
 
@@ -65,7 +84,9 @@ export async function GET(
   if (fast) {
     if (isFeedCoreModuleId(moduleId) || moduleId === "custom-reels") {
       const feed = fastFeedForModule(moduleId, topic || undefined);
-      if (feed) return NextResponse.json(feed);
+      if (feed) {
+        return NextResponse.json(await withCarouselReferences(moduleId, feed));
+      }
     }
     if (isCustomModuleId(moduleId)) {
       return NextResponse.json(emptyFeed());
@@ -78,7 +99,7 @@ export async function GET(
 
   const feed = await resolveStudioFeed(moduleId, topic || undefined);
   if (feed) {
-    return NextResponse.json(feed);
+    return NextResponse.json(await withCarouselReferences(moduleId, feed));
   }
 
   return NextResponse.json(
