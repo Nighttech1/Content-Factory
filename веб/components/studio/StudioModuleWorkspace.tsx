@@ -422,7 +422,7 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
                   testId="carousel-ours"
                   layout={feedLayout}
                   aspectRatio={feedAspect}
-                  showDraftsButton={true}
+                  showDraftsButton={false}
                   openDraftsNonce={openDraftsNonce}
                 />
                 <VerticalPostCarousel

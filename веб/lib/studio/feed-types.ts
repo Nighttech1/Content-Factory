@@ -64,6 +64,7 @@ export type FeedResponse = {
 /** Core Module SDK ids that have fixture feeds. */
 export const FEED_CORE_MODULE_IDS = [
   "carousel-engine",
+  "club-reels",
   "aesthetic-graphics",
   "cartoon-reels",
   "heygen-reels",

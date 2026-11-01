@@ -470,6 +470,12 @@ function withReelsThumb(
 const FEEDS: Readonly<Record<FeedCoreModuleId, ModuleFeed>> = {
   "carousel-engine": buildCarouselFeed(),
 
+  // Рилс: данные приедут от Scout (скрапинг) и агентов; пока пусто.
+  "club-reels": {
+    ours: [],
+    competitors: [],
+  },
+
   "aesthetic-graphics": {
     ours: [
       withPicsumThumb("cf-ag-ours-1", {

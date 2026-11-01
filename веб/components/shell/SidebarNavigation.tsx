@@ -3,7 +3,13 @@
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, useReducedMotion } from "framer-motion";
-import { Calendar, LayoutGrid, Rocket, Settings } from "lucide-react";
+import {
+  BarChart3,
+  Calendar,
+  LayoutDashboard,
+  LayoutGrid,
+  Rocket,
+} from "lucide-react";
 import {
   MenuVertical,
   type MenuVerticalItem,
@@ -26,22 +32,28 @@ const NAV_ITEMS: NavItem[] = [
   { href: "/studio", label: "Студия", icon: Rocket, testId: "nav-studio" },
   { href: "/schedule", label: "Расписание", icon: Calendar },
   {
-    href: "/settings",
-    label: "Настройки",
-    icon: Settings,
-    adminOrOwner: true,
-    testId: "nav-settings",
+    href: "/analytics",
+    label: "Аналитика",
+    icon: BarChart3,
+    testId: "nav-analytics",
   },
-  // «Директор» (чат с агентом) убран: общение с агентами — в облачных чатах Claude,
-  // веб показывает только результаты. См. req владельца 2026-11-01.
+  {
+    href: "/dashboard",
+    label: "Дашборд",
+    icon: LayoutDashboard,
+    testId: "nav-dashboard",
+  },
+  // «Настройки» убраны: всё настраивается через агентов в облачных чатах Claude.
+  // «Директор»-чат тоже убран — веб показывает только результаты.
 ];
 
 /** Разделы по модулям контента (канонические id Studio). Группа в левом меню. */
 const MODULE_ITEMS: { id: string; label: string }[] = [
   { id: "carousel-engine", label: "Карусели" },
-  { id: "aesthetic-graphics", label: "Графика" },
+  { id: "club-reels", label: "Рилс" },
   { id: "cartoon-reels", label: "Мультрилсы" },
   { id: "heygen-reels", label: "HeyGen-рилсы" },
+  { id: "aesthetic-graphics", label: "Графика" },
   { id: "site-articles", label: "Статьи · сайт" },
   { id: "tg-articles", label: "Статьи · TG" },
 ];
@@ -50,8 +62,8 @@ const MODULE_ITEMS: { id: string; label: string }[] = [
 const PREFETCH_HREFS = [
   "/studio",
   "/schedule",
-  "/settings",
-  "/marketing",
+  "/analytics",
+  "/dashboard",
 ] as const;
 
 const SPRING = { type: "spring" as const, damping: 25, stiffness: 300 };

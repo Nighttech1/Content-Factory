@@ -29,6 +29,7 @@ const MODULE_ICONS: Record<
   React.ComponentType<{ className?: string; strokeWidth?: number }>
 > = {
   "carousel-engine": Images,
+  "club-reels": Video,
   "aesthetic-graphics": Palette,
   "cartoon-reels": Clapperboard,
   "heygen-reels": Video,

@@ -6,6 +6,7 @@
 /** Canonical Module SDK ids (ARCHITECTURE §4 / Sprint 6). */
 export type CanonicalModuleId =
   | "carousel-engine"
+  | "club-reels"
   | "aesthetic-graphics"
   | "cartoon-reels"
   | "heygen-reels"
@@ -42,6 +43,7 @@ export const CANONICAL_TO_STUDIO_ID: Readonly<
 const ALIAS_LOOKUP: Readonly<Record<string, CanonicalModuleId>> = {
   ...STUDIO_MODULE_ID_ALIASES,
   "carousel-engine": "carousel-engine",
+  "club-reels": "club-reels",
   "aesthetic-graphics": "aesthetic-graphics",
   "cartoon-reels": "cartoon-reels",
   "heygen-reels": "heygen-reels",
