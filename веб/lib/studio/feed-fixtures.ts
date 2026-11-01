@@ -707,20 +707,13 @@ export function getFeedForModule(
   moduleId: FeedCoreModuleId,
   topic?: string,
 ): FeedResponse {
-  const feed = FEEDS[moduleId];
-  const raw = (topic ?? "").trim();
-  if (!raw) {
-    return {
-      ours: feed.ours.slice(),
-      competitors: feed.competitors.slice(),
-      sourceMode: "mock",
-    };
-  }
-  return {
-    ours: feed.ours.slice(),
-    competitors: feed.competitors.filter((p) => matchesTopic(p, raw)),
-    sourceMode: "mock",
-  };
+  // БЕЗ МОКАПА: демо-фикстуры отключены. Ленты пусты до реальных данных
+  // (конкуренты каруселей — из снапшота Scout; наши — из IG Graph / YouTube).
+  // FEEDS и matchesTopic сохранены для findFeedPost и возможного включения.
+  void moduleId;
+  void topic;
+  void matchesTopic;
+  return { ours: [], competitors: [], sourceMode: "mock" };
 }
 
 /** Empty workspace for custom plugins (no fixture posts yet). */

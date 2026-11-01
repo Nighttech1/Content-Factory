@@ -352,7 +352,16 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
                 data-testid="module-top-nav"
                 className="flex flex-wrap items-center justify-end gap-2"
               >
-                {/* Только результаты: «Аналитика». Mesh/«Команда выпуска» убрана. */}
+                <Link
+                  href={`/studio/${encodeURIComponent(moduleId)}/mesh`}
+                  data-testid="module-top-team"
+                  className={cn(
+                    "inline-flex min-h-11 items-center justify-center rounded-md border border-[var(--border-glass)] bg-[var(--bg-elevated)] px-3.5 py-2 text-sm text-[var(--text-primary)] transition-colors",
+                    "hover:border-[color-mix(in_srgb,var(--accent-gold)_40%,var(--border-glass))] hover:text-[var(--accent-gold)]",
+                  )}
+                >
+                  Команда разработки
+                </Link>
                 <Link
                   href={`/studio/${encodeURIComponent(moduleId)}/analytics`}
                   data-testid="module-top-analytics"

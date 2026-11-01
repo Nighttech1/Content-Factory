@@ -1,185 +1,225 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { AnalyticsHeader } from "@/components/analytics/AnalyticsHeader";
-import { AnalyticsMainGrid } from "@/components/analytics/AnalyticsMainGrid";
-import { AnalyticsModuleMenu } from "@/components/analytics/AnalyticsModuleMenu";
-import { KpiCardsRow } from "@/components/analytics/KpiCardsRow";
-import { OutliersVault } from "@/components/analytics/OutliersVault";
-import { ScoutSection } from "@/components/analytics/ScoutSection";
-import { TelemetryMatrix } from "@/components/analytics/TelemetryMatrix";
-import { InsightsFeed } from "@/components/analytics/InsightsFeed";
-import { PublishedPostsTable } from "@/components/analytics/PublishedPostsTable";
-import { FunnelChart } from "@/components/analytics/FunnelChart";
-import { getContentFunnelSeed } from "@/lib/analytics/funnel";
-import { findStudioModule } from "@/components/studio/modules";
-import { getSelfLearningDashboard } from "@/lib/analytics/self-learning-mock";
-import { useStudioStore } from "@/lib/studio-store";
-import type { TopKpiMetric } from "@/types/analytics";
+import {
+  Eye,
+  UserPlus,
+  Send,
+  Users,
+  Repeat,
+  Radar,
+  AlertTriangle,
+  FileCheck2,
+} from "lucide-react";
+import { GlassCard } from "@/components/ui/GlassCard";
+import { cn } from "@/lib/cn";
 
-const SPRING = { type: "spring" as const, damping: 25, stiffness: 300 };
+/**
+ * Аналитика — чистая, БЕЗ мокапа. Данные либо реальные (когда подключены
+ * источники), либо пусто с пояснением. Тумблер по модулям + полная воронка.
+ */
 
-type AnalyticsView = "menu" | "dashboard";
-
-/** C-99 — merge volume + anomalies into one card «N / M». */
-function mergeKpis(kpis: TopKpiMetric[]): TopKpiMetric[] {
-  const volume = kpis.find((k) => k.id === "scout-volume");
-  const outliers = kpis.find((k) => k.id === "outliers");
-  const rest = kpis.filter(
-    (k) => k.id !== "scout-volume" && k.id !== "outliers",
-  );
-  const merged: TopKpiMetric = {
-    id: "content-anomalies",
-    label: "Контент / аномалии",
-    value: `${volume?.value ?? "0"} / ${outliers?.value ?? "0"}`,
-    delta: outliers?.delta ?? volume?.delta ?? "",
-    isPositive: true,
-    subtext: "всего разведано / аномалий 5×+",
-    accentColor: "cyan",
-  };
-  return [merged, ...rest];
-}
-
-type AnalyticsShellProps = {
-  /** C-136 — open dashboard for nested `/studio/[moduleId]/analytics`. */
-  initialModuleId?: string;
+type ModuleTab = {
+  id: string;
+  label: string;
 };
 
-export function AnalyticsShell({ initialModuleId }: AnalyticsShellProps = {}) {
+const MODULE_TABS: ModuleTab[] = [
+  { id: "all", label: "Все" },
+  { id: "carousel-engine", label: "Карусели" },
+  { id: "club-reels", label: "Рилс" },
+  { id: "cartoon-reels", label: "Мультрилсы" },
+  { id: "heygen-reels", label: "HeyGen" },
+  { id: "youtube-cartoon", label: "YouTube" },
+  { id: "aesthetic-graphics", label: "Графика" },
+  { id: "site-articles", label: "Статьи · сайт" },
+  { id: "tg-articles", label: "Статьи · TG" },
+];
+
+type Stage = {
+  label: string;
+  hint: string;
+  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
+};
+
+const FUNNEL_STAGES: Stage[] = [
+  { label: "Посмотрели контент", hint: "охваты рилсов/каруселей/статей — от Scout (Apify) + YouTube API", icon: Eye },
+  { label: "Подписались в Instagram", hint: "прирост подписчиков @mosarmclub — IG Insights", icon: UserPlus },
+  { label: "Зашли в Telegram", hint: "новые подписчики канала — TG Bot API", icon: Send },
+  { label: "Пришли на встречу", hint: "регистрации/явки — @vernatunbot / учёт на встрече", icon: Users },
+  { label: "Остались (2-я встреча)", hint: "вернулись на 2-ю+ встречу — учёт клуба", icon: Repeat },
+];
+
+const SPRING = { type: "spring" as const, damping: 26, stiffness: 260 };
+
+export function AnalyticsShell({
+  initialModuleId,
+}: {
+  initialModuleId?: string;
+}) {
   const reduceMotion = useReducedMotion();
-  const dashboard = useMemo(() => getSelfLearningDashboard(), []);
-  // KPI №1 Вернатуна — люди на живых встречах (воронка). Значение приходит из
-  // ingest воронки (клики бот/регистрация, заходы /campus); до подключения — «—».
-  const kpis = useMemo(() => {
-    const funnel: TopKpiMetric = {
-      id: "meetings-funnel",
-      label: "Люди на встречах",
-      value: "—",
-      delta: "",
-      isPositive: true,
-      subtext: "KPI №1 · воронка (ждёт данных)",
-      accentColor: "cyan",
-    };
-    return [funnel, ...mergeKpis(dashboard.kpis)];
-  }, [dashboard.kpis]);
-  const contentFunnel = useMemo(() => getContentFunnelSeed(), []);
-  const [contentTypeId, setContentTypeId] = useState("all");
-  const [platformId, setPlatformId] = useState("all");
-  const [view, setView] = useState<AnalyticsView>(
-    initialModuleId ? "dashboard" : "menu",
-  );
-  const [moduleId, setModuleId] = useState<string | null>(
-    initialModuleId ?? null,
-  );
+  const [active, setActive] = useState<string>(initialModuleId ?? "all");
+  const activeLabel =
+    MODULE_TABS.find((t) => t.id === active)?.label ?? "Все";
 
-  const customModules = useStudioStore((s) => s.customModules);
-  const hydrateCustomModules = useStudioStore((s) => s.hydrateCustomModules);
-
-  useEffect(() => {
-    void hydrateCustomModules();
-  }, [hydrateCustomModules]);
-
-  const moduleLabel = useMemo(() => {
-    if (!moduleId) return null;
-    return findStudioModule(moduleId, customModules)?.label ?? moduleId;
-  }, [moduleId, customModules]);
-
-  function openModule(id: string) {
-    setModuleId(id);
-    setView("dashboard");
-  }
-
-  function backToMenu() {
-    setView("menu");
-    setModuleId(null);
-  }
+  const container = {
+    hidden: {},
+    show: { transition: { staggerChildren: reduceMotion ? 0 : 0.05 } },
+  };
+  const item = {
+    hidden: reduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 },
+    show: { opacity: 1, y: 0, transition: reduceMotion ? { duration: 0 } : SPRING },
+  };
 
   return (
     <motion.div
-      data-testid="analytics-shell"
-      className="flex w-full min-w-0 flex-col gap-8 pb-16"
-      initial={false}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={reduceMotion ? { duration: 0 } : SPRING}
+      className="flex flex-col gap-6"
+      variants={container}
+      initial="hidden"
+      animate="show"
     >
-      <AnalyticsHeader
-        contentTypeId={contentTypeId}
-        platformId={platformId}
-        onContentTypeChange={setContentTypeId}
-        onPlatformChange={setPlatformId}
-      />
-
-      {view === "menu" ? (
-        <AnalyticsModuleMenu onSelectModule={openModule} />
-      ) : (
-        <div
-          data-testid="analytics-dashboard"
-          data-module-id={moduleId ?? undefined}
-          className="flex flex-col gap-8"
-        >
-          <div className="flex flex-wrap items-center gap-3">
-            <button
-              type="button"
-              data-testid="analytics-back-menu"
-              onClick={backToMenu}
-              className="inline-flex items-center gap-1.5 rounded-md border border-[var(--border-glass)] bg-[var(--bg-elevated)] px-3 py-1.5 font-[family-name:var(--font-mono-jb)] text-[11px] text-[var(--text-primary)] transition-colors hover:border-[color-mix(in_srgb,var(--accent-blue-bright)_40%,var(--border-glass))] hover:text-[var(--accent-blue-bright)]"
-            >
-              ← К меню
-            </button>
-            <nav
-              aria-label="Навигация аналитики"
-              className="flex flex-wrap items-center gap-1.5 text-sm text-[var(--text-muted)]"
-            >
-              <button
-                type="button"
-                onClick={backToMenu}
-                className="hover:text-[var(--text-primary)]"
-              >
-                Модули
-              </button>
-              <span aria-hidden className="text-[var(--text-mono)]">
-                /
-              </span>
-              <span className="font-medium text-[var(--text-primary)]">
-                {moduleLabel}
-              </span>
-            </nav>
-          </div>
-
-          {/* Честный маркер: верхние блоки — демо-фикстуры до подключения ingest/ключей.
-              Реальный путь данных — в секции «Реальные данные (API)» ниже. */}
-          <div className="rounded-lg border border-dashed border-[var(--border-glass)] bg-[color-mix(in_srgb,var(--bg-elevated)_70%,transparent)] px-3 py-2 font-[family-name:var(--font-mono-jb)] text-[11px] text-[var(--text-muted)]">
-            ⚠️ Демо-данные: блоки ниже до раздела «Реальные данные (API)» — показательные
-            фикстуры. Реальные цифры (+ KPI «люди на встречах») появятся при подключении
-            ключей и ингеста. См. web-analytics-spec.
-          </div>
-
-          <KpiCardsRow kpis={kpis} />
-          <FunnelChart funnel={contentFunnel} />
-          <ScoutSection />
-          <OutliersVault
-            outliers={dashboard.outliers}
-            platformFilter={platformId}
-          />
-          <AnalyticsMainGrid
-            retention={dashboard.retention}
-            retentionSummary={dashboard.retentionSummary}
-            rlFeed={dashboard.rlFeed}
-          />
-          <TelemetryMatrix telemetry={dashboard.telemetry} />
-
-          {/* C-A1 — реальный путь данных на экране: ingest → API → store.
-              Показывает живые данные при наличии ключей/ингеста, иначе seed-fallback. */}
-          <div className="flex flex-col gap-2">
-            <p className="font-[family-name:var(--font-mono-jb)] text-[11px] uppercase tracking-wider text-[var(--accent-gold)]">
-              Реальные данные (API) · источник помечен в блоке · seed-демо пока нет ключей/ингеста
-            </p>
-            <InsightsFeed />
-          </div>
-          <PublishedPostsTable />
+      <motion.header variants={item} className="flex flex-col gap-2">
+        <div className="flex items-center gap-2 font-[family-name:var(--font-mono-jb)] text-[10px] uppercase tracking-[0.2em] text-[var(--accent-gold)]">
+          <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--accent-gold)]" />
+          Метрики к встречам
         </div>
-      )}
+        <h1 className="text-3xl font-semibold tracking-tight text-[var(--text-primary)] md:text-4xl">
+          Аналитика
+        </h1>
+        <p className="max-w-2xl text-[var(--text-muted)]">
+          Путь зрителя до живой встречи — по каждому модулю. Цифры появляются по
+          мере подключения источников (Scout/Apify, IG Insights, TG-бот, учёт
+          явок); пока источник не подключён — честно пусто.
+        </p>
+      </motion.header>
+
+      {/* Тумблер по модулям — статичный, крупный */}
+      <motion.div variants={item}>
+        <div
+          role="tablist"
+          aria-label="Модуль для аналитики"
+          className="flex flex-wrap gap-1.5 rounded-xl border border-[var(--border-glass)] bg-[var(--bg-elevated)] p-1.5"
+        >
+          {MODULE_TABS.map((t) => {
+            const on = active === t.id;
+            return (
+              <button
+                key={t.id}
+                type="button"
+                role="tab"
+                aria-selected={on}
+                onClick={() => setActive(t.id)}
+                className={cn(
+                  "rounded-lg px-3.5 py-2 text-sm font-medium transition-colors",
+                  on
+                    ? "bg-[color-mix(in_srgb,var(--accent-gold)_22%,transparent)] text-[var(--accent-gold)]"
+                    : "text-[var(--text-muted)] hover:bg-[var(--bg-hover)] hover:text-[var(--text-primary)]",
+                )}
+              >
+                {t.label}
+              </button>
+            );
+          })}
+        </div>
+      </motion.div>
+
+      {/* Полная воронка к встречам для выбранного модуля */}
+      <motion.div variants={item}>
+        <GlassCard disableHoverMotion className="flex flex-col gap-4">
+          <div className="flex items-baseline justify-between">
+            <h2 className="text-lg font-semibold text-[var(--text-primary)]">
+              Воронка к встречам · {activeLabel}
+            </h2>
+            <span className="font-[family-name:var(--font-mono-jb)] text-[10px] uppercase tracking-wider text-[var(--text-mono)]">
+              контент → встреча → остались
+            </span>
+          </div>
+          <div className="flex flex-col gap-2">
+            {FUNNEL_STAGES.map((s, i) => {
+              const Icon = s.icon;
+              return (
+                <div
+                  key={i}
+                  className="flex items-center gap-3 rounded-lg border border-[var(--border-glass)] bg-[var(--bg-card)] p-3"
+                >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--bg-elevated)] text-[var(--accent-gold)]">
+                    <Icon className="h-5 w-5" strokeWidth={1.75} />
+                  </span>
+                  <div className="flex min-w-0 flex-1 flex-col">
+                    <span className="text-sm font-medium text-[var(--text-primary)]">
+                      {i + 1}. {s.label}
+                    </span>
+                    <span className="truncate text-[11px] text-[var(--text-muted)]">
+                      источник: {s.hint}
+                    </span>
+                  </div>
+                  <span className="shrink-0 font-[family-name:var(--font-mono-jb)] text-xl text-[var(--text-mono)]">
+                    —
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+          <p className="text-xs text-[var(--text-muted)]">
+            Значения «—» — источник ещё не подключён. Полная цепочка заполнится,
+            когда заработают Scout (Apify), IG Insights, TG-бот и учёт явок.
+          </p>
+        </GlassCard>
+      </motion.div>
+
+      {/* Три честных блока */}
+      <motion.div variants={item} className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <EmptySection
+          icon={Radar}
+          title="Разведка ниши"
+          body="Топ виральных аккаунтов и постов по армянской нише."
+          note="Пусто: нужен APIFY_TOKEN на VPS + прогон Scout («Разведать»)."
+        />
+        <EmptySection
+          icon={AlertTriangle}
+          title="Аномалии по контенту"
+          body="Что вдруг выстрелило/просело — по каждому типу контента. Scout раздаёт аномалии агентам, они правят тему и оформление и уведомляют тебя."
+          note="Пусто: появятся после прогона Scout."
+        />
+        <EmptySection
+          icon={FileCheck2}
+          title="Опубликованные активы"
+          body="Наши вышедшие единицы и их показатели (вовлечённость, сохранения, просмотры) — по типам."
+          note="Пусто: появятся после апрува и пуша от агентов."
+        />
+      </motion.div>
     </motion.div>
+  );
+}
+
+function EmptySection({
+  icon: Icon,
+  title,
+  body,
+  note,
+}: {
+  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
+  title: string;
+  body: string;
+  note: string;
+}) {
+  return (
+    <GlassCard disableHoverMotion className="flex h-full flex-col gap-3">
+      <div className="flex items-center gap-2">
+        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--bg-elevated)] text-[var(--accent-gold)]">
+          <Icon className="h-4 w-4" strokeWidth={1.75} />
+        </span>
+        <h3 className="text-base font-semibold text-[var(--text-primary)]">
+          {title}
+        </h3>
+      </div>
+      <p className="text-xs text-[var(--text-muted)]">{body}</p>
+      <div className="mt-auto flex items-center gap-2 rounded-lg border border-dashed border-[var(--border-glass)] bg-[var(--bg-card)] px-3 py-2">
+        <span className="font-[family-name:var(--font-mono-jb)] text-[10px] uppercase tracking-wider text-[var(--text-mono)]">
+          {note}
+        </span>
+      </div>
+    </GlassCard>
   );
 }
