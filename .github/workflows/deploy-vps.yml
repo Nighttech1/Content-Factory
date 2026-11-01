@@ -110,7 +110,7 @@ jobs:
             set -e
             export DEBIAN_FRONTEND=noninteractive
             DOMAIN="admin.vernatunspeakclub.com"
-            APP_PORT="87"
+            APP_PORT="8087"   # внутренний непривилегированный порт (наружу отдаёт nginx на 443). 87 <1024 требует root — не используем.
             APP_DIR="/opt/content-factory"
             EMAIL="admin@vernatunspeakclub.com"
             ME="$(id -un)"; GRP="$(id -gn)"
