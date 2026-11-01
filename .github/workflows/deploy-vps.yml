@@ -1,17 +1,14 @@
-name: Deploy admin.vernatunspeakclub.com
+name: Deploy content.vernatunspeakclub.com
 
 # Робот GitHub (у него SSH открыт) собирает приложение на раннере и выкладывает на VPS.
 # Из облака Claude SSH закрыт (порт 22), поэтому деплой идёт здесь.
-# Секреты репозитория: INFINITYS_DOOR_VPS_HOST (IP), INFINITYS_DOOR_VPS_USER (напр. root),
-# INFINITYS_DOOR_VPS_SSH_KEY (приватный ключ), INFINITYS_DOOR_VPS_PORT (опц., по умолч. 22).
+# ВАЖНО: цель — content.vernatunspeakclub.com (НЕ admin — там личный кабинет владельца).
+# Запуск ТОЛЬКО вручную (workflow_dispatch), чтобы не трогать сервер без надобности.
+# Требуется: A-запись content.vernatunspeakclub.com -> IP нашего VPS (для SSL).
+# Секреты: INFINITYS_DOOR_VPS_HOST/USER/SSH_KEY (+ опц. _PORT, по умолч. 22).
 
 on:
   workflow_dispatch: {}
-  push:
-    branches: ["claude/lucid-bohr-j6mlrh"]
-    paths:
-      - "веб/**"
-      - ".github/workflows/deploy-vps.yml"
 
 concurrency:
   group: deploy-vps
@@ -109,8 +106,8 @@ jobs:
           script: |
             set -e
             export DEBIAN_FRONTEND=noninteractive
-            DOMAIN="admin.vernatunspeakclub.com"
-            APP_PORT="8087"   # внутренний непривилегированный порт (наружу отдаёт nginx на 443). 87 <1024 требует root — не используем.
+            DOMAIN="content.vernatunspeakclub.com"
+            APP_PORT="8088"   # внутренний непривилегированный порт (наружу отдаёт nginx на 443). 88 <1024 требует root — не используем.
             APP_DIR="/opt/content-factory"
             EMAIL="admin@vernatunspeakclub.com"
             ME="$(id -un)"; GRP="$(id -gn)"
