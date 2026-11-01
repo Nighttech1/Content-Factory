@@ -25,9 +25,7 @@ import {
   DEFAULT_REELS_PAGE_SIZE,
   readReelsPageSizeFromStorage,
 } from "@/lib/settings/reels-display";
-import { GlowButton } from "@/components/ui/glow-button";
 import { ReelsFrameworkPanel } from "@/components/studio/reels/ReelsFrameworkPanel";
-import type { CarouselDraft } from "@/lib/studio/carousel-draft-types";
 import {
   bootstrapFeed,
   FEED_FETCH_TIMEOUT_MS,
@@ -48,22 +46,7 @@ import { cn } from "@/lib/cn";
 
 const SPRING = { type: "spring" as const, damping: 25, stiffness: 300 };
 
-/** C-63 — defer heavy modals; mount only when open */
-const RazborModal = dynamic(
-  () =>
-    import("@/components/studio/workspace/RazborModal").then(
-      (m) => m.RazborModal,
-    ),
-  { ssr: false },
-);
-
-const CreateCarouselModal = dynamic(
-  () =>
-    import("@/components/studio/workspace/CreateCarouselModal").then(
-      (m) => m.CreateCarouselModal,
-    ),
-  { ssr: false },
-);
+// Разбор/Создать (чат с агентами) убраны — веб показывает только результаты.
 
 /** C-142 — drawer not needed for first paint of module feed */
 const GenerationDrawer = dynamic(
@@ -111,12 +94,6 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
   const [feedError, setFeedError] = useState<string | null>(null);
   const [committedTopic, setCommittedTopic] = useState<string | null>(null);
   const [competitorsLoading, setCompetitorsLoading] = useState(false);
-  /** C-30 Razbor — isolated from GenerationDrawer / SSE */
-  const [razborPost, setRazborPost] = useState<FeedPost | null>(null);
-  const [razborPreviewDraft, setRazborPreviewDraft] =
-    useState<CarouselDraft | null>(null);
-  /** C-65 Create carousel — separate from Razbor / Drafts */
-  const [createCarouselOpen, setCreateCarouselOpen] = useState(false);
   /** C-31: open Drafts from empty-draft CTA on carousel (never CapCut) */
   const [openDraftsNonce, setOpenDraftsNonce] = useState(0);
   /** C-50 — dual-feed page size from Settings (localStorage) */
@@ -313,11 +290,6 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
     setOpenDraftsNonce((n) => n + 1);
   }, [moduleId, router]);
 
-  /** C-drafts-always: switch Ours → Черновики after Create draw/publish. */
-  const bumpOpenDraftsNonce = useCallback(() => {
-    setOpenDraftsNonce((n) => n + 1);
-  }, []);
-
   function openCompetitorEditor(post: FeedPost) {
     if (!isCapCutModule(moduleId)) return;
     const draftId = `ref-${post.id}`;
@@ -325,35 +297,6 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
     router.push(
       `/studio/${encodeURIComponent(moduleId)}/edit/${encodeURIComponent(draftId)}${qs}`,
     );
-  }
-
-  function openRazbor(post: FeedPost) {
-    setRazborPreviewDraft(null);
-    setRazborPost(post);
-  }
-
-  function openDraftPreview(draft: CarouselDraft) {
-    const source =
-      competitors.find((p) => p.id === draft.sourceCompetitorId) ?? null;
-    if (source) {
-      setRazborPreviewDraft(draft);
-      setRazborPost(source);
-    } else {
-      setRazborPreviewDraft(draft);
-      setRazborPost({
-        id: draft.sourceCompetitorId,
-        source: "competitor",
-        title: draft.title,
-        thumbUrl: draft.slides[0]?.imageUrl,
-        metrics: { likes: 0, views: 0 },
-        sourceMode: "mock",
-      });
-    }
-  }
-
-  function closeRazbor() {
-    setRazborPost(null);
-    setRazborPreviewDraft(null);
   }
 
   const unknown = customReady && !mod;
@@ -434,21 +377,6 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
                 >
                   Аналитика
                 </Link>
-                {isCarouselEngine ? (
-                  <GlowButton
-                    data-testid="create-carousel-btn"
-                    onClick={() => setCreateCarouselOpen(true)}
-                  >
-                    Создать карусель
-                  </GlowButton>
-                ) : (
-                  <GlowButton
-                    data-testid="workspace-create-btn"
-                    onClick={openDraftEditor}
-                  >
-                    Создать
-                  </GlowButton>
-                )}
               </div>
             ) : null}
           </div>
@@ -510,7 +438,6 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
                   aspectRatio={feedAspect}
                   showDraftsButton={true}
                   openDraftsNonce={openDraftsNonce}
-                  onSelectDraft={openDraftPreview}
                 />
                 <VerticalPostCarousel
                   title="Конкуренты"
@@ -526,10 +453,7 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
                   testId="carousel-competitors"
                   layout={feedLayout}
                   aspectRatio={feedAspect}
-                  showRazborButton={!isCarouselEngine}
-                  onRazborClick={
-                    isCarouselEngine ? undefined : openRazbor
-                  }
+                  showRazborButton={false}
                   showEditorButton={isReels}
                   onEditorClick={isReels ? openCompetitorEditor : undefined}
                   onCompetitorsTopicSearch={handleCompetitorsTopicSearch}
@@ -540,23 +464,6 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
         ) : null}
       </motion.div>
       <GenerationDrawer />
-      {razborPost ? (
-        <RazborModal
-          open
-          post={razborPost}
-          previewDraft={razborPreviewDraft}
-          competitorPosts={competitors}
-          onClose={closeRazbor}
-          moduleId={moduleId}
-        />
-      ) : null}
-      {createCarouselOpen ? (
-        <CreateCarouselModal
-          open
-          onClose={() => setCreateCarouselOpen(false)}
-          onDraftPersisted={bumpOpenDraftsNonce}
-        />
-      ) : null}
     </>
   );
 }

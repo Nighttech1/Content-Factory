@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, useReducedMotion } from "framer-motion";
-import { Briefcase, Calendar, LayoutGrid, Rocket, Settings } from "lucide-react";
+import { Calendar, LayoutGrid, Rocket, Settings } from "lucide-react";
 import {
   MenuVertical,
   type MenuVerticalItem,
@@ -33,12 +33,8 @@ const NAV_ITEMS: NavItem[] = [
     adminOrOwner: true,
     testId: "nav-settings",
   },
-  {
-    href: "/marketing",
-    label: "Директор",
-    icon: Briefcase,
-    testId: "nav-director",
-  },
+  // «Директор» (чат с агентом) убран: общение с агентами — в облачных чатах Claude,
+  // веб показывает только результаты. См. req владельца 2026-11-01.
 ];
 
 /** Разделы по модулям контента (канонические id Studio). Группа в левом меню. */
