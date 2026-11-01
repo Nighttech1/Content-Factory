@@ -192,7 +192,11 @@ jobs:
             $SUDO systemctl reload nginx || true
 
             echo "=== health ==="
-            sleep 3
+            sleep 5
             curl -s -o /dev/null -w "local :$APP_PORT -> %{http_code}\n" "http://127.0.0.1:$APP_PORT/studio" || true
             pm2 list || true
+            echo "=== node on VPS ==="; node -v || true
+            echo "=== server.js head ==="; head -3 "$APP_DIR/server.js" 2>/dev/null || true
+            echo "=== pm2 crash logs (tail) ==="
+            pm2 logs content-factory --lines 60 --nostream 2>&1 | tail -70 || true
             echo "DEPLOY_DONE"
