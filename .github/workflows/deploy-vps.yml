@@ -52,10 +52,28 @@ jobs:
           tar -C ../deploy/app -czf ../deploy/app.tar.gz .
           echo "bundle size:"; du -h ../deploy/app.tar.gz
 
+      - name: Preflight — форма host-секрета (без раскрытия значения) + авто-trim
+        env:
+          RAW_HOST: ${{ secrets.INFINITYS_DOOR_VPS_HOST }}
+        run: |
+          HT="$(printf '%s' "$RAW_HOST" | tr -d '[:space:]')"
+          echo "длина: raw=$(printf '%s' "$RAW_HOST" | wc -c) после_trim=$(printf '%s' "$HT" | wc -c)"
+          echo "точек(.)=$(printf '%s' "$HT" | tr -cd '.' | wc -c)  двоеточий(:)=$(printf '%s' "$HT" | tr -cd ':' | wc -c)"
+          if [ -z "$HT" ]; then
+            echo "::error::Секрет INFINITYS_DOOR_VPS_HOST пустой"; exit 1
+          elif printf '%s' "$HT" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$'; then
+            echo "форма: IPv4 ✓"
+          elif printf '%s' "$HT" | grep -q ':'; then
+            echo "форма: похоже на IPv6 (есть двоеточия)"
+          else
+            echo "::warning::форма host не IPv4 и не IPv6 — вероятно домен без DNS или лишние символы"
+          fi
+          echo "VPS_HOST_CLEAN=$HT" >> "$GITHUB_ENV"
+
       - name: Recon VPS (проверка связи)
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.INFINITYS_DOOR_VPS_HOST }}
+          host: ${{ env.VPS_HOST_CLEAN }}
           username: ${{ secrets.INFINITYS_DOOR_VPS_USER }}
           key: ${{ secrets.INFINITYS_DOOR_VPS_SSH_KEY }}
           port: ${{ secrets.INFINITYS_DOOR_VPS_PORT || 22 }}
@@ -72,7 +90,7 @@ jobs:
       - name: Copy bundle to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.INFINITYS_DOOR_VPS_HOST }}
+          host: ${{ env.VPS_HOST_CLEAN }}
           username: ${{ secrets.INFINITYS_DOOR_VPS_USER }}
           key: ${{ secrets.INFINITYS_DOOR_VPS_SSH_KEY }}
           port: ${{ secrets.INFINITYS_DOOR_VPS_PORT || 22 }}
@@ -83,7 +101,7 @@ jobs:
       - name: Provision & restart
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.INFINITYS_DOOR_VPS_HOST }}
+          host: ${{ env.VPS_HOST_CLEAN }}
           username: ${{ secrets.INFINITYS_DOOR_VPS_USER }}
           key: ${{ secrets.INFINITYS_DOOR_VPS_SSH_KEY }}
           port: ${{ secrets.INFINITYS_DOOR_VPS_PORT || 22 }}
