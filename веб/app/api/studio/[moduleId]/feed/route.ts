@@ -9,9 +9,31 @@ import {
 import { isCustomModuleId, isFeedCoreModuleId } from "@/lib/studio/feed-types";
 import type { FeedResponse } from "@/lib/studio/feed-types";
 import { readCarouselReferences } from "@/lib/studio/carousel-references";
+import { readScoutFeed } from "@/lib/studio/scout-feed-store";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+
+/** Реальные данные Scout (наши @mosarmclub + конкуренты), если Scout их пушнул. */
+async function withScoutFeed(
+  moduleId: string,
+  feed: FeedResponse,
+): Promise<FeedResponse> {
+  const scout = await readScoutFeed(moduleId);
+  if (!scout) return feed;
+  const ours = scout.ours.length ? scout.ours : feed.ours;
+  const competitors = scout.competitors.length
+    ? scout.competitors
+    : feed.competitors;
+  const anyLive =
+    scout.ours.length > 0 || scout.competitors.length > 0;
+  return {
+    ...feed,
+    ours,
+    competitors,
+    sourceMode: anyLive ? "live" : feed.sourceMode,
+  };
+}
 
 /** Карусели: образцы владельца («сделай так же») идут ПЕРВЫМИ в конкурентах. */
 async function withCarouselReferences(
@@ -85,7 +107,7 @@ export async function GET(
     if (isFeedCoreModuleId(moduleId) || moduleId === "custom-reels") {
       const feed = fastFeedForModule(moduleId, topic || undefined);
       if (feed) {
-        return NextResponse.json(await withCarouselReferences(moduleId, feed));
+        return NextResponse.json(await withCarouselReferences(moduleId, await withScoutFeed(moduleId, feed)));
       }
     }
     if (isCustomModuleId(moduleId)) {
@@ -99,7 +121,7 @@ export async function GET(
 
   const feed = await resolveStudioFeed(moduleId, topic || undefined);
   if (feed) {
-    return NextResponse.json(await withCarouselReferences(moduleId, feed));
+    return NextResponse.json(await withCarouselReferences(moduleId, await withScoutFeed(moduleId, feed)));
   }
 
   return NextResponse.json(
