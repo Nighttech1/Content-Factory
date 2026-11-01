@@ -63,12 +63,18 @@ const SPRING = { type: "spring" as const, damping: 25, stiffness: 300 };
 
 type SidebarNavigationProps = {
   widthPx?: number;
+  open?: boolean;
+  isDesktop?: boolean;
+  onNavigate?: () => void;
   onWidthDrag?: (clientX: number) => void;
   onWidthCommit?: () => void;
 };
 
 export function SidebarNavigation({
   widthPx = DEFAULT_SIDEBAR_WIDTH,
+  open = true,
+  isDesktop = true,
+  onNavigate,
   onWidthDrag,
   onWidthCommit,
 }: SidebarNavigationProps) {
@@ -151,18 +157,20 @@ export function SidebarNavigation({
 
   return (
     <motion.aside
-      className="fixed left-0 top-0 z-40 flex h-screen flex-col border-r border-[var(--border-glass)] bg-[var(--bg-elevated)]"
+      className="fixed left-0 top-0 z-[45] flex h-screen max-w-[82vw] flex-col border-r border-[var(--border-glass)] bg-[var(--bg-elevated)] shadow-2xl md:shadow-none"
       style={{ width: widthPx }}
       aria-label="Главная навигация"
+      aria-hidden={!open}
       /* C-133: initial={false} — avoid SSR/CSR mismatch from useReducedMotion */
       initial={false}
-      animate={{ opacity: 1, x: 0 }}
+      animate={{ x: open ? 0 : "-100%" }}
       transition={reduceMotion ? { duration: 0 } : SPRING}
     >
       {/* C-133/C-130: brand markup identical SSR+CSR; testid always present */}
+      {/* pl-16: освобождаем место под плавающую кнопку-тоггл слева-сверху */}
       <div
         data-testid="nav-brand"
-        className="flex flex-row items-center gap-3 border-b border-[var(--border-glass)] px-5 py-5"
+        className="flex flex-row items-center gap-3 border-b border-[var(--border-glass)] py-5 pl-16 pr-5"
       >
         {/* eslint-disable-next-line @next/next/no-img-element -- static brand PNG asset */}
         <img
@@ -184,14 +192,26 @@ export function SidebarNavigation({
       </div>
 
       <div className="flex flex-1 flex-col gap-4 overflow-y-auto px-3 py-4">
-        <nav className="flex flex-col" aria-label="Разделы">
+        <nav
+          className="flex flex-col"
+          aria-label="Разделы"
+          onClick={() => {
+            if (!isDesktop) onNavigate?.();
+          }}
+        >
           <MenuVertical items={menuItems} />
         </nav>
         <div className="flex flex-col">
           <p className="mb-1 px-2 font-[family-name:var(--font-mono-jb)] text-[9px] uppercase tracking-wider text-[var(--text-mono)]">
             Модули контента
           </p>
-          <nav className="flex flex-col" aria-label="Модули контента">
+          <nav
+            className="flex flex-col"
+            aria-label="Модули контента"
+            onClick={() => {
+              if (!isDesktop) onNavigate?.();
+            }}
+          >
             <MenuVertical items={moduleItems} />
           </nav>
         </div>
@@ -223,6 +243,7 @@ export function SidebarNavigation({
         </div>
       </div>
 
+      {isDesktop && open && (
       <SidebarResizeHandle
         dragging={dragging}
         onPointerDown={(event) => {
@@ -242,6 +263,7 @@ export function SidebarNavigation({
         onPointerUp={finishDrag}
         onPointerCancel={finishDrag}
       />
+      )}
     </motion.aside>
   );
 }
