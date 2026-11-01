@@ -113,24 +113,37 @@ jobs:
             APP_PORT="87"
             APP_DIR="/opt/content-factory"
             EMAIL="admin@vernatunspeakclub.com"
+            ME="$(id -un)"; GRP="$(id -gn)"
+
+            # root или sudo? (не-root пользователю нужен passwordless sudo)
+            if [ "$(id -u)" = "0" ]; then
+              SUDO=""
+            elif sudo -n true 2>/dev/null; then
+              SUDO="sudo -n"
+            else
+              echo "::error::Пользователь $ME не root и без passwordless-sudo. Дай ему sudo без пароля ИЛИ поставь секрет INFINITYS_DOOR_VPS_USER=root."
+              exit 1
+            fi
+            echo "user=$ME sudo='${SUDO:-none(root)}'"
 
             echo "=== deps ==="
             if ! command -v node >/dev/null 2>&1; then
-              curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
-              apt-get install -y nodejs
+              curl -fsSL https://deb.nodesource.com/setup_20.x | $SUDO -E bash -
+              $SUDO apt-get install -y nodejs
             fi
-            command -v pm2 >/dev/null 2>&1 || npm install -g pm2
+            if ! command -v pm2 >/dev/null 2>&1; then $SUDO npm install -g pm2; fi
             if ! command -v nginx >/dev/null 2>&1 || ! command -v certbot >/dev/null 2>&1; then
-              apt-get update -y
-              apt-get install -y nginx certbot python3-certbot-nginx
+              $SUDO apt-get update -y
+              $SUDO apt-get install -y nginx certbot python3-certbot-nginx
             fi
 
             echo "=== deploy files ==="
             TB="$(find /tmp/cf-deploy -name 'app.tar.gz' | head -1)"
             test -n "$TB" || { echo "tarball not found"; exit 1; }
-            mkdir -p "$APP_DIR"
-            rm -rf "$APP_DIR"/* "$APP_DIR"/.next 2>/dev/null || true
-            tar -C "$APP_DIR" -xzf "$TB"
+            $SUDO mkdir -p "$APP_DIR"
+            $SUDO rm -rf "$APP_DIR"/* "$APP_DIR"/.next 2>/dev/null || true
+            $SUDO tar -C "$APP_DIR" -xzf "$TB"
+            $SUDO chown -R "$ME":"$GRP" "$APP_DIR"
             test -f "$APP_DIR/server.js" || { echo "server.js missing after extract"; ls -la "$APP_DIR"; exit 1; }
 
             echo "=== app (pm2) on :$APP_PORT ==="
@@ -139,10 +152,11 @@ jobs:
             pm2 delete content-factory 2>/dev/null || true
             pm2 start server.js --name content-factory --update-env
             pm2 save || true
-            pm2 startup systemd -u root --hp /root >/dev/null 2>&1 || true
+            # автозапуск после ребута (best-effort)
+            $SUDO env PATH=$PATH pm2 startup systemd -u "$ME" --hp "$HOME" >/dev/null 2>&1 || true
 
             echo "=== nginx vhost ==="
-            cat >/etc/nginx/sites-available/content-factory <<NGINX
+            cat <<NGINX | $SUDO tee /etc/nginx/sites-available/content-factory >/dev/null
             server {
                 listen 80;
                 listen [::]:80;
@@ -160,22 +174,22 @@ jobs:
                 }
             }
             NGINX
-            ln -sf /etc/nginx/sites-available/content-factory /etc/nginx/sites-enabled/content-factory
-            rm -f /etc/nginx/sites-enabled/default 2>/dev/null || true
-            nginx -t && systemctl reload nginx
+            $SUDO ln -sf /etc/nginx/sites-available/content-factory /etc/nginx/sites-enabled/content-factory
+            $SUDO rm -f /etc/nginx/sites-enabled/default 2>/dev/null || true
+            $SUDO nginx -t && $SUDO systemctl reload nginx
 
             echo "=== firewall (best-effort) ==="
-            if command -v ufw >/dev/null 2>&1 && ufw status | grep -q "Status: active"; then
-              ufw allow 80/tcp || true; ufw allow 443/tcp || true; ufw allow ${APP_PORT}/tcp || true
+            if command -v ufw >/dev/null 2>&1 && $SUDO ufw status | grep -q "Status: active"; then
+              $SUDO ufw allow 80/tcp || true; $SUDO ufw allow 443/tcp || true; $SUDO ufw allow ${APP_PORT}/tcp || true
             fi
 
             echo "=== SSL (certbot, best-effort — нужна A-запись $DOMAIN -> этот сервер и открытый 80) ==="
-            if certbot --nginx -d "$DOMAIN" --non-interactive --agree-tos -m "$EMAIL" --redirect; then
+            if $SUDO certbot --nginx -d "$DOMAIN" --non-interactive --agree-tos -m "$EMAIL" --redirect; then
               echo "SSL_OK"
             else
               echo "::warning::CERTBOT не прошёл. Проверь DNS A-запись $DOMAIN -> IP сервера и доступность 80 порта, затем перезапусти workflow. Пока доступно по http://$DOMAIN"
             fi
-            systemctl reload nginx || true
+            $SUDO systemctl reload nginx || true
 
             echo "=== health ==="
             sleep 3
