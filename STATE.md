@@ -73,7 +73,13 @@
 - **Окружение:** в `env.manifest.md` добавлены `CONTENT_FACTORY_WEB_URL` + `INGEST_SECRET` (задать при деплое веба). Сеть: домен VPS в Network access → Allowed domains (разово, владелец).
 - **Итог:** производственный контур фабрики (агенты + эстафета + гейты + деплой на веб) ГОТОВ. Осталось добить сам веб-интерфейс (красота/UI раздела «Опубликовано» и чат-зеркало) — следующая фаза.
 
-## ВЕБ РАЗВЁРНУТ НА VPS (2026-11-01) — https://admin.vernatunspeakclub.com
+## ВЕБ РАЗВЁРНУТ НА VPS (2026-11-01) — https://content.vernatunspeakclub.com
+- **Контент-портал ЖИВОЙ:** `https://content.vernatunspeakclub.com` (HTTPS/Let's Encrypt, nginx → внутр. порт 8088). Проверено из облака: `/studio`·`/analytics` = 200, `/api/analytics/snapshot` = JSON (наш апп), `/api/content/ingest` = 401. DNS A content.* → 155.212.187.181 (VPS).
+- ⚠️ **ВАЖНО: `admin.vernatunspeakclub.com` — ЛИЧНЫЙ кабинет владельца** (голосовые комнаты, статика `/home/.../vernatun-admin` + API `/api/lounge/`→8765, порты 443/86). НЕ деплоить туда! Первый деплой по ошибке ушёл на admin → откатили (`restore-admin.yml`), admin вернулся к владельцу. Деплой-workflow перенацелен на content.* и только ручной (workflow_dispatch).
+- Workflows: `deploy-vps.yml` (деплой content, ручной), `inspect-vps.yml` (read-only осмотр nginx), `restore-admin.yml` (снять наш override с admin).
+- **Как обновлять content:** правка в веб/ → пуш → вручную запустить workflow «Deploy content.vernatunspeakclub.com» (или дать команду — запущу). Порт приложения 8088, наружу https.
+
+### (архив) первый деплой был на admin.vernatunspeakclub.com
 - **Платформа ЖИВАЯ на российском VPS владельца**, HTTPS (Let's Encrypt/certbot), nginx → приложение (внутр. порт 8087). Проверено из облака: `/`, `/studio`, `/analytics` = 200.
 - **Авто-деплой через GitHub Actions** (`.github/workflows/deploy-vps.yml`): пуш в ветку → раннер собирает standalone → SSH-доставка на VPS (appleboy) → nginx+certbot+pm2. Из облака Claude SSH закрыт (порт 22), поэтому деплоит робот GitHub.
 - Секреты репо: `INFINITYS_DOOR_VPS_HOST` / `_USER` / `_SSH_KEY` (+ опц. `_PORT`). SSH-порт 22, пользователь не-root (passwordless sudo). Деплой идемпотентен.
