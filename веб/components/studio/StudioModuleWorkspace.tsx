@@ -40,7 +40,6 @@ import type {
   FeedSourceMode,
 } from "@/lib/studio/feed-types";
 import { SCOUT_SNAPSHOT_UPDATED_EVENT } from "@/lib/settings/scout-search-config";
-import { useSessionStore } from "@/lib/session-store";
 import { useStudioStore } from "@/lib/studio-store";
 import { cn } from "@/lib/cn";
 
@@ -71,7 +70,6 @@ function newDraftId(): string {
 export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) {
   const reduceMotion = useReducedMotion();
   const router = useRouter();
-  const role = useSessionStore((s) => s.role);
   const customModules = useStudioStore((s) => s.customModules);
   const hydrateCustomModules = useStudioStore((s) => s.hydrateCustomModules);
   const setSelectedModuleId = useStudioStore((s) => s.setSelectedModuleId);
@@ -354,19 +352,7 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
                 data-testid="module-top-nav"
                 className="flex flex-wrap items-center justify-end gap-2"
               >
-                {/* C-136 — Mesh + Analytics live on module top bar, not sidebar */}
-                {role === "OWNER" ? (
-                  <Link
-                    href={`/studio/${encodeURIComponent(moduleId)}/mesh`}
-                    data-testid="module-top-mesh"
-                    className={cn(
-                      "inline-flex min-h-11 items-center justify-center rounded-md border border-[var(--border-glass)] bg-[var(--bg-elevated)] px-3.5 py-2 text-sm text-[var(--text-primary)] transition-colors",
-                      "hover:border-[color-mix(in_srgb,var(--accent-blue-bright)_40%,var(--border-glass))] hover:text-[var(--accent-blue-bright)]",
-                    )}
-                  >
-                    Команда выпуска
-                  </Link>
-                ) : null}
+                {/* Только результаты: «Аналитика». Mesh/«Команда выпуска» убрана. */}
                 <Link
                   href={`/studio/${encodeURIComponent(moduleId)}/analytics`}
                   data-testid="module-top-analytics"

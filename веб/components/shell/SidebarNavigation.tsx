@@ -9,7 +9,6 @@ import {
   type MenuVerticalItem,
 } from "@/components/ui/menu-vertical";
 import { SidebarResizeHandle } from "@/components/ui/sidebar-resize-handle";
-import { cn } from "@/lib/cn";
 import { useSessionStore } from "@/lib/session-store";
 import { DEFAULT_SIDEBAR_WIDTH } from "@/lib/shell/sidebar-width";
 
@@ -77,7 +76,6 @@ export function SidebarNavigation({
   const pathname = usePathname();
   const router = useRouter();
   const role = useSessionStore((s) => s.role);
-  const setRole = useSessionStore((s) => s.setRole);
   const reduceMotion = useReducedMotion();
   const [dragging, setDragging] = useState(false);
 
@@ -210,32 +208,6 @@ export function SidebarNavigation({
           >
             <MenuVertical items={moduleItems} />
           </nav>
-        </div>
-      </div>
-
-      <div className="space-y-3 border-t border-[var(--border-glass)] px-3 py-4">
-        {/* Local QA role switcher — acceptance only; no SSR-only branch */}
-        <div className="rounded-lg border border-dashed border-[var(--border-glass)] bg-[var(--bg-card)] p-2">
-          <p className="mb-1.5 px-1 font-[family-name:var(--font-mono-jb)] text-[9px] uppercase tracking-wider text-[var(--text-mono)]">
-            Роль QA (локально)
-          </p>
-          <div className="flex gap-1">
-            {(["OWNER", "ADMIN"] as const).map((r) => (
-              <button
-                key={r}
-                type="button"
-                onClick={() => setRole(r)}
-                className={cn(
-                  "flex-1 rounded px-2 py-1.5 font-[family-name:var(--font-mono-jb)] text-[10px] uppercase tracking-wide transition-colors",
-                  role === r
-                    ? "bg-[color-mix(in_srgb,var(--accent-blue)_28%,transparent)] text-[var(--accent-blue-bright)]"
-                    : "text-[var(--text-muted)] hover:bg-[var(--bg-hover)] hover:text-[var(--text-primary)]",
-                )}
-              >
-                {r}
-              </button>
-            ))}
-          </div>
         </div>
       </div>
 
