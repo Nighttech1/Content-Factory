@@ -5,6 +5,8 @@ name: Inspect VPS nginx (read-only)
 
 on:
   workflow_dispatch: {}
+  push:
+    paths: [".github/workflows/inspect-vps.yml"]
 
 jobs:
   inspect:
