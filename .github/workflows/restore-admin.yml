@@ -1,0 +1,40 @@
+name: Restore admin vhost (remove our override)
+
+# Удаляет ТОЛЬКО наш конфиг content-factory, который перекрыл личный кабинет владельца
+# на admin.vernatunspeakclub.com. Файл владельца admin.vernatunspeakclub.com.conf НЕ трогаем.
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths: [".github/workflows/restore-admin.yml"]
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove our vhost, restore admin
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.INFINITYS_DOOR_VPS_HOST }}
+          username: ${{ secrets.INFINITYS_DOOR_VPS_USER }}
+          key: ${{ secrets.INFINITYS_DOOR_VPS_SSH_KEY }}
+          port: ${{ secrets.INFINITYS_DOOR_VPS_PORT || 22 }}
+          command_timeout: "4m"
+          script: |
+            if [ "$(id -u)" = "0" ]; then SUDO=""; elif sudo -n true 2>/dev/null; then SUDO="sudo -n"; else SUDO=""; fi
+            echo "=== sites-enabled ДО ==="; ls -la /etc/nginx/sites-enabled/
+            # убираем ТОЛЬКО наш конфиг (его симлинк и файл). Конфиг владельца не трогаем.
+            $SUDO rm -f /etc/nginx/sites-enabled/content-factory
+            $SUDO rm -f /etc/nginx/sites-available/content-factory
+            echo "=== sites-enabled ПОСЛЕ ==="; ls -la /etc/nginx/sites-enabled/
+            echo "=== nginx -t ==="; $SUDO nginx -t
+            $SUDO systemctl reload nginx
+            echo "=== порты (ждём 80/443/86 владельца) ==="
+            ($SUDO ss -tlnp 2>/dev/null || ss -tln) | grep -E ':80 |:443 |:86 |:8087' || true
+            echo "=== проверка: admin отдаёт кабинет владельца (первые байты) ==="
+            curl -s --max-time 10 -H "Host: admin.vernatunspeakclub.com" http://127.0.0.1/ | head -c 400 || true
+            echo
+            # наше приложение на 8087 больше наружу не смотрит; остановим, перезапустим на content позже
+            pm2 delete content-factory 2>/dev/null || true
+            pm2 save 2>/dev/null || true
+            echo "RESTORE_DONE"
