@@ -1,0 +1,39 @@
+name: Inspect VPS nginx (read-only)
+
+# Только ЧИТАЕТ конфигурацию nginx на VPS, ничего не меняет.
+# Нужно, чтобы безопасно вернуть admin.vernatunspeakclub.com к личному кабинету владельца.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inspect (read-only)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.INFINITYS_DOOR_VPS_HOST }}
+          username: ${{ secrets.INFINITYS_DOOR_VPS_USER }}
+          key: ${{ secrets.INFINITYS_DOOR_VPS_SSH_KEY }}
+          port: ${{ secrets.INFINITYS_DOOR_VPS_PORT || 22 }}
+          command_timeout: "4m"
+          script: |
+            if [ "$(id -u)" = "0" ]; then SUDO=""; elif sudo -n true 2>/dev/null; then SUDO="sudo -n"; else SUDO=""; fi
+            echo "=== sites-enabled ==="; ls -la /etc/nginx/sites-enabled/ 2>/dev/null
+            echo "=== sites-available ==="; ls -la /etc/nginx/sites-available/ 2>/dev/null
+            echo "=== conf.d ==="; ls -la /etc/nginx/conf.d/ 2>/dev/null
+            echo "=== server_name по всем конфигам ==="; grep -rn "server_name" /etc/nginx/ 2>/dev/null | grep -v "#"
+            echo "=== proxy_pass / root по включённым ==="; grep -rn "proxy_pass\|root " /etc/nginx/sites-enabled/ /etc/nginx/conf.d/ 2>/dev/null | grep -v "#"
+            echo "=== файлы, упоминающие admin.vernatunspeakclub.com ==="
+            grep -rln "admin.vernatunspeakclub.com" /etc/nginx/ 2>/dev/null
+            echo "=== содержимое конфигов с admin (и нашего content-factory) ==="
+            for f in $(grep -rln "admin.vernatunspeakclub.com" /etc/nginx/ 2>/dev/null) /etc/nginx/sites-available/content-factory /etc/nginx/sites-enabled/content-factory; do
+              echo "----- FILE: $f -----"; cat "$f" 2>/dev/null; echo
+            done
+            echo "=== default vhost присутствует? ==="
+            ls -la /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default 2>/dev/null || echo "default нет"
+            echo "=== кто слушает порты ==="
+            $SUDO ss -tlnp 2>/dev/null | grep -E ':80 |:443 |:808|:88 |:87 ' || ss -tln 2>/dev/null | grep -E ':80 |:443 |:808|:88 |:87 ' || true
+            echo "=== pm2 (наш app) ==="; pm2 list 2>/dev/null || true
+            echo "INSPECT_DONE"
