@@ -1,0 +1,165 @@
+name: Deploy admin.vernatunspeakclub.com
+
+# Робот GitHub (у него SSH открыт) собирает приложение на раннере и выкладывает на VPS.
+# Из облака Claude SSH закрыт (порт 22), поэтому деплой идёт здесь.
+# Секреты репозитория: VPS_HOST (IP), VPS_USER (напр. root), VPS_SSH_KEY (приватный ключ), VPS_PORT (опц., по умолч. 22).
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: ["claude/lucid-bohr-j6mlrh"]
+    paths:
+      - "веб/**"
+      - ".github/workflows/deploy-vps.yml"
+
+concurrency:
+  group: deploy-vps
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build (standalone)
+        working-directory: веб
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+        run: |
+          set -e
+          npm ci
+          npm run build
+          test -d .next/standalone || { echo "::error::.next/standalone не создан — standalone-сборка не удалась"; exit 1; }
+
+      - name: Package bundle
+        working-directory: веб
+        run: |
+          set -e
+          rm -rf ../deploy && mkdir -p ../deploy/app
+          cp -r .next/standalone/. ../deploy/app/
+          mkdir -p ../deploy/app/.next
+          cp -r .next/static ../deploy/app/.next/static
+          if [ -d public ]; then cp -r public ../deploy/app/public; fi
+          test -f ../deploy/app/server.js || { echo "::error::server.js не найден в standalone"; ls -la ../deploy/app; exit 1; }
+          tar -C ../deploy/app -czf ../deploy/app.tar.gz .
+          echo "bundle size:"; du -h ../deploy/app.tar.gz
+
+      - name: Recon VPS (проверка связи)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT || 22 }}
+          command_timeout: "3m"
+          script: |
+            echo "=== connected ==="
+            uname -a || true
+            cat /etc/os-release 2>/dev/null | head -2 || true
+            echo "node: $(command -v node && node -v || echo none)"
+            echo "nginx: $(command -v nginx || echo none)"
+            echo "pm2: $(command -v pm2 || echo none)"
+            echo "whoami: $(whoami)"
+
+      - name: Copy bundle to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT || 22 }}
+          source: "deploy/app.tar.gz"
+          target: "/tmp/cf-deploy"
+          overwrite: true
+
+      - name: Provision & restart
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT || 22 }}
+          command_timeout: "25m"
+          script: |
+            set -e
+            export DEBIAN_FRONTEND=noninteractive
+            DOMAIN="admin.vernatunspeakclub.com"
+            APP_PORT="87"
+            APP_DIR="/opt/content-factory"
+            EMAIL="admin@vernatunspeakclub.com"
+
+            echo "=== deps ==="
+            if ! command -v node >/dev/null 2>&1; then
+              curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+              apt-get install -y nodejs
+            fi
+            command -v pm2 >/dev/null 2>&1 || npm install -g pm2
+            if ! command -v nginx >/dev/null 2>&1 || ! command -v certbot >/dev/null 2>&1; then
+              apt-get update -y
+              apt-get install -y nginx certbot python3-certbot-nginx
+            fi
+
+            echo "=== deploy files ==="
+            TB="$(find /tmp/cf-deploy -name 'app.tar.gz' | head -1)"
+            test -n "$TB" || { echo "tarball not found"; exit 1; }
+            mkdir -p "$APP_DIR"
+            rm -rf "$APP_DIR"/* "$APP_DIR"/.next 2>/dev/null || true
+            tar -C "$APP_DIR" -xzf "$TB"
+            test -f "$APP_DIR/server.js" || { echo "server.js missing after extract"; ls -la "$APP_DIR"; exit 1; }
+
+            echo "=== app (pm2) on :$APP_PORT ==="
+            cd "$APP_DIR"
+            export PORT="$APP_PORT" HOSTNAME="0.0.0.0" NODE_ENV="production"
+            pm2 delete content-factory 2>/dev/null || true
+            pm2 start server.js --name content-factory --update-env
+            pm2 save || true
+            pm2 startup systemd -u root --hp /root >/dev/null 2>&1 || true
+
+            echo "=== nginx vhost ==="
+            cat >/etc/nginx/sites-available/content-factory <<NGINX
+            server {
+                listen 80;
+                listen [::]:80;
+                server_name $DOMAIN;
+                client_max_body_size 50m;
+                location / {
+                    proxy_pass http://127.0.0.1:$APP_PORT;
+                    proxy_http_version 1.1;
+                    proxy_set_header Host \$host;
+                    proxy_set_header X-Real-IP \$remote_addr;
+                    proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                    proxy_set_header X-Forwarded-Proto \$scheme;
+                    proxy_set_header Upgrade \$http_upgrade;
+                    proxy_set_header Connection "upgrade";
+                }
+            }
+            NGINX
+            ln -sf /etc/nginx/sites-available/content-factory /etc/nginx/sites-enabled/content-factory
+            rm -f /etc/nginx/sites-enabled/default 2>/dev/null || true
+            nginx -t && systemctl reload nginx
+
+            echo "=== firewall (best-effort) ==="
+            if command -v ufw >/dev/null 2>&1 && ufw status | grep -q "Status: active"; then
+              ufw allow 80/tcp || true; ufw allow 443/tcp || true; ufw allow ${APP_PORT}/tcp || true
+            fi
+
+            echo "=== SSL (certbot, best-effort — нужна A-запись $DOMAIN -> этот сервер и открытый 80) ==="
+            if certbot --nginx -d "$DOMAIN" --non-interactive --agree-tos -m "$EMAIL" --redirect; then
+              echo "SSL_OK"
+            else
+              echo "::warning::CERTBOT не прошёл. Проверь DNS A-запись $DOMAIN -> IP сервера и доступность 80 порта, затем перезапусти workflow. Пока доступно по http://$DOMAIN"
+            fi
+            systemctl reload nginx || true
+
+            echo "=== health ==="
+            sleep 3
+            curl -s -o /dev/null -w "local :$APP_PORT -> %{http_code}\n" "http://127.0.0.1:$APP_PORT/studio" || true
+            pm2 list || true
+            echo "DEPLOY_DONE"
