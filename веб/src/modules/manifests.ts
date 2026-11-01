@@ -9,6 +9,7 @@ import { manifest as clubReels } from "@/modules/club-reels/manifest";
 import { manifest as aestheticGraphics } from "@/modules/aesthetic-graphics/manifest";
 import { manifest as cartoonReels } from "@/modules/cartoon-reels/manifest";
 import { manifest as heygenReels } from "@/modules/heygen-reels/manifest";
+import { manifest as youtubeCartoon } from "@/modules/youtube-cartoon/manifest";
 import { manifest as siteArticles } from "@/modules/site-articles/manifest";
 import { manifest as tgArticles } from "@/modules/tg-articles/manifest";
 
@@ -18,6 +19,7 @@ const CORE_MANIFESTS: readonly ContentModuleManifest[] = [
   clubReels,
   cartoonReels,
   heygenReels,
+  youtubeCartoon,
   aestheticGraphics,
   siteArticles,
   tgArticles,

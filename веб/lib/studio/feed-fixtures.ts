@@ -476,6 +476,12 @@ const FEEDS: Readonly<Record<FeedCoreModuleId, ModuleFeed>> = {
     competitors: [],
   },
 
+  // YouTube: данные приедут от YouTube API / агентов; пока пусто.
+  "youtube-cartoon": {
+    ours: [],
+    competitors: [],
+  },
+
   "aesthetic-graphics": {
     ours: [
       withPicsumThumb("cf-ag-ours-1", {

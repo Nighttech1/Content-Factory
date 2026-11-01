@@ -53,6 +53,7 @@ const MODULE_ITEMS: { id: string; label: string }[] = [
   { id: "club-reels", label: "Рилс" },
   { id: "cartoon-reels", label: "Мультрилсы" },
   { id: "heygen-reels", label: "HeyGen-рилсы" },
+  { id: "youtube-cartoon", label: "YouTube" },
   { id: "aesthetic-graphics", label: "Графика" },
   { id: "site-articles", label: "Статьи · сайт" },
   { id: "tg-articles", label: "Статьи · TG" },

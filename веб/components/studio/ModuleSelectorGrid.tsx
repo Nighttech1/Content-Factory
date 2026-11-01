@@ -11,6 +11,7 @@ import {
   Palette,
   Send,
   Video,
+  PlayCircle,
 } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import {
@@ -33,6 +34,7 @@ const MODULE_ICONS: Record<
   "aesthetic-graphics": Palette,
   "cartoon-reels": Clapperboard,
   "heygen-reels": Video,
+  "youtube-cartoon": PlayCircle,
   "site-articles": Newspaper,
   "tg-articles": Send,
 };

@@ -16,6 +16,7 @@ import { contentModule as clubReels } from "@/modules/club-reels";
 import { contentModule as aestheticGraphics } from "@/modules/aesthetic-graphics";
 import { contentModule as cartoonReels } from "@/modules/cartoon-reels";
 import { contentModule as heygenReels } from "@/modules/heygen-reels";
+import { contentModule as youtubeCartoon } from "@/modules/youtube-cartoon";
 import { contentModule as siteArticles } from "@/modules/site-articles";
 import { contentModule as tgArticles } from "@/modules/tg-articles";
 import { createRemoteFromRecord } from "@/modules/custom-remote/factory";
@@ -117,6 +118,7 @@ function registerCoreModules(): void {
   registerModule(clubReels);
   registerModule(cartoonReels);
   registerModule(heygenReels);
+  registerModule(youtubeCartoon);
   registerModule(aestheticGraphics);
   registerModule(siteArticles);
   registerModule(tgArticles);

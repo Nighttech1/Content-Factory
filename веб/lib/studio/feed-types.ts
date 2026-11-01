@@ -70,6 +70,7 @@ export const FEED_CORE_MODULE_IDS = [
   "aesthetic-graphics",
   "cartoon-reels",
   "heygen-reels",
+  "youtube-cartoon",
 ] as const;
 
 export type FeedCoreModuleId = (typeof FEED_CORE_MODULE_IDS)[number];

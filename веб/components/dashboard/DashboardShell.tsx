@@ -14,6 +14,7 @@ import {
   TrendingUp,
   Users,
   Video,
+  PlayCircle,
 } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { FunnelChart } from "@/components/analytics/FunnelChart";
@@ -47,6 +48,7 @@ const MODULES: { id: string; label: string; icon: Stat["icon"] }[] = [
   { id: "club-reels", label: "Рилс", icon: Video },
   { id: "cartoon-reels", label: "Мультрилсы", icon: Clapperboard },
   { id: "heygen-reels", label: "HeyGen-рилсы", icon: Video },
+  { id: "youtube-cartoon", label: "YouTube", icon: PlayCircle },
   { id: "aesthetic-graphics", label: "Графика", icon: Palette },
   { id: "site-articles", label: "Статьи · сайт", icon: Newspaper },
   { id: "tg-articles", label: "Статьи · TG", icon: Send },

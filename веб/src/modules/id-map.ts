@@ -10,6 +10,7 @@ export type CanonicalModuleId =
   | "aesthetic-graphics"
   | "cartoon-reels"
   | "heygen-reels"
+  | "youtube-cartoon"
   | "site-articles"
   | "tg-articles";
 
@@ -47,6 +48,7 @@ const ALIAS_LOOKUP: Readonly<Record<string, CanonicalModuleId>> = {
   "aesthetic-graphics": "aesthetic-graphics",
   "cartoon-reels": "cartoon-reels",
   "heygen-reels": "heygen-reels",
+  "youtube-cartoon": "youtube-cartoon",
   "site-articles": "site-articles",
   "tg-articles": "tg-articles",
 };
