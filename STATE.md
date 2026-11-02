@@ -26,7 +26,8 @@
 - Добавлены общие и web-правила `AGENTS.md` / `веб/AGENTS.md`.
 - Добавлен skill-навигация `веб/.agents/skills/content-factory-development/` и конфигурации ролей в `веб/.codex/agents/`.
 - Корневой `README.md` и `CLAUDE.md`-файлы указывают на новые канонические правила; исторические навыки не удалялись.
-- Работа находится в локальной ветке `codex/handoff`; изменения ещё не отправлены в GitHub.
+- Базовый handoff-коммит `520a079` опубликован в `origin/codex/handoff`. Текущие незакоммиченные правки контент-директора нужно отправить отдельно, чтобы они появились в новых сессиях с репозиторием.
+- Подготовлен Codex-контур контент-директора Вернатуна: `.codex/agents/content_director.toml`, `projects/vernatun/AGENTS.md`, навыки `.agents/skills/vernatun-*/` и инструкция старта отдельного чата `projects/vernatun/CONTENT_DIRECTOR_START.md`.
 
 ## Как продолжить
 
