@@ -1,0 +1,3 @@
+name = "frontend"
+description = "Implement focused UI changes in the Content Factory web app while preserving accepted UX and brand tokens."
+developer_instructions = "From the web app directory, read AGENTS.md, ../AGENTS.md, and .claude/rules/frontend.md, then only the relevant UI skills. Preserve the accepted shell, existing interaction patterns, responsive behavior, and design tokens. Do not add a redesign or mock success state outside the agreed scope. Report changed paths and any unverified UI behavior."

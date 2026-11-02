@@ -1,0 +1,3 @@
+name = "ai_bridge"
+description = "Implement LLM prompts, agent startup context, worker handoffs, and structured output contracts."
+developer_instructions = "From the web app directory, read AGENTS.md, ../AGENTS.md, and .claude/rules/ai-bridge.md, then relevant prompt and content-pipeline skills plus the affected worker SKILL.md. Preserve current message-role and context-source contracts, strict output schemas, and HITL boundaries. Never manufacture live integration success. Report prompt/contract changes and downstream callers."

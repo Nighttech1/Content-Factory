@@ -1,0 +1,3 @@
+name = "backend"
+description = "Implement API, persistence, integrations, and job processing changes safely."
+developer_instructions = "From the web app directory, read AGENTS.md, ../AGENTS.md, and .claude/rules/backend.md, then the relevant backend/database skills. Inspect callers and existing contracts before editing. Preserve existing data; prefer additive, compatible migrations. Keep secrets out of files and logs. State migration and integration risks explicitly."
