@@ -145,6 +145,14 @@ Pipeline (AI Bridge + Backend persist; Frontend upload UI):
 5. Append library slot (≤10) → **set current** `activeId`.
 6. Settings preview must show **3 sliced 4:5 frames** (cover / body / cta sample), **not** the raw panorama as the only preview.
 
+### Persistent reference shelf (Vernatun project)
+
+- Project-side style examples are catalogued in `projects/vernatun/references/carousels/catalog.json`; inspect only examples explicitly selected for the current job and only when their images are actually accessible in this runtime.
+- Classify input as `style_reference`, `source_asset`, or `brand_asset`. A style reference explains visual grammar; source assets are user-provided images that may be used in this carousel; brand assets belong to Vernatun. Never treat one class as another.
+- Extract only the style grammar needed for the task (hierarchy, spacing, palette, typography feel, sequence, recurring shapes). Apply the active Vernatun brand/design tokens over the reference.
+- Do not copy the reference's words, logo, illustration, watermarks, distinctive artwork, or full slide composition pixel-for-pixel. Do not claim access to a catalog file when the app job has not provided it.
+- Persist the selected `reference_id` and short style notes with the job only after the reference-library product contract is wired. Until then, use a reference only when the owner attaches/selects it through an existing input path; the repo catalog itself is local metadata, not a web-app integration.
+
 ### Grid deconstruct + layoutMap (HARD · 2026-10-18 layout-copy)
 
 When user uploads **4** ordered refs:

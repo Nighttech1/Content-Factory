@@ -8,6 +8,8 @@
 2. Прочитай `brand/brief.md` и относящуюся к задаче память в `memory/`.
 3. Для стратегии и планирования прочитай `brand/audit-soc.md`, текущий план и `content-plan/_TEMPLATE.md`.
 4. Для работы в роли Контент-директора используй `.codex/agents/content_director.toml` в корне репозитория и профильные навыки `.agents/skills/vernatun-*/SKILL.md`.
+5. Для коротких видео используй `.codex/agents/reels_editor.toml`, `projects/vernatun/.claude/agents/reel-lead.md` и навык `.agents/skills/vernatun-reels-production/SKILL.md`. Для каруселей — `.codex/agents/carousel_designer.toml`, `веб/workers/designer-carousel/SKILL.md` и `.agents/skills/vernatun-carousel-reference/SKILL.md`.
+6. Стилевые примеры лежат отдельно в `projects/vernatun/references/reels/` и `projects/vernatun/references/carousels/`. Файлы в этих папках игнорируются Git; `catalog.json` хранит только метаданные. Для общей полки между устройствами дождись реализации внешнего media storage по `веб/docs/AGENT_MEDIA_REFERENCES_SPEC.md`.
 
 ## Продуктовые инварианты
 
