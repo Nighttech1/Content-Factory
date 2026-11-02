@@ -100,3 +100,9 @@
 ## Как возобновить в новой сессии
 1. Прочитать этот файл + `PLAN.md` + память нужного агента.
 2. Продолжить с раздела «В работе / следующее».
+
+## Доска директора · 2026-11-02 (Codex)
+- Работа подготовлена в `codex/content-director-board` от `claude/lucid-bohr-j6mlrh` (`3f63e77`); исходная среда была на устаревшем main.
+- HTML: `веб/public/content-board/index.html` — стратегия и снимок календаря 70 единиц, редактирование карточек, localStorage, экспорт/импорт JSON. Браузерные проверки пройдены. Общая синхронизация не подключена.
+- Штатный деплой найден: `.github/workflows/deploy-vps.yml` → `content.vernatunspeakclub.com`; workflow не запускался (сетевой CONNECT 403 к api.github.com). Требования сети сохранены в черновик настроек среды.
+- Подробности и границы проверки: `projects/vernatun/content-board/REPO-AUDIT.md`. Схема облачных триггеров остаётся из `shared/automation/README.md`; доступного scheduled-task инструмента в текущем чате нет.
