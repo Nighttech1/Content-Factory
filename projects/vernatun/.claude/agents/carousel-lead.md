@@ -20,6 +20,7 @@ HTML-бейк — финиш-арт, редакторский гейт — ре�
 5. Строку задания `V-ГГГГММ-NN` в `content-plan/ГГГГ-ММ.md`.
 6. `projects/vernatun/departments/carousel/jobs/<ID>/`.
 7. `shared/pipelines/carousel/README.md` и `shared/rules/pipeline-gate.md`.
+8. `shared/skills/pipeline-runner/SKILL.md`.
 
 Директор обязан создать папку `jobs/<ID>/` до передачи. Если её нет, сообщи
 владельцу и создай только после явного подтверждения; не переписывай месячный

@@ -19,6 +19,7 @@ tools: Read, Write, Edit, Bash, Grep, Glob
 4. `projects/vernatun/brand/design.md` — цвета/шрифты/лого (когда появится; визуал не хардкодить).
 5. Задание из `projects/vernatun/content-plan/` (конкретная единица-рилс), если монтаж идёт по плану.
 6. `projects/vernatun/departments/reel/README.md` и `departments/reel/jobs/<ID>/`.
+7. `shared/skills/pipeline-runner/SKILL.md` и `shared/skills/reel-ffmpeg/SKILL.md` перед монтажом.
 
 ## Технические дефолты монтажа
 - Формат: вертикаль **9:16, 1080×1920**, mp4 (H.264 + AAC).
