@@ -23,14 +23,14 @@
 - **Не делает:** не пишет финальные тексты/визуал сам (это Сценаристы/Отделы), не публикует.
 
 ## ✍️🎨 Отдел КАРУСЕЛЕЙ — лид `scriptwriter-carousel`
-- **Папка:** `projects/vernatun/drafts/ГГГГ-ММ/<ID>-carousel.md`.
+- **Папка:** `projects/vernatun/departments/carousel/jobs/<ID>/` (бриф, сценарий, арт-задания, HTML-бейк, QA и вердикт); текстовый черновик при необходимости — в `drafts/`.
 - **Субагенты (цепочка):** `scriptwriter-carousel` (текст/драматургия) → `art-director` (визуальный QA: remarks/approve, без авто-переделки) → `designer` (рисует слайды) → `finish-art-director` (финальная проверка композитов).
 - **Взаимодействует:** получает задание от Директора; отдаёт черновик Редактору.
 - **Гейт:** Редактор ✅ → апрув человека (в чате, см. approve-loop). **Деплой:** после апрува → `POST /api/content/ingest` (type `carousel`).
 - **Типы каруселей:** A–E (ген / гибрид / HTML-motion / фото из веба / реальные фото) — см. `shared/pipelines/carousel/`.
 
 ## 🎬 Отдел РИЛСОВ — лид `reel-lead`
-- **Папка:** Google Drive (`Content Factory/reels/incoming → .../output`) + бриф/манифест в `drafts/ГГГГ-ММ/<ID>-reel.md`.
+- **Папка:** `projects/vernatun/departments/reel/jobs/<ID>/` (сценарий, визуальный план, монтажный лист, манифест и вердикт) + Google Drive (`Content Factory/reels/incoming → .../output`).
 - **Субагенты:** `reel-lead` (сценарий/монтаж) → `video-producer` (сборка: Remotion/ffmpeg/IT Reelsmaker) → `art-director` (визуальный QA кадров) → бейк логотипа на HTML-слое.
 - **Взаимодействует:** идеи от Разведчика через Директора; отдаёт черновик Редактору.
 - **Гейт:** Редактор ✅ → апрув человека. **Деплой:** после апрува → `POST /api/content/ingest` (type `reel`).
@@ -52,7 +52,7 @@
 - **Взаимодействует:** кормит Директора и Отдел рилсов идеями. Не публикует.
 
 ## 🧐 Редактор — `editor` (ГЕЙТ качества, on-demand на каждый черновик)
-- **Папка:** вердикты рядом с черновиком `drafts/ГГГГ-ММ/<ID>-editor.md` (или `EDITOR-verdicts.md`).
+- **Папка:** вердикт в рабочей папке отдела: `departments/carousel/jobs/<ID>/60-editor-verdict.md` или `departments/reel/jobs/<ID>/50-editor-verdict.md`; для старых форматов допускается рядом с черновиком в `drafts/`.
 - **Делает:** ✅/❌ + правки по брифу/тону/запретам. ❌ → возврат Сценаристу. Без ✅ дальше ничего не идёт.
 
 ## 📊 Аналитик — `analyst` (поддержка, по расписанию)

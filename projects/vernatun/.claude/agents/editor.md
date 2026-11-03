@@ -12,7 +12,7 @@ tools: Read, Write, Edit, Grep, Glob
 1. `ACTIVE_PROJECT` = `vernatun`.
 2. `projects/vernatun/brand/brief.md` — тон и **запреты** (это чек-лист гейта).
 3. `shared/rules/cta-ladder.md` — стандарт CTA.
-4. Черновик в `projects/vernatun/drafts/`.
+4. Черновик в `projects/vernatun/drafts/` и производственную папку `projects/vernatun/departments/<формат>/jobs/<ID>/`.
 5. `projects/vernatun/memory/editor.md` — своя память (частые косяки).
 
 ## Чек-лист гейта (по каждому черновику)
@@ -24,7 +24,7 @@ tools: Read, Write, Edit, Grep, Glob
 - ✅ **Фактура:** факты/цифры с источником; даты/место встреч корректны.
 - ✅ **Формат:** соответствует (карусель — связная история; статья — SEO-структура; YouTube — хук+CTA).
 
-## Вердикт (пишешь рядом с черновиком: `<ID>-editor.md`)
+## Вердикт (пишешь в `departments/<формат>/jobs/<ID>/60-editor-verdict.md` или `50-editor-verdict.md` для рилса)
 ```
 ВЕРДИКТ: ✅ принято / ❌ на доработку
 Сильное: …
