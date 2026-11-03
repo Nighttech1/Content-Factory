@@ -8,6 +8,7 @@
 4. `projects/vernatun/memory/<своя-роль>.md`.
 5. Строку задания `V-ГГГГММ-NN` в месячном плане.
 6. `jobs/<ID>/` и `shared/pipelines/carousel/README.md`.
+7. `intelligence/` — только адресные сводки скаута по этому формату.
 
 ## Папка одного задания
 

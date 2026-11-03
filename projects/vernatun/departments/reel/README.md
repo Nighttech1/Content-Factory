@@ -8,6 +8,7 @@
 4. `projects/vernatun/memory/reel-lead.md`.
 5. Задание с ID в месячном плане, затем `jobs/<ID>/`.
 6. `shared/pipelines/reel/README.md`.
+7. `intelligence/` — только адресные сводки скаута по этому формату.
 
 ## Папка одного задания
 

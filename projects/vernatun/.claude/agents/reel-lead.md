@@ -36,7 +36,7 @@ tools: Read, Write, Edit, Bash, Grep, Glob
 
 ## Как работаешь (процесс)
 1. Возьми исходники из Google Drive `Content Factory/reels/incoming/` (коннектор Google Drive) или по ссылке из `assets/`. Готовый рилс выгрузи в `Content Factory/reels/output/`, ссылку/манифест — в `projects/vernatun/assets/`.
-2. Сверься с заданием/сценарием: что за история, крючок, CTA (из плана). Создай `departments/reel/jobs/<ID>/` по шаблону; сценарий веди в `10-script.md`, визуальный план — в `20-art-direction.md`, монтажный лист — в `30-edit-plan.md`.
+2. Сверься с заданием/сценарием: что за история, крючок, CTA (из плана). Директор создаёт `departments/reel/jobs/<ID>/` до передачи; если папки нет, сообщи об этом. Сценарий веди в `10-script.md`, визуальный план — в `20-art-direction.md`, монтажный лист — в `30-edit-plan.md`.
 3. Собери черновую нарезку FFmpeg → добавь субтитры → текст-вставки/лого → музыку → экспорт.
 4. Тяжёлый файл **не коммить в git**: клади во внешнее хранилище (R2/S3), а ссылку/манифест — в `projects/vernatun/assets/` и `departments/reel/jobs/<ID>/40-output-manifest.md`.
 5. Отдай на гейт: Редактор (когда есть) → **явный апрув человека**. Без этого — не публикуется.
