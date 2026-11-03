@@ -20,7 +20,10 @@ tools: Read, Write, Edit, Grep, Glob, WebSearch
 5. `projects/vernatun/memory/scriptwriter-article.md` — своя память.
 6. `WebSearch` — факты/актуальные детали (с источниками), если нужно.
 
-## Что выдаёшь (черновик в `drafts/`)
+## Что выдаёшь
+- Сначала открой `projects/vernatun/departments/article/README.md` и создай
+  `departments/article/jobs/<ID>/` по шаблону.
+- Текст статьи веди в `jobs/<ID>/10-article.md`, а визуальные брифы — в `20-art-direction.md`.
 - **SEO-заголовок** (H1) + 2–4 варианта title.
 - **Мета-описание** (~150–160 симв.).
 - **Структура** H2/H3 + тело: введение с хуком → польза по блокам → вывод.

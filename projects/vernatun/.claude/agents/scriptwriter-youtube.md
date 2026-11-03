@@ -19,7 +19,10 @@ tools: Read, Write, Edit, Grep, Glob, WebSearch
 4. Задание из `content-plan/ГГГГ-ММ.md` (тема/канал=YouTube/CTA/дата).
 5. `projects/vernatun/memory/scriptwriter-youtube.md` — своя память.
 
-## Что выдаёшь (черновик в `drafts/`)
+## Что выдаёшь
+- Сначала открой `projects/vernatun/departments/youtube/README.md` и создай
+  `departments/youtube/jobs/<ID>/` по шаблону.
+- Сценарий веди в `jobs/<ID>/10-script.md`, а дальнейший план производства — в `20-production-plan.md`.
 - **Сценарий:** хук (0–15 сек) → блоки по смыслу (тайм-коды ориентир) → вывод → CTA.
 - **Заголовок** (2–3 варианта, цепляющие, без кликбейта-обмана).
 - **Описание** (первые 1–2 строки важны) + ссылки (TG, встречи, комнаты).
