@@ -62,6 +62,13 @@ Workflow запускается только вручную. Нет cron, push/P
 `gh run view <run_id>` и `gh run download <run_id> --dir work/<run_id>`.
 Артефакт `scout-<run_id>-<attempt>` содержит `snapshot.json`, хранится 30 дней.
 
+Транспорт проверен 2026-11-04: run `41809343795`, режим `check`, успешное
+скачивание артефакта через GitHub-коннектор. Прямой CLI download получил 403
+на Azure Blob; при таком отказе использовать коннектор, который возвращает
+временную ссылку на ZIP. Не использовать инструмент загрузки Sediment для
+File Service ID; скачать ZIP по выданной ссылке в `work/`, без вывода ссылки
+в отчёт. Эта проверка не подтверждает работоспособность YouTube/Apify API.
+
 Проверить `status=collected`, report ID, время UTC, repository, SHA, run ID/attempt,
 source URLs и состав выборки. `presence_checked_not_authenticated` — только
 проверка наличия; `failed` — сбор не состоялся. Failed/partial не объявлять успехом.
