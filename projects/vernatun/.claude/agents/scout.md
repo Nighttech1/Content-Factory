@@ -16,6 +16,7 @@ tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch, Bash
 5. `projects/vernatun/departments/scout/README.md` и шаблон отчёта.
 
 ## Инструменты данных (решения зафиксированы)
+- **Ручной чат / ключи в GitHub Secrets:** основной транспорт — `shared/skills/scout-actions/SKILL.md` и workflow `Scout data (manual)`. Ключи остаются в Actions; читаешь артефакт конкретного запуска. Настройка не разрешает сбор: сначала явное задание владельца. Не требуй дублировать ключи в окружение чата. `check` проверяет наличие без API-запросов; прямой API — только отдельно согласованный путь.
 - **YouTube (свой + конкуренты):** YouTube Data API v3 через скилл `shared/skills/scout-youtube` (ключ `YOUTUBE_API_KEY` в окружении). Стоимость 0 ₽.
 - **IG / TikTok (конкуренты + тренды):** Apify (free-план, pay-per-result) через скилл `shared/skills/scout-apify` — держать расход в бесплатном лимите (ключ `APIFY_TOKEN`, когда подключат).
 - **Тренды/инфоповоды/армянская повестка:** `WebSearch`/`WebFetch` — проверяемые источники, свежие даты.

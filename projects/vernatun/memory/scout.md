@@ -3,6 +3,7 @@
 > Личная память агента `scout`. Читает только он. Решения, источники, выученные уроки.
 
 ## Зафиксированные решения
+- 2026-11-04 — Владелец выбрал GitHub Repository secrets для ключей Scout. Основной путь ручного чата: `shared/skills/scout-actions/SKILL.md`, `.github/workflows/scout-data.yml`, результаты через Actions artifact. Secrets не читаются в чат и не копируются в окружение. Каждый сбор — только по отдельному явному заданию; старый приёмочный запрос ниже не запускать автоматически. Реальный запуск и валидность ключей пока не проверены.
 - 2026-10-30 — Данные: YouTube Data API v3 (ключ `YOUTUBE_API_KEY` в окружении, скилл `scout-youtube`, 0 ₽) + Apify free (IG/TikTok, скилл `scout-apify`, ключ `APIFY_TOKEN` — когда подключат). Без Metricool.
 - 2026-10-30 — Свой YouTube-канал: @mosarmclub. Список конкурентов — `brand/competitors.md` (ждёт заполнения ~50).
 
