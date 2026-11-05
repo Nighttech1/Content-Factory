@@ -23,3 +23,21 @@ Extract reusable mechanics: opening pattern, payoff, pacing, visual structure, a
 2. Summary to the director with three to five evidence-linked findings.
 3. Only relevant short briefs in each department's `intelligence/` folder.
 4. Separate sections for observed facts, interpretation, recommendation and uncertainty.
+
+## Department recommendation briefs (owner request, 2026-11-05)
+
+Use `projects/vernatun/departments/scout/reports/_DEPARTMENT_BRIEF_TEMPLATE.md`.
+For each applicable specific finding, create a short recommendation in the target
+department's `intelligence/`, linking the full report. Include the content format
+and subtype, audience barrier, observed evidence, original adaptation, needed
+assets/rights, confidence, unknowns and a measurable hypothesis. Distinguish an
+editorial form from a production type. For carousels use the current A–E definitions;
+for reels use filmed/faceless/viral adaptation; long YouTube and Shorts have separate
+departments. Do not invent a subtype registry for articles.
+
+These are Scout proposals, not the director's `00-brief.md` or approval to produce.
+The director prioritizes and creates `V-…` jobs; department leads own final scripts,
+art direction and production. Handoff between chats remains manual via the owner.
+External plugin cadences, paid data tools and publishing commands do not override
+the owner's budget or authorization. Community claims require primary-source
+checks and must not be described as independently proven performance.
