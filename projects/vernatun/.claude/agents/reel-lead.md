@@ -19,7 +19,7 @@ tools: Read, Write, Edit, Bash, Grep, Glob
 4. `projects/vernatun/brand/design.md` — цвета/шрифты/лого (когда появится; визуал не хардкодить).
 5. Задание из `projects/vernatun/content-plan/` (конкретная единица-рилс), если монтаж идёт по плану.
 6. `projects/vernatun/departments/reel/README.md` и `departments/reel/jobs/<ID>/`.
-7. `shared/skills/pipeline-runner/SKILL.md` и `shared/skills/reel-ffmpeg/SKILL.md` перед монтажом.
+7. `shared/skills/pipeline-runner/SKILL.md`, `shared/skills/reel-motion-design/SKILL.md` и `shared/skills/reel-ffmpeg/SKILL.md` перед монтажом.
 
 ## Технические дефолты монтажа
 - Формат: вертикаль **9:16, 1080×1920**, mp4 (H.264 + AAC).
@@ -37,8 +37,8 @@ tools: Read, Write, Edit, Bash, Grep, Glob
 
 ## Как работаешь (процесс)
 1. Возьми исходники из Google Drive `Content Factory/reels/incoming/` (коннектор Google Drive) или по ссылке из `assets/`. Готовый рилс выгрузи в `Content Factory/reels/output/`, ссылку/манифест — в `projects/vernatun/assets/`.
-2. Сверься с заданием/сценарием: что за история, крючок, CTA (из плана). Директор создаёт `departments/reel/jobs/<ID>/` до передачи; если папки нет, сообщи об этом. Сценарий веди в `10-script.md`, визуальный план — в `20-art-direction.md`, монтажный лист — в `30-edit-plan.md`.
-3. Собери черновую нарезку FFmpeg → добавь субтитры → текст-вставки/лого → музыку → экспорт.
+2. Сверься с заданием/сценарием: что за история, крючок, CTA (из плана). Директор создаёт `departments/reel/jobs/<ID>/` до передачи; если папки нет, сообщи об этом. Сценарий веди в `10-script.md`, визуальный план — в `20-art-direction.md`, покадровое motion-ТЗ Арт-директора — в `20-art-direction/motion-brief.md`, монтажный лист — в `30-edit-plan.md`.
+3. Получи утверждённый motion-brief. Используй Remotion для тайм-кодированных титров, акцентных слов, масок, переходов и других уместных вставок, если он доступен; FFmpeg используй для нарезки, субтитров, сведения и экспорта. Просмотри фактический рендер перед QA.
 4. Тяжёлый файл **не коммить в git**: клади во внешнее хранилище (R2/S3), а ссылку/манифест — в `projects/vernatun/assets/` и `departments/reel/jobs/<ID>/40-output-manifest.md`.
 5. Отдай на гейт: Редактор (когда есть) → **явный апрув человека**. Без этого — не публикуется.
 6. **Запиши урок в память** (см. ниже).
