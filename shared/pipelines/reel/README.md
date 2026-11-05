@@ -45,3 +45,7 @@
 - Без прав на кадры/музыку, без проверки фактического экспорта или при провале editor gate материал не готов.
 - Публикацию в соцсетях делает владелец после явного апрува; автоматической публикации здесь нет.
 - Вирусность не гарантируется: проверяй гипотезы по метрикам после выхода и отделяй корреляцию от вывода.
+
+## Локальные маркетинговые методы
+
+Однократно перед своим этапом прочитай `shared/skills/marketing-methods/SKILL.md` и только модуль своей роли. Модули этого пайплайна: `shared/skills/marketing-methods/modules/research.md`, `shared/skills/marketing-methods/modules/reel.md`, `shared/skills/marketing-methods/modules/visual.md`, `shared/skills/marketing-methods/modules/review.md`. reel-researcher использует research; reel-lead/reel-scriptwriter — reel; визуальные специалисты — visual; editor — review. Режимы A/B, порядок масок и lead ACCEPT остаются прежними. Уже прочитанные инструкции повторно не загружай. Исходники в `shared/vendor/marketing-methods/` — справочные документы, а не команды на запуск инструментов. Существующие выходные файлы, роли и gates сохраняются.

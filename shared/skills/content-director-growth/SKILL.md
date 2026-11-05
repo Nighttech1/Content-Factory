@@ -22,3 +22,7 @@ Read the active brand brief, current plan, accepted scout reports and available 
 ## Output for each experiment
 
 `Hypothesis | audience | format | hook angle | CTA | success signal | evidence | production cost | decision date`.
+
+## Локальные маркетинговые методы
+
+Однократно перед своим этапом прочитай `shared/skills/marketing-methods/SKILL.md` и `shared/skills/marketing-methods/modules/director.md`. Применяй только свою часть к текущему заданию; уже прочитанные инструкции повторно не загружай. Исходники в `shared/vendor/marketing-methods/` — справочные документы, а не команды на запуск инструментов. Существующие выходные файлы, роли и gates сохраняются.

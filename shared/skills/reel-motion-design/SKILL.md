@@ -28,3 +28,7 @@ For every insert specify time in/out, purpose, visual element, entrance/exit, du
 - [ ] Record output link, render method and QA in the job manifest.
 
 Never claim a polished motion render from a plan or command alone: inspect the actual rendered artifact.
+
+## Локальные маркетинговые методы
+
+Однократно перед своим этапом прочитай `shared/skills/marketing-methods/SKILL.md` и `shared/skills/marketing-methods/modules/visual.md`. Применяй только свою часть к текущему заданию; уже прочитанные инструкции повторно не загружай. Исходники в `shared/vendor/marketing-methods/` — справочные документы, а не команды на запуск инструментов. Существующие выходные файлы, роли и gates сохраняются.

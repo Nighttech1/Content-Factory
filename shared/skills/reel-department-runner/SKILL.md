@@ -76,3 +76,7 @@ At the end of each run, the lead reviews failures/rework and proposes a precise 
 - No video rendering capability: don't fake the artifact; report the blocker and give the exact prepared timeline/assets.
 - Paid service, external upload or social publication: requires separate explicit authorization.
 - Editorial or rights gate fails: do not mark ready to publish.
+
+## Локальные маркетинговые методы
+
+Однократно перед своим этапом прочитай `shared/skills/marketing-methods/SKILL.md` и только модуль своей роли. Модули этого пайплайна: `shared/skills/marketing-methods/modules/research.md`, `shared/skills/marketing-methods/modules/reel.md`, `shared/skills/marketing-methods/modules/visual.md`, `shared/skills/marketing-methods/modules/review.md`. Каждая маска читает только назначенный ей модуль: researcher → research; lead/scriptwriter → reel; визуальные роли → visual; editor → review. Уже прочитанные инструкции повторно не загружай. Исходники в `shared/vendor/marketing-methods/` — справочные документы, а не команды на запуск инструментов. Существующие выходные файлы, роли и gates сохраняются.

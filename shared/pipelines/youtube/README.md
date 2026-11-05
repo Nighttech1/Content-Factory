@@ -31,3 +31,7 @@
 
 ## Гейты
 Арт-директор QA обложки · Видео-продюсер сборка · Редактор · Человек.
+
+## Локальные маркетинговые методы
+
+Однократно перед своим этапом прочитай `shared/skills/marketing-methods/SKILL.md` и только модуль своей роли. Модули этого пайплайна: `shared/skills/marketing-methods/modules/youtube.md`, `shared/skills/marketing-methods/modules/visual.md`, `shared/skills/marketing-methods/modules/review.md`. Сценарист и video-producer используют youtube каждый в своей зоне; арт-директор — visual; редактор — review. Уже прочитанные инструкции повторно не загружай. Исходники в `shared/vendor/marketing-methods/` — справочные документы, а не команды на запуск инструментов. Существующие выходные файлы, роли и gates сохраняются.

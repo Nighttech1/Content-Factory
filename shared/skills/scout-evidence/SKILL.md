@@ -44,3 +44,7 @@ art direction and production. Handoff between chats remains manual via the owner
 External plugin cadences, paid data tools and publishing commands do not override
 the owner's budget or authorization. Community claims require primary-source
 checks and must not be described as independently proven performance.
+
+## Локальные маркетинговые методы
+
+Однократно перед своим этапом прочитай `shared/skills/marketing-methods/SKILL.md` и `shared/skills/marketing-methods/modules/research.md`. Применяй только свою часть к текущему заданию; уже прочитанные инструкции повторно не загружай. Исходники в `shared/vendor/marketing-methods/` — справочные документы, а не команды на запуск инструментов. Существующие выходные файлы, роли и gates сохраняются.

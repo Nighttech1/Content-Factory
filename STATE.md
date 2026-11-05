@@ -4,6 +4,11 @@
 > Обновляется в конце значимого куска работы (вместе с commit).
 > Обновлено: 2026-10-29
 
+## Локальные маркетинговые методы · 2026-11-05
+- По поручению владельца импортированы выборочные документы Anthropic Marketing, Corey Haines marketingskills и marcosmodly marketing-skill с лицензиями и фиксированными Git SHA. Оригиналы: `shared/vendor/marketing-methods/`; перечень 31 файла с SHA256 — `SOURCES.json`.
+- Активный локальный адаптер: `shared/skills/marketing-methods/SKILL.md`, 9 модулей по ролям. Подключены 17 профилей, 6 точек входа пайплайнов/отделов и 5 существующих навыков. Нативная установка в ChatGPT/Claude не требуется; внешний runtime/скрипты/публикация не импортированы.
+- Проверка: `python3 shared/skills/marketing-methods/validate.py` — hashes, licenses, source links и маршруты. Инструкция/результаты: `shared/skills/marketing-methods/INSTALLATION.md`. Конкретные исследования, платные API, production-задачи и деплой не запускались; эффективность на контенте ещё не измерена.
+
 ## Scout / GitHub Actions · 2026-11-04
 - Владелец выбрал Repository secrets в `Nighttech1/Content-Factory`: `YOUTUBE_API_KEY` и `APIFY_TOKEN` (совместимое имя `APIFY_API_KEY`); дублировать в окружение чата не требуется.
 - Установлены в `main` через PR #1 `.github/workflows/scout-data.yml` (**Scout data (manual)**) и `shared/skills/scout-actions/`: режим `check` без запросов к сервисам, ручной сбор YouTube / Instagram по отдельному заданию, снимки в Actions artifacts на 30 дней.

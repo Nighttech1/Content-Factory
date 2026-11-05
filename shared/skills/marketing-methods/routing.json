@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "roles": [
+    {
+      "path": "projects/vernatun/.claude/agents/scout.md",
+      "modules": [
+        "research"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/reel-researcher.md",
+      "modules": [
+        "research"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/content-director.md",
+      "modules": [
+        "director"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/carousel-lead.md",
+      "modules": [
+        "carousel"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/scriptwriter-carousel.md",
+      "modules": [
+        "carousel"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/reel-lead.md",
+      "modules": [
+        "reel"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/reel-scriptwriter.md",
+      "modules": [
+        "reel"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/scriptwriter-article.md",
+      "modules": [
+        "article"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/scriptwriter-youtube.md",
+      "modules": [
+        "youtube"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/video-producer.md",
+      "modules": [
+        "youtube"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/art-director.md",
+      "modules": [
+        "visual"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/designer.md",
+      "modules": [
+        "visual"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/finish-art-director.md",
+      "modules": [
+        "visual"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/reel-motion-designer.md",
+      "modules": [
+        "visual"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/reel-interstitial-designer.md",
+      "modules": [
+        "visual"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/editor.md",
+      "modules": [
+        "review"
+      ]
+    },
+    {
+      "path": "projects/vernatun/.claude/agents/analyst.md",
+      "modules": [
+        "analytics"
+      ]
+    }
+  ],
+  "pipelines": [
+    {
+      "path": "shared/pipelines/carousel/README.md",
+      "modules": [
+        "carousel",
+        "visual",
+        "review"
+      ],
+      "scope": "Сценарист и начальник используют carousel; арт-директор/дизайнер/финиш-арт — visual; редактор — review."
+    },
+    {
+      "path": "shared/pipelines/reel/README.md",
+      "modules": [
+        "research",
+        "reel",
+        "visual",
+        "review"
+      ],
+      "scope": "reel-researcher использует research; reel-lead/reel-scriptwriter — reel; визуальные специалисты — visual; editor — review. Режимы A/B, порядок масок и lead ACCEPT остаются прежними."
+    },
+    {
+      "path": "shared/pipelines/article/README.md",
+      "modules": [
+        "article",
+        "visual",
+        "review"
+      ],
+      "scope": "Сценарист использует article; визуальные роли — visual; редактор — review."
+    },
+    {
+      "path": "shared/pipelines/youtube/README.md",
+      "modules": [
+        "youtube",
+        "visual",
+        "review"
+      ],
+      "scope": "Сценарист и video-producer используют youtube каждый в своей зоне; арт-директор — visual; редактор — review."
+    },
+    {
+      "path": "projects/vernatun/departments/scout/README.md",
+      "modules": [
+        "research"
+      ]
+    },
+    {
+      "path": "projects/vernatun/departments/director/README.md",
+      "modules": [
+        "director"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "path": "shared/skills/scout-evidence/SKILL.md",
+      "modules": [
+        "research"
+      ]
+    },
+    {
+      "path": "shared/skills/content-director-growth/SKILL.md",
+      "modules": [
+        "director"
+      ]
+    },
+    {
+      "path": "shared/skills/carousel-storycraft/SKILL.md",
+      "modules": [
+        "carousel"
+      ]
+    },
+    {
+      "path": "shared/skills/reel-motion-design/SKILL.md",
+      "modules": [
+        "visual"
+      ]
+    },
+    {
+      "path": "shared/skills/reel-department-runner/SKILL.md",
+      "modules": [
+        "research",
+        "reel",
+        "visual",
+        "review"
+      ],
+      "scope": "Каждая маска читает только назначенный ей модуль: researcher → research; lead/scriptwriter → reel; визуальные роли → visual; editor → review."
+    }
+  ]
+}
