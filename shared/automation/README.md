@@ -16,7 +16,8 @@
 | 🔍 `scout` — конкуренты | 1×/нед | снапшот конкурентов (Apify, экономно) |
 | 📊 `analyst` | еженедельно + большой ежемесячно | SIGNAL-метрики + воронка → отчёт директору |
 | 🎯 `content-director` | ежемесячно (план) + еженедельная ревизия | план месяца / правки по отчёту аналитика |
-| ✍️🎨🎬 пайплайны (carousel/reel/youtube/article/telegram-graphics) | **on-demand** по плану | производство единиц из контент-плана |
+| ✍️🎨🎬 пайплайны (carousel/reel/youtube/article) | **on-demand** по плану | производство единиц из контент-плана |
+| 🖼 `telegram-graphics-lead` | **только по прямому поручению владельца** | карточка цитаты или анонс; не стартует от задания директора или cron |
 | 🧐 `editor` | on-demand (на каждый черновик) | гейт качества |
 
 Принцип: разведка/аналитика — по расписанию (автономно); производство — по заданиям плана; публикация — после Редактора + апрува человека (гейт не автоматизируем).
@@ -40,7 +41,6 @@
 [еженедельно вт]   🎯 content-director (ревизия по отчёту аналитика, раздаёт задания V-ГГГГММ-NN)
         ├─► ✍️🎨 scriptwriter-carousel ─► art-director ─► designer ─► finish-art-director
         ├─► 🎬 reel-lead ─► video-producer ─► art-director (QA кадров)
-        ├─► 🖼 telegram-graphics-lead ─► art-director ─► designer (фон) ─► finish-art-director (обязательный HTML-бейк логотипа) ─► editor
         ├─► ✍️ scriptwriter-article ─► art-director/designer (картинки)
         └─► ✍️ scriptwriter-youtube
                  каждая ветка ─► 🧐 editor (✅/❌) ─► [approve-loop] владелец в чате
@@ -48,6 +48,8 @@
                                  ─► публикация владельцем вручную / Telegram-ботом только при проверенном consumer и разрешённом schedule
 ```
 Правила петли апрова — `shared/rules/approve-loop.md`; кто в какой папке и каких субагентов зовёт — `shared/rules/agent-roster.md`.
+
+Отдельный ручной вход: `Владелец → telegram-graphics-lead → quote-reviewer (если цитата) → art-director → designer → finish-art-director → art-director QA → editor`. Директор не является триггером этого чата; manifest публикации создаётся только если владелец отдельно поручил расписание.
 
 ## 2. Механизмы триггеров
 - **Claude Code cloud scheduled tasks (триггеры):** фоновый prompt будит сессию агентов по cron (напр. «scout: собери виральные рилс-идеи» ежедневно). Заводятся в чате вызова агентов. Триггеры/секреты вступают на старте сессии.

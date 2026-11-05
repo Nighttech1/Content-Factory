@@ -30,7 +30,8 @@
 - **Типы каруселей:** A–E (ген / гибрид / HTML-motion / фото из веба / реальные фото) — см. `shared/pipelines/carousel/`.
 
 ## 🖼️ Отдел ГРАФИКИ TELEGRAM — лид `telegram-graphics-lead`
-- **Папка:** `projects/vernatun/departments/telegram-graphics/jobs/<ID>/`; код `TGP`, тип в брифе `quote-card` или `meeting-announcement`.
+- **Режим чата:** только прямые поручения владельца. Не ждёт Контент-директора и не стартует по его плану/расписанию. Если владелец не указал ID, lead выделяет следующий свободный `TGP` ID, создаёт `jobs/<ID>/` из шаблона и добавляет строку в месячный план.
+- **Папка:** `projects/vernatun/departments/telegram-graphics/jobs/<ID>/`; тип в брифе `quote-card` или `meeting-announcement`.
 - **Роли:** quote reviewer → art-director → designer (фон при необходимости) → finish-art-director (HTML/CSS/SVG bake) → art-director QA → editor.
 - **Жёсткое правило:** на каждом финальном изображении лого клуба обязательно наложено на отдельном HTML/CSS/SVG-слое через `shared/skills/brand-kit/SKILL.md`; генератору запрещено рисовать лого/текст.
 - **Цитаты:** дословность + подтверждённое разрешение участника и выбранная атрибуция; без этого карточка блокируется. **Анонсы:** сверенные дата/время/timezone/место/цена/CTA.
