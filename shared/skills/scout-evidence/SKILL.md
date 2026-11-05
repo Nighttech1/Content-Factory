@@ -32,8 +32,11 @@ department's `intelligence/`, linking the full report. Include the content forma
 and subtype, audience barrier, observed evidence, original adaptation, needed
 assets/rights, confidence, unknowns and a measurable hypothesis. Distinguish an
 editorial form from a production type. For carousels use the current A–E definitions;
-for reels use filmed/faceless/viral adaptation; long YouTube and Shorts have separate
-departments. Do not invent a subtype registry for articles.
+for reels describe filmed/faceless/adaptation as proposed treatments, separately
+from the director/owner input modes A/B in the current reel pipeline. Long YouTube
+and Shorts have separate departments. Do not invent subtype registries for articles
+or reels. A reel recommendation is input to reel-lead/reel-researcher, not a bypass
+of their specialist gates.
 
 These are Scout proposals, not the director's `00-brief.md` or approval to produce.
 The director prioritizes and creates `V-…` jobs; department leads own final scripts,
