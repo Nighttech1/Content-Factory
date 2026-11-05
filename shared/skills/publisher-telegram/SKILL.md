@@ -1,6 +1,6 @@
 ---
 name: publisher-telegram
-description: Публикация в Telegram-канал через СУЩЕСТВУЮЩИЙ бот клуба (Bot API). Постит текст/фото/видео/опросы/анонсы в канал @mosarmclub по расписанию. Используется Публикатором/недельным TG-планом директора. Новый бот не нужен — берём токен текущего бота (он уже в канале).
+description: Публикация в Telegram-канал через существующий бот клуба (Bot API). Отправляет text/photo/video/poll/announcements; расписание требует отдельного запущенного queue consumer и проверенного доступа к медиа.
 ---
 
 # Скилл: публикация в Telegram (через наш бот)
@@ -17,7 +17,23 @@ description: Публикация в Telegram-канал через СУЩЕСТ
 - **Фото/карусель-обложка:** `sendPhoto` / `sendMediaGroup` (альбом).
 - **Видео/рилс в канал:** `sendVideo`.
 - **Опрос/вовлечение:** `sendPoll`.
-- **Отложенная публикация:** через наш планировщик (веб `scheduler.ts` / cron), Bot API сам «на будущее» не умеет — ставим время у себя.
+- **Отложенная публикация:** Telegram Bot API сам «на будущее» не умеет. Нужен внешний/наш queue consumer, который просыпается по `scheduledAt`, проверяет approval и вызывает send method.
+
+## Проверка расписания (не считай включённым по умолчанию)
+
+Веб `веб/lib/analytics/scheduler.ts` обслуживает аналитический ingest; его наличие
+не доказывает расписание Telegram-постов. В репозитории описаны schedule slots и
+Bot API, но в рамках аудита пайплайна не найден проверяемый worker, который
+забирает готовые изображения из очереди и отправляет `sendPhoto`. Перед обещанием
+автопоста проверь реальный endpoint/queue, откуда он получает media, атомарный
+claim, idempotency, retry и сохранение `telegramMessageId`/`publishedAt`. Если
+публикация идёт вне этого репозитория — сослаться на подтверждённый внешний путь.
+
+Для графики `shared/pipelines/telegram-graphics` готовит
+`70-publication-manifest.json`: стабильный asset ref, caption, version,
+`scheduledAt` с timezone, `editorApproved`, `ownerApproved`, idempotency key.
+Consumer отправляет только при обоих approvals и наступившем времени; destination
+и `TELEGRAM_BOT_TOKEN` берутся из безопасной runtime-конфигурации, не из файла.
 
 Пример (текст с кнопкой):
 ```bash

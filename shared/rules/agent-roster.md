@@ -29,6 +29,14 @@
 - **Гейт:** Редактор ✅ → апрув человека (в чате, см. approve-loop). **Деплой:** после апрува → `POST /api/content/ingest` (type `carousel`).
 - **Типы каруселей:** A–E (ген / гибрид / HTML-motion / фото из веба / реальные фото) — см. `shared/pipelines/carousel/`.
 
+## 🖼️ Отдел ГРАФИКИ TELEGRAM — лид `telegram-graphics-lead`
+- **Папка:** `projects/vernatun/departments/telegram-graphics/jobs/<ID>/`; код `TGP`, тип в брифе `quote-card` или `meeting-announcement`.
+- **Роли:** quote reviewer → art-director → designer (фон при необходимости) → finish-art-director (HTML/CSS/SVG bake) → art-director QA → editor.
+- **Жёсткое правило:** на каждом финальном изображении лого клуба обязательно наложено на отдельном HTML/CSS/SVG-слое через `shared/skills/brand-kit/SKILL.md`; генератору запрещено рисовать лого/текст.
+- **Цитаты:** дословность + подтверждённое разрешение участника и выбранная атрибуция; без этого карточка блокируется. **Анонсы:** сверенные дата/время/timezone/место/цена/CTA.
+- **Handoff:** после Editor `ACCEPT` и явного owner approval записать publication manifest со временем Europe/Moscow и стабильным asset ref для Telegram-бота. Реальный scheduled consumer отдельно подтвердить; Bot API сам не планирует отправку.
+- **Подробно:** `shared/pipelines/telegram-graphics/README.md` и `shared/skills/telegram-graphics/SKILL.md`.
+
 ## 🎬 Отдел РИЛСОВ — лид `reel-lead`
 - **Папка:** `projects/vernatun/departments/reel/jobs/<ID>/` (сценарий, визуальный план, монтажный лист, манифест и вердикт) + Google Drive (`Content Factory/reels/incoming → .../output`).
 - **Субагенты-маски по строгой цепочке:** `reel-researcher` → `reel-scriptwriter` → `reel-footage-editor` → `reel-rough-cutter` → `reel-motion-designer` → при необходимости `reel-interstitial-designer` → при необходимости `reel-transition-editor` → `reel-finisher` → `editor` → `reel-log-keeper`. Профили: `projects/vernatun/.claude/agents/reel-*.md`; обязательное правило: `shared/skills/reel-department-runner/SKILL.md`.

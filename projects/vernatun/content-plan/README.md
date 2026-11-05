@@ -30,6 +30,7 @@
 | `REL` | рилсы | `departments/reel/jobs/<ID>/` |
 | `ART` | статьи | `departments/article/jobs/<ID>/` |
 | `YTB` | YouTube | `departments/youtube/jobs/<ID>/` |
+| `TGP` | Telegram-графика: цитаты участников и анонсы встреч | `departments/telegram-graphics/jobs/<ID>/` |
 | `MST` | мультсторис, после создания отдела | `departments/multistory/jobs/<ID>/` |
 
 Директор создаёт папку задания в отделе и заполняет `00-brief.md` до передачи ID

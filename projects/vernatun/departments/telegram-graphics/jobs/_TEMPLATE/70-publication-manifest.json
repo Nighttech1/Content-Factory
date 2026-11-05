@@ -1,0 +1,16 @@
+{
+  "contentId": "V-YYYYMM-TGP-NN",
+  "kind": "quote-card",
+  "assetVersion": 1,
+  "assetRef": "",
+  "caption": "",
+  "scheduledAt": "",
+  "timezone": "Europe/Moscow",
+  "editorApproved": false,
+  "ownerApproved": false,
+  "status": "awaiting_review",
+  "idempotencyKey": "V-YYYYMM-TGP-NN:1",
+  "telegramMessageId": null,
+  "publishedAt": null,
+  "lastError": null
+}

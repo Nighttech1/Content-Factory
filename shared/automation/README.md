@@ -16,7 +16,7 @@
 | 🔍 `scout` — конкуренты | 1×/нед | снапшот конкурентов (Apify, экономно) |
 | 📊 `analyst` | еженедельно + большой ежемесячно | SIGNAL-метрики + воронка → отчёт директору |
 | 🎯 `content-director` | ежемесячно (план) + еженедельная ревизия | план месяца / правки по отчёту аналитика |
-| ✍️🎨🎬 пайплайны (carousel/reel/youtube/article) | **on-demand** по плану | производство единиц из контент-плана |
+| ✍️🎨🎬 пайплайны (carousel/reel/youtube/article/telegram-graphics) | **on-demand** по плану | производство единиц из контент-плана |
 | 🧐 `editor` | on-demand (на каждый черновик) | гейт качества |
 
 Принцип: разведка/аналитика — по расписанию (автономно); производство — по заданиям плана; публикация — после Редактора + апрува человека (гейт не автоматизируем).
@@ -40,17 +40,19 @@
 [еженедельно вт]   🎯 content-director (ревизия по отчёту аналитика, раздаёт задания V-ГГГГММ-NN)
         ├─► ✍️🎨 scriptwriter-carousel ─► art-director ─► designer ─► finish-art-director
         ├─► 🎬 reel-lead ─► video-producer ─► art-director (QA кадров)
+        ├─► 🖼 telegram-graphics-lead ─► art-director ─► designer (фон) ─► finish-art-director (обязательный HTML-бейк логотипа) ─► editor
         ├─► ✍️ scriptwriter-article ─► art-director/designer (картинки)
         └─► ✍️ scriptwriter-youtube
                  каждая ветка ─► 🧐 editor (✅/❌) ─► [approve-loop] владелец в чате
                                  ─► Approve ─► POST /api/content/ingest (на веб как «опубликовано»)
-                                 ─► публикация в соцсети пока ВРУЧНУЮ владельцем
+                                 ─► публикация владельцем вручную / Telegram-ботом только при проверенном consumer и разрешённом schedule
 ```
 Правила петли апрова — `shared/rules/approve-loop.md`; кто в какой папке и каких субагентов зовёт — `shared/rules/agent-roster.md`.
 
 ## 2. Механизмы триггеров
 - **Claude Code cloud scheduled tasks (триггеры):** фоновый prompt будит сессию агентов по cron (напр. «scout: собери виральные рилс-идеи» ежедневно). Заводятся в чате вызова агентов. Триггеры/секреты вступают на старте сессии.
 - **Веб-планировщик:** в `веб/` есть `lib/analytics/scheduler.ts` (node-cron / BullMQ) — ежедневный ingest метрик (06:00 UTC) при `REDIS_URL` или `ANALYTICS_ENABLE_NODE_CRON=1`. Публикация по расписанию — когда построим Публикатора (Фаза P).
+- **Telegram graphic posts:** отдел формирует `70-publication-manifest.json` только после редакторского и человеческого апрува. Реальный consumer, который читает манифест/слоты и вызывает `sendPhoto`, этим документом не подтверждается; проверить существующего бота и его очередь до включения расписания.
 - **Apify-дисциплина:** ≤1–2 платных прогона/день, `resultsLimit ≤50`, снапшот (см. `shared/skills/scout-apify`).
 
 ## 3. Интеграция агенты ↔ веб-сервер

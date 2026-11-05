@@ -28,6 +28,13 @@
 - Решено по данным: Apify (IG/TikTok, free-план) — подключим на Фазе 2; без Metricool; публикация своим Публикатором через API площадок.
 
 ## Готово
+
+### 2026-11-05 — Telegram graphic cards
+- Добавлен content department `telegram-graphics` с ID `TGP`: quote cards участников и визуальные анонсы встреч; профиль lead, quote reviewer, шаблоны заданий, start prompt, pipeline и специализированный skill.
+- Каждый финальный asset обязан иметь логотип клуба и точный текст на отдельном HTML/CSS/SVG-слое через существующий `brand-kit`.
+- Использовать существующий веб-модуль `aesthetic-graphics`, не создавать параллельный UI-модуль. Его текущая реализация — mock SVG; production render остаётся задачей реализации.
+- Output manifest описывает scheduled handoff. Bot API sender/queue consumer в репозитории не подтверждён: нужна интеграция и тест в тестовом канале, прежде чем обещать автопост.
+- Использовать локальные `brand-kit`, `marketing-methods/visual` и `publisher-telegram`; `canvas-design` — необязательные идеи для фона. Не добавлять n8n/grammY до проверки существующего бота.
 - Фаза 0 (фундамент), агент `content-director`, бриф уточнён, аудит соцсетей (`brand/audit-soc.md`).
 - **Оснащение Контент-директора (Фаза 1.5):** скилл `shared/skills/content-calendar`, правило `shared/rules/cta-ladder.md`, агенту добавлены WebSearch/WebFetch + разделы «Инструментарий»/«Границы роли» + публикация в Claude Docs; `env.manifest.md` обновлён (коннекторы/скиллы, отказ от агрегаторов).
 - **Маркетинговый арсенал директора:** strategist-набор из плагинов «Marketing» (Anthropic) + «Social Media Skills» (106, community) вписан в агента с границами роли. Плагины надо включить на аккаунте (пока доступны только в сессии).
