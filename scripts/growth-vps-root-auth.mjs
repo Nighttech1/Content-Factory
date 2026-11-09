@@ -45,25 +45,30 @@ function sshOnce(args){
  });
 }
 const flag=(key,value)=>console.log(`${key}=${value}`);
-export async function probe(env){
+export async function probe(env,dependencies={}){
+ const log=dependencies.flag??flag;
+ const resolveTarget=dependencies.knownTarget??knownTarget;
+ const inspectKey=dependencies.spawnSync??spawnSync;
+ const authenticate=dependencies.sshOnce??sshOnce;
  const userIsRoot=(env.VPS_USER??'').trim()==='root';
- flag('USER_is_root',userIsRoot);
- const target=await knownTarget();
- flag('knownSelectelDNSmatch',Boolean(target));
- if(!target){flag('AUTH_ROOT_skipped','target_not_confirmed');return}
- if(userIsRoot){flag('AUTH_ROOT_skipped','already_configured_root');return}
+ log('USER_is_root',userIsRoot);
+ if(!userIsRoot){log('AUTH_ROOT_skipped','configured_user_not_root');return}
+ const target=await resolveTarget();
+ log('knownSelectelDNSmatch',Boolean(target));
+ if(!target){log('AUTH_ROOT_skipped','target_not_confirmed');return}
  const rawPort=env.VPS_PORT??'';
  const port=rawPort===''?22:Number(rawPort);
- if(!(rawPort===''||/^\d+$/.test(rawPort))||!Number.isInteger(port)||port<1||port>65535){flag('AUTH_ROOT_skipped','invalid_port');return}
+ if(!(rawPort===''||/^\d+$/.test(rawPort))||!Number.isInteger(port)||port<1||port>65535){log('AUTH_ROOT_skipped','invalid_port');return}
  const temp=fs.mkdtempSync(path.join(os.tmpdir(),'growth-auth-'));fs.chmodSync(temp,0o700);
  try{
   const key=path.join(temp,'key'),hosts=path.join(temp,'known_hosts');
   fs.writeFileSync(key,(env.VPS_KEY??'')+'\n',{mode:0o600});fs.writeFileSync(hosts,env.VPS_KNOWN_HOSTS??'',{mode:0o600});
-  const keyCheck=spawnSync('ssh-keygen',['-y','-P','','-f',key],{stdio:['ignore','ignore','ignore'],timeout:5000});
-  const keyValid=keyCheck.status===0;flag('KEY_PARSE_VALID',keyValid);
-  if(!keyValid){flag('AUTH_ROOT_skipped','key_not_loadable_without_passphrase');return}
+  log('KEY_LOOKS_LIKE_FINGERPRINT',/^SHA256:/i.test((env.VPS_KEY??'').trim()));
+  const keyCheck=inspectKey('ssh-keygen',['-y','-P','','-f',key],{stdio:['ignore','ignore','ignore'],timeout:5000});
+  const keyValid=keyCheck.status===0;log('KEY_PARSE_VALID',keyValid);
+  if(!keyValid){log('AUTH_ROOT_skipped','key_not_loadable_without_passphrase');return}
   const policy=(env.VPS_KNOWN_HOSTS??'').trim()?'yes':'accept-new';
-  flag('AUTH_ROOT_attempted',true);
+  log('AUTH_ROOT_attempted',true);
   // Pin the actual connection to the DNS answer whose hash matches the owner's known server.
   // Preserve the public domain as host-key alias; no raw address is emitted.
   const args=['-F','/dev/null','-i',key,'-p',String(port),
@@ -73,13 +78,13 @@ export async function probe(env){
    '-o','ConnectionAttempts=1','-o','ConnectTimeout=15','-o','ServerAliveInterval=5','-o','ServerAliveCountMax=2',
    '-o','HashKnownHosts=yes','-o',`StrictHostKeyChecking=${policy}`,'-o',`UserKnownHostsFile=${hosts}`,
    `root@${CONTENT_DOMAIN}`,REMOTE_COMMAND];
-  const result=await sshOnce(args);
+  const result=await authenticate(args);
   const uid0=result.stdout.split(/\r?\n/).includes('REMOTE_UID0=true');
-  flag('AUTH_ROOT_OK',result.code===0&&uid0);
-  if(result.code!==0){flag('AUTH_ROOT_status',classifySSHFailure(result.stderr,result.timedOut));return}
+  log('AUTH_ROOT_OK',result.code===0&&uid0);
+  if(result.code!==0){log('AUTH_ROOT_status',classifySSHFailure(result.stderr,result.timedOut));return}
   for(const name of ['REMOTE_UID0','REMOTE_APP_DIR','REMOTE_ROOT_PM2_PID_ALIVE']){
    const line=result.stdout.split(/\r?\n/).find(line=>line===`${name}=true`||line===`${name}=false`);
-   flag(name,line?line.endsWith('=true'):'unknown');
+   log(name,line?line.endsWith('=true'):'unknown');
   }
  }finally{fs.rmSync(temp,{recursive:true,force:true})}
 }

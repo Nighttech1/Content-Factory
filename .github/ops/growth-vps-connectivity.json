@@ -1,5 +1,5 @@
 {
   "version": 1,
-  "reason": "Verify previous Selectel access metadata, one guarded read-only root probe",
-  "attempt": 2
+  "reason": "Verify owner-updated key: one configured-root read-only authentication, no deploy",
+  "attempt": 3
 }
