@@ -16,3 +16,10 @@
 
 ## Старт
 Разработка начинается с **Фазы 1 — Контент-директор (Вернатун)**. См. `PLAN.md`.
+
+## Улучшение качества видео
+
+Отдельный pipeline уже готового файла: [video-quality](shared/pipelines/video-quality/README.md).
+CPU диагностика/проба через ручной GitHub Actions, бесплатный GPU — через private
+Kaggle/Colab notebook. Не запускает генерацию рилсов или публикацию.
+

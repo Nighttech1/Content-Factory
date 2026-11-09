@@ -1,0 +1,146 @@
+name: Улучшение качества видео
+run-name: Video quality · ${{ inputs.mode }} · ${{ inputs.job_id }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'check/selftest без исходника; diagnose/sample/final с разрешённым файлом'
+        type: choice
+        options: [check, selftest, diagnose, sample, final]
+        default: check
+      job_id:
+        description: 'Отдельный ID обработки VQ-YYYYMM-NN'
+        type: string
+        default: VQ-202611-01
+      rights_confirmed:
+        description: 'Подтверждаю права/согласия и передачу файла в GitHub Actions'
+        type: boolean
+        default: false
+      profile:
+        type: choice
+        description: 'CPU-профиль; не нейросетевой апскейл'
+        options: [gentle, denoise, baseline, lanczos]
+        default: gentle
+      width:
+        description: '0 = сохранить размер; чётная ширина до 2160'
+        type: string
+        default: '0'
+      start:
+        description: 'Начало 3-секундной пробы, секунды'
+        type: string
+        default: '0'
+      sample_run_id:
+        description: 'Для final: номер успешного sample запуска'
+        type: string
+      accept_sample:
+        description: 'Посмотрела/посмотрел пробу, улучшение подтверждаю'
+        type: boolean
+        default: false
+      public_media_allowed:
+        description: 'Для public-репо: разрешаю публично доступные кадры и MP4 в artifacts'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: video-quality
+  cancel-in-progress: false
+
+jobs:
+  quality:
+    # Enable only after the owner checks included usage and a zero-spend budget.
+    if: ${{ vars.VIDEO_QUALITY_ACTIONS_ENABLED == 'true' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      VQ_MODE: ${{ inputs.mode }}
+      VQ_JOB: ${{ inputs.job_id }}
+      VQ_RIGHTS: ${{ inputs.rights_confirmed }}
+      VQ_PROFILE: ${{ inputs.profile }}
+      VQ_WIDTH: ${{ inputs.width }}
+      VQ_START: ${{ inputs.start }}
+      VQ_ACCEPT: ${{ inputs.accept_sample }}
+      VQ_SAMPLE_RUN: ${{ inputs.sample_run_id }}
+      VQ_REPO_PRIVATE: ${{ github.event.repository.private }}
+      VQ_PUBLIC_MEDIA: ${{ inputs.public_media_allowed }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Validate inputs before download
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os,re
+          e=os.environ
+          assert e['VQ_MODE'] in ['check','selftest','diagnose','sample','final']
+          assert re.fullmatch(r'VQ-\d{6}-\d{2,3}',e['VQ_JOB']), 'Invalid job ID'
+          assert e['VQ_PROFILE'] in ['gentle','denoise','baseline','lanczos']
+          assert e['VQ_WIDTH'].isdigit() and (int(e['VQ_WIDTH'])==0 or 16<=int(e['VQ_WIDTH'])<=2160 and int(e['VQ_WIDTH'])%2==0)
+          assert re.fullmatch(r'\d+(\.\d+)?',e['VQ_START']), 'Invalid start'
+          if e['VQ_MODE'] not in ['check','selftest']:
+              assert e['VQ_RIGHTS']=='true', 'Confirm rights and external processing first'
+              assert e['VQ_REPO_PRIVATE']=='true' or e['VQ_PUBLIC_MEDIA']=='true', 'Public repository: use private notebook/repo or explicitly authorize public artifacts'
+          if e['VQ_MODE']=='final':
+              assert e['VQ_ACCEPT']=='true' and e['VQ_SAMPLE_RUN'].isdigit(), 'Accepted sample run required'
+          PY
+      - name: Install CPU tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+      - name: Check tools
+        run: |
+          ffmpeg -version
+          ffprobe -version
+      - name: Synthetic end-to-end and gates
+        if: ${{ inputs.mode == 'selftest' }}
+        run: python3 shared/pipelines/video-quality/test_pipeline.py
+      - name: Download authorized source
+        if: ${{ inputs.mode != 'check' && inputs.mode != 'selftest' }}
+        env:
+          VIDEO_QUALITY_SOURCE_URL: ${{ secrets.VIDEO_QUALITY_SOURCE_URL }}
+          VIDEO_QUALITY_SOURCE_SHA256: ${{ vars.VIDEO_QUALITY_SOURCE_SHA256 }}
+          VIDEO_QUALITY_ALLOWED_HOSTS: ${{ vars.VIDEO_QUALITY_ALLOWED_HOSTS }}
+        run: python3 shared/pipelines/video-quality/download.py work/video-quality-input/source.mp4
+      - name: Read accepted sample artifact
+        if: ${{ inputs.mode == 'final' }}
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: video-quality-${{ inputs.job_id }}
+          path: work/accepted-sample
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.sample_run_id }}
+      - name: Run isolated quality pipeline
+        if: ${{ inputs.mode != 'check' && inputs.mode != 'selftest' }}
+        run: |
+          python3 - <<'PY'
+          import os,subprocess
+          from pathlib import Path
+          e=os.environ
+          args=['python3','shared/pipelines/video-quality/run.py','--mode',e['VQ_MODE'],
+            '--input','work/video-quality-input/source.mp4','--output','work/video-quality-output',
+            '--job-id',e['VQ_JOB'],'--profile',e['VQ_PROFILE'],'--width',e['VQ_WIDTH'],
+            '--start',e['VQ_START'],'--rights-confirmed']
+          if e['VQ_MODE']=='final':
+              manifests=list(Path('work/accepted-sample').rglob('manifest.json'))
+              assert len(manifests)==1, 'Expected one sample manifest'
+              args += ['--approval',str(manifests[0]),'--accept-sample']
+          subprocess.run(args,check=True)
+          PY
+      - name: Save review package
+        if: ${{ success() && inputs.mode != 'check' && inputs.mode != 'selftest' }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: video-quality-${{ inputs.job_id }}
+          path: work/video-quality-output/
+          if-no-files-found: error
+          retention-days: 3
+      - name: Summary
+        if: ${{ always() }}
+        run: |
+          printf '%s\n' 'Video quality: inspect step status. Technical PASS is not visual approval.' >> "$GITHUB_STEP_SUMMARY"
+          printf '%s\n' 'No social publication, paid API, or GPU runner. Outputs expire after 3 days.' >> "$GITHUB_STEP_SUMMARY"
