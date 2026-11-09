@@ -93,7 +93,17 @@ try{
   await page.getByLabel('Период графика встреч',{exact:true}).selectOption('14');
   await meetings.locator('svg.recharts-surface').first().waitFor({state:'visible'});
   assert(await meetings.locator('svg.recharts-surface').count()>0,'Filtered recent meeting remains');
-  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`Fixture horizontal overflow ${width}`);
+  const layout=await page.evaluate(()=>{
+   const viewport={width:innerWidth,height:innerHeight,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,scrollX,scrollY};
+   const offending=[...document.querySelectorAll('body *')].flatMap(el=>{const r=el.getBoundingClientRect(),c=getComputedStyle(el);if(!r.width||!r.height||c.visibility==='hidden'||c.display==='none'||(r.right<=innerWidth+1&&r.left>=-1))return[];return[{tag:el.tagName,className:el.getAttribute('class'),testId:el.getAttribute('data-testid'),text:el.textContent?.slice(0,160),bounds:{left:r.left,right:r.right,top:r.top,width:r.width,height:r.height},css:{width:c.width,minWidth:c.minWidth,maxWidth:c.maxWidth,display:c.display,overflow:c.overflow,position:c.position,fontFamily:c.fontFamily},html:el.outerHTML.slice(0,700)}]}).sort((a,b)=>b.bounds.right-a.bounds.right).slice(0,40);
+   return{viewport,offending};
+  });
+  report.layouts??=[];report.layouts.push({width,...layout});
+  if(layout.viewport.documentWidth>width+1){
+   await page.screenshot({path:path.join(output,`nonempty-overflow-${width}.png`),fullPage:true});
+   fs.writeFileSync(path.join(output,`nonempty-overflow-${width}.json`),JSON.stringify(layout,null,2));
+  }
+  assert(layout.viewport.documentWidth<=width+1,`Fixture horizontal overflow ${width}: documentWidth=${layout.viewport.documentWidth}; first=${layout.offending[0]?.tag}.${layout.offending[0]?.className}`);
   await page.screenshot({path:path.join(output,`nonempty-${width}.png`),fullPage:true});
   report.checks.push({width,exact24:true,fact1:true,nonemptyHistory:true,conversionHistory:true,periodFiltering:true,tooltipSource:true,meetings:true,overflow:false});
   await page.close();

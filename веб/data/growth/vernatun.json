@@ -1,7 +1,7 @@
 {
   "version": 2,
   "projectId": "vernatun",
-  "revision": "growth-v2-20261109-01",
+  "revision": "growth-v2-20261109-02",
   "updatedAt": "2026-11-09",
   "planStatus": "draft",
   "planHorizon": {
@@ -613,7 +613,7 @@
       "title": "Один вечер: свои люди и живой армянский",
       "briefPath": "projects/vernatun/departments/reel/jobs/V-202611-REL-01/00-brief.md",
       "plannedDate": "2026-11-11",
-      "product": "захотеть прийти → Разговорные встречи",
+      "product": "Разговорные встречи",
       "format": "Короткое видео",
       "channel": [
         "IG",
