@@ -61,7 +61,7 @@ assert.equal(fingerprint.flags.AUTH_ROOT_attempted,undefined);
 assert(!fingerprint.calls.includes('authenticate'));
 console.log('PASS fingerprint is identified and rejected without authentication');
 
-const sample={status:'ok',base:{path:'/opt/content-factory',uid:1000,owner:'fixture'},processes:[],listeners8088:[],managers:[],storage:[],nginx:[]};
+const sample={status:'ok',base:{path:'/opt/content-factory',uid:1000,owner:'fixture'},processes:[],listeners8088:[],listeners3087:[],managers:[],storage:[],nginx:[],unit:{User:'fixture'}};
 assert.deepEqual(readInventory('REMOTE_INVENTORY_JSON='+JSON.stringify(sample)),sample);
 assert.equal(readInventory('REMOTE_UID0=true'),null);
 assert.throws(()=>readInventory('REMOTE_INVENTORY_JSON='+JSON.stringify({...sample,environment:{}})));

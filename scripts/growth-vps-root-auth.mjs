@@ -19,7 +19,7 @@ printf 'REMOTE_ROOT_PM2_PID_ALIVE=%s\\n' "$PM2_ALIVE"
 `+String.raw`
 if command -v python3 >/dev/null 2>&1; then
 python3 - <<'GROWTH_INVENTORY'
-import json, os, pathlib, pwd, re
+import json, os, pathlib, pwd, re, subprocess
 base='/opt/content-factory'
 def under(value):
  return value==base or value.startswith(base+'/')
@@ -40,21 +40,23 @@ def process(pid):
  except (OSError,ValueError,TypeError): return None
 allp=[p for name in os.listdir('/proc') if name.isdigit() for p in [process(name)] if p]
 apps=[p for p in allp if under(p['cwd'])][:32]
-inodes=set()
+inodes={8088:set(),3087:set()}
 for table in ['/proc/net/tcp','/proc/net/tcp6']:
  for line in text(table).splitlines()[1:]:
   cols=line.split()
-  if len(cols)>9 and cols[3]=='0A' and cols[1].split(':')[-1].upper()==format(8088,'04X'): inodes.add(cols[9])
-listeners=[]
-if inodes:
+  for port in inodes:
+   if len(cols)>9 and cols[3]=='0A' and cols[1].split(':')[-1].upper()==format(port,'04X'): inodes[port].add(cols[9])
+listenersByPort={8088:[],3087:[]}
+if any(inodes.values()):
  for p in allp:
   try:
    for fd in pathlib.Path('/proc/'+str(p['pid'])+'/fd').iterdir():
     try: link=os.readlink(fd)
     except OSError: continue
-    if link.startswith('socket:[') and link[8:-1] in inodes:
-     listeners.append(p); break
+    for port in inodes:
+     if link.startswith('socket:[') and link[8:-1] in inodes[port] and p not in listenersByPort[port]: listenersByPort[port].append(p)
   except OSError: pass
+listeners=listenersByPort[8088]+listenersByPort[3087]
 try:
  stat=os.stat(base); baseuid=stat.st_uid; owner=pwd.getpwuid(baseuid).pw_name
  basedata=dict(path=base,realpath=os.path.realpath(base),uid=baseuid,owner=owner)
@@ -72,7 +74,7 @@ for uid in sorted(owners):
  except KeyError: pass
 storage=[]
 for root in sorted({base}|{p['cwd'] for p in apps if under(p['cwd'])}):
- for relative in ['data','data/local','generatedMedia','public/vernatun-jobs','public/uploads','.env','.env.local','.env.production','.env.production.local']:
+ for relative in ['public','data','data/local','generatedMedia','public/vernatun-jobs','public/uploads','.env','.env.local','.env.production','.env.production.local']:
   path=root+'/'+relative
   item=dict(path=path,exists=os.path.exists(path),symlink=os.path.islink(path))
   if item['exists']:
@@ -87,7 +89,22 @@ for folder in ['/etc/nginx/sites-enabled','/etc/nginx/conf.d']:
   if 'content.vernatunspeakclub.com' not in body: continue
   ports=re.findall(r'proxy_pass\s+https?://(?:127\.0\.0\.1|localhost|\[::1\]):([0-9]+)',body)
   nginx.append(dict(file=str(file),localProxyPorts=sorted(set(map(int,ports))),alsoNamesAdmin='admin.vernatunspeakclub.com' in body))
-out=dict(status='ok',base=basedata,processes=apps,listeners8088=listeners[:8],managers=managers[:8],storage=storage[:64],nginx=nginx[:8])
+current=base+'/current'
+basedata['current']=dict(path=current,exists=os.path.exists(current),symlink=os.path.islink(current),realpath=os.path.realpath(current))
+unit={}
+properties=['User','Group','MainPID','WorkingDirectory','FragmentPath','DropInPaths','EnvironmentFiles','ReadWritePaths','ProtectSystem','ExecStart']
+try:
+ result=subprocess.run(['systemctl','show','content-factory.service','--no-pager']+['--property='+name for name in properties],capture_output=True,text=True,timeout=8)
+ if result.returncode==0:
+  values=dict(line.split('=',1) for line in result.stdout.splitlines() if '=' in line)
+  unit={name:values.get(name,'') for name in properties if name!='ExecStart'}
+  raw=values.get('ExecStart','')
+  executable=re.search(r'(?:^|[ {;])path=([^ ;}]+)',raw)
+  entries=re.findall(r'/opt/content-factory/(?:current|releases/[A-Za-z0-9_.-]+)/server\.js',raw)
+  unit['ExecStartIdentity']=dict(executable=executable[1] if executable else None,entrypoints=sorted(set(entries)),usesCurrent=(base+'/current/server.js') in entries)
+ else: unit={'status':'unavailable'}
+except (OSError,subprocess.TimeoutExpired): unit={'status':'unavailable'}
+out=dict(status='ok',base=basedata,processes=apps,listeners8088=listenersByPort[8088][:8],listeners3087=listenersByPort[3087][:8],managers=managers[:8],storage=storage[:64],nginx=nginx[:8],unit=unit)
 print('REMOTE_INVENTORY_JSON='+json.dumps(out,separators=(',',':')))
 GROWTH_INVENTORY
 else printf 'REMOTE_INVENTORY_STATUS=python3_unavailable\n'; fi
@@ -97,9 +114,10 @@ export function readInventory(stdout){
  if(!line)return null;
  if(line.length>24000)throw Error('Inventory exceeds bound');
  const data=JSON.parse(line.slice('REMOTE_INVENTORY_JSON='.length));
- const keys=['status','base','processes','listeners8088','managers','storage','nginx'];
+ const keys=['status','base','processes','listeners8088','listeners3087','managers','storage','nginx','unit'];
  if(!data||typeof data!=='object'||Object.keys(data).some(key=>!keys.includes(key))||data.status!=='ok')throw Error('Invalid inventory');
- for(const name of keys.slice(2))if(!Array.isArray(data[name])||data[name].length>64)throw Error('Invalid inventory collection');
+ for(const name of ['processes','listeners8088','listeners3087','managers','storage','nginx'])if(!Array.isArray(data[name])||data[name].length>64)throw Error('Invalid inventory collection');
+ if(!data.unit||typeof data.unit!=='object'||Array.isArray(data.unit))throw Error('Invalid inventory unit');
  return data;
 }
 export function classifySSHFailure(stderr,timedOut){
