@@ -1,3 +1,4 @@
+import {checkSituationJourney} from '../../scripts/situation-center-browser-guards.mjs';
 /** Isolated real-browser QA of the production component, never a production data source.
  * Execute in GitHub Actions, where Chromium is supported. BUILD_ONLY validates fixture/bundle locally.
  */
@@ -34,13 +35,14 @@ const report={kind:'isolated actual-component browser fixture',productionActual:
 const assert=(value,message)=>{if(!value)throw Error(message)};
 const browser=await chromium.launch({headless:true});
 try{
- for(const width of [1440,390,360]){
+ for(const width of [1440,390,412,360]){
   const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});
   page.on('pageerror',error=>report.errors.push(`${width}: ${error.message}`));
   await page.route('**/*',route=>route.abort()); // fixture has no reason to perform network requests
   await page.setContent('<!doctype html><html><head><meta charset="utf-8"></head><body style="margin:0;background:#08090a"><div id="root" style="padding:16px"></div></body></html>');
   await page.addStyleTag({content:css});await page.addScriptTag({content:js});
   await page.getByTestId('growth-center').waitFor();
+  const situationChecks=await checkSituationJourney(page,parsed.data,{width,output,fixture:true});
   await page.getByRole('tab',{name:'Контент-план',exact:true}).click();
   const cards=page.getByTestId('growth-center-content').getByTestId('growth-content-card');
   await page.waitForFunction(()=>document.querySelectorAll('[data-testid="growth-center-content"] [data-testid="growth-content-card"]').length===24);
@@ -105,7 +107,7 @@ try{
   }
   assert(layout.viewport.documentWidth<=width+1,`Fixture horizontal overflow ${width}: documentWidth=${layout.viewport.documentWidth}; first=${layout.offending[0]?.tag}.${layout.offending[0]?.className}`);
   await page.screenshot({path:path.join(output,`nonempty-${width}.png`),fullPage:true});
-  report.checks.push({width,exact24:true,fact1:true,nonemptyHistory:true,conversionHistory:true,periodFiltering:true,tooltipSource:true,meetings:true,overflow:false});
+  report.checks.push({width,...situationChecks,exact24:true,fact1:true,nonemptyHistory:true,conversionHistory:true,periodFiltering:true,tooltipSource:true,meetings:true,overflow:false});
   await page.close();
  }
  assert(report.errors.length===0,'Browser errors: '+report.errors.join('; '));

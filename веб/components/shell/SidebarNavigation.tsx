@@ -26,7 +26,6 @@ type NavItem = {
 const NAV_ITEMS: NavItem[] = [
   { href: "/studio", label: "Студия", icon: Rocket, testId: "nav-studio" },
   { href: "/schedule", label: "Расписание", icon: Calendar },
-  { href: "/growth", label: "Центр роста", icon: TrendingUp, testId: "nav-growth" },
   {
     href: "/settings",
     label: "Настройки",
@@ -40,6 +39,7 @@ const NAV_ITEMS: NavItem[] = [
     icon: Briefcase,
     testId: "nav-director",
   },
+  { href: "/growth", label: "Ситуационный центр", icon: TrendingUp, testId: "nav-growth" },
 ];
 
 /** C-68 / S48 — warm critical routes after idle (prod + warm turbopack). */

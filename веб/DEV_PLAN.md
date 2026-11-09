@@ -1,5 +1,9 @@
 # DEV_PLAN.md — Живой план Vernatun Content Factory
 
+## W-2026-11-10-situation-center — доработка готова к независимой браузерной приёмке
+
+Пятый раздел «Ситуационный центр» (`/growth`); 14 предложенных контентных механик по выбранному этапу, рубрики юмор/полезное/мини-сериал/другие, отдельные от 24 производственных заданий. Пять ссылок desktop/mobile, линейный шестой шаг return→membership с корректным знаменателем. Spec/chain до кода: `memory/waves/W-2026-11-10-situation-center/`. Независимые сценарии Tester и Client готовятся к QA-only Actions; до реального browser/evidence внутреннюю приёмку не объявлять. Production/release marker вне этой волны; данные/чат/студия сохраняются.
+
 ## W-2026-11-09-growth-center — разработка и QA готовы, SSH блокирует выкладку
 
 Отдельный /growth: schema v2, общий versioned JSON, read-only API, глобальный plan/fact,24 V-ID, profiles/strategy, history cohorts/conversion, meeting metrics, desktop/mobile nav. Инженерная команда реальная; spec/chain до кода в memory/waves/W-2026-11-09-growth-center. 25 inherited TS errors/sharp lock исправлены;31 modelguards/20independent/63carouseltests PASS, integratedtypecheck PASS. Production Webpack и штатный Turbopack build PASS, standalone+настоящий browser QA1440/390/360 PASS (run42677870881). VPS не обновлён: SSH publickey_denied; нужно исправить working USER/KEY binding, не пересобирать приложение без необходимости. VPS update разрешён владельцем для content.* после QA, admin.* вне scope. Нет publication/paidAPI. Canonical update protocol: projects/vernatun/content-plan/GROWTH_CENTER_UPDATES.md.

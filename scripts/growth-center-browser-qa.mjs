@@ -1,3 +1,4 @@
+import {checkSituationJourney} from './situation-center-browser-guards.mjs';
 import fs from 'node:fs';
 import {createRequire} from 'node:module';
 const require=createRequire(new URL('../веб/package.json',import.meta.url));
@@ -7,9 +8,10 @@ const out='qa-evidence';fs.mkdirSync(out,{recursive:true});
 const assert=(v,m)=>{if(!v)throw Error(m)};
 const browser=await chromium.launch({headless:true});
 const evidence={sourceSha:process.env.SOURCE_SHA,checks:[],errors:[]};
+let activePage;
 try{
- for(const width of [1440,390,360]){
-  const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});
+ for(const width of [1440,390,412,360]){
+  const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});activePage=page;
   await page.addInitScript(()=>{const key='cf.marketing.projects';if(!localStorage.getItem(key)){const ts='2026-11-09T00:00:00.000Z';localStorage.setItem(key,JSON.stringify({version:1,activeProjectId:'qa-preserved-project',activeChatId:'qa-preserved-chat',projects:[{id:'qa-preserved-project',name:'QA сохранённый проект',createdAt:ts,updatedAt:ts,chats:[{id:'qa-preserved-chat',title:'QA сохранённый чат',createdAt:ts,updatedAt:ts,messages:[{id:'qa-preserved-message',role:'user',content:'QA история должна сохраниться',createdAt:ts}]}]}]}))}});
   page.on('pageerror',e=>evidence.errors.push(`${width}: ${e.message}`));
   page.on('console',m=>{if(m.type()==='error')evidence.errors.push(`${width}: ${m.text()}`)});
@@ -18,6 +20,8 @@ try{
   await page.getByTestId('growth-center').waitFor();
   const api=await page.request.get(`${origin}/api/growth-center`);assert(api.ok(),'Dataset API failure');
   const data=await api.json();
+  assert((await page.title()).includes('Ситуационный центр'),'Page title not renamed');
+  const situationChecks=await checkSituationJourney(page,data,{width,output:out});
   const stages=['awareness','desire','registration','attendance','return','membership','advocacy','reactivation'];
   for(const id of stages){const b=page.getByTestId(`growth-stage-${id}`);await b.click();assert(await b.getAttribute('aria-pressed')==='true',`Stage ${id} not selected`);assert(await page.getByTestId('growth-stage-detail').isVisible(),`Stage ${id} detail hidden`);assert((await page.getByTestId('growth-stage-detail').innerText()).includes(data.stages.find(s=>s.id===id).label),`Stage ${id} detail not updated`)}
   await page.getByTestId('growth-stage-awareness').click();
@@ -65,10 +69,15 @@ try{
   assert((await page.evaluate(()=>JSON.parse(localStorage.getItem('cf.marketing.projects')).projects[0].chats[0].messages[0].content))==='QA история должна сохраниться','Stored chat overwritten');
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`Marketing overflow ${width}`);
   await page.screenshot({path:`${out}/marketing-${width}.png`,fullPage:true});
-  if(width===1440){await page.getByTestId('nav-growth').click();}else{await page.getByRole('navigation',{name:'Разделы фабрики',exact:true}).getByRole('link',{name:'Центр роста',exact:true}).click();}
+  if(width===1440){await page.getByTestId('nav-growth').click();}else{await page.getByRole('navigation',{name:'Разделы фабрики',exact:true}).getByRole('link',{name:'Ситуационный центр',exact:true}).click();}
   await page.waitForURL('**/growth');await page.getByTestId('growth-center').waitFor();
   assert(paid.length===0,'Unexpected paid network requests');
-  evidence.checks.push({width,stages:8,filters:true,planFact:true,marketing:true,overflow:false});await page.close();
+  evidence.checks.push({width,...situationChecks,stages:8,filters:true,planFact:true,marketing:true,overflow:false});await page.close();
  }
  assert(evidence.errors.length===0,'Browser errors: '+evidence.errors.join('; '));
+ evidence.status='passed';
+}catch(error){
+ evidence.status='failed';evidence.failure=String(error);
+ if(activePage&&!activePage.isClosed())await activePage.screenshot({path:`${out}/browser-failure.png`,fullPage:true}).catch(()=>{});
+ throw error;
 }finally{fs.writeFileSync(`${out}/browser-report.json`,JSON.stringify(evidence,null,2));await browser.close()}

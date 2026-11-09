@@ -28,10 +28,12 @@ const stage = z.object({ id: stageId, label: text, audience: text, job: text, ba
 const metric = z.object({ id, stageId: stageId.nullable(), label: text, definition: text, value: count, unit, periodStart: date, periodEnd: date, cohortId: id.nullable(), provenance, windowDays: z.number().int().min(1).max(365).nullable() }).strict();
 const target = z.object({ id, stageId, label: text, value: count, unit, periodStart: date, periodEnd: date, approvalStatus: z.enum(["draft", "approved"]), provisional: z.boolean(), basis: text, owner: text }).strict();
 const content = z.object({ id: z.string().regex(/^V-\d{6}-(CAR|REL|ART|YTB|TGP)-\d{2,}$/), title: text, briefPath: z.string().regex(/^projects\/vernatun\/departments\/[a-z-]+\/jobs\/V-\d{6}-[A-Z]+-\d{2,}\/00-brief\.md$/), plannedDate: date, product: text, format: text, channel: z.array(text).min(1), stageIds: z.array(stageId).min(1), status: z.enum(["planned", "in_progress", "review", "approved", "published"]), publication: z.object({ url: httpUrl, publishedAt: date, sourceId: id }).strict().nullable() }).strict();
+const mechanic = z.object({ id: z.string().regex(/^idea-[a-z0-9][a-z0-9-]{0,114}$/), stageIds: z.array(stageId).min(1), kind: z.enum(["humor", "useful", "series", "interactive", "trust", "invitation"]), title: text, need: text, barrier: text, purpose: text, example: text, hook: text, format: text, channels: z.array(text).min(1), cta: text, successMetric: text, status: z.literal("proposed"), sourceId: id }).strict();
 const point = z.object({ date, value: count, periodStart: date, periodEnd: date, cohortId: id.nullable(), evidenceKind: kind, sourceId: id, observedAt: date }).strict();
 const series = z.object({ id, stageId: stageId.nullable(), metricId: id, label: text, points: z.array(point) }).strict();
 const meeting = z.object({ id, confirmedDate: date, status: z.enum(["confirmed", "completed", "cancelled"]), registrations: count, attendees: count, newcomers: count, returning: count, capacity: count, revenue: count, sourceId: id, observedAt: date, evidenceKind: kind }).strict();
-const schema = z.object({ version: z.literal(2), projectId: z.literal("vernatun"), revision: id, updatedAt: date, planStatus: z.enum(["draft", "approved"]), planHorizon: z.object({ start: date, end: date }).strict(), sources: z.array(source).min(1), stages: z.array(stage).length(8), metrics: z.array(metric), targets: z.array(target), content: z.array(content), series: z.array(series), meetings: z.array(meeting) }).strict();
+const schema = z.object({ version: z.literal(2), projectId: z.literal("vernatun"), revision: id, updatedAt: date, planStatus: z.enum(["draft", "approved"]), planHorizon: z.object({ start: date, end: date }).strict(), sources: z.array(source).min(1), stages: z.array(stage).length(8), metrics: z.array(metric), targets: z.array(target), content: z.array(content), series: z.array(series), meetings: z.array(meeting), contentMechanics: z.array(mechanic).default([]) }).strict();
+export type ContentMechanic = z.infer<typeof mechanic>;
 export type SourceEntry = z.infer<typeof source>;
 export type StageConfig = z.infer<typeof stage>;
 export type MetricEntry = z.infer<typeof metric>;
@@ -42,7 +44,7 @@ export type SeriesPoint = z.infer<typeof point>;
 export type MeetingEntry = z.infer<typeof meeting>;
 export type GrowthCenterDataset = z.infer<typeof schema>;
 export type ValidationResult = { ok: true; data: GrowthCenterDataset } | { ok: false; errors: string[] };
-const parent: Partial<Record<StageId, StageId>> = { desire: "awareness", registration: "desire", attendance: "registration", return: "attendance", membership: "attendance", advocacy: "return" };
+const parent: Partial<Record<StageId, StageId>> = { desire: "awareness", registration: "desire", attendance: "registration", return: "attendance", membership: "return", advocacy: "return" };
 
 /** Strict v2 aggregate-only validation, including publication proof and referential integrity. */
 export function validateGrowthCenterDataset(input: unknown): ValidationResult {
@@ -54,7 +56,7 @@ export function validateGrowthCenterDataset(input: unknown): ValidationResult {
   function observed(value: string, name: string) { add(dateTime(value)! <= updated, `${name}: дата позже updatedAt.`); }
   function period(start: string, end: string, name: string) { add(dateTime(start)! <= dateTime(end)!, `${name}: обратный период.`); }
   function numeric(value: number | null, u: MetricUnit, name: string) { if (value === null) return; if (["people", "visits", "publications", "subscribers"].includes(u)) add(Number.isSafeInteger(value), `${name}: ожидается целое число.`); if (u === "percent") add(value <= 100, `${name}: percent должен быть 0–100.`); }
-  for (const key of ["sources", "metrics", "targets", "content", "series", "meetings"] as const) unique(d[key].map(x => x.id), key);
+  for (const key of ["sources", "metrics", "targets", "content", "series", "meetings", "contentMechanics"] as const) unique(d[key].map(x => x.id), key);
   unique(d.stages.map(s => s.id), "stages");
   const sources = new Set(d.sources.map(s => s.id)), metrics = new Map(d.metrics.map(m => [m.id, m])), targets = new Map(d.targets.map(t => [t.id, t])), contents = new Map(d.content.map(c => [c.id, c]));
   for (const s of d.sources) observed(s.date, `source ${s.id}`);
@@ -64,6 +66,11 @@ export function validateGrowthCenterDataset(input: unknown): ValidationResult {
     add(s.targetId === null || targets.has(s.targetId), `${s.id}: неизвестный targetId.`); if (s.targetId) add(targets.get(s.targetId)?.stageId === s.id, `${s.id}: targetId другой стадии.`);
     unique(s.contentIds, `${s.id}.contentIds`);
     for (const cid of s.contentIds) { add(contents.has(cid), `${s.id}: неизвестный contentId ${cid}.`); add(contents.get(cid)?.stageIds.includes(s.id) === true, `${s.id}/${cid}: обратная связь stageIds отсутствует.`); }
+  }
+  for (const idea of d.contentMechanics) {
+    unique(idea.stageIds, `${idea.id}.stageIds`);
+    add(sources.has(idea.sourceId), `${idea.id}: неизвестный источник идеи.`);
+    for (const sid of idea.stageIds) add(d.stages.some(s => s.id === sid), `${idea.id}: неизвестная стадия идеи.`);
   }
   for (const m of d.metrics) {
     add(sources.has(m.provenance.sourceId), `${m.id}: неизвестный источник.`); observed(m.provenance.observedAt, m.id); period(m.periodStart, m.periodEnd, m.id); numeric(m.value, m.unit, m.id);
@@ -110,6 +117,10 @@ export function validateGrowthCenterDataset(input: unknown): ValidationResult {
   return errors.length ? { ok: false, errors } : { ok: true, data: d };
 }
 function comparable(a: MetricEntry, b: MetricEntry): boolean { return a.unit === "people" && b.unit === "people" && a.cohortId !== null && a.cohortId === b.cohortId && a.periodStart === b.periodStart && a.periodEnd === b.periodEnd && a.provenance.kind === "measured" && b.provenance.kind === "measured" && a.provenance.observedAt === b.provenance.observedAt; }
+/** Proposed strategy ideas are separate from production jobs and never publication facts. */
+export function getStageContentMechanics(d: GrowthCenterDataset, stageId: StageId): ContentMechanic[] {
+  return (d.contentMechanics ?? []).filter(idea => idea.stageIds.includes(stageId));
+}
 export function getStageContentStats(d: GrowthCenterDataset, stageId?: StageId) {
   const entries = d.content.filter(c => !stageId || c.stageIds.includes(stageId));
   return { planned: entries.length, total: entries.length, published: entries.filter(c => c.status === "published" && c.publication !== null).length, inProgress: entries.filter(c => ["in_progress", "review", "approved"].includes(c.status)).length, content: entries };
@@ -142,7 +153,7 @@ export function getConversion(d: GrowthCenterDataset, stageId: StageId): Convers
   if (m.value === null || b.value === null) return result("Нет числителя или знаменателя.");
   if (b.value === 0) return result("При нулевой базе процент не определён.");
   if (m.value > b.value) return result("Числитель превышает базу; проверь качество данных.");
-  if (["return", "advocacy"].includes(stageId)) { const window = stageId === "advocacy" ? b.windowDays : m.windowDays; if (window === null || dateTime(m.provenance.observedAt)! < dateTime(m.periodEnd)! + window * DAY) return result("Окно возврата когорты ещё не созрело."); }
+  if (["return", "advocacy", "membership"].includes(stageId)) { const window = stageId === "return" ? m.windowDays : b.windowDays; if (window === null || dateTime(m.provenance.observedAt)! < dateTime(m.periodEnd)! + window * DAY) return result("Окно возврата когорты ещё не созрело."); }
   return result(stageId === "reactivation" ? "Возврат из отдельно определённой неактивной базы." : "Одна совместимая когорта; не доказательство причинного эффекта контента.", m.value / b.value);
 }
 
@@ -181,8 +192,8 @@ export function getConversionSeries(d: GrowthCenterDataset, stageId: StageId): C
     if (a.value === null || b.value === null) { row.reason = "Нет измеренного числителя или знаменателя; линия имеет разрыв."; return row; }
     if (b.value === 0) { row.reason = "Нулевой исторический знаменатель: процент не определён."; return row; }
     if (a.value > b.value) { row.reason = "Исторический числитель превышает свою базу."; return row; }
-    if (["return", "advocacy"].includes(stageId)) {
-      const window = stageId === "advocacy" ? baseMetric.windowDays : metric.windowDays;
+    if (["return", "advocacy", "membership"].includes(stageId)) {
+      const window = stageId === "return" ? metric.windowDays : baseMetric.windowDays;
       if (window === null || dateTime(p.observedAt)! < dateTime(p.periodEnd)! + window * DAY) { row.reason = "Историческая когорта ещё не созрела для окна возврата."; return row; }
     }
     // Even with missing intermediate series, a known earlier ancestor bounds descendants.

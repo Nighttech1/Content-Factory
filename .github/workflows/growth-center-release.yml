@@ -67,6 +67,7 @@ jobs:
           npm ci
           npx tsc --noEmit
           npx tsx scripts/test-growth-center.ts
+          node --import tsx memory/waves/W-2026-11-10-situation-center/tester-contract-boundaries.mjs
           npm run build
           test -f .next/standalone/server.js
           npx playwright install --with-deps chromium
@@ -101,6 +102,8 @@ jobs:
           node scripts/growth-center-browser-qa.mjs
           cd веб
           node --import tsx scripts/test-growth-center-browser-fixture.mjs
+          cd ..
+          node scripts/situation-center-client-qa.mjs
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: growth-center-qa-${{ github.run_id }}
