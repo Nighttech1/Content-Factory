@@ -3,6 +3,10 @@ import dns from 'node:dns/promises';
 import net from 'node:net';
 import https from 'node:https';
 import {pathToFileURL} from 'node:url';
+import {createHash} from 'node:crypto';
+
+export const KNOWN_SELECTEL_ADDRESS_SHA256='35a4617158930d844322efd609613cdec804b70f3f2b72ecbd8b2e76f37243d7';
+export const isKnownSelectelAddress=ip=>createHash('sha256').update(ip).digest('hex')===KNOWN_SELECTEL_ADDRESS_SHA256;
 
 const CONTENT_HOST='content.vernatunspeakclub.com';
 const PROBE_MS=15_000;
@@ -66,6 +70,7 @@ export async function diagnose(env){
   tcpAny(hostIPs,c.port,c.hostValid&&c.portValid),tcpAny(hostIPs,80,c.hostValid),tcpAny(hostIPs,443,c.hostValid),tcpAny(referenceIPs,22),httpsResult,tcpAny(contentIPs,c.port,c.portValid),
  ]);
  return {...c.flags,HOST_resolves:hostIPs.length>0,CONTENT_resolves:contentIPs.length>0,
+  knownSelectelDNSmatch:contentIPs.some(isKnownSelectelAddress),
   HOST_matches_content_DNS:hostIPs.length&&contentIPs.length?hostIPs.some(ip=>contentIPs.includes(ip)):null,
   TCP_configured_SSH:ssh,content_domain_TCP_SSH:contentSSH,TCP_target80:http,TCP_target443:httpsPort,TCP_reference_GitHub22:reference,contentHTTPS_status:httpsStatus};
 }

@@ -1,1 +1,5 @@
-{"version":1,"reason":"Diagnose SSH timeout before any server mutation","attempt":1}
+{
+  "version": 1,
+  "reason": "Verify previous Selectel access metadata, one guarded read-only root probe",
+  "attempt": 2
+}
