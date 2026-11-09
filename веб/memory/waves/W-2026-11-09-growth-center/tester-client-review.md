@@ -70,4 +70,28 @@ C-GC-NAV-01: мобильный старый /marketing скрывает sidebar
 
 ## Независимый предварительный вердикт
 
-Семантические guards и bundle изолированного сценария проходят. Mobile link исправлена; оба browser runner прошли node --check, git diff --check — код 0. Код и QA-сценарии готовы к source commit после общего tsc/build. **UI не принят, Actions run и screenshots ещё не получены; deployment gate не закрыт.** «Согласовано» остаётся решением владельца.
+Предварительный статус до Actions: семантические guards и bundle изолированного сценария проходят. Mobile link исправлена; оба browser runner прошли node --check, git diff --check — код 0. Окончательный результат Actions приведён ниже; «Согласовано» остаётся решением владельца.
+
+## Окончательная независимая QA после GitHub Actions
+
+Проверен реальный run **42677870881**, job **129364150016**, source **7de8d1c2407df829f06de1c84f60921c883f63bf**, trigger **efa747e3072f885af365fb44905c8cc8abd60311**. По GitHub jobs и decoded job log все шаги завершились `success`: чистый npm ci, полный TypeScript, **31 backend guard**, production build, упаковка standalone и оба Chromium-сценария. Deployment в этом run — `skipped`, как и предусмотрено режимом QA.
+
+Независимо прочитаны фактические `browser-report.json` и `nonempty-browser-report.json` из evidence. В обоих sourceSha совпадает с проверенным source. Production revision: **growth-v2-20261109-02**.
+
+| Реальная проверка Chromium | 1440 | 390 | 360 |
+|---|---|---|---|
+| Production: 8 стадий, фильтры, plan24/fact0, старый чат и навигация | PASS | PASS | PASS |
+| Изолированная fixture: точные 24 ID, fact1 с доказательством, переключение обратно | PASS | PASS | PASS |
+| Непустая история и историческая конверсия, период, tooltip с источником, встречи | PASS | PASS | PASS |
+| Горизонтальное переполнение | Нет | Нет | Нет |
+| JavaScript errors | Нет | Нет | Нет |
+
+Bounds из nonempty report подтверждают `documentWidth = bodyWidth = viewportWidth`: **1440/1440**, **390/390**, **360/360**. Для всех трёх `scrollX=0`, `offending=[]`. Предыдущий run 42676728164 действительно выявил overflow fixture на 360; FE исправила перенос tooltip scoped CSS, guard сохранён. В успешном run эта же проверка прошла без ослабления. Тестировщица самостоятельно открыла `nonempty-360.png`: tooltip переносится, оценки имеют отдельную легенду/пунктир, карточки и подписи остаются читаемыми. Root отдельно сообщила о собственном просмотре hero desktop и mobile fixture.
+
+Артефакты успешного run:
+
+- Проверенная сборка: **13702100156**, `growth-center-qa-42677870881`.
+- Доказательства, reports и screenshots: **13701815874**, `growth-center-evidence-42677870881`.
+- URL run: https://github.com/Nighttech1/Content-Factory/actions/runs/42677870881
+
+**Независимый вердикт: инженерные и браузерные QA-gates пройдены для указанного source и артефакта.** Изолированные синтетические значения имеют `productionActual:false` и не становятся фактами клуба. Окончательное продуктовое «согласовано» принадлежит владельцу; успешная QA сама по себе не доказывает production deployment или результат продвижения. Изменений app-кода после проверенного source тестировщица не делала.

@@ -179,6 +179,29 @@ jobs:
           elif test -s previous-ssh-trust/known_hosts; then cp previous-ssh-trust/known_hosts ~/.ssh/growth_known_hosts; TRUST=yes
           else echo 'Host trust: first-connection TOFU; known_hosts retained as artifact'; fi
           OPTS=(-i ~/.ssh/growth_key -o BatchMode=yes -o IdentitiesOnly=yes -o HashKnownHosts=yes -o StrictHostKeyChecking="$TRUST" -o UserKnownHostsFile=~/.ssh/growth_known_hosts -o ConnectTimeout=20)
+          # Read-only capacity gate before remote staging, SCP, backup or process stop.
+          # gzip ISIZE is exact for this single-member bundle (<4 GiB uncompressed).
+          RELEASE_BYTES="$(gzip -l -- verified-artifact/app.tar.gz | awk 'NR==2 {print $2}')"
+          [[ "$RELEASE_BYTES" =~ ^[0-9]+$ && "$RELEASE_BYTES" -gt 0 && "$RELEASE_BYTES" -lt 4294967296 ]]
+          ssh "${OPTS[@]}" -p "$PORT" "$VPS_USER@$VPS_HOST" "bash -s -- '$RELEASE_BYTES'" <<'DISK_PREFLIGHT'
+          set -euo pipefail
+          RELEASE_BYTES="$1"
+          BASE=/opt/content-factory
+          if ! OLD_BYTES="$(du -sb --exclude="$BASE/releases" --exclude="$BASE/backups" --exclude="$BASE/shared" "$BASE" 2>/dev/null | awk '{print $1}')"; then
+            echo 'DISK_PREFLIGHT_FAILED: unable to assess capacity'; exit 1
+          fi
+          if ! AVAILABLE="$(df -PB1 "$BASE" 2>/dev/null | awk 'NR==2 {print $4}')"; then
+            echo 'DISK_PREFLIGHT_FAILED: unable to assess capacity'; exit 1
+          fi
+          if ! [[ "$OLD_BYTES" =~ ^[0-9]+$ && "$AVAILABLE" =~ ^[0-9]+$ ]]; then
+            echo 'DISK_PREFLIGHT_FAILED: unable to assess capacity'; exit 1
+          fi
+          REQUIRED=$((2 * OLD_BYTES + RELEASE_BYTES + 268435456))
+          if [[ "$AVAILABLE" -lt "$REQUIRED" ]]; then
+            echo 'DISK_PREFLIGHT_FAILED: insufficient free space; no release staged'; exit 1
+          fi
+          echo 'DISK_PREFLIGHT_OK'
+          DISK_PREFLIGHT
           REMOTE="/tmp/growth-center-$SOURCE_SHA"
           ssh "${OPTS[@]}" -p "$PORT" "$VPS_USER@$VPS_HOST" "umask 077; mkdir -p '$REMOTE'"
           scp "${OPTS[@]}" -P "$PORT" verified-artifact/app.tar.gz scripts/deploy-growth-center.sh "$VPS_USER@$VPS_HOST:$REMOTE/"
