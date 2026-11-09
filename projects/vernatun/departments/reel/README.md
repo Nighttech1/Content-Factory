@@ -46,3 +46,10 @@
 исходников, читаемые субтитры, ссылка на итоговый файл и редакторский вердикт.
 Подробные режимы запуска, обязательные роли-маски, gates и one-turn правило см. в
 `shared/skills/reel-department-runner/SKILL.md`.
+
+## Продолжение в обычном ChatGPT
+
+- Вход: START-CHATGPT.md; состояние: CHATGPT-HANDOFF.md (в этой папке).
+- Реестр профилей оформления: designs/README.md; шаблон: designs/_TEMPLATE.md.
+- Апскейл/качество: shared/skills/reel-quality-enhancement/SKILL.md.
+- Перед работой проверять инструменты нового чата; Git не переносит runtime/OAuth.
