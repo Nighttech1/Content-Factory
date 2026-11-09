@@ -13,3 +13,9 @@
 Source7de8d1c2407df829f06de1c84f60921c883f63bf; QA trigger efa747e3072f885af365fb44905c8cc8abd60311. [Run42677870881](https://github.com/Nighttech1/Content-Factory/actions/runs/42677870881) completed/success: cleaninstall/fulltsc/31guards/штатный Turbopack production build/package, defaultbrowser и nonemptyfixture на1440/390/360. Buildartifact13702100156, evidence13701815874. Независимая Тестировщица проверила обаJSON: errors[], все3width passed, documentWidth=bodyWidth=viewportWidth и offending[]. Root скачала и визуально осмотрела hero1440 и nonempty360; tooltip исправлен, поля продукта синхронизированы. Приёмка владельца ещё открыта.
 
 После QA изменён только rollout workflow: read-only проверка свободного места перед SCP/backup/stop, threshold2×oldapp+bundle+256МиБ, YAML/bash/mock capacity checks PASS. Runtime app code и проверенный bundle не изменялись; выкладываем именно artifact13702100156, а не новую сборку. Это изменение сценария доставки не является app rebuild.
+
+## Попытка VPS — остановлена до изменений
+
+[Release42678794724](https://github.com/Nighttech1/Content-Factory/actions/runs/42678794724), marker7985a345: gate и identity artifact прошли. Первый read-only SSH disk preflight завершился `Connection timed out`, порт22, exit255. До remote mkdir/SCP/backup/PM2stop выполнение не дошло; никакой server backup или rollback не выдаётся за выполненный. Работающий сайт проверен root браузером: прежний /marketing доступен, нового раздела нет.
+
+Следующий шаг — отдельная ограниченная DNS/TCP диагностика через workflow без SSH_KEY/USER, без авторизации и серверных изменений. Выводятся только безопасные статусы, а не значения secrets. Фактическая причина (firewall/route/stale binding/порт) пока не установлена. Проверенный artifact13702100156 сохраняется, новый app build не нужен для повторной доставки.
