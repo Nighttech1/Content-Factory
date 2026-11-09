@@ -1,5 +1,15 @@
 # STATE.md — эстафета между сессиями
 
+## Актуально: growth dashboard и стратегия v2 · 09.11.2026
+
+Владелец вернул v1 на доработку: сначала привлекательность для холодных и внешнее распространение, затем FAQ. Стратегия v2 — актуальный последний раздел content-plan/2026-11.md; прежние 24 брифа/старые объёмы не запущены. Исследование дополнено brand/growth-market-evidence-20261109.md (историческая демография не TAM; SAM unknown) и рабочим growth-marketing-playbook.md. Обновлены профили директора/скаута/аналитика и действующий runtime prompt.
+
+По явному поручению вызвана инженерная команда; в существующий веб /marketing встроен GrowthMarketingWorkspace: lifecycle/content/market/chat. Старый MarketingDirectorClient/projects-store сохранён. Чистая модель cohort counts null, measured-only conversion, maturity, own branch denominators, allowlist manual import без PII. Введённые агрегаты browser-local, нет auto bot/CRM integration. Export HTML собран из actual GrowthDashboard, не новый отдельный продукт.
+
+Проверки: 23 data guards, независимый retest, prompt transport offline, DOM-functional, HTTP /marketing 200 — PASS. Полный tsc: те же25 ошибок, что baseline f40eb96, новых growth ошибок нет; общей зелёной сборки нет. Реальный browser desktop/mobile visual gate открыт из-за среды. Не заявлять production readiness/owner approval. Wave и guards: веб/memory/waves/W-2026-11-09-growth-dashboard/. Production ранее запрещён и не запускался; нужен отдельный release после проверки и разрешения. Владелец должен посмотреть экспорт/дать правки; маркетинговый пилот и другие контент-чаты не запущены.
+
+
+
 
 ## Контент-директор · 09.11.2026 — разведка и стратегия до Нового года
 
