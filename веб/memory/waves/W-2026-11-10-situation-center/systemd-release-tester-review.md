@@ -14,3 +14,17 @@ Static review подтверждает: exact existing systemd unit/User/Group U
 Единственный найденный P1 C-OPS-ROLLBACK-VERIFY исправлен: restoration,realpath,restart,health,oldPIDcwd/UID теперь проверяются в одной цепочке. Ticket evidence: `веб/memory/tickets/C-OPS-ROLLBACK-VERIFY/guards.md`.
 
 Тестировщик не выполняла реальный SSH,systemd,VPS mutations или платные API. После фактического release Оркестратор/Деплоер должны получить DEPLOY_VERIFIED с exact revision,а независимый Клиент — принять живой сайт и assets. OPS PASS не подменяет это доказательство.
+
+## Актуальный финальный retest — initial Next CLI → owned drop-in
+
+Предыдущий реальный rollout остановился preflight до app mutations: старый service использует exact Next CLI,а не standalone rootserver.js. Обновлённый Architect addendum прочитан; прежний OPS PASS относился к старому предположению и не подменяет этот retest.
+
+**Финальный OPS PASS для retry.** Independently фактически:
+
+- `python scripts/test-systemd-release.py` —8full adapter cases PASS: identity/capacityfail до мутаций,success preservation,revisionfail rollback retaining writes,failed current restoration,configwrite/reloadfail до switch и failed config removal noVERIFIED.
+- `node scripts/test-systemd-release-review.mjs` —14extracted-actual rollback branches +12actual Python preflight branches PASS. Known relative Next CLI7tokens accepted;extra args,foreignDropIns,existing owned target,missingCLI/build и identity mismatches rejected. CONFIG_CHANGED-only/absent-target rollback работает. Remove/reload/ln/mv/current/mainunit/restart/health/process failures не объявляются восстановлением. Foreign contents/symlink не удаляются.
+- `bash -n scripts/deploy-growth-center.sh` и `git diff --check` —PASS.
+
+Review подтвердил exact owned drop-in ExecStart reset с `/usr/bin/env PORT=3087 HOSTNAME=127.0.0.1 /usr/bin/node /opt/content-factory/current/server.js`; исходный mainunit и envfile не меняются,mainhash проверяется. CONFIG_CHANGED установлен до создания/записи config,trap покрывает pre-switch failure. Rollback удаляет только подтверждённый собственный файл и возвращает исходный CLI через reload+oldcurrent+restart+health+PIDUIDcwdlistener. Test mocks принимают `systemctl daemon-reload` без unit argument. Guard C-OPS-ROLLBACK-VERIFY повторно зелёный; C-OPS-DROPIN-OWNERSHIP найден и закрыт до передачи.
+
+Tested appartifact/source/QA остаются прежними,app rebuild не нужен; операционные изменения требуют отдельной доставки/retry marker Оркестратора. Ни realSSH,ни VPS mutations,ни paidAPI Тестировщик не выполняла. Следующая обязательная проверка — фактический deployed revision и живой Клиент; OPS PASS не означает,что сайт уже обновлён.

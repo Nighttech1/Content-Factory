@@ -533,4 +533,5 @@
 - KEEP S57 layered HTML / Variant A / no remake / shell_freeze
 
 ## W-2026-11-10-situation-center — systemd release
-- C-OPS-ROLLBACK-VERIFY: откат подтверждён только после успешных ln/mv, current→old, restart прежнего unit, bounded health и проверки PID/cwd/UID; ошибка любого шага не даёт ROLLBACK_VERIFIED — `memory/tickets/C-OPS-ROLLBACK-VERIFY/guards.md`. Проверки из корня репозитория: `node scripts/test-systemd-release-review.mjs` и `python3 scripts/test-systemd-release.py`.
+- C-OPS-ROLLBACK-VERIFY: откат подтверждён после восстановления own drop-in state (только regular matching файл, чужой/symlink не удалять), daemon-reload, ln/mv current→old, restart прежнего CLI/unit, bounded health и PID/cwd/UID/listener; ошибка любого шага не даёт ROLLBACK_VERIFIED. CONFIG_CHANGED до записи покрывает сбой до current cutover — `memory/tickets/C-OPS-ROLLBACK-VERIFY/guards.md`. Проверки из корня репозитория: `node scripts/test-systemd-release-review.mjs` и `python3 scripts/test-systemd-release.py`.
+- C-OPS-DROPIN-OWNERSHIP: до install повторно подтвердить отсутствие target; при rollback удалять только regular non-symlink файл, совпадающий с prepared owned content. Чужое содержимое/symlink не удалять — `memory/tickets/C-OPS-DROPIN-OWNERSHIP/guards.md`, те же независимые mock-проверки.

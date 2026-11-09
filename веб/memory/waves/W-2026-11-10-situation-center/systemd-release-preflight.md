@@ -23,3 +23,13 @@ Workflow deploy checkout берёт текущий `github.sha` для ops scrip
 - `git diff --check` — PASS.
 
 Это подготовка, не доказательство состоявшейся выкладки. Ни SSH, ни VPS mutations, ни marker/commit/push Деплоером не выполнялись. Root должна опубликовать ops и отдельно разрешённый release marker для того же tested artifact, затем проверить реальный workflow, HTTPS revision и пользовательский сценарий Клиентом. Production success до evidence не объявлять.
+
+## Исправление после безопасной остановки первой попытки
+
+Release42710726458 остановился на identity gate до app mutations. Phase3/4 диагностика доказала exact original Next CLI argv (`node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 3087`), а не old root/server.js. UID/GID980 и все остальные runtime/storage gates подтвердились. По принятому Architect addendum адаптер теперь проверяет **реальный original CLI entry + .next/BUILD_ID**, не выдуманный old standalone.
+
+Для tested standalone добавляется только initial owned `90-content-factory-release.conf` с ExecStart reset и env-prefix PORT3087/HOSTNAME127 перед `/usr/bin/node current/server.js`. Main unit и app.env не переписываются/не читаются для анализа значений. Main unit сохранён в private backup, hash проверяется после config change, в rollback и до success. Initial-only: любые прежние drop-ins или существующий owned target приводят к safe-fail; future repeat-release требует отдельной адаптации.
+
+CONFIG_CHANGED ставится до install; trap откатывает конфигурацию даже при failure до current switch. Удаление разрешено только regular non-symlink owned file, побайтно равный backup prepared content; отсутствие файла допустимо, чужой файл/ссылка fail-closed. Перед install target повторно проверяется absent. Rollback удаляет только этот owned file, daemon-reload, old current, исходный CLI restart, bounded health и PID/UID/cwd/listener; shared writes не восстанавливаются поверх.
+
+Обновлённый fullmock guard: **8 случаев PASS**, включая config-write failure до cutover, daemon-reload failure до cutover и failure config rollback без ложного VERIFIED. Bash/embedded Python/YAML syntax и diff check PASS. Независимый Tester проверяет ownership/config branches отдельно. Tested app artifact/source/QA остаются прежними.

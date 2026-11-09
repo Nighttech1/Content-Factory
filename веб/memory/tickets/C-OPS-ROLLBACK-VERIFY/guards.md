@@ -17,3 +17,7 @@ Guard: изолированная mock-проверка актуальной ф�
 Тестировщик фактически запустила `node scripts/test-systemd-release-review.mjs`:7 rollback ветвей PASS (успех,ln,mv,current identity,restart,health,process identity). Guard извлекает **актуальные** функции adapter и подменяет только системные команды; production пути/SSH/systemd/сеть не затрагиваются. Дополнительно9 независимых checks фактического Python preflight PASS: success,extra ExecStart arg,user,PID UID,cwd,listener,storage,env,dropin. Синтаксис Bash и git diff check PASS.
 
 Независимо повторён `python scripts/test-systemd-release.py`:5 full-adapter mocked scenarios PASS, включая failed rollback mv→не VERIFIED/не restart неправильного current и сохранение post-cutover пользовательских записей.
+
+## Повторный review Next CLI → собственный drop-in
+
+После фактического safe-fail прежнего preflight Архитектор одобрила отдельное уточнение для old known Next CLI. Актуальный guard дополнен CONFIG_CHANGED rollback до switch: `remove only owned drop-in → daemon-reload → old current → main unit hash → restart original CLI → bounded health → PID UID/cwd/listener3087`. Фактически14 независимых rollback ветвей и12 actual Python preflight ветвей PASS;8full adapter mocks PASS,включая configwrite/reload failure до current и failed config removal без ложного VERIFIED. Первичный код ошибки сохраняется. Этот retest заменяет прежний7+9 для нового adapter.
