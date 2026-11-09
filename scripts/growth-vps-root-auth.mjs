@@ -16,7 +16,92 @@ if [ -r "$HOME/.pm2/pm2.pid" ]; then PM2_PID="$(cat "$HOME/.pm2/pm2.pid" 2>/dev/
 PM2_ALIVE=false
 case "$PM2_PID" in ''|*[!0-9]*) ;; *) if kill -0 "$PM2_PID" 2>/dev/null && [ "$(ps -o uid= -p "$PM2_PID" 2>/dev/null | tr -d '[:space:]')" = 0 ]; then case "$(ps -o args= -p "$PM2_PID" 2>/dev/null)" in *"God Daemon"*) PM2_ALIVE=true ;; esac; fi ;; esac
 printf 'REMOTE_ROOT_PM2_PID_ALIVE=%s\\n' "$PM2_ALIVE"
+`+String.raw`
+if command -v python3 >/dev/null 2>&1; then
+python3 - <<'GROWTH_INVENTORY'
+import json, os, pathlib, pwd, re
+base='/opt/content-factory'
+def under(value):
+ return value==base or value.startswith(base+'/')
+def text(path):
+ try: return pathlib.Path(path).read_text()
+ except (OSError,UnicodeError): return ''
+def process(pid):
+ try:
+  root='/proc/'+str(pid)
+  status=text(root+'/status')
+  uid=int(re.search(r'^Uid:\s*(\d+)',status,re.M)[1])
+  parent=int(re.search(r'^PPid:\s*(\d+)',status,re.M)[1])
+  cwd=os.readlink(root+'/cwd')
+  exe=os.path.basename(os.readlink(root+'/exe'))
+  comm=text(root+'/comm').strip()[:80]
+  units=re.findall(r'(?:^|/)([A-Za-z0-9_.@-]+\.service)(?:/|$)',text(root+'/cgroup'),re.M)
+  return dict(pid=int(pid),uid=uid,ppid=parent,cwd=cwd,exe=exe,comm=comm,units=units)
+ except (OSError,ValueError,TypeError): return None
+allp=[p for name in os.listdir('/proc') if name.isdigit() for p in [process(name)] if p]
+apps=[p for p in allp if under(p['cwd'])][:32]
+inodes=set()
+for table in ['/proc/net/tcp','/proc/net/tcp6']:
+ for line in text(table).splitlines()[1:]:
+  cols=line.split()
+  if len(cols)>9 and cols[3]=='0A' and cols[1].split(':')[-1].upper()==format(8088,'04X'): inodes.add(cols[9])
+listeners=[]
+if inodes:
+ for p in allp:
+  try:
+   for fd in pathlib.Path('/proc/'+str(p['pid'])+'/fd').iterdir():
+    try: link=os.readlink(fd)
+    except OSError: continue
+    if link.startswith('socket:[') and link[8:-1] in inodes:
+     listeners.append(p); break
+  except OSError: pass
+try:
+ stat=os.stat(base); baseuid=stat.st_uid; owner=pwd.getpwuid(baseuid).pw_name
+ basedata=dict(path=base,realpath=os.path.realpath(base),uid=baseuid,owner=owner)
+except (OSError,KeyError):
+ baseuid=None; basedata=dict(path=base,exists=False)
+owners={p['uid'] for p in apps+listeners}
+if baseuid is not None: owners.add(baseuid)
+managers=[]
+for uid in sorted(owners):
+ try:
+  user=pwd.getpwuid(uid); state=user.pw_dir+'/.pm2'
+  raw=text(state+'/pm2.pid').strip()
+  p=next((p for p in allp if str(p['pid'])==raw and p['uid']==uid),None)
+  managers.append(dict(uid=uid,user=user.pw_name,pm2Home=state,pidFile=bool(raw),daemon=p if p and p['comm'].startswith('PM2') else None))
+ except KeyError: pass
+storage=[]
+for root in sorted({base}|{p['cwd'] for p in apps if under(p['cwd'])}):
+ for relative in ['data','data/local','generatedMedia','public/vernatun-jobs','public/uploads','.env','.env.local','.env.production','.env.production.local']:
+  path=root+'/'+relative
+  item=dict(path=path,exists=os.path.exists(path),symlink=os.path.islink(path))
+  if item['exists']:
+   item.update(realpath=os.path.realpath(path),uid=os.stat(path).st_uid,directory=os.path.isdir(path))
+  storage.append(item)
+nginx=[]
+for folder in ['/etc/nginx/sites-enabled','/etc/nginx/conf.d']:
+ try: candidates=list(pathlib.Path(folder).iterdir())
+ except OSError: candidates=[]
+ for file in candidates:
+  body=text(file)
+  if 'content.vernatunspeakclub.com' not in body: continue
+  ports=re.findall(r'proxy_pass\s+https?://(?:127\.0\.0\.1|localhost|\[::1\]):([0-9]+)',body)
+  nginx.append(dict(file=str(file),localProxyPorts=sorted(set(map(int,ports))),alsoNamesAdmin='admin.vernatunspeakclub.com' in body))
+out=dict(status='ok',base=basedata,processes=apps,listeners8088=listeners[:8],managers=managers[:8],storage=storage[:64],nginx=nginx[:8])
+print('REMOTE_INVENTORY_JSON='+json.dumps(out,separators=(',',':')))
+GROWTH_INVENTORY
+else printf 'REMOTE_INVENTORY_STATUS=python3_unavailable\n'; fi
 `;
+export function readInventory(stdout){
+ const line=stdout.split(/\r?\n/).find(line=>line.startsWith('REMOTE_INVENTORY_JSON='));
+ if(!line)return null;
+ if(line.length>24000)throw Error('Inventory exceeds bound');
+ const data=JSON.parse(line.slice('REMOTE_INVENTORY_JSON='.length));
+ const keys=['status','base','processes','listeners8088','managers','storage','nginx'];
+ if(!data||typeof data!=='object'||Object.keys(data).some(key=>!keys.includes(key))||data.status!=='ok')throw Error('Invalid inventory');
+ for(const name of keys.slice(2))if(!Array.isArray(data[name])||data[name].length>64)throw Error('Invalid inventory collection');
+ return data;
+}
 export function classifySSHFailure(stderr,timedOut){
  if(timedOut||/timed out|Operation timed out/i.test(stderr))return 'timeout';
  if(/Permission denied.*publickey/i.test(stderr))return 'publickey_denied';
@@ -86,6 +171,9 @@ export async function probe(env,dependencies={}){
    const line=result.stdout.split(/\r?\n/).find(line=>line===`${name}=true`||line===`${name}=false`);
    log(name,line?line.endsWith('=true'):'unknown');
   }
+  const inventory=readInventory(result.stdout);
+  if(inventory)log('REMOTE_INVENTORY_JSON',JSON.stringify(inventory));
+  else log('REMOTE_INVENTORY_STATUS','unavailable');
  }finally{fs.rmSync(temp,{recursive:true,force:true})}
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){

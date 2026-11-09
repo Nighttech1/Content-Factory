@@ -1,7 +1,7 @@
 // Offline control-flow checks: no DNS resolution, SSH connection or real credential.
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {probe,CONTENT_DOMAIN,REMOTE_COMMAND} from './growth-vps-root-auth.mjs';
+import {probe,CONTENT_DOMAIN,REMOTE_COMMAND,readInventory} from './growth-vps-root-auth.mjs';
 
 async function run(env,overrides={}){
  const flags={},calls=[];
@@ -60,3 +60,22 @@ assert.equal(fingerprint.flags.AUTH_ROOT_skipped,'key_not_loadable_without_passp
 assert.equal(fingerprint.flags.AUTH_ROOT_attempted,undefined);
 assert(!fingerprint.calls.includes('authenticate'));
 console.log('PASS fingerprint is identified and rejected without authentication');
+
+const sample={status:'ok',base:{path:'/opt/content-factory',uid:1000,owner:'fixture'},processes:[],listeners8088:[],managers:[],storage:[],nginx:[]};
+assert.deepEqual(readInventory('REMOTE_INVENTORY_JSON='+JSON.stringify(sample)),sample);
+assert.equal(readInventory('REMOTE_UID0=true'),null);
+assert.throws(()=>readInventory('REMOTE_INVENTORY_JSON='+JSON.stringify({...sample,environment:{}})));
+assert.throws(()=>readInventory('REMOTE_INVENTORY_JSON='+JSON.stringify({...sample,processes:Array(65).fill({})})));
+assert.throws(()=>readInventory('REMOTE_INVENTORY_JSON='+(' '.repeat(24000))));
+const inventoried=await run({VPS_USER:'root',VPS_KEY:'offline-placeholder'},{sshOnce:async()=>({code:0,stdout:'REMOTE_UID0=true\nREMOTE_INVENTORY_JSON='+JSON.stringify(sample),stderr:'',timedOut:false})});
+assert.deepEqual(JSON.parse(inventoried.flags.REMOTE_INVENTORY_JSON),sample);
+console.log('PASS bounded allowlisted inventory is explicitly forwarded; missing/oversized/extra-key records are rejected');
+
+const bash=spawnSync('bash',['-n'],{input:REMOTE_COMMAND,encoding:'utf8'});
+assert.equal(bash.status,0,bash.stderr);
+const python=REMOTE_COMMAND.split("python3 - <<'GROWTH_INVENTORY'\n")[1].split('\nGROWTH_INVENTORY')[0];
+const syntax=spawnSync('python3',['-c','import sys; compile(sys.stdin.read(), "inventory", "exec")'],{input:python,encoding:'utf8'});
+assert.equal(syntax.status,0,syntax.stderr);
+assert(!python.includes('/environ')&&!python.includes('/cmdline'));
+assert(!/\b(?:systemctl|pm2)\s+(?:start|restart|reload|stop|save|delete)\b/.test(REMOTE_COMMAND));
+console.log('PASS remote bash/Python syntax; no environment/cmdline read or manager mutation');

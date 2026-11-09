@@ -1,5 +1,5 @@
 {
   "version": 1,
-  "reason": "Verify owner-updated key: one configured-root read-only authentication, no deploy",
-  "attempt": 3
+  "reason": "Read-only runtime discovery before owner-authorized content site release",
+  "attempt": 4
 }
