@@ -1,0 +1,37 @@
+{
+  "report_id": "S-202611-GEN-01",
+  "stage": "prepared_locally_not_dispatched",
+  "research_total_cap_usd": "1.00",
+  "monthly_ceiling_usd": "5.00",
+  "instagram": {
+    "handles": [
+      "mosarmclub",
+      "armenian.club",
+      "souz_armyan_rossii",
+      "armenianvirtualcollege",
+      "armenianfilmsociety"
+    ],
+    "limit_per_handle": 6,
+    "maximum_posts": 30,
+    "cap_usd": "0.49",
+    "actor_runs_so_far": 0,
+    "shortfall": "2 Moscow profiles missing, not replaced with arbitrary accounts",
+    "evidence": {
+      "mosarmclub": "owner and brand brief",
+      "armenian.club": "https://t.me/armenian_club",
+      "souz_armyan_rossii": "https://sarinfo.org/",
+      "armenianvirtualcollege": "https://www.avc-agbu.org/",
+      "armenianfilmsociety": "https://www.armenianfilmsociety.com/"
+    }
+  },
+  "tiktok": {
+    "handles": [],
+    "stage": "no_verified_relevant_sample_do_not_start",
+    "limit_per_handle": 6,
+    "cap_usd": "0.50",
+    "actor_runs_so_far": 0
+  },
+  "reserve_usd": "0.01",
+  "publication_and_deploy": false,
+  "remote_write_authorized": false
+}

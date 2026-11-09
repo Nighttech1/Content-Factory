@@ -1,0 +1,1299 @@
+{
+  "access_date": "2026-11-06",
+  "channels": [
+    {
+      "handle": "mosarmclub",
+      "count": 8,
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "dates": [
+        "2026-10-22",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-26",
+        "2026-10-28",
+        "2026-10-28",
+        "2026-11-02",
+        "2026-11-05"
+      ]
+    },
+    {
+      "handle": "armenian_club",
+      "count": 5,
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "dates": [
+        "2026-09-24",
+        "2026-10-08",
+        "2026-10-12",
+        "2026-10-21",
+        "2026-11-05"
+      ]
+    },
+    {
+      "handle": "libfl",
+      "count": 10,
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "dates": [
+        "2026-11-03",
+        "2026-11-03",
+        "2026-11-03",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-05",
+        "2026-11-05",
+        "2026-11-06"
+      ]
+    },
+    {
+      "handle": "ziferblat_mayakovka",
+      "count": 10,
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "dates": [
+        "2026-10-30",
+        "2026-10-31",
+        "2026-10-31",
+        "2026-10-31",
+        "2026-11-01",
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-05"
+      ]
+    },
+    {
+      "handle": "inessa2512",
+      "count": 10,
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "dates": [
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-10",
+        "2026-10-12",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-23",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "handle": "repatarmeniaru",
+      "count": 10,
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "dates": [
+        "2026-09-15",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-29",
+        "2026-10-08",
+        "2026-10-12",
+        "2026-10-22",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-04"
+      ]
+    },
+    {
+      "handle": "armcaru",
+      "count": 10,
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "dates": [
+        "2026-09-11",
+        "2026-09-17",
+        "2026-09-19",
+        "2026-09-19",
+        "2026-09-23",
+        "2026-09-29",
+        "2026-10-01",
+        "2026-10-05",
+        "2026-10-22",
+        "2026-10-30"
+      ]
+    },
+    {
+      "handle": "armmuseum",
+      "count": 10,
+      "window_days": 90,
+      "method": "read-2026-11-06",
+      "dates": [
+        "2026-10-30",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-05"
+      ]
+    },
+    {
+      "handle": "avc_agbu",
+      "count": 3,
+      "window_days": 180,
+      "method": "read-2026-11-06",
+      "dates": [
+        "2026-06-08",
+        "2026-06-29",
+        "2026-09-28"
+      ]
+    },
+    {
+      "handle": "sarmoscow",
+      "count": 7,
+      "window_days": 180,
+      "method": "read-2026-11-06",
+      "dates": [
+        "2026-11-05",
+        "2026-11-05",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-06",
+        "2026-11-06",
+        "2026-11-06"
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "url": "https://t.me/mosarmclub/275",
+      "date": "2026-10-22T10:38:41+00:00",
+      "views": "287",
+      "media_only": false,
+      "channel": "mosarmclub",
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  3"
+      ]
+    },
+    {
+      "url": "https://t.me/mosarmclub/276",
+      "date": "2026-10-25T11:48:51+00:00",
+      "views": "487",
+      "media_only": false,
+      "channel": "mosarmclub",
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  4"
+      ]
+    },
+    {
+      "url": "https://t.me/mosarmclub/278",
+      "date": "2026-10-26T08:52:37+00:00",
+      "views": "327",
+      "media_only": true,
+      "channel": "mosarmclub",
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  7",
+        "❤‍🔥  6",
+        "🔥  4",
+        "🥰  1"
+      ]
+    },
+    {
+      "url": "https://t.me/mosarmclub/279",
+      "date": "2026-10-26T11:13:03+00:00",
+      "views": "239",
+      "media_only": false,
+      "channel": "mosarmclub",
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  6"
+      ]
+    },
+    {
+      "url": "https://t.me/mosarmclub/282",
+      "date": "2026-10-28T08:02:54+00:00",
+      "views": "290",
+      "media_only": false,
+      "channel": "mosarmclub",
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  8",
+        "🔥  3"
+      ]
+    },
+    {
+      "url": "https://t.me/mosarmclub/292",
+      "date": "2026-10-28T08:03:09+00:00",
+      "views": "245",
+      "media_only": true,
+      "channel": "mosarmclub",
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "👍  8"
+      ]
+    },
+    {
+      "url": "https://t.me/mosarmclub/293",
+      "date": "2026-11-02T16:23:16+00:00",
+      "views": "217",
+      "media_only": false,
+      "channel": "mosarmclub",
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤‍🔥  3",
+        "❤  2"
+      ]
+    },
+    {
+      "url": "https://t.me/mosarmclub/294",
+      "date": "2026-11-05T17:27:44+00:00",
+      "views": "125",
+      "media_only": false,
+      "channel": "mosarmclub",
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  3",
+        "😢  3",
+        "👍  2",
+        "🤝  1"
+      ]
+    },
+    {
+      "url": "https://t.me/armenian_club/1328",
+      "date": "2026-09-24T19:02:17+00:00",
+      "views": "2.16K",
+      "media_only": false,
+      "channel": "armenian_club",
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  45",
+        "❤‍🔥  20",
+        "🔥  14"
+      ]
+    },
+    {
+      "url": "https://t.me/armenian_club/1329",
+      "date": "2026-10-08T14:04:35+00:00",
+      "views": "1.09K",
+      "media_only": false,
+      "channel": "armenian_club",
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  49",
+        "🥰  15",
+        "🤩  14",
+        "6",
+        "🔥  4",
+        "3",
+        "💋  2",
+        "💘  2"
+      ]
+    },
+    {
+      "url": "https://t.me/armenian_club/1337",
+      "date": "2026-10-12T18:45:01+00:00",
+      "views": "978",
+      "media_only": true,
+      "channel": "armenian_club",
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  37",
+        "14",
+        "3"
+      ]
+    },
+    {
+      "url": "https://t.me/armenian_club/1338",
+      "date": "2026-10-21T15:25:01+00:00",
+      "views": "2.16K",
+      "media_only": false,
+      "channel": "armenian_club",
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  26",
+        "13",
+        "🥰  8",
+        "👍  1"
+      ]
+    },
+    {
+      "url": "https://t.me/armenian_club/1339",
+      "date": "2026-11-05T10:35:01+00:00",
+      "views": "353",
+      "media_only": false,
+      "channel": "armenian_club",
+      "window_days": 180,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  44",
+        "❤‍🔥  16",
+        "11",
+        "🤩  8",
+        "👍  5"
+      ]
+    },
+    {
+      "url": "https://t.me/libfl/10713",
+      "date": "2026-11-03T09:29:01+00:00",
+      "views": "568",
+      "media_only": false,
+      "channel": "libfl",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  6",
+        "🔥  1",
+        "👏  1"
+      ]
+    },
+    {
+      "url": "https://t.me/libfl/10714",
+      "date": "2026-11-03T11:44:58+00:00",
+      "views": "744",
+      "media_only": false,
+      "channel": "libfl",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  9",
+        "👏  2"
+      ]
+    },
+    {
+      "url": "https://t.me/libfl/10717",
+      "date": "2026-11-03T13:44:58+00:00",
+      "views": "609",
+      "media_only": false,
+      "channel": "libfl",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  2"
+      ]
+    },
+    {
+      "url": "https://t.me/libfl/10718",
+      "date": "2026-11-03T15:36:58+00:00",
+      "views": "614",
+      "media_only": false,
+      "channel": "libfl",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  3"
+      ]
+    },
+    {
+      "url": "https://t.me/libfl/10719",
+      "date": "2026-11-04T06:15:36+00:00",
+      "views": "585",
+      "media_only": false,
+      "channel": "libfl",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  3"
+      ]
+    },
+    {
+      "url": "https://t.me/libfl/10720",
+      "date": "2026-11-04T11:19:58+00:00",
+      "views": "666",
+      "media_only": false,
+      "channel": "libfl",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "👍  4",
+        "❤  2"
+      ]
+    },
+    {
+      "url": "https://t.me/libfl/10721",
+      "date": "2026-11-05T07:44:58+00:00",
+      "views": "646",
+      "media_only": false,
+      "channel": "libfl",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  3",
+        "🔥  3"
+      ]
+    },
+    {
+      "url": "https://t.me/libfl/10722",
+      "date": "2026-11-05T11:44:58+00:00",
+      "views": "674",
+      "media_only": false,
+      "channel": "libfl",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  6",
+        "🔥  2",
+        "❤‍🔥  1"
+      ]
+    },
+    {
+      "url": "https://t.me/libfl/10723",
+      "date": "2026-11-05T18:00:42+00:00",
+      "views": "631",
+      "media_only": false,
+      "channel": "libfl",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "👀  14",
+        "❤  7",
+        "🫡  7",
+        "😁  4"
+      ]
+    },
+    {
+      "url": "https://t.me/libfl/10724",
+      "date": "2026-11-06T07:44:58+00:00",
+      "views": "276",
+      "media_only": false,
+      "channel": "libfl",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  16"
+      ]
+    },
+    {
+      "url": "https://t.me/ziferblat_mayakovka/6335",
+      "date": "2026-10-30T06:25:10+00:00",
+      "views": "1.74K",
+      "media_only": false,
+      "channel": "ziferblat_mayakovka",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "💔  9",
+        "😱  2",
+        "😍  2",
+        "2"
+      ]
+    },
+    {
+      "url": "https://t.me/ziferblat_mayakovka/6337",
+      "date": "2026-10-31T12:16:21+00:00",
+      "views": "1.52K",
+      "media_only": false,
+      "channel": "ziferblat_mayakovka",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "19",
+        "🙏  6",
+        "😍  3"
+      ]
+    },
+    {
+      "url": "https://t.me/ziferblat_mayakovka/6338",
+      "date": "2026-10-31T13:36:45+00:00",
+      "views": "1.63K",
+      "media_only": false,
+      "channel": "ziferblat_mayakovka",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "👏  10",
+        "😱  4",
+        "👀  2",
+        "1"
+      ]
+    },
+    {
+      "url": "https://t.me/ziferblat_mayakovka/6339",
+      "date": "2026-10-31T18:58:55+00:00",
+      "views": "1.47K",
+      "media_only": false,
+      "channel": "ziferblat_mayakovka",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "👀  3",
+        "3"
+      ]
+    },
+    {
+      "url": "https://t.me/ziferblat_mayakovka/6341",
+      "date": "2026-11-01T10:39:18+00:00",
+      "views": "1.34K",
+      "media_only": false,
+      "channel": "ziferblat_mayakovka",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "😍  8",
+        "3"
+      ]
+    },
+    {
+      "url": "https://t.me/ziferblat_mayakovka/6342",
+      "date": "2026-11-01T12:50:54+00:00",
+      "views": "1.56K",
+      "media_only": false,
+      "channel": "ziferblat_mayakovka",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "3"
+      ]
+    },
+    {
+      "url": "https://t.me/ziferblat_mayakovka/6344",
+      "date": "2026-11-02T10:48:07+00:00",
+      "views": "1.42K",
+      "media_only": false,
+      "channel": "ziferblat_mayakovka",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "8",
+        "😱  2"
+      ]
+    },
+    {
+      "url": "https://t.me/ziferblat_mayakovka/6345",
+      "date": "2026-11-02T13:34:22+00:00",
+      "views": "1.31K",
+      "media_only": false,
+      "channel": "ziferblat_mayakovka",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "15",
+        "🙏  7",
+        "👀  4"
+      ]
+    },
+    {
+      "url": "https://t.me/ziferblat_mayakovka/6346",
+      "date": "2026-11-03T13:19:11+00:00",
+      "views": "1.18K",
+      "media_only": false,
+      "channel": "ziferblat_mayakovka",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "😍  8",
+        "4",
+        "🙏  3",
+        "💔  3"
+      ]
+    },
+    {
+      "url": "https://t.me/ziferblat_mayakovka/6347",
+      "date": "2026-11-05T11:34:01+00:00",
+      "views": "771",
+      "media_only": false,
+      "channel": "ziferblat_mayakovka",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "6"
+      ]
+    },
+    {
+      "url": "https://t.me/inessa2512/550",
+      "date": "2026-10-05T16:35:57+00:00",
+      "views": "457",
+      "media_only": false,
+      "channel": "inessa2512",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "🥰  9",
+        "🔥  5",
+        "🙏  2",
+        "❤  1"
+      ]
+    },
+    {
+      "url": "https://t.me/inessa2512/551",
+      "date": "2026-10-06T06:46:13+00:00",
+      "views": "583",
+      "media_only": false,
+      "channel": "inessa2512",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  25",
+        "😁  7",
+        "🤣  4"
+      ]
+    },
+    {
+      "url": "https://t.me/inessa2512/553",
+      "date": "2026-10-10T15:20:42+00:00",
+      "views": "424",
+      "media_only": false,
+      "channel": "inessa2512",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "21",
+        "7",
+        "❤  6",
+        "👍  3"
+      ]
+    },
+    {
+      "url": "https://t.me/inessa2512/554",
+      "date": "2026-10-12T07:50:49+00:00",
+      "views": "560",
+      "media_only": false,
+      "channel": "inessa2512",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  21",
+        "🔥  8",
+        "👍  2"
+      ]
+    },
+    {
+      "url": "https://t.me/inessa2512/556",
+      "date": "2026-10-19T12:29:39+00:00",
+      "views": "391",
+      "media_only": true,
+      "channel": "inessa2512",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "👍  5",
+        "🤔  1"
+      ]
+    },
+    {
+      "url": "https://t.me/inessa2512/557",
+      "date": "2026-10-20T09:59:56+00:00",
+      "views": "412",
+      "media_only": true,
+      "channel": "inessa2512",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": []
+    },
+    {
+      "url": "https://t.me/inessa2512/558",
+      "date": "2026-10-23T19:06:18+00:00",
+      "views": "345",
+      "media_only": false,
+      "channel": "inessa2512",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  6",
+        "5",
+        "🥰  3"
+      ]
+    },
+    {
+      "url": "https://t.me/inessa2512/559",
+      "date": "2026-10-29T08:04:22+00:00",
+      "views": "242",
+      "media_only": false,
+      "channel": "inessa2512",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  5",
+        "5"
+      ]
+    },
+    {
+      "url": "https://t.me/inessa2512/561",
+      "date": "2026-10-30T07:22:37+00:00",
+      "views": "220",
+      "media_only": false,
+      "channel": "inessa2512",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "5",
+        "🕊  2"
+      ]
+    },
+    {
+      "url": "https://t.me/inessa2512/563",
+      "date": "2026-10-31T08:52:54+00:00",
+      "views": "195",
+      "media_only": false,
+      "channel": "inessa2512",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "🔥  5",
+        "❤  4",
+        "4"
+      ]
+    },
+    {
+      "url": "https://t.me/repatarmeniaru/1655",
+      "date": "2026-09-15T12:43:32+00:00",
+      "views": "663",
+      "media_only": false,
+      "channel": "repatarmeniaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  7",
+        "🔥  2",
+        "👍  1"
+      ]
+    },
+    {
+      "url": "https://t.me/repatarmeniaru/1656",
+      "date": "2026-09-17T14:16:15+00:00",
+      "views": "889",
+      "media_only": false,
+      "channel": "repatarmeniaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  10",
+        "👍  1",
+        "👏  1"
+      ]
+    },
+    {
+      "url": "https://t.me/repatarmeniaru/1657",
+      "date": "2026-09-18T13:54:37+00:00",
+      "views": "905",
+      "media_only": false,
+      "channel": "repatarmeniaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  7",
+        "👍  1"
+      ]
+    },
+    {
+      "url": "https://t.me/repatarmeniaru/1660",
+      "date": "2026-09-29T09:32:52+00:00",
+      "views": "810",
+      "media_only": false,
+      "channel": "repatarmeniaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  16",
+        "🔥  3"
+      ]
+    },
+    {
+      "url": "https://t.me/repatarmeniaru/1661",
+      "date": "2026-10-08T14:49:23+00:00",
+      "views": "866",
+      "media_only": false,
+      "channel": "repatarmeniaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  7"
+      ]
+    },
+    {
+      "url": "https://t.me/repatarmeniaru/1662",
+      "date": "2026-10-12T12:06:43+00:00",
+      "views": "713",
+      "media_only": false,
+      "channel": "repatarmeniaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  5"
+      ]
+    },
+    {
+      "url": "https://t.me/repatarmeniaru/1663",
+      "date": "2026-10-22T12:10:32+00:00",
+      "views": "663",
+      "media_only": false,
+      "channel": "repatarmeniaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  6",
+        "👍  2"
+      ]
+    },
+    {
+      "url": "https://t.me/repatarmeniaru/1664",
+      "date": "2026-11-03T11:52:38+00:00",
+      "views": "305",
+      "media_only": false,
+      "channel": "repatarmeniaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  6"
+      ]
+    },
+    {
+      "url": "https://t.me/repatarmeniaru/1665",
+      "date": "2026-11-04T12:13:20+00:00",
+      "views": "302",
+      "media_only": false,
+      "channel": "repatarmeniaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  14"
+      ]
+    },
+    {
+      "url": "https://t.me/repatarmeniaru/1666",
+      "date": "2026-11-04T13:45:23+00:00",
+      "views": "227",
+      "media_only": false,
+      "channel": "repatarmeniaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  6"
+      ]
+    },
+    {
+      "url": "https://t.me/armcaru/1078",
+      "date": "2026-09-11T06:23:15+00:00",
+      "views": "287",
+      "media_only": false,
+      "channel": "armcaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  9",
+        "👍  4"
+      ]
+    },
+    {
+      "url": "https://t.me/armcaru/1085",
+      "date": "2026-09-17T07:16:13+00:00",
+      "views": "779",
+      "media_only": false,
+      "channel": "armcaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  6",
+        "🥰  1",
+        "👏  1",
+        "💯  1"
+      ]
+    },
+    {
+      "url": "https://t.me/armcaru/1088",
+      "date": "2026-09-19T06:36:30+00:00",
+      "views": "296",
+      "media_only": false,
+      "channel": "armcaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  6"
+      ]
+    },
+    {
+      "url": "https://t.me/armcaru/1090",
+      "date": "2026-09-19T15:05:46+00:00",
+      "views": "305",
+      "media_only": false,
+      "channel": "armcaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  2",
+        "👏  1",
+        "💯  1"
+      ]
+    },
+    {
+      "url": "https://t.me/armcaru/1091",
+      "date": "2026-09-23T20:10:37+00:00",
+      "views": "260",
+      "media_only": false,
+      "channel": "armcaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  11",
+        "🔥  6",
+        "💯  2",
+        "👍  1",
+        "🥰  1"
+      ]
+    },
+    {
+      "url": "https://t.me/armcaru/1096",
+      "date": "2026-09-29T15:48:21+00:00",
+      "views": "263",
+      "media_only": false,
+      "channel": "armcaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  5",
+        "👏  1",
+        "😁  1",
+        "💯  1"
+      ]
+    },
+    {
+      "url": "https://t.me/armcaru/1097",
+      "date": "2026-10-01T18:10:07+00:00",
+      "views": "345",
+      "media_only": false,
+      "channel": "armcaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  7",
+        "🔥  2",
+        "🥰  2",
+        "2",
+        "👏  1",
+        "💯  1"
+      ]
+    },
+    {
+      "url": "https://t.me/armcaru/1098",
+      "date": "2026-10-05T04:40:08+00:00",
+      "views": "274",
+      "media_only": false,
+      "channel": "armcaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "❤  10",
+        "🥰  4",
+        "💯  1",
+        "1"
+      ]
+    },
+    {
+      "url": "https://t.me/armcaru/1099",
+      "date": "2026-10-22T13:05:30+00:00",
+      "views": "206",
+      "media_only": false,
+      "channel": "armcaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "5",
+        "👏  3",
+        "❤  2"
+      ]
+    },
+    {
+      "url": "https://t.me/armcaru/1102",
+      "date": "2026-10-30T06:06:42+00:00",
+      "views": "124",
+      "media_only": false,
+      "channel": "armcaru",
+      "window_days": 90,
+      "method": "reused-v3-snapshot-2026-11-06",
+      "reactions": [
+        "🔥  5",
+        "👍  3",
+        "❤  2",
+        "🥰  1"
+      ]
+    },
+    {
+      "url": "https://t.me/armmuseum/7923",
+      "date": "2026-10-30T12:40:05+00:00",
+      "views": "390",
+      "media_only": false,
+      "channel": "armmuseum",
+      "window_days": 90,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "❤‍🔥  9",
+        "7",
+        "❤  2",
+        "👏  2",
+        "💔  1"
+      ]
+    },
+    {
+      "url": "https://t.me/armmuseum/7924",
+      "date": "2026-10-30T16:11:55+00:00",
+      "views": "392",
+      "media_only": false,
+      "channel": "armmuseum",
+      "window_days": 90,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "14",
+        "❤  9",
+        "🔥  4",
+        "❤‍🔥  2",
+        "👍  1"
+      ]
+    },
+    {
+      "url": "https://t.me/armmuseum/7925",
+      "date": "2026-10-31T12:25:33+00:00",
+      "views": "330",
+      "media_only": false,
+      "channel": "armmuseum",
+      "window_days": 90,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "13",
+        "❤  7",
+        "🔥  4",
+        "👏  3"
+      ]
+    },
+    {
+      "url": "https://t.me/armmuseum/7926",
+      "date": "2026-11-01T18:50:13+00:00",
+      "views": "327",
+      "media_only": false,
+      "channel": "armmuseum",
+      "window_days": 90,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "❤  15",
+        "7",
+        "❤‍🔥  3",
+        "👍  2"
+      ]
+    },
+    {
+      "url": "https://t.me/armmuseum/7927",
+      "date": "2026-11-02T16:02:58+00:00",
+      "views": "277",
+      "media_only": false,
+      "channel": "armmuseum",
+      "window_days": 90,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "10",
+        "❤  6",
+        "🔥  5",
+        "👏  3",
+        "😢  3"
+      ]
+    },
+    {
+      "url": "https://t.me/armmuseum/7928",
+      "date": "2026-11-02T17:21:58+00:00",
+      "views": "291",
+      "media_only": false,
+      "channel": "armmuseum",
+      "window_days": 90,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "❤  9",
+        "6",
+        "🔥  4",
+        "👍  2"
+      ]
+    },
+    {
+      "url": "https://t.me/armmuseum/7929",
+      "date": "2026-11-03T13:18:34+00:00",
+      "views": "276",
+      "media_only": false,
+      "channel": "armmuseum",
+      "window_days": 90,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "❤  9",
+        "6",
+        "👍  4",
+        "❤‍🔥  1"
+      ]
+    },
+    {
+      "url": "https://t.me/armmuseum/7934",
+      "date": "2026-11-04T14:10:29+00:00",
+      "views": "244",
+      "media_only": false,
+      "channel": "armmuseum",
+      "window_days": 90,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "🔥  9",
+        "❤  6",
+        "6",
+        "👏  1",
+        "😢  1"
+      ]
+    },
+    {
+      "url": "https://t.me/armmuseum/7935",
+      "date": "2026-11-05T07:19:16+00:00",
+      "views": "278",
+      "media_only": false,
+      "channel": "armmuseum",
+      "window_days": 90,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "👍  13",
+        "❤‍🔥  8",
+        "5",
+        "🔥  3",
+        "❤  1"
+      ]
+    },
+    {
+      "url": "https://t.me/armmuseum/7936",
+      "date": "2026-11-05T11:31:56+00:00",
+      "views": "160",
+      "media_only": false,
+      "channel": "armmuseum",
+      "window_days": 90,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "❤‍🔥  12",
+        "👍  5",
+        "5",
+        "❤  2",
+        "🔥  2"
+      ]
+    },
+    {
+      "url": "https://t.me/avc_agbu/46",
+      "date": "2026-06-08T11:11:27+00:00",
+      "views": "412",
+      "media_only": false,
+      "channel": "avc_agbu",
+      "window_days": 180,
+      "method": "read-2026-11-06",
+      "reactions": []
+    },
+    {
+      "url": "https://t.me/avc_agbu/47",
+      "date": "2026-06-29T13:38:34+00:00",
+      "views": "337",
+      "media_only": false,
+      "channel": "avc_agbu",
+      "window_days": 180,
+      "method": "read-2026-11-06",
+      "reactions": []
+    },
+    {
+      "url": "https://t.me/avc_agbu/48",
+      "date": "2026-09-28T11:35:29+00:00",
+      "views": "152",
+      "media_only": false,
+      "channel": "avc_agbu",
+      "window_days": 180,
+      "method": "read-2026-11-06",
+      "reactions": []
+    },
+    {
+      "url": "https://t.me/sarmoscow/18997",
+      "date": "2026-11-05T15:29:25+00:00",
+      "views": "246",
+      "media_only": false,
+      "channel": "sarmoscow",
+      "window_days": 180,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "❤  2",
+        "👏  2"
+      ]
+    },
+    {
+      "url": "https://t.me/sarmoscow/18998",
+      "date": "2026-11-05T15:30:08+00:00",
+      "views": "246",
+      "media_only": false,
+      "channel": "sarmoscow",
+      "window_days": 180,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "❤  1"
+      ]
+    },
+    {
+      "url": "https://t.me/sarmoscow/19008",
+      "date": "2026-11-05T15:38:02+00:00",
+      "views": "246",
+      "media_only": false,
+      "channel": "sarmoscow",
+      "window_days": 180,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "❤  2"
+      ]
+    },
+    {
+      "url": "https://t.me/sarmoscow/19013",
+      "date": "2026-11-06T06:25:32+00:00",
+      "views": "185",
+      "media_only": false,
+      "channel": "sarmoscow",
+      "window_days": 180,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "👍  1",
+        "🔥  1"
+      ]
+    },
+    {
+      "url": "https://t.me/sarmoscow/19014",
+      "date": "2026-11-06T06:27:11+00:00",
+      "views": "203",
+      "media_only": false,
+      "channel": "sarmoscow",
+      "window_days": 180,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "🙏  6"
+      ]
+    },
+    {
+      "url": "https://t.me/sarmoscow/19015",
+      "date": "2026-11-06T07:25:09+00:00",
+      "views": "141",
+      "media_only": false,
+      "channel": "sarmoscow",
+      "window_days": 180,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "👏  1"
+      ]
+    },
+    {
+      "url": "https://t.me/sarmoscow/19016",
+      "date": "2026-11-06T09:27:51+00:00",
+      "views": "104",
+      "media_only": false,
+      "channel": "sarmoscow",
+      "window_days": 180,
+      "method": "read-2026-11-06",
+      "reactions": [
+        "❤  2",
+        "👏  1"
+      ]
+    }
+  ]
+}

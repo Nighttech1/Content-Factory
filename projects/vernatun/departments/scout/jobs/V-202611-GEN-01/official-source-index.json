@@ -1,0 +1,149 @@
+{
+  "access_date": "2026-11-06",
+  "sources": [
+    {
+      "id": "W01",
+      "url": "https://www.armmuseum.ru/events",
+      "title": "Музей, события",
+      "use_and_limit": "Текущий индекс; не расписание старого клуба"
+    },
+    {
+      "id": "W02",
+      "url": "https://www.armmuseum.ru/contacts",
+      "title": "Музей, контакты",
+      "use_and_limit": "Первичная связь TG / YouTube"
+    },
+    {
+      "id": "W03",
+      "url": "https://www.armmuseum.ru/news-blog/speakingclub",
+      "title": "Музей, разговорный клуб",
+      "use_and_limit": "2024; исторический анонс среднего уровня"
+    },
+    {
+      "id": "W04",
+      "url": "https://www.armmuseum.ru/news-blog/speakingclubneginners",
+      "title": "Музей, начинающие",
+      "use_and_limit": "22.02.2024, событие 29.02; не текущий набор"
+    },
+    {
+      "id": "W05",
+      "url": "https://www.armmuseum.ru/activity-catalog/2017/5/13/armenian-speaking-club",
+      "title": "Музей, старый проект",
+      "use_and_limit": "2017; исторический формат, связан с HSE; не отдельный текущий конкурент"
+    },
+    {
+      "id": "W06",
+      "url": "https://libfl.ru/ru/event/razgovornyy-klub-armyanskiy-yazyk-prodvinutyy-uroven-1",
+      "title": "Иностранка, продвинутый",
+      "use_and_limit": "12.11.2026 показано при последнем чтении; осенняя серия и 1700 ₽"
+    },
+    {
+      "id": "W07",
+      "url": "https://libfl.ru/ru/event/razgovornyy-klub-armyanskiy-yazyk-sredniy-uroven",
+      "title": "Иностранка, средний",
+      "use_and_limit": "23.05.2026, 1500 ₽ в старом событии; не текущий тариф"
+    },
+    {
+      "id": "W08",
+      "url": "https://libfl.ru/ru/event/yazykovoy-klub-armyanskiy-yazyk-bazovyy-uroven",
+      "title": "Иностранка, базовый",
+      "use_and_limit": "Историческое предложение 2026; не подтверждение текущего набора"
+    },
+    {
+      "id": "W09",
+      "url": "https://armlingo.com/",
+      "title": "ArmLingo",
+      "use_and_limit": "Предложение школы/клуба, группы 3–4, 8 встреч/месяц"
+    },
+    {
+      "id": "W10",
+      "url": "https://www.repatarmenia.org/ru/services-and-programs/razgovornyj-klub-armyanskogo-yazyka-v-armenii-dlya-repatriantov-haytalki",
+      "title": "Repat, HayTalki",
+      "use_and_limit": "Практика для репатриантов; текущая цена не найдена"
+    },
+    {
+      "id": "W11",
+      "url": "https://www.repatarmenia.org/services-and-programs/online-communities",
+      "title": "Repat, онлайн-сообщества",
+      "use_and_limit": "Структура поддержки/общения; активность не проверена"
+    },
+    {
+      "id": "W12",
+      "url": "https://www.repatarmenia.org/about-us",
+      "title": "Repat, о фонде",
+      "use_and_limit": "Позиционирование и программы; чтение через веб-индекс, прямой GET ранее недоступен"
+    },
+    {
+      "id": "W13",
+      "url": "https://yanclub.ru/",
+      "title": "Yan Club",
+      "use_and_limit": "Премиальное деловое сообщество; не массовый разговорный клуб"
+    },
+    {
+      "id": "W14",
+      "url": "https://sarinfo.org/news/msg/",
+      "title": "SAR, новости",
+      "use_and_limit": "Культурные/спортивные события 2026; политические сюжеты не адаптируются"
+    },
+    {
+      "id": "W15",
+      "url": "https://www.haylingua.am/ru",
+      "title": "Haylingua",
+      "use_and_limit": "Самостоятельное обучение и инструменты"
+    },
+    {
+      "id": "W16",
+      "url": "https://www.haylingua.am/ru/pricing",
+      "title": "Haylingua, тарифы",
+      "use_and_limit": "Начало без карты, Premium, повторение/серии; числовой цены в извлечении нет"
+    },
+    {
+      "id": "W17",
+      "url": "https://www.avc-agbu.org/",
+      "title": "AVC, главная",
+      "use_and_limit": "Первичные ссылки IG, TG и legacy YouTube"
+    },
+    {
+      "id": "W18",
+      "url": "https://www.avc-agbu.org/ru/about",
+      "title": "AVC, о колледже",
+      "use_and_limit": "Образовательная организация, не московский офлайн-клуб"
+    },
+    {
+      "id": "W19",
+      "url": "https://www.avc-agbu.org/ru/departments/armenian-language/16",
+      "title": "AVC, армянский язык",
+      "use_and_limit": "Уровневое обучение; путь регистрации без отправки формы"
+    },
+    {
+      "id": "W20",
+      "url": "https://www.avc-agbu.org/special_program/TV%20School",
+      "title": "AVC, TV School",
+      "use_and_limit": "Образовательные материалы; не новая независимая организация"
+    },
+    {
+      "id": "W21",
+      "url": "https://ayolingo.org/",
+      "title": "AYOlingo",
+      "use_and_limit": "Бесплатное приложение по заявлению сайта"
+    },
+    {
+      "id": "W22",
+      "url": "https://askaci.app/ru/",
+      "title": "Askaci",
+      "use_and_limit": "Уроки/ИИ/семейный контекст, условия на сайте; приложение не тестировалось"
+    },
+    {
+      "id": "W23",
+      "url": "https://tandem.net/ru/language-exchange/armenia/yerevan",
+      "title": "Tandem, Ереван",
+      "use_and_limit": "Публичные профили языкового обмена; даты активности не указаны"
+    },
+    {
+      "id": "W24",
+      "url": "https://nekrasovka.ru/articles/languageclubs",
+      "title": "Некрасовка, языковые клубы",
+      "use_and_limit": "Смежная московская площадка; армянский клуб не подтверждён"
+    }
+  ]
+}

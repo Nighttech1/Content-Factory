@@ -1,0 +1,17 @@
+{
+  "collected_at_utc": "2026-11-06T11:48:03.804957+00:00",
+  "repository": "Nighttech1/Content-Factory",
+  "commit": "7f4cedebbf2db6b58d36e5fa6a5ccb82e1e8ec12",
+  "run_id": "42212889425",
+  "run_attempt": "1",
+  "status": "failed",
+  "mode": "youtube",
+  "report_id": "S-202611-GEN-01",
+  "handles": [
+    "mosarmclub",
+    "armenianmuseum",
+    "sarinfo1"
+  ],
+  "limit_per_handle": 10,
+  "error": "Unexpected YouTube response"
+}

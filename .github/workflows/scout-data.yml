@@ -7,7 +7,7 @@ on:
       mode:
         description: 'check checks secret presence only; collection needs explicit authorization'
         type: choice
-        options: [check, youtube, instagram]
+        options: [check, youtube, instagram, tiktok]
         default: check
       report_id:
         description: 'Collection report ID: S-YYYYMM-GEN-01 (or CAR/REL/ART/YTB)'
@@ -17,14 +17,14 @@ on:
         type: string
         default: mosarmclub
       limit:
-        description: 'Recent posts/videos per handle (1–12; max 50 total)'
+        description: 'Apify: 1–6 each, IG max 7 profiles / TikTok max 5; YouTube 1–12; max 50 total'
         type: string
         default: '5'
       authorization:
         description: 'After owner authorizes research: COLLECT <report_id>. Empty for check.'
         type: string
       apify_budget_usd:
-        description: 'Instagram maximum total charge, USD (0.01–1.00); paid/free credits may be consumed'
+        description: 'Apify hard cap per platform, USD (0.01–0.50); research total max 1.00; monthly max 5.00'
         type: string
         default: '0.50'
 
@@ -32,7 +32,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: scout-${{ inputs.report_id || 'check' }}
+  group: scout-manual-provider-budget
   cancel-in-progress: false
 
 jobs:

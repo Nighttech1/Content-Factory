@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://vernatunspeakclub.com/",
+    "error": "HTTPError",
+    "http_status": 503,
+    "checked_at_utc": "2026-11-06T11:54:43.757637+00:00"
+  },
+  {
+    "url": "https://vernatunspeakclub.com/campus",
+    "error": "HTTPError",
+    "http_status": 503,
+    "checked_at_utc": "2026-11-06T11:54:49.157414+00:00"
+  },
+  {
+    "url": "https://t.me/vernatunbot",
+    "http_status": 200,
+    "final_url": "https://t.me/vernatunbot",
+    "checked_at_utc": "2026-11-06T11:54:49.845944+00:00"
+  }
+]

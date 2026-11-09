@@ -1,0 +1,376 @@
+{
+  "checked_at_utc": "2026-11-06T12:21:46.370078+00:00",
+  "method": "GET public actor metadata, no token/no actor run",
+  "actors": [
+    {
+      "actor": "apify~instagram-scraper",
+      "metadata": {
+        "id": "shu8hvrXbJbY3Eb9W",
+        "name": "instagram-scraper",
+        "pricingInfos": [
+          {
+            "minimalMaxTotalChargeUsd": 0.0027,
+            "pricingModel": "PAY_PER_EVENT",
+            "isPriceChangeNotificationSuppressed": true,
+            "pricingPerEvent": {
+              "actorChargeEvents": {
+                "result": {
+                  "eventTitle": "Result",
+                  "eventDescription": "Each result written to the dataset",
+                  "isOneTimeEvent": false,
+                  "eventTieredPricingUsd": {
+                    "FREE": {
+                      "tieredEventPriceUsd": 0.0027
+                    },
+                    "BRONZE": {
+                      "tieredEventPriceUsd": 0.0023
+                    },
+                    "SILVER": {
+                      "tieredEventPriceUsd": 0.0019
+                    },
+                    "GOLD": {
+                      "tieredEventPriceUsd": 0.0015
+                    },
+                    "PLATINUM": {
+                      "tieredEventPriceUsd": 0.0009
+                    },
+                    "DIAMOND": {
+                      "tieredEventPriceUsd": 0.0005
+                    }
+                  },
+                  "isPrimaryEvent": true
+                }
+              }
+            },
+            "createdAt": "2026-02-20T12:24:59.754Z",
+            "startedAt": "2026-02-20T12:24:59.754Z",
+            "apifyMarginPercentage": 0.2
+          }
+        ]
+      }
+    },
+    {
+      "actor": "clockworks~tiktok-scraper",
+      "metadata": {
+        "id": "GdWCkxBtKWOsKjdch",
+        "name": "tiktok-scraper",
+        "pricingInfos": [
+          {
+            "minimalMaxTotalChargeUsd": 0.5,
+            "pricingModel": "PAY_PER_EVENT",
+            "isPriceChangeNotificationSuppressed": false,
+            "pricingPerEvent": {
+              "actorChargeEvents": {
+                "result": {
+                  "eventTitle": "Result",
+                  "eventDescription": "Cost per result returned.",
+                  "isOneTimeEvent": false,
+                  "eventTieredPricingUsd": {
+                    "FREE": {
+                      "tieredEventPriceUsd": 0.0037
+                    },
+                    "BRONZE": {
+                      "tieredEventPriceUsd": 0.003
+                    },
+                    "SILVER": {
+                      "tieredEventPriceUsd": 0.0023
+                    },
+                    "GOLD": {
+                      "tieredEventPriceUsd": 0.0017
+                    },
+                    "PLATINUM": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "DIAMOND": {
+                      "tieredEventPriceUsd": 0.0005
+                    }
+                  },
+                  "isPrimaryEvent": true
+                },
+                "filter-applied": {
+                  "eventTitle": "Add-on: Date filter",
+                  "eventDescription": "Extra cost when date filtering is used.",
+                  "isOneTimeEvent": false,
+                  "eventTieredPricingUsd": {
+                    "FREE": {
+                      "tieredEventPriceUsd": 0.0013
+                    },
+                    "BRONZE": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "SILVER": {
+                      "tieredEventPriceUsd": 0.0008
+                    },
+                    "GOLD": {
+                      "tieredEventPriceUsd": 0.0006
+                    },
+                    "PLATINUM": {
+                      "tieredEventPriceUsd": 0.0003
+                    },
+                    "DIAMOND": {
+                      "tieredEventPriceUsd": 0.00017
+                    }
+                  }
+                },
+                "popularity-filter-applied": {
+                  "eventTitle": "Add-on: Popularity filter",
+                  "eventDescription": "Extra cost when filtering by popularity is used.",
+                  "isOneTimeEvent": false,
+                  "eventTieredPricingUsd": {
+                    "FREE": {
+                      "tieredEventPriceUsd": 0.0013
+                    },
+                    "BRONZE": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "SILVER": {
+                      "tieredEventPriceUsd": 0.0008
+                    },
+                    "GOLD": {
+                      "tieredEventPriceUsd": 0.0006
+                    },
+                    "PLATINUM": {
+                      "tieredEventPriceUsd": 0.0003
+                    },
+                    "DIAMOND": {
+                      "tieredEventPriceUsd": 0.00017
+                    }
+                  }
+                },
+                "follower-dataset-item": {
+                  "eventTitle": "Add-on: Follower / Following",
+                  "eventDescription": "Extra cost per follower / following profile returned.",
+                  "isOneTimeEvent": false,
+                  "eventTieredPricingUsd": {
+                    "FREE": {
+                      "tieredEventPriceUsd": 0.004
+                    },
+                    "BRONZE": {
+                      "tieredEventPriceUsd": 0.003
+                    },
+                    "SILVER": {
+                      "tieredEventPriceUsd": 0.002
+                    },
+                    "GOLD": {
+                      "tieredEventPriceUsd": 0.0015
+                    },
+                    "PLATINUM": {
+                      "tieredEventPriceUsd": 0.0008
+                    },
+                    "DIAMOND": {
+                      "tieredEventPriceUsd": 0.0005
+                    }
+                  }
+                },
+                "mobile-filter-sorting-applied": {
+                  "eventTitle": "Add-on: Search video sorting",
+                  "eventDescription": "Extra cost for scraping the sorted videos.",
+                  "isOneTimeEvent": false,
+                  "eventTieredPricingUsd": {
+                    "FREE": {
+                      "tieredEventPriceUsd": 0.0013
+                    },
+                    "BRONZE": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "SILVER": {
+                      "tieredEventPriceUsd": 0.0008
+                    },
+                    "GOLD": {
+                      "tieredEventPriceUsd": 0.0006
+                    },
+                    "PLATINUM": {
+                      "tieredEventPriceUsd": 0.0003
+                    },
+                    "DIAMOND": {
+                      "tieredEventPriceUsd": 0.00017
+                    }
+                  }
+                },
+                "video-download": {
+                  "eventTitle": "Add-on: video download",
+                  "eventDescription": "Extra cost when downloading video is enabled.",
+                  "isOneTimeEvent": false,
+                  "eventTieredPricingUsd": {
+                    "FREE": {
+                      "tieredEventPriceUsd": 0.0013
+                    },
+                    "BRONZE": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "SILVER": {
+                      "tieredEventPriceUsd": 0.0008
+                    },
+                    "GOLD": {
+                      "tieredEventPriceUsd": 0.0006
+                    },
+                    "PLATINUM": {
+                      "tieredEventPriceUsd": 0.0003
+                    },
+                    "DIAMOND": {
+                      "tieredEventPriceUsd": 0.00017
+                    }
+                  }
+                },
+                "comment-dataset-item": {
+                  "eventTitle": "Add-on: Comment",
+                  "eventDescription": "Extra cost per comment returned.",
+                  "isOneTimeEvent": false,
+                  "eventTieredPricingUsd": {
+                    "FREE": {
+                      "tieredEventPriceUsd": 0.00125
+                    },
+                    "BRONZE": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "SILVER": {
+                      "tieredEventPriceUsd": 0.00075
+                    },
+                    "GOLD": {
+                      "tieredEventPriceUsd": 0.0005
+                    },
+                    "PLATINUM": {
+                      "tieredEventPriceUsd": 0.0003
+                    },
+                    "DIAMOND": {
+                      "tieredEventPriceUsd": 0.00015
+                    }
+                  }
+                },
+                "scrape-as-in-country": {
+                  "eventTitle": "Add-on: Scrape as in country",
+                  "eventDescription": "Extra cost for scraping as if in a specific country.",
+                  "isOneTimeEvent": false,
+                  "eventTieredPricingUsd": {
+                    "FREE": {
+                      "tieredEventPriceUsd": 0.0013
+                    },
+                    "BRONZE": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "SILVER": {
+                      "tieredEventPriceUsd": 0.0008
+                    },
+                    "GOLD": {
+                      "tieredEventPriceUsd": 0.0006
+                    },
+                    "PLATINUM": {
+                      "tieredEventPriceUsd": 0.0003
+                    },
+                    "DIAMOND": {
+                      "tieredEventPriceUsd": 0.00017
+                    }
+                  }
+                },
+                "transcription-minute": {
+                  "eventTitle": "Add-on: Transcript",
+                  "eventDescription": "Extra cost charged per started minute per video.",
+                  "isOneTimeEvent": false,
+                  "eventTieredPricingUsd": {
+                    "FREE": {
+                      "tieredEventPriceUsd": 0.048
+                    },
+                    "BRONZE": {
+                      "tieredEventPriceUsd": 0.041
+                    },
+                    "SILVER": {
+                      "tieredEventPriceUsd": 0.034
+                    },
+                    "GOLD": {
+                      "tieredEventPriceUsd": 0.027
+                    },
+                    "PLATINUM": {
+                      "tieredEventPriceUsd": 0.02
+                    },
+                    "DIAMOND": {
+                      "tieredEventPriceUsd": 0.015
+                    }
+                  }
+                },
+                "ai-video-description": {
+                  "eventTitle": "Add-on: AI Description",
+                  "eventDescription": "Extra cost for timestamped AI description of a video per second.",
+                  "isOneTimeEvent": false,
+                  "eventTieredPricingUsd": {
+                    "FREE": {
+                      "tieredEventPriceUsd": 0.0013
+                    },
+                    "BRONZE": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "SILVER": {
+                      "tieredEventPriceUsd": 0.0008
+                    },
+                    "GOLD": {
+                      "tieredEventPriceUsd": 0.0006
+                    },
+                    "PLATINUM": {
+                      "tieredEventPriceUsd": 0.0003
+                    },
+                    "DIAMOND": {
+                      "tieredEventPriceUsd": 0.0002
+                    }
+                  }
+                },
+                "ai-video-summary": {
+                  "eventTitle": "Add-on: AI Summary",
+                  "eventDescription": "Extra cost for AI summary of a video per second.",
+                  "isOneTimeEvent": false,
+                  "eventTieredPricingUsd": {
+                    "FREE": {
+                      "tieredEventPriceUsd": 0.0013
+                    },
+                    "BRONZE": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "SILVER": {
+                      "tieredEventPriceUsd": 0.0008
+                    },
+                    "GOLD": {
+                      "tieredEventPriceUsd": 0.0006
+                    },
+                    "PLATINUM": {
+                      "tieredEventPriceUsd": 0.0003
+                    },
+                    "DIAMOND": {
+                      "tieredEventPriceUsd": 0.0002
+                    }
+                  }
+                },
+                "actor-start": {
+                  "eventTitle": "Actor start",
+                  "eventDescription": "Flat fee for starting an Actor run.",
+                  "isOneTimeEvent": true,
+                  "eventTieredPricingUsd": {
+                    "FREE": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "BRONZE": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "SILVER": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "GOLD": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "PLATINUM": {
+                      "tieredEventPriceUsd": 0.001
+                    },
+                    "DIAMOND": {
+                      "tieredEventPriceUsd": 0.001
+                    }
+                  }
+                }
+              }
+            },
+            "createdAt": "2026-08-18T07:19:07.761Z",
+            "startedAt": "2026-08-18T07:19:07.761Z",
+            "apifyMarginPercentage": 0.2,
+            "notifiedAboutChangeAt": "2026-08-19T08:06:30.611Z"
+          }
+        ]
+      }
+    }
+  ]
+}
