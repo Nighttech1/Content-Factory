@@ -15,7 +15,8 @@ REVISION = "offline-test"
 
 
 def check_case(name, *, fail_preflight=False, fail_capacity=False, bad_revision=False, fail_restore=False,
-               fail_config_write=False, fail_reload=False, fail_config_rollback=False):
+               fail_config_write=False, fail_reload=False, fail_config_rollback=False,
+               managed=False, relative_link=False, drift_before=False, drift_after=False):
     with tempfile.TemporaryDirectory(prefix="systemd-release-offline-") as folder:
         root = pathlib.Path(folder)
         base, runtime, envfile, fakebin = root / "app", root / "runtime", root / "app.env", root / "bin"
@@ -26,9 +27,16 @@ def check_case(name, *, fail_preflight=False, fail_capacity=False, bad_revision=
         (old / "node_modules/next/dist/bin/next").write_text("// original Next CLI fixture")
         (old / ".next").mkdir()
         (old / ".next/BUILD_ID").write_text("original-build")
+        if managed:
+            (old / "server.js").write_text("// old managed standalone fixture")
         unitfile, dropindir = root / "content-factory.service", root / "content-factory.service.d"
         unitfile.write_text("[Service]\nExecStart=/usr/bin/node node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 3087\n")
         original_unit = unitfile.read_text()
+        expected_dropin = '[Service]\nExecStart=\nExecStart=/usr/bin/env PORT=3087 HOSTNAME=127.0.0.1 /usr/bin/node /opt/content-factory/current/server.js\n'
+        dropin = dropindir / '90-content-factory-release.conf'
+        if managed:
+            dropindir.mkdir(); dropin.write_text(expected_dropin); dropin.chmod(0o644)
+            prior_dropin_inode = dropin.stat().st_ino
         envfile.write_text("OFFLINE_PLACEHOLDER=1\n")
         for relative in ["data", "generatedMedia", "public"]:
             target = runtime / relative
@@ -36,7 +44,8 @@ def check_case(name, *, fail_preflight=False, fail_capacity=False, bad_revision=
             (target / "sentinel").write_text(relative)
             (old / relative).symlink_to(target)
         (old / ".env.production").symlink_to(envfile)
-        (base / "current").symlink_to(old)
+        old_link = 'releases/old' if relative_link else str(old)
+        (base / "current").symlink_to(old_link)
         source = root / "bundle"
         (source / ".next/static").mkdir(parents=True)
         (source / "server.js").write_text("// tested bundle fixture")
@@ -66,10 +75,14 @@ if command=='df':
  sys.exit(0)
 if command=='chown':
  assert args==['-hR','980:980',os.environ['TEST_RELEASE']]
+ if os.environ['DRIFT_BEFORE']=='1':pathlib.Path(os.environ['TEST_DROPIN']).write_text('foreign change before cutover\\n')
  sys.exit(0)
+if command=='stat':
+ if args==['-c','%u',os.environ['TEST_DROPIN']]:print('0');sys.exit(0)
+ sys.exit(subprocess.run(['/usr/bin/stat']+args).returncode)
 if command=='python3':
  code=sys.stdin.read()
- if args and args[0]=='-' and len(args)==5:
+ if args and args[0]=='-' and len(args)==6:
   if os.environ['FAIL_PREFLIGHT']=='1':sys.exit(3)
   print(os.environ['TEST_OLD']);sys.exit(0)
  if args and args[0]=='-':
@@ -84,6 +97,7 @@ if command=='systemctl':
   if sum(c[0]=='systemctl' and c[1]==['daemon-reload'] for c in calls)==1:sys.exit(12)
  if args[0]=='restart':
   pathlib.Path(os.environ['TEST_WRITE']).write_text('write after cutover; retain on rollback')
+  if os.environ['DRIFT_AFTER']=='1':pathlib.Path(os.environ['TEST_DROPIN']).write_text('foreign change after cutover\\n')
  sys.exit(0)
 if command=='curl':
  if '-o' in args:
@@ -101,7 +115,7 @@ if command=='rm':
  sys.exit(subprocess.run(['/usr/bin/rm']+args).returncode)
 raise SystemExit('Unexpected mock command')
 """
-        for namebin in ["id", "df", "chown", "python3", "systemctl", "curl", "sleep", "mv", "install", "rm"]:
+        for namebin in ["id", "df", "chown", "stat", "python3", "systemctl", "curl", "sleep", "mv", "install", "rm"]:
             file = fakebin / namebin
             file.write_text(mock)
             file.chmod(0o755)
@@ -113,7 +127,8 @@ raise SystemExit('Unexpected mock command')
                "FAIL_PREFLIGHT": str(int(fail_preflight)), "FAIL_CAPACITY": str(int(fail_capacity)),
                "BAD_REVISION": str(int(bad_revision)), "FAIL_RESTORE": str(int(fail_restore)),
                "FAIL_CONFIG_WRITE": str(int(fail_config_write)), "FAIL_RELOAD": str(int(fail_reload)),
-               "FAIL_CONFIG_ROLLBACK": str(int(fail_config_rollback))}
+               "FAIL_CONFIG_ROLLBACK": str(int(fail_config_rollback)),
+               "DRIFT_BEFORE": str(int(drift_before)), "DRIFT_AFTER": str(int(drift_after))}
         run = subprocess.run(["bash", str(executable), SHA, str(bundle), REVISION],
                              env=env, capture_output=True, text=True, timeout=30)
         calls = [json.loads(line) for line in log.read_text().splitlines()]
@@ -123,9 +138,25 @@ raise SystemExit('Unexpected mock command')
             assert (old / relative).resolve() == runtime / relative
         assert envfile.read_text() == "OFFLINE_PLACEHOLDER=1\n"
         assert unitfile.read_text() == original_unit
+        if managed:
+            assert not any(c[0]=='install' and c[1][-1]==str(dropin) for c in calls)
+            assert not any(c[0]=='systemctl' and c[1]==['daemon-reload'] for c in calls)
+            assert not any(c[0]=='rm' for c in calls)
+            assert dropin.stat().st_ino == prior_dropin_inode
+            if not drift_before and not drift_after:
+                assert dropin.read_text() == expected_dropin and dropin.stat().st_mode & 0o777 == 0o644
         if fail_preflight or fail_capacity:
             assert run.returncode != 0 and (base / "current").resolve() == old
             assert not newrelease.exists() and not restarts and not (base / "backups").exists()
+        elif drift_before or drift_after:
+            assert run.returncode != 0 and 'DEPLOY_VERIFIED' not in run.stdout
+            assert 'foreign change' in dropin.read_text()
+            assert 'ROLLBACK_VERIFIED' not in run.stderr
+            if drift_before:
+                assert (base / 'current').resolve() == old and not restarts
+            else:
+                assert 'ROLLBACK_HEALTH_FAILED' in run.stderr and len(restarts) == 1
+                assert (runtime / 'data/post-cutover').is_file()
         elif fail_config_write or fail_reload:
             assert run.returncode != 0 and (base / "current").resolve() == old
             assert "DEPLOY_VERIFIED" not in run.stdout
@@ -143,8 +174,9 @@ raise SystemExit('Unexpected mock command')
                 assert len(restarts) == 1, "Failed restoration must not restart or report verification"
             else:
                 assert (base / "current").resolve() == old and len(restarts) == 2
+                assert os.readlink(base / 'current') == old_link
                 assert "ROLLBACK_VERIFIED" in run.stderr
-                assert not pathlib.Path(env['TEST_DROPIN']).exists()
+                assert pathlib.Path(env['TEST_DROPIN']).exists() == managed
         else:
             assert run.returncode == 0, run.stderr
             assert (base / "current").resolve() == newrelease and len(restarts) == 1
@@ -160,6 +192,9 @@ raise SystemExit('Unexpected mock command')
             assert (backups[0] / "runtime-live-copy.tar.gz").is_file()
             assert (backups[0] / "app.env").stat().st_mode & 0o777 == 0o600
             assert (backups[0] / "original-unit.service").read_text() == original_unit
+            if managed:
+                assert (backups[0] / 'prior-dropin.conf').read_text() == expected_dropin
+                assert (backups[0] / 'prior-dropin-metadata').is_file()
         print("PASS", name)
 
 
@@ -171,3 +206,7 @@ check_case("failed rollback mv cannot report verified or restart wrong current",
 check_case("config write failure before cutover restores original CLI and leaves current old", fail_config_write=True)
 check_case("daemon reload failure before cutover removes only owned config and restores original CLI", fail_reload=True)
 check_case("failed config rollback cannot report verified or restart", fail_reload=True, fail_config_rollback=True)
+check_case("managed success preserves existing config inode/mode and skips reload/write", managed=True)
+check_case("managed rollback retains previous config and exact relative current target", managed=True, bad_revision=True, relative_link=True)
+check_case("managed foreign change before cutover is not overwritten", managed=True, drift_before=True)
+check_case("managed foreign change after cutover is not erased or falsely verified", managed=True, drift_after=True)

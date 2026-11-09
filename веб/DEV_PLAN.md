@@ -1,8 +1,12 @@
 # DEV_PLAN.md — Живой план Vernatun Content Factory
 
+## W-2026-11-10-repeatable-deploy
+
+Runbook: `../docs/DEPLOY.md`; helper: `../scripts/prepare-growth-release.mjs`. Узкое расширение существующего systemd adapter для следующих standalone версий, без изменения приложения/VPS. Независимые проверки PASS: 12 full adapter, 25 rollback/23 preflight/4 snapshot, 22 CLI и 5 helper groups. Оба C-* закрыты guards; приёмка — `memory/waves/W-2026-11-10-repeatable-deploy/client-acceptance.md`. Новые production действия не выполняются; существующие QA artifact gates обязательны.
+
 ## W-2026-11-10-situation-center — production выложен и принят Клиентом
 
-10.11.2026: https://content.vernatunspeakclub.com/growth — live revision situation-v2-20261110-01. Release42713196016 SUCCESS, testedsource3ac253b6/artifact13713870877. Существующий systemd3087 адаптирован с единственным owned drop-in; mainunit/env/nginx и shareddata сохранены, privatebackup+oldrelease есть. Живая независимая приёмка desktopПРИНЯТО, открытыхC-*нет; mobile остаётся подтверждённым CI4width. См. `production-client-acceptance.md` и `systemd-release-result.md` в wave. Следующий release требует расширить initial-only guard под exact existing owned drop-in; не применять текущий initialadapter повторно вслепую.
+10.11.2026: https://content.vernatunspeakclub.com/growth — live revision situation-v2-20261110-01. Release42713196016 SUCCESS, testedsource3ac253b6/artifact13713870877. Существующий systemd3087 адаптирован с единственным owned drop-in; mainunit/env/nginx и shareddata сохранены, privatebackup+oldrelease есть. Живая независимая приёмка desktopПРИНЯТО, открытыхC-*нет; mobile остаётся подтверждённым CI4width. См. `production-client-acceptance.md` и `systemd-release-result.md` в wave. Исторический initial-only guard расширяется отдельной волной repeatable-deploy выше; использовать только актуальный runbook и проверенный adapter.
 
 Пятый раздел «Ситуационный центр» (`/growth`); 14 предложенных контентных механик по выбранному этапу, рубрики юмор/полезное/мини-сериал/другие, отдельные от 24 производственных заданий. Пять ссылок desktop/mobile, линейный шестой шаг return→membership с корректным знаменателем. Spec/chain до кода: `memory/waves/W-2026-11-10-situation-center/`. QA-only Actions42704640983 source3ac253b6 PASS: build/type/model, основной browser + synthetic fixture + отдельный Client script на1440/390/412/360, errors[]. Evidence13712787361; build13713870877. Независимый Client verdict ПРИНЯТО: client-acceptance.md, реально осмотрены JSON/DOM/7PNG; открытых C-* нет. Приёмка владельцем отдельно. В предрелизном QA deploy был SKIPPED; после отдельного разрешения выполнен успешный production release42713196016. Данные/чат/студия сохранены.
 

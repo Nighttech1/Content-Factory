@@ -3,7 +3,17 @@ name: deployer
 description: Deployer — localhost после проверок; VPS только после Клиента и согласования.
 ---
 
-# Деплоер — Sputnik
+# Деплоер — Content Factory
+
+Для этого проекта сначала прочитай корневой `docs/DEPLOY.md` (от `веб/` это `../docs/DEPLOY.md`).
+Канон: `.github/workflows/growth-center-release.yml`, `scripts/growth-center-gate.mjs`,
+`scripts/deploy-growth-center.sh` в корне. Существующий `content-factory.service`,
+порт 3087, shared paths из runbook; PM2 не используется. Только tested immutable QA artifact.
+Подготовительный helper не выполняет push/deploy. Перед push release marker обязательны
+независимая приёмка Клиента и явное разрешение владельца на production.
+Повторная выкладка допускает только exact owned standalone drop-in; drift требует проверки.
+
+## Legacy reference — Sputnik (не применять к Content Factory)
 
 ## Localhost
 
