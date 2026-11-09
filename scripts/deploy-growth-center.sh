@@ -11,6 +11,30 @@ BACKUP="$BASE/backups/$STAMP"
 for cmd in node pm2 curl tar; do command -v "$cmd" >/dev/null; done
 [[ "$(node -p 'Number(process.versions.node.split(".")[0])>=20')" = true ]]
 [[ -d "$BASE" && ! -e "$RELEASE" ]]
+# Historical deploy chowned APP_DIR to SSH_USER and ran PM2 WITHOUT sudo.
+# Prove that context before mkdir or a PM2 command (which could otherwise spawn a new daemon).
+CURRENT_UID="$(id -u)"
+[[ "$(stat -c %u "$BASE")" = "$CURRENT_UID" ]] || {
+ echo 'PRECHECK_CONTEXT: SSH user does not own existing app directory; inspect original deploy user, do not sudo PM2 blindly' >&2; exit 3;
+}
+PM2_STATE="${PM2_HOME:-$HOME/.pm2}"
+[[ -r "$PM2_STATE/pm2.pid" ]] || { echo 'PRECHECK_CONTEXT: no existing PM2 daemon for SSH user; no new manager started' >&2; exit 3; }
+PM2_PID="$(cat "$PM2_STATE/pm2.pid")"
+[[ "$PM2_PID" =~ ^[0-9]+$ && "$(ps -o uid= -p "$PM2_PID" | tr -d '[:space:]')" = "$CURRENT_UID" ]] || {
+ echo 'PRECHECK_CONTEXT: stale or differently owned PM2 daemon; inspection required' >&2; exit 3;
+}
+[[ "$(ps -o args= -p "$PM2_PID")" = *"God Daemon"* ]] || { echo 'PRECHECK_CONTEXT: unexpected daemon process' >&2; exit 3; }
+[[ -w "$BASE" && -x "$BASE" ]] || { echo 'PRECHECK_PERMISSION: app directory not writable; no mutation attempted' >&2; exit 3; }
+pm2 jlist | node -e '
+const fs=require("fs");const base="/opt/content-factory";
+const matches=JSON.parse(fs.readFileSync(0,"utf8")).filter(p=>p.name==="content-factory");
+if(matches.length!==1)throw Error("Expected exactly one existing content-factory process in SSH-user manager");
+const p=matches[0].pm2_env,cwd=fs.realpathSync(p.pm_cwd);
+if(!(cwd===base||cwd.startsWith(base+"/releases/")))throw Error("Unexpected existing content app cwd");
+if(p.pm_exec_path!==cwd+"/server.js")throw Error("Unexpected content app entrypoint");
+if(String(p.env?.PORT??p.PORT)!=="8088")throw Error("Existing content app is not port8088; inspect before release");
+'
+echo 'PRECHECK_OK: SSH-user PM2 manager, existing content app and writable app directory confirmed'
 mkdir -p "$BASE/releases" "$BASE/backups" "$BASE/shared"
 chmod 700 "$BASE/backups"
 mkdir "$BACKUP" "$RELEASE"

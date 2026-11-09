@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ArrowDownToLine, ArrowRight, ArrowUpRight, Check, ChevronRight, ClipboardList, Compass, Eye, HeartHandshake, MessageCircle, Play, RotateCcw, Share2, Sparkles, Ticket, Upload, Users, Wallet } from "lucide-react";
 import { STAGES, EMPTY_SNAPSHOT, conversionRate, evaluateMarketScenario, parseGrowthSnapshot, type GrowthSnapshot, type StageId } from "@/lib/marketing/growth-model";
@@ -89,7 +91,7 @@ export function GrowthDashboard({ chat }: { chat?: ReactNode }) {
   return (
     <div className={styles.workspace} data-testid="growth-workspace">
       <nav className={styles.mobileNav} aria-label="Разделы фабрики">
-        <a href="/studio">Студия</a><a href="/growth">Центр роста</a><a href="/schedule">Расписание</a><a href="/marketing" aria-current="page">Директор</a><a href="/settings">Настройки</a>
+        <Link href="/studio">Студия</Link><Link href="/growth">Центр роста</Link><Link href="/schedule">Расписание</Link><Link href="/marketing" aria-current="page">Директор</Link><Link href="/settings">Настройки</Link>
       </nav>
       <div className={styles.topline}>
         <div className={styles.brand}><span>V</span> Вернатун <ChevronRight size={12} /> Директор</div>

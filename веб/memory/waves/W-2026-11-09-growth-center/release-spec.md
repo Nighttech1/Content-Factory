@@ -23,3 +23,11 @@
 - Короткий downtime на capture/migration/PM2 restart остаётся. Изолированный VPS process до остановки не запускается: bundle уже проверяется production browser QA, а copy live stores должен выполняться после stop. Zero downtime не обещается.
 - Повторная выкладка того же SHA при оставшемся release directory блокируется: нужна inspection, не автоматическое удаление старого/неуспешного релиза.
 - Проверено локально: JS parse обоих scripts; bash -n; YAML jobs/branch/path filters и отсутствие VPS secrets в gate/qa; изолированный git gate test (valid ancestor accepted, wrong branch и source=marker HEAD rejected). Browser runtime/clean install/build/deploy пока не выполнялись этим исполнителем, FE ещё формируется.
+
+## PM2 / filesystem user preflight
+
+Повторно подтверждено исходником historical deploy: sudo применялся к системным операциям/files, после extract выполнялся chown app root на SSH_USER; PM2 delete/start/save работали без sudo, startup указывал `-u ME`. Поэтому автоматический `sudo pm2` создаст/затронет иной manager и запрещён.
+
+Новый remote script до mkdir проверяет: существующий app root принадлежит текущему SSH UID и writable; в PM2_HOME текущего пользователя уже существует pidfile живого God Daemon с тем же UID; read-only PM2 inventory содержит ровно content-factory с cwd `/opt/content-factory` либо его releases subtree, entry server.js и port8088. Только после этого создаются release/backup directories. При несовпадении — PRECHECK_CONTEXT/PERMISSION, без нового daemon и без переключения root manager. Разрешённый passwordless sudo сам по себе не доказывает правильного process owner; отдельная поправка прав/точечный переход на исторического пользователя возможна после фактического inventory, а не догадки. Значения environment не печатаются.
+
+Проверено после root HashKnownHosts изменения: YAML и все shell run blocks проходят bash -n, все scripts проходят parser checks. Root workflow trust hashing сохранён.

@@ -2,7 +2,7 @@
 
 ## W-2026-11-09-growth-center — реализация, release gates открыты
 
-Отдельный /growth: schema v2, общий versioned JSON, read-only API, глобальный plan/fact,24 V-ID, profiles/strategy, history cohorts/conversion, meeting metrics, desktop/mobile nav. Инженерная команда реальная; spec/chain до кода в memory/waves/W-2026-11-09-growth-center. 25 inherited TS errors/sharp lock исправлены;31 modelguards/20independent/63carouseltests PASS, integratedtypecheck PASS. Productionbuild/browserCI/deploy требуют исполнения и доказательств. VPS update разрешён владельцем для content.* после QA, admin.* вне scope. Нет publication/paidAPI. Canonical update protocol: projects/vernatun/content-plan/GROWTH_CENTER_UPDATES.md.
+Отдельный /growth: schema v2, общий versioned JSON, read-only API, глобальный plan/fact,24 V-ID, profiles/strategy, history cohorts/conversion, meeting metrics, desktop/mobile nav. Инженерная команда реальная; spec/chain до кода в memory/waves/W-2026-11-09-growth-center. 25 inherited TS errors/sharp lock исправлены;31 modelguards/20independent/63carouseltests PASS, integratedtypecheck PASS. Production Webpack build PASS со standalone; штатный Turbopack/browserCI/deploy требуют исполнения и доказательств. VPS update разрешён владельцем для content.* после QA, admin.* вне scope. Нет publication/paidAPI. Canonical update protocol: projects/vernatun/content-plan/GROWTH_CENTER_UPDATES.md.
 
 
 > **Обновлено:** 2026-10-15 — **Спринт 9** сужен: только **карусели Instagram** + **рилсы IG/YouTube** на планке «как Claude Code»; остальные модули → **Спринт 23**. Публикация в соцсети — **Спринт 22** (перед остальными модулями).  

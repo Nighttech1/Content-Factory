@@ -23,7 +23,7 @@ fixture.meetings=[
 fixture.content[0].status='published';fixture.content[0].publication={url:'https://example.org/qa-only-publication',publishedAt:'2026-11-09',sourceId:'qa-only'};
 const parsed=validateGrowthCenterDataset(fixture);if(!parsed.ok)throw Error(parsed.errors.join('\n'));
 const root=path.resolve('.');
-const result=await build({stdin:{contents:`import React from 'react';import{createRoot}from'react-dom/client';import{GrowthCenter}from'./components/growth-center/GrowthCenter';createRoot(document.getElementById('root')).render(<GrowthCenter dataset={${JSON.stringify(parsed.data)}}/>);`,resolveDir:root,sourcefile:'qa-isolated-entry.tsx',loader:'tsx'},absWorkingDir:root,bundle:true,write:false,outdir:'qa-fixture',format:'iife',platform:'browser',jsx:'automatic',tsconfig:path.join(root,'tsconfig.json'),define:{'process.env.NODE_ENV':'"production"'},logLevel:'silent'});
+const result=await build({stdin:{contents:`import React from 'react';import{createRoot}from'react-dom/client';import{GrowthCenter}from'./components/growth-center/GrowthCenter';createRoot(document.getElementById('root')).render(<GrowthCenter dataset={${JSON.stringify(parsed.data)}}/>);`,resolveDir:root,sourcefile:'qa-isolated-entry.tsx',loader:'tsx'},absWorkingDir:root,bundle:true,write:false,outdir:'qa-fixture',format:'iife',platform:'browser',jsx:'automatic',tsconfig:path.join(root,'tsconfig.json'),define:{'process.env':'{}','process.env.NODE_ENV':'"production"'},logLevel:'silent'});
 const js=result.outputFiles.find(f=>f.path.endsWith('.js'))?.text;
 const css=result.outputFiles.find(f=>f.path.endsWith('.css'))?.text;
 if(!js||!css)throw Error('Actual component JS/CSS bundle missing');

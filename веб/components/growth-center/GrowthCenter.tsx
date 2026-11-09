@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useMemo, useState } from "react";
 import { ArrowDownToLine, ArrowRight, ArrowUpRight, BarChart3, Check, Clipboard, Compass, Eye, HeartHandshake, MessageCircle, RotateCcw, Share2, Sparkles, Ticket, TrendingUp, Users, Wallet } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
@@ -83,7 +85,7 @@ export function GrowthCenter({ dataset }: { dataset: GrowthCenterDataset }) {
   const hasHistory = (points: PlotPoint[]) => points.some((point) => point.value !== null);
 
   return <div className={styles.center} data-testid="growth-center">
-    <nav className={styles.mobileNav} aria-label="Разделы фабрики"><a href="/studio">Студия</a><a href="/growth" aria-current="page">Центр роста</a><a href="/marketing">Директор</a><a href="/schedule">Расписание</a></nav>
+    <nav className={styles.mobileNav} aria-label="Разделы фабрики"><Link href="/studio">Студия</Link><Link href="/growth" aria-current="page">Центр роста</Link><Link href="/marketing">Директор</Link><Link href="/schedule">Расписание</Link></nav>
     <header className={styles.header}><div className={styles.headerBrand}><span>V</span> Вернатун <ArrowRight size={12} /> Центр роста</div><div className={styles.revision}>Обновлено {shortDate(dataset.updatedAt)}.{dataset.updatedAt.slice(0, 4)}<br /><small>Редакция {dataset.revision}</small></div></header>
     <div className={styles.hero}><div><div className={styles.eyebrow}>Вся система привлечения и удержания</div><h1>Узнать. Захотеть.<br /><span>Остаться своим.</span></h1><p>Одна карта от холодной аудитории до регулярного участия. На каждом этапе — человек, задача, контент и проверяемый результат.</p><div className={styles.constraint}><span><b>0 ₽</b> продвижение</span><span><b>до 3 часов</b> в неделю</span><span><b>до 31 декабря</b> контентный план</span></div></div><aside className={styles.heroAside}><div className={styles.eyebrow}>Приоритет первого цикла</div><strong>Показать, как у нас классно.<br />Дать повод захотеть прийти.</strong><p>Атмосферный сюжет → распространение наружу → интерес. FAQ «можно одному» помогает уже заинтересовавшемуся.</p></aside></div>
 

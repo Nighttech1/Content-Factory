@@ -178,7 +178,7 @@ jobs:
           if [[ -n "$VPS_KNOWN_HOSTS" ]]; then TRUST=yes
           elif test -s previous-ssh-trust/known_hosts; then cp previous-ssh-trust/known_hosts ~/.ssh/growth_known_hosts; TRUST=yes
           else echo 'Host trust: first-connection TOFU; known_hosts retained as artifact'; fi
-          OPTS=(-i ~/.ssh/growth_key -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking="$TRUST" -o UserKnownHostsFile=~/.ssh/growth_known_hosts -o ConnectTimeout=20)
+          OPTS=(-i ~/.ssh/growth_key -o BatchMode=yes -o IdentitiesOnly=yes -o HashKnownHosts=yes -o StrictHostKeyChecking="$TRUST" -o UserKnownHostsFile=~/.ssh/growth_known_hosts -o ConnectTimeout=20)
           REMOTE="/tmp/growth-center-$SOURCE_SHA"
           ssh "${OPTS[@]}" -p "$PORT" "$VPS_USER@$VPS_HOST" "umask 077; mkdir -p '$REMOTE'"
           scp "${OPTS[@]}" -P "$PORT" verified-artifact/app.tar.gz scripts/deploy-growth-center.sh "$VPS_USER@$VPS_HOST:$REMOTE/"
@@ -187,7 +187,11 @@ jobs:
         if: always()
         run: |
           mkdir -p ssh-trust
-          if test -f ~/.ssh/growth_known_hosts; then cp ~/.ssh/growth_known_hosts ssh-trust/known_hosts; fi
+          if test -s ~/.ssh/growth_known_hosts; then
+            cp ~/.ssh/growth_known_hosts ssh-trust/known_hosts
+            ssh-keygen -H -f ssh-trust/known_hosts >/dev/null 2>&1
+            rm -f ssh-trust/known_hosts.old
+          fi
           rm -f ~/.ssh/growth_key
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()

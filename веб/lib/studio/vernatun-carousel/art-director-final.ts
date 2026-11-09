@@ -151,7 +151,7 @@ export async function runArtDirectorFinal(input: {
     parsed: Record<string, unknown>,
     modelUsed: string,
   ): FinalAdResult {
-    let findings = reconcileAttachmentFindings(
+    const findings = reconcileAttachmentFindings(
       normalizeFindings(parsed.findings ?? parsed.defects),
       images.length,
       expectedSlides,
