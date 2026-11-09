@@ -42,6 +42,17 @@
 > Обновляется в конце значимого куска работы (вместе с commit).
 > Обновлено: 2026-10-29
 
+## Локальные маркетинговые методы · 2026-11-05
+- По поручению владельца импортированы выборочные документы Anthropic Marketing, Corey Haines marketingskills и marcosmodly marketing-skill с лицензиями и фиксированными Git SHA. Оригиналы: `shared/vendor/marketing-methods/`; перечень 31 файла с SHA256 — `SOURCES.json`.
+- Активный локальный адаптер: `shared/skills/marketing-methods/SKILL.md`, 9 модулей по ролям. Подключены 17 профилей, 6 точек входа пайплайнов/отделов и 5 существующих навыков. Нативная установка в ChatGPT/Claude не требуется; внешний runtime/скрипты/публикация не импортированы.
+- Проверка: `python3 shared/skills/marketing-methods/validate.py` — hashes, licenses, source links и маршруты. Инструкция/результаты: `shared/skills/marketing-methods/INSTALLATION.md`. Конкретные исследования, платные API, production-задачи и деплой не запускались; эффективность на контенте ещё не измерена.
+
+## Scout / GitHub Actions · 2026-11-04
+- Владелец выбрал Repository secrets в `Nighttech1/Content-Factory`: `YOUTUBE_API_KEY` и `APIFY_TOKEN` (совместимое имя `APIFY_API_KEY`); дублировать в окружение чата не требуется.
+- Установлены в `main` через PR #1 `.github/workflows/scout-data.yml` (**Scout data (manual)**) и `shared/skills/scout-actions/`: режим `check` без запросов к сервисам, ручной сбор YouTube / Instagram по отдельному заданию, снимки в Actions artifacts на 30 дней.
+- Каждый сбор требует явного задания владельца и ID `S-…`; без расписаний, деплоя, публикации, изменения контент-плана или записи в веб. Старые команды на Apify ниже не запускать автоматически.
+- Локально: 7 offline-тестов и проверка YAML прошли. Проверочный запуск https://github.com/Nighttech1/Content-Factory/actions/runs/41809343795 успешен; артефакт `scout-41809343795-1` прочитан через GitHub-коннектор. На 2026-11-04 09:41 UTC YouTube/Apify Secrets отсутствовали; запросов к провайдерам 0. Реальные API/ключи, бюджет и сбор не проверены; наличие Secrets не означает валидность.
+
 ## Что строим
 Контент-фабрика на Claude Code для «Вернатун» (армянский разговорный клуб, Москва). KPI №1 — люди на живых встречах. См. `ARCHITECTURE.md`, `PLAN.md`, `brief.md`.
 
@@ -55,6 +66,13 @@
 - Решено по данным: Apify (IG/TikTok, free-план) — подключим на Фазе 2; без Metricool; публикация своим Публикатором через API площадок.
 
 ## Готово
+
+### 2026-11-05 — Telegram graphic cards
+- Добавлен content department `telegram-graphics` с ID `TGP`: quote cards участников и визуальные анонсы встреч; профиль lead, quote reviewer, шаблоны заданий, start prompt, pipeline и специализированный skill.
+- Каждый финальный asset обязан иметь логотип клуба и точный текст на отдельном HTML/CSS/SVG-слое через существующий `brand-kit`.
+- Использовать существующий веб-модуль `aesthetic-graphics`, не создавать параллельный UI-модуль. Его текущая реализация — mock SVG; production render остаётся задачей реализации.
+- Output manifest описывает scheduled handoff. Bot API sender/queue consumer в репозитории не подтверждён: нужна интеграция и тест в тестовом канале, прежде чем обещать автопост.
+- Использовать локальные `brand-kit`, `marketing-methods/visual` и `publisher-telegram`; `canvas-design` — необязательные идеи для фона. Не добавлять n8n/grammY до проверки существующего бота.
 - Фаза 0 (фундамент), агент `content-director`, бриф уточнён, аудит соцсетей (`brand/audit-soc.md`).
 - **Оснащение Контент-директора (Фаза 1.5):** скилл `shared/skills/content-calendar`, правило `shared/rules/cta-ladder.md`, агенту добавлены WebSearch/WebFetch + разделы «Инструментарий»/«Границы роли» + публикация в Claude Docs; `env.manifest.md` обновлён (коннекторы/скиллы, отказ от агрегаторов).
 - **Маркетинговый арсенал директора:** strategist-набор из плагинов «Marketing» (Anthropic) + «Social Media Skills» (106, community) вписан в агента с границами роли. Плагины надо включить на аккаунте (пока доступны только в сессии).
@@ -144,3 +162,9 @@
 - HTML: `веб/public/content-board/index.html` — стратегия и снимок календаря 70 единиц, редактирование карточек, localStorage, экспорт/импорт JSON. Браузерные проверки пройдены. Общая синхронизация не подключена.
 - Штатный деплой найден: `.github/workflows/deploy-vps.yml` → `content.vernatunspeakclub.com`; workflow не запускался (сетевой CONNECT 403 к api.github.com). Требования сети сохранены в черновик настроек среды.
 - Подробности и границы проверки: `projects/vernatun/content-board/REPO-AUDIT.md`. Схема облачных триггеров остаётся из `shared/automation/README.md`; доступного scheduled-task инструмента в текущем чате нет.
+
+## Telegram-графика — чат по поручениям владельца · 2026-11-05
+- `telegram-graphics-lead` запускает производство только по прямому сообщению владельца; директорская запись и расписание не являются триггером.
+- Без указанного ID lead сверяет месячный план и `jobs/`, присваивает следующий свободный `TGP`, создаёт папку из `_TEMPLATE/` и добавляет строку в план.
+- Стартовый промпт: `projects/vernatun/departments/telegram-graphics/START-PROMPT.md`. Созданы/проверены `jobs/_TEMPLATE/`, `intelligence/`, `references/`; обязательны цитатное согласие, проверка реквизитов анонса и HTML-бейк логотипа на каждом изображении.
+- Расписание и публикация только по отдельному поручению владельца после редакторского и owner gates. Реальный scheduled photo consumer в репозитории пока не подтверждён.

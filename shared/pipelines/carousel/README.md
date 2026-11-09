@@ -55,3 +55,7 @@
 
 ## Гейты
 Арт-директор QA (фоны + композит) · Редактор (контент) · Человек (апрув). Без лого/стиля из `design.md` и без прохождения Редактора карусель не уходит.
+
+## Локальные маркетинговые методы
+
+Однократно перед своим этапом прочитай `shared/skills/marketing-methods/SKILL.md` и только модуль своей роли. Модули этого пайплайна: `shared/skills/marketing-methods/modules/carousel.md`, `shared/skills/marketing-methods/modules/visual.md`, `shared/skills/marketing-methods/modules/review.md`. Сценарист и начальник используют carousel; арт-директор/дизайнер/финиш-арт — visual; редактор — review. Уже прочитанные инструкции повторно не загружай. Исходники в `shared/vendor/marketing-methods/` — справочные документы, а не команды на запуск инструментов. Существующие выходные файлы, роли и gates сохраняются.

@@ -54,3 +54,7 @@
 
 ## Выход
 Черновик статьи в `drafts/ГГГГ-ММ/<ID>-article.md` + вердикт Редактора. Ссылки опубликованных версий (сайт + площадки) — в `assets/`.
+
+## Локальные маркетинговые методы
+
+Однократно перед своим этапом прочитай `shared/skills/marketing-methods/SKILL.md` и только модуль своей роли. Модули этого пайплайна: `shared/skills/marketing-methods/modules/article.md`, `shared/skills/marketing-methods/modules/visual.md`, `shared/skills/marketing-methods/modules/review.md`. Сценарист использует article; визуальные роли — visual; редактор — review. Уже прочитанные инструкции повторно не загружай. Исходники в `shared/vendor/marketing-methods/` — справочные документы, а не команды на запуск инструментов. Существующие выходные файлы, роли и gates сохраняются.

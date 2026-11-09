@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "imported_on": "2026-11-05",
+  "mode": "reference-only-documentation",
+  "packages": [
+    {
+      "id": "anthropic",
+      "repository": "https://github.com/anthropics/knowledge-work-plugins",
+      "commit": "d900840716eb262e1feb17c6f4406c9ce0e06bcf",
+      "license": "Apache-2.0",
+      "files": [
+        {
+          "path": "shared/vendor/marketing-methods/anthropic/LICENSE",
+          "upstream_path": "LICENSE",
+          "sha256": "a6946284993aeec75c7d75906064b66210c46051e562077efb30eb6dcfe72e26",
+          "bytes": 11607,
+          "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/d900840716eb262e1feb17c6f4406c9ce0e06bcf/LICENSE"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/anthropic/marketing/CONNECTORS.md",
+          "upstream_path": "marketing/CONNECTORS.md",
+          "sha256": "e85d04dde99b220ba438cf1345212e7414da536fb7d781d83a4ad57270586630",
+          "bytes": 1260,
+          "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/d900840716eb262e1feb17c6f4406c9ce0e06bcf/marketing/CONNECTORS.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/anthropic/marketing/LICENSE",
+          "upstream_path": "marketing/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/d900840716eb262e1feb17c6f4406c9ce0e06bcf/marketing/LICENSE"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/anthropic/marketing/skills/brand-review/SKILL.md",
+          "upstream_path": "marketing/skills/brand-review/SKILL.md",
+          "sha256": "759f29397a908c32521080247292a4e1c52ac01643bea70ccd6e807e86c1fa4b",
+          "bytes": 12936,
+          "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/d900840716eb262e1feb17c6f4406c9ce0e06bcf/marketing/skills/brand-review/SKILL.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/anthropic/marketing/skills/competitive-brief/SKILL.md",
+          "upstream_path": "marketing/skills/competitive-brief/SKILL.md",
+          "sha256": "c1e5442facbc3206ac6a77392bef009fe9aff4ba7c2678e2f4118be2f6be82b3",
+          "bytes": 13150,
+          "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/d900840716eb262e1feb17c6f4406c9ce0e06bcf/marketing/skills/competitive-brief/SKILL.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/anthropic/marketing/skills/performance-report/SKILL.md",
+          "upstream_path": "marketing/skills/performance-report/SKILL.md",
+          "sha256": "997397e23ba5124cdcbbf17e4be9f5cb36f2a2145b5648e02b2852c91c3cc140",
+          "bytes": 19213,
+          "source_url": "https://github.com/anthropics/knowledge-work-plugins/blob/d900840716eb262e1feb17c6f4406c9ce0e06bcf/marketing/skills/performance-report/SKILL.md"
+        }
+      ]
+    },
+    {
+      "id": "corey",
+      "repository": "https://github.com/coreyhaines31/marketingskills",
+      "commit": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "shared/vendor/marketing-methods/corey/LICENSE",
+          "upstream_path": "LICENSE",
+          "sha256": "b70d71e24e40fce5da8f4b6f9cd862096a048e433db7f3c8cac5e348e6d34591",
+          "bytes": 1069,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/LICENSE"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/ab-testing/SKILL.md",
+          "upstream_path": "skills/ab-testing/SKILL.md",
+          "sha256": "c5c547f2ccee5034bf24b1afa5e7c1ae2913f2618bc65f3e0788a1c55f7759b9",
+          "bytes": 13346,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/ab-testing/SKILL.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/ab-testing/references/sample-size-guide.md",
+          "upstream_path": "skills/ab-testing/references/sample-size-guide.md",
+          "sha256": "53525ddf0e904477262dc3dbc89d4bd4205f2e07d655616de91e22a310f768c4",
+          "bytes": 9183,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/ab-testing/references/sample-size-guide.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/ab-testing/references/test-templates.md",
+          "upstream_path": "skills/ab-testing/references/test-templates.md",
+          "sha256": "761a40b9de8d16f18fa7f60b59e77aa749607ac8014af43e0b022f47fa87c812",
+          "bytes": 6473,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/ab-testing/references/test-templates.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/competitor-profiling/SKILL.md",
+          "upstream_path": "skills/competitor-profiling/SKILL.md",
+          "sha256": "66d93cd9c8120d63d45c4154f13bf6b475db99b7628569ed4e42eb271909e254",
+          "bytes": 17738,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/competitor-profiling/SKILL.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/competitor-profiling/references/templates.md",
+          "upstream_path": "skills/competitor-profiling/references/templates.md",
+          "sha256": "710d78cb519012eb7e39f63643e22d7b9026c91c569262b44c45535c10717a91",
+          "bytes": 4668,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/competitor-profiling/references/templates.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/competitor-profiling/references/tool-reference.md",
+          "upstream_path": "skills/competitor-profiling/references/tool-reference.md",
+          "sha256": "fda64910bc1b3a2bc7df21c15701220849b4b79a58a51f9d3ccae1b7311dbd79",
+          "bytes": 13132,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/competitor-profiling/references/tool-reference.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/content-strategy/SKILL.md",
+          "upstream_path": "skills/content-strategy/SKILL.md",
+          "sha256": "5e74201646b8ae0b7ddfd2f4a4a14149096f490667b32bcb9e3a35e7326d88b0",
+          "bytes": 19387,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/content-strategy/SKILL.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/content-strategy/references/content-distribution.md",
+          "upstream_path": "skills/content-strategy/references/content-distribution.md",
+          "sha256": "1861a1aab0627ab29c279000879a9889242da1ba85e677acdc759c66a6241778",
+          "bytes": 5576,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/content-strategy/references/content-distribution.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/content-strategy/references/headless-cms.md",
+          "upstream_path": "skills/content-strategy/references/headless-cms.md",
+          "sha256": "efc796ae9596d1efcb876683db2d9b7c10c83e76e1cb69e527097907d5b4fc3f",
+          "bytes": 8583,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/content-strategy/references/headless-cms.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/customer-research/SKILL.md",
+          "upstream_path": "skills/customer-research/SKILL.md",
+          "sha256": "22964b89315a6cf5524d3f627904843e7826d40e06689a07faa5df25fc730bc7",
+          "bytes": 15190,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/customer-research/SKILL.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/customer-research/references/interviews-and-surveys.md",
+          "upstream_path": "skills/customer-research/references/interviews-and-surveys.md",
+          "sha256": "56adecdc40af1242464937100349fc1a161627394909551720494bc5ee537076",
+          "bytes": 8640,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/customer-research/references/interviews-and-surveys.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/customer-research/references/source-guides.md",
+          "upstream_path": "skills/customer-research/references/source-guides.md",
+          "sha256": "7490a8d04f209d4c8c987530e79d0883a6b42027b86a920fc751cf8ea9904892",
+          "bytes": 16240,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/customer-research/references/source-guides.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/social/references/carousel-frameworks.md",
+          "upstream_path": "skills/social/references/carousel-frameworks.md",
+          "sha256": "e703aa530ec9f68cdf5b58e8e0d4d1a5cc3f22b9e2d3e3222f16a9763d423247",
+          "bytes": 11124,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/social/references/carousel-frameworks.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/social/references/reverse-engineering.md",
+          "upstream_path": "skills/social/references/reverse-engineering.md",
+          "sha256": "c27bef59d463b3b11331c1770f4a23e9e6bbce7d7c8db1e7f7f4f14ba206243f",
+          "bytes": 5551,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/social/references/reverse-engineering.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/corey/skills/social/references/short-form-video.md",
+          "upstream_path": "skills/social/references/short-form-video.md",
+          "sha256": "ed0976bd7ac1f85b7b8c162087e346118f2cf0ef46b3ccafc6a7a329118987d1",
+          "bytes": 7040,
+          "source_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/social/references/short-form-video.md"
+        }
+      ]
+    },
+    {
+      "id": "marcos",
+      "repository": "https://github.com/marcosmodly/marketing-skill",
+      "commit": "28456ea34da08b3344ea86721792755e320c9e21",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "shared/vendor/marketing-methods/marcos/LICENSE",
+          "upstream_path": "LICENSE",
+          "sha256": "0b05e5464456d32a8ac68298f69109372cca72b24f7f32f5d2a18f3babc4c067",
+          "bytes": 1068,
+          "source_url": "https://github.com/marcosmodly/marketing-skill/blob/28456ea34da08b3344ea86721792755e320c9e21/LICENSE"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/marcos/references/editing-techniques.md",
+          "upstream_path": "references/editing-techniques.md",
+          "sha256": "d955fa2298cd95271e797cb8bbfcf6d3c96d53a1627d446d5b6b499ce9cfff58",
+          "bytes": 17532,
+          "source_url": "https://github.com/marcosmodly/marketing-skill/blob/28456ea34da08b3344ea86721792755e320c9e21/references/editing-techniques.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/marcos/references/fyp-formats.md",
+          "upstream_path": "references/fyp-formats.md",
+          "sha256": "5610a117cabb91195d60b04bf7cd7f96d802e0f80b9bb9afccf57cdfc34275a5",
+          "bytes": 16706,
+          "source_url": "https://github.com/marcosmodly/marketing-skill/blob/28456ea34da08b3344ea86721792755e320c9e21/references/fyp-formats.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/marcos/references/hooks.md",
+          "upstream_path": "references/hooks.md",
+          "sha256": "12f68c07ac0a06f9c0f27a0ec73dfd623877d02398111c2485b58d952deeedfe",
+          "bytes": 8134,
+          "source_url": "https://github.com/marcosmodly/marketing-skill/blob/28456ea34da08b3344ea86721792755e320c9e21/references/hooks.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/marcos/references/video-types.md",
+          "upstream_path": "references/video-types.md",
+          "sha256": "b2ebea1485f6d88a7236e001061367aaa0889016449cf91ddfa421befacd0203",
+          "bytes": 17031,
+          "source_url": "https://github.com/marcosmodly/marketing-skill/blob/28456ea34da08b3344ea86721792755e320c9e21/references/video-types.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/marcos/references/visual-design.md",
+          "upstream_path": "references/visual-design.md",
+          "sha256": "c848b733cae77ec90146b3a25c9e8002ee7e7596c5cb55991d0df9e2e26be7f7",
+          "bytes": 21522,
+          "source_url": "https://github.com/marcosmodly/marketing-skill/blob/28456ea34da08b3344ea86721792755e320c9e21/references/visual-design.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/marcos/skills/seo-brief/SKILL.md",
+          "upstream_path": "skills/seo-brief/SKILL.md",
+          "sha256": "db2f5b3e11640734cee2bef922bbd26f9ffd869f784ce45bf125c8a835408530",
+          "bytes": 7623,
+          "source_url": "https://github.com/marcosmodly/marketing-skill/blob/28456ea34da08b3344ea86721792755e320c9e21/skills/seo-brief/SKILL.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/marcos/skills/short-form-video/SKILL.md",
+          "upstream_path": "skills/short-form-video/SKILL.md",
+          "sha256": "fcacda23d998e59ea9b129ffea0e3cb184c214669e9dda2f09c00420e4ebc983",
+          "bytes": 43383,
+          "source_url": "https://github.com/marcosmodly/marketing-skill/blob/28456ea34da08b3344ea86721792755e320c9e21/skills/short-form-video/SKILL.md"
+        },
+        {
+          "path": "shared/vendor/marketing-methods/marcos/skills/visual-brief-generator/SKILL.md",
+          "upstream_path": "skills/visual-brief-generator/SKILL.md",
+          "sha256": "cb4edd49bb07172ef959c8bb35effb9400fb0093afd2301bad3190e622e84241",
+          "bytes": 8189,
+          "source_url": "https://github.com/marcosmodly/marketing-skill/blob/28456ea34da08b3344ea86721792755e320c9e21/skills/visual-brief-generator/SKILL.md"
+        }
+      ]
+    }
+  ]
+}
