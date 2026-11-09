@@ -1,5 +1,13 @@
 # STATE.md — эстафета между сессиями
 
+## SSH восстановлен · 10.11.2026, 00:58 Москва · без деплоя
+
+Владелец подтвердил замену private key в Actions Secrets и разрешил проверить вход. Минимально исправлен read-only `scripts/growth-vps-root-auth.mjs`: старый skip для уже настроенного root инвертирован; выполняется только настроенный root, иной пользователь не вызывает root fallback. Host/DNS pin, host-key policy, одна попытка, timeout и неизменённая read-only команда сохранены. Четыре offline группы прошли, значения Secrets не читались/не печатались.
+
+Фактическая диагностика [42707507064](https://github.com/Nighttech1/Content-Factory/actions/runs/42707507064), source fe607c8f07475139b849c646164886b9527b7ab0: HOST_matches_content_DNS=true, knownSelectelDNSmatch=true, TCP_configured_SSH=ok, KEY_LOOKS_LIKE_FINGERPRINT=false, KEY_PARSE_VALID=true, AUTH_ROOT_attempted=true, AUTH_ROOT_OK=true, REMOTE_UID0=true, REMOTE_APP_DIR=true. SSH-блокер снят. REMOTE_ROOT_PM2_PID_ALIVE=false означает лишь отсутствие подтверждённого root PM2 daemon, не остановку сайта: перед релизом выяснить фактического владельца/способ запуска read-only preflight; не запускать новый root PM2 вслепую. Подробности: `веб/memory/waves/W-2026-11-10-situation-center/ssh-check-result.md`.
+
+Сайт/данные/VPS этой проверкой не менялись. Release marker не менялся. Текущее разрешение — только проверка входа; production release требует отдельного явного поручения. Для следующего разрешённого release использовать проверенный source3ac253b6 и QA42704640983/build13713870877 (если artifact не expired), а не прежний source7de8d1c. Новый SSH доступ не означает, что `/growth` уже опубликован.
+
 ## Внутренне принято: W-2026-11-10-situation-center · VPS не обновлён
 
 По прямому поручению владельца начата доработка существующего `/growth` в той же ветке `codex/director-chatgpt-transfer`. Новый видимый пятый раздел — «Ситуационный центр». Тренер → Архитектор (spec/chain до кода) → Backend/Frontend → независимые Тестировщик и Клиент; все роли из проектного реестра. Прямое уточнение владельца: Клиент выдаёт C-* команде, повторяет приёмку до закрытия всех замечаний и только затем возвращает результат владельцу; окончательное «согласовано» владельца отдельно.
