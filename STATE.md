@@ -1,6 +1,14 @@
 # STATE.md — эстафета между сессиями
 
-## Production разрешён владельцем · systemd release готов к запуску
+## ВЫЛОЖЕНО И ПРИНЯТО КЛИЕНТОМ · 10.11.2026 · Ситуационный центр
+
+Production https://content.vernatunspeakclub.com/growth реально работает. Release42713196016 SUCCESS, marker092d6c888684c33ad310a04f9a2da26f5cc8c612, ops0b6ba3d37316748260697b5941ea40f4fda4f224. Реальный DEPLOY_VERIFIED в22:38:55UTC (01:38:55Москва): testedsource3ac253b6ad9ec307bc82dcde3fcc5465f01e7115, artifact13713870877 изQA42704640983, revision situation-v2-20261110-01. Старый release и privatebackup сохранены, current указывает на новый release. Существующий content-factory.service/UID980/3087 сохранён; только собственный initial drop-in переводит старый Next CLI на standalone через env PORT/HOST. Main unit, app.env и nginx не переписаны; data/media/public используют прежние external paths. Миграции/сбросы/публикация контента/платныеAPI не выполнялись.
+
+Независимый Клиент реально проверила production в cloudbrowser:5пунктов,все8этапов,humor/useful/series+четыреэпизода,resetфильтра,Plan24/Fact0,переходизSources,DirectorchatиStudio. Видимаяrevision01 совпадает. Desktop1363×936 безгоризонтальногопереполнения; размеры1440/412/390/360 подтверждены buildQA, не выдаватьихзаlive mobile. Console capture — толькоошибкиchrome-extension metadata,неприложения. Отчёт `production-client-acceptance.md`; вердиктПРИНЯТО,открытыхC-*нет,итоговаяприёмкавладельцаотдельно. Новый cloudchatemptyнепроверяетличнуюисториювладельца:сохранностьstoreдоказанаCIseed+сохранениемserverpaths,нечтениемчужихсообщений.
+
+ВАЖНО ДЛЯ СЛЕДУЮЩЕЙ ВЫКЛАДКИ: текущий adapter initial-only и специально блокирует уже существующий owned drop-in/standalone launch. Перед следующим release нужно узкое расширение preflight для известного exact owned drop-in с backup/restore его прежнего состояния; не обходить gates,не перезапускать PM2. Обычный docs/codepush не запускает release. Полный журнал `systemd-release-result.md`; C-OPS-ROLLBACK-VERIFY и C-OPS-DROPIN-OWNERSHIP закрыты независимыми guards.
+
+## История подготовки · production разрешён владельцем
 
 Уточнение перед повторной доставкой: release42710726458 остановился до APP mutations на preflight (old process/current не менялись). Phase4 read-only42711580976 доказала original Next CLI `/usr/bin/node node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 3087`, а не standalone root/server.js. Архитектор одобрила минимальный owned drop-in `90-content-factory-release.conf`: ExecStart reset → `/usr/bin/env PORT=3087 HOSTNAME=127.0.0.1 /usr/bin/node /opt/content-factory/current/server.js`. Main unit и app.env не меняются. CONFIG_CHANGED выставляется до записи; rollback удаляет только созданный regular matching drop-in, reload, возвращает old current и original CLI. Восемь полных mock cases и независимые14 rollback/12 actual preflight branches PASS. Adapter initial-only: будущий повторный релиз с уже существующим owned drop-in требует отдельного расширения гейта, не обходить его вслепую.
 
