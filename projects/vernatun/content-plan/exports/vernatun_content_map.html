@@ -1,0 +1,954 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Вернатун — стратегия и контент до Нового года</title>
+<style>
+:root{--paper:#F9F6F0;--mist:#E8E2D8;--terra:#C95B36;--gold:#E6B25A;--blue:#2A5A84;--ink:#1E2930}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Century Gothic',CenturyGothic,'Liberation Sans',sans-serif;font-size:16px;line-height:1.55}button,input,select{font:inherit}button,a,input,select{touch-action:manipulation}button{cursor:pointer}a{color:var(--blue);overflow-wrap:anywhere}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--blue);outline-offset:3px}header{background:var(--ink);color:var(--paper);padding:38px max(22px,calc((100% - 1180px)/2)) 32px}.eyebrow{letter-spacing:.15em;text-transform:uppercase;font-size:12px;color:var(--gold);font-weight:bold}h1{font-size:clamp(30px,5.2vw,58px);line-height:1.1;letter-spacing:-.04em;margin:18px 0;max-width:870px}header p{max-width:800px;color:var(--mist)}.hero-foot{display:flex;gap:10px;flex-wrap:wrap;font-size:13px}.pill{border:1px solid currentColor;border-radius:20px;padding:4px 12px}main{max-width:1224px;margin:auto;padding:24px 22px 50px}nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:26px;border-bottom:1px solid var(--mist);padding-bottom:15px}.tab,button.secondary{background:transparent;border:1px solid var(--mist);padding:10px 16px;border-radius:8px;color:var(--ink)}.tab[aria-selected=true]{background:var(--terra);color:white;border-color:var(--terra)}h2{font-size:28px;line-height:1.2;margin:25px 0 12px}h3{font-size:20px;margin:14px 0 8px}.lead{font-size:20px;max-width:930px}.muted{color:#566269;font-size:14px}.notice{padding:14px 18px;background:#f0e6d7;border-left:4px solid var(--gold);margin:18px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.product{background:white;border:1px solid var(--mist);border-top:4px solid var(--terra);border-radius:12px;padding:20px}.product.online{border-top-color:var(--blue)}.product.pass{border-top-color:var(--gold)}.product.club{border-top-color:var(--ink)}.num{font-size:36px;color:var(--terra);font-weight:bold;line-height:1.1}.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;border-block:1px solid var(--mist);padding:20px 0;margin:20px 0}.kpis p{margin:4px 0}.filters{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin:18px 0}.filters label{flex:1;min-width:150px}.filters input,.filters select,.calc input{display:block;width:100%;padding:10px;border:1px solid #b6b0a6;background:white;border-radius:6px;color:var(--ink);min-height:44px}.filters label>span,.calc label>span{font-size:13px;display:block;margin-bottom:4px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.content-card{border:1px solid var(--mist);border-radius:10px;padding:17px;background:white;display:flex;flex-direction:column;align-items:start;text-align:left;color:var(--ink);width:100%}.content-card:hover{border-color:var(--terra)}.content-card h3{font-size:18px;line-height:1.3;margin:12px 0}.content-card .card-bottom{margin-top:auto;padding-top:12px;font-size:13px;color:var(--blue)}.tag{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--terra);font-weight:bold}.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:20px 0}.flow div{border-bottom:3px solid var(--terra);padding:10px 0}.flow b{display:block;font-size:18px}.scroll{overflow-x:auto;max-width:100%}table{border-collapse:collapse;width:100%;font-size:14px;margin:16px 0}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--mist);padding:10px 9px}th{color:var(--blue);font-size:12px;text-transform:uppercase;letter-spacing:.04em}td:first-child{font-weight:bold}.time-stack{height:24px;display:flex;overflow:hidden;border-radius:4px;background:var(--mist);min-width:170px}.time-stack span{height:24px}.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px}.legend span:before{content:'';display:inline-block;width:10px;height:10px;background:var(--c);margin-right:5px}.week{border-bottom:1px solid var(--mist);padding:15px 0}.week summary{cursor:pointer;min-height:44px;font-size:19px;font-weight:bold}.week summary small{display:block;font-size:14px;font-weight:normal;color:var(--blue)}.week .grid{margin-top:10px}.slot-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;margin:20px 0}.slot-week{padding:9px;background:white;border:1px solid var(--mist);border-radius:6px}.slot-week>strong{font-size:13px;color:var(--blue)}.mini{display:block;width:100%;text-align:left;border:0;border-left:3px solid var(--terra);background:var(--paper);padding:8px;font-size:12px;line-height:1.35;margin-top:8px;min-height:70px;color:var(--ink)}.mini[data-p=online]{border-color:var(--blue)}.mini[data-p=pass]{border-color:var(--gold)}.mini[data-p=club]{border-color:var(--ink)}.calc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}.result{background:var(--ink);color:white;padding:22px;border-radius:12px;margin:20px 0}.result strong{font-size:30px;display:block}.sources li{margin:16px 0}.source-id{color:var(--terra);font-weight:bold}.source-detail{font-size:14px;color:#566269;margin:5px 0}.primary{background:var(--terra);color:white;border:0;border-radius:7px;padding:11px 16px;min-height:44px}dialog{border:1px solid var(--mist);border-radius:14px;width:min(760px,calc(100% - 24px));max-height:90vh;padding:26px;color:var(--ink);background:var(--paper)}dialog::backdrop{background:#1e2930a6}.dialog-head{display:flex;justify-content:space-between;gap:12px;align-items:start}.dialog-head h2{margin-top:10px}#closeDialog{flex:none}.detail-list{display:grid;grid-template-columns:145px 1fr;gap:10px 15px}.detail-list dt{font-size:13px;font-weight:bold;color:var(--blue)}.detail-list dd{margin:0;overflow-wrap:anywhere}.toolbar{display:flex;gap:10px;flex-wrap:wrap}.check{display:flex;gap:10px;align-items:start;padding:12px 0;border-bottom:1px solid var(--mist)}.check input{width:22px;height:22px;flex:none}.check span{min-width:0}.gate{font-size:13px;background:var(--mist);padding:10px;border-radius:6px}.mobile-hide{display:block}footer{border-top:1px solid var(--mist);padding-top:25px;margin-top:35px;font-size:13px}.count{font-size:14px;color:var(--blue);margin-bottom:12px}[hidden]{display:none!important}@media(max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.slot-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){main{padding:18px 15px}header{padding:28px 18px}.cards,.grid,.calc{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.slot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tab{flex:1 0 40%;padding:10px}.filters label{min-width:100%;font-size:16px}.detail-list{grid-template-columns:1fr;gap:3px}.detail-list dd{margin-bottom:10px}dialog{padding:18px}.num{font-size:30px}}@media print{nav,.filters,.toolbar,button,dialog,.calc{display:none!important}section[hidden]{display:block!important}section{break-before:page}header{background:white;color:var(--ink)}header p{color:var(--ink)}.cards{grid-template-columns:1fr 1fr}.content-card{break-inside:avoid}.week{break-inside:avoid}body{font-size:12px}.notice{background:transparent}}
+</style></head><body>
+<header><div class="eyebrow">Вернатун · рабочая карта директора</div><h1>От первого разговора<br>к своему клубу</h1><p>Стратегия развития, недельный график и карта контента до 31 декабря 2026. Каждый материал связан с продуктом и следующим действием участника.</p><div class="hero-foot"><span class="pill">09 ноября — 31 декабря</span><span class="pill">0 ₽ продвижение</span><span class="pill">до 3 ч / неделю</span><span class="pill">Проект на согласовании</span></div></header>
+<main><nav role="tablist" aria-label="Разделы плана"><button class="tab" role="tab" aria-selected="true" aria-controls="strategy" id="tab-strategy">Стратегия</button><button class="tab" role="tab" aria-selected="false" aria-controls="map" id="tab-map">Карта контента</button><button class="tab" role="tab" aria-selected="false" aria-controls="schedule" id="tab-schedule">График и время</button><button class="tab" role="tab" aria-selected="false" aria-controls="economy" id="tab-economy">Подписка</button><button class="tab" role="tab" aria-selected="false" aria-controls="actions" id="tab-actions">Твои шаги</button><button class="tab" role="tab" aria-selected="false" aria-controls="sources" id="tab-sources">Основания</button></nav>
+<section id="strategy" role="tabpanel" aria-labelledby="tab-strategy"><div class="tag">Стратегический выбор</div><h2>Сначала понятный визит. Затем — возвращение.</h2><p class="lead">Приводим в разговорную среду взрослых Москвы, которые немного знают армянский и хотят говорить среди своих. Показываем реальную помощь, знакомим с людьми и даём повод прийти снова.</p><div class="notice"><b>Разведка принята частично для первых тестов.</b> Есть карта предложений и текстовых механик. Нет надёжного московского платёжного спроса, видео-выгрузок и нашей экономики. Тариф и прогноз 50–60 гостей из этих данных не следуют.</div><div class="flow"><div><b>01 · Узнать</b>Свой сюжет → TG</div><div><b>02 · Прийти</b>Условия → бот → встреча</div><div><b>03 · Вернуться</b>Знакомство → следующий повод</div><div><b>04 · Участвовать регулярно</b>Проверка пакета → решение</div></div><div class="kpis"><div><div class="num">24</div><p>новых материала</p><small>6 видео · 10 каруселей · 8 текстов</small></div><div><div class="num">8</div><p>недель решения</p><small>Не восемь новых продуктов</small></div><div><div class="num">≤180</div><p>минут в полную неделю</p><small>С учётом передач и согласований</small></div><div><div class="num">1</div><p>активный тест за раз</p><small>Без распыления на все каналы</small></div></div><h2>Четыре продукта — разная роль</h2><div class="grid" id="products"></div><h2>К чему стремимся к 31 декабря</h2><ul><li>Одна достоверная карточка на каждую встречу и учёт гостей/повторов.</li><li>После базовых 4 встреч — ориентир декабря: медиана ≥ min(места, max(B + 3, 1,25 × B)). Порог предложен директором, не прогноз; B пока неизвестно.</li><li>Один прослеживаемый путь из контента к гостям; первые решения по работающей подаче.</li><li>Расчёт и проверка пакета у повторных гостей. Продажа — только отдельным решением.</li><li>Январский план по фактам, а не обещание запустить все активности до Нового года.</li></ul><p class="muted">50–60 гостей — горизонт 3–6 месяцев с проверкой вместимости. Найденное в отчёте «до 40 мест» не подтверждено в текущем каноне: до уточнения вместимость неизвестна.</p><h2>Роль каналов</h2><div class="scroll"><table><thead><tr><th>Канал</th><th>Что делает</th><th>Что измеряем</th></tr></thead><tbody><tr><td>Telegram</td><td>FAQ, люди, условия, запись, возвращение</td><td>Записи → пришли → повторили</td></tr><tr><td>Instagram</td><td>Собственный короткий сюжет, знакомство с клубом</td><td>Переходы и добровольно названный источник визита</td></tr><tr><td>YouTube Shorts</td><td>Опциональный повтор готового видео из резерва</td><td>Отдельная диагностика; не гарантированный московский поток</td></tr><tr><td>Сайт / кампус</td><td>Расписание и путь к событию; одна сессия по готовности</td><td>Удобство входа; фактические участники сессии</td></tr></tbody></table></div></section>
+<section id="map" role="tabpanel" aria-labelledby="tab-map" hidden><div class="tag">Тема → продукт → аудитория → действие</div><h2>Карта выпуска контента</h2><p>Открой карточку: внутри бриф, исходники, гейт и ответственный. Даты — слоты публикации, <b>не расписание мероприятий</b>.</p><div class="filters"><label><span>Продукт</span><select id="productFilter"><option value="">Все продукты</option></select></label><label><span>Неделя</span><select id="weekFilter"><option value="">Все недели</option></select></label><label><span>Канал</span><select id="channelFilter"><option value="">Все каналы</option><option>TG</option><option>IG</option><option>YouTube Shorts</option></select></label><label><span>Поиск темы / аудитории</span><input id="search" type="search" placeholder="Например, первый визит"></label></div><div class="count" id="count" aria-live="polite"></div><div class="cards" id="cards"></div><div class="notice">На одну новую афишу — два тёплых материала. До одного напоминания D−1 в неделю — производная того же ART-ID, не новый материал. Если событий два, объединяем афишу; производство не удваиваем.</div><div class="toolbar"><button class="secondary" id="exportCSV">Скачать календарь CSV</button><button class="secondary" id="exportJSON">Экспорт локальных статусов</button><label class="secondary" style="display:inline-block">Импорт статусов <input id="importJSON" type="file" accept="application/json" style="max-width:230px"></label></div><p class="muted">Локальные отметки не синхронизируются с Git и чатами, не подтверждают редакторский апрув и ничего не публикуют.</p><p id="importMessage" role="status"></p></section>
+<section id="schedule" role="tabpanel" aria-labelledby="tab-schedule" hidden><div class="tag">Недельный график · Москва</div><h2>Выпуск связан с этапом развития</h2><p>Среда — основной сюжет; пятница — тёплый материал; воскресенье — условия следующей встречи. Время 19:00 — тестовый слот. Анонс переносится на D−3…D−5, напоминание на D−1, рекап на D+1…D+2 после подтверждения события.</p><div class="slot-grid" id="slotGrid"></div><p class="muted">Если согласование позже даты слота — отменить/перенести без догоняющего выпуска. В последнюю неделю слоты 29, 30 и 31 декабря. При отсутствии события — FAQ; при отсутствии готовой комнаты — офлайн-замена.</p><h2>Дорожная карта: кто что делает</h2><div id="roadmap"></div><h2>Нагрузка по неделям, минут</h2><div class="legend" id="timeLegend"></div><div class="scroll"><table><thead><tr><th>Период</th><th>Распределение 0–180 мин</th><th>Всего</th></tr></thead><tbody id="timeRows"></tbody></table></div><div class="notice">Все минуты — оценка, не замер. Если отдел требует больше времени, сначала убираем дополнительную площадку, затем заменяем ролик коротким текстом; при необходимости оставляем 2 материала. Бюджет не расширяется автоматически.</div><h3>Если сами встречи входят в эти 3 часа</h3><label for="eventMinutes">Минут проведения / организации встреч в неделю</label><input id="eventMinutes" type="range" min="0" max="240" step="15" value="0" style="width:100%"><p id="remaining" aria-live="polite"></p><p class="muted">Пока неизвестно, входит ли проведение в лимит. По умолчанию показан отдельный бюджет продвижения; это допущение требует твоего подтверждения. Не предполагаем бесплатных дополнительных часов.</p></section>
+<section id="economy" role="tabpanel" aria-labelledby="tab-economy" hidden><div class="tag">Будущая модель · без продажи</div><h2>Подписка должна быть выгодна обеим сторонам</h2><p>Рекомендую начать с проверки ограниченного пакета существующих встреч. Затем рассмотреть членство со скидкой или гибрид. Партнёрские события и безлимит требуют обеспеченных мест и договорённостей.</p><div class="grid"><div class="product"><h3>Что проверяем в декабре</h3><p>5 добровольных разговоров с повторными гостями. Предложенный сигнал: 3 готовы выбрать реальные доступные даты, их экономия положительна, консервативный сценарий клуба не убыточен.</p><p class="muted">Порог — управленческий, не рыночная норма. Выбор на словах не равен покупке.</p></div><div class="product"><h3>Что должно быть до продажи</h3><p>Расходы, частота визитов, места на каждом событии, срок/перенос пакета, бронирование, неявки/отмены и понятные полные условия. Отдельный апрув владельца.</p></div></div><h2>Проверь арифметику участника</h2><p class="muted">Иллюстративные значения из отчёта; не тариф Вернатуна. Текущий разовый билет — 400 ₽ по вводным владельца.</p><div class="calc"><label><span>Посещений за период</span><input id="visits" type="number" min="0" max="30" step="1" value="4"></label><label><span>Цена пакета, ₽</span><input id="packagePrice" type="number" min="0" max="100000" value="1200"></label><label><span>Включено посещений</span><input id="included" type="number" min="1" max="30" value="4"></label><label><span>Взнос за скидочное членство, ₽</span><input id="fee" type="number" min="0" max="100000" value="300"></label><label><span>Цена визита с членством, ₽</span><input id="discountVisit" type="number" min="0" max="10000" value="300"></label></div><div class="result" id="calcResult" aria-live="polite"></div><div class="notice"><b>Это только сторона участника.</b> Цена пакета − использованные визиты × переменные расходы − доля постоянных расходов − комиссии — ещё не доказанная прибыль. Скидка нынешним гостям может уменьшить выручку без новых посещений. Экономию считаем по всему платежу, не только по цене визита после взноса.</div></section>
+<section id="actions" role="tabpanel" aria-labelledby="tab-actions" hidden><div class="tag">Ручная эстафета</div><h2>Ближайшие действия</h2><div id="checklist"></div><h2>Граница ролей</h2><div class="scroll"><table><thead><tr><th>Кто</th><th>Ответственность</th><th>Результат</th></tr></thead><tbody><tr><td>Директор — я</td><td>Стратегия, один тест, брифы, оценка агрегатов, решение продолжить/изменить/остановить</td><td>План и ID для ручной передачи</td></tr><tr><td>Владелец — ты</td><td>Факты события/экономика/права, запуск чатов, согласование, ручная публикация, проведение</td><td>Подтверждённые входы и реальные результаты</td></tr><tr><td>Отделы</td><td>После передачи ID — сценарий, визуал и монтаж по профильной цепочке</td><td>Пакет на редактуру, не автоматическая публикация</td></tr><tr><td>Редактор</td><td>Факты, язык, бренд, права, CTA</td><td>Явный вердикт до твоего апрува</td></tr></tbody></table></div><p class="notice">Все 24 задания пока на согласовании. Папка брифа не доказывает старт отдела. Сначала «согласовано» по стратегии и факты ближайшей встречи; затем ты вручную передаёшь первый CAR-ID.</p><h2>Еженедельный контроль</h2><p>Регистрации, пришли, новые/повторные, источник, места, выручка/затраты, минуты работы. Возврат за 30 дней считаем только для созревших когорт. Нет базы — начинаем замер, не восстанавливаем людей по фото.</p></section>
+<section id="sources" role="tabpanel" aria-labelledby="tab-sources" hidden><div class="tag">Доказательства и практики</div><h2>Откуда взяты решения</h2><p>Проверка источников — 09.11.2026. Приёмы ниже адаптированы к нашему клубу; это не универсальная гарантия роста.</p><ol class="sources" id="sourceList"></ol><h2>Чего пока нет</h2><ul><li>Репрезентативного московского спроса и готовности покупать подписку.</li><li>Полных IG/TikTok/YouTube-метрик; 83 TG-поста — сохранённая выборка 06.11.</li><li>Внутренних данных расходов, явки, частоты, подтверждённой вместимости.</li><li>Доказательства рабочего голоса/платежа только по открытию оболочки сайта.</li><li>Договорённостей с партнёрами, редакторского принятия новых материалов и разрешения публикации.</li></ul></section>
+<footer><b>Вернатун · план v1.0 · 09.11.2026.</b> Источник стратегии — месячные планы в Git; этот HTML — переносимый снимок. Рабочая ветка: codex/director-chatgpt-transfer. Исследование: codex/scout-handoff-20261109 / S-202611-GEN-02. Шрифт Century Gothic при наличии на устройстве, иначе системный fallback. Публикация, деплой и платные API этой работой не выполнялись.</footer></main>
+<dialog id="detail"><div class="dialog-head"><div><div class="tag" id="detailId"></div><h2 id="detailTitle"></h2></div><button class="secondary" id="closeDialog" aria-label="Закрыть карточку">Закрыть</button></div><dl class="detail-list" id="detailBody"></dl><label for="localStatus">Локальный статус для твоей навигации</label><select id="localStatus" style="display:block;padding:10px;width:100%;margin-top:5px"><option>На согласовании</option><option>Нужны входы</option><option>Передано отделу</option><option>На редактуре</option><option>На апруве владельца</option><option>Одобрено владельцем</option><option>Опубликовано вручную</option></select><p class="muted">Не является записью в Git, приёмкой или публикацией. Для канонического статуса нужны подтверждающие артефакты.</p><button class="primary" id="copyHandoff">Копировать ручную передачу</button><p id="copyState" role="status"></p></dialog>
+<script id="planData" type="application/json">{
+  "version": "1.0 · 09.11.2026",
+  "status": "Проект стратегии на согласовании владельца",
+  "weeks": [
+    {
+      "n": 1,
+      "period": "09–15 ноября",
+      "start": "2026-11-09",
+      "goal": "Сделать первый визит понятным",
+      "theme": "Можно прийти одному",
+      "director": "Принять разведку с ограничениями; собрать одну эталонную карточку и FAQ; выдать брифы.",
+      "owner": "Подтвердить дату, адрес, полную цену, вместимость и ссылку записи; снять ведущего или дать собственные фото; начать учёт.",
+      "gate": "Без карточки события выпускаем только evergreen FAQ; анонс переносим.",
+      "test": "T1: ясный вход",
+      "metric": "Записались/пришли впервые; источник — добровольный ответ.",
+      "cost": [
+        15,
+        55,
+        20,
+        10,
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "n": 2,
+      "period": "16–22 ноября",
+      "start": "2026-11-16",
+      "goal": "Показать реальную помощь",
+      "theme": "Понимаю, но стесняюсь говорить",
+      "director": "Сверить первые факты; бриф одного видео о поддержке; назначить сравнение с первой неделей.",
+      "owner": "15 минут собственных кадров/согласий; проверить редактуру; отметить новичков и причины прихода.",
+      "gate": "Нет согласий — в кадре только ведущий. Нет исходников — вместо видео короткий текст по тому же брифу.",
+      "test": "T1 продолжается; T2 — материал внутри него",
+      "metric": "Пришедшие, назвавшие материал источником; не только просмотры.",
+      "cost": [
+        15,
+        45,
+        20,
+        10,
+        20,
+        20,
+        25,
+        25
+      ]
+    },
+    {
+      "n": 3,
+      "period": "23–29 ноября",
+      "start": "2026-11-23",
+      "goal": "Дать причину вернуться",
+      "theme": "Свои люди и разговоры",
+      "director": "Сравнить 4 встречи, если уже состоялись; выбрать рабочую подачу; подготовить краткий партнёрский пакет.",
+      "owner": "Записать добровольный рассказ гостя/свой опыт; пригласить на следующий визит; при готовности самому сделать один запрос площадке.",
+      "gate": "Партнёрских сообщений от ассистента нет. Если нет 4 встреч — продолжаем замер, не объявляем победителя.",
+      "test": "T4 только после T1 и разрешения владельца",
+      "metric": "Новые гости из одного внешнего источника и время на их привлечение.",
+      "cost": [
+        15,
+        45,
+        20,
+        10,
+        20,
+        20,
+        30,
+        20
+      ]
+    },
+    {
+      "n": 4,
+      "period": "30 ноября – 6 декабря",
+      "start": "2026-11-30",
+      "goal": "Проверить практику между встречами",
+      "theme": "20 минут разговора онлайн",
+      "director": "При достаточном ресурсе выбрать одну сессию в существующей комнате; иначе повторить лучший офлайн-материал.",
+      "owner": "Проверить звук и ведущего; подтвердить слот; провести 20 минут либо дать слот добровольному ведущему; записать агрегаты.",
+      "gate": "Комната заменяет другое экспериментальное действие недели; без ведущего/звука — офлайн-замена.",
+      "test": "T5 вместо T4, без параллельного запуска",
+      "metric": "Фактически участвовали; готовы повторить; отдельно от московских гостей.",
+      "cost": [
+        15,
+        35,
+        15,
+        10,
+        20,
+        15,
+        50,
+        20
+      ]
+    },
+    {
+      "n": 5,
+      "period": "7–13 декабря",
+      "start": "2026-12-07",
+      "goal": "Проверить ценность регулярного участия",
+      "theme": "Что делает клуб своим",
+      "director": "Посчитать 3 модели по фактическим расходам/частоте; подготовить нейтральные карточки для обсуждения, не продажи.",
+      "owner": "Дать расходы и распределение посещений; добровольно обсудить варианты с 5 повторными гостями, если они есть.",
+      "gate": "Нет экономики/5 гостей — не запуск подписки, а сбор входов. Намерение не считать оплатой.",
+      "test": "T3: предпочтение пакета",
+      "metric": "Выбор с конкретными доступными датами, причины отказа, расчёт выгоды.",
+      "cost": [
+        10,
+        35,
+        15,
+        10,
+        20,
+        20,
+        50,
+        20
+      ]
+    },
+    {
+      "n": 6,
+      "period": "14–20 декабря",
+      "start": "2026-12-14",
+      "goal": "Связать культурный повод с клубом",
+      "theme": "Истории, которые хочется рассказать",
+      "director": "Оценить T3; подготовить один культурный сюжет и решение по возможному январскому пакету.",
+      "owner": "Записать собственную семейную историю; проверить факты; подтвердить только уже организованную активность.",
+      "gate": "Новый праздник/ресторан/спорт не создаём без ресурса и отдельного решения. Пилот продаж — только после отдельного апрува.",
+      "test": "Решение по T3, без нового параллельного теста",
+      "metric": "Повторы и нагрузка; есть ли обеспеченный календарь/места для пакета.",
+      "cost": [
+        15,
+        45,
+        20,
+        10,
+        20,
+        20,
+        30,
+        20
+      ]
+    },
+    {
+      "n": 7,
+      "period": "21–27 декабря",
+      "start": "2026-12-21",
+      "goal": "Закрепить связи и январский интерес",
+      "theme": "Кого ты встретил в этом году",
+      "director": "Собрать проверяемый итог и один материал о возвращении; определить кандидатов января.",
+      "owner": "Разрешённые фото/истории; подтвердить реальные даты либо собирать предпочтения без обещания события.",
+      "gate": "Нет даты — голосование за январь, а не продажа билетов. Не обещаем гостя/партнёра без согласия.",
+      "test": "Подведение итогов T1–T5",
+      "metric": "Повторные гости, зрелые когорты 30 дней, январские намерения отдельно от регистраций.",
+      "cost": [
+        15,
+        45,
+        20,
+        10,
+        20,
+        20,
+        25,
+        25
+      ]
+    },
+    {
+      "n": 8,
+      "period": "28–31 декабря",
+      "start": "2026-12-28",
+      "goal": "Принять решение на январь",
+      "theme": "Наш следующий разговор",
+      "director": "Сопоставить план/факт; принять продолжить/изменить/остановить по каждому тесту; предложить январский план.",
+      "owner": "Проверить цифры и ресурс января; утвердить модель/даты либо оставить их в проверке; согласовать тёплый итог.",
+      "gate": "Короткая неделя: переиспользование фактуры, без нового видео и без запуска нового продукта.",
+      "test": "Финальное решение",
+      "metric": "Что даёт гостей/повторы в доступное время; обязательства не превышают места.",
+      "cost": [
+        0,
+        35,
+        15,
+        10,
+        20,
+        20,
+        30,
+        20
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "meet",
+      "name": "Разговорные встречи",
+      "role": "Флагман и первый платный опыт",
+      "status": "Действующий продукт; условия конкретного события подтверждает владелец",
+      "cta": "Запись на подтверждённую встречу через @vernatunbot",
+      "metric": "Пришли впервые → вернулись за 30 дней"
+    },
+    {
+      "id": "club",
+      "name": "Комьюнити и активности",
+      "role": "Причастность и повторные встречи",
+      "status": "Действующие активности — по подтверждённой афише; новые форматы только после проверки",
+      "cta": "Следующая встреча или добровольный ответ в чате",
+      "metric": "Повторы и активные участники"
+    },
+    {
+      "id": "online",
+      "name": "Онлайн-комнаты",
+      "role": "Практика между событиями и для других городов",
+      "status": "Комнаты существуют; пилот назначенной сессии условный",
+      "cta": "Конкретная проверенная сессия в /campus",
+      "metric": "Участвовали и пришли снова"
+    },
+    {
+      "id": "pass",
+      "name": "Клубная подписка",
+      "role": "Долгосрочная регулярная модель",
+      "status": "Гипотеза: сначала пакет существующих встреч, затем гибрид",
+      "cta": "До решения — только обсуждение условий, без оплаты",
+      "metric": "Предпочтение → экономика → отдельный разрешённый платный пилот"
+    }
+  ],
+  "items": [
+    {
+      "id": "V-202611-CAR-01",
+      "week": 1,
+      "date": "2026-11-11",
+      "time": "19:00",
+      "title": "Первый вечер: от входа до первого разговора",
+      "product": "meet",
+      "stage": "Первый визит",
+      "audience": "Москва, понимает базовый армянский, стесняется",
+      "cta": "Запишись на подтверждённую встречу",
+      "brief": "5 коротких карточек: где встретят, как сесть, что делать если забыл слово; честная помощь, без курса с нуля.",
+      "inputs": "Собственные фото/ведущий; условия встречи",
+      "evidence": "S1; K5; P1; P2",
+      "code": "CAR",
+      "department": "carousel",
+      "owner": "carousel-lead",
+      "channels": [
+        "TG",
+        "IG"
+      ],
+      "minutes": 25,
+      "status": "На согласовании",
+      "gate": "Без карточки события выпускаем только evergreen FAQ; анонс переносим.",
+      "metric": "Записались/пришли впервые; источник — добровольный ответ.",
+      "job": "projects/vernatun/departments/carousel/jobs/V-202611-CAR-01/00-brief.md"
+    },
+    {
+      "id": "V-202611-CAR-02",
+      "week": 1,
+      "date": "2026-11-13",
+      "time": "19:00",
+      "title": "Можно прийти одному: три понятных шага",
+      "product": "meet",
+      "stage": "Доверие",
+      "audience": "Новичок без компании",
+      "cta": "Посмотри FAQ первого визита",
+      "brief": "Небольшой FAQ, не вторая афиша; подготовка из того же набора фактуры.",
+      "inputs": "Ведущий подтверждает факты",
+      "evidence": "S1; K5; P2",
+      "code": "CAR",
+      "department": "carousel",
+      "owner": "carousel-lead",
+      "channels": [
+        "TG",
+        "IG"
+      ],
+      "minutes": 20,
+      "status": "На согласовании",
+      "gate": "Без карточки события выпускаем только evergreen FAQ; анонс переносим.",
+      "metric": "Записались/пришли впервые; источник — добровольный ответ.",
+      "job": "projects/vernatun/departments/carousel/jobs/V-202611-CAR-02/00-brief.md"
+    },
+    {
+      "id": "V-202611-ART-01",
+      "week": 1,
+      "date": "2026-11-15",
+      "time": "19:00",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "product": "meet",
+      "stage": "Запись",
+      "audience": "Тёплая московская аудитория",
+      "cta": "Запишись через @vernatunbot",
+      "brief": "Короткий текстовый TG-анонс, не длинная SEO-статья: тема, для кого, дата/время/адрес, полная цена, места, помощь новичку. В неделю без подтверждённого события — FAQ с запросом удобного времени.",
+      "inputs": "Эталонная карточка события обязательна",
+      "evidence": "S1 R1; K4; P4",
+      "code": "ART",
+      "department": "article",
+      "owner": "scriptwriter-article",
+      "channels": [
+        "TG"
+      ],
+      "minutes": 15,
+      "status": "На согласовании",
+      "gate": "Без карточки события выпускаем только evergreen FAQ; анонс переносим.",
+      "metric": "Записались/пришли впервые; источник — добровольный ответ.",
+      "job": "projects/vernatun/departments/article/jobs/V-202611-ART-01/00-brief.md"
+    },
+    {
+      "id": "V-202611-REL-01",
+      "week": 2,
+      "date": "2026-11-18",
+      "time": "19:00",
+      "title": "Понимаю армянский, а ответить страшно",
+      "product": "meet",
+      "stage": "Знакомство",
+      "audience": "Москва, слабый/подзабытый армянский",
+      "cta": "Загляни в TG клуба",
+      "brief": "20–30 секунд: узнаваемая ситуация, ведущий показывает реальную помощь; один смысл, субтитры.",
+      "inputs": "Ведущий, 3–5 простых кадров",
+      "evidence": "K1; K3; P5",
+      "code": "REL",
+      "department": "reel",
+      "owner": "reel-lead",
+      "channels": [
+        "IG",
+        "TG",
+        "YouTube Shorts"
+      ],
+      "minutes": 45,
+      "status": "На согласовании",
+      "gate": "Нет согласий — в кадре только ведущий. Нет исходников — вместо видео короткий текст по тому же брифу.",
+      "metric": "Пришедшие, назвавшие материал источником; не только просмотры.",
+      "job": "projects/vernatun/departments/reel/jobs/V-202611-REL-01/00-brief.md"
+    },
+    {
+      "id": "V-202611-CAR-03",
+      "week": 2,
+      "date": "2026-11-20",
+      "time": "19:00",
+      "title": "Как мы помогаем, когда слово ускользнуло",
+      "product": "meet",
+      "stage": "Доверие",
+      "audience": "Новичок с языковым барьером",
+      "cta": "Запишись на подтверждённую встречу",
+      "brief": "4–5 карточек о реальной поддержке и языковых границах; не обещать переводчика каждому.",
+      "inputs": "Факты ведущего, без выдуманных отзывов",
+      "evidence": "S1; K1; P2",
+      "code": "CAR",
+      "department": "carousel",
+      "owner": "carousel-lead",
+      "channels": [
+        "TG",
+        "IG"
+      ],
+      "minutes": 20,
+      "status": "На согласовании",
+      "gate": "Нет согласий — в кадре только ведущий. Нет исходников — вместо видео короткий текст по тому же брифу.",
+      "metric": "Пришедшие, назвавшие материал источником; не только просмотры.",
+      "job": "projects/vernatun/departments/carousel/jobs/V-202611-CAR-03/00-brief.md"
+    },
+    {
+      "id": "V-202611-ART-02",
+      "week": 2,
+      "date": "2026-11-22",
+      "time": "19:00",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "product": "meet",
+      "stage": "Запись",
+      "audience": "Тёплая московская аудитория",
+      "cta": "Запишись через @vernatunbot",
+      "brief": "Короткий текстовый TG-анонс, не длинная SEO-статья: тема, для кого, дата/время/адрес, полная цена, места, помощь новичку. В неделю без подтверждённого события — FAQ с запросом удобного времени.",
+      "inputs": "Эталонная карточка события обязательна",
+      "evidence": "S1 R1; K4; P4",
+      "code": "ART",
+      "department": "article",
+      "owner": "scriptwriter-article",
+      "channels": [
+        "TG"
+      ],
+      "minutes": 15,
+      "status": "На согласовании",
+      "gate": "Нет согласий — в кадре только ведущий. Нет исходников — вместо видео короткий текст по тому же брифу.",
+      "metric": "Пришедшие, назвавшие материал источником; не только просмотры.",
+      "job": "projects/vernatun/departments/article/jobs/V-202611-ART-02/00-brief.md"
+    },
+    {
+      "id": "V-202611-REL-02",
+      "week": 3,
+      "date": "2026-11-25",
+      "time": "19:00",
+      "title": "Что происходит в первые пять минут знакомства",
+      "product": "club",
+      "stage": "Знакомство",
+      "audience": "Москва, ищет своих и живое общение",
+      "cta": "Загляни в TG клуба",
+      "brief": "Собственный фрагмент знакомства или демонстрация ведущего с явной пометкой; не выдавать постановку за отзыв.",
+      "inputs": "Согласия на лица и речь либо только ведущий",
+      "evidence": "K5; K9; P1",
+      "code": "REL",
+      "department": "reel",
+      "owner": "reel-lead",
+      "channels": [
+        "IG",
+        "TG",
+        "YouTube Shorts"
+      ],
+      "minutes": 45,
+      "status": "На согласовании",
+      "gate": "Партнёрских сообщений от ассистента нет. Если нет 4 встреч — продолжаем замер, не объявляем победителя.",
+      "metric": "Новые гости из одного внешнего источника и время на их привлечение.",
+      "job": "projects/vernatun/departments/reel/jobs/V-202611-REL-02/00-brief.md"
+    },
+    {
+      "id": "V-202611-CAR-04",
+      "week": 3,
+      "date": "2026-11-27",
+      "time": "19:00",
+      "title": "Зачем я пришёл и почему вернулся",
+      "product": "club",
+      "stage": "Возвращение",
+      "audience": "Первый и повторный гость",
+      "cta": "Выбери следующую подтверждённую встречу",
+      "brief": "История реального добровольца; если героя нет — личная история владельца, без обобщения на всех.",
+      "inputs": "Дословная цитата только с согласием",
+      "evidence": "K8; K9; P1",
+      "code": "CAR",
+      "department": "carousel",
+      "owner": "carousel-lead",
+      "channels": [
+        "TG",
+        "IG"
+      ],
+      "minutes": 20,
+      "status": "На согласовании",
+      "gate": "Партнёрских сообщений от ассистента нет. Если нет 4 встреч — продолжаем замер, не объявляем победителя.",
+      "metric": "Новые гости из одного внешнего источника и время на их привлечение.",
+      "job": "projects/vernatun/departments/carousel/jobs/V-202611-CAR-04/00-brief.md"
+    },
+    {
+      "id": "V-202611-ART-03",
+      "week": 3,
+      "date": "2026-11-29",
+      "time": "19:00",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "product": "meet",
+      "stage": "Запись",
+      "audience": "Тёплая московская аудитория",
+      "cta": "Запишись через @vernatunbot",
+      "brief": "Короткий текстовый TG-анонс, не длинная SEO-статья: тема, для кого, дата/время/адрес, полная цена, места, помощь новичку. В неделю без подтверждённого события — FAQ с запросом удобного времени.",
+      "inputs": "Эталонная карточка события обязательна",
+      "evidence": "S1 R1; K4; P4",
+      "code": "ART",
+      "department": "article",
+      "owner": "scriptwriter-article",
+      "channels": [
+        "TG"
+      ],
+      "minutes": 15,
+      "status": "На согласовании",
+      "gate": "Партнёрских сообщений от ассистента нет. Если нет 4 встреч — продолжаем замер, не объявляем победителя.",
+      "metric": "Новые гости из одного внешнего источника и время на их привлечение.",
+      "job": "projects/vernatun/departments/article/jobs/V-202611-ART-03/00-brief.md"
+    },
+    {
+      "id": "V-202612-REL-01",
+      "week": 4,
+      "date": "2026-12-02",
+      "time": "19:00",
+      "title": "Не в Москве? Разговор может быть ближе",
+      "product": "online",
+      "stage": "Знакомство",
+      "audience": "Другие города, базовый армянский",
+      "cta": "Посмотри инструкцию комнаты в TG",
+      "brief": "Короткая запись существующего интерфейса и ведущего; обещание только проверенной сессии.",
+      "inputs": "Проверка звука и ведущего; иначе сюжет о практике между встречами",
+      "evidence": "S1 R5; P1",
+      "code": "REL",
+      "department": "reel",
+      "owner": "reel-lead",
+      "channels": [
+        "IG",
+        "TG",
+        "YouTube Shorts"
+      ],
+      "minutes": 45,
+      "status": "На согласовании",
+      "gate": "Комната заменяет другое экспериментальное действие недели; без ведущего/звука — офлайн-замена.",
+      "metric": "Фактически участвовали; готовы повторить; отдельно от московских гостей.",
+      "job": "projects/vernatun/departments/reel/jobs/V-202612-REL-01/00-brief.md"
+    },
+    {
+      "id": "V-202612-CAR-01",
+      "week": 4,
+      "date": "2026-12-04",
+      "time": "19:00",
+      "title": "Первый созвон: тема, вход, правила разговора",
+      "product": "online",
+      "stage": "Активация",
+      "audience": "Готовые участвовать онлайн",
+      "cta": "Войди в подтверждённую сессию",
+      "brief": "Мини-инструкция из 4 карточек; если слот не готов — evergreen помощь для живой встречи.",
+      "inputs": "Подтверждены время, ссылка и модерация",
+      "evidence": "S1 T5; P1",
+      "code": "CAR",
+      "department": "carousel",
+      "owner": "carousel-lead",
+      "channels": [
+        "TG",
+        "IG"
+      ],
+      "minutes": 20,
+      "status": "На согласовании",
+      "gate": "Комната заменяет другое экспериментальное действие недели; без ведущего/звука — офлайн-замена.",
+      "metric": "Фактически участвовали; готовы повторить; отдельно от московских гостей.",
+      "job": "projects/vernatun/departments/carousel/jobs/V-202612-CAR-01/00-brief.md"
+    },
+    {
+      "id": "V-202612-ART-01",
+      "week": 4,
+      "date": "2026-12-06",
+      "time": "19:00",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "product": "meet",
+      "stage": "Запись",
+      "audience": "Тёплая московская аудитория",
+      "cta": "Запишись через @vernatunbot",
+      "brief": "Короткий текстовый TG-анонс, не длинная SEO-статья: тема, для кого, дата/время/адрес, полная цена, места, помощь новичку. В неделю без подтверждённого события — FAQ с запросом удобного времени.",
+      "inputs": "Эталонная карточка события обязательна",
+      "evidence": "S1 R1; K4; P4",
+      "code": "ART",
+      "department": "article",
+      "owner": "scriptwriter-article",
+      "channels": [
+        "TG"
+      ],
+      "minutes": 15,
+      "status": "На согласовании",
+      "gate": "Комната заменяет другое экспериментальное действие недели; без ведущего/звука — офлайн-замена.",
+      "metric": "Фактически участвовали; готовы повторить; отдельно от московских гостей.",
+      "job": "projects/vernatun/departments/article/jobs/V-202612-ART-01/00-brief.md"
+    },
+    {
+      "id": "V-202612-REL-02",
+      "week": 5,
+      "date": "2026-12-09",
+      "time": "19:00",
+      "title": "Мой армянский живёт в разговорах с близкими",
+      "product": "meet",
+      "stage": "Знакомство",
+      "audience": "База языка и семейная связь",
+      "cta": "Загляни в TG клуба",
+      "brief": "Собственная история владельца; не стыдить за язык, не обещать учебный результат.",
+      "inputs": "Запись владельца, культурные факты проверены",
+      "evidence": "K2; K3; P5",
+      "code": "REL",
+      "department": "reel",
+      "owner": "reel-lead",
+      "channels": [
+        "IG",
+        "TG",
+        "YouTube Shorts"
+      ],
+      "minutes": 45,
+      "status": "На согласовании",
+      "gate": "Нет экономики/5 гостей — не запуск подписки, а сбор входов. Намерение не считать оплатой.",
+      "metric": "Выбор с конкретными доступными датами, причины отказа, расчёт выгоды.",
+      "job": "projects/vernatun/departments/reel/jobs/V-202612-REL-02/00-brief.md"
+    },
+    {
+      "id": "V-202612-CAR-02",
+      "week": 5,
+      "date": "2026-12-11",
+      "time": "19:00",
+      "title": "Что хочется повторять в клубе каждый месяц",
+      "product": "pass",
+      "stage": "Исследование",
+      "audience": "Текущие повторные гости",
+      "cta": "Поделись, что тебе ценно",
+      "brief": "Публично — ценности и добровольный вопрос без цен/обещаний подписки. Внутренне — отдельно карточки пакета после экономики.",
+      "inputs": "Нет фиктивной акции или кнопки оплаты",
+      "evidence": "S1 T3; P2",
+      "code": "CAR",
+      "department": "carousel",
+      "owner": "carousel-lead",
+      "channels": [
+        "TG",
+        "IG"
+      ],
+      "minutes": 20,
+      "status": "На согласовании",
+      "gate": "Нет экономики/5 гостей — не запуск подписки, а сбор входов. Намерение не считать оплатой.",
+      "metric": "Выбор с конкретными доступными датами, причины отказа, расчёт выгоды.",
+      "job": "projects/vernatun/departments/carousel/jobs/V-202612-CAR-02/00-brief.md"
+    },
+    {
+      "id": "V-202612-ART-02",
+      "week": 5,
+      "date": "2026-12-13",
+      "time": "19:00",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "product": "meet",
+      "stage": "Запись",
+      "audience": "Тёплая московская аудитория",
+      "cta": "Запишись через @vernatunbot",
+      "brief": "Короткий текстовый TG-анонс, не длинная SEO-статья: тема, для кого, дата/время/адрес, полная цена, места, помощь новичку. В неделю без подтверждённого события — FAQ с запросом удобного времени.",
+      "inputs": "Эталонная карточка события обязательна",
+      "evidence": "S1 R1; K4; P4",
+      "code": "ART",
+      "department": "article",
+      "owner": "scriptwriter-article",
+      "channels": [
+        "TG"
+      ],
+      "minutes": 15,
+      "status": "На согласовании",
+      "gate": "Нет экономики/5 гостей — не запуск подписки, а сбор входов. Намерение не считать оплатой.",
+      "metric": "Выбор с конкретными доступными датами, причины отказа, расчёт выгоды.",
+      "job": "projects/vernatun/departments/article/jobs/V-202612-ART-02/00-brief.md"
+    },
+    {
+      "id": "V-202612-REL-03",
+      "week": 6,
+      "date": "2026-12-16",
+      "time": "19:00",
+      "title": "История одной семейной традиции",
+      "product": "club",
+      "stage": "Знакомство",
+      "audience": "Москва, культурная идентичность",
+      "cta": "Загляни в TG клуба",
+      "brief": "Рассказ владельца/согласного участника; личный опыт, не утверждение о всех армянах.",
+      "inputs": "Собственные кадры; музыка с правами",
+      "evidence": "K2; K8; P5",
+      "code": "REL",
+      "department": "reel",
+      "owner": "reel-lead",
+      "channels": [
+        "IG",
+        "TG",
+        "YouTube Shorts"
+      ],
+      "minutes": 45,
+      "status": "На согласовании",
+      "gate": "Новый праздник/ресторан/спорт не создаём без ресурса и отдельного решения. Пилот продаж — только после отдельного апрува.",
+      "metric": "Повторы и нагрузка; есть ли обеспеченный календарь/места для пакета.",
+      "job": "projects/vernatun/departments/reel/jobs/V-202612-REL-03/00-brief.md"
+    },
+    {
+      "id": "V-202612-CAR-03",
+      "week": 6,
+      "date": "2026-12-18",
+      "time": "19:00",
+      "title": "Три вопроса о традициях для настоящего разговора",
+      "product": "meet",
+      "stage": "Доверие",
+      "audience": "Тёплая московская аудитория",
+      "cta": "Приходи обсудить на подтверждённой встрече",
+      "brief": "Вопросы с открытым ответом, мягкий армянский с переводом; не менять тему встречи без подтверждения.",
+      "inputs": "Проверка армянского и темы ведущим",
+      "evidence": "K6; K8; P2",
+      "code": "CAR",
+      "department": "carousel",
+      "owner": "carousel-lead",
+      "channels": [
+        "TG",
+        "IG"
+      ],
+      "minutes": 20,
+      "status": "На согласовании",
+      "gate": "Новый праздник/ресторан/спорт не создаём без ресурса и отдельного решения. Пилот продаж — только после отдельного апрува.",
+      "metric": "Повторы и нагрузка; есть ли обеспеченный календарь/места для пакета.",
+      "job": "projects/vernatun/departments/carousel/jobs/V-202612-CAR-03/00-brief.md"
+    },
+    {
+      "id": "V-202612-ART-03",
+      "week": 6,
+      "date": "2026-12-20",
+      "time": "19:00",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "product": "meet",
+      "stage": "Запись",
+      "audience": "Тёплая московская аудитория",
+      "cta": "Запишись через @vernatunbot",
+      "brief": "Короткий текстовый TG-анонс, не длинная SEO-статья: тема, для кого, дата/время/адрес, полная цена, места, помощь новичку. В неделю без подтверждённого события — FAQ с запросом удобного времени.",
+      "inputs": "Эталонная карточка события обязательна",
+      "evidence": "S1 R1; K4; P4",
+      "code": "ART",
+      "department": "article",
+      "owner": "scriptwriter-article",
+      "channels": [
+        "TG"
+      ],
+      "minutes": 15,
+      "status": "На согласовании",
+      "gate": "Новый праздник/ресторан/спорт не создаём без ресурса и отдельного решения. Пилот продаж — только после отдельного апрува.",
+      "metric": "Повторы и нагрузка; есть ли обеспеченный календарь/места для пакета.",
+      "job": "projects/vernatun/departments/article/jobs/V-202612-ART-03/00-brief.md"
+    },
+    {
+      "id": "V-202612-REL-04",
+      "week": 7,
+      "date": "2026-12-23",
+      "time": "19:00",
+      "title": "Люди, с которыми этот год стал теплее",
+      "product": "club",
+      "stage": "Возвращение",
+      "audience": "Нынешние участники и их друзья",
+      "cta": "Загляни в TG клуба",
+      "brief": "Монтаж собственных разрешённых моментов; не придумывать посещаемость, отзывы или успех.",
+      "inputs": "Согласия на каждого узнаваемого участника",
+      "evidence": "K9; P1",
+      "code": "REL",
+      "department": "reel",
+      "owner": "reel-lead",
+      "channels": [
+        "IG",
+        "TG",
+        "YouTube Shorts"
+      ],
+      "minutes": 45,
+      "status": "На согласовании",
+      "gate": "Нет даты — голосование за январь, а не продажа билетов. Не обещаем гостя/партнёра без согласия.",
+      "metric": "Повторные гости, зрелые когорты 30 дней, январские намерения отдельно от регистраций.",
+      "job": "projects/vernatun/departments/reel/jobs/V-202612-REL-04/00-brief.md"
+    },
+    {
+      "id": "V-202612-CAR-04",
+      "week": 7,
+      "date": "2026-12-25",
+      "time": "19:00",
+      "title": "Что хочется обсудить вместе в январе",
+      "product": "club",
+      "stage": "Возвращение",
+      "audience": "Гости и потенциальные новички",
+      "cta": "Выбери тему января",
+      "brief": "Три направления обсуждения, голосование вместо неподтверждённой афиши.",
+      "inputs": "Вопросы подготовлены; дат без подтверждения нет",
+      "evidence": "K6; P2",
+      "code": "CAR",
+      "department": "carousel",
+      "owner": "carousel-lead",
+      "channels": [
+        "TG",
+        "IG"
+      ],
+      "minutes": 20,
+      "status": "На согласовании",
+      "gate": "Нет даты — голосование за январь, а не продажа билетов. Не обещаем гостя/партнёра без согласия.",
+      "metric": "Повторные гости, зрелые когорты 30 дней, январские намерения отдельно от регистраций.",
+      "job": "projects/vernatun/departments/carousel/jobs/V-202612-CAR-04/00-brief.md"
+    },
+    {
+      "id": "V-202612-ART-04",
+      "week": 7,
+      "date": "2026-12-27",
+      "time": "19:00",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "product": "meet",
+      "stage": "Запись",
+      "audience": "Тёплая московская аудитория",
+      "cta": "Запишись через @vernatunbot",
+      "brief": "Короткий текстовый TG-анонс, не длинная SEO-статья: тема, для кого, дата/время/адрес, полная цена, места, помощь новичку. В неделю без подтверждённого события — FAQ с запросом удобного времени.",
+      "inputs": "Эталонная карточка события обязательна",
+      "evidence": "S1 R1; K4; P4",
+      "code": "ART",
+      "department": "article",
+      "owner": "scriptwriter-article",
+      "channels": [
+        "TG"
+      ],
+      "minutes": 15,
+      "status": "На согласовании",
+      "gate": "Нет даты — голосование за январь, а не продажа билетов. Не обещаем гостя/партнёра без согласия.",
+      "metric": "Повторные гости, зрелые когорты 30 дней, январские намерения отдельно от регистраций.",
+      "job": "projects/vernatun/departments/article/jobs/V-202612-ART-04/00-brief.md"
+    },
+    {
+      "id": "V-202612-CAR-05",
+      "week": 8,
+      "date": "2026-12-29",
+      "time": "19:00",
+      "title": "Наш год: реальные моменты и спасибо людям",
+      "product": "club",
+      "stage": "Возвращение",
+      "audience": "Текущие участники",
+      "cta": "Поделись своим моментом клуба",
+      "brief": "Итог по проверенным фактам и согласованным историям, без вымышленных чисел.",
+      "inputs": "Собственные материалы, фактические цифры при наличии",
+      "evidence": "K9; P1",
+      "code": "CAR",
+      "department": "carousel",
+      "owner": "carousel-lead",
+      "channels": [
+        "TG",
+        "IG"
+      ],
+      "minutes": 25,
+      "status": "На согласовании",
+      "gate": "Короткая неделя: переиспользование фактуры, без нового видео и без запуска нового продукта.",
+      "metric": "Что даёт гостей/повторы в доступное время; обязательства не превышают места.",
+      "job": "projects/vernatun/departments/carousel/jobs/V-202612-CAR-05/00-brief.md"
+    },
+    {
+      "id": "V-202612-CAR-06",
+      "week": 8,
+      "date": "2026-12-30",
+      "time": "19:00",
+      "title": "Куда идём в январе: разговоры, люди, практика",
+      "product": "meet",
+      "stage": "Доверие",
+      "audience": "Тёплая аудитория клуба",
+      "cta": "Посмотри подтверждённую афишу либо выбери удобный день",
+      "brief": "Условная развилка: утверждённые даты → афиша; иначе запрос предпочтений без продажи и обещаний подписки.",
+      "inputs": "Решение владельца по январю",
+      "evidence": "S1; P2; P3",
+      "code": "CAR",
+      "department": "carousel",
+      "owner": "carousel-lead",
+      "channels": [
+        "TG",
+        "IG"
+      ],
+      "minutes": 20,
+      "status": "На согласовании",
+      "gate": "Короткая неделя: переиспользование фактуры, без нового видео и без запуска нового продукта.",
+      "metric": "Что даёт гостей/повторы в доступное время; обязательства не превышают места.",
+      "job": "projects/vernatun/departments/carousel/jobs/V-202612-CAR-06/00-brief.md"
+    },
+    {
+      "id": "V-202612-ART-05",
+      "week": 8,
+      "date": "2026-12-31",
+      "time": "19:00",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "product": "meet",
+      "stage": "Запись",
+      "audience": "Тёплая московская аудитория",
+      "cta": "Запишись через @vernatunbot",
+      "brief": "Короткий текстовый TG-анонс, не длинная SEO-статья: тема, для кого, дата/время/адрес, полная цена, места, помощь новичку. В неделю без подтверждённого события — FAQ с запросом удобного времени.",
+      "inputs": "Эталонная карточка события обязательна",
+      "evidence": "S1 R1; K4; P4",
+      "code": "ART",
+      "department": "article",
+      "owner": "scriptwriter-article",
+      "channels": [
+        "TG"
+      ],
+      "minutes": 15,
+      "status": "На согласовании",
+      "gate": "Короткая неделя: переиспользование фактуры, без нового видео и без запуска нового продукта.",
+      "metric": "Что даёт гостей/повторы в доступное время; обязательства не превышают места.",
+      "job": "projects/vernatun/departments/article/jobs/V-202612-ART-05/00-brief.md"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "name": "Скаут: основной отчёт v6",
+      "url": "https://github.com/Nighttech1/Content-Factory/blob/codex/scout-handoff-20261109/projects/vernatun/departments/scout/reports/2026-11/S-202611-GEN-02.md",
+      "use": "Основа решений; покрытие частичное. Не подтверждает московскую платёжность, вирусность или продажи подписки."
+    },
+    {
+      "id": "S2",
+      "name": "Скаут: рынок и подписки",
+      "url": "https://github.com/Nighttech1/Content-Factory/blob/codex/scout-handoff-20261109/projects/vernatun/departments/scout/reports/2026-11/S-202611-GEN-02-market.md",
+      "use": "15 проектов, 6 разборов, 5 подписочных моделей; цены аналогов не копируем."
+    },
+    {
+      "id": "S3",
+      "name": "Скаут: доказательства и механики",
+      "url": "https://github.com/Nighttech1/Content-Factory/blob/codex/scout-handoff-20261109/projects/vernatun/departments/scout/reports/2026-11/S-202611-GEN-02-evidence.md",
+      "use": "83 TG-поста на 06.11, 30 текстовых разборов. Механики K1–K10 — гипотезы переноса, не доказанные конверсии."
+    },
+    {
+      "id": "P1",
+      "name": "Meetup: первый визит",
+      "url": "https://www.meetup.com/blog/what-to-do-at-your-first-event/",
+      "use": "Встречать новичка, знакомить с людьми, собирать обратную связь и возвращаться с итогами. Берём приём, без обещания процента роста."
+    },
+    {
+      "id": "P2",
+      "name": "Meetup: план коммуникации",
+      "url": "https://www.meetup.com/blog/how-to-create-a-communication-plan-for-your-meetup-group/",
+      "use": "Ясное описание, дружелюбное приветствие и общение между встречами. Адаптация к нашему TG, без новой платформы."
+    },
+    {
+      "id": "P3",
+      "name": "Mailchimp: цели события",
+      "url": "https://mailchimp.com/resources/event-marketing/",
+      "use": "Сначала цель и аудитория, затем каналы и измерение. Не переносим отраслевые нормы."
+    },
+    {
+      "id": "P4",
+      "name": "Mailchimp: сообщения до и после события",
+      "url": "https://mailchimp.com/resources/event-email-marketing/",
+      "use": "Анонс, полезное напоминание, итог и один главный CTA. Сокращаем большой email-пайплайн до нашего ресурса, не запускаем рассылки."
+    },
+    {
+      "id": "P5",
+      "name": "YouTube: поиск и рекомендации",
+      "url": "https://support.google.com/youtube/answer/11914225?co=YOUTUBE._YTVideoType%3Dshorts&hl=en",
+      "use": "Реакция аудитории и удержание важнее выдуманного универсального графика. Часы ниже — тестовые слоты, не «лучшее время алгоритма»."
+    },
+    {
+      "id": "P6",
+      "name": "VivaLingua: первичный пример пакета",
+      "url": "https://vivalinguaclub.ru/prices/",
+      "use": "Управляемое число посещений, период и правила переноса. Пример упаковки; не цена и не доказанный спрос Вернатуна."
+    },
+    {
+      "id": "P7",
+      "name": "ArmLingo: структура регулярной практики",
+      "url": "https://armlingo.com/",
+      "use": "Повторяемая программа и небольшая группа; образовательный аналог отличается от клуба."
+    },
+    {
+      "id": "P8",
+      "name": "Вернатун: текущая публичная главная",
+      "url": "https://vernatunspeakclub.com/",
+      "use": "Собственная фактура: мини-группы, помощь, бот. Расписание и реквизиты сверяются владельцем отдельно."
+    }
+  ],
+  "costLabels": [
+    "Съёмка / фактура",
+    "Видео / основной материал",
+    "Карусель / тёплый пост",
+    "Анонс / повтор",
+    "Редактура / апрув",
+    "Учёт / ответы",
+    "Один тест / передача",
+    "Резерв"
+  ]
+}</script>
+<script>
+'use strict';
+const D=JSON.parse(document.getElementById('planData').textContent),$=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let state={};try{state=JSON.parse(localStorage.getItem('vernatun-director-v1')||'{}')}catch{};let current=null;
+const save=()=>{try{localStorage.setItem('vernatun-director-v1',JSON.stringify(state))}catch{}};
+const pname=id=>D.products.find(p=>p.id===id).name,format=i=>({CAR:'Карусель',REL:'Короткое видео',ART:'Короткий TG-текст'}[i.code]);
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',String(x===t)));document.querySelectorAll('main>section').forEach(s=>s.hidden=s.id!==t.getAttribute('aria-controls'))});
+$('#products').innerHTML=D.products.map(p=>`<article class="product ${p.id}"><div class="tag">${esc(p.role)}</div><h3>${esc(p.name)}</h3><p>${esc(p.status)}</p><p><b>Следующий шаг:</b> ${esc(p.cta)}</p><p class="muted">${esc(p.metric)}</p></article>`).join('');
+D.products.forEach(p=>$('#productFilter').add(new Option(p.name,p.id)));D.weeks.forEach(w=>$('#weekFilter').add(new Option(w.n+' · '+w.period,w.n)));
+function renderCards(){const p=$('#productFilter').value,w=$('#weekFilter').value,c=$('#channelFilter').value,q=$('#search').value.toLowerCase();const list=D.items.filter(i=>(!p||i.product===p)&&(!w||String(i.week)===w)&&(!c||i.channels.includes(c))&&(!q||JSON.stringify(i).toLowerCase().includes(q)));$('#count').textContent=`${list.length} из ${D.items.length} материалов · все даты условны до согласования`;$('#cards').innerHTML=list.map(i=>`<button class="content-card" data-id="${i.id}"><span class="tag">${esc(pname(i.product))} · неделя ${i.week}</span><h3>${esc(i.title)}</h3><span class="muted">${i.date.slice(8)}.${i.date.slice(5,7)} · ${i.time} МСК · ${format(i)}</span><p>${esc(i.audience)}</p><span><b>CTA:</b> ${esc(i.cta)}</span><span class="card-bottom">${esc(i.id)}<br>${esc(state[i.id]||i.status)} → открыть бриф</span></button>`).join('');$('#cards').querySelectorAll('button').forEach(b=>b.onclick=()=>openItem(b.dataset.id))}
+['#productFilter','#weekFilter','#channelFilter','#search'].forEach(s=>$(s).addEventListener('input',renderCards));renderCards();
+function openItem(id){current=D.items.find(i=>i.id===id);const i=current;$('#detailId').textContent=i.id;$('#detailTitle').textContent=i.title;let fields=[['Продукт / этап',pname(i.product)+' / '+i.stage],['Слот',i.date+' '+i.time+' Europe/Moscow — не дата события'],['Аудитория',i.audience],['Формат / каналы',format(i)+' / '+i.channels.join(', ')],['Тема / задача',i.brief],['Главный CTA',i.cta],['Входы / права',i.inputs],['Ответственный',i.owner+'; запускает вручную владелец'],['Приёмка','Один CTA, проверенные факты/армянский/права → редактор → явный апрув'],['Условие',i.gate],['Метрика',i.metric],['Ресурс',i.minutes+' мин ориентир; внутри недельного лимита, не сверху'],['Основание',i.evidence],['Путь брифа',i.job]];$('#detailBody').innerHTML=fields.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('');$('#localStatus').value=state[id]||i.status;$('#copyState').textContent='';$('#detail').showModal()}
+$('#closeDialog').onclick=()=>$('#detail').close();$('#localStatus').onchange=()=>{state[current.id]=$('#localStatus').value;save();renderCards()};$('#copyHandoff').onclick=async()=>{let s=`Возьми в работу ${current.id} после согласования стратегии. Репозиторий Nighttech1/Content-Factory, ветка codex/director-chatgpt-transfer. Бриф v1: ${current.job}. Прочитай свои правила, память и бриф; подтверди входы. Без публикации, деплоя и платных API. Если входов нет, перечисли блокеры.`;try{await navigator.clipboard.writeText(s);$('#copyState').textContent='Текст скопирован.'}catch{$('#copyState').textContent=s}};
+$('#slotGrid').innerHTML=D.weeks.map(w=>`<div class="slot-week"><strong>Н${w.n} · ${esc(w.period)}</strong>${D.items.filter(i=>i.week===w.n).map(i=>`<button class="mini" data-id="${i.id}" data-p="${i.product}">${i.date.slice(8)}.${i.date.slice(5,7)} · ${format(i)}<br>${esc(i.title)}</button>`).join('')}</div>`).join('');$('#slotGrid').querySelectorAll('button').forEach(b=>b.onclick=()=>openItem(b.dataset.id));
+$('#roadmap').innerHTML=D.weeks.map(w=>`<details class="week" ${w.n===1?'open':''}><summary>Н${w.n} · ${esc(w.goal)}<small>${esc(w.period)} · ${esc(w.test)}</small></summary><div class="grid"><div><h3>Директор</h3><p>${esc(w.director)}</p></div><div><h3>Ты</h3><p>${esc(w.owner)}</p></div></div><p class="gate"><b>Гейт:</b> ${esc(w.gate)}</p><p><b>Измерение:</b> ${esc(w.metric)}</p></details>`).join('');
+const colors=['#C95B36','#2A5A84','#E6B25A','#1E2930','#8e6a58','#8296a0','#b28e4c','#E8E2D8'];$('#timeLegend').innerHTML=D.costLabels.map((l,n)=>`<span style="--c:${colors[n]}">${esc(l)}</span>`).join('');$('#timeRows').innerHTML=D.weeks.map(w=>`<tr><td>Н${w.n} · ${esc(w.period)}</td><td><div class="time-stack" role="img" aria-label="${esc(D.costLabels.map((l,n)=>l+': '+w.cost[n]+' мин').join('; '))}">${w.cost.map((m,n)=>`<span style="width:${m/180*100}%;background:${colors[n]}" title="${esc(D.costLabels[n])}: ${m} мин"></span>`).join('')}</div><details><summary>Числа по категориям</summary>${D.costLabels.map((l,n)=>esc(l)+': '+w.cost[n]).join(' · ')}</details></td><td>${w.cost.reduce((a,b)=>a+b,0)} / 180</td></tr>`).join('');
+function remaining(){let n=+$('#eventMinutes').value,left=Math.max(0,180-n);$('#remaining').textContent=`Проведение: ${n} мин. На продвижение остаётся ${left} мин. `+(n===0?'Отдельный бюджет проведения пока не подтверждён.':left<150?'Базовый выпуск нужно сократить: один повторно используемый анонс либо дополнительный согласованный ресурс.':'Нужен сокращённый план с вычетом этих минут.')}$('#eventMinutes').oninput=remaining;remaining();
+function calc(){let ids=['visits','packagePrice','included','fee','discountVisit'];let v=ids.map(id=>Number($('#'+id).value));if(v.some(n=>!Number.isFinite(n)||n<0)||v[0]>30||v[2]<1||v[2]>30||!Number.isInteger(v[0])||!Number.isInteger(v[2])||ids.some(id=>$('#'+id).value==='')){$('#calcResult').textContent='Введи неотрицательные значения; число посещений целое от 0 до 30, включено от 1 до 30.';return}let[n,p,k,f,q]=v,base=400*n,pack=p+Math.max(n-k,0)*400,member=f+n*q;let m=x=>new Intl.NumberFormat('ru-RU').format(x)+' ₽';let benefit=x=>x>0?'экономия '+m(x):x===0?'равенство с разовыми':'дороже на '+m(-x);$('#calcResult').innerHTML=`<span>Разовые билеты</span><strong>${m(base)}</strong><p>Пакет: ${m(pack)} · ${benefit(base-pack)}<br>Членство: ${m(member)} · ${benefit(base-member)}</p><small>Дополнительные визиты пакета по 400 ₽; остаток не переносится только в этом расчёте. При 0 визитов пакет/взнос всё равно оплачены. Цены условные.</small>`}['visits','packagePrice','included','fee','discountVisit'].forEach(id=>$('#'+id).oninput=calc);calc();
+const checks=['Согласовать стратегию и новый объём вместо старой нормы 70 единиц','Подтвердить ближайшую карточку: дата, время, адрес, полная цена, места, запись','Уточнить, входят ли часы проведения встреч в 3 часа','Дать собственную фактуру и согласия; передать первый CAR-ID отделу вручную','После редактора одобрить материал и вручную опубликовать','Начать учёт гостей, источников, повторов, затрат и минут'];$('#checklist').innerHTML=checks.map((s,n)=>`<label class="check"><input type="checkbox" data-check="${n}" ${state['check'+n]?'checked':''}><span>${esc(s)}</span></label>`).join('');$('#checklist').querySelectorAll('input').forEach(e=>e.onchange=()=>{state['check'+e.dataset.check]=e.checked;save()});$('#sourceList').innerHTML=D.sources.map(s=>`<li><span class="source-id">${s.id}</span> · <a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a><p class="source-detail">${esc(s.use)}</p></li>`).join('');
+function download(name,text,type){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}$('#exportJSON').onclick=()=>download('vernatun_local_statuses.json',JSON.stringify({version:'1.0',statuses:state},null,2),'application/json');$('#exportCSV').onclick=()=>{let rows=[['ID','Неделя','Дата','Время Москва','Тема','Продукт','Каналы','CTA','Ответственный','Статус'],...D.items.map(i=>[i.id,i.week,i.date,i.time,i.title,pname(i.product),i.channels.join(', '),i.cta,i.owner,state[i.id]||i.status])];download('vernatun_calendar.csv','\uFEFF'+rows.map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\r\n'),'text/csv;charset=utf-8')};$('#importJSON').onchange=async e=>{try{let file=e.target.files[0];if(!file)return;if(file.size>200000)throw Error('size');let v=JSON.parse(await file.text());if(v.version!=='1.0'||!v.statuses||typeof v.statuses!=='object'||Array.isArray(v.statuses))throw Error('format');let allowed=Array.from($('#localStatus').options,o=>o.value),clean={};for(let i of D.items){if(v.statuses[i.id]!==undefined){if(!allowed.includes(v.statuses[i.id]))throw Error('status');clean[i.id]=v.statuses[i.id]}}for(let n=0;n<checks.length;n++){if(typeof v.statuses['check'+n]==='boolean')clean['check'+n]=v.statuses['check'+n]}state=clean;save();renderCards();$('#checklist').querySelectorAll('input').forEach(x=>x.checked=!!state['check'+x.dataset.check]);$('#importMessage').textContent='Локальные отметки импортированы. Git и другие чаты не изменены.'}catch{$('#importMessage').textContent='Не удалось импортировать: нужен экспорт этой карты версии 1.0 с допустимыми статусами.'}};
+</script></body></html>
