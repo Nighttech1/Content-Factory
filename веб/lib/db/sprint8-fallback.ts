@@ -5,6 +5,8 @@
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { assertPreviewWritable, isContentFactoryPreview } from "@/lib/preview";
+import { readPreviewFixture } from "@/lib/preview-fixture";
 
 const STORE_DIR = path.join(process.cwd(), "data", "local");
 const STORE_FILE = path.join(STORE_DIR, "sprint8-sot.json");
@@ -122,6 +124,7 @@ function parseSprint8JsonSoft(raw: string): Partial<Sprint8FallbackStore> {
 }
 
 export async function readSprint8Fallback(): Promise<Sprint8FallbackStore> {
+  if (isContentFactoryPreview()) return readPreviewFixture();
   try {
     const raw = await fs.readFile(STORE_FILE, "utf8");
     const parsed = parseSprint8JsonSoft(raw);
@@ -142,6 +145,7 @@ export async function readSprint8Fallback(): Promise<Sprint8FallbackStore> {
 export async function writeSprint8Fallback(
   store: Sprint8FallbackStore,
 ): Promise<void> {
+  assertPreviewWritable();
   await fs.mkdir(STORE_DIR, { recursive: true });
   const tmp = `${STORE_FILE}.${process.pid}.tmp`;
   await fs.writeFile(tmp, JSON.stringify(store, null, 2), "utf8");

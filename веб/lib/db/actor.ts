@@ -5,6 +5,7 @@
  */
 
 import { getPrisma } from "@/lib/db/prisma";
+import { isContentFactoryPreview, PREVIEW_ACTOR_ID } from "@/lib/preview";
 import {
   ensureFallbackUser,
   type FallbackUserRecord,
@@ -103,6 +104,7 @@ async function tryPrismaUpsert(userId: string): Promise<boolean> {
  * Resolve actor and ensure User row exists (Prisma or JSON fallback).
  */
 export async function resolveActor(req: Request): Promise<ActorContext> {
+  if (isContentFactoryPreview()) return { userId: PREVIEW_ACTOR_ID, source: "env" };
   const actor = peekActorId(req);
   const ok = await tryPrismaUpsert(actor.userId);
   if (!ok) {

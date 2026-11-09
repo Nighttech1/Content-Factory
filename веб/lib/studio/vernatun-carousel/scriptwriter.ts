@@ -84,7 +84,7 @@ function buildFallbackScript(
     { hy: "վստահություն", ru: "уверенность", body: "Уверенность растёт от живых попыток, не от зубрёжки." },
     { hy: "ժպիտ", ru: "улыбка", body: "Улыбка снимает половину языкового страха." },
   ];
-  const slides: VernatunSlideScript[] = [
+  const initialSlides: VernatunSlideScript[] = [
     {
       index: 1,
       role: "cover",
@@ -151,7 +151,8 @@ function buildFallbackScript(
         forbid_ai_if_possible: true,
       },
     },
-  ].slice(0, slideCount);
+  ];
+  const slides = initialSlides.slice(0, slideCount);
 
   while (slides.length < slideCount) {
     const i = slides.length;

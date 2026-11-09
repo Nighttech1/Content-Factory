@@ -1,0 +1,45 @@
+{
+  "scope": "independent source review + offline runtime fixtures; root build/browser/Vercel pending",
+  "files": [
+    {
+      "path": "lib/preview.ts",
+      "sha256": "2066fd46af37f2fc9e53018c5ef5e6094ce7d31ba595d048b673e99d3d6bff10"
+    },
+    {
+      "path": "lib/preview-fixture.ts",
+      "sha256": "cd492780b2e69f7f1f25eafe97053595ba34cf305a96ae58205e34c40ca41572"
+    },
+    {
+      "path": "middleware.ts",
+      "sha256": "55e1f8eb905132dcb25012383066fcbb5812ad5328a15d67e4b907ef9ec8b189"
+    },
+    {
+      "path": "lib/db/actor.ts",
+      "sha256": "1c887a7495eb474898648c7be1c089da2caa9841da323af69a86425183f69137"
+    },
+    {
+      "path": "lib/db/sprint8-db.ts",
+      "sha256": "fd3db2d6fba84fa639aff658b7625ea631cd7f20e70a5a188211a7f73b49e16c"
+    },
+    {
+      "path": "lib/db/sprint8-fallback.ts",
+      "sha256": "5d0089aab3593a3379d394970b3792acdca7465feb633c75bf2e32460d0a7f38"
+    },
+    {
+      "path": "lib/analytics/resolve-insights.ts",
+      "sha256": "4effee53cc1640a8a7cb3be88cdf171911040090d6017000645aa298f4db965e"
+    },
+    {
+      "path": "lib/studio/sprint8-migrate.ts",
+      "sha256": "d6a0917b23ea5fe3294c2a8771992fe7b23e204b105863d36fa2fa281fa0d7a8"
+    },
+    {
+      "path": "components/shell/AppShell.tsx",
+      "sha256": "6a1827dd886b2ff1232aa925b00b48e3eb270ac00b508d38086d667d9dcec6a7"
+    },
+    {
+      "path": "components/shell/SidebarNavigation.tsx",
+      "sha256": "05bb335709f39660f8cf46105ed4c547e5f28c566da4635cd35ccdf4bb8ecff4"
+    }
+  ]
+}

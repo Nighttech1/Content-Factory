@@ -4,6 +4,7 @@
  */
 
 import { apiMigrateLocal } from "@/lib/studio/sprint8-client";
+import { isContentFactoryPreview } from "@/lib/preview";
 
 export const SPRINT8_MIGRATED_KEY = "cf.sprint8.migrated.v1";
 export const SELECTED_DRAFT_ID_KEY = "cf.carousel.selectedDraftId";
@@ -127,6 +128,8 @@ export function readSprint8MigratedFlag(): Sprint8MigratedFlag | null {
  * On success: set flag + clear legacy SoT keys (selectedDraftId kept separately).
  */
 export function ensureSprint8Migrated(): Promise<boolean> {
+  // No server migration or localStorage cleanup in a read-only UI preview.
+  if (isContentFactoryPreview()) return Promise.resolve(false);
   if (typeof window === "undefined") return Promise.resolve(true);
   if (isSprint8Migrated()) return Promise.resolve(true);
   if (migratePromise) return migratePromise;

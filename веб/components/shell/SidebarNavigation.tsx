@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, useReducedMotion } from "framer-motion";
-import { Briefcase, Calendar, Rocket, Settings } from "lucide-react";
+import { Briefcase, Calendar, Rocket, Settings, X } from "lucide-react";
 import {
   MenuVertical,
   type MenuVerticalItem,
@@ -55,12 +55,16 @@ type SidebarNavigationProps = {
   widthPx?: number;
   onWidthDrag?: (clientX: number) => void;
   onWidthCommit?: () => void;
+  mobileOpen?: boolean;
+  onMobileClose?: () => void;
 };
 
 export function SidebarNavigation({
   widthPx = DEFAULT_SIDEBAR_WIDTH,
   onWidthDrag,
   onWidthCommit,
+  mobileOpen = false,
+  onMobileClose,
 }: SidebarNavigationProps) {
   const pathname = usePathname();
   const router = useRouter();
@@ -129,14 +133,33 @@ export function SidebarNavigation({
 
   return (
     <motion.aside
-      className="fixed left-0 top-0 z-40 flex h-screen flex-col border-r border-[var(--border-glass)] bg-[var(--bg-elevated)]"
+      id="cf-primary-navigation"
+      className={cn(
+        "fixed left-0 top-0 z-50 h-dvh max-w-[calc(100vw-3rem)] flex-col border-r border-[var(--border-glass)] bg-[var(--bg-elevated)] pb-[env(safe-area-inset-bottom)] md:z-40 md:flex md:max-w-none",
+        mobileOpen ? "flex" : "hidden",
+      )}
       style={{ width: widthPx }}
       aria-label="Главная навигация"
+      role={mobileOpen ? "dialog" : undefined}
+      aria-modal={mobileOpen ? true : undefined}
+      onClickCapture={(event) => {
+        if ((event.target as HTMLElement).closest("a[href]")) onMobileClose?.();
+      }}
       /* C-133: initial={false} — avoid SSR/CSR mismatch from useReducedMotion */
       initial={false}
       animate={{ opacity: 1, x: 0 }}
       transition={reduceMotion ? { duration: 0 } : SPRING}
     >
+      <div className="flex justify-end px-3 pt-[max(0.5rem,env(safe-area-inset-top))] md:hidden">
+        <button
+          type="button"
+          onClick={onMobileClose}
+          aria-label="Закрыть меню"
+          className="inline-flex size-11 items-center justify-center rounded-xl text-[var(--text-muted)] transition-colors hover:bg-[var(--bg-hover)] hover:text-[var(--text-primary)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--accent-blue)]"
+        >
+          <X className="size-5" aria-hidden="true" />
+        </button>
+      </div>
       {/* C-133/C-130: brand markup identical SSR+CSR; testid always present */}
       <div
         data-testid="nav-brand"
@@ -162,7 +185,7 @@ export function SidebarNavigation({
       </div>
 
       <div className="flex flex-1 flex-col gap-1 overflow-y-auto px-3 py-4">
-        <nav className="flex flex-col">
+        <nav className="flex flex-col [&_a]:min-h-11 md:[&_a]:min-h-0">
           <MenuVertical items={menuItems} />
         </nav>
       </div>
@@ -180,7 +203,7 @@ export function SidebarNavigation({
                 type="button"
                 onClick={() => setRole(r)}
                 className={cn(
-                  "flex-1 rounded px-2 py-1.5 font-[family-name:var(--font-mono-jb)] text-[10px] uppercase tracking-wide transition-colors",
+                  "min-h-11 flex-1 rounded px-2 py-1.5 font-[family-name:var(--font-mono-jb)] text-[10px] uppercase tracking-wide transition-colors md:min-h-0",
                   role === r
                     ? "bg-[color-mix(in_srgb,var(--accent-blue)_28%,transparent)] text-[var(--accent-blue-bright)]"
                     : "text-[var(--text-muted)] hover:bg-[var(--bg-hover)] hover:text-[var(--text-primary)]",
@@ -193,6 +216,7 @@ export function SidebarNavigation({
         </div>
       </div>
 
+      <div className="hidden md:block">
       <SidebarResizeHandle
         dragging={dragging}
         onPointerDown={(event) => {
@@ -212,6 +236,7 @@ export function SidebarNavigation({
         onPointerUp={finishDrag}
         onPointerCancel={finishDrag}
       />
+      </div>
     </motion.aside>
   );
 }

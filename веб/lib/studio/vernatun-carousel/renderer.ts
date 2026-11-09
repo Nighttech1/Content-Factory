@@ -83,7 +83,7 @@ export async function renderModeBCopies(
     );
     // Legacy emergency: HTML chrome bar only if MODE_B_HTML_CHROME=1.
     const useHtmlChrome = process.env.MODE_B_HTML_CHROME === "1";
-    let afterLogo = outPath;
+    const afterLogo = outPath;
     if (useHtmlChrome && brand && logoDataUrl) {
       await applyModeBBrandChrome({
         slidePngOrJpegPath: img.localPath,

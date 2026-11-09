@@ -531,3 +531,5 @@
 - C-seed-designs-landscapes: presets 01/02/03 + active 01; Landscapes Ануш #1 — `memory/tickets/C-seed-designs-landscapes/guards.md`
 - C-dual-char-smoke: A `in_image` topic 17 ×6 · B `overlay_cutout` topic 13 ×6 · conductor — `memory/tickets/C-dual-char-smoke/guards.md` + wave `memory/waves/2026-10-18-layout-copy-dual-char/guards.md`
 - KEEP S57 layered HTML / Variant A / no remake / shell_freeze
+
+- C-VP1 Vercel UI preview: immutable test fixture/fixed actor, forced fallback, no DB/model/FS writes, safe GET allowlist and mutation gate; mobile source reviewed; build/live390px/Vercel acceptance pending — `memory/tickets/C-VP1-vercel-ui-preview/guards.md`.

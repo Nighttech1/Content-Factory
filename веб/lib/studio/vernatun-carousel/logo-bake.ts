@@ -396,7 +396,7 @@ export async function bakeExactEmblemOntoSlide(
   const marginPx = input.marginPx ?? 28;
   const wordmarkHex = normalizeWordmarkHex(input.wordmarkHex);
 
-  let emblemBuf = await readFile(input.emblemPath);
+  let emblemBuf: Buffer = await readFile(input.emblemPath);
   const emblemSha256 = createHash("sha256").update(emblemBuf).digest("hex");
   emblemBuf = await tintLockupWordmark(emblemBuf, wordmarkHex);
 

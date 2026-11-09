@@ -4,6 +4,8 @@
  */
 
 import { runAnalystInsights, type RunAnalystInsightsOptions } from "@/lib/analyst";
+import { isContentFactoryPreview } from "@/lib/preview";
+import { ANALYTICS_SNAPSHOT } from "@/lib/analytics-mock";
 
 import {
   isCacheFresh,
@@ -27,6 +29,9 @@ export type ResolveInsightsOptions = {
 export async function resolveAnalystInsights(
   options: ResolveInsightsOptions = {},
 ): Promise<InsightsApiResponse> {
+  if (isContentFactoryPreview()) {
+    return { cycleLabel: "Тестовый просмотр", insights: ANALYTICS_SNAPSHOT.insights, source: "mock", generatedAt: new Date().toISOString() };
+  }
   if (!options.refresh) {
     const cached = await readInsightsCache();
     if (cached && isCacheFresh(cached) && cached.insights.length >= 3) {

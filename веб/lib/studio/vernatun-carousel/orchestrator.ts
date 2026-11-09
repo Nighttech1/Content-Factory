@@ -423,7 +423,6 @@ export async function runVernatunCarouselJob(input: {
         ];
         await writeAdVerdictLog({
           jobDir,
-          verdict: "REMARKS",
           canFinalize: false,
           findings: approval.defects.map((d) => ({
             slide_id: `slide_${d.slide_index || 0}`,

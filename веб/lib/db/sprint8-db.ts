@@ -6,6 +6,7 @@
 import type { PrismaClient } from "@prisma/client";
 
 import { getPrisma } from "@/lib/db/prisma";
+import { isContentFactoryPreview } from "@/lib/preview";
 
 export type Sprint8StoreMode = "prisma" | "fallback";
 
@@ -40,6 +41,7 @@ export async function resolveSprint8Db(): Promise<{
   mode: Sprint8StoreMode;
   prisma: PrismaClient | null;
 }> {
+  if (isContentFactoryPreview()) return { mode: "fallback", prisma: null };
   if (cachedMode === "prisma" && cachedPrisma) {
     return { mode: "prisma", prisma: cachedPrisma };
   }
