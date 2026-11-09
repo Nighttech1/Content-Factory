@@ -128,7 +128,8 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
-          ref: ${{ needs.gate.outputs.source }}
+          # Operations adapter comes from this release commit; app remains the verified QA artifact.
+          ref: ${{ github.sha }}
           persist-credentials: false
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
         with:
@@ -191,16 +192,21 @@ jobs:
           set -euo pipefail
           RELEASE_BYTES="$1"
           BASE=/opt/content-factory
-          if ! OLD_BYTES="$(du -sb --exclude="$BASE/releases" --exclude="$BASE/backups" --exclude="$BASE/shared" "$BASE" 2>/dev/null | awk '{print $1}')"; then
+          OLD_RELEASE="$(readlink -f "$BASE/current")"
+          [[ "$OLD_RELEASE" = "$BASE/releases/"* && -d "$OLD_RELEASE" ]]
+          if ! OLD_BYTES="$(du -sb "$OLD_RELEASE" 2>/dev/null | awk '{print $1}')"; then
+            echo 'DISK_PREFLIGHT_FAILED: unable to assess old release capacity'; exit 1
+          fi
+          if ! RUNTIME_BYTES="$(du -sb /var/lib/content-factory 2>/dev/null | awk '{print $1}')"; then
             echo 'DISK_PREFLIGHT_FAILED: unable to assess capacity'; exit 1
           fi
           if ! AVAILABLE="$(df -PB1 "$BASE" 2>/dev/null | awk 'NR==2 {print $4}')"; then
             echo 'DISK_PREFLIGHT_FAILED: unable to assess capacity'; exit 1
           fi
-          if ! [[ "$OLD_BYTES" =~ ^[0-9]+$ && "$AVAILABLE" =~ ^[0-9]+$ ]]; then
+          if ! [[ "$OLD_BYTES" =~ ^[0-9]+$ && "$RUNTIME_BYTES" =~ ^[0-9]+$ && "$AVAILABLE" =~ ^[0-9]+$ ]]; then
             echo 'DISK_PREFLIGHT_FAILED: unable to assess capacity'; exit 1
           fi
-          REQUIRED=$((2 * OLD_BYTES + RELEASE_BYTES + 268435456))
+          REQUIRED=$((2 * (OLD_BYTES + RUNTIME_BYTES) + RELEASE_BYTES + 268435456))
           if [[ "$AVAILABLE" -lt "$REQUIRED" ]]; then
             echo 'DISK_PREFLIGHT_FAILED: insufficient free space; no release staged'; exit 1
           fi

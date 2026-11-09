@@ -17,3 +17,9 @@ SSH root ранее прошёл, но `REMOTE_ROOT_PM2_PID_ALIVE=false`. Ста
 После фактического inventory составить точный release spec для существующего process manager/owner: сохранение runtime storage/env, полный backup прежнего приложения и конфигурации manager, запуск tested artifact и health/revision checks, автоматический rollback прежнего manager без восстановления поверх новых пользовательских данных. До evidence rollout-код не меняется.
 
 Отдельно: deploy-job должен брать **операционный rollout script из текущего deployment commit**, а app — исключительно проверенный immutable artifact. Смена deploy checkout с tested app source на deployment commit допустима только вместе с сохранением artifact identity gate. Это не пересборка app и не основание изменить tested source SHA.
+
+## Факт phase1 и уточнение phase2
+
+Оркестратор передала evidence CI `42708605500`, source `e144ee5`: `/opt/content-factory` owner root; Node PID123403 UID980 PPID1, cwd `/opt/content-factory/releases/20261108-main7f4cede`, cgroup `content-factory.service`; PM2 нет. Nginx `content-factory.conf` проксирует3087, admin домен в этом vhost не указан, на8088 listener нет. Runtime `data` и `generatedMedia` указывают в `/var/lib/content-factory/`; env file — `/etc/content-factory/app.env`. Значения не читались.
+
+Выбран путь адаптации **существующего systemd**, не новый PM2 и не перенос storage. До кода rollout нужен phase2 read-only контекст: точные User/Group/MainPID/WorkingDirectory/FragmentPath/DropInPaths/EnvironmentFiles/ReadWritePaths/ProtectSystem; ExecStart только executable/распознанный server.js path/usesCurrent, без сырых аргументов. Добавлены metadata current symlink, public parent и listener3087. Команда `systemctl show` только читает свойства. Parser/6offline checks и Bash/Python syntax PASS. Pending фактический запуск phase2 и review release-spec Архитектором.

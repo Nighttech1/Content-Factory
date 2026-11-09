@@ -1,137 +1,189 @@
 #!/usr/bin/env bash
-# Runs remotely; credentials never printed. No provisioning, database migration or nginx changes.
+# Observed existing systemd service only; no provisioning, PM2, unit/nginx changes or DB migration.
 set -Eeuo pipefail
 umask 077
-SOURCE_SHA="${1:?source SHA}"; BUNDLE="${2:?bundle path}"; REVISION="${3:?dataset revision}"
-[[ "$SOURCE_SHA" =~ ^[a-f0-9]{40}$ ]] || exit 2
+SOURCE_SHA="$1"; BUNDLE="$2"; REVISION="$3"
+[[ "$SOURCE_SHA" =~ ^[a-f0-9]{40}$ && "$REVISION" =~ ^[A-Za-z0-9._-]+$ ]] || exit 2
 BASE=/opt/content-factory
+RUNTIME=/var/lib/content-factory
+ENVFILE=/etc/content-factory/app.env
+UNIT=content-factory.service
 RELEASE="$BASE/releases/$SOURCE_SHA"
 STAMP="$(date -u +%Y%m%dT%H%M%SZ)-$SOURCE_SHA"
 BACKUP="$BASE/backups/$STAMP"
-for cmd in node pm2 curl tar; do command -v "$cmd" >/dev/null; done
+for cmd in node python3 systemctl curl tar gzip chown; do command -v "$cmd" >/dev/null; done
+[[ "$(id -u)" = 0 ]]
 [[ "$(node -p 'Number(process.versions.node.split(".")[0])>=20')" = true ]]
-[[ -d "$BASE" && ! -e "$RELEASE" ]]
-# Historical deploy chowned APP_DIR to SSH_USER and ran PM2 WITHOUT sudo.
-# Prove that context before mkdir or a PM2 command (which could otherwise spawn a new daemon).
-CURRENT_UID="$(id -u)"
-[[ "$(stat -c %u "$BASE")" = "$CURRENT_UID" ]] || {
- echo 'PRECHECK_CONTEXT: SSH user does not own existing app directory; inspect original deploy user, do not sudo PM2 blindly' >&2; exit 3;
-}
-PM2_STATE="${PM2_HOME:-$HOME/.pm2}"
-[[ -r "$PM2_STATE/pm2.pid" ]] || { echo 'PRECHECK_CONTEXT: no existing PM2 daemon for SSH user; no new manager started' >&2; exit 3; }
-PM2_PID="$(cat "$PM2_STATE/pm2.pid")"
-[[ "$PM2_PID" =~ ^[0-9]+$ && "$(ps -o uid= -p "$PM2_PID" | tr -d '[:space:]')" = "$CURRENT_UID" ]] || {
- echo 'PRECHECK_CONTEXT: stale or differently owned PM2 daemon; inspection required' >&2; exit 3;
-}
-[[ "$(ps -o args= -p "$PM2_PID")" = *"God Daemon"* ]] || { echo 'PRECHECK_CONTEXT: unexpected daemon process' >&2; exit 3; }
-[[ -w "$BASE" && -x "$BASE" ]] || { echo 'PRECHECK_PERMISSION: app directory not writable; no mutation attempted' >&2; exit 3; }
-pm2 jlist | node -e '
-const fs=require("fs");const base="/opt/content-factory";
-const matches=JSON.parse(fs.readFileSync(0,"utf8")).filter(p=>p.name==="content-factory");
-if(matches.length!==1)throw Error("Expected exactly one existing content-factory process in SSH-user manager");
-const p=matches[0].pm2_env,cwd=fs.realpathSync(p.pm_cwd);
-if(!(cwd===base||cwd.startsWith(base+"/releases/")))throw Error("Unexpected existing content app cwd");
-if(p.pm_exec_path!==cwd+"/server.js")throw Error("Unexpected content app entrypoint");
-if(String(p.env?.PORT??p.PORT)!=="8088")throw Error("Existing content app is not port8088; inspect before release");
-'
-echo 'PRECHECK_OK: SSH-user PM2 manager, existing content app and writable app directory confirmed'
-mkdir -p "$BASE/releases" "$BASE/backups" "$BASE/shared"
+[[ -f "$BUNDLE" && ! -e "$RELEASE" && ! -L "$RELEASE" && -L "$BASE/current" ]]
+
+# Strict read-only identity gate. Raw ExecStart and environment values never leave this process.
+OLD_CWD="$(python3 - "$BASE" "$UNIT" "$RUNTIME" "$ENVFILE" <<'PY'
+import os,pathlib,pwd,grp,re,shlex,subprocess,sys
+base,unit,runtime,envfile=sys.argv[1:]
+def require(ok):
+ if not ok: raise SystemExit('PRECHECK_CONTEXT_FAILED: existing service identity requires inspection')
+props=['User','Group','ActiveState','SubState','MainPID','WorkingDirectory','ExecStart','EnvironmentFiles','DropInPaths']
+raw=subprocess.check_output(['systemctl','show',unit,'--no-pager']+['--property='+p for p in props],text=True)
+values=dict(line.split('=',1) for line in raw.splitlines() if '=' in line)
+require(values.get('User')=='content-factory' and values.get('Group')=='content-factory')
+require(pwd.getpwnam('content-factory').pw_uid==980 and grp.getgrnam('content-factory').gr_gid==980)
+require(values.get('ActiveState')=='active' and values.get('SubState')=='running')
+require(values.get('WorkingDirectory')==base+'/current' and not values.get('DropInPaths'))
+execstart=values.get('ExecStart','')
+path=re.search(r'(?:^|[ {;])path=([^ ;}]+)',execstart)
+args=re.search(r'argv\[\]=(.*?)\s*;',execstart)
+require(path is not None and path[1]=='/usr/bin/node' and args is not None)
+argv=shlex.split(args[1])
+require(argv in [['/usr/bin/node','server.js'],['/usr/bin/node',base+'/current/server.js']])
+require(values.get('EnvironmentFiles','').strip()==envfile+' (ignore_errors=no)')
+old=os.path.realpath(base+'/current')
+require(old.startswith(base+'/releases/') and os.path.isfile(old+'/server.js'))
+pid=values.get('MainPID','')
+require(pid.isdigit() and int(pid)>1)
+status=pathlib.Path('/proc/'+pid+'/status').read_text()
+require(re.search(r'^Uid:\s*(\d+)',status,re.M)[1]=='980')
+require(os.readlink('/proc/'+pid+'/cwd')==old)
+inodes=set()
+for table in ['/proc/net/tcp','/proc/net/tcp6']:
+ for line in pathlib.Path(table).read_text().splitlines()[1:]:
+  cols=line.split()
+  if len(cols)>9 and cols[3]=='0A' and cols[1].split(':')[-1].upper()==format(3087,'04X'): inodes.add(cols[9])
+require(bool(inodes))
+owned=False
+for fd in pathlib.Path('/proc/'+pid+'/fd').iterdir():
+ try: link=os.readlink(fd)
+ except OSError: continue
+ if link.startswith('socket:[') and link[8:-1] in inodes: owned=True
+require(owned)
+for relative in ['data','generatedMedia','public']:
+ target=runtime+'/'+relative
+ require(os.path.isdir(target) and os.path.realpath(old+'/'+relative)==target)
+require(os.path.isfile(envfile) and os.path.realpath(old+'/.env.production')==envfile)
+print(old)
+PY
+)"
+echo 'PRECHECK_OK: existing content-factory systemd identity and shared paths confirmed'
+
+# Conservative capacity includes the old release AND the external live storage backup.
+OLD_BYTES="$(du -sb "$OLD_CWD" | awk '{print $1}')"
+RUNTIME_BYTES="$(du -sb "$RUNTIME" | awk '{print $1}')"
+RELEASE_BYTES="$(gzip -l -- "$BUNDLE" | awk 'NR==2 {print $2}')"
+AVAILABLE="$(df -PB1 "$BASE" | awk 'NR==2 {print $4}')"
+[[ "$OLD_BYTES" =~ ^[0-9]+$ && "$RUNTIME_BYTES" =~ ^[0-9]+$ && "$RELEASE_BYTES" =~ ^[0-9]+$ && "$AVAILABLE" =~ ^[0-9]+$ ]]
+[[ "$RELEASE_BYTES" -gt 0 && "$RELEASE_BYTES" -lt 4294967296 ]]
+REQUIRED=$((2 * (OLD_BYTES + RUNTIME_BYTES) + RELEASE_BYTES + 268435456))
+[[ "$AVAILABLE" -ge "$REQUIRED" ]] || { echo 'DISK_PREFLIGHT_FAILED: insufficient backup/staging capacity' >&2; exit 3; }
+tar -tzf "$BUNDLE" | python3 -c 'import sys; paths=sys.stdin.read().splitlines(); assert paths and not any(p.startswith("/") or ".." in p.split("/") for p in paths), "Unsafe archive paths"'
+
+mkdir -p "$BASE/backups"
 chmod 700 "$BASE/backups"
 mkdir "$BACKUP" "$RELEASE"
-pm2 jlist > "$BACKUP/processes.json"
-node - "$BACKUP" "$BASE" "$RELEASE" <<'NODE'
-const fs=require('fs'),path=require('path');const [backup,base,release]=process.argv.slice(2);
-const proc=JSON.parse(fs.readFileSync(path.join(backup,'processes.json'))).filter(p=>p.name==='content-factory');
-if(proc.length!==1)throw Error('Expected exactly one existing content-factory process');
-const p=proc[0].pm2_env,cwd=fs.realpathSync(p.pm_cwd);
-if(!(cwd===base||cwd.startsWith(base+'/releases/')))throw Error('Unexpected app cwd');
-if(!fs.existsSync(p.pm_exec_path))throw Error('Missing old entry');
-const old={apps:[{name:'content-factory',script:p.pm_exec_path,cwd,env:{...p.env,PORT:'8088',HOSTNAME:'0.0.0.0',NODE_ENV:'production'}}]};
-fs.writeFileSync(path.join(backup,'rollback.config.cjs'),'module.exports='+JSON.stringify(old));
-fs.writeFileSync(path.join(backup,'old-cwd'),cwd);
-const next={apps:[{...old.apps[0],script:path.join(release,'server.js'),cwd:release}]};
-fs.writeFileSync(path.join(backup,'next.config.cjs'),'module.exports='+JSON.stringify(next));
-NODE
-OLD_CWD="$(cat "$BACKUP/old-cwd")"
-OLD_LINK="$(readlink "$BASE/current" || true)"
+chmod 700 "$BACKUP"
 SWITCHED=0
+verify_process_cwd(){
+ python3 - "$UNIT" "$1" <<'PY'
+import os,pathlib,re,subprocess,sys
+unit,expected=sys.argv[1:]
+pid=subprocess.check_output(['systemctl','show',unit,'--property=MainPID','--value'],text=True).strip()
+assert pid.isdigit() and os.readlink('/proc/'+pid+'/cwd')==expected
+assert re.search(r'^Uid:\s*(\d+)',pathlib.Path('/proc/'+pid+'/status').read_text(),re.M)[1]=='980'
+PY
+}
+wait_old_health(){
+ local attempt
+ for attempt in $(seq 1 15); do
+  if curl --fail --silent --max-time 3 http://127.0.0.1:3087/marketing >/dev/null; then return 0; fi
+  sleep 2
+ done
+ return 1
+}
 rollback(){
  local code=$?
  trap - ERR
+ set +e
  if [[ "$SWITCHED" = 1 ]]; then
-   if [[ -n "$OLD_LINK" ]]; then ln -sfn "$OLD_LINK" "$BASE/.rollback-current"; mv -Tf "$BASE/.rollback-current" "$BASE/current"; elif [[ -L "$BASE/current" ]]; then unlink "$BASE/current"; fi
-   pm2 delete content-factory >/dev/null 2>&1 || true
-   pm2 start "$BACKUP/rollback.config.cjs" --only content-factory >/dev/null
-   pm2 save >/dev/null
-   curl --fail --silent --max-time 20 http://127.0.0.1:8088/marketing >/dev/null || echo 'ROLLBACK_HEALTH_FAILED' >&2
+   if ln -s "$OLD_CWD" "$BASE/.rollback-$STAMP" \
+      && mv -Tf "$BASE/.rollback-$STAMP" "$BASE/current" \
+      && [[ "$(readlink -f "$BASE/current")" = "$OLD_CWD" ]] \
+      && systemctl restart "$UNIT" && wait_old_health && verify_process_cwd "$OLD_CWD"; then
+     echo 'ROLLBACK_VERIFIED: original release restored; shared runtime not overwritten' >&2
+   else
+     echo 'ROLLBACK_HEALTH_FAILED: inspect existing content-factory.service; backup retained' >&2
+   fi
  fi
- echo "Release failed; rollback attempted; backup retained" >&2
+ echo 'DEPLOY_FAILED: original backup and staged release retained; no runtime data restore performed' >&2
  exit "$code"
 }
 trap rollback ERR
-# Backup before stopping; mutable directories are copied again after process stop.
-tar -C "$BASE" --exclude=./releases --exclude=./backups --exclude=./shared -czf "$BACKUP/previous-app.tar.gz" .
-tar -tzf "$BUNDLE" >/dev/null
-# Reject archive path traversal before extraction.
-node - "$BUNDLE" <<'NODE'
-const{execFileSync}=require('child_process');const paths=execFileSync('tar',['-tzf',process.argv[2]],{maxBuffer:32*1024*1024}).toString().split('\n');
-if(paths.some(p=>p.startsWith('/')||p.split('/').includes('..')))throw Error('Unsafe archive path');
-NODE
+
+# File-level live backups, not a transactional database snapshot. Failure leaves old app running.
+tar -C "$OLD_CWD" -czf "$BACKUP/previous-release.tar.gz" .
+tar -C "$RUNTIME" -czf "$BACKUP/runtime-live-copy.tar.gz" .
+install -m 600 "$ENVFILE" "$BACKUP/app.env"
+printf '%s\n' "$OLD_CWD" > "$BACKUP/old-current"
+systemctl show "$UNIT" --property=User --property=Group --property=WorkingDirectory --property=FragmentPath > "$BACKUP/unit-identity.txt"
 tar -C "$RELEASE" -xzf "$BUNDLE"
-[[ -f "$RELEASE/server.js" ]]
-pm2 stop content-factory >/dev/null
-SWITCHED=1
-for relative in data generatedMedia public/vernatun-jobs public/uploads; do
- shared="$BASE/shared/$relative"; old="$OLD_CWD/$relative"; fresh="$RELEASE/$relative"
- mkdir -p "$(dirname "$shared")" "$(dirname "$fresh")"
- if [[ -e "$shared" && -e "$old" && "$(readlink -f "$old")" != "$(readlink -f "$shared")" ]]; then
-   echo 'Existing shared data differs from live storage location; inspection required' >&2; false
- fi
- if [[ ! -e "$shared" ]]; then
-   staged="$shared.initial-$STAMP"
-   if [[ -d "$old" ]]; then cp -aL "$old" "$staged"; else mkdir -p "$staged"; fi
-   mv "$staged" "$shared"
- fi
- # Old release also uses shared storage, so rollback retains writes after cutover.
- if [[ -e "$old" && "$(readlink -f "$old")" != "$(readlink -f "$shared")" ]]; then
-   mv "$old" "$BACKUP/$(echo "$relative" | tr / _)-previous-live"
-   ln -s "$shared" "$old"
- elif [[ ! -e "$old" && ! -L "$old" ]]; then
-   mkdir -p "$(dirname "$old")"; ln -s "$shared" "$old"
- fi
- # Never replace live shared data with bundled fixtures.
- if [[ -e "$fresh" || -L "$fresh" ]]; then mv "$fresh" "$BACKUP/$(echo "$relative" | tr / _)-bundled"; fi
- ln -s "$shared" "$fresh"
+[[ -f "$RELEASE/server.js" && -d "$RELEASE/.next/static" ]]
+# Never follow or chown external symlink targets.
+chown -hR 980:980 "$RELEASE"
+chmod 750 "$RELEASE"
+for relative in data generatedMedia public; do
+ fresh="$RELEASE/$relative"
+ if [[ -e "$fresh" || -L "$fresh" ]]; then mv "$fresh" "$BACKUP/bundled-$relative"; fi
+ ln -s "$RUNTIME/$relative" "$fresh"
 done
-# Preserve runtime-loaded environment files without printing their contents.
-mkdir -p "$BASE/shared/env"; chmod 700 "$BASE/shared/env"
 for envname in .env .env.local .env.production .env.production.local; do
- old="$OLD_CWD/$envname"; shared="$BASE/shared/env/$envname"; fresh="$RELEASE/$envname"
- if [[ -f "$old" && ! -e "$shared" ]]; then cp -pL "$old" "$shared"; chmod 600 "$shared"; fi
- if [[ -f "$shared" ]]; then
-   if [[ -e "$fresh" || -L "$fresh" ]]; then mv "$fresh" "$BACKUP/$envname-bundled"; fi
-   ln -s "$shared" "$fresh"
- fi
+ fresh="$RELEASE/$envname"
+ if [[ -e "$fresh" || -L "$fresh" ]]; then mv "$fresh" "$BACKUP/bundled-$envname"; fi
 done
-ln -s "$RELEASE" "$BASE/.next-current"
-mv -Tf "$BASE/.next-current" "$BASE/current"
-pm2 delete content-factory >/dev/null
-pm2 start "$BACKUP/next.config.cjs" --only content-factory >/dev/null
+ln -s "$ENVFILE" "$RELEASE/.env.production"
+for relative in data generatedMedia public; do
+ [[ "$(readlink -f "$RELEASE/$relative")" = "$RUNTIME/$relative" ]]
+done
+[[ "$(readlink -f "$RELEASE/.env.production")" = "$ENVFILE" ]]
+[[ "$(readlink -f "$BASE/current")" = "$OLD_CWD" ]]
+ln -s "$RELEASE" "$BASE/.next-$STAMP"
+SWITCHED=1
+mv -Tf "$BASE/.next-$STAMP" "$BASE/current"
+systemctl restart "$UNIT"
 for attempt in $(seq 1 30); do
- if curl --fail --silent --max-time 3 http://127.0.0.1:8088/api/growth-center -o "$BACKUP/health.json"; then break; fi
+ if curl --fail --silent --max-time 3 http://127.0.0.1:3087/api/growth-center -o "$BACKUP/health.json"; then break; fi
  [[ "$attempt" -lt 30 ]]; sleep 2
 done
 node - "$BACKUP/health.json" "$REVISION" <<'NODE'
-const d=JSON.parse(require('fs').readFileSync(process.argv[2]));if(d.revision!==process.argv[3])throw Error('Deployed revision mismatch');
+const d=JSON.parse(require('fs').readFileSync(process.argv[2]));if(d.revision!==process.argv[3])throw Error('Local revision mismatch');
 NODE
-for route in "" growth marketing studio schedule; do
- curl --fail --silent --max-time 30 "http://127.0.0.1:8088/$route" >/dev/null
+for route in "" growth marketing studio schedule settings; do
+ curl --fail --silent --max-time 30 "http://127.0.0.1:3087/$route" >/dev/null
  curl --fail --silent --max-time 30 "https://content.vernatunspeakclub.com/$route" >/dev/null
 done
 curl --fail --silent --max-time 30 https://content.vernatunspeakclub.com/api/growth-center -o "$BACKUP/public-health.json"
 node - "$BACKUP/public-health.json" "$REVISION" <<'NODE'
 const d=JSON.parse(require('fs').readFileSync(process.argv[2]));if(d.revision!==process.argv[3])throw Error('Public revision mismatch');
 NODE
-pm2 save >/dev/null
+systemctl is-active --quiet "$UNIT"
+[[ "$(readlink -f "$BASE/current")" = "$RELEASE" ]]
+python3 - "$UNIT" "$RELEASE" <<'PY'
+import os,pathlib,re,subprocess,sys
+unit,release=sys.argv[1:]
+pid=subprocess.check_output(['systemctl','show',unit,'--property=MainPID','--value'],text=True).strip()
+assert pid.isdigit() and os.readlink('/proc/'+pid+'/cwd')==release
+assert re.search(r'^Uid:\s*(\d+)',pathlib.Path('/proc/'+pid+'/status').read_text(),re.M)[1]=='980'
+inodes=set()
+for table in ['/proc/net/tcp','/proc/net/tcp6']:
+ for line in pathlib.Path(table).read_text().splitlines()[1:]:
+  cols=line.split()
+  if len(cols)>9 and cols[3]=='0A' and cols[1].split(':')[-1].upper()==format(3087,'04X'): inodes.add(cols[9])
+owned=False
+for fd in pathlib.Path('/proc/'+pid+'/fd').iterdir():
+ try: link=os.readlink(fd)
+ except OSError: continue
+ if link.startswith('socket:[') and link[8:-1] in inodes: owned=True
+assert owned
+PY
+for relative in data generatedMedia public; do
+ [[ "$(readlink -f "$RELEASE/$relative")" = "$RUNTIME/$relative" && "$(readlink -f "$OLD_CWD/$relative")" = "$RUNTIME/$relative" ]]
+done
+[[ "$(readlink -f "$RELEASE/.env.production")" = "$ENVFILE" ]]
 trap - ERR
-echo "DEPLOY_VERIFIED source=$SOURCE_SHA revision=$REVISION target=content.vernatunspeakclub.com"
+echo "DEPLOY_VERIFIED source=$SOURCE_SHA revision=$REVISION target=content.vernatunspeakclub.com manager=content-factory.service port=3087"

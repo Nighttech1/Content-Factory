@@ -531,3 +531,6 @@
 - C-seed-designs-landscapes: presets 01/02/03 + active 01; Landscapes Ануш #1 — `memory/tickets/C-seed-designs-landscapes/guards.md`
 - C-dual-char-smoke: A `in_image` topic 17 ×6 · B `overlay_cutout` topic 13 ×6 · conductor — `memory/tickets/C-dual-char-smoke/guards.md` + wave `memory/waves/2026-10-18-layout-copy-dual-char/guards.md`
 - KEEP S57 layered HTML / Variant A / no remake / shell_freeze
+
+## W-2026-11-10-situation-center — systemd release
+- C-OPS-ROLLBACK-VERIFY: откат подтверждён только после успешных ln/mv, current→old, restart прежнего unit, bounded health и проверки PID/cwd/UID; ошибка любого шага не даёт ROLLBACK_VERIFIED — `memory/tickets/C-OPS-ROLLBACK-VERIFY/guards.md`. Проверки из корня репозитория: `node scripts/test-systemd-release-review.mjs` и `python3 scripts/test-systemd-release.py`.

@@ -1,5 +1,11 @@
 # STATE.md — эстафета между сессиями
 
+## Production разрешён владельцем · systemd release готов к запуску
+
+Прямое разрешение 10.11.2026: «Да, конечно, выкладывай… хочу посмотреть… на сайте». Только content.vernatunspeakclub.com. Read-only inventory42708605500/42709041462 доказал existing content-factory.service (User/Groupcontent-factory UID/GID980), WorkingDirectory/current→oldrelease20261108-main7f4cede, listener3087. PM2/8088 не используются. Данные/media/fullpublic→/var/lib/content-factory; envproduction→/etc/content-factory/app.env. Ничего из этого не перемещать и не перезаписывать bundledданными.
+
+Адаптер systemd принят Архитектором и независимо Тестировщиком:5полных mockcases,7rollbackbranches,9actualPythonidentitybranches PASS. C-OPS-ROLLBACK-VERIFY закрыт. Spec/reviews/guards в W-2026-11-10-situation-center. Deploy checkoutgithub.sha только для ops; app исключительно testedartifact13713870877/source3ac253b6/QA42704640983/QAcommitc88dac0/revision situation-v2-20261110-01. Подготовлены privatebackup,atomicswitchcurrent,onlysameunitrestart,3087+HTTPSrevision/routes и проверенныйrollback безdatarestore. Release marker будет обновлён отдельно. До фактическогоDEPLOY_VERIFIED и живой приёмки Клиентом сайт не объявлять обновлённым. Новое разрешение отменяет прежнее ограничение «только проверка SSH» ниже; публикация контента/платныеAPI/admin.* по-прежнему вне scope.
+
 ## SSH восстановлен · 10.11.2026, 00:58 Москва · без деплоя
 
 Владелец подтвердил замену private key в Actions Secrets и разрешил проверить вход. Минимально исправлен read-only `scripts/growth-vps-root-auth.mjs`: старый skip для уже настроенного root инвертирован; выполняется только настроенный root, иной пользователь не вызывает root fallback. Host/DNS pin, host-key policy, одна попытка, timeout и неизменённая read-only команда сохранены. Четыре offline группы прошли, значения Secrets не читались/не печатались.
