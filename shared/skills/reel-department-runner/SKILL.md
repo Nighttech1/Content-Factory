@@ -32,6 +32,17 @@ Trigger: owner gives a topic or asks to shoot a particular reel.
 
 ## Specialist masks and lead gates
 
+### Reference design intake
+
+For an owner request to analyze a reference reel, use
+`shared/skills/reel-reference-analysis/SKILL.md` as a separate analysis branch;
+do not start production just because a reference was supplied. Store numbered
+design cards in the active project's department `designs/`.
+When production requests “Дизайн N”, read its card before scripting, pin its
+version in the job brief, carry parameters into art direction/motion-brief,
+and verify their application in final QA. Respect explicit manual-handoff and
+no-other-chats instructions; saving a card does not launch or deliver to a chat.
+
 | Phase | Specialist mask | Required artifact | Lead acceptance gate |
 |---|---|---|---|
 | 1. Intake/research | `reel-researcher` | topic, audience, relevant scout signals and source notes (Mode A); owner intent (Mode B) | topic is in brand bounds; evidence is separated from opinion |
