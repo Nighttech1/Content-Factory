@@ -107,6 +107,26 @@ try:
   except ValueError: argv=[]
   expected={'relative_server':['/usr/bin/node','server.js'],'dot_relative_server':['/usr/bin/node','./server.js'],'absolute_current_server':['/usr/bin/node',base+'/current/server.js']}
   unit['ExecStartIdentity']['classification']=next((name for name,args in expected.items() if argv==args),'other')
+  nextpaths={
+   'relative_next_cli':'node_modules/next/dist/bin/next',
+   'dot_relative_next_cli':'./node_modules/next/dist/bin/next',
+   'absolute_current_next_cli':base+'/current/node_modules/next/dist/bin/next',
+   'absolute_release_next_cli':os.path.realpath(current)+'/node_modules/next/dist/bin/next'}
+  entry=next((name for name,value in nextpaths.items() if len(argv)>1 and argv[1]==value),None)
+  tail=argv[2:]; recognized=[]; unknown=0; port3087=False; host127=False; host0000=False
+  index=0
+  while index<len(tail):
+   token=tail[index]
+   if index==0 and token=='start': recognized.append('start'); index+=1; continue
+   if token in ['-p','--port','-H','--hostname'] and index+1<len(tail):
+    recognized.append(token); value=tail[index+1]
+    if token in ['-p','--port']: port3087=value=='3087'; unknown+=int(not port3087)
+    else: host127=value=='127.0.0.1'; host0000=value=='0.0.0.0'; unknown+=int(not(host127 or host0000))
+    index+=2; continue
+   unknown+=1; index+=1
+  knownnext=bool(argv and argv[0]=='/usr/bin/node' and entry and tail and tail[0]=='start' and unknown==0)
+  unit['ExecStartIdentity']['nextCli']=dict(entrypointKind=entry,argvLength=len(argv),recognizedTokens=recognized,unknownTokenCount=unknown,port3087=port3087,hostname127=host127,hostname0000=host0000,knownExact=knownnext)
+  if knownnext: unit['ExecStartIdentity']['classification']='known_next_cli'
   try:
    account=pwd.getpwnam('content-factory'); namedgroup=grp.getgrnam('content-factory')
    unit['AccountIdentity']=dict(uid=account.pw_uid,primaryGid=account.pw_gid,namedGroupGid=namedgroup.gr_gid)
