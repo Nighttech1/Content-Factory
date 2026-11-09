@@ -1,0 +1,97 @@
+{
+  "sample_date": "2026-11-06",
+  "analysis_date": "2026-11-09",
+  "n_posts": 83,
+  "channels": [
+    {
+      "channel": "mosarmclub",
+      "n": 8,
+      "median": 266.0,
+      "max": 487.0,
+      "max_over_median": 1.830827067669173,
+      "sample_access_date": "2026-11-06",
+      "calculated_on": "2026-11-09"
+    },
+    {
+      "channel": "armenian_club",
+      "n": 5,
+      "median": 1090.0,
+      "max": 2160.0,
+      "max_over_median": 1.981651376146789,
+      "sample_access_date": "2026-11-06",
+      "calculated_on": "2026-11-09"
+    },
+    {
+      "channel": "libfl",
+      "n": 10,
+      "median": 622.5,
+      "max": 744.0,
+      "max_over_median": 1.1951807228915663,
+      "sample_access_date": "2026-11-06",
+      "calculated_on": "2026-11-09"
+    },
+    {
+      "channel": "ziferblat_mayakovka",
+      "n": 10,
+      "median": 1445.0,
+      "max": 1740.0,
+      "max_over_median": 1.2041522491349481,
+      "sample_access_date": "2026-11-06",
+      "calculated_on": "2026-11-09"
+    },
+    {
+      "channel": "inessa2512",
+      "n": 10,
+      "median": 401.5,
+      "max": 583.0,
+      "max_over_median": 1.452054794520548,
+      "sample_access_date": "2026-11-06",
+      "calculated_on": "2026-11-09"
+    },
+    {
+      "channel": "repatarmeniaru",
+      "n": 10,
+      "median": 688.0,
+      "max": 905.0,
+      "max_over_median": 1.315406976744186,
+      "sample_access_date": "2026-11-06",
+      "calculated_on": "2026-11-09"
+    },
+    {
+      "channel": "armcaru",
+      "n": 10,
+      "median": 280.5,
+      "max": 779.0,
+      "max_over_median": 2.7771836007130126,
+      "sample_access_date": "2026-11-06",
+      "calculated_on": "2026-11-09"
+    },
+    {
+      "channel": "armmuseum",
+      "n": 10,
+      "median": 284.5,
+      "max": 392.0,
+      "max_over_median": 1.3778558875219684,
+      "sample_access_date": "2026-11-06",
+      "calculated_on": "2026-11-09"
+    },
+    {
+      "channel": "avc_agbu",
+      "n": 3,
+      "median": 337.0,
+      "max": 412.0,
+      "max_over_median": 1.2225519287833828,
+      "sample_access_date": "2026-11-06",
+      "calculated_on": "2026-11-09"
+    },
+    {
+      "channel": "sarmoscow",
+      "n": 7,
+      "median": 203.0,
+      "max": 246.0,
+      "max_over_median": 1.2118226600985222,
+      "sample_access_date": "2026-11-06",
+      "calculated_on": "2026-11-09"
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "access_date": "2026-11-09",
+  "method": "public HTTP GET; browser observations recorded separately; raw HTML excluded",
+  "responses": [
+    {
+      "id": "N01",
+      "url": "https://vernatunspeakclub.com/",
+      "final_url": "https://vernatunspeakclub.com/",
+      "http_status": 200,
+      "bytes": 29427,
+      "sha256": "b5a01e524f1cf988426ebbccc11298bfe2985e7205e0a1fe33b46ec65f792ccb",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "N02",
+      "url": "https://vernatunspeakclub.com/campus",
+      "final_url": "https://vernatunspeakclub.com/campus",
+      "http_status": 200,
+      "bytes": 599,
+      "sha256": "147aee0ed2b0238568288dfd6b11dfe204e9e1422bb7b0102732687e5b5d42c1",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "N03",
+      "url": "https://vernatunspeakclub.com/robots.txt",
+      "final_url": "https://vernatunspeakclub.com/robots.txt",
+      "http_status": 200,
+      "bytes": 77,
+      "sha256": "ed22def66ae975e3cee26ad1afb9f258be50d6a493d2d0e598f3162f9447fa85",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "N04",
+      "url": "https://vernatunspeakclub.com/sitemap.xml",
+      "final_url": "https://vernatunspeakclub.com/sitemap.xml",
+      "http_status": 200,
+      "bytes": 246,
+      "sha256": "854b51b0f6e7f341c2da83a2a98a5d693a38a0be48974a93147d71c618a2ebf7",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "A01",
+      "url": "https://vivalinguaclub.ru/prices/",
+      "final_url": "https://vivalinguaclub.ru/prices/",
+      "http_status": 200,
+      "bytes": 58425,
+      "sha256": "11f16fbf33ea3fef74e33601271f7cde2d2c62545e952b9e480bf3905a553ac1",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "A02",
+      "url": "https://englishnataly.com/",
+      "final_url": "https://englishnataly.com/",
+      "http_status": 200,
+      "bytes": 71202,
+      "sha256": "ecab06c70f76dad163368e8a1c8212b6b19ccc773ed7b0940ceaff0dc87cb525",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "A03",
+      "url": "https://sok.works/offer/sok-community-sub/",
+      "final_url": "https://sok.works/offer/sok-community-sub/",
+      "http_status": 200,
+      "bytes": 226348,
+      "sha256": "aec72b4f219ae8ece4211647368b1d4a203903ae4c6122678caa16459e505349",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "A04",
+      "url": "https://chto-to-go.ru/",
+      "final_url": "https://chto-to-go.ru/",
+      "http_status": 200,
+      "bytes": 179664,
+      "sha256": "9bf9671573cfb88b59bd4ee669fa9a72341d4f8cfca140f2bc218aaace961e1c",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "A05",
+      "url": "https://snob.ru/pass/",
+      "final_url": "https://snob.ru/pass/",
+      "http_status": 200,
+      "bytes": 971561,
+      "sha256": "bef4e80df01cbe5de081a436f8a5e88d4f7fb94e98db31dc36bf22a46976d98f",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "W01",
+      "url": "https://www.armmuseum.ru/events",
+      "final_url": "https://www.armmuseum.ru/events",
+      "http_status": 200,
+      "bytes": 446464,
+      "sha256": "096e15a7632408af41686d8d7d28f55f952c0fc1721da8462f93b1cb67e708fe",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "W02",
+      "url": "https://www.armmuseum.ru/contacts",
+      "final_url": "https://www.armmuseum.ru/contacts",
+      "http_status": 200,
+      "bytes": 175734,
+      "sha256": "820812eea577f3e408f5f5f73307996a5b0422d77855c41ac1c46654c781fc90",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "W03",
+      "url": "https://www.armmuseum.ru/news-blog/speakingclub",
+      "final_url": "https://www.armmuseum.ru/news-blog/speakingclub",
+      "http_status": 200,
+      "bytes": 189051,
+      "sha256": "e473823029a4d093f6edae30fa0fecf89069d4acb7caddeae7d9b189335f05d2",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "W06",
+      "url": "https://libfl.ru/ru/event/razgovornyy-klub-armyanskiy-yazyk-prodvinutyy-uroven-1",
+      "final_url": "https://libfl.ru/ru/event/razgovornyy-klub-armyanskiy-yazyk-prodvinutyy-uroven-1",
+      "http_status": 200,
+      "bytes": 72860,
+      "sha256": "392baca926cf24c9830ae748a9724e1f6aa6acbecb2837f66f0c77017c28c46e",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "W09",
+      "url": "https://armlingo.com/",
+      "final_url": "https://armlingo.com/",
+      "http_status": 200,
+      "bytes": 142920,
+      "sha256": "07551a4c89afd4c7497e98a03431f0e7b0940ee0f3ee7c2ebf5e67a5dd6e1133",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "W10",
+      "url": "https://www.repatarmenia.org/ru/services-and-programs/razgovornyj-klub-armyanskogo-yazyka-v-armenii-dlya-repatriantov-haytalki",
+      "final_url": "https://www.repatarmenia.org/ru/services-and-programs/razgovornyj-klub-armyanskogo-yazyka-v-armenii-dlya-repatriantov-haytalki",
+      "http_status": 200,
+      "bytes": 89674,
+      "sha256": "206b6ab83b9b6f968433809b3ecf4a35a72f90180710af7636ae437c79f5456a",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "W13",
+      "url": "https://yanclub.ru/",
+      "final_url": "https://yanclub.ru/",
+      "http_status": 200,
+      "bytes": 74721,
+      "sha256": "fafcdfcadabfb09f4ae037482d0ee896874b81d7d7bd02091eaf5ee9a765eb10",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "W14",
+      "url": "https://sarinfo.org/news/msg/",
+      "final_url": "https://sarinfo.org/news/msg/",
+      "http_status": 200,
+      "bytes": 140160,
+      "sha256": "4f5a5fa825c3243cac60ec1767d48b0fc6c629b75ac3f64aa674346bdd8227f8",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "W17",
+      "url": "https://www.avc-agbu.org/",
+      "final_url": "https://www.avc-agbu.org/",
+      "http_status": 200,
+      "bytes": 176239,
+      "sha256": "a45b762b8e6b643ecf052f7aa341f128afd21617756cf0893804f3e32dcc656f",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "G01",
+      "url": "https://www.nairi.kz/",
+      "final_url": "https://www.nairi.kz/",
+      "http_status": 200,
+      "bytes": 1046,
+      "sha256": "b49c2c159ebb6ffb876dc72c747556ce8888888874976e823944724d56d7681e",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "G02",
+      "url": "https://belarus.mfa.am/ru/news/",
+      "final_url": "https://belarus.mfa.am/ru/news/",
+      "http_status": 200,
+      "bytes": 34310,
+      "sha256": "ccca44492f21527d8d79b0aa23d366da52273d9b9bafcafd128fa9ad63615081",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "G03",
+      "url": "https://batylbol.kz/",
+      "final_url": "https://batylbol.kz/",
+      "http_status": 200,
+      "bytes": 116618,
+      "sha256": "a01a396a6dd1683053aa1e6c1feedd237cf23ac6c3f4b7bbe3e7e80d3dd6085d",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "G04",
+      "url": "https://barev-school.ru/school-news/speaking-club/",
+      "final_url": "https://barev-school.ru/school-news/speaking-club/",
+      "http_status": 200,
+      "bytes": 262128,
+      "sha256": "e7983ad976e075a0a2d498bbaf820e6b351d49d05dbdfa58ca3a747bd1a16def",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "G05",
+      "url": "https://tumanyan.online/armenian_speaking_club",
+      "access_date": "2026-11-09",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "D21",
+      "url": "https://vsegolishenglish.com/",
+      "final_url": "https://vsegolishenglish.com/",
+      "http_status": 200,
+      "bytes": 838652,
+      "sha256": "d2b315a738ff8623602e6d82411c0f9ad1c94c4ac6d417025095299aa3f435b4",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "D22",
+      "url": "https://www.armmuseum.ru/news-blog/author-interview-nogi-v-teple",
+      "final_url": "https://www.armmuseum.ru/news-blog/author-interview-nogi-v-teple",
+      "http_status": 200,
+      "bytes": 240747,
+      "sha256": "82408520ce7bee455a032e2847f4afe67f1ec9d7a04c057e5ea08c37c229a24f",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "I01",
+      "url": "https://www.armenianfilmsociety.com/",
+      "final_url": "https://www.armenianfilmsociety.com/",
+      "http_status": 200,
+      "bytes": 54374,
+      "sha256": "a263454b39625db900cf9169425ed278f7aa320bff67835094d65f3a29408f3f",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "I02",
+      "url": "https://armca.ru/",
+      "final_url": "https://armca.ru/",
+      "http_status": 200,
+      "bytes": 282354,
+      "sha256": "0641a9fe0df6f1044b556ef91b3e35dd8f8f6f4c36f454ab0a5d605f5acb746b",
+      "access_date": "2026-11-09",
+      "substantive": true
+    },
+    {
+      "id": "Q01",
+      "url": "https://armlingo.com/dogovor-oferta/",
+      "final_url": "https://armlingo.com/dogovor-oferta/",
+      "http_status": 200,
+      "bytes": 159216,
+      "sha256": "933d3c72268dd61a6e0a19ea0026332ab93625bda9dfa1d7c7eead24ec51e208",
+      "access_date": "2026-11-09",
+      "substantive": true
+    }
+  ]
+}
