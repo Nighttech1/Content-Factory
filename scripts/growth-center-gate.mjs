@@ -7,7 +7,10 @@ assert(process.env.GITHUB_REF===branch,'Wrong release branch');
 const marker=`.github/releases/growth-center-${mode==='qa'?'qa':'release'}.json`;
 const m=JSON.parse(fs.readFileSync(marker,'utf8'));
 const keys=mode==='qa'?['version','sourceSha']:['version','sourceSha','qaRunId','qaCommitSha','artifactId'];
-assert(Object.keys(m).every(k=>keys.includes(k))&&keys.every(k=>k in m),'Invalid manifest fields');
+const allowedKeys=mode==='deploy'?[...keys,'attempt']:keys;
+assert(Object.keys(m).every(k=>allowedKeys.includes(k))&&keys.every(k=>k in m),'Invalid manifest fields');
+// Retry nonce only changes the marker; it never selects code, QA run or artifact.
+if('attempt' in m)assert(mode==='deploy'&&Number.isInteger(m.attempt)&&m.attempt>=1&&m.attempt<=10,'Invalid release attempt');
 assert(m.version===1&&/^[a-f0-9]{40}$/.test(m.sourceSha),'Invalid source SHA');
 execFileSync('git',['merge-base','--is-ancestor',m.sourceSha,process.env.GITHUB_SHA]);
 assert(m.sourceSha!==process.env.GITHUB_SHA,'Marker must follow tested source');

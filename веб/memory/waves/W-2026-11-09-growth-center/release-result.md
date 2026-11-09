@@ -19,3 +19,9 @@ Source7de8d1c2407df829f06de1c84f60921c883f63bf; QA trigger efa747e3072f885af365f
 [Release42678794724](https://github.com/Nighttech1/Content-Factory/actions/runs/42678794724), marker7985a345: gate и identity artifact прошли. Первый read-only SSH disk preflight завершился `Connection timed out`, порт22, exit255. До remote mkdir/SCP/backup/PM2stop выполнение не дошло; никакой server backup или rollback не выдаётся за выполненный. Работающий сайт проверен root браузером: прежний /marketing доступен, нового раздела нет.
 
 Следующий шаг — отдельная ограниченная DNS/TCP диагностика через workflow без SSH_KEY/USER, без авторизации и серверных изменений. Выводятся только безопасные статусы, а не значения secrets. Фактическая причина (firewall/route/stale binding/порт) пока не установлена. Проверенный artifact13702100156 сохраняется, новый app build не нужен для повторной доставки.
+
+## Read-only диагноз и повторная доставка
+
+[Connectivity42679851527](https://github.com/Nighttech1/Content-Factory/actions/runs/42679851527): HOST valid/resolves, PORT binding отсутствует (default22), HOST не совпадает с DNS публичного домена; TCP secretHOST22/80/443 timeout, тогда как content_domain_TCP_SSH=ok и referenceGitHub22=ok, публичный HTTPS отвечает307. Это не глобальный запрет исходящегоSSH runner. Значения secrets не выводились; SSH_KEY/USER этот workflow вообще не получал.
+
+Root выбирает явно указанный владельцем target content.vernatunspeakclub.com как SSH hostname вместо недоступного HOSTbinding. USER/KEY и host-key policy сохранены, PM2/app/UID preflight проверит нужный сервер до изменений. Изменены только rollout workflow и gate: optional attempt1…10 служит номером повторной доставки, identity source/QA/artifact не меняет; boundary/unknown/missingfield проверки PASS. App source и проверенный bundle прежние, rebuild не нужен. Повторная доставка ещё должна фактически пройти.
