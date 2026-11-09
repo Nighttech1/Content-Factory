@@ -1,5 +1,5 @@
 {
   "version": 1,
-  "reason": "Read-only existing systemd unit and port3087 identity before authorized release",
-  "attempt": 5
+  "reason": "Read-only exact identity predicate diagnostics after safe preflight stop",
+  "attempt": 6
 }

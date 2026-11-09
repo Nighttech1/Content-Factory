@@ -19,7 +19,7 @@ printf 'REMOTE_ROOT_PM2_PID_ALIVE=%s\\n' "$PM2_ALIVE"
 `+String.raw`
 if command -v python3 >/dev/null 2>&1; then
 python3 - <<'GROWTH_INVENTORY'
-import json, os, pathlib, pwd, re, subprocess
+import json, os, pathlib, pwd, grp, re, shlex, subprocess
 base='/opt/content-factory'
 def under(value):
  return value==base or value.startswith(base+'/')
@@ -92,7 +92,7 @@ for folder in ['/etc/nginx/sites-enabled','/etc/nginx/conf.d']:
 current=base+'/current'
 basedata['current']=dict(path=current,exists=os.path.exists(current),symlink=os.path.islink(current),realpath=os.path.realpath(current))
 unit={}
-properties=['User','Group','MainPID','WorkingDirectory','FragmentPath','DropInPaths','EnvironmentFiles','ReadWritePaths','ProtectSystem','ExecStart']
+properties=['User','Group','ActiveState','SubState','MainPID','WorkingDirectory','FragmentPath','DropInPaths','EnvironmentFiles','ReadWritePaths','ProtectSystem','ExecStart']
 try:
  result=subprocess.run(['systemctl','show','content-factory.service','--no-pager']+['--property='+name for name in properties],capture_output=True,text=True,timeout=8)
  if result.returncode==0:
@@ -102,6 +102,34 @@ try:
   executable=re.search(r'(?:^|[ {;])path=([^ ;}]+)',raw)
   entries=re.findall(r'/opt/content-factory/(?:current|releases/[A-Za-z0-9_.-]+)/server\.js',raw)
   unit['ExecStartIdentity']=dict(executable=executable[1] if executable else None,entrypoints=sorted(set(entries)),usesCurrent=(base+'/current/server.js') in entries)
+  argmatch=re.search(r'argv\[\]=(.*?)\s*;',raw)
+  try: argv=shlex.split(argmatch[1]) if argmatch else []
+  except ValueError: argv=[]
+  expected={'relative_server':['/usr/bin/node','server.js'],'dot_relative_server':['/usr/bin/node','./server.js'],'absolute_current_server':['/usr/bin/node',base+'/current/server.js']}
+  unit['ExecStartIdentity']['classification']=next((name for name,args in expected.items() if argv==args),'other')
+  try:
+   account=pwd.getpwnam('content-factory'); namedgroup=grp.getgrnam('content-factory')
+   unit['AccountIdentity']=dict(uid=account.pw_uid,primaryGid=account.pw_gid,namedGroupGid=namedgroup.gr_gid)
+  except KeyError: unit['AccountIdentity']={}
+  account=unit['AccountIdentity']; old=os.path.realpath(current)
+  main=next((p for p in allp if str(p['pid'])==values.get('MainPID')),None)
+  unit['DiagnosticIdentityFlags']=dict(
+   userGroupNames=values.get('User')=='content-factory' and values.get('Group')=='content-factory',
+   accountUid980=account.get('uid')==980,hardcodedGid980=account.get('namedGroupGid')==980,
+   primaryGroupMatchesNamed=account.get('primaryGid') is not None and account.get('primaryGid')==account.get('namedGroupGid'),
+   activeRunning=values.get('ActiveState')=='active' and values.get('SubState')=='running',
+   workingDirectoryCurrent=values.get('WorkingDirectory')==base+'/current',noDropIns=not values.get('DropInPaths'),
+   execPathNode=executable is not None and executable[1]=='/usr/bin/node',
+   execArgvAllowedOld=argv in [expected['relative_server'],expected['absolute_current_server']],
+   environmentFileExact=values.get('EnvironmentFiles','').strip()=='/etc/content-factory/app.env (ignore_errors=no)',
+   currentUnderReleases=old.startswith(base+'/releases/'),oldServerExists=os.path.isfile(old+'/server.js'),
+   mainPidNumeric=values.get('MainPID','').isdigit() and int(values['MainPID'])>1,
+   mainPidUid980=bool(main and main['uid']==980),mainPidCwdMatchesCurrent=bool(main and main['cwd']==old),
+   listener3087OwnedByMainPid=any(str(p['pid'])==values.get('MainPID') for p in listenersByPort[3087]),
+   dataTarget=os.path.isdir('/var/lib/content-factory/data') and os.path.realpath(old+'/data')=='/var/lib/content-factory/data',
+   mediaTarget=os.path.isdir('/var/lib/content-factory/generatedMedia') and os.path.realpath(old+'/generatedMedia')=='/var/lib/content-factory/generatedMedia',
+   publicTarget=os.path.isdir('/var/lib/content-factory/public') and os.path.realpath(old+'/public')=='/var/lib/content-factory/public',
+   envTarget=os.path.isfile('/etc/content-factory/app.env') and os.path.realpath(old+'/.env.production')=='/etc/content-factory/app.env')
  else: unit={'status':'unavailable'}
 except (OSError,subprocess.TimeoutExpired): unit={'status':'unavailable'}
 out=dict(status='ok',base=basedata,processes=apps,listeners8088=listenersByPort[8088][:8],listeners3087=listenersByPort[3087][:8],managers=managers[:8],storage=storage[:64],nginx=nginx[:8],unit=unit)
