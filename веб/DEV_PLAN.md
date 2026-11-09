@@ -1,8 +1,8 @@
 # DEV_PLAN.md — Живой план Vernatun Content Factory
 
-## W-2026-11-10-situation-center — доработка готова к независимой браузерной приёмке
+## W-2026-11-10-situation-center — внутренняя приёмка PASS, production не обновлён
 
-Пятый раздел «Ситуационный центр» (`/growth`); 14 предложенных контентных механик по выбранному этапу, рубрики юмор/полезное/мини-сериал/другие, отдельные от 24 производственных заданий. Пять ссылок desktop/mobile, линейный шестой шаг return→membership с корректным знаменателем. Spec/chain до кода: `memory/waves/W-2026-11-10-situation-center/`. Независимые сценарии Tester и Client готовятся к QA-only Actions; до реального browser/evidence внутреннюю приёмку не объявлять. Production/release marker вне этой волны; данные/чат/студия сохраняются.
+Пятый раздел «Ситуационный центр» (`/growth`); 14 предложенных контентных механик по выбранному этапу, рубрики юмор/полезное/мини-сериал/другие, отдельные от 24 производственных заданий. Пять ссылок desktop/mobile, линейный шестой шаг return→membership с корректным знаменателем. Spec/chain до кода: `memory/waves/W-2026-11-10-situation-center/`. QA-only Actions42704640983 source3ac253b6 PASS: build/type/model, основной browser + synthetic fixture + отдельный Client script на1440/390/412/360, errors[]. Evidence13712787361; build13713870877. Независимый Client verdict ПРИНЯТО: client-acceptance.md, реально осмотрены JSON/DOM/7PNG; открытых C-* нет. Приёмка владельцем отдельно. Deploy SKIPPED, production/release marker не менялись; данные/чат/студия сохранены.
 
 ## W-2026-11-09-growth-center — разработка и QA готовы, SSH блокирует выкладку
 

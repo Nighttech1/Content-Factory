@@ -22,7 +22,7 @@
 | Frontend | `components/growth-center/**`, `components/shell/SidebarNavigation.tsx`, `app/growth/page.tsx`, минимальная link-label правка `components/marketing/GrowthDashboard.tsx` | Не старый чат/store, не model/JSON. AppShell только если выявлен обязательный новый mobile blocker и lock согласован |
 | Тестировщик | Новые/актуализированные browser guards `scripts/growth-center-browser-qa.mjs` (root scripts), `веб/scripts/test-growth-center-browser-fixture.mjs` + report/guards wave | Не app fixes; semantic expectation update после сравнения spec. Артефакты screenshot не коммитить в Git |
 | Деплоер | Local process/build/start, report wave | Не release marker/workflow changes/VPS/credentials; разрешён только QA marker после фикса source SHA |
-| Клиент | Только report/tickets/evidence wave | Никаких app mutation; найденные баги возвращать владельцу пути |
+| Клиент | `scripts/situation-center-client-qa.mjs` — независимые read-only UI-сценарии для QA-only CI; report/tickets/evidence wave | Никаких app mutation; найденные баги возвращать владельцу пути. Отдельный вызов сценария в QA job интегрирует Деплоер |
 | Фиксер | Только явно переданные файлы конкретного C-* | После фикса lock возвращается Tester/Client |
 | Оркестратор | Scope/STATE/DEV_PLAN handoff, финальная интеграция после освобождения locks | Не править активный путь другого агента; QA-only source push и marker, не release |
 

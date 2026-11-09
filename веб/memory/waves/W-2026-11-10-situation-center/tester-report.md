@@ -1,8 +1,17 @@
 # Тестировщик — подготовка и независимые проверки
 
-Дата: 10.11.2026, Москва. Роль из проектного реестра, отдельный субагент. Browser-вердикт до CI открыт.
+Дата: 10.11.2026, Москва. Роль из проектного реестра, отдельный субагент. Реальный browser QA ниже подтверждён после CI; независимый финальный вердикт остаётся за Клиентом.
 
-## Фактически выполнено
+
+## Актуальный итог после реального CI — PASS
+
+Проверка: [GitHub Actions42704640983](https://github.com/Nighttech1/Content-Factory/actions/runs/42704640983), tested source `3ac253b6ad9ec307bc82dcde3fcc5465f01e7115`, evidence artifact `13712787361`, revision `situation-v2-20261110-01`. Тестировщик независимо прочитала скачанные `browser-report.json` и `nonempty-browser-report.json`: оба `status=passed`, `errors=[]`, каждый содержит четыре успешные ширины1440/390/412/360.
+
+Основной прогон подтвердил все8 этапов,5 разделов,фильтры/сброс,раскрытые примеры,Plan/Fact isolation,tab recovery,keyboard,старый чат,24 задания и отсутствие overflow. Отдельная synthetic fixture подтвердила непустые графики,исторические переходы,period filters,tooltip provenance,посещаемость и строго одну synthetic публикацию. В её layout evidence `documentWidth=bodyWidth=viewportWidth`, `offending=[]` для всех четырёх ширин.
+
+Дополнительно сверено: локальный canonical JSON **побайтно совпадает с tested source**; SHA256 `1d10feb7f1b5d6d9a60f44909fefa1304fc5704586df51be934a61f73f576f14`. В canonical нет `qa-only`, `qa-cohort`, `qa-isolated-not-production` или synthetic URLs; `meetings=[]`,все series.points пусты,подтверждённых публикаций0. Fixture не загрязнила общие данные. Production deploy в этой QA-волне не выполнялся; это не подтверждение появления /growth на VPS.
+
+## Локальные проверки до CI
 
 | Проверка | Результат |
 |---|---|
@@ -25,4 +34,4 @@ Main QA сохраняет explicit passed/failed status и failure screenshot. 
 
 ## Ограничения
 
-Локальный Chromium launch root фактически попробовала, он заблокирован `socket() EPERM`; версия браузера сама по себе не является live PASS. Применимый браузерный gate будет выполнен через существующий QA-only GitHub Actions. Ни production deploy, ни платные API, ни внешние сообщения Тестировщик не выполняла. Независимая приёмка Клиентом требуется после фактического CI и осмотра evidence; этот отчёт не подменяет её.
+Локальный Chromium launch root фактически попробовала, он заблокирован `socket() EPERM`; версия браузера сама по себе не является live PASS. Применимый браузерный gate фактически выполнен через QA-only GitHub Actions, как зафиксировано выше. Ни production deploy, ни платные API, ни внешние сообщения Тестировщик не выполняла. Независимая приёмка Клиентом с осмотром evidence остаётся отдельным этапом; этот отчёт не подменяет её.
