@@ -1,3 +1,4 @@
+import { normalizeCarouselSlideRole } from "../types/design";
 /**
  * Phase 1 — Vernatun wordmark HTML logo re-composite smoke.
  * Reuses bg plates embedded in vision-style-copy-smoke-A-in-image-6 HTML
@@ -135,7 +136,7 @@ async function main() {
     const secondary = extractCopy(srcHtml, "secondary");
     const i0 = i - 1;
     const role = roleForIndex(i0, SLIDES);
-    const layout = synthesizeFallbackHtmlLayout(role, i0);
+    const layout = synthesizeFallbackHtmlLayout(normalizeCarouselSlideRole(role, i0, SLIDES), i0);
     layout.logo = { placement: "bottom-right" };
     layout.brandChrome = "bottom-right";
 

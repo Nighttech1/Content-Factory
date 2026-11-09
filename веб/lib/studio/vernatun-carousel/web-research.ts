@@ -194,7 +194,7 @@ export async function gatherResearchSources(
         });
         continue;
       }
-      const enriched = [];
+      const enriched: ResearchSourcePack["hits"] = [];
       for (const h of hits.slice(0, openTop)) {
         const page = await fetchPageExcerpt(h.url);
         enriched.push({

@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   // C-team-brief-n-indicator — hide Next.js DevTools bottom-left «N»
   devIndicators: false,
 };

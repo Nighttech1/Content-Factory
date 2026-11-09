@@ -1,3 +1,4 @@
+import { normalizeCarouselSlideRole } from "../types/design";
 /**
  * Wave 2026-10-18-design-inject-logo-br — Tester G1–G10 guards.
  *   npx tsx scripts/verify-design-inject-logo-br-guards.ts
@@ -148,8 +149,8 @@ async function main() {
   // —— G4 secondary_copy richness ——
   check(
     "G4_critic_bar_consts",
-    SECONDARY_COPY_MIN_CHARS_BODY === 120 &&
-      SECONDARY_COPY_MIN_CLAUSES_BODY === 3,
+    Number(SECONDARY_COPY_MIN_CHARS_BODY) === 120 &&
+      Number(SECONDARY_COPY_MIN_CLAUSES_BODY) === 3,
     `chars=${SECONDARY_COPY_MIN_CHARS_BODY} clauses=${SECONDARY_COPY_MIN_CLAUSES_BODY}`,
   );
   check(
@@ -170,15 +171,15 @@ async function main() {
     /2–3× richer|2-3× richer|secondary_copy_rich/i.test(overlay) ||
       /2–3× richer|secondary_copy/.test(
         String(
-          resolveCreateCarouselOverlay("scriptwriter", "generate", {}) ?? "",
+          resolveCreateCarouselOverlay("scriptwriter", "draw", {}) ?? "",
         ),
       ),
     "SW/Designer overlay mentions rich secondary",
   );
 
   // —— G5 logo chrome BR ——
-  check("G5_default_chrome", DEFAULT_BRAND_CHROME === "bottom-right", DEFAULT_BRAND_CHROME);
-  check("G5_logo_88", BRAND_LOGO_SIZE_PX === 88, String(BRAND_LOGO_SIZE_PX));
+  check("G5_default_chrome", String(DEFAULT_BRAND_CHROME) === "bottom-right", DEFAULT_BRAND_CHROME);
+  check("G5_logo_88", Number(BRAND_LOGO_SIZE_PX) === 88, String(BRAND_LOGO_SIZE_PX));
   const cover0 = synthesizeFallbackHtmlLayout("cover", 0);
   const html = buildLayeredSlideHtml({
     slide: {
@@ -315,7 +316,7 @@ async function main() {
   );
 
   // —— G9 layout variety ——
-  const allLeft = [0, 1, 2].map(() => synthesizeFallbackHtmlLayout("body", 0));
+  const allLeft = [0, 1, 2].map(() => synthesizeFallbackHtmlLayout(normalizeCarouselSlideRole("body", 1, 3), 0));
   for (const l of allLeft) {
     l.text_block.anchor = "left";
     l.text_block.vertical = "top";
@@ -331,8 +332,8 @@ async function main() {
     shuffled.shuffled && validateLayoutVariety(shuffled.layouts).ok,
     "soft-shuffle restores variety",
   );
-  const b1 = synthesizeFallbackHtmlLayout("body", 1);
-  const b2 = synthesizeFallbackHtmlLayout("body", 2);
+  const b1 = synthesizeFallbackHtmlLayout(normalizeCarouselSlideRole("body", 1, 3), 1);
+  const b2 = synthesizeFallbackHtmlLayout(normalizeCarouselSlideRole("body", 1, 3), 2);
   check(
     "G9_fallback_rotate",
     b1.text_block.anchor !== b2.text_block.anchor ||

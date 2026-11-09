@@ -199,7 +199,7 @@ async function main() {
   });
   assert(
     "approve_scheduled",
-    approved?.status === "scheduled" || approved?.status === "SCHEDULED",
+    approved?.status === "scheduled",
     `status=${approved?.status}`,
   );
   const slots = await listScheduleSlots({ userId: actor.userId });
@@ -207,7 +207,7 @@ async function main() {
   assert(
     "approve_persisted",
     !!apprSlot &&
-      (apprSlot.status === "scheduled" || apprSlot.status === "SCHEDULED"),
+      apprSlot.status === "scheduled",
     `slot status=${apprSlot?.status}`,
   );
 

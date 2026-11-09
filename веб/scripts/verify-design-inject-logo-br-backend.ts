@@ -1,3 +1,4 @@
+import { normalizeCarouselSlideRole } from "../types/design";
 /**
  * Backend self-check for wave 2026-10-18-design-inject-logo-br (not Tester G1–G10).
  *   npx tsx scripts/verify-design-inject-logo-br-backend.ts
@@ -28,8 +29,8 @@ function ok(name: string, pass: boolean, detail?: string) {
 
 ok("pretty_01_06", formatPrettySlideNum(0, 6) === "01 / 06", formatPrettySlideNum(0, 6));
 ok("pretty_06_06", formatPrettySlideNum(5, 6) === "06 / 06");
-ok("logo_size_88", BRAND_LOGO_SIZE_PX === 88);
-ok("default_chrome_br", DEFAULT_BRAND_CHROME === "bottom-right");
+ok("logo_size_88", Number(BRAND_LOGO_SIZE_PX) === 88);
+ok("default_chrome_br", String(DEFAULT_BRAND_CHROME) === "bottom-right");
 
 const fitUp = applyFontFitReduceOnly(40, { fontSizeOverride: 64, role: "primary" });
 ok("fontFit_no_enlarge", fitUp.px === 40 && !fitUp.reduced, JSON.stringify(fitUp));
@@ -40,7 +41,7 @@ ok("fontFit_reduce", fitDown.px === 32 && fitDown.reduced);
 const fitPos = applyFontFitReduceOnly(40, { fontFit: { deltaPx: 12 } });
 ok("fontFit_positive_ignored", fitPos.px === 40);
 
-const allLeft = [0, 1, 2].map(() => synthesizeFallbackHtmlLayout("body", 0));
+const allLeft = [0, 1, 2].map(() => synthesizeFallbackHtmlLayout(normalizeCarouselSlideRole("body", 1, 3), 0));
 for (const l of allLeft) {
   l.text_block.anchor = "left";
   l.text_block.vertical = "top";
@@ -53,8 +54,8 @@ ok(
 );
 
 const cover0 = synthesizeFallbackHtmlLayout("cover", 0);
-const body1 = synthesizeFallbackHtmlLayout("body", 1);
-const body2 = synthesizeFallbackHtmlLayout("body", 2);
+const body1 = synthesizeFallbackHtmlLayout(normalizeCarouselSlideRole("body", 1, 3), 1);
+const body2 = synthesizeFallbackHtmlLayout(normalizeCarouselSlideRole("body", 1, 3), 2);
 ok("fallback_logo_br", cover0.logo?.placement === "bottom-right");
 ok(
   "fallback_rotate",

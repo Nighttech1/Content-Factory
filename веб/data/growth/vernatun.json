@@ -1,0 +1,1102 @@
+{
+  "version": 2,
+  "projectId": "vernatun",
+  "revision": "growth-v2-20261109-01",
+  "updatedAt": "2026-11-09",
+  "planStatus": "draft",
+  "planHorizon": {
+    "start": "2026-11-09",
+    "end": "2026-12-31"
+  },
+  "sources": [
+    {
+      "id": "owner-20261106",
+      "title": "Вводные владельца",
+      "location": "projects/vernatun/brand/brief.md",
+      "date": "2026-11-06",
+      "geography": "Москва / каналы клуба",
+      "limitation": "Оценки владельца, не свежая выгрузка. Подписчики пересекаются, максимум гостей не среднее и не вместимость."
+    },
+    {
+      "id": "scout-v6",
+      "title": "Маркетинговая разведка v6",
+      "location": "https://github.com/Nighttech1/Content-Factory/blob/codex/scout-handoff-20261109/projects/vernatun/departments/scout/reports/2026-11/S-202611-GEN-02.md",
+      "date": "2026-11-09",
+      "geography": "Москва + сравнительные онлайн/межгородские проекты",
+      "limitation": "Частичная приёмка. Нет полного API-покрытия, московского платёжного спроса и внутренней экономики."
+    },
+    {
+      "id": "editorial-briefs",
+      "title": "Канонические задания контентных отделов",
+      "location": "projects/vernatun/content-plan/2026-11.md",
+      "date": "2026-11-09",
+      "geography": "Вернатун, план до 31.12.2026",
+      "limitation": "Это proposed backlog, не запущенное производство и не 24 публикации за 14 дней. Даты — слоты, не расписание встреч."
+    },
+    {
+      "id": "director-plan",
+      "title": "Предложенные цели первого 14-дневного теста",
+      "location": "projects/vernatun/brand/growth-marketing-playbook.md",
+      "date": "2026-11-09",
+      "geography": "Одна релевантная московская кампания",
+      "limitation": "Управленческие ориентиры без измеренной базы, не прогноз. Владелец ещё не утвердил. Охват уникальных людей требует дедупликации и проверки релевантности."
+    },
+    {
+      "id": "no-measurement",
+      "title": "Замер ещё не предоставлен",
+      "location": "projects/vernatun/brand/brief.md",
+      "date": "2026-11-09",
+      "geography": "Кампания клуба",
+      "limitation": "null означает неизвестно; это не нулевой результат. Нет истории встреч и оплаченных подписок."
+    },
+    {
+      "id": "market-evidence",
+      "title": "Количественная база и конкурентные альтернативы",
+      "location": "projects/vernatun/brand/growth-market-evidence-20261109.md",
+      "date": "2026-11-09",
+      "geography": "Москва / область; переписной ориентир2021",
+      "limitation": "Историческая демография через вторичные таблицы. Первичный XLSX Росстата не прочитан; не TAM/SAM покупателей2026."
+    }
+  ],
+  "stages": [
+    {
+      "id": "awareness",
+      "label": "Узнать о клубе",
+      "audience": "Холодная Москва: базовый/подзабытый армянский и поиск своих",
+      "job": "Хочу интересный вечер и живой круг людей, а не ещё один урок.",
+      "barrier": "Человек ещё не знает, зачем хотеть этот вечер.",
+      "product": "Разговорные встречи — флагман клуба",
+      "strategy": "Покажи момент, в который хочется попасть: лица, смех, взаимную реакцию и настоящий разговор. Собственный Reels; затем один согласованный репост площадки или рекомендация гостя. Не ограничиваться своим TG; не запускать массовые сообщения.",
+      "nextAction": "Выбрать один внешний источник на 14 дней и поставить метку/добровольный вопрос об источнике первого визита.",
+      "owner": "Директор → reel-lead; владелец даёт кадры и вручную передаёт задание/публикует.",
+      "metricId": "stage-awareness",
+      "targetId": "target-awareness",
+      "contentIds": [
+        "V-202611-REL-01",
+        "V-202611-REL-02",
+        "V-202612-REL-01",
+        "V-202612-REL-02",
+        "V-202612-REL-03",
+        "V-202612-REL-04"
+      ]
+    },
+    {
+      "id": "desire",
+      "label": "Захотеть прийти",
+      "audience": "Человек увидел атмосферу и хочет понять, подходит ли ему клуб",
+      "job": "Хочу понять, кто там будет и что я получу за свой вечер.",
+      "barrier": "Неясна ценность, компания и пригодность клуба лично ему.",
+      "product": "Клуб и ближайший разговорный вечер",
+      "strategy": "Вот как люди знакомятся у нас — и что будет в твой первый раз. Профиль → TG/закреп с одной ясной ссылкой на подтверждённое событие. География Москва видна.",
+      "nextAction": "Проверить обещание профиля, закреп и следующий шаг; убрать противоречия даты/цены/места.",
+      "owner": "Директор + владелец; carousel-lead по ID.",
+      "metricId": "stage-desire",
+      "targetId": "target-desire",
+      "contentIds": [
+        "V-202611-REL-01",
+        "V-202611-CAR-02",
+        "V-202611-CAR-01",
+        "V-202611-CAR-03",
+        "V-202611-REL-02",
+        "V-202612-REL-01",
+        "V-202612-CAR-01",
+        "V-202612-REL-02",
+        "V-202612-REL-03",
+        "V-202612-CAR-03",
+        "V-202612-CAR-06"
+      ]
+    },
+    {
+      "id": "registration",
+      "label": "Записаться",
+      "audience": "Тёплый человек, готовый выбрать вечер",
+      "job": "Хочу быстро понять условия и записаться без переписки по кругу.",
+      "barrier": "Неоднозначные условия и лишние шаги записи.",
+      "product": "Конкретная подтверждённая встреча",
+      "strategy": "Тема, время, адрес, полная цена и как попасть — в одном месте. TG и бот @vernatunbot; карточка события на сайте при подтверждённой актуальности.",
+      "nextAction": "Владелец подтверждает карточку; пройти путь только чтением, не совершая тестовый платёж.",
+      "owner": "Владелец подтверждает условия; scriptwriter-article → редактор → апрув.",
+      "metricId": "stage-registration",
+      "targetId": "target-registration",
+      "contentIds": [
+        "V-202611-ART-01",
+        "V-202611-CAR-01",
+        "V-202611-ART-02",
+        "V-202611-ART-03",
+        "V-202612-ART-01",
+        "V-202612-ART-02",
+        "V-202612-ART-03",
+        "V-202612-ART-04",
+        "V-202612-ART-05"
+      ]
+    },
+    {
+      "id": "attendance",
+      "label": "Прийти впервые",
+      "audience": "Записавшийся новичок",
+      "job": "Хочу не потеряться и включиться в разговор, даже если пришёл один.",
+      "barrier": "Дорога, неловкость первого прихода и неявка.",
+      "product": "Первый разговорный опыт",
+      "strategy": "Тебя встретят и помогут начать — показываем, как именно. Информация в записи/подтверждённом чате события; никакой самостоятельной массовой рассылки агентами.",
+      "nextAction": "Встретить, познакомить, проверить понимание правил; записать агрегаты впервые пришедших и неявок.",
+      "owner": "Владелец/реальный ведущий; директор готовит сценарий первого опыта.",
+      "metricId": "stage-attendance",
+      "targetId": "target-attendance",
+      "contentIds": [
+        "V-202611-ART-01",
+        "V-202611-CAR-01",
+        "V-202611-ART-02",
+        "V-202611-ART-03",
+        "V-202612-ART-01",
+        "V-202612-ART-02",
+        "V-202612-ART-03",
+        "V-202612-ART-04",
+        "V-202612-ART-05"
+      ]
+    },
+    {
+      "id": "return",
+      "label": "Вернуться",
+      "audience": "Человек уже пришёл впервые",
+      "job": "Хочу снова встретить знакомых и продолжить начатое.",
+      "barrier": "Нет связи с людьми/следующего повода или неудобно время.",
+      "product": "Повторная встреча и комьюнити",
+      "strategy": "Следующий разговор начинается с тех, кого ты уже встретил. TG/чат клуба; сообщение владельца только в разрешённом контексте. Контент не заменяет качество опыта.",
+      "nextAction": "Назвать следующий подтверждённый повод, отметить повторный визит; 30-дневные когорты считать только созревшими.",
+      "owner": "Владелец обеспечивает опыт и учёт; директор + аналитик оценивают возврат.",
+      "metricId": "stage-return",
+      "targetId": "target-return",
+      "contentIds": [
+        "V-202611-CAR-04",
+        "V-202612-CAR-01",
+        "V-202612-CAR-02",
+        "V-202612-REL-04",
+        "V-202612-CAR-04",
+        "V-202612-CAR-05",
+        "V-202612-CAR-06"
+      ]
+    },
+    {
+      "id": "membership",
+      "label": "Подписка",
+      "audience": "Реальные гости с повторяемой потребностью",
+      "job": "Хочу регулярно участвовать и заранее понимать выгоду и доступность мест.",
+      "barrier": "Не доказаны частота, выгода, экономика и обеспеченные места.",
+      "product": "Клубная подписка / ограниченный пакет — гипотеза",
+      "strategy": "Сколько встреч ты действительно посетишь — и когда пакет выгоднее разовых билетов? Добровольный разговор с текущими повторными гостями через владельца; не холодная продажа несуществующего продукта.",
+      "nextAction": "Сначала себестоимость, частота, календарь и квоты; затем 5 разговоров о выборе; платный пилот только отдельным решением.",
+      "owner": "Директор считает варианты; владелец утверждает тариф/условия и возможный запуск.",
+      "metricId": "stage-membership",
+      "targetId": "target-membership",
+      "contentIds": [
+        "V-202612-CAR-02"
+      ]
+    },
+    {
+      "id": "advocacy",
+      "label": "Рекомендации",
+      "audience": "Гости с хорошим повторным опытом, независимо от подписки",
+      "job": "Хочу познакомить друга с местом, которое мне нравится.",
+      "barrier": "Нет простого правдивого материала, которым хочется поделиться.",
+      "product": "Комьюнити и рекомендации",
+      "strategy": "Кому из друзей понравился бы такой вечер? Добровольные рекомендации гостей; один согласованный репост партнёра/площадки, без выгрузки контактов.",
+      "nextAction": "Спросить у нового гостя источник по желанию; считать подтверждённые рекомендации отдельно от общего числа пересылок.",
+      "owner": "Владелец + текущие добровольцы; директор готовит пересылаемый материал.",
+      "metricId": "stage-advocacy",
+      "targetId": "target-advocacy",
+      "contentIds": [
+        "V-202611-CAR-04",
+        "V-202612-REL-04",
+        "V-202612-CAR-05"
+      ]
+    },
+    {
+      "id": "reactivation",
+      "label": "Реактивация",
+      "audience": "Ранее участвовавшие, давно не посещавшие по заранее заданному правилу",
+      "job": "Хочу вернуться без неловкости и найти подходящий новый повод.",
+      "barrier": "Пауза, изменившееся время/интерес и неловкость возвращения.",
+      "product": "Возвращение в клуб после паузы",
+      "strategy": "Давно не виделись — вот что можно обсудить вместе. Общий TG/разрешённый контекст общения владельца; не писать участникам агентом без отдельного поручения.",
+      "nextAction": "Определить неактивность, например 60 дней без визита, как рабочее правило; измерить подходящую базу и реальный возврат.",
+      "owner": "Владелец/аналитик определяют обезличенную базу; директор выбирает один повод.",
+      "metricId": "stage-reactivation",
+      "targetId": "target-reactivation",
+      "contentIds": [
+        "V-202612-CAR-04",
+        "V-202612-CAR-05",
+        "V-202612-CAR-06"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "id": "stage-awareness",
+      "stageId": "awareness",
+      "label": "Узнать о клубе",
+      "definition": "Уникальные релевантные московские люди одной кампании, не число просмотров ролика.",
+      "value": null,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "cohortId": "first-campaign-20261109",
+      "provenance": {
+        "sourceId": "no-measurement",
+        "observedAt": "2026-11-09",
+        "kind": "unknown",
+        "note": "Нет фактического замера; период первого теста предложен, не завершён."
+      },
+      "windowDays": null
+    },
+    {
+      "id": "stage-desire",
+      "stageId": "desire",
+      "label": "Захотеть прийти",
+      "definition": "Уникальные целевые переходы/проявления интереса той же кампании.",
+      "value": null,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "cohortId": "first-campaign-20261109",
+      "provenance": {
+        "sourceId": "no-measurement",
+        "observedAt": "2026-11-09",
+        "kind": "unknown",
+        "note": "Нет фактического замера; период первого теста предложен, не завершён."
+      },
+      "windowDays": null
+    },
+    {
+      "id": "stage-registration",
+      "stageId": "registration",
+      "label": "Записаться",
+      "definition": "Уникальные первые регистрации на подтверждённое событие.",
+      "value": null,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "cohortId": "first-campaign-20261109",
+      "provenance": {
+        "sourceId": "no-measurement",
+        "observedAt": "2026-11-09",
+        "kind": "unknown",
+        "note": "Нет фактического замера; период первого теста предложен, не завершён."
+      },
+      "windowDays": null
+    },
+    {
+      "id": "stage-attendance",
+      "stageId": "attendance",
+      "label": "Прийти впервые",
+      "definition": "Люди этой когорты, реально пришедшие впервые.",
+      "value": null,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "cohortId": "first-campaign-20261109",
+      "provenance": {
+        "sourceId": "no-measurement",
+        "observedAt": "2026-11-09",
+        "kind": "unknown",
+        "note": "Нет фактического замера; период первого теста предложен, не завершён."
+      },
+      "windowDays": null
+    },
+    {
+      "id": "stage-return",
+      "stageId": "return",
+      "label": "Вернуться",
+      "definition": "Первые гости, пришедшие снова за30дней; процент только после созревания когорты.",
+      "value": null,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "cohortId": "first-campaign-20261109",
+      "provenance": {
+        "sourceId": "no-measurement",
+        "observedAt": "2026-11-09",
+        "kind": "unknown",
+        "note": "Нет фактического замера; период первого теста предложен, не завершён."
+      },
+      "windowDays": 30
+    },
+    {
+      "id": "stage-membership",
+      "stageId": "membership",
+      "label": "Подписка",
+      "definition": "Люди когорты, фактически оплатившие пакет/подписку. Намерение не оплата.",
+      "value": null,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "cohortId": "first-campaign-20261109",
+      "provenance": {
+        "sourceId": "no-measurement",
+        "observedAt": "2026-11-09",
+        "kind": "unknown",
+        "note": "Нет фактического замера; период первого теста предложен, не завершён."
+      },
+      "windowDays": null
+    },
+    {
+      "id": "stage-advocacy",
+      "stageId": "advocacy",
+      "label": "Рекомендации",
+      "definition": "Повторные гости когорты, действительно приведшие нового; ветка от return.",
+      "value": null,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "cohortId": "first-campaign-20261109",
+      "provenance": {
+        "sourceId": "no-measurement",
+        "observedAt": "2026-11-09",
+        "kind": "unknown",
+        "note": "Нет фактического замера; период первого теста предложен, не завершён."
+      },
+      "windowDays": null
+    },
+    {
+      "id": "stage-reactivation",
+      "stageId": "reactivation",
+      "label": "Реактивация",
+      "definition": "Вернувшиеся из заранее определённой неактивной базы, не первые гости.",
+      "value": null,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "cohortId": "first-campaign-20261109",
+      "provenance": {
+        "sourceId": "no-measurement",
+        "observedAt": "2026-11-09",
+        "kind": "unknown",
+        "note": "Нет фактического замера; период первого теста предложен, не завершён."
+      },
+      "windowDays": null
+    },
+    {
+      "id": "eligible-dormant",
+      "stageId": null,
+      "label": "Неактивная база для реактивации",
+      "definition": "Уникальные ранее участвовавшие гости с заранее заданным критерием неактивности. База должна совпадать с реактивационной когортой.",
+      "value": null,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "cohortId": "first-campaign-20261109",
+      "provenance": {
+        "sourceId": "no-measurement",
+        "observedAt": "2026-11-09",
+        "kind": "unknown",
+        "note": "Не предоставлена; нельзя делить реактивации на подписчиков или новых гостей."
+      },
+      "windowDays": null
+    },
+    {
+      "id": "baseline-tg",
+      "stageId": null,
+      "label": "Telegram-канал",
+      "definition": "Около400 по владельцу, не unique reach кампании.",
+      "value": 400,
+      "unit": "subscribers",
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-06",
+      "cohortId": null,
+      "provenance": {
+        "sourceId": "owner-20261106",
+        "observedAt": "2026-11-06",
+        "kind": "owner_estimate",
+        "note": "Около400 по владельцу, не unique reach кампании."
+      },
+      "windowDays": null
+    },
+    {
+      "id": "baseline-ig",
+      "stageId": null,
+      "label": "Instagram",
+      "definition": "Около800 по владельцу, не суммировать сTG.",
+      "value": 800,
+      "unit": "subscribers",
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-06",
+      "cohortId": null,
+      "provenance": {
+        "sourceId": "owner-20261106",
+        "observedAt": "2026-11-06",
+        "kind": "owner_estimate",
+        "note": "Около800 по владельцу, не суммировать сTG."
+      },
+      "windowDays": null
+    },
+    {
+      "id": "baseline-chat",
+      "stageId": null,
+      "label": "Telegram-чат",
+      "definition": "Около200 участников, активность не покупательский сегмент.",
+      "value": 200,
+      "unit": "people",
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-06",
+      "cohortId": null,
+      "provenance": {
+        "sourceId": "owner-20261106",
+        "observedAt": "2026-11-06",
+        "kind": "owner_estimate",
+        "note": "Около200 участников, активность не покупательский сегмент."
+      },
+      "windowDays": null
+    },
+    {
+      "id": "baseline-active-min",
+      "stageId": null,
+      "label": "Активные в чате: нижняя оценка",
+      "definition": "Оценка20–30; период активности не определён.",
+      "value": 20,
+      "unit": "people",
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-06",
+      "cohortId": null,
+      "provenance": {
+        "sourceId": "owner-20261106",
+        "observedAt": "2026-11-06",
+        "kind": "owner_estimate",
+        "note": "Оценка20–30; период активности не определён."
+      },
+      "windowDays": null
+    },
+    {
+      "id": "baseline-active-max",
+      "stageId": null,
+      "label": "Активные в чате: верхняя оценка",
+      "definition": "Оценка20–30; не подтверждённые30дней.",
+      "value": 30,
+      "unit": "people",
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-06",
+      "cohortId": null,
+      "provenance": {
+        "sourceId": "owner-20261106",
+        "observedAt": "2026-11-06",
+        "kind": "owner_estimate",
+        "note": "Оценка20–30; не подтверждённые30дней."
+      },
+      "windowDays": null
+    },
+    {
+      "id": "baseline-guests-max",
+      "stageId": null,
+      "label": "Максимум гостей: верх оценки",
+      "definition": "Наблюдавшийся максимум10–12; не среднее, не медиана, не вместимость.",
+      "value": 12,
+      "unit": "people",
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-06",
+      "cohortId": null,
+      "provenance": {
+        "sourceId": "owner-20261106",
+        "observedAt": "2026-11-06",
+        "kind": "owner_estimate",
+        "note": "Наблюдавшийся максимум10–12; не среднее, не медиана, не вместимость."
+      },
+      "windowDays": null
+    }
+  ],
+  "targets": [
+    {
+      "id": "target-awareness",
+      "stageId": "awareness",
+      "label": "Предложенная цель: Узнать о клубе",
+      "value": 200,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "approvalStatus": "draft",
+      "provisional": true,
+      "basis": "Управленческий ориентир первого14-дневного теста без измеренной базы. Не прогноз и не обещание. Нужен источник/дедупликация релевантных людей; бюджет0₽ и до3ч/неделю. Число материалов не гарантирует этот переход.",
+      "owner": "Контент-директор предлагает; владелец утверждает"
+    },
+    {
+      "id": "target-desire",
+      "stageId": "desire",
+      "label": "Предложенная цель: Захотеть прийти",
+      "value": 30,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "approvalStatus": "draft",
+      "provisional": true,
+      "basis": "Управленческий ориентир первого14-дневного теста без измеренной базы. Не прогноз и не обещание. Нужен источник/дедупликация релевантных людей; бюджет0₽ и до3ч/неделю. Число материалов не гарантирует этот переход.",
+      "owner": "Контент-директор предлагает; владелец утверждает"
+    },
+    {
+      "id": "target-registration",
+      "stageId": "registration",
+      "label": "Предложенная цель: Записаться",
+      "value": 10,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "approvalStatus": "draft",
+      "provisional": true,
+      "basis": "Управленческий ориентир первого14-дневного теста без измеренной базы. Не прогноз и не обещание. Нужен источник/дедупликация релевантных людей; бюджет0₽ и до3ч/неделю. Число материалов не гарантирует этот переход.",
+      "owner": "Контент-директор предлагает; владелец утверждает"
+    },
+    {
+      "id": "target-attendance",
+      "stageId": "attendance",
+      "label": "Предложенная цель: Прийти впервые",
+      "value": 8,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "approvalStatus": "draft",
+      "provisional": true,
+      "basis": "Управленческий ориентир первого14-дневного теста без измеренной базы. Не прогноз и не обещание. Нужен источник/дедупликация релевантных людей; бюджет0₽ и до3ч/неделю. Число материалов не гарантирует этот переход.",
+      "owner": "Контент-директор предлагает; владелец утверждает"
+    },
+    {
+      "id": "target-return",
+      "stageId": "return",
+      "label": "Предложенная цель: Вернуться",
+      "value": null,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "approvalStatus": "draft",
+      "provisional": true,
+      "basis": "30-дневный возврат нельзя оценить за первые14дней; сначала факты и созревшая когорта.",
+      "owner": "Контент-директор предлагает; владелец утверждает"
+    },
+    {
+      "id": "target-membership",
+      "stageId": "membership",
+      "label": "Предложенная цель: Подписка",
+      "value": null,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "approvalStatus": "draft",
+      "provisional": true,
+      "basis": "Подписка не запущена. Сначала ценность, расходы, частота и отдельный апрув платного пилота.",
+      "owner": "Контент-директор предлагает; владелец утверждает"
+    },
+    {
+      "id": "target-advocacy",
+      "stageId": "advocacy",
+      "label": "Предложенная цель: Рекомендации",
+      "value": 2,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "approvalStatus": "draft",
+      "provisional": true,
+      "basis": "Управленческий ориентир первого14-дневного теста без измеренной базы. Не прогноз и не обещание. Нужен источник/дедупликация релевантных людей; бюджет0₽ и до3ч/неделю. Число материалов не гарантирует этот переход.",
+      "owner": "Контент-директор предлагает; владелец утверждает"
+    },
+    {
+      "id": "target-reactivation",
+      "stageId": "reactivation",
+      "label": "Предложенная цель: Реактивация",
+      "value": 2,
+      "unit": "people",
+      "periodStart": "2026-11-09",
+      "periodEnd": "2026-11-22",
+      "approvalStatus": "draft",
+      "provisional": true,
+      "basis": "Управленческий ориентир первого14-дневного теста без измеренной базы. Не прогноз и не обещание. Нужен источник/дедупликация релевантных людей; бюджет0₽ и до3ч/неделю. Число материалов не гарантирует этот переход.",
+      "owner": "Контент-директор предлагает; владелец утверждает"
+    }
+  ],
+  "content": [
+    {
+      "id": "V-202611-REL-01",
+      "title": "Один вечер: свои люди и живой армянский",
+      "briefPath": "projects/vernatun/departments/reel/jobs/V-202611-REL-01/00-brief.md",
+      "plannedDate": "2026-11-11",
+      "product": "захотеть прийти → Разговорные встречи",
+      "format": "Короткое видео",
+      "channel": [
+        "IG",
+        "TG",
+        "YouTube Shorts"
+      ],
+      "stageIds": [
+        "awareness",
+        "desire"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202611-CAR-02",
+      "title": "Можно прийти одному: три понятных шага",
+      "briefPath": "projects/vernatun/departments/carousel/jobs/V-202611-CAR-02/00-brief.md",
+      "plannedDate": "2026-11-13",
+      "product": "Разговорные встречи",
+      "format": "Карусель",
+      "channel": [
+        "TG",
+        "IG"
+      ],
+      "stageIds": [
+        "desire"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202611-ART-01",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "briefPath": "projects/vernatun/departments/article/jobs/V-202611-ART-01/00-brief.md",
+      "plannedDate": "2026-11-15",
+      "product": "Разговорные встречи",
+      "format": "Короткий TG-текст",
+      "channel": [
+        "TG"
+      ],
+      "stageIds": [
+        "registration",
+        "attendance"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202611-CAR-01",
+      "title": "Первый вечер: от входа до первого разговора",
+      "briefPath": "projects/vernatun/departments/carousel/jobs/V-202611-CAR-01/00-brief.md",
+      "plannedDate": "2026-11-18",
+      "product": "Разговорные встречи",
+      "format": "Карусель",
+      "channel": [
+        "TG",
+        "IG"
+      ],
+      "stageIds": [
+        "desire",
+        "registration",
+        "attendance"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202611-CAR-03",
+      "title": "Как мы помогаем, когда слово ускользнуло",
+      "briefPath": "projects/vernatun/departments/carousel/jobs/V-202611-CAR-03/00-brief.md",
+      "plannedDate": "2026-11-20",
+      "product": "Разговорные встречи",
+      "format": "Карусель",
+      "channel": [
+        "TG",
+        "IG"
+      ],
+      "stageIds": [
+        "desire"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202611-ART-02",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "briefPath": "projects/vernatun/departments/article/jobs/V-202611-ART-02/00-brief.md",
+      "plannedDate": "2026-11-22",
+      "product": "Разговорные встречи",
+      "format": "Короткий TG-текст",
+      "channel": [
+        "TG"
+      ],
+      "stageIds": [
+        "registration",
+        "attendance"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202611-REL-02",
+      "title": "Что происходит в первые пять минут знакомства",
+      "briefPath": "projects/vernatun/departments/reel/jobs/V-202611-REL-02/00-brief.md",
+      "plannedDate": "2026-11-25",
+      "product": "Комьюнити и активности",
+      "format": "Короткое видео",
+      "channel": [
+        "IG",
+        "TG",
+        "YouTube Shorts"
+      ],
+      "stageIds": [
+        "awareness",
+        "desire"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202611-CAR-04",
+      "title": "Зачем я пришёл и почему вернулся",
+      "briefPath": "projects/vernatun/departments/carousel/jobs/V-202611-CAR-04/00-brief.md",
+      "plannedDate": "2026-11-27",
+      "product": "Комьюнити и активности",
+      "format": "Карусель",
+      "channel": [
+        "TG",
+        "IG"
+      ],
+      "stageIds": [
+        "return",
+        "advocacy"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202611-ART-03",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "briefPath": "projects/vernatun/departments/article/jobs/V-202611-ART-03/00-brief.md",
+      "plannedDate": "2026-11-29",
+      "product": "Разговорные встречи",
+      "format": "Короткий TG-текст",
+      "channel": [
+        "TG"
+      ],
+      "stageIds": [
+        "registration",
+        "attendance"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-REL-01",
+      "title": "Не в Москве? Разговор может быть ближе",
+      "briefPath": "projects/vernatun/departments/reel/jobs/V-202612-REL-01/00-brief.md",
+      "plannedDate": "2026-12-02",
+      "product": "Онлайн-комнаты",
+      "format": "Короткое видео",
+      "channel": [
+        "IG",
+        "TG",
+        "YouTube Shorts"
+      ],
+      "stageIds": [
+        "awareness",
+        "desire"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-CAR-01",
+      "title": "Первый созвон: тема, вход, правила разговора",
+      "briefPath": "projects/vernatun/departments/carousel/jobs/V-202612-CAR-01/00-brief.md",
+      "plannedDate": "2026-12-04",
+      "product": "Онлайн-комнаты",
+      "format": "Карусель",
+      "channel": [
+        "TG",
+        "IG"
+      ],
+      "stageIds": [
+        "desire",
+        "return"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-ART-01",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "briefPath": "projects/vernatun/departments/article/jobs/V-202612-ART-01/00-brief.md",
+      "plannedDate": "2026-12-06",
+      "product": "Разговорные встречи",
+      "format": "Короткий TG-текст",
+      "channel": [
+        "TG"
+      ],
+      "stageIds": [
+        "registration",
+        "attendance"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-REL-02",
+      "title": "Мой армянский живёт в разговорах с близкими",
+      "briefPath": "projects/vernatun/departments/reel/jobs/V-202612-REL-02/00-brief.md",
+      "plannedDate": "2026-12-09",
+      "product": "Разговорные встречи",
+      "format": "Короткое видео",
+      "channel": [
+        "IG",
+        "TG",
+        "YouTube Shorts"
+      ],
+      "stageIds": [
+        "awareness",
+        "desire"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-CAR-02",
+      "title": "Что хочется повторять в клубе каждый месяц",
+      "briefPath": "projects/vernatun/departments/carousel/jobs/V-202612-CAR-02/00-brief.md",
+      "plannedDate": "2026-12-11",
+      "product": "Клубная подписка",
+      "format": "Карусель",
+      "channel": [
+        "TG",
+        "IG"
+      ],
+      "stageIds": [
+        "return",
+        "membership"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-ART-02",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "briefPath": "projects/vernatun/departments/article/jobs/V-202612-ART-02/00-brief.md",
+      "plannedDate": "2026-12-13",
+      "product": "Разговорные встречи",
+      "format": "Короткий TG-текст",
+      "channel": [
+        "TG"
+      ],
+      "stageIds": [
+        "registration",
+        "attendance"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-REL-03",
+      "title": "История одной семейной традиции",
+      "briefPath": "projects/vernatun/departments/reel/jobs/V-202612-REL-03/00-brief.md",
+      "plannedDate": "2026-12-16",
+      "product": "Комьюнити и активности",
+      "format": "Короткое видео",
+      "channel": [
+        "IG",
+        "TG",
+        "YouTube Shorts"
+      ],
+      "stageIds": [
+        "awareness",
+        "desire"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-CAR-03",
+      "title": "Три вопроса о традициях для настоящего разговора",
+      "briefPath": "projects/vernatun/departments/carousel/jobs/V-202612-CAR-03/00-brief.md",
+      "plannedDate": "2026-12-18",
+      "product": "Разговорные встречи",
+      "format": "Карусель",
+      "channel": [
+        "TG",
+        "IG"
+      ],
+      "stageIds": [
+        "desire"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-ART-03",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "briefPath": "projects/vernatun/departments/article/jobs/V-202612-ART-03/00-brief.md",
+      "plannedDate": "2026-12-20",
+      "product": "Разговорные встречи",
+      "format": "Короткий TG-текст",
+      "channel": [
+        "TG"
+      ],
+      "stageIds": [
+        "registration",
+        "attendance"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-REL-04",
+      "title": "Люди, с которыми этот год стал теплее",
+      "briefPath": "projects/vernatun/departments/reel/jobs/V-202612-REL-04/00-brief.md",
+      "plannedDate": "2026-12-23",
+      "product": "Комьюнити и активности",
+      "format": "Короткое видео",
+      "channel": [
+        "IG",
+        "TG",
+        "YouTube Shorts"
+      ],
+      "stageIds": [
+        "awareness",
+        "return",
+        "advocacy"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-CAR-04",
+      "title": "Что хочется обсудить вместе в январе",
+      "briefPath": "projects/vernatun/departments/carousel/jobs/V-202612-CAR-04/00-brief.md",
+      "plannedDate": "2026-12-25",
+      "product": "Комьюнити и активности",
+      "format": "Карусель",
+      "channel": [
+        "TG",
+        "IG"
+      ],
+      "stageIds": [
+        "return",
+        "reactivation"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-ART-04",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "briefPath": "projects/vernatun/departments/article/jobs/V-202612-ART-04/00-brief.md",
+      "plannedDate": "2026-12-27",
+      "product": "Разговорные встречи",
+      "format": "Короткий TG-текст",
+      "channel": [
+        "TG"
+      ],
+      "stageIds": [
+        "registration",
+        "attendance"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-CAR-05",
+      "title": "Наш год: реальные моменты и спасибо людям",
+      "briefPath": "projects/vernatun/departments/carousel/jobs/V-202612-CAR-05/00-brief.md",
+      "plannedDate": "2026-12-29",
+      "product": "Комьюнити и активности",
+      "format": "Карусель",
+      "channel": [
+        "TG",
+        "IG"
+      ],
+      "stageIds": [
+        "return",
+        "advocacy",
+        "reactivation"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-CAR-06",
+      "title": "Куда идём в январе: разговоры, люди, практика",
+      "briefPath": "projects/vernatun/departments/carousel/jobs/V-202612-CAR-06/00-brief.md",
+      "plannedDate": "2026-12-30",
+      "product": "Разговорные встречи",
+      "format": "Карусель",
+      "channel": [
+        "TG",
+        "IG"
+      ],
+      "stageIds": [
+        "desire",
+        "return",
+        "reactivation"
+      ],
+      "status": "planned",
+      "publication": null
+    },
+    {
+      "id": "V-202612-ART-05",
+      "title": "Ближайшая встреча: повод, условия, как попасть",
+      "briefPath": "projects/vernatun/departments/article/jobs/V-202612-ART-05/00-brief.md",
+      "plannedDate": "2026-12-31",
+      "product": "Разговорные встречи",
+      "format": "Короткий TG-текст",
+      "channel": [
+        "TG"
+      ],
+      "stageIds": [
+        "registration",
+        "attendance"
+      ],
+      "status": "planned",
+      "publication": null
+    }
+  ],
+  "series": [
+    {
+      "id": "history-awareness",
+      "stageId": "awareness",
+      "metricId": "stage-awareness",
+      "label": "История уникальных людей: Узнать о клубе",
+      "points": []
+    },
+    {
+      "id": "history-desire",
+      "stageId": "desire",
+      "metricId": "stage-desire",
+      "label": "История уникальных людей: Захотеть прийти",
+      "points": []
+    },
+    {
+      "id": "history-registration",
+      "stageId": "registration",
+      "metricId": "stage-registration",
+      "label": "История уникальных людей: Записаться",
+      "points": []
+    },
+    {
+      "id": "history-attendance",
+      "stageId": "attendance",
+      "metricId": "stage-attendance",
+      "label": "История уникальных людей: Прийти впервые",
+      "points": []
+    },
+    {
+      "id": "history-return",
+      "stageId": "return",
+      "metricId": "stage-return",
+      "label": "История уникальных людей: Вернуться",
+      "points": []
+    },
+    {
+      "id": "history-membership",
+      "stageId": "membership",
+      "metricId": "stage-membership",
+      "label": "История уникальных людей: Подписка",
+      "points": []
+    },
+    {
+      "id": "history-advocacy",
+      "stageId": "advocacy",
+      "metricId": "stage-advocacy",
+      "label": "История уникальных людей: Рекомендации",
+      "points": []
+    },
+    {
+      "id": "history-reactivation",
+      "stageId": "reactivation",
+      "metricId": "stage-reactivation",
+      "label": "История уникальных людей: Реактивация",
+      "points": []
+    }
+  ],
+  "meetings": []
+}

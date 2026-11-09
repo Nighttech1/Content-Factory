@@ -49,7 +49,8 @@ function assertAnalystAnalysisOnly(): void {
 
   const cascade = runRazborCascade(post.id);
   assert(cascade, "cascade intact");
-  assert(cascade!.draft.status === "unpublished", "draft unpublished");
+  assert(!("draft" in cascade), "script-only cascade must not create a draft before the designer handoff");
+  assert(cascade.script, "cascade returns the handoff script");
   assert(
     cascade!.scriptwriterMessages.length >= 2,
     "scriptwriter still runs on cascade",

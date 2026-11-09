@@ -12,7 +12,8 @@ const SPRING = { type: "spring" as const, damping: 25, stiffness: 300 };
 export function AppShell({ children }: { children: React.ReactNode }) {
   const reduceMotion = useReducedMotion();
   const { widthPx, setWidthPx, commitWidth } = useSidebarWidth();
-  const isMarketing = usePathname() === "/marketing";
+  const pathname = usePathname();
+  const isMarketing = pathname === "/marketing" || pathname === "/growth";
 
   return (
     <div

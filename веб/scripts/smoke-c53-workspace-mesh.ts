@@ -76,7 +76,7 @@ function assertWorkspaceUngate(): void {
 }
 
 function assertMeshPipelines(): void {
-  assert(MESH_PIPELINE_IDS.length === 7, "exactly 7 pipeline ids");
+  assert(Number(MESH_PIPELINE_IDS.length) === 7, "exactly 7 pipeline ids");
   assert(
     EXPECTED_IDS.every((id, i) => MESH_PIPELINE_IDS[i] === id),
     "MESH_PIPELINE_IDS order/canon",

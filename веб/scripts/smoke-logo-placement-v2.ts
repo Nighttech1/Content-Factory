@@ -161,7 +161,7 @@ async function main() {
       : `FAIL logo alpha: ${alpha.note}`,
   );
   asserts.push(
-    BRAND_LOGO_SIZE_PX === 176
+    Number(BRAND_LOGO_SIZE_PX) === 176
       ? "PASS BRAND_LOGO_SIZE_PX=176"
       : `FAIL BRAND_LOGO_SIZE_PX=${BRAND_LOGO_SIZE_PX}`,
   );

@@ -1,5 +1,10 @@
 # DEV_PLAN.md — Живой план Vernatun Content Factory
 
+## W-2026-11-09-growth-center — реализация, release gates открыты
+
+Отдельный /growth: schema v2, общий versioned JSON, read-only API, глобальный plan/fact,24 V-ID, profiles/strategy, history cohorts/conversion, meeting metrics, desktop/mobile nav. Инженерная команда реальная; spec/chain до кода в memory/waves/W-2026-11-09-growth-center. 25 inherited TS errors/sharp lock исправлены;31 modelguards/20independent/63carouseltests PASS, integratedtypecheck PASS. Productionbuild/browserCI/deploy требуют исполнения и доказательств. VPS update разрешён владельцем для content.* после QA, admin.* вне scope. Нет publication/paidAPI. Canonical update protocol: projects/vernatun/content-plan/GROWTH_CENTER_UPDATES.md.
+
+
 > **Обновлено:** 2026-10-15 — **Спринт 9** сужен: только **карусели Instagram** + **рилсы IG/YouTube** на планке «как Claude Code»; остальные модули → **Спринт 23**. Публикация в соцсети — **Спринт 22** (перед остальными модулями).  
 > **Источники правды:** [`docs/AUDIT_FUNCTIONALITY.md`](./docs/AUDIT_FUNCTIONALITY.md) · [`docs/AUDIT_ARCHITECTURE_STACK.md`](./docs/AUDIT_ARCHITECTURE_STACK.md) · [`ARCHITECTURE.md`](./ARCHITECTURE.md) (часть идей там — целевая/aspirational; факт смотри в AUDIT).  
 > **Спринты 1–7** = закрытый UI-фундамент (архив ниже, все `[x]`).  

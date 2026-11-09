@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Noto_Sans_Armenian } from "next/font/google";
+import localFont from "next/font/local";
 import { AppShell } from "@/components/shell/AppShell";
 import "./globals.css";
 
-const jetbrainsMono = JetBrains_Mono({
+const jetbrainsMono = localFont({
+  src: "../public/fonts/jetbrains-mono-variable.woff2",
+  weight: "100 800",
+  style: "normal",
   variable: "--font-mono-jb",
-  subsets: ["latin", "latin-ext"],
   display: "swap",
 });
 
-const notoArmenian = Noto_Sans_Armenian({
+const notoArmenian = localFont({
+  src: "../public/fonts/noto-sans-armenian.woff2",
+  weight: "100 900",
+  style: "normal",
   variable: "--font-hy",
-  subsets: ["armenian"],
   display: "swap",
 });
 

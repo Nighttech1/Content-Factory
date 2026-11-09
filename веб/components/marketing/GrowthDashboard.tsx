@@ -89,7 +89,7 @@ export function GrowthDashboard({ chat }: { chat?: ReactNode }) {
   return (
     <div className={styles.workspace} data-testid="growth-workspace">
       <nav className={styles.mobileNav} aria-label="Разделы фабрики">
-        <a href="/studio">Студия</a><a href="/schedule">Расписание</a><a href="/marketing" aria-current="page">Директор</a><a href="/settings">Настройки</a>
+        <a href="/studio">Студия</a><a href="/growth">Центр роста</a><a href="/schedule">Расписание</a><a href="/marketing" aria-current="page">Директор</a><a href="/settings">Настройки</a>
       </nav>
       <div className={styles.topline}>
         <div className={styles.brand}><span>V</span> Вернатун <ChevronRight size={12} /> Директор</div>

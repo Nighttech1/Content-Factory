@@ -1,0 +1,198 @@
+name: Growth center QA and release
+on:
+  push:
+    branches: [codex/director-chatgpt-transfer]
+    paths:
+      - .github/releases/growth-center-qa.json
+      - .github/releases/growth-center-release.json
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: growth-center-release
+  cancel-in-progress: false
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      mode: ${{ steps.mode.outputs.mode }}
+      source: ${{ steps.gate.outputs.source }}
+      run: ${{ steps.gate.outputs.run }}
+      artifact: ${{ steps.gate.outputs.artifact }}
+      qaCommit: ${{ steps.gate.outputs.qaCommit }}
+      trustArtifact: ${{ steps.gate.outputs.trustArtifact }}
+      trustRun: ${{ steps.gate.outputs.trustRun }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - id: mode
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          set -euo pipefail
+          git cat-file -e "$BEFORE^{commit}"
+          QA=$(git diff --name-only "$BEFORE" "$GITHUB_SHA" -- .github/releases/growth-center-qa.json)
+          RELEASE=$(git diff --name-only "$BEFORE" "$GITHUB_SHA" -- .github/releases/growth-center-release.json)
+          if [[ -n "$QA" && -z "$RELEASE" ]]; then echo 'mode=qa' >> "$GITHUB_OUTPUT"
+          elif [[ -n "$RELEASE" && -z "$QA" ]]; then echo 'mode=deploy' >> "$GITHUB_OUTPUT"
+          else echo 'Exactly one marker must change'; exit 1; fi
+      - id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MODE: ${{ steps.mode.outputs.mode }}
+        run: node scripts/growth-center-gate.mjs "$MODE"
+  qa:
+    needs: gate
+    if: needs.gate.outputs.mode == 'qa'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ needs.gate.outputs.source }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: веб/package-lock.json
+      - name: Clean install, typecheck, guards and standalone build
+        working-directory: веб
+        env:
+          NEXT_TELEMETRY_DISABLED: '1'
+        run: |
+          set -euo pipefail
+          npm ci
+          npx tsc --noEmit
+          npx tsx scripts/test-growth-center.ts
+          npm run build
+          test -f .next/standalone/server.js
+          npx playwright install --with-deps chromium
+      - name: Package standalone build for production QA
+        env:
+          SOURCE_SHA: ${{ needs.gate.outputs.source }}
+        run: |
+          set -euo pipefail
+          mkdir -p release-bundle/app
+          cp -a веб/.next/standalone/. release-bundle/app/
+          mkdir -p release-bundle/app/.next
+          cp -a веб/.next/static release-bundle/app/.next/static
+          cp -a веб/public release-bundle/app/public
+          tar -C release-bundle/app -czf release-bundle/app.tar.gz .
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';import crypto from 'node:crypto';
+          const revision=JSON.parse(fs.readFileSync('веб/data/growth/vernatun.json')).revision;
+          const metadata={sourceSha:process.env.SOURCE_SHA,runId:process.env.GITHUB_RUN_ID,qaCommitSha:process.env.GITHUB_SHA,revision,bundleSha256:crypto.createHash('sha256').update(fs.readFileSync('release-bundle/app.tar.gz')).digest('hex')};
+          fs.writeFileSync('release-bundle/release-metadata.json',JSON.stringify(metadata));
+          NODE
+      - name: Production browser QA
+        env:
+          SOURCE_SHA: ${{ needs.gate.outputs.source }}
+        run: |
+          set -euo pipefail
+          cd release-bundle/app
+          PORT=3000 HOSTNAME=127.0.0.1 node server.js > ../../qa-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          cd ../..
+          for n in $(seq 1 45); do if curl --fail --silent http://127.0.0.1:3000/growth > /dev/null; then break; fi; test "$n" -lt 45; sleep 2; done
+          node scripts/growth-center-browser-qa.mjs
+          cd веб
+          node --import tsx scripts/test-growth-center-browser-fixture.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: growth-center-qa-${{ github.run_id }}
+          path: |
+            release-bundle/app.tar.gz
+            release-bundle/release-metadata.json
+          if-no-files-found: error
+          retention-days: 14
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: growth-center-evidence-${{ github.run_id }}
+          path: |
+            qa-evidence/
+            qa-server.log
+          retention-days: 14
+  deploy:
+    needs: gate
+    if: needs.gate.outputs.mode == 'deploy'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ needs.gate.outputs.source }}
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          artifact-ids: ${{ needs.gate.outputs.artifact }}
+          run-id: ${{ needs.gate.outputs.run }}
+          github-token: ${{ github.token }}
+          path: verified-artifact
+          merge-multiple: true
+      - name: Verify tested artifact identity
+        id: bundle
+        env:
+          SOURCE_SHA: ${{ needs.gate.outputs.source }}
+          QA_RUN: ${{ needs.gate.outputs.run }}
+          QA_COMMIT: ${{ needs.gate.outputs.qaCommit }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';import crypto from 'node:crypto';
+          const m=JSON.parse(fs.readFileSync('verified-artifact/release-metadata.json'));
+          const hash=crypto.createHash('sha256').update(fs.readFileSync('verified-artifact/app.tar.gz')).digest('hex');
+          if(m.sourceSha!==process.env.SOURCE_SHA||String(m.runId)!==process.env.QA_RUN||m.qaCommitSha!==process.env.QA_COMMIT||hash!==m.bundleSha256||!/^[A-Za-z0-9._-]+$/.test(m.revision))throw Error('Artifact identity mismatch');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,`revision=${m.revision}\n`);
+          NODE
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        if: needs.gate.outputs.trustArtifact != ''
+        with:
+          artifact-ids: ${{ needs.gate.outputs.trustArtifact }}
+          run-id: ${{ needs.gate.outputs.trustRun }}
+          github-token: ${{ github.token }}
+          path: previous-ssh-trust
+          merge-multiple: true
+      - name: SSH release with preserved data and rollback
+        env:
+          VPS_HOST: ${{ secrets.INFINITYS_DOOR_VPS_HOST }}
+          VPS_USER: ${{ secrets.INFINITYS_DOOR_VPS_USER }}
+          VPS_KEY: ${{ secrets.INFINITYS_DOOR_VPS_SSH_KEY }}
+          VPS_PORT: ${{ secrets.INFINITYS_DOOR_VPS_PORT }}
+          VPS_KNOWN_HOSTS: ${{ secrets.INFINITYS_DOOR_VPS_KNOWN_HOSTS }}
+          SOURCE_SHA: ${{ needs.gate.outputs.source }}
+          REVISION: ${{ steps.bundle.outputs.revision }}
+        run: |
+          set -euo pipefail
+          umask 077
+          mkdir -p ~/.ssh
+          printf '%s\n' "$VPS_KEY" > ~/.ssh/growth_key
+          printf '%s\n' "$VPS_KNOWN_HOSTS" > ~/.ssh/growth_known_hosts
+          test -n "$VPS_HOST"; test -n "$VPS_USER"; test -s ~/.ssh/growth_key
+          [[ "$VPS_HOST" =~ ^[A-Za-z0-9.:_-]+$ && "$VPS_USER" =~ ^[A-Za-z0-9_-]+$ ]]
+          PORT="${VPS_PORT:-22}"; [[ "$PORT" =~ ^[0-9]+$ ]]
+          TRUST=accept-new
+          if [[ -n "$VPS_KNOWN_HOSTS" ]]; then TRUST=yes
+          elif test -s previous-ssh-trust/known_hosts; then cp previous-ssh-trust/known_hosts ~/.ssh/growth_known_hosts; TRUST=yes
+          else echo 'Host trust: first-connection TOFU; known_hosts retained as artifact'; fi
+          OPTS=(-i ~/.ssh/growth_key -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking="$TRUST" -o UserKnownHostsFile=~/.ssh/growth_known_hosts -o ConnectTimeout=20)
+          REMOTE="/tmp/growth-center-$SOURCE_SHA"
+          ssh "${OPTS[@]}" -p "$PORT" "$VPS_USER@$VPS_HOST" "umask 077; mkdir -p '$REMOTE'"
+          scp "${OPTS[@]}" -P "$PORT" verified-artifact/app.tar.gz scripts/deploy-growth-center.sh "$VPS_USER@$VPS_HOST:$REMOTE/"
+          ssh "${OPTS[@]}" -p "$PORT" "$VPS_USER@$VPS_HOST" "bash '$REMOTE/deploy-growth-center.sh' '$SOURCE_SHA' '$REMOTE/app.tar.gz' '$REVISION'"
+      - name: Retain host trust record
+        if: always()
+        run: |
+          mkdir -p ssh-trust
+          if test -f ~/.ssh/growth_known_hosts; then cp ~/.ssh/growth_known_hosts ssh-trust/known_hosts; fi
+          rm -f ~/.ssh/growth_key
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: growth-center-host-trust-${{ github.run_id }}
+          path: ssh-trust/known_hosts
+          if-no-files-found: ignore
+          retention-days: 90

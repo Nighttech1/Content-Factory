@@ -591,11 +591,13 @@ test("Mode B user photo: cover generate+preserve, not use_user/HTML-only", () =>
     [
       {
         asset_id: "u1",
-        filename: "me.jpg",
-        role: "photo",
+        original_filename: "me.jpg",
+        mime: "image/jpeg",
+        bytes: 0,
+        sha256: "fixture-sha256",
+        path: "/fixture/me.jpg",
         required: true,
         status: "pending",
-        notes: "",
       },
     ],
     true,

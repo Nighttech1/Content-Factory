@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, useReducedMotion } from "framer-motion";
-import { Briefcase, Calendar, Rocket, Settings } from "lucide-react";
+import { Briefcase, Calendar, Rocket, Settings, TrendingUp } from "lucide-react";
 import {
   MenuVertical,
   type MenuVerticalItem,
@@ -26,6 +26,7 @@ type NavItem = {
 const NAV_ITEMS: NavItem[] = [
   { href: "/studio", label: "Студия", icon: Rocket, testId: "nav-studio" },
   { href: "/schedule", label: "Расписание", icon: Calendar },
+  { href: "/growth", label: "Центр роста", icon: TrendingUp, testId: "nav-growth" },
   {
     href: "/settings",
     label: "Настройки",
@@ -47,6 +48,7 @@ const PREFETCH_HREFS = [
   "/schedule",
   "/settings",
   "/marketing",
+  "/growth",
 ] as const;
 
 const SPRING = { type: "spring" as const, damping: 25, stiffness: 300 };

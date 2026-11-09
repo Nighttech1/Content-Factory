@@ -60,7 +60,7 @@ function today(): string {
 function parseClaims(raw: unknown, checkedAt: string): ResearchClaim[] {
   if (!Array.isArray(raw)) return [];
   return raw
-    .map((c, i) => {
+    .map((c, i): ResearchClaim => {
       const o = (c ?? {}) as Record<string, unknown>;
       const st = String(o.status ?? "NEEDS_REVIEW").toUpperCase();
       const status: ClaimStatus =

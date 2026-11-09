@@ -1,6 +1,23 @@
 # STATE.md — эстафета между сессиями
 
-## Актуально: growth dashboard и стратегия v2 · 09.11.2026
+## Актуально: W-2026-11-09-growth-center · отдельный Центр роста
+
+Ветка **codex/director-chatgpt-transfer**, не main. Последнее прямое поручение владельца: после плана выполнить полный инженерный цикл и обновить существующий веб **content.vernatunspeakclub.com**. Этот deployment разрешён после QA; прежний запрет ниже — история предыдущей волны. Публикация контента/внешние сообщения/платные API не выполняются. Приёмка владельцем ещё открыта.
+
+Реальная команда создала `/growth` и пункт «Центр роста». Явные стадии schema v2: узнать о клубе → захотеть прийти → записаться → первый визит → возврат → подписка, отдельные рекомендации/реактивация. Старый `/marketing` и чат сохранены. Глобальный план/факт фильтрует списки материалов; факт требует published+URL+даты. Ноль подтверждённых ссылок не означает, что клуб никогда не публиковал контент.
+
+Общий источник — `веб/data/growth/vernatun.json`, revision **growth-v2-20261109-01**; bundled loader и read-only GET `/api/growth-center`, no-store. Изменение через чат → проверка → Git → build/QA → разрешённая выкладка; до deploy данные у всех не обновляются. Руководство: `projects/vernatun/content-plan/GROWTH_CENTER_UPDATES.md`. Никакого публичного write API, PII или незаметной миграции localStorage v1. Оценки владельца показываются с ≈, конверсии только от совместимых измерений.
+
+24 реальных брифа — draft backlog до 31.12, не объём за 14 дней. Тестовые цели 200/30/10/8 и 2/2 — предварительные управленческие ориентиры без измеренной базы, не прогноз эффекта контента. Возврат/подписка без произвольных targets. Реальные stage counts пока null, история встреч пустая. REL-01 v2 «Один вечер: свои люди и живой армянский» перенесён на предложенный слот11.11; FAQ CAR-01 v2 —18.11. Производство не запущено.
+
+Проверки до release: 31 guard модели +20 независимых boundary checks PASS;24 title/date projections совпадают с jobs;63 carousel unit tests PASS;25 inherited TS ошибок исправлены, sharp lock синхронизирован. Integrated full typecheck PASS. Production build и реальный browser QA — следующие gates; их успех пока НЕ заявлен. Локальный Chromium недоступен в среде, поэтому browser выполняется штатно в GitHub Actions, включая isolated synthetic fixture, которая никогда не меняет production dataset.
+
+Безопасный workflow `growth-center-release.yml`: обычный code push не выкладывает приложение. Отдельный QA marker фиксирует sourceSHA; после осмотра успешных screenshots отдельный release marker выбирает именно tested artifact. VPS script сохраняет data/media/.env, oldrelease+shared, backup и rollback; admin.* не трогается. Активирующие markers на момент этой записи не созданы. Wave spec, chain, reports: `веб/memory/waves/W-2026-11-09-growth-center/`.
+
+Следующий шаг — завершить build, Actions browser QA, посмотреть реальные screenshots, выполнить разрешённый release и проверить HTTPS/API revision. Не повторять старые вопросы, не объявлять release или приёмку без доказательств.
+
+
+## История: growth dashboard и стратегия v2 · 09.11.2026
 
 Владелец вернул v1 на доработку: сначала привлекательность для холодных и внешнее распространение, затем FAQ. Стратегия v2 — актуальный последний раздел content-plan/2026-11.md; прежние 24 брифа/старые объёмы не запущены. Исследование дополнено brand/growth-market-evidence-20261109.md (историческая демография не TAM; SAM unknown) и рабочим growth-marketing-playbook.md. Обновлены профили директора/скаута/аналитика и действующий runtime prompt.
 
