@@ -68,6 +68,9 @@ jobs:
           npx tsc --noEmit
           npx tsx scripts/test-growth-center.ts
           node --import tsx memory/waves/W-2026-11-10-situation-center/tester-contract-boundaries.mjs
+          node --import tsx scripts/test-growth-workspace.ts
+          node --import tsx scripts/test-growth-workspace-api.ts
+          node --import tsx scripts/test-growth-workspace-boundaries.ts
           npm run build
           test -f .next/standalone/server.js
           npx playwright install --with-deps chromium
@@ -88,22 +91,42 @@ jobs:
           const metadata={sourceSha:process.env.SOURCE_SHA,runId:process.env.GITHUB_RUN_ID,qaCommitSha:process.env.GITHUB_SHA,revision,bundleSha256:crypto.createHash('sha256').update(fs.readFileSync('release-bundle/app.tar.gz')).digest('hex')};
           fs.writeFileSync('release-bundle/release-metadata.json',JSON.stringify(metadata));
           NODE
-      - name: Production browser QA
+      - name: Growth workspace HTTPS production-bundle QA
         env:
           SOURCE_SHA: ${{ needs.gate.outputs.source }}
         run: |
           set -euo pipefail
+          QA_ROOT="$PWD"
+          command -v openssl >/dev/null
+          # Runtime-only fixture configuration: generated AFTER the immutable bundle was packaged.
+          GROWTH_ADMIN_SECRET="$(node -e 'process.stdout.write(require("node:crypto").randomBytes(32).toString("hex"))')"
+          printf '%s\n' "::add-mask::$GROWTH_ADMIN_SECRET"
+          export GROWTH_ADMIN_SECRET
+          export GROWTH_ALLOWED_ORIGIN=https://localhost:3443
+          export QA_WORKSPACE_ORIGIN=https://localhost:3443
+          export QA_WORKSPACE_UPSTREAM=http://127.0.0.1:3000
+          GROWTH_WORKSPACE_DATA_DIR="$(mktemp -d "$RUNNER_TEMP/growth-workspace-$GITHUB_RUN_ID.XXXXXX")"
+          export GROWTH_WORKSPACE_DATA_DIR
+          export GROWTH_WORKSPACE_SCHEDULER=1
+          export NODE_ENV=production
+          unset GROWTH_GITHUB_TOKEN GROWTH_GITHUB_REPOSITORY GROWTH_GITHUB_BRANCH GROWTH_SCOUT_BRANCH
+          # Synthetic history only in the private runtime fixture, never the packaged artifact.
+          (cd веб && node --import tsx scripts/seed-growth-workspace-qa.ts)
+          cleanup(){
+            local code=$?
+            kill "$SERVER_PID" 2>/dev/null || true
+            # Logs are the only uploaded runtime file; never upload private state or TLS material.
+            node -e 'const fs=require("node:fs");const file=process.argv[1];if(fs.existsSync(file)){fs.writeFileSync(file,fs.readFileSync(file,"utf8").replaceAll(process.env.GROWTH_ADMIN_SECRET,"[REDACTED QA SECRET]"))}' "$QA_ROOT/qa-server.log" || rm -f "$QA_ROOT/qa-server.log"
+            exit "$code"
+          }
           cd release-bundle/app
           PORT=3000 HOSTNAME=127.0.0.1 node server.js > ../../qa-server.log 2>&1 &
           SERVER_PID=$!
-          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          trap cleanup EXIT
           cd ../..
           for n in $(seq 1 45); do if curl --fail --silent http://127.0.0.1:3000/growth > /dev/null; then break; fi; test "$n" -lt 45; sleep 2; done
-          node scripts/growth-center-browser-qa.mjs
-          cd веб
-          node --import tsx scripts/test-growth-center-browser-fixture.mjs
-          cd ..
-          node scripts/situation-center-client-qa.mjs
+          node scripts/growth-workspace-browser-qa.mjs
+          node scripts/growth-workspace-client-qa.mjs
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: growth-center-qa-${{ github.run_id }}

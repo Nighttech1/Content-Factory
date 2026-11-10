@@ -1,123 +1,110 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
+import { LockKeyhole } from "lucide-react";
+import { getPlanFact, type ContentEntry, type GrowthCenterDataset } from "@/lib/growth-center/model";
+import { WORKSPACE_STAGE_IDS, getStageCards, type WorkspaceStageId, type BoardColumn } from "@/lib/growth-center/workspace-model";
+import { useGrowthWorkspace } from "./useGrowthWorkspace";
+import { WorkspaceBoard } from "./WorkspaceBoard";
+import { WorkspaceCardDialog } from "./WorkspaceCardDialog";
+import { WorkspaceDialog } from "./WorkspaceDialog";
+import { FactEditor } from "./FactEditor";
+import { WeeklyChart } from "./WeeklyChart";
+import styles from "./workspace.module.css";
 
-import { useMemo, useState } from "react";
-import { ArrowDownToLine, ArrowRight, ArrowUpRight, BarChart3, Check, Clipboard, Eye, HeartHandshake, MessageCircle, RotateCcw, Share2, Sparkles, Ticket, Users, Wallet } from "lucide-react";
-import { Bar, BarChart, CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { getConversion, getConversionSeries, getMeetingSeries, getPlanFact, getStageContentStats, getStageSeries, type ContentEntry, type GrowthCenterDataset, type StageId } from "@/lib/growth-center/model";
-import styles from "./growth-center.module.css";
-import { ContentMechanics } from "./ContentMechanics";
-
-const REPO = "https://github.com/Nighttech1/Content-Factory/blob/codex/director-chatgpt-transfer/";
-const ICONS = { awareness: Eye, desire: Sparkles, registration: Ticket, attendance: Users, return: HeartHandshake, membership: Wallet, advocacy: Share2, reactivation: RotateCcw };
-const STATUS = { planned: "В плане", in_progress: "В работе", review: "На проверке", approved: "Одобрено", published: "Опубликовано" };
-const KIND = { measured: "Измерение", owner_estimate: "Оценка владельца", scenario: "Сценарий", unknown: "Нет замера" };
-const UNIT = { people: "чел.", visits: "посещ.", publications: "материалов", percent: "%", rubles: "₽", subscribers: "подписчиков" };
-type ViewId = "journey" | "content" | "sources";
-type Mode = "plan" | "fact";
-type Period = "all" | "14" | "30";
-type MeetingField = "attendees" | "registrations" | "newcomers" | "returning";
-type Source = GrowthCenterDataset["sources"][number];
-type PlotPoint = { date: string; value: number | null; cohort: string; period: string; kind: string; sourceId: string; observedAt: string; label?: string; reason?: string };
-
-const number = (value: number | null, percent = false) => value === null ? "Нет замера" : new Intl.NumberFormat("ru-RU", { maximumFractionDigits: percent ? 1 : 0 }).format(value) + (percent ? "%" : "");
-const shortDate = (date: string) => { const text = date.slice(0, 10); return /^\d{4}-\d{2}-\d{2}$/.test(text) ? text.slice(8) + "." + text.slice(5, 7) : text; };
-const sourceHref = (location: string) => /^https?:\/\//.test(location) ? location : REPO + location;
-function periodStart(updatedAt: string, period: Period) { if (period === "all") return undefined; const date = new Date(updatedAt.slice(0, 10) + "T00:00:00Z"); date.setUTCDate(date.getUTCDate() - Number(period) + 1); return date.toISOString().slice(0, 10); }
-function download(dataset: GrowthCenterDataset) { const url = URL.createObjectURL(new Blob([JSON.stringify(dataset, null, 2)], { type: "application/json" })); const link = document.createElement("a"); link.href = url; link.download = "vernatun-growth-" + dataset.revision + ".json"; link.click(); window.setTimeout(() => URL.revokeObjectURL(url), 1000); }
-
-function SourceNote({ sourceId, dataset }: { sourceId: string | undefined; dataset: GrowthCenterDataset }) { const source = dataset.sources.find((s) => s.id === sourceId); return source ? <span><a href={sourceHref(source.location)} target="_blank" rel="noreferrer">{source.title} ↗</a> · {source.date}</span> : <span>Источник не указан</span>; }
-
-function PointTooltip({ active, payload, sources, unit }: { active?: boolean; payload?: ReadonlyArray<{ payload: PlotPoint }>; sources: Source[]; unit: string }) {
-  if (!active || !payload?.length) return null;
-  const point = payload[0].payload;
-  const source = sources.find((s) => s.id === point.sourceId);
-  return <div className={styles.chartTooltip}><span>{point.label || shortDate(point.date)}</span><strong>{number(point.value)} {unit}</strong><small>{point.kind} · {point.period}</small><small>{point.cohort}</small><small>{source?.title || "Источник не указан"} · замер {point.observedAt}</small>{point.reason && <small>{point.reason}</small>}</div>;
-}
-
-/** Distinct cohorts are discrete observations. Only one compatible cohort gets a line. */
-function TrendPlot({ points, unit, dataset, label, xLabel = "Дата наблюдения" }: { points: PlotPoint[]; unit: string; dataset: GrowthCenterDataset; label: string; xLabel?: string }) {
-  const groupKeys = new Set(points.map((point) => point.cohort + " | " + point.period));
-  const discrete = groupKeys.size > 1;
-  const values = points.slice().sort((a, b) => a.date.localeCompare(b.date)).map((point) => ({ ...point, measuredValue: point.kind === KIND.measured ? point.value : null, estimateValue: point.kind === KIND.owner_estimate ? point.value : null }));
-  const common = <><CartesianGrid stroke="rgba(255,255,255,.07)" vertical={false} /><XAxis dataKey="date" tickFormatter={shortDate} tick={{ fill: "#9ca3af", fontSize: 12 }} axisLine={false} tickLine={false} label={{ value: xLabel, position: "bottom", fill: "#9ca3af", fontSize: 12, offset: 7 }} minTickGap={25} /><YAxis width={45} allowDecimals={unit === "%"} tick={{ fill: "#9ca3af", fontSize: 12 }} axisLine={false} tickLine={false} label={{ value: unit, angle: -90, position: "insideLeft", fill: "#9ca3af", fontSize: 12 }} domain={[0, "auto"]} /><Tooltip content={<PointTooltip sources={dataset.sources} unit={unit} />} /></>;
-  return <><div className={styles.legend}><span><i className={styles.fact} /> Измерение · сплошной / заполненный</span><span><i className={styles.estimate} /> Оценка · пунктир / полый</span></div><div className={styles.chartWrap} role="img" aria-label={label + "; единица: " + unit}><ResponsiveContainer width="100%" height="100%">{discrete ? <BarChart data={values} margin={{ top: 15, right: 16, bottom: 28, left: 10 }}>{common}<Bar dataKey="measuredValue" name="Измерение" fill="var(--accent-terracotta,#c86446)" maxBarSize={36} isAnimationActive={false} /><Bar dataKey="estimateValue" name="Оценка владельца" fill="transparent" stroke="var(--accent-gold,#d4a359)" strokeDasharray="4 3" strokeWidth={2} maxBarSize={36} isAnimationActive={false} /></BarChart> : <LineChart data={values} margin={{ top: 15, right: 16, bottom: 28, left: 10 }}>{common}<Line type="linear" dataKey="measuredValue" name="Измерение" stroke="var(--accent-terracotta,#c86446)" strokeWidth={2} connectNulls={false} dot={{ r: 4, fill: "var(--accent-terracotta,#c86446)", strokeWidth: 2 }} activeDot={{ r: 6 }} isAnimationActive={false} /><Line type="linear" dataKey="estimateValue" name="Оценка владельца" stroke="var(--accent-gold,#d4a359)" strokeWidth={2} strokeDasharray="5 4" connectNulls={false} dot={{ r: 5, fill: "var(--bg-elevated,#0d0f12)", strokeWidth: 2 }} activeDot={{ r: 6 }} isAnimationActive={false} /></LineChart>}</ResponsiveContainer></div><p className={styles.chartNote}>{discrete ? "Разные когорты/окна показаны отдельными столбцами: линия роста между ними не строится." : "Одна совместимая когорта и окно; неизвестное разрывает линию."}</p></>;
-}
-
-function EmptyChart({ title, note, onUpdate }: { title: string; note: string; onUpdate: () => void }) { return <div className={styles.noData} data-testid="growth-chart-empty"><BarChart3 size={25} /><h3>{title}</h3><p>{note}</p><button className={styles.quietButton} onClick={onUpdate}><MessageCircle size={14} /> Какие данные передать в чат</button></div>; }
-
-function ContentRows({ content }: { content: ContentEntry[] }) { return <div className={styles.contentRows}>{content.map((item) => <article className={styles.contentRow} key={item.id} data-testid="growth-content-card" data-content-id={item.id}><div><div className={styles.contentId}>{item.id}</div><h3><a href={sourceHref(item.briefPath)} target="_blank" rel="noreferrer">{item.title} <ArrowUpRight size={12} style={{ display: "inline" }} /></a></h3><div className={styles.contentMeta}>{shortDate(item.plannedDate)} · {item.format} · {item.channel.join(" / ")}<br />{item.product}</div>{item.publication && <a className={styles.contentMeta} href={item.publication.url} target="_blank" rel="noreferrer">Публикация от {shortDate(item.publication.publishedAt)} ↗</a>}</div><span className={`${styles.status} ${item.status === "published" ? styles.statusPublished : ""}`}>{STATUS[item.status]}</span></article>)}</div>; }
+const number = (value: number | null) => value === null ? "Нет данных" : new Intl.NumberFormat("ru-RU").format(value);
+const week = (value: string) => `${value.slice(8, 10)}.${value.slice(5, 7)}`;
+const GIT_STATUS = { not_configured: "GitHub не настроен", pending: "GitHub: ожидает отправки", synced: "GitHub: сохранено", error: "GitHub: ошибка отправки" };
 
 export function GrowthCenter({ dataset }: { dataset: GrowthCenterDataset }) {
-  const [selectedStage, setSelectedStage] = useState<StageId>("awareness");
-  const [mode, setMode] = useState<Mode>("plan");
-  const [view, setView] = useState<ViewId>("journey");
-  const [metricMode, setMetricMode] = useState<"people" | "conversion">("people");
-  const [chartPeriod, setChartPeriod] = useState<Period>("all");
-  const [meetingField, setMeetingField] = useState<MeetingField>("attendees");
-  const [meetingPeriod, setMeetingPeriod] = useState<Period>("all");
-  const [stageFilter, setStageFilter] = useState("");
-  const [productFilter, setProductFilter] = useState("");
-  const [search, setSearch] = useState("");
-  const [showAllStageContent, setShowAllStageContent] = useState(false);
-  const [updateOpen, setUpdateOpen] = useState(false);
-  const [copied, setCopied] = useState(false);
-  const stage = dataset.stages.find((s) => s.id === selectedStage)!;
-  const planFact = getPlanFact(dataset, selectedStage);
-  const stageStats = getStageContentStats(dataset, selectedStage);
-  const stageContent = mode === "plan" ? stageStats.content : stageStats.content.filter((item) => item.status === "published" && item.publication !== null);
-  const globalStats = getStageContentStats(dataset);
-  const conversion = getConversion(dataset, selectedStage);
-  const mainStages = dataset.stages.filter((s) => s.id !== "advocacy" && s.id !== "reactivation");
-  const start = periodStart(dataset.updatedAt, chartPeriod);
-  const series = getStageSeries(dataset, selectedStage);
-  const countPoints: PlotPoint[] = series.flatMap((s) => s.points.map((p) => ({ date: p.date, value: p.value, cohort: p.cohortId || "Когорта не указана", period: p.periodStart + " — " + p.periodEnd, kind: KIND[p.evidenceKind], sourceId: p.sourceId, observedAt: p.observedAt }))).filter((p) => !start || p.date >= start);
-  const countPointsWithoutScenarios = countPoints.filter((p) => p.kind !== KIND.scenario);
-  const conversionHistory = getConversionSeries(dataset, selectedStage);
-  const conversionPoints: PlotPoint[] = conversionHistory.points.map((point) => ({ date: point.date, value: point.value === null ? null : point.value * 100, cohort: point.cohortId || "Когорта не указана", period: point.periodStart + " — " + point.periodEnd, kind: KIND[point.evidenceKind], sourceId: point.sourceId || "", observedAt: point.observedAt || "не указана", reason: point.reason })).filter((point) => !start || point.date >= start);
-  const stagePoints = metricMode === "conversion" ? conversionPoints : countPointsWithoutScenarios;
-  const meetingData = getMeetingSeries(dataset, meetingField, periodStart(dataset.updatedAt, meetingPeriod), dataset.updatedAt.slice(0, 10));
-  const meetingPoints: PlotPoint[] = meetingData.map((point) => ({ date: point.date, value: point.value, cohort: "Отдельные встречи", period: "Посещения по событиям, не уникальные люди месяца", kind: KIND[point.evidenceKind], sourceId: point.sourceId, observedAt: point.observedAt, label: shortDate(point.date) + " · " + point.id }));
-  const content = useMemo(() => getStageContentStats(dataset).content.filter((item) => (mode === "plan" || (item.status === "published" && item.publication !== null)) && (!stageFilter || item.stageIds.includes(stageFilter as StageId)) && (!productFilter || item.product === productFilter) && (!search || (item.id + " " + item.title).toLowerCase().includes(search.toLowerCase()))), [dataset, mode, stageFilter, productFilter, search]);
-  const products = [...new Set(dataset.content.map((item) => item.product))];
-  const updateText = "Обнови Ситуационный центр Вернатуна.\nПериод: …\nИсточник и дата замера: …\nКогорта/кампания: …\nУзнали / проявили интерес / впервые записались / впервые пришли: …\nПовтор за 30 дней (только созревшая когорта): …\nВстреча: ID, дата, записались, пришли, новые, повторные, мест: …\nВыпуск: V-ID, ссылка на публикацию, дата: …\nНеизвестные поля оставь null. Покажи изменения перед обновлением.";
-  const selectStage = (id: StageId) => { setSelectedStage(id); setShowAllStageContent(false); setView("journey"); };
-  const hasHistory = (points: PlotPoint[]) => points.some((point) => point.value !== null);
+  const workspace = useGrowthWorkspace();
+  const { view, loading, busy, error, run } = workspace;
+  const [selectedStage, setSelectedStage] = useState<WorkspaceStageId>("awareness");
+  const [mode, setMode] = useState<"plan" | "fact">("plan");
+  const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
+  const [factsOpen, setFactsOpen] = useState(false);
+  const [ownerOpen, setOwnerOpen] = useState(false);
+  const [ownerSecret, setOwnerSecret] = useState("");
+  const [unlocking, setUnlocking] = useState(false);
+  const [ownerError, setOwnerError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
+  const stage = dataset.stages.find((item) => item.id === selectedStage)!;
+  const planTarget = getPlanFact(dataset, selectedStage).target;
+  const allCards = view ? getStageCards(view, selectedStage) : [];
+  const cards = mode === "plan" ? allCards : allCards.filter((card) => card.publication !== null);
+  const selectedCard = view?.cards.find((card) => card.id === selectedCardId);
+  const planById = Object.fromEntries(dataset.content.map((item) => [item.id, { product: item.product, plannedDate: item.plannedDate }])) as Record<string, Pick<ContentEntry, "product" | "plannedDate">>;
 
-  return <div className={styles.center} data-testid="growth-center">
-    <nav className={styles.mobileNav} aria-label="Разделы фабрики"><Link href="/studio">Студия</Link><Link href="/schedule">Расписание</Link><Link href="/settings">Настройки</Link><Link href="/marketing">Директор</Link><Link href="/growth" aria-current="page">Ситуационный центр</Link></nav>
-    <header className={styles.header}><div className={styles.headerBrand}><span>V</span> Вернатун <ArrowRight size={12} /> Ситуационный центр</div><div className={styles.revision}>Обновлено {shortDate(dataset.updatedAt)}.{dataset.updatedAt.slice(0, 4)}<br /><small>Редакция {dataset.revision}</small></div></header>
-    <div className={styles.hero}><div><div className={styles.eyebrow}>Вся система привлечения и удержания</div><h1>Узнать. Захотеть.<br /><span>Остаться своим.</span></h1><p>Одна карта от холодной аудитории до регулярного участия. На каждом этапе — человек, задача, контент и проверяемый результат.</p><div className={styles.constraint}><span><b>0 ₽</b> продвижение</span><span><b>до 3 часов</b> в неделю</span><span><b>до 31 декабря</b> контентный план</span></div></div><aside className={styles.heroAside}><div className={styles.eyebrow}>Приоритет первого цикла</div><strong>Показать, как у нас классно.<br />Дать повод захотеть прийти.</strong><p>Атмосферный сюжет → распространение наружу → интерес. FAQ «можно одному» помогает уже заинтересовавшемуся.</p></aside></div>
+  const updateData = () => {
+    workspace.clearError();
+    setMode("fact");
+    if (view?.capabilities.writeEnabled) setFactsOpen(true);
+    else { setOwnerSecret(""); setOwnerError(null); setOwnerOpen(true); }
+  };
+  const move = async (cardId: string, column: BoardColumn, beforeCardId: string | null) => {
+    setNotice(null);
+    if (await run({ type: "move_card", cardId, column, beforeCardId })) setNotice("Изменение сохранено на сервере.");
+  };
+  const requestScout = async (cardId: string) => {
+    const next = await run({ type: "request_scout", cardId });
+    if (next) setNotice("Ручной запрос сохранён. Разведка не запускалась.");
+  };
 
-    <div className={styles.sectionHead}><div><h2>От контакта — к участию</h2><p>Выбери режим и нажми на этап. План — предложение действий и целей; факт — только внесённые подтверждения.</p></div><div className={styles.switcher} role="group" aria-label="План или факт"><button data-testid="growth-mode-plan" aria-pressed={mode === "plan"} onClick={() => setMode("plan")}>План</button><button data-testid="growth-mode-fact" aria-pressed={mode === "fact"} onClick={() => setMode("fact")}>Факт</button></div></div>
-    <div className={styles.funnel} data-testid="growth-center-funnel">
-      <div className={styles.ribbon} aria-hidden="true"><svg viewBox="0 0 1200 54" preserveAspectRatio="none"><path d="M10 5 L1190 20 L1190 34 L10 49 Z" fill="rgba(200,100,70,.07)" /><path d="M10 27 H1190" fill="none" stroke="rgba(200,100,70,.32)" strokeWidth="1" />{[70,282,494,706,918,1130].map((x, index) => <g key={x}><circle cx={x} cy="27" r={index === mainStages.findIndex((s) => s.id === selectedStage) ? 9 : 5} fill={index === mainStages.findIndex((s) => s.id === selectedStage) ? "var(--accent-terracotta,#c86446)" : "#5d4339"} /><circle cx={x} cy="27" r="14" fill="none" stroke="rgba(200,100,70,.12)" /></g>)}</svg></div>
-      <div className={styles.funnelRow}>{mainStages.map((item, index) => { const Icon = ICONS[item.id]; const comparison = getPlanFact(dataset, item.id); const stats = getStageContentStats(dataset, item.id); const value = mode === "plan" ? comparison.planned : comparison.observed; return <button key={item.id} className={styles.step} aria-pressed={selectedStage === item.id} data-testid={`growth-stage-${item.id}`} onClick={() => selectStage(item.id)}><span className={styles.stepTop}><span>{`0${index + 1}`}</span><Icon /></span><strong className={styles.stepTitle}>{item.label}</strong><span className={styles.stepMetric}>{value === null ? <small>{mode === "plan" ? "Цель после замера" : "Нет замера"}</small> : <>{mode === "fact" && comparison.actualKind === "owner_estimate" ? "≈" : ""}{number(value)} <small>{UNIT[(mode === "plan" ? comparison.target?.unit : comparison.metric?.unit) || "people"]}</small></>}</span><span className={styles.stepMeta}>{mode === "plan" ? <><b>{stats.planned} тем в плане</b><br />{comparison.target?.approvalStatus === "approved" ? "Цель согласована" : "Предложение цели"}</> : <><b>{stats.published} публикаций подтверждено</b><br />{comparison.metric ? KIND[comparison.metric.provenance.kind] : "Нет источника замера"}</>}</span></button>; })}</div>
-      <div className={styles.branches}>{(["advocacy", "reactivation"] as StageId[]).map((id) => { const branch = dataset.stages.find((s) => s.id === id)!; const Icon = ICONS[id]; const fact = getPlanFact(dataset, id); return <button key={id} className={styles.branch} aria-pressed={selectedStage === id} data-testid={`growth-stage-${id}`} onClick={() => selectStage(id)}><span className={styles.branchIcon}><Icon size={16} /></span><span><strong>{branch.label}</strong><small>{id === "advocacy" ? "Хороший повторный опыт → новый гость" : "Ранее участвовал → новый повод вернуться"}</small></span><span className={styles.branchValue}>{mode === "fact" && fact.actualKind === "owner_estimate" && fact.observed !== null ? "≈" : ""}{number(mode === "plan" ? fact.planned : fact.observed)}</span></button>; })}</div>
-      <p className={styles.subtle}>Схема показывает путь, а не измеренные потери. Подписка не обязательна для рекомендаций. Реактивация — отдельная база.</p>
+  return <div className={styles.workspace} data-testid="growth-center">
+    <nav className={styles.mobileNav} aria-label="Разделы фабрики"><Link href="/studio">Студия</Link><Link href="/schedule">Расписание</Link><Link href="/settings">Настройки</Link><Link href="/growth" aria-current="page">Ситуационный центр</Link></nav>
+    <header className={styles.header}>
+      <div><h1>Ситуационный центр</h1><p>{mode === "plan" ? `План целей: ${week(planTarget?.periodStart || dataset.planHorizon.start)} — ${week(planTarget?.periodEnd || dataset.planHorizon.end)}` : view ? `Неделя с ${week(view.weekKey)}` : "Общие данные клуба"}</p></div>
+      <div className={styles.headerActions}>
+        <div className={styles.mode} role="group" aria-label="План или факт"><button type="button" data-testid="growth-mode-plan" aria-pressed={mode === "plan"} onClick={() => setMode("plan")}>План</button><button type="button" data-testid="growth-mode-fact" aria-pressed={mode === "fact"} onClick={() => setMode("fact")}>Факт</button></div>
+        <button type="button" className={styles.primaryButton} data-testid="growth-update-data" onClick={updateData} disabled={loading || !view || busy}>Обновить данные</button>
+        {view?.capabilities.authenticated && <button type="button" className={styles.iconButton} data-testid="growth-owner-lock" aria-label="Закрыть доступ владельца" title="Закрыть доступ владельца" onClick={() => { void workspace.lock(); }} disabled={busy}><LockKeyhole size={17} /></button>}
+      </div>
+    </header>
+    <div className={styles.syncLine} data-testid="growth-workspace-status" role="status">
+      <span>{view ? `Сервер: версия ${view.revision}` : loading ? "Загружаем общие данные…" : "Данные не загружены"}</span>
+      {view && <><span>{GIT_STATUS[view.git.state]}{view.git.commitSha ? ` · ${view.git.commitSha.slice(0, 7)}` : ""}</span>{!view.capabilities.authConfigured && <span>Редактирование не настроено</span>}</>}
+      {view?.capabilities.writeEnabled && (view.git.state === "pending" || view.git.state === "error") && <button type="button" className={styles.textButton} onClick={() => { void run({ type: "retry_git" }); }} disabled={busy}>Повторить отправку</button>}
     </div>
-    <div className={styles.legend}><span><i className={styles.plan} /> План: {dataset.planStatus === "approved" ? "согласован" : "на согласовании"}</span><span><i className={styles.fact} /> Факт: выпуск только по ссылке и дате</span><span><i /> Неизвестное не равно нулю</span></div>
-    <div className={styles.globalStats}><div data-testid="growth-center-global-planned"><strong>{globalStats.total}</strong><span>уникальных материалов в плане</span><small>{shortDate(dataset.planHorizon.start)} — {shortDate(dataset.planHorizon.end)}</small></div><div data-testid="growth-center-global-published"><strong>{globalStats.published}</strong><span>подтверждённых публикаций</span><small>Материал на разных площадках — один V-ID</small></div><div><strong>{globalStats.inProgress}</strong><span>материалов в производстве</span><small>Готовый файл ещё не публикация</small></div><div><strong>14 дней</strong><span>первый горизонт целей</span><small>50–60 гостей — отдельная долгосрочная цель</small></div></div>
+    {error && <div className={styles.error} role="alert">{error}{!view && <button type="button" className={styles.textButton} onClick={() => { void workspace.refresh().then(workspace.clearError).catch(() => {}); }}>Повторить загрузку</button>}</div>}
+    {notice && <p className={styles.notice} role="status">{notice}</p>}
 
-    <details className={styles.baselineDetails}><summary>Текущая база клуба · оценки владельца, не сквозная воронка</summary><div className={styles.baseline}>{dataset.metrics.filter((metric) => metric.id.startsWith("baseline-")).map((metric) => <div key={metric.id}><strong>≈{number(metric.value)}</strong><span>{metric.label}</span><span>{KIND[metric.provenance.kind]} · {metric.provenance.observedAt}</span><p className={styles.evidence}>{metric.provenance.note}<br /><SourceNote sourceId={metric.provenance.sourceId} dataset={dataset} /></p></div>)}</div><p className={styles.subtle}>Аудитории площадок пересекаются. Подписчиков не складываем в уникальных клиентов, максимум гостей не выдаём за среднюю посещаемость.</p></details>
-    <div className={styles.tablist} role="tablist" aria-label="Разделы Ситуационного центра">{([ ["journey", "Путь участника"], ["content", "Контент-план"], ["sources", "Источники"] ] as const).map(([id, title]) => <button key={id} role="tab" id={`growth-center-tab-${id}`} aria-selected={view === id} aria-controls={`growth-center-panel-${id}`} onClick={() => setView(id)}>{title}</button>)}</div>
-
-    <section id="growth-center-panel-journey" role="tabpanel" aria-labelledby="growth-center-tab-journey" hidden={view !== "journey"}>
-      <div className={styles.detailGrid} data-testid="growth-stage-detail" data-stage-id={selectedStage}><article className={styles.panel}><div className={styles.eyebrow}>Профиль человека / {stage.label}</div><h2>{stage.label}</h2><p className={styles.job}>{stage.job}</p><dl className={styles.facts}><div><dt>Кто этот человек</dt><dd>{stage.audience}</dd></div><div><dt>Что мешает переходу</dt><dd>{stage.barrier}</dd></div><div><dt>Для какого продукта</dt><dd>{stage.product}</dd></div><div><dt>Кто отвечает</dt><dd>{stage.owner}</dd></div></dl><div className={styles.next}><div className={styles.eyebrow}>Стратегия этапа</div><p>{stage.strategy}</p></div><div className={styles.next}><div className={styles.eyebrow}>Следующее действие</div><p>{stage.nextAction}</p></div></article><aside className={styles.panel}><div className={styles.eyebrow}>План / факт перехода</div><h3>{planFact.metric?.label || "Метрика ещё не назначена"}</h3><div className={styles.metricComparison}><div><small>План · {planFact.target?.approvalStatus === "approved" ? "согласован" : "предложен"}</small><strong className={styles.planNumber}>{number(planFact.planned)}</strong><small>{planFact.target ? `${UNIT[planFact.target.unit]} · ${shortDate(planFact.target.periodStart)}–${shortDate(planFact.target.periodEnd)}` : "После исходного замера"}</small></div><div><small>Факт · {planFact.metric ? KIND[planFact.metric.provenance.kind] : "неизвестно"}</small><strong>{planFact.actualKind === "owner_estimate" && planFact.observed !== null ? "≈" : ""}{number(planFact.observed)}</strong><small>{planFact.metric ? `${UNIT[planFact.metric.unit]} · ${shortDate(planFact.metric.periodStart)}–${shortDate(planFact.metric.periodEnd)}` : "Совместимая база ещё не внесена"}</small></div></div>{planFact.target && <><p>{planFact.target.basis}</p><div className={styles.targetStatus}>{planFact.target.provisional ? "Предварительная цель без подтверждённой базы" : "Цель с указанным основанием"}</div></>}<p className={styles.evidence}>{planFact.reason}</p>{planFact.metric && <div className={styles.evidence}>Определение: {planFact.metric.definition}<br />Источник: <SourceNote sourceId={planFact.metric.provenance.sourceId} dataset={dataset} /><br />Замер: {planFact.metric.provenance.observedAt} · когорта: {planFact.metric.cohortId || "не указана"}<br />{planFact.metric.provenance.note}</div>}<div className={styles.next}><div className={styles.eyebrow}>Конверсия</div><p>{conversion.value === null ? "Нет расчёта" : number(conversion.value * 100, true)}</p><div className={styles.evidence}>{conversion.reason}</div></div></aside></div>
-      <ContentMechanics key={selectedStage} dataset={dataset} stageId={selectedStage} mode={mode} />
-      <div className={styles.sectionHead}><div><h2>Темы для этапа «{stage.label}»</h2><p>{stageStats.total} конкретных V-ID · {stageStats.published} подтверждённо вышло. Один материал может поддерживать несколько этапов.</p></div><button className={styles.quietButton} onClick={() => { setStageFilter(selectedStage); setView("content"); }}>Все задачи этапа <ArrowUpRight size={13} /></button></div>{view === "journey" && <ContentRows content={showAllStageContent ? stageContent : stageContent.slice(0, 4)} />}{stageContent.length > 4 && <button className={styles.quietButton} onClick={() => setShowAllStageContent(!showAllStageContent)}>{showAllStageContent ? "Свернуть список" : `Показать ещё ${stageContent.length - 4} тем`}</button>}{stageContent.length === 0 && <div className={styles.notice}>{mode === "fact" ? "Опубликованные материалы этого этапа ещё не внесены. Для факта нужны V-ID, ссылка и реальная дата выпуска." : "Материалы этого этапа ещё не назначены. Сначала данные и продуктовая готовность; не добавляем выпуск ради заполнения карты."}</div>}
-
-      <article className={`${styles.panel} ${styles.sectionSpace}`} data-testid="growth-center-chart-stage"><div className={styles.sectionHead}><div><h2>{metricMode === "conversion" ? (conversionHistory.mode === "current" ? "Факт: текущий срез перехода" : "Факт: история перехода") : "Факт: история выбранного этапа"}</h2><p>{stage.label} · {metricMode === "conversion" ? (conversionHistory.mode === "current" ? "Истории ещё нет; показан только текущий совместимый срез" : "Переходы из сопоставимых пар исторических измерений") : "История фактических измерений и явно отмеченных оценок; сценарные точки исключены"}</p></div></div><div className={styles.chartToolbar}><label>Метрика этапа<select className={styles.select} aria-label="Метрика этапа" data-testid="growth-metric-filter" value={metricMode} onChange={(e) => setMetricMode(e.target.value as "people" | "conversion")}><option value="people">Люди на этапе</option><option value="conversion">Переход, % — история / срез</option></select></label><label>Период графика этапа<select className={styles.select} aria-label="Период графика этапа" data-testid="growth-period-filter" value={chartPeriod} onChange={(e) => setChartPeriod(e.target.value as Period)}><option value="all">Вся доступная история</option><option value="14">Последние 14 дней</option><option value="30">Последние 30 дней</option></select></label></div>{hasHistory(stagePoints) ? <TrendPlot points={stagePoints} unit={metricMode === "conversion" ? "%" : "чел."} dataset={dataset} label={stage.label} /> : <EmptyChart title={metricMode === "conversion" ? "Сначала сопоставимый замер" : "История ещё не внесена"} note={metricMode === "conversion" ? conversion.reason : "Передай в чат дату, период, когорту, число уникальных людей и источник. Неизвестные точки останутся разрывами, а не нулями."} onUpdate={() => setUpdateOpen(true)} />}<p className={styles.chartNote}>Независимо от общего режима «План/Факт», этот график показывает только внесённые наблюдения, а не целевые числа. X — дата наблюдения, Y — {metricMode === "conversion" ? "процент перехода" : "уникальные люди"}. Разные когорты/периоды не соединяются одной линией. Один замер — одна точка. Нет данных — нет нарисованного роста.</p></article>
-
-      <article className={`${styles.panel} ${styles.sectionSpace}`} data-testid="growth-meetings-chart"><div className={styles.sectionHead}><div><h2>Факт: посещаемость по встречам</h2><p>Как реальный опыт клуба меняется от события к событию. Сумма гостей по встречам — посещения, не уникальные люди месяца.</p></div></div><div className={styles.chartToolbar}><label>Метрика встреч<select className={styles.select} aria-label="Метрика встреч" value={meetingField} onChange={(e) => setMeetingField(e.target.value as MeetingField)}><option value="attendees">Пришли</option><option value="registrations">Записались</option><option value="newcomers">Новые гости</option><option value="returning">Повторные гости</option></select></label><label>Период графика встреч<select className={styles.select} aria-label="Период графика встреч" value={meetingPeriod} onChange={(e) => setMeetingPeriod(e.target.value as Period)}><option value="all">Все встречи в данных</option><option value="14">Последние 14 дней</option><option value="30">Последние 30 дней</option></select></label></div>{hasHistory(meetingPoints) ? <TrendPlot points={meetingPoints} unit="чел." dataset={dataset} label="Посещаемость по встречам" xLabel="Дата встречи" /> : <EmptyChart title="Нужны итоги реальных встреч" note="Максимум 10–12 гостей со слов владельца не привязан к датам — не превращаем его в историю. Передай дату, статус встречи, регистрации, пришедших, новых/повторных и источник." onUpdate={() => setUpdateOpen(true)} />}<p className={styles.chartNote}>Отменённые встречи не изображаются как ноль гостей. Неизвестная вместимость не становится линией цели.</p></article>
+    <section className={styles.funnel} aria-label="Этапы пути участника" data-testid="growth-center-funnel">
+      {WORKSPACE_STAGE_IDS.map((id, index) => {
+        const item = dataset.stages.find((entry) => entry.id === id)!;
+        const value = mode === "plan" ? getPlanFact(dataset, id).planned : view?.counts[id] ?? null;
+        return <button type="button" key={id} className={styles.stage} data-testid={`growth-stage-${id}`} aria-pressed={selectedStage === id} onClick={() => { setSelectedStage(id); setNotice(null); }}>
+          <span className={styles.stageNumber}>0{index + 1}</span><span className={styles.stageTitle}>{item.label}</span><strong className={value === null ? styles.unknownCount : styles.stageCount}>{number(value)}</strong><small>{mode === "plan" ? "Предложенная цель" : "Факт недели"}</small>
+        </button>;
+      })}
     </section>
+    <section className={styles.profile} data-testid="growth-stage-detail" data-stage-id={selectedStage} aria-label={stage.label}>
+      <div><span>Аудитория</span><p>{stage.audience}</p></div><div><span>Потребность</span><p>{stage.job}</p></div><div><span>Барьер</span><p>{stage.barrier}</p></div>
+    </section>
+    <section className={styles.boardSection}>
+      <div className={styles.sectionHeading}><h2>Контент · {stage.label}</h2><span>{view ? `${cards.length} материалов` : ""}</span></div>
+      {loading && !view ? <div className={styles.loading}>Загружаем доску…</div> : view ? <>
+        {mode === "fact" && cards.length === 0 && <p className={styles.muted} data-testid="growth-fact-empty">Подтверждённых публикаций этого этапа пока нет.</p>}
+        <WorkspaceBoard cards={cards} planById={planById} stageId={selectedStage} canWrite={view.capabilities.writeEnabled} busy={busy} requests={view.scoutRequests} onOpen={(id) => { workspace.clearError(); setSelectedCardId(id); }} onMove={(...args) => { void move(...args); }} onScout={(id) => { void requestScout(id); }} />
+      </> : <p className={styles.muted}>Доска появится после загрузки общих данных.</p>}
+    </section>
+    <WeeklyChart view={view} stageId={selectedStage} label={stage.label} />
 
-    <section id="growth-center-panel-content" role="tabpanel" aria-labelledby="growth-center-tab-content" hidden={view !== "content"} data-testid="growth-center-content"><div className={styles.sectionHead}><div><h2>Один план. Конкретные темы.</h2><p>Канонические брифы связаны с этапом, продуктом и датой. Статус публикации требует ссылки и даты, одного готового файла недостаточно.</p></div><button className={styles.quietButton} onClick={() => download(dataset)}><ArrowDownToLine size={14} /> Выгрузить данные</button></div><div className={styles.filterRow}><label>Этап<select className={styles.select} aria-label="Фильтр контента по этапу" value={stageFilter} onChange={(e) => setStageFilter(e.target.value)}><option value="">Все этапы</option>{dataset.stages.map((s) => <option key={s.id} value={s.id}>{s.label}</option>)}</select></label><label>Продукт<select className={styles.select} aria-label="Фильтр контента по продукту" value={productFilter} onChange={(e) => setProductFilter(e.target.value)}><option value="">Все продукты</option>{products.map((product) => <option key={product}>{product}</option>)}</select></label><label>Тема или V-ID<input className={styles.textInput} aria-label="Поиск темы или V-ID" type="search" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Например, атмосфера" /></label></div><p className={styles.subtle} role="status">Режим {mode === "fact" ? "«Факт»" : "«План»"}: найдено {content.length} из {mode === "fact" ? globalStats.published : globalStats.total} материалов. Количество по стадиям может пересекаться — глобальный выпуск считаем по уникальным V-ID.</p>{view === "content" && <ContentRows content={content} />}{!content.length && <div className={styles.notice}>{mode === "fact" ? "Опубликованные материалы ещё не внесены. Готовый бриф или файл не считается выпуском: нужна ссылка и дата." : "Нет тем по выбранным условиям. Измени фильтр — новые задачи не создаются автоматически."}</div>}</section>
-
-    <section id="growth-center-panel-sources" role="tabpanel" aria-labelledby="growth-center-tab-sources" hidden={view !== "sources"}><div className={styles.sectionHead}><div><h2>На что опираемся</h2><p>Для каждого числа и решения важны география, год, источник и предел вывода. Переписная база не равна числу покупателей клуба.</p></div></div><div className={styles.notice}><b>Границы рынка:</b> 68 018 — исторический переписной ориентир Москвы, 70 199 — области (2021), воспроизведённые во вторичных таблицах. Оригинальный XLSX найден, но не прочитан. Подходящий и платёжный SAM пока не измерен. Не складываем TG и IG в уникальных клиентов.</div><div className={styles.sources}>{dataset.sources.map((source) => <article className={styles.sourceItem} key={source.id}><div className={styles.eyebrow}>{source.id}</div><h3><a href={sourceHref(source.location)} target="_blank" rel="noreferrer">{source.title} ↗</a></h3><p>{source.date} · {source.geography}</p><p>{source.limitation}</p></article>)}</div></section>
-
-    <article className={`${styles.panel} ${styles.sectionSpace}`}><div className={styles.sectionHead}><div><div className={styles.eyebrow}>Общий источник данных / без расхождения устройств</div><h3>Обновляем результатами, а не настроением</h3><p>Передай директору агрегаты и ссылки на вышедшие материалы. После проверки и обновления версии они появятся здесь у всех пользователей.</p></div><button className={styles.actionButton} onClick={() => setUpdateOpen(!updateOpen)}><MessageCircle size={14} /> Обновить через чат</button></div>{updateOpen && <div data-testid="growth-update-instructions"><p className={styles.subtle}>Ниже — формат сообщения, не пример фактических данных. Без имён, телефонов и списков людей.</p><pre className={styles.updateTemplate}>{updateText}</pre><button className={styles.quietButton} onClick={async () => { try { await navigator.clipboard.writeText(updateText); setCopied(true); } catch { setCopied(false); } }}>{copied ? <Check size={14} /> : <Clipboard size={14} />}{copied ? "Скопировано" : "Копировать формат сообщения"}</button><p className={styles.evidence}>Данные текущей версии общие, а не localStorage этого браузера. Обновление через чат требует проверки, сохранения и успешной выкладки новой версии. До этого редакция на экране не меняется.</p></div>}</article>
-    <footer className={styles.footer}><span>Одна система: узнавание → желание → первый опыт → возвращение.</span><span>Ситуационный центр · редакция {dataset.revision} · продукт и контент на согласовании</span></footer>
+    {selectedCard && view && <WorkspaceCardDialog key={selectedCard.id} card={selectedCard} plan={planById[selectedCard.id]} view={view} busy={busy} error={error} run={run} onClose={() => setSelectedCardId(null)} />}
+    {factsOpen && view && <FactEditor view={view} dataset={dataset} busy={busy} error={error} run={run} onClose={() => setFactsOpen(false)} />}
+    <WorkspaceDialog open={ownerOpen} onOpenChange={(open) => { if (!unlocking) { setOwnerOpen(open); setOwnerSecret(""); } }} title="Доступ владельца" description="Изменения сохраняются в общую версию для всех устройств." testId="growth-owner-dialog">
+      {view?.capabilities.authConfigured ? <form onSubmit={async (event) => {
+        event.preventDefault();
+        const entered = ownerSecret;
+        setOwnerSecret(""); setUnlocking(true); setOwnerError(null);
+        try { const next = await workspace.unlock(entered); setOwnerOpen(false); if (next.capabilities.writeEnabled) setFactsOpen(true); }
+        catch (failure) { setOwnerError(failure instanceof Error ? failure.message : "Не удалось открыть доступ."); }
+        finally { setUnlocking(false); }
+      }}>
+        <label className={styles.field}>Код владельца<input type="password" data-testid="growth-owner-secret" autoComplete="current-password" value={ownerSecret} onChange={(event) => setOwnerSecret(event.target.value)} disabled={unlocking} required /></label>
+        {ownerError && <p className={styles.error} role="alert">{ownerError}</p>}
+        <div className={styles.dialogActions}><button type="submit" className={styles.primaryButton} data-testid="growth-owner-unlock" disabled={unlocking}>{unlocking ? "Проверяем…" : "Открыть доступ"}</button></div>
+      </form> : <p className={styles.muted}>Редактирование не настроено. Данные доступны для просмотра; доступ владельца нужно настроить на сервере.</p>}
+    </WorkspaceDialog>
   </div>;
 }

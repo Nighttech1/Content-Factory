@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, useReducedMotion } from "framer-motion";
-import { Briefcase, Calendar, Rocket, Settings, TrendingUp } from "lucide-react";
+import { Calendar, Rocket, Settings, TrendingUp } from "lucide-react";
 import {
   MenuVertical,
   type MenuVerticalItem,
@@ -22,7 +22,7 @@ type NavItem = {
   testId?: string;
 };
 
-/** C-136 + S48 — Studio / Schedule / Settings / Директор→/marketing. */
+/** C-136 + S48 — Studio / Schedule / Settings / Ситуационный центр. */
 const NAV_ITEMS: NavItem[] = [
   { href: "/studio", label: "Студия", icon: Rocket, testId: "nav-studio" },
   { href: "/schedule", label: "Расписание", icon: Calendar },
@@ -33,12 +33,6 @@ const NAV_ITEMS: NavItem[] = [
     adminOrOwner: true,
     testId: "nav-settings",
   },
-  {
-    href: "/marketing",
-    label: "Директор",
-    icon: Briefcase,
-    testId: "nav-director",
-  },
   { href: "/growth", label: "Ситуационный центр", icon: TrendingUp, testId: "nav-growth" },
 ];
 
@@ -47,7 +41,6 @@ const PREFETCH_HREFS = [
   "/studio",
   "/schedule",
   "/settings",
-  "/marketing",
   "/growth",
 ] as const;
 

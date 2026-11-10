@@ -1,0 +1,19 @@
+# Тренер · growth workspace · 10.11.2026
+- before_sha: b68eec9; branch: codex/director-chatgpt-transfer; ticket_limit: full scope.
+- Прочитаны AGENTS, корневой/web CLAUDE, STATE, реестр/цикл, trainer rule/profile/skill/gap-playbook/plugins и knowledge оболочка/домен.
+- Грейд: B для UI/данных; C для authenticated write/Git до явного контракта Архитектора. Новые плагины/платные инструменты не нужны.
+- Подтверждено: Node/npm/Chromium и node_modules есть; предыдущий local Chromium socket EPERM требует свежей проверки, не заявления о готовом browser QA.
+- Реализация сейчас: server.ts читает bundled JSON; /api/growth-center имеет только GET no-store, mutable write и live Git интеграции в web-коде не найдены.
+- Storage-паттерн: существующий data/local JSON + temp/rename пригоден как ориентир, но нуждается в serialisation, optimistic revision и защите от lost updates.
+- Критичный auth-gap: lib/db/actor.ts прямо pre-auth, доверяет произвольному header/cookie и seed-admin; OWNER switch не серверная авторизация.
+- До кода Архитектор задаёт fail-closed server auth для записи/снимка/scout request; нет secret — write disabled, без публичного обхода и без токенов в bundled/client/localStorage.
+- Git-gap: chat GitHub connector не credential приложения VPS. Наличие runtime Git credentials не доказано; никаких обещаний автоматического push без проверки bindings.
+- Рекомендуется атомарное server save + durable snapshot/outbox; UI раздельно «сохранено на сервере», «Git ожидает/ошибка/подтверждённый commitSHA»; retry idempotent, CAS на revision.
+- Scout Update создаёт только проверяемый ручной запрос в Git/outbox с ID, contentID, источником/вопросом и статусом; не запуск платного сбора, не «скаут уже работает».
+- Modal различает сценарий, проверенный источник (URL/дата/provenance) и решение отдела; отсутствующий источник честно unknown, без выдуманного исследования.
+- Kanban в любом направлении, включая назад; «Выпуск» как колонка не является публикацией и не пишет published без permalink+даты. Действие отдельно от approved fact.
+- Weekly graph только выбранного одного из шести этапов, сопоставимые периоды/единицы; неизвестное null, не ноль; подписка не запущена — не факт оплаты.
+- Frontend удаляет только Director nav item, сохраняет /marketing route/store/history; убирает recommendation/reactivation nav/subtabs/metric block, не уничтожает исторические данные.
+- Chain до кода: Архитектор → Backend + AI Bridge контракт/outbox → Frontend → Тестировщик → Фиксер → локальный Деплоер → независимый Клиент, C-* до закрытия.
+- QA: 1440/390/412/360, reload/two clients persistence, unauth denied, revision conflict, partial Git failure/retry, backwards Kanban, modal, weekly graph; без paid API/production writes.
+- Production deployment этой волной не разрешён; сохранность store/media/env обязательна. Этот аудит не приёмка UI и не доказательство runtime credentials.

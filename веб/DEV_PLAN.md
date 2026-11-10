@@ -1,5 +1,9 @@
 # DEV_PLAN.md — Живой план Vernatun Content Factory
 
+## W-2026-11-10-growth-workspace — реализация в независимом QA
+
+Spec/chain: `memory/waves/W-2026-11-10-growth-workspace/`. Новый /growth:6этапов, компактный header,4nav без Director (legacychat сохранён),5column arbitrary/backward Kanban, source/script/decision/publication modal, protected serverfact edit+CAS/outbox/manualScout, weekly selectedstage snapshots. Oldv2schema/canonical24IDs не менялись. Backend24groups+API/tsc, Frontendtsc/targetedlint и localproductionbuild PASS; независимый browserQA/Client ещё не завершены. Runtime auth/Git/scheduler требуют отдельной настройки; руководство `../docs/GROWTH_WORKSPACE.md`. Никакого нового production/исследований/платныхAPI; code/docs сохраняются в Git, QA-only marker отдельно.
+
 ## W-2026-11-10-repeatable-deploy
 
 Runbook: `../docs/DEPLOY.md`; helper: `../scripts/prepare-growth-release.mjs`. Узкое расширение существующего systemd adapter для следующих standalone версий, без изменения приложения/VPS. Независимые проверки PASS: 12 full adapter, 25 rollback/23 preflight/4 snapshot, 22 CLI и 5 helper groups. Оба C-* закрыты guards; приёмка — `memory/waves/W-2026-11-10-repeatable-deploy/client-acceptance.md`. Новые production действия не выполняются; существующие QA artifact gates обязательны.

@@ -1,5 +1,13 @@
 # STATE.md — эстафета между сессиями
 
+## В РАЗРАБОТКЕ · W-2026-11-10-growth-workspace
+
+10.11.2026, Москва. Пользователь поручил реализовать согласованные исправления `/growth`: компактный header, только6этапов, без Director navigation/subtabs/globalstats/AImechanics;5колоночный Kanban с произвольным движением, modal со сценарием/источником/решением/публикационнымproof; редактируемый факт и durable serverstore, Gitoutbox+ручнаяScoutqueue, один недельный selected-stage chart. `/marketing` и chat/store/data сохраняются. Spec/chain ДОкода: `веб/memory/waves/W-2026-11-10-growth-workspace/`.
+
+Backend/Frontend/AI Bridge/Deployer передали реализацию в независимый QA. Auth fail-closed: новый owner secret и allowed HTTPS origin нужны в server env; QA OWNER selector не авторизация. Runtime Git credentials/permissions ещё не настроены/не проверены, UI честно показывает server-only/notconfigured. Setup: `docs/GROWTH_WORKSPACE.md` и пример с пустыми secret полями. Queue target отдельная Scoutbranch `codex/scout-handoff-20261109`, ручной запуск «обновляй инфу»; bootstrap START/README подготовлен вне checkout, root публикует узким commit послеQA. Никакого реального поиска/LLM/платногоAPI/автоимпорта результатов не запускали.
+
+Факт хранится вне bundle в existing persistent data mount, old canonical v2 seed/schema unchanged. Неделя Sunday23:59MSK, immutable snapshots/corrections/nullgaps; scheduler explicit env, на VPS не включался. Авторские24группы+API/TS PASS; локальный Turbopack production build PASS (старые lint warnings не блокируют). Независимые проверки/browser QA и Client acceptance ещё ожидаются; localChromium запуск фактически blocked socketEPERM, используем QA-only Actions HTTPSfixture1440/412/390/360. Новый production release НЕ разрешён и не выполняется; release marker не менять. Обычный source/docs push сохраняет код, отдельный QA marker запускает QA-only.
+
 ## Повторяемый деплой · 10.11.2026
 
 Каноническая инструкция: `docs/DEPLOY.md`; быстрый helper `scripts/prepare-growth-release.mjs`.
