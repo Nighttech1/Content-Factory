@@ -1,4 +1,5 @@
 import { z } from "zod";
+import type { PreparedDetails, PreparedCatalogStatus } from "./workspace-prepared";
 
 export const WORKSPACE_STAGE_IDS = ["awareness", "desire", "registration", "attendance", "return", "membership"] as const;
 export const BOARD_COLUMNS = ["task", "shooting", "development", "approval", "release"] as const;
@@ -21,6 +22,7 @@ const url = z.string().max(2000).refine(value => {
     return true;
   } catch { return false; }
 }, "Нужна публичная HTTP(S) ссылка без логина и пароля.");
+export const publicSourceUrlSchema = url;
 export const countsSchema = z.object({ awareness: z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER).nullable(), desire: z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER).nullable(), registration: z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER).nullable(), attendance: z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER).nullable(), return: z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER).nullable(), membership: z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER).nullable() }).strict();
 export type Counts = z.infer<typeof countsSchema>;
 export const emptyCounts = (): Counts => ({ awareness: null, desire: null, registration: null, attendance: null, return: null, membership: null });
@@ -34,7 +36,7 @@ export type WeekSnapshot = z.infer<typeof weekSnapshotSchema>;
 export type GitBackupStatus = { state: "not_configured" | "pending" | "synced" | "error"; commitSha: string | null; message: string | null };
 export type ScoutRequest = { id: string; cardId: string; status: "queued" | "git_pending" | "git_saved"; createdAt: string; gitPath: string; commitSha: string | null };
 export type WorkspaceCapabilities = { authConfigured: boolean; authenticated: boolean; writeEnabled: boolean; gitConfigured: boolean; schedulerEnabled: boolean; csrfToken: string | null };
-export type WorkspaceView = { version: 1; revision: number; weekKey: string; counts: Counts; countSource: string; cards: WorkspaceCard[]; snapshots: WeekSnapshot[]; scoutRequests: ScoutRequest[]; git: GitBackupStatus; capabilities: WorkspaceCapabilities; commandReceipt?: { requestId: string; appliedRevision: number; replayed: boolean; scoutRequestId?: string } };
+export type WorkspaceView = { version: 1; revision: number; weekKey: string; counts: Counts; countSource: string; cards: WorkspaceCard[]; snapshots: WeekSnapshot[]; scoutRequests: ScoutRequest[]; git: GitBackupStatus; capabilities: WorkspaceCapabilities; preparedDetails: Record<string, PreparedDetails>; activeCardIds: string[]; archivedCardCount: number; catalogStatus: PreparedCatalogStatus; commandReceipt?: { requestId: string; appliedRevision: number; replayed: boolean; scoutRequestId?: string } };
 const base = z.object({ expectedRevision: z.number().int().nonnegative(), requestId: id });
 const patch = z.object({ title: text.optional(), script: z.string().max(30000).nullable().optional(), shots: shotsSchema.optional(), origin: originSchema.optional(), departmentDecision: departmentDecisionSchema.optional(), publication: z.object({ url, publishedAt: date }).strict().nullable().optional() }).strict().refine(value => Object.keys(value).length > 0, "Пустое изменение.");
 export const workspaceCommandSchema = z.discriminatedUnion("type", [

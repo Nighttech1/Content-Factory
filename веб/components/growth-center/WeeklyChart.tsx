@@ -22,6 +22,6 @@ export function WeeklyChart({ view, stageId, label }: { view: WorkspaceView | nu
         <Line type="linear" dataKey="value" name={label} stroke="var(--accent-blue-bright)" strokeWidth={2} connectNulls={false} dot={{ r: 4 }} isAnimationActive={false} />
       </LineChart></ResponsiveContainer>
     </div> : <div className={styles.emptyChart}>Недельных замеров пока нет</div>}
-    <p className={styles.chartNote}>Нет данных — разрыв, а не ноль. {view?.capabilities.schedulerEnabled ? "Недельные снимки: воскресенье, 23:59 по Москве." : "Автоматические недельные снимки пока не настроены."}</p>
+    <p className={styles.chartNote}>Нет данных — разрыв, а не ноль.</p>
   </section>;
 }

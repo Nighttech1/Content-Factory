@@ -71,6 +71,8 @@ jobs:
           node --import tsx scripts/test-growth-workspace.ts
           node --import tsx scripts/test-growth-workspace-api.ts
           node --import tsx scripts/test-growth-workspace-boundaries.ts
+          node --import tsx scripts/test-growth-prepared.ts
+          node --import tsx scripts/test-growth-prepared-boundaries.ts
           npm run build
           test -f .next/standalone/server.js
           npx playwright install --with-deps chromium
@@ -112,6 +114,7 @@ jobs:
           unset GROWTH_GITHUB_TOKEN GROWTH_GITHUB_REPOSITORY GROWTH_GITHUB_BRANCH GROWTH_SCOUT_BRANCH
           # Synthetic history only in the private runtime fixture, never the packaged artifact.
           (cd веб && node --import tsx scripts/seed-growth-workspace-qa.ts)
+          (cd веб && node --import tsx scripts/seed-growth-prepared-qa.ts)
           cleanup(){
             local code=$?
             kill "$SERVER_PID" 2>/dev/null || true
@@ -125,8 +128,8 @@ jobs:
           trap cleanup EXIT
           cd ../..
           for n in $(seq 1 45); do if curl --fail --silent http://127.0.0.1:3000/growth > /dev/null; then break; fi; test "$n" -lt 45; sleep 2; done
-          node scripts/growth-workspace-browser-qa.mjs
-          node scripts/growth-workspace-client-qa.mjs
+          node scripts/growth-prepared-browser-qa.mjs
+          node scripts/growth-prepared-client-qa.mjs
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: growth-center-qa-${{ github.run_id }}
