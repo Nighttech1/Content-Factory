@@ -17,3 +17,10 @@ Source `80dcf085ec12083c1e842f54919f8c516f972a1e`, QA marker `673f195c60980fae54
 Далее упал сценарий оборванного ответа Scout: generic role=alert мог совпасть с shadow-DOM NextRouteAnnouncer до завершения POST. Тест не ожидал окончания собственного route.fetch/abort и читал число запросов слишком рано. Это не доказанный дефект приложения: реальный экран показывает ответнеполучен, а его обработчик ещё busy. Tester заменила ожидание на точный application text, completion фактического upstream commit/abort и enabled control, сохранила exactcount+1/sameUUID replay/one durable request. Client отдельно уточнила future-publication guard: фактический POST400/future_evidence_date и ошибка внутри своего диалога. Appcode после source80dc этой правкой не меняется.
 
 Оба C-* остаются OPEN: до окончания всех4widths и независимого Client CLI нельзя объявлять весь UI принятым. Следующая попытка отдельно.
+
+
+## Попытка3 — полный QA PASS и независимая приёмка
+
+Source a1f83cfe792a074fdae0fbac27d2051ad45a6385, QA marker dc01033e837309f2196b9abdc5be6fc974d6cf6f, run https://github.com/Nighttech1/Content-Factory/actions/runs/42798584220 SUCCESS. Gate/QA PASS, deploy SKIPPED. Build artifact13754898158 (83MB, expires24.11), evidence13754528476 (32PNG, обаreports,DOM/log). Actual Tester и отдельный Client CLI PASS1440/412/390/360, errors[]/external[]. Physicalkeyboard POST200/persistedTask4width, desktopnativeDnD, boundedequalcols634/534px, chartgap30/22px, lastcardreachable. LostScout upstream200→abortcompleted→count0→1→sameUUIDreplay, без дубликата. Client подтвердилa SaveCancel/2contexts/reload/CAS/nullvs0/scriptedit/publicationproofvalidation/manualScoutonly. Личный осмотр8PNG/DOM и закрытие обоихC: client-acceptance.md.
+
+Это код и изолированный QA preview, не новый production/VPS/настроенный runtimeGit. Фиктивные недельные значения остались только в private QA storage после упаковки artifact; source canonical JSON не менялся. Никаких реальных Gitдоставок из приложения, исследований, LLM, paidAPI или production.

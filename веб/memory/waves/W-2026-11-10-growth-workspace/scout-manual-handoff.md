@@ -23,3 +23,8 @@ API DTO `ScoutRequest`: `id`, `cardId`, `status=queued|git_pending|git_saved`, `
 Bootstrap добавляет обработку growth-очереди только после owner-команды. Исторический paid budget не переносится; Скаут не подменяет начальника отдела и не объявляет обновлённым веб. Автоматический импорт будущих отчётов в карточки вне scope. Source/source-date/metrics и решение отдела остаются проверяемыми отдельными состояниями.
 
 Инструкция очереди: `projects/vernatun/departments/scout/requests/growth/README.md`. Последующая публикация bootstrap и runtime-настройка должны подтверждаться отдельно; наличие этих файлов не означает, что действующий чат уже перечитал новую инструкцию.
+
+
+## Фактическое сохранение bootstrap после QA
+
+Root сохранила три подготовленных файла в Scout branch `codex/scout-handoff-20261109`, commit `77896642ab91c93a41b9f4df1d85ce6b8b1b266d`, parent f4c64646e772af4a9ab8d7ddc40e0dcb63989d9f с expected-head CAS без force/merge. Перед записью повторно подтверждён exact ref; оригинальные START и README сохранены, additive intake only. Только manual workflow_dispatch, реальное исследование не запускалось. Runtime queue requests ещё не отправлялись: VPS credentials/feature activation отдельно. Открытый чат Скаута должен реально перечитать актуальные инструкции после команды владельца.

@@ -89,3 +89,7 @@ Rollback возвращает точный прежний current и прежн�
 Имена: INFINITYS_DOOR_VPS_USER, INFINITYS_DOOR_VPS_SSH_KEY, необязательный INFINITYS_DOOR_VPS_PORT (default22), INFINITYS_DOOR_VPS_KNOWN_HOSTS. Host release фиксирован content.*. SHA256:… — отпечаток; KEY содержит полный приватный ключ с BEGIN/END. Значения не отправлять в чат/логи/Git.
 
 После release проверить https://content.vernatunspeakclub.com/api/growth-center, /growth, старые /marketing, /studio, /schedule, /settings; затем живая приёмка Клиентом. Зелёный workflow без revision и пользовательской проверки не заменяет приёмку.
+
+## Конфигурация новой рабочей доски
+
+Для source с защищённым редактором `/growth` дополнительно прочитай [GROWTH_WORKSPACE.md](GROWTH_WORKSPACE.md). Runtime owner secret/origin, постоянный state, Git token/branches и scheduler — отдельная настройка сервера; наличие Actions SSH Secrets не включает их автоматически. Без owner config сайт остаётся read-only, без Git config серверное сохранение показывает not_configured. Не включать запись через QA OWNER selector и не переносить ephemeral CI secret на VPS. Кодовый QA не доказывает настройку runtime; активация и production только по отдельному разрешению владельца.

@@ -1,6 +1,6 @@
 # C-UX-KANBAN-HEIGHT — ограничить высоту доски и сохранить обзор динамики
 
-Статус: **OPEN**. Приоритет: **P2**. Зона: Frontend, существующая доска `/growth`. Изменение scope — только layout/scroll текущих колонок, не данные/новый dashboard.
+Статус: **CLOSED**. Приоритет: **P2**. Зона: Frontend, существующая доска `/growth`. Изменение scope — только layout/scroll текущих колонок, не данные/новый dashboard.
 
 ## Факт
 
@@ -20,3 +20,10 @@
 Реальный browser1440 +mobile412/390/360: screenshot с наполненной первой колонкой и пустыми соседними, все колонки сопоставимой высоты, bounded board и график под ней. Прокрутить наполненную колонку до последней карточки, открыть её/перенести назад и подтвердить server state; native drag и доступные keyboard/mobile controls не сломаны. Проверить отсутствие документного horizontal overflow и отсутствие блокировки вертикального scroll страницы/колонки. Затем независимая повторная приёмка Клиента.
 
 Клиент не меняла приложение. Фикс возвращается Frontend через Оркестратора; закрытие только после actual retest/evidence.
+
+
+## Закрытие — actual CI3
+
+Run `42798584220`, source `a1f83cfe792a074fdae0fbac27d2051ad45a6385`, evidence artifact `13754528476`. Два независимых сценария настоящего браузера PASS1440/412/390/360: board634px/534px при viewport1000; пять равных колонок620px/520px; внутренний overflowY=auto, graphgap30px/22px; последний элемент прокручен/сфокусирован/открыт. Client отдельно нажала Enter на последней карточке во всех4width. All-format backward move и native desktop drag сохранились, document overflow=false.
+
+Клиент лично осмотрела `workspace-client-board-1440.png`, `workspace-board-360.png`, `workspace-client-column-scroll-360.png`, `workspace-client-card-1440.png`, `workspace-card-390.png`, `workspace-client-card-360.png`, `workspace-client-hero-412.png`, `workspace-client-weekly-412.png`. Карточки не исчезли, график непосредственно после ограниченной доски, тексты/controls доступны. Source24V-ID проверены реальным API. Новых блокирующих UX замечаний нет.

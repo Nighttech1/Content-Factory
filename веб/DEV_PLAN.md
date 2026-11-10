@@ -1,8 +1,10 @@
 # DEV_PLAN.md — Живой план Vernatun Content Factory
 
-## W-2026-11-10-growth-workspace — реализация в независимом QA
+## W-2026-11-10-growth-workspace — внутренне принято, без нового production
 
-Spec/chain: `memory/waves/W-2026-11-10-growth-workspace/`. Новый /growth:6этапов, компактный header,4nav без Director (legacychat сохранён),5column arbitrary/backward Kanban, source/script/decision/publication modal, protected serverfact edit+CAS/outbox/manualScout, weekly selectedstage snapshots. Oldv2schema/canonical24IDs не менялись. Backend24groups+API/tsc, Frontendtsc/targetedlint и localproductionbuild PASS; независимый browserQA/Client ещё не завершены. Runtime auth/Git/scheduler требуют отдельной настройки; руководство `../docs/GROWTH_WORKSPACE.md`. Никакого нового production/исследований/платныхAPI; code/docs сохраняются в Git, QA-only marker отдельно.
+Tested source a1f83cfe792a074fdae0fbac27d2051ad45a6385, QA42798584220 SUCCESS, marker dc01033e837309f2196b9abdc5be6fc974d6cf6f; build13754898158/evidence13754528476. Gate/QA PASS, deploy SKIPPED. 38legacy+11boundaries+24authored+API+13independent и настоящие Tester/Client browser1440/412/390/360 PASS/errors[]. Client лично осмотрела8PNG/DOM, оба C CLOSED, owner acceptance отдельно. Новая server/kanban/card/weekly UI принята; /marketing/chat/data и v2 seed сохранены. Source/spec/chain/guards: `memory/waves/W-2026-11-10-growth-workspace/`.
+
+Runtime auth/Git/scheduler на VPS ещё не настроены/не проверены; guide `../docs/GROWTH_WORKSPACE.md`. Новый production release не разрешён/не выполнен. GitHub Scout intake реально сохранён в её ветке commit77896642ab91c93a41b9f4df1d85ce6b8b1b266d; ручная команда «обновляй инфу», не автоматический поиск/импорт. После QA меняются только отчётные Markdown, приложение/immutableartifact не пересобираются.
 
 ## W-2026-11-10-repeatable-deploy
 
