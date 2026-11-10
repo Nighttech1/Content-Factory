@@ -142,7 +142,11 @@ try{
   const unsafe=await command(current,{type:'update_card',cardId:example.id,patch:{publication:{url:'javascript:alert(1)',publishedAt:'2026-01-01'}}});assert(!unsafe.response.ok()&&(await read(current)).revision===priorRevision,'Unsafe publication URL was accepted');
   await edit(currentPage);
   const today=new Date(Date.now()+3*3600000).toISOString().slice(0,10),future=new Date(Date.now()+10*86400000).toISOString().slice(0,10);
-  await currentPage.getByTestId('growth-edit-publication-url').fill('https://example.org/qa-only/'+example.id);await currentPage.getByTestId('growth-edit-publication-date').fill(future);await currentPage.getByTestId('growth-card-save').click();await currentPage.getByRole('alert').first().waitFor({state:'visible'});
+  await currentPage.getByTestId('growth-edit-publication-url').fill('https://example.org/qa-only/'+example.id);await currentPage.getByTestId('growth-edit-publication-date').fill(future);
+  const futureResponse=currentPage.waitForResponse(response=>response.url()===origin+'/api/growth-workspace'&&response.request().method()==='POST'&&response.request().postDataJSON()?.type==='update_card');
+  await currentPage.getByTestId('growth-card-save').click();const rejectedFuture=await futureResponse;assert(rejectedFuture.status()===400&&(await rejectedFuture.json()).error==='future_evidence_date','Future proof did not receive the specific server rejection');
+  await currentPage.getByTestId('growth-card-dialog').getByRole('alert').filter({hasText:'Изменение не подтверждено'}).waitFor({state:'visible'});
+  await currentPage.waitForFunction(()=>!document.querySelector('[data-testid="growth-card-save"]')?.disabled);
   assert((await read(current)).cards.find(item=>item.id===example.id).publication===null,'Future publication proof was accepted');await currentPage.getByTestId('growth-card-cancel').click();
   await edit(currentPage);await currentPage.getByTestId('growth-edit-publication-url').fill('https://example.org/qa-only/'+example.id);await currentPage.getByTestId('growth-edit-publication-date').fill(today);await saveCard(currentPage);await closeCard(currentPage);
   await currentPage.getByTestId('growth-mode-fact').click();await currentPage.getByTestId('growth-open-'+example.id).waitFor({state:'visible'});assert(await card(currentPage,example.id).getByRole('link',{name:'Опубликовано ↗',exact:true}).isVisible(),'Valid owner-entered proof is not available in Fact');
