@@ -75,6 +75,22 @@ try{
    if(![...latest.values()].some(point=>point.counts[id]!==null)){assert((await currentPage.getByTestId('growth-weekly-chart').innerText()).includes('Недельных замеров пока нет'),'Unknown weekly series was shown as observed growth');assert(await currentPage.getByTestId('growth-weekly-chart').locator('svg.recharts-surface').count()===0,'Unknown weekly series has an invented plotted value')}
   }
   await stage(currentPage,'awareness');await noOverflow(currentPage,`${width} compact header`);await currentPage.screenshot({path:`${out}/workspace-client-hero-${width}.png`});
+  const layout=await currentPage.getByTestId('growth-kanban').evaluate(board=>{
+   const box=board.getBoundingClientRect(),columns=[...board.querySelectorAll('section[data-testid^="growth-column-"]')];
+   const heights=columns.map(column=>column.getBoundingClientRect().height);
+   const scrollable=columns.flatMap(column=>[...column.querySelectorAll('*')].filter(element=>['auto','scroll'].includes(getComputedStyle(element).overflowY)&&element.scrollHeight>element.clientHeight+1));
+   const graph=document.querySelector('[data-testid="growth-weekly-chart"]').getBoundingClientRect();
+   return {boardHeight:box.height,viewportHeight:innerHeight,columnHeights:heights,internalScrollingBodies:scrollable.length,graphDistance:graph.top-box.bottom};
+  });
+  assert(layout.boardHeight<=layout.viewportHeight,'Kanban still grows taller than the viewport');
+  assert(layout.columnHeights.length===5&&Math.max(...layout.columnHeights)-Math.min(...layout.columnHeights)<=2,'Kanban working columns have unequal heights');
+  assert(layout.internalScrollingBodies>0,'Filled column has no independent vertical scroll');
+  assert(layout.graphDistance>=0&&layout.graphDistance<=100,'Weekly chart is separated from the bounded board');
+  const taskCards=currentPage.getByTestId('growth-column-task').getByTestId('growth-content-card');const lastTask=taskCards.last();
+  const lastTaskId=await lastTask.getAttribute('data-card-id');assert(lastTaskId,'Fixture lacks a last task card');
+  await currentPage.getByTestId('growth-open-'+lastTaskId).press('Enter');await currentPage.getByTestId('growth-card-dialog').waitFor({state:'visible'});await closeCard(currentPage);
+  assert(await currentPage.getByTestId('growth-open-'+lastTaskId).isVisible(),'Last card became unreachable after bounded scrolling');
+  await currentPage.getByTestId('growth-kanban').screenshot({path:`${out}/workspace-client-column-scroll-${width}.png`});
   const weekly=currentPage.getByTestId('growth-weekly-chart');await weekly.locator('.recharts-dot').first().waitFor({state:'visible'});
   if(width===1440)await weekly.locator('.recharts-dot').first().hover();else await weekly.locator('.recharts-dot').first().tap();
   await weekly.getByText(/Исправленный снимок · версия/).waitFor({state:'visible'});assert((await weekly.innerText()).includes('QA'),'Correction tooltip lacks the isolated measurement source');await weekly.screenshot({path:`${out}/workspace-client-weekly-${width}.png`});
@@ -144,7 +160,7 @@ try{
   await noOverflow(currentPage,`${width} owner modal`);await currentPage.screenshot({path:`${out}/workspace-client-card-${width}.png`});await closeCard(currentPage);
   assert(await currentPage.getByTestId('growth-weekly-chart').count()===1,'Extra chart appeared after edits');await noOverflow(currentPage,`${width} board`);await currentPage.screenshot({path:`${out}/workspace-client-board-${width}.png`,fullPage:true});
   fs.writeFileSync(`${out}/workspace-client-dom-${width}.txt`,redact(await currentPage.locator('body').ariaSnapshot()));
-  report.checks.push({width,navFour:true,sixStages:true,oneWeeklyChart:true,visibleCorrectionSource:true,unknownWeeklySeriesNotPlotted:true,factsCancelSaveReloadAndSecondContext:true,unknownDistinctFromZero:true,arbitraryBackwardCarouselAndArticleMoves:true,desktopDrag:width===1440,scriptEditPersisted:true,unsafeAndFutureProofDenied:true,factRequiresProof:true,manualScoutOnly:true,honestNoGit:true,overflow:false});
+  report.checks.push({width,navFour:true,sixStages:true,oneWeeklyChart:true,boundedEqualColumns:true,lastCardKeyboardReachable:true,layout,visibleCorrectionSource:true,unknownWeeklySeriesNotPlotted:true,factsCancelSaveReloadAndSecondContext:true,unknownDistinctFromZero:true,arbitraryBackwardCarouselAndArticleMoves:true,desktopDrag:width===1440,scriptEditPersisted:true,unsafeAndFutureProofDenied:true,factRequiresProof:true,manualScoutOnly:true,honestNoGit:true,overflow:false});
   if(width!==1440)await currentPage.close();
  }
  // The old direct route remains reachable, with its chat, despite removal from navigation.

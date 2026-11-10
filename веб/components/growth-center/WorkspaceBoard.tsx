@@ -29,7 +29,7 @@ export function WorkspaceBoard({ cards, planById, stageId, canWrite, busy, reque
           if (cards.some((card) => card.id === id)) onMove(id, column, null);
         }}>
           <h3>{COLUMN_LABELS[column]}<span>{items.length}</span></h3>
-          <div className={styles.columnBody}>
+          <div className={styles.columnBody} data-testid={`growth-column-scroll-${column}`} tabIndex={0} role="region" aria-label={`${COLUMN_LABELS[column]}: карточки`}>
             {items.map((card) => {
               const request = requests.filter((item) => item.cardId === card.id).at(-1);
               const plan = planById[card.id];
