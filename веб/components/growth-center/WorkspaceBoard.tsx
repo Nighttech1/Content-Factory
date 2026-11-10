@@ -1,13 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { GripVertical } from "lucide-react";
 import { DndContext, DragOverlay, KeyboardSensor, MouseSensor, TouchSensor, closestCenter, pointerWithin, useDroppable, useSensor, useSensors, type CollisionDetection } from "@dnd-kit/core";
-import { SortableContext, sortableKeyboardCoordinates, useSortable, verticalListSortingStrategy } from "@dnd-kit/sortable";
+import { SortableContext, useSortable, verticalListSortingStrategy } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { BOARD_COLUMNS, type BoardColumn, type WorkspaceCard } from "@/lib/growth-center/workspace-model";
 import type { ContentEntry } from "@/lib/growth-center/model";
+import { createKanbanKeyboardCoordinates } from "./kanban-keyboard";
 import styles from "./workspace.module.css";
 
 export const COLUMN_LABELS: Record<BoardColumn, string> = { task: "Задача", shooting: "Съёмка", development: "Монтаж/Разработка", approval: "Согласование", release: "Выпуск" };
@@ -62,14 +63,16 @@ function BoardColumnView({ column, cards, planById, canWrite, busy, onOpen, onMo
 
 export function WorkspaceBoard({ cards, planById, stageId, canWrite, busy, onOpen, onMove }: BoardProps) {
   const [activeId, setActiveId] = useState<string | null>(null);
+  const keyboard = useMemo(() => createKanbanKeyboardCoordinates(), []);
   const sensors = useSensors(
     useSensor(MouseSensor, { activationConstraint: { distance: 6 } }),
     useSensor(TouchSensor, { activationConstraint: { delay: 180, tolerance: 8 } }),
-    useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }),
+    useSensor(KeyboardSensor, { coordinateGetter: keyboard.coordinateGetter, scrollBehavior: "auto" }),
   );
   const activeCard = cards.find((card) => card.id === activeId);
-  return <DndContext id="growth-workspace-kanban" sensors={sensors} collisionDetection={collisions} onDragStart={(event) => setActiveId(String(event.active.id))} onDragCancel={() => setActiveId(null)} onDragEnd={(event) => {
+  return <DndContext id="growth-workspace-kanban" sensors={sensors} collisionDetection={collisions} onDragStart={(event) => { setActiveId(String(event.active.id)); keyboard.reset(cards.find((card) => card.id === String(event.active.id))?.column ?? null); }} onDragCancel={() => { setActiveId(null); keyboard.reset(null); }} onDragEnd={(event) => {
     setActiveId(null);
+    keyboard.reset(null);
     if (!canWrite || busy || !event.over) return;
     const id = String(event.active.id);
     const targetId = String(event.over.id);
