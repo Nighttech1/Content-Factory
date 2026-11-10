@@ -6,13 +6,8 @@ function fixture({left=250,dragging=true,columnOver=null,missing=false}={}){
  return {activeElement:{getAttribute:()=> 'growth-drag-fixture'},querySelector:selector=>selector.startsWith('[data-card-id=')?(missing?null:card):target};
 }
 const args={id:'fixture',column:'shooting'};
-// Valid physical placement remains valid when the actual collision is a card, not its column.
-assert.equal(keyboardTargetState({...args,wait:true},fixture()),true);
-assert.equal(keyboardTargetState(args,fixture()).columnDragOver,null);
-assert.equal(keyboardTargetState({...args,wait:true},fixture({columnOver:'true'})),true);
-// A stale column flag must not accept a source card which has not moved or is no longer dragging.
-assert.equal(keyboardTargetState({...args,wait:true},fixture({left:0,columnOver:'true'})),false);
-assert.equal(keyboardTargetState({...args,wait:true},fixture({dragging:false,columnOver:'true'})),false);
-assert.equal(keyboardTargetState({...args,wait:true},fixture({missing:true})),false);
-assert.equal(keyboardTargetState({...args,wait:true},fixture({left:500})),false);
-console.log('PASS prepared keyboard observation guard: card/column collision, wrong target, inactive and absent drag states');
+// Diagnostics must preserve observed flags/focus without creating a readiness verdict from geometry.
+for(const input of [{},{columnOver:'true'},{left:0,columnOver:'true'},{dragging:false},{missing:true}]){
+ const snapshot=keyboardTargetState(args,fixture(input));assert.equal(typeof snapshot,'object');assert.equal(snapshot.activeElement,'growth-drag-fixture');assert.equal(snapshot.columnDragOver,input.columnOver??null);assert.equal(snapshot.dragging,!input.missing&&input.dragging!==false);assert.equal('withinTarget' in snapshot,false);assert.equal('ready' in snapshot,false);
+}
+console.log('PASS prepared keyboard diagnostics preserve DOM state and never claim readiness from original-card geometry');

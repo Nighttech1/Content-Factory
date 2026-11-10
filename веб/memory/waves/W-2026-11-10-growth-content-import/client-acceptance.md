@@ -31,3 +31,8 @@ UI active selection опирается на approved sidecar; immutable approval
 ## QA protocol correction перед повторным CI
 
 По C-QA-PREPARED-WAIT независимый Client harness исправлен: dnd-kit collision может указывать на карточку внутри целевой колонки, поэтому ожидание только column `data-drag-over=true` было ложной предпосылкой теста. Теперь после реального focus/Space/ArrowRight проверяется геометрия dragging-card center в пределах shooting; физический завершающий Space должен породить matching `move_card` POST200 (точные cardId/column), после чего DOM и свежий второй browser-context GET должны показать shooting. Per-width target geometry/physical keys/status/persistedColumn записываются в `keyboardMoves`. Escape no-revision guard сохранён. Нет select fallback вместо keyboard и нет app edits. Node syntax/diff checks PASS; actual browser retest всё ещё PENDING, этот protocol fix сам по себе не PASS продукта.
+
+
+### Уточнение protocol fix
+
+После дополнительного review Root геометрическое ожидание также снято как gate: DragOverlay и исходная sortable-card могут иметь разные rect/attributes. Геометрия только diagnosticTarget, не условие PASS. Реальный keyboard сценарий остаётся focus→Space→ArrowRight→Space; ожидается конкретный `move_card` POST200 для shooting, commandReceipt с тем же requestId и integer appliedRevision, DOM shooting и свежий второй-context GET shooting/revision≥appliedRevision. События клавиатуры не заменены select/API backdoor. Синтаксис повторно проверен; actual CI ожидается.
