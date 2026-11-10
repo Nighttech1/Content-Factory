@@ -535,3 +535,6 @@
 ## W-2026-11-10-situation-center — systemd release
 - C-OPS-ROLLBACK-VERIFY: откат подтверждён после восстановления own drop-in state (только regular matching файл, чужой/symlink не удалять), daemon-reload, ln/mv current→old, restart прежнего CLI/unit, bounded health и PID/cwd/UID/listener; ошибка любого шага не даёт ROLLBACK_VERIFIED. CONFIG_CHANGED до записи покрывает сбой до current cutover — `memory/tickets/C-OPS-ROLLBACK-VERIFY/guards.md`. Проверки из корня репозитория: `node scripts/test-systemd-release-review.mjs` и `python3 scripts/test-systemd-release.py`.
 - C-OPS-DROPIN-OWNERSHIP: до install повторно подтвердить отсутствие target; при rollback удалять только regular non-symlink файл, совпадающий с prepared owned content. Чужое содержимое/symlink не удалять — `memory/tickets/C-OPS-DROPIN-OWNERSHIP/guards.md`, те же независимые mock-проверки.
+
+## W-2026-11-10-growth-content-import — prepared keyboard QA
+- C-QA-PREPARED-WAIT: read-only physical keyboard-target geometry must not depend solely on a column `isOver` flag; subsequent matching POST HTTP200 and persisted intended column remain mandatory. `node scripts/test-growth-prepared-keyboard-state.mjs`; actual four-width browser guard `scripts/growth-prepared-browser-qa.mjs`; details `memory/tickets/C-QA-PREPARED-WAIT/guards.md`.

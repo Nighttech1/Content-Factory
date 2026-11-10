@@ -26,3 +26,8 @@ UI active selection опирается на approved sidecar; immutable approval
 4. STATE исторически отстаёт от предыдущего production workspace release; финальное root handoff должно явно назвать текущую production и новую prepared wave отдельно.
 
 До фактического CI+личного осмотра PNG C не считаются закрытыми и UI не принят. На данный момент новых доказанных app C не открыто; документационные расхождения переданы Root, pending resolution.
+
+
+## QA protocol correction перед повторным CI
+
+По C-QA-PREPARED-WAIT независимый Client harness исправлен: dnd-kit collision может указывать на карточку внутри целевой колонки, поэтому ожидание только column `data-drag-over=true` было ложной предпосылкой теста. Теперь после реального focus/Space/ArrowRight проверяется геометрия dragging-card center в пределах shooting; физический завершающий Space должен породить matching `move_card` POST200 (точные cardId/column), после чего DOM и свежий второй browser-context GET должны показать shooting. Per-width target geometry/physical keys/status/persistedColumn записываются в `keyboardMoves`. Escape no-revision guard сохранён. Нет select fallback вместо keyboard и нет app edits. Node syntax/diff checks PASS; actual browser retest всё ещё PENDING, этот protocol fix сам по себе не PASS продукта.

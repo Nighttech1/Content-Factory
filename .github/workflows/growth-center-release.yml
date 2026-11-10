@@ -73,6 +73,7 @@ jobs:
           node --import tsx scripts/test-growth-workspace-boundaries.ts
           node --import tsx scripts/test-growth-prepared.ts
           node --import tsx scripts/test-growth-prepared-boundaries.ts
+          node ../scripts/test-growth-prepared-keyboard-state.mjs
           npm run build
           test -f .next/standalone/server.js
           npx playwright install --with-deps chromium
