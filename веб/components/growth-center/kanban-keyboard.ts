@@ -3,7 +3,7 @@ import { sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import { BOARD_COLUMNS, type BoardColumn } from "@/lib/growth-center/workspace-model";
 
 /** Horizontal keys select columns, including empty ones; vertical keys sort cards. */
-export function createKanbanKeyboardCoordinates() {
+export function createKanbanKeyboardCoordinates(onTarget?: (column: BoardColumn | null) => void) {
   let currentColumn: BoardColumn | null = null;
   const coordinateGetter: KeyboardCoordinateGetter = (event, args) => {
     if (event.code !== "ArrowLeft" && event.code !== "ArrowRight") return sortableKeyboardCoordinates(event, args);
@@ -17,11 +17,13 @@ export function createKanbanKeyboardCoordinates() {
     if (index < 0) return;
     const nextColumn = BOARD_COLUMNS[index + (event.code === "ArrowRight" ? 1 : -1)];
     if (!nextColumn) return;
-    const target = args.context.droppableContainers.get(`column-${nextColumn}`);
-    if (!target || target.disabled || !target.node.current) return;
-    const targetRect = target.node.current.getBoundingClientRect();
+    if (typeof document === "undefined") return;
+    const target = document.querySelector<HTMLElement>(`[data-testid="growth-column-${nextColumn}"]`);
+    if (!target || target.dataset.dropDisabled === "true") return;
+    const targetRect = target.getBoundingClientRect();
     if (targetRect.width <= 0 || targetRect.height <= 0) return;
     currentColumn = nextColumn;
+    onTarget?.(nextColumn);
     // Center the complete active rectangle in the column, rather than aiming at
     // a sortable card which may not exist, be scrolled out, or belong elsewhere.
     return {
@@ -29,5 +31,5 @@ export function createKanbanKeyboardCoordinates() {
       y: targetRect.top + (targetRect.height - activeRect.height) / 2,
     };
   };
-  return { coordinateGetter, reset: (column: BoardColumn | null) => { currentColumn = column; } };
+  return { coordinateGetter, reset: (column: BoardColumn | null) => { currentColumn = column; onTarget?.(column); } };
 }

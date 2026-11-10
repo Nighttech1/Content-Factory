@@ -50,7 +50,7 @@ function BoardCard({ card, plan, canWrite, busy, onOpen, onMove }: {
 
 function BoardColumnView({ column, cards, planById, canWrite, busy, onOpen, onMove }: { column: BoardColumn } & Pick<BoardProps, "cards" | "planById" | "canWrite" | "busy" | "onOpen" | "onMove">) {
   const { setNodeRef, isOver } = useDroppable({ id: `column-${column}`, data: { column }, disabled: !canWrite || busy });
-  return <section ref={setNodeRef} className={styles.column} data-testid={`growth-column-${column}`} data-drag-over={isOver || undefined} aria-label={COLUMN_LABELS[column]}>
+  return <section ref={setNodeRef} className={styles.column} data-testid={`growth-column-${column}`} data-drag-over={isOver || undefined} data-drop-disabled={!canWrite || busy} aria-label={COLUMN_LABELS[column]}>
     <h3>{COLUMN_LABELS[column]}<span>{cards.length}</span></h3>
     <div className={styles.columnBody} data-testid={`growth-column-scroll-${column}`} tabIndex={0} role="region" aria-label={`${COLUMN_LABELS[column]}: карточки`}>
       <SortableContext id={`column-${column}`} items={cards.map((card) => card.id)} strategy={verticalListSortingStrategy}>
@@ -63,7 +63,8 @@ function BoardColumnView({ column, cards, planById, canWrite, busy, onOpen, onMo
 
 export function WorkspaceBoard({ cards, planById, stageId, canWrite, busy, onOpen, onMove }: BoardProps) {
   const [activeId, setActiveId] = useState<string | null>(null);
-  const keyboard = useMemo(() => createKanbanKeyboardCoordinates(), []);
+  const [keyboardTarget, setKeyboardTarget] = useState<BoardColumn | null>(null);
+  const keyboard = useMemo(() => createKanbanKeyboardCoordinates(setKeyboardTarget), []);
   const sensors = useSensors(
     useSensor(MouseSensor, { activationConstraint: { distance: 6 } }),
     useSensor(TouchSensor, { activationConstraint: { delay: 180, tolerance: 8 } }),
@@ -86,7 +87,7 @@ export function WorkspaceBoard({ cards, planById, stageId, canWrite, busy, onOpe
     onDragEnd: ({ over }) => over ? "Место выбрано. Ожидаем подтверждения сохранения." : "Перенос отменён.",
     onDragCancel: () => "Перенос отменён.",
   } }}>
-    <div className={styles.boardScroll} data-testid="growth-kanban" data-stage-id={stageId} tabIndex={0} role="region" aria-label="Доска контента, прокрутка по горизонтали">
+    <div className={styles.boardScroll} data-testid="growth-kanban" data-stage-id={stageId} data-keyboard-target={keyboardTarget || undefined} tabIndex={0} role="region" aria-label="Доска контента, прокрутка по горизонтали">
       <div className={styles.board}>{BOARD_COLUMNS.map((column) => <BoardColumnView key={column} column={column} cards={cards.filter((card) => card.column === column)} planById={planById} canWrite={canWrite} busy={busy} onOpen={onOpen} onMove={onMove} />)}</div>
     </div>
     {activeCard && createPortal(<DragOverlay dropAnimation={null}><div className={styles.dragPreview}><small>{activeCard.format}</small><strong>{activeCard.title}</strong></div></DragOverlay>, document.body)}

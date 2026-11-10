@@ -9,6 +9,11 @@ function fixture() {
   const boxes = new Map(BOARD_COLUMNS.map((column, index) => [column, rect(index * 240)]));
   const containers = new Map(BOARD_COLUMNS.map((column) => [`column-${column}`, { id: `column-${column}`, disabled: false, node: { current: { getBoundingClientRect: () => boxes.get(column)! } }, data: { current: { column } } }]));
   const droppableContainers = { get: (id: string) => containers.get(id), getEnabled: () => [...containers.values()].filter((item) => !item.disabled) };
+  Object.defineProperty(globalThis, "document", { configurable: true, value: { querySelector: (selector: string) => {
+    const match = /^\[data-testid="growth-column-([a-z]+)"\]$/.exec(selector);
+    const entry = match ? containers.get(`column-${match[1]}`) : undefined;
+    return entry ? { dataset: { dropDisabled: String(entry.disabled) }, getBoundingClientRect: entry.node.current.getBoundingClientRect } : null;
+  } } });
   const args = { active: "card-1", currentCoordinates: { x: 12, y: 60 }, context: { active: { id: "card-1", data: { current: { column: "task" } } }, over: { id: "card-1", data: { current: { column: "task" } } }, collisionRect: rect(12, 60, 200, 300), droppableContainers, droppableRects: new Map([...boxes].map(([id, box]) => [`column-${id}`, box])), scrollableAncestors: [] } } as unknown as Args;
   let prevented = 0;
   const key = (code: string) => ({ code, preventDefault: () => { prevented++; } }) as KeyboardEvent;
@@ -20,6 +25,9 @@ check("empty adjacent column uses actual column center", () => {
   const f = fixture(), keyboard = createKanbanKeyboardCoordinates(); keyboard.reset("task");
   assert.deepEqual(keyboard.coordinateGetter(f.key("ArrowRight"), f.args), { x: 252, y: 130 });
   assert.equal(f.prevented(), 1);
+  // Horizontal movement must work even if the dnd-kit droppable registry is unavailable.
+  (f.args.context as unknown as { droppableContainers: unknown }).droppableContainers = undefined;
+  assert.deepEqual(keyboard.coordinateGetter(f.key("ArrowRight"), f.args), { x: 492, y: 130 });
 });
 check("repeated Right traverses all five columns despite stale previous collision", () => {
   const f = fixture(), keyboard = createKanbanKeyboardCoordinates(); keyboard.reset("task");
