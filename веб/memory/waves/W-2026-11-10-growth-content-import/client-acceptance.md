@@ -41,3 +41,8 @@ UI active selection опирается на approved sidecar; immutable approval
 ## Действующее изменение scope приёмки (Root, последнее поручение)
 
 Физический keyboard cross-column commit исключён из blocking Client QA. Это заменяет предыдущие требования/описания keyboard POST/receipt в этом pending отчёте. **Не считаем physical keyboard cross-column доказанным или принятым**; новый custom getter не получает PASS без actual evidence. Сохранены реальные Space→Arrow→Escape cancel (revision не меняется) и доступный selector fallback для всех форматов/всех колонок/назад, который не выдаётся за физический drag. Реальные mouse/touch drag остаются обязательным blocking gate отдельного Tester browser CLI на actual CI. Root уведомлена о необходимости отразить scope amendment в architect-spec/chain. Client приложение не меняла. До browser CI+личного просмотра screenshots итоговая приёмка по-прежнему PENDING.
+
+
+## Последнее действующее scope amendment — keyboard полностью deferred
+
+По последнему поручению Root из этой волны удалены также physical keyboard drag/Escape assertions. Предыдущий раздел о сохранённом Escape cancel более не является действующим QA gate. **Physical keyboard drag/cancel/accessibility не проверены и не приняты этой волной**, остаются отдельным deferred пунктом; это ограничение должно присутствовать в итоговом сообщении и spec/chain. Собственный JSON прямо отмечает `physicalKeyboardDrag: deferred; not tested or accepted`. Сохраняются Client selectorfallback всех форматов/назад, UI/modal/provenance/adaptation/proof/legacy сценарии. Mandatory physical mouse/touch остаются в реальном Tester browser gate. Продуктовый код не менялся; итоговая приёмка ожидает actual CI и личный визуальный review.

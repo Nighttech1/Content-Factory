@@ -49,3 +49,7 @@ The previous geometry readiness wait was not valid for DragOverlay: the overlay 
 ### Explicit acceptance scope adjustment
 
 Root explicitly removed blocking physical keyboard cross-column commit from this wave's acceptance gate. Tester removed that scenario and labels it `deferred`, `blocking:false` in browser evidence; no keyboard cross-column PASS is claimed. Space/Escape cancellation with unchanged revision, all-format arbitrary/backwards selector fallback and mandatory physical desktop mouse/four-width touch drag remain. C-QA-PREPARED-WAIT is an out-of-scope non-blocker, not a demonstrated successful keyboard movement. Application code was not changed by Tester. Actual CI remains required for the retained scope.
+
+### Latest explicit QA scope — all keyboard DnD deferred
+
+Root further excluded ALL physical keyboard DnD assertions, including Arrow/Escape cancellation. Tester removed the remaining drag-cancel scenario and its PASS flag; browser JSON now explicitly labels the complete keyboard drag path deferred/non-blocking. Modal closes through its visible close button. Mandatory physical mouse/touch dragging, all-format backwards selector fallback, Plan/Fact, full modal content, shared reload/CAS and legacy route guards remain. This supersedes the earlier retained-cancel scope; no keyboard DnD acceptance is claimed, and no application code changed.

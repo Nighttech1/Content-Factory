@@ -5,7 +5,7 @@
 3. Архитектор: текущиеspec+chain; послеREADYтолькоreview/явныеamendments, неproductcode.
 4. Backend: authoritative preparedschemas/types/validator/localimportpreview/approvedcatalog/sidecarreconcile/DTO; preserveexistingstate/auth/weekly/Git; передать FE finalexports и syntheticapprovedfixture.
 5. AI Bridge: publicaggregatordocsresearch+manualresearchtoolkit/limits+preparedhandoffcontracts; no paidexecute и no appresearch; согласовать схемы сBEдоинтеграции.
-6. Frontend: убратьserviceAIcopy/updatebuttons, inlinebrief/provenance, blueheaders, dnd-kit physicalmouse/touchDnD+selectorfallback; keyboardcross-columnDEFERRED(C-QA-KB-DND),Space/Escapecancelостаётся; толькоBEtypes/readDTO.
+6. Frontend: убратьserviceAIcopy/updatebuttons, inlinebrief/provenance, blueheaders, dnd-kit physicalmouse/touchDnD+selectorfallback; всяphysicalkeyboarddrag/cancelветкаDEFERRED(C-QA-KB-DND),безSpace/Arrow/Escapecancelassertions; толькоBEtypes/readDTO.
 7. Тестировщик: независимыеcatalog/import/migration/budgetmocks/auth/regression/browserguards; C-*→владельцамfiles, безреальныхpaidcalls/VPS.
 8. Фиксер: узкиезамечания→retest; sharedpathsтолькопослепередачиlock.
 9. Деплоер: local/preview/разрешённыйQA-onlyActions новогоsource; release marker/VPS этойволнойне менять.
@@ -28,4 +28,4 @@ Handoff: BEschemas+fixture→FE/AI; AIofficialdocs/limits/contracts→BE/Trainer
 
 Owneramendment: UIнеимеетUpdateData/FactEditor/loginentry; PlanFactdisplayonly, фактычерезapprovedcatalog. Serverauthграницасохранена. AIBridgeделаеттолькопубличныйручнойresearchtoolkit/документы/fixtures,неpaidAPI/runtimeintegration. Backend/FE/AIуведомить,productionзапрещён.
 
-Явныйownerscopeamendment: обязательныphysicaldesktopmouse+touch1440/412/390/360+selectorfallback(allformats/5columns/backwards). Keyboardcross-columnчерезdnd-kit—DEFERRED/NOTACCEPTED, C-QA-KB-DNDнеблокируеттекущуюволну/production;необъявлятьPASS. TesterсохраняетSpace/Arrow/Escapecancelchecks;Clientотдельнопоказываетdeferredscope,нефиктивныйCLOSED.
+Явныйownerscopeamendment: обязательныphysicaldesktopmouse+touch1440/412/390/360+selectorfallback(allformats/5columns/backwards). Всяphysicalkeyboarddrag/cancelветкаdnd-kit—DEFERRED/NOTACCEPTED, C-QA-KB-DNDнеблокируеттекущуюволну/production;необъявлятьPASS. Testerнеутверждаетphysicalkeyboarddrag/cancelPASSиневключаетSpace/Arrow/Escapecancelassertionsвтекущуюприёмку;Clientотдельнопоказываетdeferredscope,нефиктивныйCLOSED.
