@@ -36,3 +36,8 @@ UI active selection опирается на approved sidecar; immutable approval
 ### Уточнение protocol fix
 
 После дополнительного review Root геометрическое ожидание также снято как gate: DragOverlay и исходная sortable-card могут иметь разные rect/attributes. Геометрия только diagnosticTarget, не условие PASS. Реальный keyboard сценарий остаётся focus→Space→ArrowRight→Space; ожидается конкретный `move_card` POST200 для shooting, commandReceipt с тем же requestId и integer appliedRevision, DOM shooting и свежий второй-context GET shooting/revision≥appliedRevision. События клавиатуры не заменены select/API backdoor. Синтаксис повторно проверен; actual CI ожидается.
+
+
+## Действующее изменение scope приёмки (Root, последнее поручение)
+
+Физический keyboard cross-column commit исключён из blocking Client QA. Это заменяет предыдущие требования/описания keyboard POST/receipt в этом pending отчёте. **Не считаем physical keyboard cross-column доказанным или принятым**; новый custom getter не получает PASS без actual evidence. Сохранены реальные Space→Arrow→Escape cancel (revision не меняется) и доступный selector fallback для всех форматов/всех колонок/назад, который не выдаётся за физический drag. Реальные mouse/touch drag остаются обязательным blocking gate отдельного Tester browser CLI на actual CI. Root уведомлена о необходимости отразить scope amendment в architect-spec/chain. Client приложение не меняла. До browser CI+личного просмотра screenshots итоговая приёмка по-прежнему PENDING.

@@ -45,3 +45,7 @@ Actual retest: all three JS syntax checks PASS; `test-growth-prepared-keyboard-s
 ### Overlay correction to C-QA-PREPARED-WAIT
 
 The previous geometry readiness wait was not valid for DragOverlay: the overlay lacks `data-card-id`, so the original article's rectangle cannot prove destination. That pre-drop wait is removed. Physical Space/ArrowRight/Space is followed by the exact intended `move_card` POST HTTP200, matching request receipt, DOM column and fresh persisted `shooting` from BOTH browser contexts. Flags/focus/rectangles remain diagnostic only. The offline diagnostics guard explicitly rejects adding a geometry readiness verdict. No app code changed; actual four-width CI acceptance remains pending.
+
+### Explicit acceptance scope adjustment
+
+Root explicitly removed blocking physical keyboard cross-column commit from this wave's acceptance gate. Tester removed that scenario and labels it `deferred`, `blocking:false` in browser evidence; no keyboard cross-column PASS is claimed. Space/Escape cancellation with unchanged revision, all-format arbitrary/backwards selector fallback and mandatory physical desktop mouse/four-width touch drag remain. C-QA-PREPARED-WAIT is an out-of-scope non-blocker, not a demonstrated successful keyboard movement. Application code was not changed by Tester. Actual CI remains required for the retained scope.
