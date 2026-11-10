@@ -1,6 +1,6 @@
 # Клиент — независимая приёмка prepared content wave
 
-Статус: **PENDING REAL BROWSER CI**. Код прочитан; ACCEPTED/согласовано не выдано. Production этой волны не проверялся и не менялся. Исходная reviewed commit `7fd9157`; окончательный QA source и evidence ещё ожидаются.
+Статус: **PENDING REAL BROWSER CI**. Код прочитан; ACCEPTED/согласовано не выдано. Production этой волны не проверялся и не менялся. Candidate source `930384d438de6f2117932276dc319f87dd2029db`; окончательный QA source и evidence ещё ожидаются.
 
 ## Подготовленные независимые сценарии
 
