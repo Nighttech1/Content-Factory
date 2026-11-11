@@ -31,6 +31,7 @@
 | `ART` | статьи | `departments/article/jobs/<ID>/` |
 | `YTB` | YouTube | `departments/youtube/jobs/<ID>/` |
 | `TGP` | Telegram-графика: цитаты участников и анонсы встреч | `departments/telegram-graphics/jobs/<ID>/` |
+| `IMG` | Отдел изображений: одиночные постеры и визуалы | `departments/image/jobs/<ID>/` |
 | `MST` | мультсторис, после создания отдела | `departments/multistory/jobs/<ID>/` |
 
 Директор создаёт папку задания в отделе и заполняет `00-brief.md` до передачи ID
