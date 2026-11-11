@@ -44,6 +44,8 @@ jobs:
           MODE: ${{ steps.mode.outputs.mode }}
         run: node scripts/growth-center-gate.mjs "$MODE"
   qa:
+    env:
+      GROWTH_EDITORIAL_SYNC: "0" # Legacy prepared scenarios are isolated; editorial has its own real bundle scenario below.
     needs: gate
     if: needs.gate.outputs.mode == 'qa'
     runs-on: ubuntu-latest
@@ -66,6 +68,7 @@ jobs:
           set -euo pipefail
           npm ci
           npx tsc --noEmit
+          node --import tsx scripts/test-growth-editorial.ts
           npx tsx scripts/test-growth-center.ts
           node --import tsx memory/waves/W-2026-11-10-situation-center/tester-contract-boundaries.mjs
           node --import tsx scripts/test-growth-workspace.ts
@@ -131,6 +134,14 @@ jobs:
           for n in $(seq 1 45); do if curl --fail --silent http://127.0.0.1:3000/growth > /dev/null; then break; fi; test "$n" -lt 45; sleep 2; done
           node scripts/growth-prepared-browser-qa.mjs
           node scripts/growth-prepared-client-qa.mjs
+          # Same immutable bundle, fresh isolated runtime for director-plan user stories.
+          kill "$SERVER_PID"; wait "$SERVER_PID" || true
+          GROWTH_WORKSPACE_DATA_DIR="$(mktemp -d "$RUNNER_TEMP/growth-editorial-$GITHUB_RUN_ID.XXXXXX")"
+          export GROWTH_WORKSPACE_DATA_DIR GROWTH_EDITORIAL_SYNC=bundled
+          (cd release-bundle/app && PORT=3000 HOSTNAME=127.0.0.1 node server.js) >> qa-server.log 2>&1 &
+          SERVER_PID=$!
+          for n in $(seq 1 45); do if curl --fail --silent http://127.0.0.1:3000/growth > /dev/null; then break; fi; test "$n" -lt 45; sleep 2; done
+          node scripts/growth-editorial-browser-qa.mjs
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: growth-center-qa-${{ github.run_id }}

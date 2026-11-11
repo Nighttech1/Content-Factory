@@ -49,3 +49,7 @@ GitHub поддерживает [branch/path filters](https://docs.github.com/en
 - Reconcile idempotent, конфликт owner edit сохраняется, факты/история/kanban/publication не теряются, rollback старого store остаётся читаемым.
 - В modal видны полный бриф, сценарий, первоисточник, evidence limitations и provenance ролей; пользователя не отправляют читать Git ради понимания задачи.
 - После отдельного разрешённого release подтверждены новая версия/health и независимая live приёмка. До этого «подготовлено», «утверждено», «QA пройден» и «выложено» — разные состояния.
+
+## Дополнение11.11: директорский план, отдельный от approved Scout catalog
+
+По новому явному запросу владельца добавлен data-only контур директорских гипотез: [EDITORIAL_PLAN_SYNC.md](EDITORIAL_PLAN_SYNC.md). Утверждение выше об отсутствии runtime polling описывает прежний Scout-поток: approved Scout contract не ослабляется и по-прежнему не принимает гипотезы без evidence/решений. Новый фиксированный JSON plan polling создаёт только task/pending/unverified и показывает полный директорский отчёт, без публикации и без фиктивного approvals. Его первая установка требует QA/release; обычный последующий push плана не пересобирает приложение.

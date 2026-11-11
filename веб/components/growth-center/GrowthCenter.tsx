@@ -7,6 +7,7 @@ import { WORKSPACE_STAGE_IDS, getStageCards, type WorkspaceStageId, type BoardCo
 import { useGrowthWorkspace } from "./useGrowthWorkspace";
 import { WorkspaceBoard } from "./WorkspaceBoard";
 import { WorkspaceCardDialog } from "./WorkspaceCardDialog";
+import { EditorialPlan } from "./EditorialPlan";
 import { WeeklyChart } from "./WeeklyChart";
 import styles from "./workspace.module.css";
 
@@ -26,7 +27,8 @@ export function GrowthCenter({ dataset }: { dataset: GrowthCenterDataset }) {
   const allCards = view ? getStageCards(view, selectedStage).filter((card) => activeIds.has(card.id)) : [];
   const cards = mode === "plan" ? allCards : allCards.filter((card) => card.publication !== null);
   const selectedCard = view?.cards.find((card) => card.id === selectedCardId);
-  const planById = { ...Object.fromEntries(dataset.content.map((item) => [item.id, { product: item.product, plannedDate: item.plannedDate }])), ...Object.fromEntries(Object.entries(view?.preparedDetails || {}).map(([id, details]) => [id, { product: details.brief.product, plannedDate: details.brief.plannedDate }])) } as Record<string, Pick<ContentEntry, "product"> & { plannedDate: string | null }>;
+  const editorialById = Object.fromEntries((view?.editorial?.plan.units || []).map(u => [u.id, u]));
+  const planById = { ...Object.fromEntries(dataset.content.map((item) => [item.id, { product: item.product, plannedDate: item.plannedDate }])), ...Object.fromEntries(Object.entries(view?.preparedDetails || {}).map(([id, details]) => [id, { product: details.brief.product, plannedDate: details.brief.plannedDate }])) , ...Object.fromEntries((view?.editorial?.plan.units || []).map(u => [u.id, { product: u.product, plannedDate: u.date, shootingDate: u.shooting_date }])) } as Record<string, Pick<ContentEntry, "product"> & { plannedDate: string | null; shootingDate?: string | null }>;
 
   const move = async (cardId: string, column: BoardColumn, beforeCardId: string | null) => {
     setNotice(null);
@@ -57,6 +59,7 @@ export function GrowthCenter({ dataset }: { dataset: GrowthCenterDataset }) {
     <section className={styles.profile} data-testid="growth-stage-detail" data-stage-id={selectedStage} aria-label={stage.label}>
       <div><span>Аудитория</span><p>{stage.audience}</p></div><div><span>Потребность</span><p>{stage.job}</p></div><div><span>Барьер</span><p>{stage.barrier}</p></div>
     </section>
+    {mode === "plan" && view?.editorial && <EditorialPlan editorial={view.editorial} />}
     <section className={styles.boardSection}>
       <div className={styles.sectionHeading}><h2>Контент · {stage.label}</h2><span>{view ? `${cards.length} материалов` : ""}</span></div>
       {loading && !view ? <div className={styles.loading}>Загружаем доску…</div> : view ? <>
@@ -66,6 +69,6 @@ export function GrowthCenter({ dataset }: { dataset: GrowthCenterDataset }) {
     </section>
     <WeeklyChart view={view} stageId={selectedStage} label={stage.label} />
 
-    {selectedCard && view && <WorkspaceCardDialog key={selectedCard.id} card={selectedCard} plan={planById[selectedCard.id]} prepared={view.preparedDetails?.[selectedCard.id]} view={view} busy={busy} error={error} run={run} onClose={() => setSelectedCardId(null)} />}
+    {selectedCard && view && <WorkspaceCardDialog key={selectedCard.id} card={selectedCard} plan={planById[selectedCard.id]} editorial={editorialById[selectedCard.id]} prepared={view.preparedDetails?.[selectedCard.id]} view={view} busy={busy} error={error} run={run} onClose={() => setSelectedCardId(null)} />}
   </div>;
 }

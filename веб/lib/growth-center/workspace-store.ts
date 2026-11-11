@@ -1,10 +1,12 @@
+import { createEditorialSource, type EditorialSource } from "./editorial-source";
+import { createEditorialReconciler, editorialViewData } from "./editorial-store";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { createHash, randomUUID } from "node:crypto";
 import { z } from "zod";
 import { getGrowthCenterData } from "./server";
 import preparedCatalog from "@/data/growth/prepared-units.json";
-import { createPreparedReconciler, preparedViewData } from "./workspace-prepared-store";
+import { createPreparedReconciler, preparedViewData, preparedCardFingerprint } from "./workspace-prepared-store";
 import type { GrowthCenterDataset } from "./model";
 import { WORKSPACE_STAGE_IDS, countsSchema, emptyCounts, moscowWeekKey, nextWeekKey, weekCutoff, weekSnapshotSchema, workspaceCardSchema, workspaceCommandSchema, type WorkspaceCard, type WorkspaceCapabilities, type WorkspaceCommand, type WorkspaceView } from "./workspace-model";
 
@@ -20,7 +22,7 @@ const stateSchema = z.object({ version: z.literal(1), revision: z.number().int()
 export type WorkspaceState = z.infer<typeof stateSchema>;
 export type WorkspaceOutboxItem = z.infer<typeof outboxSchema>;
 export type WorkspaceSession = z.infer<typeof sessionSchema>;
-export type WorkspaceStoreOptions = { directory?: string; now?: () => Date; seed?: GrowthCenterDataset; catalog?: unknown };
+export type WorkspaceStoreOptions = { directory?: string; now?: () => Date; seed?: GrowthCenterDataset; catalog?: unknown; editorialSource?: EditorialSource };
 export type ScoutRequestPayload = { version: 1; id: string; cardId: string; createdAt: string; card: Pick<WorkspaceCard, "title" | "format" | "channels" | "stageIds" | "briefPath" | "origin">; question: string; expectedResearch: string; evidenceCriteria: string[]; unknowns: string[]; manualTrigger: string };
 
 function safeState(raw: unknown): WorkspaceState {
@@ -62,6 +64,7 @@ export function createWorkspaceStore(options: WorkspaceStoreOptions = {}) {
   const filename = path.join(directory, "state.json"), lockfile = path.join(directory, "state.lock");
   const clock = options.now ?? (() => new Date());
   const reconciler = createPreparedReconciler(directory, options.catalog ?? preparedCatalog, initialState(options.seed ?? getGrowthCenterData(), clock()).cards, clock);
+  const editorial = createEditorialReconciler(directory, clock);
   let mutex: Promise<unknown> = Promise.resolve();
   async function readDisk() {
     try { return safeState(JSON.parse(await fs.readFile(filename, "utf8"))); }
@@ -77,6 +80,7 @@ export function createWorkspaceStore(options: WorkspaceStoreOptions = {}) {
   }
   async function transaction<T>(change: (state: WorkspaceState) => Promise<{ value: T; changed: boolean }> | { value: T; changed: boolean }): Promise<T> {
     const run = async () => {
+      const editorialSource = await options.editorialSource?.read();
       await fs.mkdir(directory, { recursive: true, mode: 0o700 });
       let lock;
       for (let attempt = 0; attempt < 80; attempt++) {
@@ -98,7 +102,7 @@ export function createWorkspaceStore(options: WorkspaceStoreOptions = {}) {
         }
       }
       if (!lock) throw new WorkspaceError("workspace_busy", 409);
-      try { let state = await readDisk(); state = await reconciler.recover(state, safeState, persist); state = await reconciler.reconcile(state, persist); const result = await change(state); if (result.changed) await persist(state); return result.value; }
+      try { let state = await readDisk(); state = await reconciler.recover(state, safeState, persist); if (editorialSource) state = await editorial.recover(state, safeState, persist); state = await reconciler.reconcile(state, persist); if (editorialSource) { state = await editorial.reconcile(state, editorialSource, persist); await reconciler.details(state); } const result = await change(state); if (result.changed) await persist(state); return result.value; }
       catch (error) { if (error instanceof WorkspaceError) throw error; throw new WorkspaceError("workspace_save_failed", 503); }
       finally { await lock.close(); await fs.unlink(lockfile).catch(() => undefined); }
     };
@@ -179,7 +183,16 @@ export function workspaceView(state: WorkspaceState, capabilities: WorkspaceCapa
   const backups = state.outbox.filter(item => item.kind === "backup"), latest = backups.at(-1);
   const pending = state.outbox.some(item => item.state !== "synced"), failed = state.outbox.some(item => item.state === "error");
   const git = !capabilities.gitConfigured ? { state: "not_configured" as const, commitSha: null, message: "На сервере сохранено; GitHub не настроен." } : failed ? { state: "error" as const, commitSha: null, message: "Не все резервные копии или запросы Скауту отправлены в GitHub. Повтори отправку." } : latest && !pending ? { state: "synced" as const, commitSha: latest.commitSha, message: "Все отправки подтверждены; указан commit последней резервной копии." } : { state: "pending" as const, commitSha: null, message: "GitHub ожидает отправки." };
-  return { version: 1, revision: state.revision, weekKey: key, counts: fact?.counts ?? emptyCounts(), countSource: fact?.source ?? "Измерения текущей недели ещё не внесены.", cards: state.cards, snapshots: state.snapshots, scoutRequests: state.scoutRequests, git, capabilities, ...preparedViewData(state) };
+  const prepared = preparedViewData(state), editorial = editorialViewData(state);
+  const seedCards = new Map(initialState(getGrowthCenterData(), now).cards.map(c => [c.id, c]));
+  const activeCardIds = editorial ? [...new Set([...prepared.activeCardIds, ...editorial.plan.units.map(u => u.id), ...state.cards.filter(c => { const baseline = seedCards.get(c.id); return !baseline || c.publication !== null || c.column !== baseline.column || preparedCardFingerprint(c) !== preparedCardFingerprint(baseline); }).map(c => c.id)])] : prepared.activeCardIds;
+  return { version: 1, revision: state.revision, weekKey: key, counts: fact?.counts ?? emptyCounts(), countSource: fact?.source ?? "Измерения текущей недели ещё не внесены.", cards: state.cards, snapshots: state.snapshots, scoutRequests: state.scoutRequests, git, capabilities, ...prepared, activeCardIds, ...(editorial ? { editorial } : {}) };
 }
 let defaultStore: WorkspaceStore | undefined;
-export function getWorkspaceStore() { return defaultStore ??= createWorkspaceStore(); }
+export function getWorkspaceStore() {
+  if (!defaultStore) {
+    const directory = process.env.GROWTH_WORKSPACE_DATA_DIR ?? path.join(process.cwd(), "data", "local", "growth-workspace");
+    defaultStore = createWorkspaceStore({ directory, ...(process.env.GROWTH_EDITORIAL_SYNC === "0" ? {} : { editorialSource: createEditorialSource(directory, { bundledOnly: process.env.GROWTH_EDITORIAL_SYNC === "bundled" }) }) });
+  }
+  return defaultStore;
+}

@@ -12,7 +12,7 @@ import { createKanbanKeyboardCoordinates } from "./kanban-keyboard";
 import styles from "./workspace.module.css";
 
 export const COLUMN_LABELS: Record<BoardColumn, string> = { task: "Задача", shooting: "Съёмка", development: "Монтаж/Разработка", approval: "Согласование", release: "Выпуск" };
-type PlanMetadata = Pick<ContentEntry, "product"> & { plannedDate: string | null };
+type PlanMetadata = Pick<ContentEntry, "product"> & { plannedDate: string | null; shootingDate?: string | null };
 type BoardProps = {
   cards: WorkspaceCard[];
   planById: Record<string, PlanMetadata>;
@@ -42,6 +42,7 @@ function BoardCard({ card, plan, canWrite, busy, onOpen, onMove }: {
     <button type="button" className={styles.cardTitle} data-testid={`growth-open-${card.id}`} onClick={() => onOpen(card.id)}>{card.title}</button>
     <p className={styles.cardMeta}>{card.id}<br />{card.channels.join(" · ")}</p>
     <p className={styles.cardMeta} data-testid="growth-card-plan-meta">План: {plan?.plannedDate ? plan.plannedDate.split("-").reverse().join(".") : "дата не указана"}<br />{plan?.product || "Продукт не указан"}</p>
+    {plan?.shootingDate && <p className={styles.cardMeta} data-testid="growth-card-shooting">Съёмка: {plan.shootingDate.split("-").reverse().join(".")}</p>}
     <span className={card.origin.evidence === "verified" ? styles.verified : styles.needsResearch}>{card.origin.evidence === "verified" ? "Источник проверен" : "Нужна разведка"}</span>
     {card.publication && <a href={card.publication.url} className={styles.publication} target="_blank" rel="noreferrer">Опубликовано ↗</a>}
     <label className={styles.moveLabel}>Переместить в…<select data-testid={`growth-move-${card.id}`} aria-label={`Переместить ${card.id}`} value={card.column} disabled={!canWrite || busy} onChange={(event) => onMove(card.id, event.target.value as BoardColumn, null)}>{BOARD_COLUMNS.map((id) => <option value={id} key={id}>{COLUMN_LABELS[id]}</option>)}</select></label>

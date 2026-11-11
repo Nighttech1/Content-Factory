@@ -10,7 +10,7 @@
 
 | Дата | ID | Шаг/рубрика | Задание |
 |---|---|---|---|
-| 2026-11-11 | V-202611-REL-03 | 1 / Фан / отдельный скетч | [Сказал «на минутку» — начался семейный совет](https://github.com/Nighttech1/Content-Factory/blob/codex/director-chatgpt-transfer/projects/vernatun/departments/reel/jobs/V-202611-REL-03/00-brief.md) |
+| 2026-11-16 | V-202611-REL-03 | 1 / Фан / отдельный скетч | [Сказал «на минутку» — начался семейный совет](https://github.com/Nighttech1/Content-Factory/blob/codex/director-chatgpt-transfer/projects/vernatun/departments/reel/jobs/V-202611-REL-03/00-brief.md) |
 | 2026-11-15 | V-202611-REL-04 | 1 / Рилс-сериал / сезон 1 | [Семейный переводчик · 1/6 · Я уже выхожу](https://github.com/Nighttech1/Content-Factory/blob/codex/director-chatgpt-transfer/projects/vernatun/departments/reel/jobs/V-202611-REL-04/00-brief.md) |
 | 2026-11-18 | V-202611-REL-05 | 1 / Фан / отдельный скетч | [Когда родственник спрашивает: «Ты меня помнишь?»](https://github.com/Nighttech1/Content-Factory/blob/codex/director-chatgpt-transfer/projects/vernatun/departments/reel/jobs/V-202611-REL-05/00-brief.md) |
 | 2026-11-22 | V-202611-REL-06 | 1 / Рилс-сериал / сезон 1 | [Семейный переводчик · 2/6 · Я сыт](https://github.com/Nighttech1/Content-Factory/blob/codex/director-chatgpt-transfer/projects/vernatun/departments/reel/jobs/V-202611-REL-06/00-brief.md) |

@@ -1,5 +1,6 @@
 "use client";
 
+import type { EditorialUnit } from "@/lib/growth-center/editorial-model";
 import { useState } from "react";
 import type { WorkspaceCard, WorkspaceView } from "@/lib/growth-center/workspace-model";
 import type { ContentEntry } from "@/lib/growth-center/model";
@@ -9,8 +10,9 @@ import styles from "./workspace.module.css";
 
 const departmentLabel: Record<string, string> = { "reel-lead": "Руководитель отдела рилсов", "carousel-lead": "Руководитель отдела каруселей", "telegram-graphics-lead": "Руководитель отдела Telegram-графики", "youtube-lead": "Руководитель YouTube-направления", "scriptwriter-article": "Ответственный за статьи" };
 
-export function WorkspaceCardDialog({ card, plan, prepared, view, busy, error, run, onClose }: {
+export function WorkspaceCardDialog({ card, plan, prepared, editorial, view, busy, error, run, onClose }: {
   card: WorkspaceCard;
+  editorial?: EditorialUnit;
   plan?: Pick<ContentEntry, "product"> & { plannedDate: string | null };
   prepared?: WorkspaceView["preparedDetails"][string];
   view: WorkspaceView;
@@ -27,6 +29,7 @@ export function WorkspaceCardDialog({ card, plan, prepared, view, busy, error, r
 
   return <WorkspaceDialog open onOpenChange={(open) => { if (!open && !busy) onClose(); }} title={card.title} description={`${card.id} · ${card.format} · ${card.channels.join(" / ")}`} testId="growth-card-dialog">
     <p className={styles.muted} data-testid="growth-dialog-plan-meta">План: {plan?.plannedDate ? plan.plannedDate.split("-").reverse().join(".") : "дата не указана"} · Продукт: {plan?.product || "не указан"}</p>
+    {editorial?.shooting_date && <p className={styles.muted} data-testid="growth-dialog-shooting">Съёмка: {editorial.shooting_date.split("-").reverse().join(".")} · вторник / суббота · дата выпуска указана отдельно</p>}
     {editing ? <form onSubmit={async (event) => {
       event.preventDefault();
       const publication = draft.publication;
@@ -54,7 +57,7 @@ export function WorkspaceCardDialog({ card, plan, prepared, view, busy, error, r
       {(validation || error) && <p className={styles.error} role="alert">{validation || error}</p>}
       <div className={styles.dialogActions}><button type="button" data-testid="growth-card-cancel" className={styles.button} onClick={() => { setEditing(false); setValidation(null); }} disabled={busy}>Отмена</button><button type="submit" data-testid="growth-card-save" className={styles.primaryButton} disabled={busy}>{busy ? "Сохраняем…" : "Сохранить"}</button></div>
     </form> : <>
-      <section className={styles.modalSection} data-testid="growth-card-brief"><h3>Бриф</h3>{prepared ? <><dl className={styles.briefSummary}><div><dt>Цель</dt><dd>{prepared.brief.goal}</dd></div><div><dt>Для кого</dt><dd>{prepared.brief.audience}</dd></div><div><dt>Барьер</dt><dd>{prepared.brief.barrier}</dd></div><div><dt>Основная мысль</dt><dd>{prepared.brief.keyMessage}</dd></div><div><dt>Призыв к действию</dt><dd>{prepared.brief.cta}</dd></div><div><dt>Что подготовить</dt><dd>{prepared.brief.deliverable}</dd></div></dl>{prepared.brief.requirements.length > 0 && <ul className={styles.briefRequirements}>{prepared.brief.requirements.map((requirement, index) => <li key={index}>{requirement}</li>)}</ul>}</> : <p className={styles.muted}>Подготовленный бриф пока не получен.</p>}</section>
+      <section className={styles.modalSection} data-testid="growth-card-brief"><h3>Бриф</h3>{prepared ? <><dl className={styles.briefSummary}><div><dt>Цель</dt><dd>{prepared.brief.goal}</dd></div><div><dt>Для кого</dt><dd>{prepared.brief.audience}</dd></div><div><dt>Барьер</dt><dd>{prepared.brief.barrier}</dd></div><div><dt>Основная мысль</dt><dd>{prepared.brief.keyMessage}</dd></div><div><dt>Призыв к действию</dt><dd>{prepared.brief.cta}</dd></div><div><dt>Что подготовить</dt><dd>{prepared.brief.deliverable}</dd></div></dl>{prepared.brief.requirements.length > 0 && <ul className={styles.briefRequirements}>{prepared.brief.requirements.map((requirement, index) => <li key={index}>{requirement}</li>)}</ul>}</> : editorial ? <div data-testid="growth-editorial-brief"><p><strong>Директорский план · {editorial.subtype}</strong></p><p>{editorial.hook}</p><ol>{editorial.outline.map((line, i) => <li key={i}>{line}</li>)}</ol><p><strong>Призыв:</strong> {editorial.cta}</p><p><strong>Исходники:</strong> {editorial.assets}</p><p><strong>Проверяем:</strong> {editorial.metric}</p><p className={styles.muted}>Задание для {editorial.owner}. Гипотеза, не утверждённый отделом материал.</p></div> : <p className={styles.muted}>Подготовленный бриф пока не получен.</p>}</section>
       <section className={styles.modalSection} data-testid="growth-card-script"><h3>Сценарий</h3>{card.script ? <div className={styles.script}>{card.script}</div> : <p className={styles.muted}>Сценарий пока не подготовлен.</p>}</section>
       <section className={styles.modalSection} data-testid="growth-card-shots"><h3>План съёмки / разработки</h3>{card.shots.length ? <ol className={styles.shots}>{card.shots.map((shot) => <li key={shot.order}><strong>{shot.visual}</strong>{shot.spoken && <p>{shot.spoken}</p>}{shot.onScreen && <small>В кадре: {shot.onScreen}</small>}</li>)}</ol> : <p className={styles.muted}>План кадров и шагов ещё не внесён.</p>}</section>
       <section className={styles.modalSection} data-testid="growth-card-origin"><h3>Материал-источник</h3>{prepared ? <div className={styles.sourceList}>{prepared.provenance.sources.map((source) => <article key={source.url}><a data-testid="growth-card-source-link" href={source.url} target="_blank" rel="noreferrer">{source.url}</a><p className={styles.muted}>Проверено {source.observedAt}</p><p>{source.note}</p>{source.metrics.length > 0 && <ul>{source.metrics.map((metric, index) => <li key={index}>{metric.name}: {metric.value} {metric.unit} · {metric.observedAt}</li>)}</ul>}</article>)}</div> : card.origin.url ? <><a data-testid="growth-card-source-link" href={card.origin.url} target="_blank" rel="noreferrer">{card.origin.url}</a><p>{card.origin.note || "Данные источника ещё не подтверждены."}</p></> : <p className={styles.muted}>Конкретный материал-источник пока не подтверждён.</p>}</section>

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import type { EditorialView } from "./editorial-model";
 import type { PreparedDetails, PreparedCatalogStatus } from "./workspace-prepared";
 
 export const WORKSPACE_STAGE_IDS = ["awareness", "desire", "registration", "attendance", "return", "membership"] as const;
@@ -36,7 +37,7 @@ export type WeekSnapshot = z.infer<typeof weekSnapshotSchema>;
 export type GitBackupStatus = { state: "not_configured" | "pending" | "synced" | "error"; commitSha: string | null; message: string | null };
 export type ScoutRequest = { id: string; cardId: string; status: "queued" | "git_pending" | "git_saved"; createdAt: string; gitPath: string; commitSha: string | null };
 export type WorkspaceCapabilities = { authConfigured: boolean; authenticated: boolean; writeEnabled: boolean; gitConfigured: boolean; schedulerEnabled: boolean; csrfToken: string | null };
-export type WorkspaceView = { version: 1; revision: number; weekKey: string; counts: Counts; countSource: string; cards: WorkspaceCard[]; snapshots: WeekSnapshot[]; scoutRequests: ScoutRequest[]; git: GitBackupStatus; capabilities: WorkspaceCapabilities; preparedDetails: Record<string, PreparedDetails>; activeCardIds: string[]; archivedCardCount: number; catalogStatus: PreparedCatalogStatus; commandReceipt?: { requestId: string; appliedRevision: number; replayed: boolean; scoutRequestId?: string } };
+export type WorkspaceView = { editorial?: EditorialView; version: 1; revision: number; weekKey: string; counts: Counts; countSource: string; cards: WorkspaceCard[]; snapshots: WeekSnapshot[]; scoutRequests: ScoutRequest[]; git: GitBackupStatus; capabilities: WorkspaceCapabilities; preparedDetails: Record<string, PreparedDetails>; activeCardIds: string[]; archivedCardCount: number; catalogStatus: PreparedCatalogStatus; commandReceipt?: { requestId: string; appliedRevision: number; replayed: boolean; scoutRequestId?: string } };
 const base = z.object({ expectedRevision: z.number().int().nonnegative(), requestId: id });
 const patch = z.object({ title: text.optional(), script: z.string().max(30000).nullable().optional(), shots: shotsSchema.optional(), origin: originSchema.optional(), departmentDecision: departmentDecisionSchema.optional(), publication: z.object({ url, publishedAt: date }).strict().nullable().optional() }).strict().refine(value => Object.keys(value).length > 0, "Пустое изменение.");
 export const workspaceCommandSchema = z.discriminatedUnion("type", [
