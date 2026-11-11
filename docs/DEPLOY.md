@@ -93,3 +93,7 @@ Rollback возвращает точный прежний current и прежн�
 ## Конфигурация новой рабочей доски
 
 Для source с защищённым редактором `/growth` дополнительно прочитай [GROWTH_WORKSPACE.md](GROWTH_WORKSPACE.md). Runtime owner secret/origin, постоянный state, Git token/branches и scheduler — отдельная настройка сервера; наличие Actions SSH Secrets не включает их автоматически. Без owner config сайт остаётся read-only, без Git config серверное сохранение показывает not_configured. Не включать запись через QA OWNER selector и не переносить ephemeral CI secret на VPS. Кодовый QA не доказывает настройку runtime; активация и production только по отдельному разрешению владельца.
+
+## Обновления директорского плана после установки11.11
+
+Плановый JSON имеет отдельный разрешённый владельцем data-only sync: [EDITORIAL_PLAN_SYNC.md](EDITORIAL_PLAN_SYNC.md). Его обычный push обновляет данные ситцентра без нового deploy/restart. Код и approved Scout catalog по-прежнему проходят обычный QA/release. Не путать доставку плана с выпуском постов в соцсети.

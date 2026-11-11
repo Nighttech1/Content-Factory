@@ -61,3 +61,7 @@ Runtime state хранит агрегаты/карточки/события/сн
 Нужны тесты auth/CSRF/origin/session expiry, two-client/reload/CAS/idempotency, filesystem/Git failures, weekly cutoff/correction/null и desktop/mobile UI. Настоящие network Git writes тестируются отдельно при разрешении, unit mocks не доказывают настроенный token на VPS. QA-only Actions использует одноразовые секрет/cert/storage и HTTPS loopback fixture, не production credentials.
 
 Код → успешный QA/артефакт → независимый Клиент без открытых C-* → отдельное разрешение на production → `docs/DEPLOY.md`. Не менять release marker от одного сохранения этой документации.
+
+## Директорский план · дополнение11.11
+
+[EDITORIAL_PLAN_SYNC.md](EDITORIAL_PLAN_SYNC.md): отдельный live plan polling добавляет директорские task/pending/unverified без ложного Scout approval, показывает полный план/даты съёмки. Обновление существующего Scout approved каталога и ручная очередь сохраняют прежние требования. Плановый импорт не публикует материалы, не открывает owner auth и не меняет runtime факты/историю.
