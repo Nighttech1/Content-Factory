@@ -1,0 +1,27 @@
+{
+  "sourceSha": "fb0c678da8abed8f6826a5076be58b9bcfc2693b",
+  "releaseRun": 42998359665,
+  "dataOnlyCommit": "4c5640c7e30cdba3b8ad782b60632d56cc579e53",
+  "editorialRevision": "publication-v5-20261111-shooting-calendar",
+  "sequence": 5,
+  "sourceDigestMatchesGit": true,
+  "activeUnits": 37,
+  "shootingSlots": 14,
+  "unchangedExisting24": true,
+  "countsAndSnapshotsPreserved": true,
+  "dataOnlyWorkflowRuns": 0,
+  "statusAtVerification": "synced",
+  "checkedAt": "2026-11-11T09:56:50.112Z",
+  "conflicts": [],
+  "browserConfirmedAt": "2026-11-11T09:58:05Z",
+  "browserConfirmedStatus": "synced",
+  "transientReadFailureObserved": true,
+  "automaticallyRecovered": true,
+  "browserChecks": [
+    "inline brief REL-03",
+    "shooting14.11 vs publication16.11",
+    "full report shooting calendar",
+    "Fact has zero invented publications",
+    "returned to Plan"
+  ]
+}

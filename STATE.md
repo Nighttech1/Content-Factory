@@ -1,5 +1,17 @@
 # STATE.md — эстафета между сессиями
 
+## ВЫЛОЖЕНО И ПРОВЕРЕНО · автосинхронизация директорского плана · 11.11.2026
+
+Работающий `/growth`: https://content.vernatunspeakclub.com/growth. По явному запросу владельца установлена автоматическая доставка плана из `codex/director-chatgpt-transfer`. Tested source **fb0c678da8abed8f6826a5076be58b9bcfc2693b**, QA **42991763527 SUCCESS**, marker **92f9e8b1ecde4e2e3ef0fa2ca2419825a8deb80b**, bundle **13842416534**, evidence **13841943216**; release **42998359665 SUCCESS**, marker **6c09409259482162c0e34fe7a533b44ec28e04a2**, DEPLOY_VERIFIED 09:52:04UTC. Существующие service/3087/shared data/env сохранены.
+
+Теперь VPS по fixed public GitHub JSON проверяет план примерно раз в60сек, открытый браузер — каждые15сек. Runtime читает только данные, не удалённый код. Last-good и conflict guards сохраняют текст владельца/колонки/публикационные proof/статистику/снимки. Старые24 карточки не удалены;37 актуальных director drafts активны. Pending/unverified — не Scout approved и не публикация. Прежний строгий prepared Scout contract не ослаблен; ручные чаты/редактор/человеческий апрув сохраняются.
+
+**Реальный data-only proof:** после установки revision4 обычный commit **4c5640c7e30cdba3b8ad782b60632d56cc579e53** доставил **publication-v5-20261111-shooting-calendar / sequence5** без workflow/rebuild/restart. Live digest совпал с Git, active37, shoot slots14, conflicts[]. Counts/snapshots/исходные24cards сохранены. Browser подтвердил новую редакцию и брифы, календарь, Факт без выдуманных публикаций. Transient source failure сохранил revision5 и автоматически восстановил synced; не обещать мгновенную доставку при сбое сети. Последнее UI подтверждение12:58:05МСК.
+
+Съёмки REL — **вторник и суббота**, дата выпуска отдельно. Сценарии кВт готовить вПн, кСб — вПт. Первый доступный пакет снимается14.11: REL-04 выходит15.11, REL-03 перенесён16.11. Не объявлять съёмку/встречу фактически состоявшейся. Все37брифов готовы, отделы не запущены.
+
+**Следующей сессии:** прочитать `docs/EDITORIAL_PLAN_SYNC.md`; править активный месячный canon + jobs + delivery JSON/MD, повысить sequence/revision и выполнить `node scripts/prepare-editorial-plan.mjs --sequence N`, проверки, commit/push. Проверить live editorial revision/status; QA/release markers для обычной правки плана не менять. Канон пути JSON остаётся `projects/vernatun/content-plan/exports/publication-plan-2026-v3.json` для совместимости; актуальность определяется revision/sequence, не именемv3. HTML/MD сохранены новой версией под прежними Library IDs. Волна: `веб/memory/waves/W-2026-11-11-editorial-sync/`; внутренне принято, окончательное «согласовано» владельца отдельно. Ниже исторические статусы прежних волн; они не отменяют этот live результат.
+
 ## КОНТЕНТ-ПЛАН ГОТОВ К РУЧНОЙ ПЕРЕДАЧЕ · 11.11.2026
 
 Редакция `publication-v3-20261111`: по последнему решению владельца подготовлены 37 оригиналов до 31.12.2026: 13 REL (в том числе 6 серий), 15 CAR, 8 ART, 1 YTB. Первые шесть недель 11.11–22.12: 24 из 30 материалов на этапы 1–2 (80%); 23–31.12 — 4 верхних / 3 остальных. Первый этап — внимание, юмор, полезное; устройство встречи раскрывается со второго. Месячные canon: `projects/vernatun/content-plan/2026-11.md`, `2026-12.md`, активные блоки PUBLICATION_V3. Экспорты HTML/MD/JSON: `projects/vernatun/content-plan/exports/vernatun_publication_plan_2026.*` и `publication-plan-2026-v3.json`.
