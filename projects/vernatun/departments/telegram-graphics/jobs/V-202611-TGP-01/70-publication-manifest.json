@@ -1,0 +1,12 @@
+{
+  "contentId": "V-202611-TGP-01",
+  "kind": "meeting-schedule",
+  "assetVersion": 1,
+  "assetRef": "library:libfile_1be279b5b7a08191b2bca319b2340967",
+  "caption": "Расписание встреч Vernatun в ноябре 2026",
+  "scheduledAt": null,
+  "status": "awaiting_owner_approval",
+  "editorApproved": true,
+  "ownerApproved": false,
+  "idempotencyKey": "V-202611-TGP-01:1"
+}
