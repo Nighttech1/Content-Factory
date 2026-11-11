@@ -1,12 +1,26 @@
 {
   "contentId": "V-202611-TGP-01",
   "kind": "meeting-schedule",
-  "assetVersion": 1,
-  "assetRef": "library:libfile_1be279b5b7a08191b2bca319b2340967",
+  "assetVersion": 2,
+  "variants": [
+    {
+      "id": 1,
+      "assetRef": "library:libfile_000b9d22e9c08191bb32651d523bbc11"
+    },
+    {
+      "id": 2,
+      "assetRef": "library:libfile_22af1f209100819191273bf563e6b30e"
+    },
+    {
+      "id": 3,
+      "assetRef": "library:libfile_19f5950b10fc8191b5094db5e5e3d535"
+    }
+  ],
+  "selectedVariant": null,
   "caption": "Расписание встреч Vernatun в ноябре 2026",
   "scheduledAt": null,
-  "status": "awaiting_owner_approval",
+  "status": "awaiting_owner_selection",
   "editorApproved": true,
   "ownerApproved": false,
-  "idempotencyKey": "V-202611-TGP-01:1"
+  "idempotencyKey": "V-202611-TGP-01:2"
 }
