@@ -1,0 +1,8 @@
+# Внутренняя проверка перед release · 11.11.2026
+Source fb0c678da8abed8f6826a5076be58b9bcfc2693b, QA marker92f9e8b1ecde4e2e3ef0fa2ca2419825a8deb80b, run42991763527 SUCCESS; bundle13842416534, evidence13841943216. Все browser сценарии — actual immutable production bundle в isolated HTTPS fixture, не VPS.
+
+Пройдены TypeScript/build, новые editorial schema/source/cache/reconcile/recovery/conflict guards, существующие workspace/API/prepared boundaries и реальные legacy DnD/keyboard сценарии. Локальный Chromium оказался недоступен; browser QA реально выполнен Actions, не заменён DOM mock. Новый editorial-browser-report: 1440/390/360, passed true, errors[]; all37 через6этапов, inlinebrief, съёмка14.11 отдельно от публикации16.11, полный отчёт, noOverflow, план не попадает в Факт. Клиент лично осмотрела desktop1440 и mobile390 PNG: текст читаем, карточки доступны, таблицы ограничены локальным скроллом. Anti-slop новой поверхности PASS.
+
+Тестами проверены обновление Git-источника без rebuild, повтор/no duplicates, last-good при invalid/oversize/offline, restart, downgrade/collision rejection, journal recovery и отказ при intervening write. Сохранены owner title/column/facts. Runtime source в этом QA bundled, поэтому настоящая загрузка GitHub с VPS подтверждается только после release. Реальная очередная Git правка на VPS ещё не подтверждена.
+
+Роли исполняла последовательно одна ассистентка; независимые субагенты не участвовали. Внутренний вердикт: готово к разрешённой установке, открытых C-* нет. Пользователь текущим сообщением явно поручил подключить доставку плана на VPS и дальнейшие обновления. Его окончательное «согласовано» отдельно. Нельзя объявлять выкладку выполненной до успешного release и live source/revision/ID/UI проверки.
