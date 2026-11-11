@@ -1,19 +1,25 @@
 {
   "contentId": "V-202611-TGP-01",
   "kind": "meeting-schedule",
-  "assetVersion": 2,
+  "assetVersion": 3,
   "variants": [
     {
       "id": 1,
-      "assetRef": "library:libfile_000b9d22e9c08191bb32651d523bbc11"
+      "assetRef": "library:libfile_0281624eac3c81918d38bac56841e2e4",
+      "preBakeApproved": true,
+      "finalArtApproved": true
     },
     {
       "id": 2,
-      "assetRef": "library:libfile_22af1f209100819191273bf563e6b30e"
+      "assetRef": "library:libfile_2ce912f9db948191a9aa9861e1304a1a",
+      "preBakeApproved": true,
+      "finalArtApproved": true
     },
     {
       "id": 3,
-      "assetRef": "library:libfile_19f5950b10fc8191b5094db5e5e3d535"
+      "assetRef": "library:libfile_24d71f5f47648191ad82dc66bd2068fa",
+      "preBakeApproved": true,
+      "finalArtApproved": true
     }
   ],
   "selectedVariant": null,
@@ -22,5 +28,5 @@
   "status": "awaiting_owner_selection",
   "editorApproved": true,
   "ownerApproved": false,
-  "idempotencyKey": "V-202611-TGP-01:2"
+  "idempotencyKey": "V-202611-TGP-01:3"
 }
