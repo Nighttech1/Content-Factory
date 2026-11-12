@@ -19,7 +19,7 @@
 | 07 | Design QA | ACCEPTED | contact-sheet review; slide 5 returned once for text-position defect |
 | 08 | Fixer | ACCEPTED | slide 5 card gravity corrected; logo transparency cleaned |
 | 09 | Final QA | ACCEPTED | dimensions, slide count, 3×4 phrase count and visual montage checked |
-| 10 | Внутренний клиент-дизайнер | CLIENT_DESIGN_ACCEPTED | сама просмотрела contact sheet и все слайды; критерии ниже пройдены |
+| 10 | Внутренний клиент-дизайнер | CLIENT_DESIGN_ACCEPTED_WITH_FONT_BLOCKER | сама просмотрела contact sheet и все слайды; визуальные критерии пройдены, точный Century Gothic отсутствует в окружении |
 | 11 | Внешний клиент | CLIENT_REVIEW | ждём твоего визуального согласования |
 
 ## Стоп-правила
@@ -62,7 +62,7 @@
 - Финальный слайд возвращён: AI-типографика конфликтовала с логотипом. Текст перегенерирован в левой верхней зоне, логотип оставлен читаемым справа.
 - В окружении отсутствует Century Gothic; для текущего render-pass использован ближайший локальный геометрический fallback URW Gothic, армянский — Noto Sans Armenian. Это зафиксировано как технический блокер для подключения брендового файла Century Gothic.
 
-Итоговый V4 contact sheet просмотрен после всех возвратов. Статус внутренней дизайн-приёмки: `CLIENT_DESIGN_ACCEPTED_V4`.
+Итоговый V4 contact sheet просмотрен после всех возвратов. Статус внутренней дизайн-приёмки: `CLIENT_DESIGN_ACCEPTED_V4_WITH_FONT_BLOCKER`. Для полного брендового закрытия нужен файл Century Gothic в окружении; текущий fallback — URW Gothic.
 
 ## Артефакты
 
