@@ -1,38 +1,22 @@
 # Отдел каруселей
 
-Для переноса в обычный ChatGPT: [контекст и стартовый промпт](START-CHATGPT.md). Старое окружение и вложения через Git автоматически не переносятся.
+## Гейт производства
 
-## Что читать при старте
+ID + brief + references + approved script → Art Director prompt → generation → Art Director background acceptance → bake → Art Director final bake acceptance → QA/editor → explicit client approval.
 
-1. `AGENTS.md`, `CLAUDE.md`, `ACTIVE_PROJECT`.
-2. Профиль роли и память `carousel-lead`.
-3. README отдела и `shared/pipelines/carousel/README.md`.
-4. Строку задания в месячном плане и `jobs/<ID>/`.
-5. `carousel-storycraft`, `brand-kit` и адресные intelligence-материалы.
+Любой `REGENERATE` или `RETURN` останавливает следующую стадию.
 
 ## Классы
 
-- **Привлечение:** генеративные атмосферные фоны + HTML/CSS/SVG-бейк. 5–7 слайдов, hook → атмосфера/история → приглашение.
-- **Полезная:** генеративные поддерживающие фоны + HTML/CSS/SVG-бейк. 6–9 слайдов, обещание → шаги/примеры → итог.
-- **Интерактивная:** motion HTML/CSS/SVG/JS без генерации картинок. 4–7 сцен, одна механика → reveal → CTA; live HTML и PNG-sequence/MP4 проходят QA.
+- **Привлечение:** AI-атмосфера и hook/final typography; точные блоки — HTML.
+- **Полезная:** AI-фон и HTML-бейк.
+- **Словарь:** AI-hook/final по утверждённому референсу; middle-слайды по 3 фразы и переводы в HTML-бейке.
+- **Интерактивная:** motion HTML/CSS/SVG/JS без картинок.
 
 ## Папка задания
 
-```text
-00-brief.md                    → ID, класс, цель, аудитория, CTA, права и критерии
-10-script.md                   → связная история, тексты и подпись
-20-art-direction/              → единый visual system-spec
-  background-prompts.md        → только для первых двух классов
-  bake-task.md                 → HTML-бейк первых двух классов
-  motion-manifest.md           → только для интерактивного класса
-30-design-manifest.md          → ссылки на принятые фоны/ресурсы
-40-bake-manifest.md            → PNG/MP4/HTML-экспорт и токены
-50-art-qa.md                   → QA последовательности и композита
-60-editor-verdict.md           → ✅ / ❌ и правки
-```
+`00-brief.md` → `10-script.md` → `20-art-direction/visual-system.md`, `background-prompts.md`, `bake-task.md` → `30-design-manifest.md` → `40-bake-manifest.md` → `50-art-qa.md` → `60-editor-verdict.md`.
 
-## Общие гейты
+## Обязательная проверка
 
-Кадры 1080×1350, safe-zone 7–8%, брендовые токены из `brand/design.md`, Century Gothic + Noto Sans Armenian, текст и логотип только в HTML-слое. Проверяем телефонный размер, контраст, переполнение, права, единый стиль и понятный CTA. Редакторский ✅ и явный апрув владельца обязательны до публикации.
-
-Тяжёлые изображения и видео лежат во внешнем согласованном хранилище; в Git сохраняются ссылки и манифесты.
+Арт-директор дважды принимает работу: сначала фон/AI-art, затем итоговый bake. До обеих отметок публикация и передача клиенту как готового результата запрещены.
