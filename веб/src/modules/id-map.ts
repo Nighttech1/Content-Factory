@@ -8,6 +8,7 @@ export type CanonicalModuleId =
   | "carousel-engine"
   | "aesthetic-graphics"
   | "cartoon-reels"
+  | "ai-comic-video"
   | "heygen-reels"
   | "site-articles"
   | "tg-articles";
@@ -44,26 +45,18 @@ const ALIAS_LOOKUP: Readonly<Record<string, CanonicalModuleId>> = {
   "carousel-engine": "carousel-engine",
   "aesthetic-graphics": "aesthetic-graphics",
   "cartoon-reels": "cartoon-reels",
+  "ai-comic-video": "ai-comic-video",
   "heygen-reels": "heygen-reels",
   "site-articles": "site-articles",
   "tg-articles": "tg-articles",
 };
 
-/**
- * Normalize any known Studio or SDK id to canonical SDK id.
- * Unknown ids are returned unchanged (caller may treat as custom / future).
- */
 export function toCanonicalModuleId(id: string): string {
   return ALIAS_LOOKUP[id] ?? id;
 }
 
-/**
- * Map canonical SDK id to legacy Studio id when a reverse mapping exists.
- * Unknown / custom ids returned unchanged.
- */
 export function toStudioModuleId(canonicalId: string): string {
-  const mapped =
-    CANONICAL_TO_STUDIO_ID[canonicalId as CanonicalModuleId];
+  const mapped = CANONICAL_TO_STUDIO_ID[canonicalId as CanonicalModuleId];
   return mapped ?? canonicalId;
 }
 
@@ -72,6 +65,7 @@ export function isCanonicalModuleId(id: string): id is CanonicalModuleId {
     id === "carousel-engine" ||
     id === "aesthetic-graphics" ||
     id === "cartoon-reels" ||
+    id === "ai-comic-video" ||
     id === "heygen-reels" ||
     id === "site-articles" ||
     id === "tg-articles"
