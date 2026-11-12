@@ -19,7 +19,8 @@
 | 07 | Design QA | ACCEPTED | contact-sheet review; slide 5 returned once for text-position defect |
 | 08 | Fixer | ACCEPTED | slide 5 card gravity corrected; logo transparency cleaned |
 | 09 | Final QA | ACCEPTED | dimensions, slide count, 3×4 phrase count and visual montage checked |
-| 10 | Клиентская приёмка | CLIENT_REVIEW | ждём твоего визуального согласования |
+| 10 | Внутренний клиент-дизайнер | CLIENT_DESIGN_ACCEPTED | сама просмотрела contact sheet и все слайды; композиция принята |
+| 11 | Внешний клиент | CLIENT_REVIEW | ждём твоего визуального согласования |
 
 ## Стоп-правила
 
@@ -29,6 +30,7 @@
 - AI-фон не содержит логотипа, псевдотекста и встроенных карточек.
 - Bake получает только принятые фоны.
 - Ни один этап не объявляется принятым без визуального доказательства.
+- Архив нельзя отдавать внешнему клиенту до `CLIENT_DESIGN_ACCEPTED`.
 
 ## QA-заметка
 
