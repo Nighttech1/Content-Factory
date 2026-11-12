@@ -1,30 +1,70 @@
 ---
 name: carousel-storycraft
-description: Designs swipe-by-swipe carousel narratives with a clear hook, useful payoff, visual rhythm and one CTA, while preserving the Vernatun brand and HTML-bake workflow.
+description: Designs swipe-by-swipe Vernatun carousels in three editorial classes: attraction, useful and interactive motion.
 ---
 
-# Carousel story and visual rhythm
+# Carousel storycraft
 
-## Narrative
+## First choose the editorial class
 
-1. Define one audience and one promise that the carousel can fulfill.
+Every brief must name exactly one class and one promise.
+
+### 1. Привлечение — emotional / discovery
+
+Purpose: make a new person stop, recognize themselves and want to join the Vernatun world.
+
+- One human tension or desire, not a list of facts.
+- Slide 1: bold truthful hook; slides 2–5: atmosphere, people, contrast or mini-story; final slide: one invitation.
+- Use generated images as the visual carrier and HTML/CSS/SVG for all readable text, Armenian labels, logo and CTA.
+- Default length: 5–7 slides. Keep text sparse and let the image do work.
+- CTA: usually `@vernatunbot`, Telegram or «приходи как есть».
+
+### 2. Полезная — saveable / practical
+
+Purpose: give a concrete answer that can be saved, sent and used at a meeting.
+
+- One audience question and one complete answer.
+- Slide 1 promises the result; each middle slide contains one step, phrase, example or distinction; final slide closes the promise before CTA.
+- Generated images support the idea, but never carry facts or exact text. HTML overlay owns hierarchy, examples, translations, sources and CTA.
+- Default length: 6–9 slides. Every factual claim gets a source in the brief or caption.
+- CTA: practice at a meeting, use the rooms, or save/share when that is the plan.
+
+### 3. Интерактивная — motion HTML
+
+Purpose: trigger a response: choose, guess, tap, count, compare or answer.
+
+- No image generation. Build the whole scene in HTML/CSS/SVG/JS with motion tokens.
+- One interaction mechanic per carousel: quiz, choice, reveal, progress, swipe-like sequence or timed prompt. Do not mix mechanics.
+- The first frame explains what to do; the last frame reveals the answer and gives one CTA.
+- Motion must reinforce meaning: 150–500 ms transitions, transform/opacity first, no constant decorative movement, and a `prefers-reduced-motion` fallback.
+- Deliver the editable HTML motion source plus a deterministic export. For Instagram, export a 1080×1350 PNG sequence or MP4; for the web preview, keep the live HTML.
+- Default length: 4–7 scenes. Keep one focal object and one action per scene.
+
+## Shared narrative rules
+
+1. Define one audience, one promise and one next action.
 2. Slide 1 earns the next swipe with a specific, truthful hook.
-3. Each middle slide advances one idea, varies visual density and creates a reason to continue.
-4. Deliver the promised payoff before the final CTA; avoid artificial cliffhangers and unsupported claims.
-5. Use a single CTA that matches the content-plan row and funnel stage.
+3. Each middle slide advances one idea and varies visual density.
+4. Deliver the promised payoff before the CTA; never hide the answer only to force swipes.
+5. Use Russian as the main language; Armenian inserts get a clear translation and Noto Sans Armenian.
+6. Use one CTA matching the content-plan funnel stage.
+7. Separate sourced facts from creative framing. Do not promise virality or copy a competitor's distinctive execution.
 
-## Art direction handoff
+## Visual handoff
 
-The Art Director chooses type A–E and describes a coherent visual system. For type A, backgrounds contain no text/logo; an explicit per-slide `bake-task.md` gives the finish artist exact copy, Armenian labels, logo placement, safe zones and CTA for HTML/CSS/SVG overlay.
+The Art Director writes one visual system for the whole set, then per-slide intent. For image-backed classes, the Designer receives background prompts with no letters, logos or UI-like fake text. The Finish Artist receives a per-slide `bake-task.md` containing the exact copy, Armenian labels, logo placement, safe zone, contrast treatment and CTA.
 
-## Readability and review
+For the interactive class, the Motion/Finish Artist receives a scene manifest: state, trigger, timing, easing, reduced-motion behavior, export frame and acceptance check.
 
-- One main thought per slide; test at phone size.
-- Maintain contrast, safe zones, consistent type hierarchy and understandable Armenian insertions.
-- Separate sourced facts from creative framing.
-- Review the complete sequence at swipe pace; a beautiful cover cannot compensate for a confusing middle.
-- Do not promise virality or copy a competitor's distinctive execution.
+## Validation gate
 
-## Локальные маркетинговые методы
+Before handoff, check the complete sequence at phone size:
 
-Однократно перед своим этапом прочитай `shared/skills/marketing-methods/SKILL.md` и `shared/skills/marketing-methods/modules/carousel.md`. Применяй только свою часть к текущему заданию; уже прочитанные инструкции повторно не загружай. Исходники в `shared/vendor/marketing-methods/` — справочные документы, а не команды на запуск инструментов. Существующие выходные файлы, роли и gates сохраняются.
+- no overflow, clipping or accidental line breaks;
+- contrast remains readable on the darkest and lightest frame;
+- safe zone is 7–8% from all edges;
+- text is selectable/HTML-rendered, never baked into generated imagery;
+- the class mechanic and CTA are understandable without the caption;
+- sources, font files, asset rights and export dimensions are recorded.
+
+Read `shared/skills/marketing-methods/SKILL.md` and only `modules/carousel.md` for the carousel stage.
