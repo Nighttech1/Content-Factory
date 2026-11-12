@@ -2,7 +2,7 @@
 
 ## Гейт производства
 
-ID + brief + references + approved script → Art Director prompt → generation → Art Director background acceptance → bake → Art Director final bake acceptance → QA/editor → explicit client approval.
+ID + brief + references + approved script → Art Director prompt → generation with heroine → Art Director background acceptance → bake with extracted logo → Art Director final bake acceptance → QA/editor → explicit client approval.
 
 Любой `REGENERATE` или `RETURN` останавливает следующую стадию.
 
@@ -10,8 +10,12 @@ ID + brief + references + approved script → Art Director prompt → generation
 
 - **Привлечение:** AI-атмосфера и hook/final typography; точные блоки — HTML.
 - **Полезная:** AI-фон и HTML-бейк.
-- **Словарь:** AI-hook/final по утверждённому референсу; middle-слайды по 3 фразы и переводы в HTML-бейке.
+- **Словарь:** AI-hook/final по утверждённому стилю; middle-слайды по 3 фразы и переводы в HTML-бейке.
 - **Интерактивная:** motion HTML/CSS/SVG/JS без картинок.
+
+## Жёсткое правило ассетов
+
+Пример-картинка используется только для вырезки официального логотипа. Героиня всегда берётся из отдельного набора референсов и обязана быть в каждом сгенерированном фоне. Логотип добавляется на bake справа сверху; AI не генерирует логотип.
 
 ## Папка задания
 
@@ -19,4 +23,4 @@ ID + brief + references + approved script → Art Director prompt → generation
 
 ## Обязательная проверка
 
-Арт-директор дважды принимает работу: сначала фон/AI-art, затем итоговый bake. До обеих отметок публикация и передача клиенту как готового результата запрещены.
+Арт-директор дважды принимает работу: сначала фон/AI-art с героиней, затем итоговый bake с вырезанным логотипом и HTML-слоем.
