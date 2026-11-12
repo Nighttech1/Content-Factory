@@ -29,7 +29,17 @@ Purpose: give a concrete answer that can be saved, sent and used at a meeting.
 - Default length: 6–9 slides. Every factual claim gets a source in the brief or caption.
 - CTA: practice at a meeting, use the rooms, or save/share when that is the plan.
 
-### 3. Интерактивная — motion HTML
+### 3. Словарь — phrase bank for live discussions
+
+Purpose: give a newcomer three immediately usable phrases per content slide for entering and sustaining a group discussion.
+
+- The hook slide contains one short viral-style phrase only, supported by an AI-generated atmosphere and a readable HTML overlay in the brand font.
+- Each middle slide contains exactly three Armenian phrases, each with transliteration and Russian translation in the HTML layer.
+- Phrases must cover discussion moves: greeting, joining a conversation, asking an opinion, expressing an opinion, agreeing, soft disagreement, asking for clarification and keeping the topic alive.
+- The final slide contains one short invitation phrase only, plus the HTML logo and one CTA. It must close the emotional promise, not introduce a fourth phrase list.
+- Default length: 5–7 slides. The background never contains readable copy, pseudo-text or a logo.
+
+### 4. Интерактивная — motion HTML
 
 Purpose: trigger a response: choose, guess, tap, count, compare or answer.
 
