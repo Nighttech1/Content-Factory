@@ -2,12 +2,12 @@
 
 - Use the current logo assets from `projects/vernatun/brand/assets/`, never an older crop.
 - Default logo placement is equal safe-zone offsets from top and right; current template is 1.5× the former logo size.
-- If neither dark nor light wordmark is readable on the local patch, add a small dark semi-transparent contrast patch only beneath the wordmark in the top-right logo zone, then use the light logo. It must not become a general background plate, cover the emblem, or sit under any content card.
+- Do not add a contrast patch, plate or background under the logo. The background prompt must provide a calm, mostly single-colour top-right safe-zone; choose the dark or light approved asset that reads there.
 - For dialogue scenes, eye-line is a hard acceptance gate: the heroine must look at the other person's face/eyes. Ceiling/empty-space gaze returns the background to generation.
 - **Scene exclusion:** this is a modern conversation club, not a classroom. Reject whiteboards, chalkboards, lecture layouts, lesson desks, school furniture, teaching props and classroom compositions.
 - **Pose registry gate:** every slide gets a pose ID, gaze direction, camera angle and main gesture. No pose ID, silhouette, camera angle or main gesture may repeat within one carousel. Three near-duplicates is an automatic return to Art Director.
 - Type 1 cards use exactly three visible lines with no blank lines: Armenian, transliteration, Russian translation.
-- Cards must be orange/terracotta with white text. No white cards, grey cards, grey shadows, nested cards, translucent panels under cards, or extra empty padding rows.
+- Card colour and opacity are selected by the Art Director for the specific brief and background. Text must remain readable. No accidental white/grey cards, grey shadows, nested cards, translucent panels under cards, or extra empty padding rows.
 - Card height is calculated from the actual three text lines plus compact padding; unused vertical space greater than one line-height is a bake failure.
 - Card positions may vary rhythmically, but cards must not form a rigid stack and may not cover the heroine's face, hands or key gesture.
 - Add a clear swipe arrow in the bake layer to every slide except the final CTA. The arrow is its own small navigation element, never a grey panel underneath a text card.
