@@ -44,7 +44,7 @@
 
 ### Bake agent
 
-«Работай только с ACCEPTED фонами. Добавь редактируемый HTML/CSS/SVG слой. Type 1 card = ровно 3 непустые строки: Armenian / transliteration / Russian. Карточка terracotta/orange с белым текстом. Запрещены белые/серые cards, nested panels, grey shadow plates, лишние пустые строки и чрезмерный padding. Карточки допускается слегка разносить. Используй только `vernatun-logo-dark.png` или `vernatun-logo-light.png`. Лого — справа сверху с равными отступами. Если wordmark теряется, добавь маленький локальный dark contrast patch только под wordmark; не закрывай эмблему. Добавь оранжевую стрелку на слайды 1–6, не на финал».
+«Работай только с ACCEPTED фонами. Добавь редактируемый HTML/CSS/SVG слой. Type 1 card = ровно 3 непустые строки: Armenian / transliteration / Russian. Цвет карточки и opacity задаются арт-директором для конкретного задания. Текст должен быть контрастным и читаемым. Запрещены случайные белые/серые cards, nested panels, grey shadow plates, лишние пустые строки и чрезмерный padding. Карточки допускается слегка разносить. Используй только `vernatun-logo-dark.png` или `vernatun-logo-light.png`. Лого — справа сверху с равными отступами. Не добавляй contrast-подложку под logo; фон заранее должен иметь спокойную однотонную logo safe-zone, затем выбирается dark/light asset. Добавь оранжевую стрелку на слайды 1–6, не на финал».
 
 Артефакт: `40-bake-manifest.md` + PNG 1080×1350.
 
@@ -66,7 +66,7 @@
 - Modern conversation club, не classroom.
 - Pose registry без повторов.
 - Eye-line обязателен при диалоге.
-- Cards: #C95B36, opacity 0.78–0.88, white text.
+- Cards: цвет, opacity и контраст задаются арт-директором по brief; случайные белые/серые карточки запрещены.
 - Card height считается от фактических строк + compact padding.
 - Hook/final — крупная editorial AI typography, не маленький top-left caption.
 - Logo assets только из `projects/vernatun/brand/assets/`.
@@ -82,9 +82,9 @@
 ## 5. Слабые места для решения клиента
 
 1. **Шрифт — РЕШЕНО владельцем 2026-11-13:** единый primary — **Noto Serif Display Black 900** из `shared/brand/fonts/NotoSerifDisplay[wdth,wght].ttf`; Helvetica/Arial/Montserrat запрещены как silent primary fallback.
-2. **Рендерер:** role prompt говорит Puppeteer/Chromium, текущий экспериментальный bake использует ImageMagick. Нужно выбрать канонический renderer.
+2. **Рендерер — РЕШЕНО:** канонический финальный renderer — Puppeteer/Chromium; ImageMagick только вспомогательный.
 3. **Bake-роли:** существуют finish-art-director и telegram-graphics-bake; для carousel нужен один канонический bake prompt.
-4. **Pose/eye QA:** заранее заготовленных pose ID быть не должно; сейчас нужен post-generation pose fingerprint и ручная проверка близких повторов.
-5. **Logo patch:** старые инструкции запрещают любую подложку, новые разрешают локальный contrast patch под wordmark. Нужно утвердить новую версию как главную.
+4. **Pose/eye QA — РЕШЕНО:** pose fingerprint создаётся после генерации; точные повторы запрещены, повтор ракурса допускается при другой позе/действии.
+5. **Logo patch — РЕШЕНО:** contrast-подложка запрещена; safe-zone обеспечивается на этапе генерации фона.
 6. **Heavy media:** Git хранит манифесты, PNG лежат во внешнем хранилище; нужно закрепить единый архив/Drive handoff.
 7. **External client:** `CLIENT_REVIEW` и `CLIENT_DESIGN_ACCEPTED` пока не разделены во всех документах одинаково.
