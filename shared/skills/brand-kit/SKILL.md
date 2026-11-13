@@ -14,10 +14,15 @@ description: Единый бренд-композитор обоих проек�
 - Работает детерминированно, без генерации текста и логотипа в AI-фоне.
 
 ## Типографика
-- Референс: Century Gothic, если владелец предоставил легальный файл.
-- Репозиторный fallback: `shared/brand/fonts/Montserrat[wght].ttf` под OFL 1.1; он покрывает кириллицу.
+- Главный шрифт Vernatun: **Noto Serif Display Black 900**.
+- Канонический asset: `shared/brand/fonts/NotoSerifDisplay[wdth,wght].ttf`.
+- Машиночитаемый контракт: `shared/brand/fonts/vernatun-fonts.json`.
+- Заголовки, hook и CTA: `font-family: "Noto Serif Display"; font-weight: 900`.
+- Даты и подзаголовки: та же семья, вес `600–700`.
+- Montserrat допустим только как служебный sans-serif; он не заменяет primary.
+- Фирменный logo wordmark не перенабирается: используется утверждённый asset.
 - Армянский: Noto Sans Armenian.
-- Использование системного шрифта как primary = FAIL.
+- Использование системного шрифта или silent fallback как primary = FAIL с кодом `FONT_PRIMARY_MISSING`.
 
 ## Логотип
 - Один канонический asset из `shared/brand/assets/vernatun-logo-reference.png`.

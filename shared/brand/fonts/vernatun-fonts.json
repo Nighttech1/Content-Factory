@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "project": "vernatun",
+  "source_of_truth": "projects/vernatun/brand/design.md",
+  "primary": {
+    "family": "Noto Serif Display",
+    "style": "normal",
+    "default_weight": 900,
+    "named_weight": "Black",
+    "asset": "shared/brand/fonts/NotoSerifDisplay[wdth,wght].ttf",
+    "license": "shared/brand/fonts/OFL-NotoSerifDisplay.txt",
+    "sha256": "4b661adcf6a5d38bf5befdc4d976e8a7238a4aeb57e62c1c1a67775380a09df9",
+    "axes": {
+      "wght": [
+        100,
+        900
+      ],
+      "wdth": [
+        62.5,
+        100
+      ]
+    }
+  },
+  "roles": {
+    "headline": {
+      "weight": 900
+    },
+    "hook": {
+      "weight": 900
+    },
+    "cta": {
+      "weight": 900
+    },
+    "schedule_title": {
+      "weight": 900
+    },
+    "date": {
+      "weight": 700
+    },
+    "subheading": {
+      "weight": 600
+    }
+  },
+  "utility_sans": {
+    "family": "Montserrat",
+    "asset": "shared/brand/fonts/Montserrat[wght].ttf",
+    "allowed_for": [
+      "small utility labels",
+      "internal UI"
+    ],
+    "forbidden_as_primary": true
+  },
+  "logo_wordmark": {
+    "source": "approved asset",
+    "retype_with_primary": false
+  },
+  "failure_code": "FONT_PRIMARY_MISSING"
+}

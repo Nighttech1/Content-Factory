@@ -81,7 +81,7 @@
 
 ## 5. Слабые места для решения клиента
 
-1. **Шрифт:** START-CHATGPT упоминает Helvetica/Arial, brand pipeline — Montserrat + Noto Sans Armenian. Нужен один primary standard.
+1. **Шрифт — РЕШЕНО владельцем 2026-11-13:** единый primary — **Noto Serif Display Black 900** из `shared/brand/fonts/NotoSerifDisplay[wdth,wght].ttf`; Helvetica/Arial/Montserrat запрещены как silent primary fallback.
 2. **Рендерер:** role prompt говорит Puppeteer/Chromium, текущий экспериментальный bake использует ImageMagick. Нужно выбрать канонический renderer.
 3. **Bake-роли:** существуют finish-art-director и telegram-graphics-bake; для carousel нужен один канонический bake prompt.
 4. **Pose/eye QA:** правило есть, но автоматического детектора пока нет; сейчас это ручной gate и manifest.

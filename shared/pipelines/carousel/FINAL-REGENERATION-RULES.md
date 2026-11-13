@@ -14,6 +14,13 @@
 - Final CTA typography must be a strong editorial composition across the upper-middle/central visual field, not a small top-left caption.
 - The Art Director must inspect each slide full-size and at mobile scale before `CLIENT_DESIGN_ACCEPTED`.
 
+## Canonical typography
+
+- Main Vernatun font: **Noto Serif Display Black 900**.
+- Load only `shared/brand/fonts/NotoSerifDisplay[wdth,wght].ttf` and set `font-weight: 900` for hook, headline and final CTA.
+- Dates/subheads use the same family at `600–700`.
+- Missing primary font or silent system fallback = `FONT_PRIMARY_MISSING` and mandatory return to Bake.
+
 ## Mandatory reject conditions
 
 Reject and return to the responsible stage if any of the following is found: classroom/whiteboard scene; repeated pose; heroine looking into empty space during dialogue; logo without approved asset; logo unreadable; grey or white dictionary cards; nested or secondary translucent panel; excessive empty card space; blank lines; stacked cards; missing swipe arrow; CTA trapped in the top-left corner.
