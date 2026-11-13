@@ -28,13 +28,13 @@
 
 ### Art Director
 
-«Сначала спроектируй финальную композицию каждого слайда: фон, герой, pose ID, камера, gaze target, главный жест, текстовая зона, logo zone, карточки, стрелка. Запрещены classroom/whiteboard/lecture сцены. При диалоге героиня смотрит на лицо собеседника. Повтор pose ID, силуэта, камеры или жеста запрещён. Напиши background prompts и bake-task; не отдавай фон без визуального QA».
+«Сначала спроектируй финальную композицию каждого слайда: фон по сценарию, фактическая сгенерированная поза, камера, gaze target, главный жест, текстовая зона, logo zone, карточки, стрелка. Локация выбирается сценарием; classroom/whiteboard/lecture сцены запрещены, если их нет в сюжете. При диалоге героиня смотрит на лицо собеседника. После генерации фиксируется pose fingerprint; близкие повторы силуэта, камеры или жеста запрещены. Напиши background prompts и bake-task; не отдавай фон без визуального QA».
 
-Артефакты: `20-art-direction/visual-system.md`, `background-prompts.md`, `bake-task.md`, pose registry.
+Артефакты: `20-art-direction/visual-system.md`, `background-prompts.md`, `bake-task.md`, generated-pose registry.
 
 ### Designer / background generator
 
-«Используй только принятый Art Director prompt и heroine reference. Сгенерируй современный social club: стекло, дерево, город, свет, растения, современные кресла. Не добавляй текст, лого, псевдотекст, cards, panels, boards, carpets или ethnic classroom decor. Сохрани safe-zone и сюжетный eye-line. Верни asset ID и manifest».
+«Используй только принятый Art Director prompt и heroine reference. Сгенерируй локацию, которую требует сценарий: магазин, улица, кафе, клуб, выставка или другое место. Не навязывай social club. В top-right оставь спокойный однотонный участок без смены цвета под логотип, но не рисуй логотип и плашку. Не добавляй текст, псевдотекст, cards, panels или boards, если их нет в сюжете. Сохрани eye-line. Верни asset ID и manifest».
 
 Артефакт: утверждённые фоны + `30-design-manifest.md`.
 
@@ -77,14 +77,14 @@
 
 `00-brief.md` → `10-script.md` → `20-art-direction/*` → `30-design-manifest.md` → `40-bake-manifest.md` → `50-art-qa.md` → `60-editor-verdict.md` → `CLIENT_REVIEW.md`.
 
-Каждый manifest содержит: ID, version, status, owner, input asset IDs, pose ID, gaze target, logo variant, font, dimensions, QA evidence, next step.
+Каждый manifest содержит: ID, version, status, owner, input asset IDs, generated-pose fingerprint, gaze target, logo variant, exact bake coordinates, font, dimensions, QA evidence, defect tickets и next step.
 
 ## 5. Слабые места для решения клиента
 
 1. **Шрифт — РЕШЕНО владельцем 2026-11-13:** единый primary — **Noto Serif Display Black 900** из `shared/brand/fonts/NotoSerifDisplay[wdth,wght].ttf`; Helvetica/Arial/Montserrat запрещены как silent primary fallback.
 2. **Рендерер:** role prompt говорит Puppeteer/Chromium, текущий экспериментальный bake использует ImageMagick. Нужно выбрать канонический renderer.
 3. **Bake-роли:** существуют finish-art-director и telegram-graphics-bake; для carousel нужен один канонический bake prompt.
-4. **Pose/eye QA:** правило есть, но автоматического детектора пока нет; сейчас это ручной gate и manifest.
+4. **Pose/eye QA:** заранее заготовленных pose ID быть не должно; сейчас нужен post-generation pose fingerprint и ручная проверка близких повторов.
 5. **Logo patch:** старые инструкции запрещают любую подложку, новые разрешают локальный contrast patch под wordmark. Нужно утвердить новую версию как главную.
 6. **Heavy media:** Git хранит манифесты, PNG лежат во внешнем хранилище; нужно закрепить единый архив/Drive handoff.
 7. **External client:** `CLIENT_REVIEW` и `CLIENT_DESIGN_ACCEPTED` пока не разделены во всех документах одинаково.
