@@ -31,6 +31,7 @@ const BADGE_BY_CANONICAL_ID: Readonly<Record<string, string>> = {
   "carousel-engine": "4:5 · PNG",
   "aesthetic-graphics": "Bilingual",
   "cartoon-reels": "9:16 · 2D",
+  "ai-comic-video": "9:16 · AI",
   "heygen-reels": "HeyGen",
   "site-articles": "Сайт",
   "tg-articles": "TG",

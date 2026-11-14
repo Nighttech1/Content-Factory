@@ -14,6 +14,7 @@ import { listManifests as listClientManifests } from "@/modules/manifests";
 import { contentModule as carouselEngine } from "@/modules/carousel-engine";
 import { contentModule as aestheticGraphics } from "@/modules/aesthetic-graphics";
 import { contentModule as cartoonReels } from "@/modules/cartoon-reels";
+import { contentModule as aiComicVideo } from "@/modules/ai-comic-video";
 import { contentModule as heygenReels } from "@/modules/heygen-reels";
 import { contentModule as siteArticles } from "@/modules/site-articles";
 import { contentModule as tgArticles } from "@/modules/tg-articles";
@@ -115,6 +116,7 @@ function registerCoreModules(): void {
   registerModule(carouselEngine);
   registerModule(aestheticGraphics);
   registerModule(cartoonReels);
+  registerModule(aiComicVideo);
   registerModule(heygenReels);
   registerModule(siteArticles);
   registerModule(tgArticles);
