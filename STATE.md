@@ -178,3 +178,12 @@
 - Технический ID диагностики присланного файла VQ-202611-01; права/согласия не подтверждены,
   обработка и внешняя передача файла не запускались. Детали: reel/quality/VQ-202611-01.md.
 
+
+## Карусели: сохраняемый бейк и QA · 2026-11-14
+
+- По прямому поручению владельца портированы рабочие исходники в `shared/pipelines/carousel/bake/`: case JSON, input/hash guards, маркированный Cairo/Pango preview и отдельный Chromium runner без автоматического fallback.
+- Актуальные правила и соответствие шагов владельца историческим Stage 0–9: `shared/pipelines/carousel/OPERATOR-RUNBOOK.md`. Шаг 5 после бейка — финальный art QA + editor + internal design review.
+- Logo margins 54/54 px; стрелки только black/white с local contrast и mobile review; case-v3 фиксирует тексты/геометрию/хеши. Реальные медиа остаются вне Git.
+- Текущая Ануш — каре до плеч; три референса загружены в существующий Drive/heros. CTA текущего demo — сохранения/подписка ради фраз; не приглашение на встречу.
+- Проверки и границы: `shared/pipelines/carousel/reviews/2026-11-14-bake-portability.md`. Canonical Chromium в текущей среде блокируется; production visual/editor/owner acceptance не объявляются. Нет запуска API/веба/публикации. Demo не получил production ID, не переименовывать его в CAR-05.
+

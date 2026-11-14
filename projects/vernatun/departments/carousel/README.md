@@ -1,5 +1,10 @@
 # Отдел каруселей
 
+> Актуальный порядок для carousel-чата: `shared/pipelines/carousel/OPERATOR-RUNBOOK.md` (решения владельца 2026-11-14). Он уточняет старые отступы, стрелки, нумерацию этапов и границы preview/production. Внутри порученного этапа исправлять и перепроверять автономно; не просить согласования каждой внутренней правки.
+
+Код и команды запуска: `shared/pipelines/carousel/bake/README.md`. Тип 1: 3×3 строки на middle, канонический логотип с отступами 54/54, стрелки B/W. Шаг 5 после бейка — финальная арт-проверка + редактор + внутренняя дизайн-приёмка, без публикации.
+
+
 ## Гейт производства
 
 ID + brief + references + approved script → Art Director prompt → generation with heroine → Art Director background acceptance → bake with extracted logo → Art Director final bake acceptance → QA/editor → explicit client approval.

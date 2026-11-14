@@ -1,0 +1,20 @@
+{
+  "tests_passed": 18,
+  "compile": "PASS",
+  "input_assets_verified": 11,
+  "replay": "8/8 identical on same environment",
+  "output_sha256": {
+    "slide-04.png": "08bed35a21fddc20c8c01d8e679dc767e270223fe0b7d57e71dc9ee8d6459808",
+    "slide-07.png": "2aec9a188a1311acba8edacbf0eb2062b0f3785673203959b20b3f42c507ed51",
+    "slide-05.png": "3cc668df40ae7a571989096549cbdc96e56235710082f56f04d646b8d5e66956",
+    "slide-06.png": "a39babd56a70b45511786dc85065b2efb8342737a2841e3b9b3e1e6d9a68527c",
+    "slide-02.png": "23a64de8d687e4988dcef8bb8ca77e1fe48f1b5f2e98b01e713f4660f2572d74",
+    "slide-01.png": "dbce1522ac3b065a1f118f83da8bc606437e71c84010171a3c34271e72af5c82",
+    "slide-03.png": "38b950c054c051095a61c40baf4e491ef4d9d87d289ee2e6989919f3eb7e0c8d",
+    "contact-sheet.png": "4f4c07584cea437fc61fd7f33e07e792c30a1bd97f433bb2eebdec2aed993398"
+  },
+  "canonical_status": "BLOCKED_OR_FAILED",
+  "browser_success_path": "UNVERIFIED",
+  "media_bytes_committed": false,
+  "publication": "NOT_PERFORMED"
+}

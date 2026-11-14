@@ -1,0 +1,289 @@
+{
+  "case_id": "owner-demo-20261114-anush-bob-v3",
+  "production_job_id": null,
+  "canvas": [
+    1080,
+    1350
+  ],
+  "backgrounds": [
+    "background-01.png",
+    "background-02.png",
+    "background-03.png",
+    "background-04.png",
+    "background-05.png",
+    "background-06.png",
+    "background-07.png"
+  ],
+  "background_statuses": [
+    "ACCEPTED",
+    "ACCEPTED",
+    "ACCEPTED",
+    "ACCEPTED",
+    "ACCEPTED",
+    "ACCEPTED",
+    "ACCEPTED"
+  ],
+  "copy": {
+    "2": [
+      [
+        "Բարև",
+        "Barev",
+        "Привет!"
+      ],
+      [
+        "Ես նոր եմ այստեղ",
+        "Yes nor em aystegh",
+        "Я здесь впервые."
+      ],
+      [
+        "Ինչպե՞ս ես",
+        "Inchpes es?",
+        "Как ты?"
+      ]
+    ],
+    "3": [
+      [
+        "Անունդ ի՞նչ է",
+        "Anund inch e?",
+        "Как тебя зовут?"
+      ],
+      [
+        "Իմ անունը … է",
+        "Im anuny … e",
+        "Меня зовут …"
+      ],
+      [
+        "Հաճելի է ծանոթանալ",
+        "Hacheli e tsanotanal",
+        "Приятно познакомиться."
+      ]
+    ],
+    "4": [
+      [
+        "Որտեղի՞ց ես",
+        "Vorteghits es?",
+        "Откуда ты?"
+      ],
+      [
+        "Ես Մոսկվայից եմ",
+        "Yes Moskvayits em",
+        "Я из Москвы."
+      ],
+      [
+        "Իսկ դո՞ւ",
+        "Isk du?",
+        "А ты?"
+      ]
+    ],
+    "5": [
+      [
+        "Ի՞նչ ես սիրում",
+        "Inch es sirum?",
+        "Что ты любишь?"
+      ],
+      [
+        "Ես սիրում եմ պարել",
+        "Yes sirum em parel",
+        "Я люблю танцевать."
+      ],
+      [
+        "Ես էլ",
+        "Yes el",
+        "Я тоже."
+      ]
+    ],
+    "6": [
+      [
+        "Կարո՞ղ եմ միանալ",
+        "Karogh em mianal?",
+        "Можно присоединиться?"
+      ],
+      [
+        "Եկեք խոսենք",
+        "Yekek khosenk",
+        "Давайте поговорим."
+      ],
+      [
+        "Շնորհակալ եմ",
+        "Shnorhakal em",
+        "Спасибо."
+      ]
+    ]
+  },
+  "positions": {
+    "2": [
+      [
+        602,
+        340,
+        390,
+        142
+      ],
+      [
+        620,
+        500,
+        372,
+        142
+      ],
+      [
+        602,
+        660,
+        390,
+        142
+      ]
+    ],
+    "3": [
+      [
+        88,
+        365,
+        366,
+        142
+      ],
+      [
+        100,
+        525,
+        354,
+        142
+      ],
+      [
+        88,
+        685,
+        366,
+        142
+      ]
+    ],
+    "4": [
+      [
+        200,
+        200,
+        600,
+        130
+      ],
+      [
+        230,
+        345,
+        620,
+        130
+      ],
+      [
+        200,
+        490,
+        600,
+        130
+      ]
+    ],
+    "5": [
+      [
+        620,
+        350,
+        372,
+        142
+      ],
+      [
+        604,
+        510,
+        388,
+        142
+      ],
+      [
+        620,
+        670,
+        372,
+        142
+      ]
+    ],
+    "6": [
+      [
+        240,
+        140,
+        540,
+        112
+      ],
+      [
+        320,
+        270,
+        620,
+        112
+      ],
+      [
+        250,
+        400,
+        650,
+        112
+      ]
+    ]
+  },
+  "fonts": {
+    "primary": {
+      "path": "NotoSerifDisplay.ttf",
+      "family": "Noto Serif Display"
+    },
+    "armenian": {
+      "path": "NotoSansArmenian.ttf",
+      "family": "Noto Sans Armenian"
+    }
+  },
+  "typography": {
+    "large": [
+      38,
+      28,
+      29
+    ],
+    "compact": [
+      34,
+      25,
+      27
+    ]
+  },
+  "style": {
+    "card_rgba": [
+      0.54,
+      0.22,
+      0.12,
+      0.91
+    ],
+    "card_radius": 20,
+    "logo": {
+      "top": 54,
+      "right": 54,
+      "width": 160,
+      "dark_asset": "logo-dark.png",
+      "light_asset": "logo-light.png"
+    },
+    "arrow": {
+      "mode": "local-black-white",
+      "final_slide": false
+    }
+  },
+  "asset_hashes": {
+    "background-01.png": "3ad8681a08f4a562cb22b5374daa3e7a94fa232c31542e29451ee395b62ca96e",
+    "background-02.png": "46c4ee20b3e65eb635ae65f5339892568be4da1bd02a64566d4546c40de31fae",
+    "background-03.png": "ae75b07b47e0ff1781fb532fb7e5b401ed5dd958d67eefd15af942cf318b6f49",
+    "background-04.png": "804324bf9ac0ebe481acc46e6c79b6df02e5de5dfe059549c1127a1d12d5fe43",
+    "background-05.png": "dc604a45b9e117d39682d07b20ab1c625f75040af8f68c9e770761c916ff7683",
+    "background-06.png": "4a214f36b4dcbca1c1fc23c2d90945f41766e3bbf243278036bc5f5d44636aa7",
+    "background-07.png": "962e7e91b76bce4c88738e03e97c7e3592e26b714eaddc6525b96d49cef7c663",
+    "NotoSerifDisplay.ttf": "3354f394b58f57e222dcdeb22d4c41968f01d9a2773072a705de18ed714ee3f4",
+    "NotoSansArmenian.ttf": "d4bbba2df0aef4a08a819fe0bfb25b27d6c40e6c5e1a43da0ad6a3862fa78765",
+    "logo-dark.png": "00c1d546b81b5959b1a73a9e8b37bc4a077e71390393770e43012a1f8063db47",
+    "logo-light.png": "e946381bdf50e94b3b8ce8266ad13faf759abe4c169c885e18f922d26cee9a70"
+  },
+  "media_package": {
+    "library_file_id": "libfile_855312b2a64c81918c49a97be1d5c05d",
+    "name": "vernatun-type1-step4-v3.zip",
+    "asset_subdirectory": "assets"
+  },
+  "notes": [
+    "Historical demo; not a director-created production job. Do not invent a V ID or backdate approvals.",
+    "Cairo/Pango preview only; canonical Chromium was blocked.",
+    "Actual primary font bytes differ from stale vernatun-fonts.json SHA256. Resolve explicitly before production.",
+    "Character approved with shoulder-length bob; use versioned references, not old long-hair sheet."
+  ],
+  "case_kind": "replay-fixture",
+  "version": "step4-v3-logo-margin-and-monochrome-arrows",
+  "font_contract_sha_mismatch": true,
+  "cta": {
+    "headline": "Больше армянских фраз на каждый день",
+    "action": "Сохраняй и подписывайся!",
+    "telegram_url_in_art": false
+  }
+}
