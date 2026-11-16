@@ -1,3 +1,4 @@
+import { budgetedApifyDataset } from "./apify-budget";
 /**
  * C-114 / C-115 — Apify Instagram Scraper → FeedPost competitors.
  * Soft-fail: network/HTTP/empty → []. Never logs API key.
@@ -31,6 +32,8 @@ const SYNC_TIMEOUT_SEC = 300;
 /** Raw Apify dataset item (defensive — schema may drift). */
 export type ApifyIgItem = {
   id?: string | number;
+  timestamp?: string;
+  hashtags?: string[];
   shortCode?: string;
   type?: string;
   productType?: string;
@@ -170,6 +173,10 @@ export function mapApifyItemToFeedPost(item: ApifyIgItem): FeedPost | null {
     id: `ig-competitor-${externalId}`,
     source: "competitor",
     title: titleFromCaption(item.caption, externalId),
+    caption: item.caption,
+    postedAt: item.timestamp,
+    unavailableMetrics: ["shares", "saves", ...(item.videoViewCount == null && item.videoPlayCount == null ? ["views"] : []), ...(item.likesCount == null ? ["likes"] : []), ...(item.commentsCount == null ? ["comments"] : [])],
+    topicTags: Array.isArray(item.hashtags) ? item.hashtags : undefined,
     thumbUrl,
     mediaUrl: mediaType === "VIDEO" ? item.videoUrl || undefined : undefined,
     metrics: {
@@ -295,32 +302,7 @@ async function runApifyOnce(
     `[ig-apify] run-sync MISS type=${resultsType} tag=${tag} limit=${APIFY_IG_RESULTS_LIMIT}`,
   );
 
-  const res = await fetch(url, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${config.token}`,
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify(body),
-  });
-
-  if (!res.ok) {
-    // eslint-disable-next-line no-console
-    console.warn(
-      `[ig-apify] run-sync HTTP ${res.status} tag=${tag} type=${resultsType} (token not logged)`,
-    );
-    return [];
-  }
-
-  const data: unknown = await res.json();
-  if (!Array.isArray(data)) {
-    // eslint-disable-next-line no-console
-    console.warn(
-      `[ig-apify] dataset not an array type=${resultsType}; soft-fail`,
-    );
-    return [];
-  }
+  const data = await budgetedApifyDataset(config.token, body, url);
 
   return (data as ApifyIgItem[]).filter((row) => !row.error);
 }
@@ -332,10 +314,8 @@ async function fetchApifyDatasetRawUncached(
   if (!config) return [];
 
   try {
-    const [posts, reels] = await Promise.all([
-      runApifyOnce(config, tag, "posts"),
-      runApifyOnce(config, tag, "reels"),
-    ]);
+    const posts = await runApifyOnce(config, tag, "posts");
+    const reels: ApifyIgItem[] = [];
 
     const byId = new Map<string, ApifyIgItem>();
     for (const item of [...posts, ...reels]) {

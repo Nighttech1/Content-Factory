@@ -66,7 +66,7 @@ export function manifestToStudioModule(
 
 /** Core tiles for ModuleSelectorGrid — from client-safe manifests only. */
 export const STUDIO_MODULES: StudioModule[] =
-  listManifests().map(manifestToStudioModule);
+  [...listManifests().map(manifestToStudioModule), { id: "custom-reels", label: "Рилсы Вернатуна", description: "Свежие рилсы по армянской теме раз в 3 дня: оригинал, метрики и задание рилсмейкеру.", badge: "9:16", icon: "Clapperboard" }];
 
 /** Merge core + custom without duplicating ids (core wins on collision). */
 export function mergeStudioModules(

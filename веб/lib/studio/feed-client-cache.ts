@@ -6,12 +6,10 @@
 
 import {
   emptyFeed,
-  resolveFeed,
 } from "@/lib/studio/feed-fixtures";
 import type { FeedResponse, FeedSourceMode } from "@/lib/studio/feed-types";
-import { isCustomModuleId } from "@/lib/studio/feed-types";
 
-export const FEED_CACHE_STORAGE_PREFIX = "cf.studio.feed.cache.v1:";
+export const FEED_CACHE_STORAGE_PREFIX = "cf.studio.feed.cache.v2:";
 
 /**
  * Soft-fail timeout for live feed fetch.
@@ -55,21 +53,7 @@ function isFeedResponse(value: unknown): value is FeedResponse {
  * so mock picsum never sticks when live Apify is slow/aborted. Other core modules keep fixtures.
  */
 export function bootstrapFeed(moduleId: string): FeedResponse {
-  if (moduleId === "carousel-engine") {
-    const fixture = resolveFeed(moduleId);
-    if (!fixture) return emptyFeed();
-    return {
-      ours: fixture.ours,
-      competitors: [],
-      sourceMode: "mock",
-    };
-  }
-  if (moduleId === "custom-reels") {
-    return emptyFeed();
-  }
-  const fixture = resolveFeed(moduleId);
-  if (fixture) return fixture;
-  if (isCustomModuleId(moduleId)) return emptyFeed();
+  void moduleId;
   return emptyFeed();
 }
 
@@ -98,22 +82,11 @@ function normalizeCachedFeed(
   moduleId: string,
   feed: FeedResponse,
 ): FeedResponse {
-  let competitors = feed.competitors;
-  /** S50 — stale mock competitor cache must not re-paint as «live» feed. */
-  if (
-    (moduleId === "carousel-engine" || moduleId === "custom-reels") &&
-    Array.isArray(competitors) &&
-    competitors.length > 0 &&
-    competitors.every(
-      (p) =>
-        p &&
-        typeof p === "object" &&
-        (p as { sourceMode?: string }).sourceMode === "mock",
-    )
-  ) {
-    competitors = [];
-  }
-  const ours = feed.ours;
+  const reels = ["custom-reels", "cartoon-reels", "heygen-reels"].includes(moduleId);
+  const valid = (p: FeedResponse["ours"][number]) => p.sourceMode === "live" && Boolean(p.permalink)
+    && (!reels || (p.mediaType === "VIDEO" && !(p.slideUrls && p.slideUrls.length > 1)));
+  const competitors = feed.competitors.filter(valid);
+  const ours = feed.ours.filter(p => valid(p) && p.username?.toLowerCase() === "mosarmclub");
   const anyLive = [...ours, ...competitors].some(
     (p) =>
       p &&

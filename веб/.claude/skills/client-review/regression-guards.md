@@ -538,3 +538,5 @@
 
 ## W-2026-11-10-growth-content-import — prepared keyboard QA
 - C-QA-PREPARED-WAIT: all physical keyboard DnD (including Escape cancellation) is explicitly deferred/non-blocking by latest scope adjustment, not claimed PASS. Keep all-format/backwards selector fallback, Plan/Fact/modal/legacy and mandatory physical mouse/touch drag. Actual browser guard `scripts/growth-prepared-browser-qa.mjs`; historical diagnostics `scripts/test-growth-prepared-keyboard-state.mjs`; scope/evidence `memory/tickets/C-QA-PREPARED-WAIT/guards.md`.
+
+2026-11-16 · C-reels-feed-isolation / C-reels-budget-scheduler / C-reels-analysis-handoff: scripts/test-reels-discovery.ts guards feed types, account-wide budget+72h cadence and evidence-only handoff. UI and live provider activation still pending, not accepted by source tests alone.

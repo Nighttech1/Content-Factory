@@ -290,8 +290,10 @@ export function DraftsPanel({
   onSelectDraft,
   aspectRatio = "4/5",
   layout = "stack",
+  moduleId,
 }: DraftsPanelProps) {
-  const drafts = useCarouselDraftsStore((s) => s.drafts);
+  const storedDrafts = useCarouselDraftsStore((s) => s.drafts);
+  const drafts = moduleId === "carousel-engine" ? storedDrafts : [];
   const selectedDraftId = useCarouselDraftsStore((s) => s.selectedDraftId);
   const selectDraft = useCarouselDraftsStore((s) => s.selectDraft);
   const removeDraft = useCarouselDraftsStore((s) => s.removeDraft);
@@ -317,7 +319,7 @@ export function DraftsPanel({
 
       {drafts.length === 0 ? (
         <p className="px-2 py-8 text-center text-sm text-[var(--text-muted)]">
-          Пока нет черновиков — создайте карусель через «Создать»
+          {moduleId === "carousel-engine" ? "Пока нет черновиков — создайте карусель через «Создать»" : "В этом модуле пока нет готовых черновиков. Черновики каруселей хранятся отдельно."}
         </p>
       ) : (
         <ul

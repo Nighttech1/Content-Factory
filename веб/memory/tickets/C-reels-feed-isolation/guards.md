@@ -1,0 +1,2 @@
+# Guard
+node --import tsx scripts/test-reels-discovery.ts: three video modules reject carousel snapshot, own feed accepts only @mosarmclub, bootstrap empty/no paid calls. Carousel-only DraftsPanel+VerticalPostCarousel retain existing store without deletion; new cache namespace invalidates stale v1 demos. Code/typecheck pass; live fixed-UI review pending (cloud browser cannot access scratch localhost). Not closed as UI-accepted.

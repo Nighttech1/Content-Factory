@@ -1,0 +1,2 @@
+# Guard
+node --import tsx scripts/test-reels-discovery.ts: outlier median excluding candidate, sample minimum, Armenian relevance,30-day expiry, unknown publication date, dedup, original permalink in copy brief, explicit unverified-video label. UI component uses Radix modal focus/escape trap and clipboard error fallback. Live copy/preview/keyboard/mobile gate pending; no full-video analysis claimed.

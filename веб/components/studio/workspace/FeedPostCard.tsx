@@ -17,7 +17,6 @@ import { cn } from "@/lib/cn";
 import { prefetchAll } from "@/lib/image-cache";
 import {
   formatFollowersRu,
-  resolveFollowersCountOrMock,
 } from "@/lib/studio/format-followers-ru";
 import {
   isPlayableVideoUrl,
@@ -87,7 +86,7 @@ type FeedPostCardProps = {
 type EngagementItem = {
   key: string;
   label: string;
-  value: number;
+  value: number | undefined;
   Icon: typeof Eye;
 };
 
@@ -100,19 +99,19 @@ function buildEngagement(post: FeedPost): EngagementItem[] {
     {
       key: "comments",
       label: "Комментарии",
-      value: typeof m.comments === "number" ? m.comments : 0,
+      value: typeof m.comments === "number" ? m.comments : undefined,
       Icon: MessageCircle,
     },
     {
       key: "shares",
       label: "Репосты",
-      value: typeof m.shares === "number" ? m.shares : 0,
+      value: typeof m.shares === "number" ? m.shares : undefined,
       Icon: Share2,
     },
     {
       key: "saves",
       label: "Сохранения",
-      value: typeof m.saves === "number" ? m.saves : 0,
+      value: typeof m.saves === "number" ? m.saves : undefined,
       Icon: Bookmark,
     },
   ];
@@ -150,8 +149,8 @@ export function FeedPostCard({
   const usernameLabel = post.username
     ? displayUsername(post.username)
     : "";
-  const followers = resolveFollowersCountOrMock(post);
-  const engagement = buildEngagement(post);
+  const followers = post.followers ?? post.subscribers ?? null;
+  const engagement = buildEngagement(post).map(item => post.unavailableMetrics?.includes(item.key) ? { ...item, value: undefined } : item);
   /** S49: Ours never show plaque; Boards can force off via prop. */
   const plaqueEnabled =
     showUsernamePlaque !== undefined ? showUsernamePlaque : !isOurs;
@@ -358,7 +357,7 @@ export function FeedPostCard({
                 data-testid="feed-followers-count"
                 className="shrink-0 tabular-nums"
               >
-                {formatFollowersRu(followers)}
+                {(followers == null ? "подписчики: нет данных" : formatFollowersRu(followers))}
               </span>
             </span>
           </div>
@@ -495,7 +494,7 @@ export function FeedPostCard({
                     strokeWidth={2}
                     aria-hidden
                   />
-                  <span>{formatMetric(value)}</span>
+                  <span>{(value == null ? "—" : formatMetric(value))}</span>
                 </li>
               ))}
             </ul>
