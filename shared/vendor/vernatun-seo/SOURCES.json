@@ -1,0 +1,22 @@
+{
+  "retrieved_at": "2026-11-16",
+  "commit": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "shared/vendor/vernatun-seo/corey/LICENSE",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/1f837447b20bb6f0e72d87b80ece1c221c362c7d/LICENSE",
+      "sha256": "b70d71e24e40fce5da8f4b6f9cd862096a048e433db7f3c8cac5e348e6d34591"
+    },
+    {
+      "path": "shared/vendor/vernatun-seo/corey/skills/copywriting/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/1f837447b20bb6f0e72d87b80ece1c221c362c7d/skills/copywriting/SKILL.md",
+      "sha256": "1db2f6e51f0492f5efc646b74576721852720dec388e58d0facd2b790c01bb4e"
+    },
+    {
+      "path": "shared/vendor/vernatun-seo/corey/skills/seo-audit/SKILL.md",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/1f837447b20bb6f0e72d87b80ece1c221c362c7d/skills/seo-audit/SKILL.md",
+      "sha256": "fb345045339bb0645029c1c0d682703d262f045a7184fe96cb0e13f509468e2a"
+    }
+  ]
+}

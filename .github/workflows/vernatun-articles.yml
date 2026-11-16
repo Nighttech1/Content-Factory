@@ -1,0 +1,40 @@
+name: Vernatun articles
+on:
+  pull_request:
+    paths:
+      - 'projects/vernatun/articles/**'
+      - 'scripts/articles/**'
+      - '.github/workflows/vernatun-articles.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'projects/vernatun/articles/**'
+      - 'scripts/articles/**'
+      - '.github/workflows/vernatun-articles.yml'
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: vernatun-articles-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  articles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test contract
+        run: python3 -m unittest discover -s scripts/articles -p 'test_*.py'
+      - name: Validate and export
+        run: python3 scripts/articles/publish.py
+      - name: Deliver approved due articles
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          VERNATUN_ARTICLE_INGEST_URL: ${{ vars.VERNATUN_ARTICLE_INGEST_URL }}
+          VERNATUN_ARTICLE_INGEST_SECRET: ${{ secrets.VERNATUN_ARTICLE_INGEST_SECRET }}
+        run: python3 scripts/articles/publish.py --deliver

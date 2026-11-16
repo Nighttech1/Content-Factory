@@ -51,3 +51,11 @@ marketing-skill с лицензиями лежат в `shared/vendor/marketing-m
 ## Правила
 - Значения ключей — только в секреты окружения. В git — никогда.
 - Добавили ключ/коннектор → обновить этот манифест и `STATE.md`, затем `commit`+`push`.
+
+## Статьи Вернатуна, 16.11.2026
+
+Новый HTTP sender использует Repository variable VERNATUN_ARTICLE_INGEST_URL
+(HTTPS адрес получателя на VPS) и Repository secret VERNATUN_ARTICLE_INGEST_SECRET
+(HMAC общий секрет, также на VPS). Имена добавлены, наличие и валидность не проверены.
+Telegram token остаётся у действующего бота на VPS; в Git не переносить.
+Workflow: .github/workflows/vernatun-articles.yml. Серверная часть пока не подключена.

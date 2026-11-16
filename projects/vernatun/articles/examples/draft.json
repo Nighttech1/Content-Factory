@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "content": {
+    "id": "V-202611-ART-999",
+    "job_id": "V-202611-ART-999",
+    "revision": 1,
+    "slug": "example",
+    "title": "Пример формата, не статья для публикации",
+    "description": "Технический пример переносимого пакета статьи.",
+    "author": "Редакция Вернатуна",
+    "category": "community",
+    "publish_at": "2026-11-16T12:00:00+03:00",
+    "updated_at": "2026-11-16T12:00:00+03:00",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Здесь будет проверенный текст статьи."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://vernatunspeakclub.com/",
+        "title": "Сайт клуба",
+        "checked_at": "2026-11-16T12:00:00+03:00"
+      }
+    ],
+    "telegram": {
+      "enabled": false,
+      "teaser": "Пример анонса."
+    },
+    "cta": {
+      "label": "Посмотреть расписание",
+      "url": "https://vernatunspeakclub.com/schedule"
+    }
+  },
+  "release": {
+    "status": "draft"
+  }
+}
