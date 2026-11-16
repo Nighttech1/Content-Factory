@@ -91,3 +91,10 @@ CMO задаёт объём, направления, аудиторию, цел�
   до их явного изменения. При запрете публикации подготовь локальный результат
   и остановись до внешней записи; не запускай workflow и не публикуй среду.
 
+
+## Owner decision 2026-11-17: Simple viral Reels
+- Twice weekly (Monday and Thursday at 10:00 Europe/Moscow), ChatGPT Automation delivers five funny short-form references. Schedule is in ChatGPT Automations, not GitHub Actions.
+- Favor 1-5 participants, smartphone, 5-20 minutes filming, 0-2 simple cuts. Avoid complex VFX, staged falls, teleportation, elaborate montage. Universal comedy is welcome; adapt with original jokes to Vernatun.
+- Initial selection is editorial only: five references plus short pitches, no automatic dashboard, jobs, publishing or deployment.
+- Once the owner approves a specific script, immediately provide a timed shot list AND a detailed Gemini/Veo reference-video prompt (9:16, scene timings, camera, actors, continuity, sound, cuts, model duration limit, negative constraints). Respect existing editor and publication approval gates.
+- Current repository name is Nighttech1/Vernatun-Content-Factory (previously Nighttech1/Content-Factory). Verify repository identity before diagnosing permission problems.
