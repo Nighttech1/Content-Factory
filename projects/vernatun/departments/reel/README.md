@@ -69,3 +69,8 @@
 контент-плана. Связанный REL ID сохраняется отдельно. Статус локальной проверки
 и входы: `quality/`. Права, принятая проба и полный просмотр финала обязательны.
 
+
+## Owner rule 2026-11-17: approval -> Gemini visual reference prompt
+1. Start with five short, sourced, straightforward viral comedy options for selection, not heavy VFX. Prefer 1-5 actors, a smartphone, 5-20 minutes shooting, 0-2 ordinary cuts; universal comedy is fine.
+2. After explicit scenario approval, immediately provide the full shooting sheet plus a paste-ready Gemini/Veo prompt for a reference video, with 9:16, model-supported runtime, precise timed scenes, staging, fixed actors/background, camera, edits, audio, and negative instructions. This is a prompt, not an automatically generated MP4.
+3. Do not automatically send candidates to the web dashboard or publish. Git content changes go straight to main as permitted; editor review and explicit owner approval are still required before publication. Use shared/skills/reels-competitor-intelligence/SKILL.md for the research methodology.
