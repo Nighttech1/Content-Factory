@@ -8,6 +8,7 @@ export type CanonicalModuleId =
   | "carousel-engine"
   | "aesthetic-graphics"
   | "cartoon-reels"
+  | "ai-comic-video"
   | "heygen-reels"
   | "site-articles"
   | "tg-articles";
@@ -44,6 +45,7 @@ const ALIAS_LOOKUP: Readonly<Record<string, CanonicalModuleId>> = {
   "carousel-engine": "carousel-engine",
   "aesthetic-graphics": "aesthetic-graphics",
   "cartoon-reels": "cartoon-reels",
+  "ai-comic-video": "ai-comic-video",
   "heygen-reels": "heygen-reels",
   "site-articles": "site-articles",
   "tg-articles": "tg-articles",
@@ -72,6 +74,7 @@ export function isCanonicalModuleId(id: string): id is CanonicalModuleId {
     id === "carousel-engine" ||
     id === "aesthetic-graphics" ||
     id === "cartoon-reels" ||
+    id === "ai-comic-video" ||
     id === "heygen-reels" ||
     id === "site-articles" ||
     id === "tg-articles"
