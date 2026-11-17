@@ -98,3 +98,6 @@ CMO задаёт объём, направления, аудиторию, цел�
 - Initial selection is editorial only: five references plus short pitches, no automatic dashboard, jobs, publishing or deployment.
 - Once the owner approves a specific script, immediately provide a timed shot list AND a detailed Gemini/Veo reference-video prompt (9:16, scene timings, camera, actors, continuity, sound, cuts, model duration limit, negative constraints). Respect existing editor and publication approval gates.
 - Current repository name is Nighttech1/Vernatun-Content-Factory (previously Nighttech1/Content-Factory). Verify repository identity before diagnosing permission problems.
+
+## Presentation standard for approved Reels (owner decision 2026-11-17)
+Every approved Reels scenario must be delivered to the owner as ONE consolidated Markdown table (not separate shot lists, dialogue lists and camera lists). Include all steps in sequence with timecode, shot/framing, camera position, action, exact dialogue/voiceover, on-screen text, edit/sound and performer notes. If a Gemini/Veo reference prompt is requested or required, deliver it after the table as one copy-ready prompt, without a second storyboard table. Keep the table readable on mobile. Preserve all existing editor and publication gates.
