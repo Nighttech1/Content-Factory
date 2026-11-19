@@ -1,5 +1,5 @@
 ---
-name: vern atun-reel-editing-craft
+name: vernatun-reel-editing-craft
 description: Editing craft playbook for Vernatun short-form comedy; FFmpeg-first, optional Remotion kinetic typography, captions, punchline timing and phone QA. Reference review 2026-11-19.
 ---
 # Vernatun Reels — монтажный стандарт
