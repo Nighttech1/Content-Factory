@@ -1,0 +1,2 @@
+# Grade B · reels audit
+Existing roles/skills and browser/terminal/GitHub are available. 21st unavailable; existing UI reused. Unknown runtime Apify binding/account usage; paid collection must fail closed and expose status. Gap: hourly memory throttle is not monthly cost enforcement; browser localStorage is not scheduling. Architecture addresses persistent account-wide budget and server cadence before code. Default three tickets encompass requested core scenario. No independent subagent or acceptance claim.

@@ -26,6 +26,10 @@ export type FeedPost = {
   id: string;
   source: FeedPostSource;
   title: string;
+  caption?: string;
+  postedAt?: string;
+  unavailableMetrics?: string[];
+  discovery?: { score: number; outlier: number | null; baselineSamples: number; viewsPerDay: number; measuredAt: string };
   thumbUrl?: string;
   metrics: FeedPostMetrics;
   topicTags?: string[];

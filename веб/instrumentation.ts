@@ -1,4 +1,8 @@
 export async function register() {
+  if (process.env.NEXT_RUNTIME === "nodejs" && process.env.NEXT_PHASE !== "phase-production-build" && process.env.NODE_ENV === "production") {
+    const { startReelsScheduler } = await import("./lib/studio/reels-scheduler");
+    startReelsScheduler();
+  }
   if (process.env.NEXT_RUNTIME === "nodejs" && process.env.NEXT_PHASE !== "phase-production-build" && process.env.GROWTH_EDITORIAL_SYNC !== "0") {
     const { startEditorialScheduler } = await import("./lib/growth-center/editorial-scheduler");
     startEditorialScheduler();

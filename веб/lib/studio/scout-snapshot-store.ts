@@ -1,9 +1,10 @@
+import { atomicJson } from "./apify-budget";
 /**
  * S52 — Scout competitor snapshot SoT.
  * Feed GET reads this only; Apify writes only via Scout run.
  */
 
-import { mkdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
+import { mkdirSync, readFileSync, existsSync } from "node:fs";
 import path from "node:path";
 
 import type { FeedPost } from "@/lib/studio/feed-types";
@@ -49,7 +50,7 @@ export function writeScoutSnapshot(
   memory.set(moduleId, snap);
   try {
     ensureDir();
-    writeFileSync(filePath(moduleId), JSON.stringify(snap, null, 2), "utf8");
+    atomicJson(filePath(moduleId), snap);
   } catch (err) {
     // eslint-disable-next-line no-console
     console.warn(
@@ -57,13 +58,12 @@ export function writeScoutSnapshot(
         err instanceof Error ? err.message : "error"
       }`,
     );
+    throw new Error("scout_snapshot_not_persisted");
   }
   return snap;
 }
 
 export function readScoutSnapshot(moduleId: string): ScoutSnapshot | null {
-  const mem = memory.get(moduleId);
-  if (mem) return mem;
 
   try {
     const fp = filePath(moduleId);

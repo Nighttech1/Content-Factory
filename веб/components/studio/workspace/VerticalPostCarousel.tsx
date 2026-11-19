@@ -158,7 +158,8 @@ export function VerticalPostCarousel({
   moduleId,
 }: VerticalPostCarouselProps) {
   const reduceMotion = useReducedMotion();
-  const drafts = useCarouselDraftsStore((s) => s.drafts);
+  const allCarouselDrafts = useCarouselDraftsStore((s) => s.drafts);
+  const drafts = useMemo(() => moduleId === "carousel-engine" ? allCarouselDrafts : [], [allCarouselDrafts, moduleId]);
   const boards = useBoardsStore((s) => s.boards);
   const boardsCount = boards.length;
   const addBoard = useBoardsStore((s) => s.addBoard);

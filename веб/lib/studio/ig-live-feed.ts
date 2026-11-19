@@ -1,3 +1,5 @@
+import { isPublishedReel, isReelsModule } from "./reels-discovery";
+import { readScoutSnapshot } from "./scout-snapshot-store";
 /**
  * C-36 / C-39 / C-114–C-116 / S52 — Studio live feed.
  * Ours: Graph GET /{IG_USER_ID}/media (carousel-engine).
@@ -107,6 +109,9 @@ function mapMediaToPost(
     id: `ig-${source}-${externalId}`,
     source,
     title: titleFromCaption(media.caption, externalId),
+    postedAt: media.timestamp,
+    caption: media.caption,
+    unavailableMetrics: ["views", "shares", "saves"],
     thumbUrl,
     metrics: {
       likes: Number(media.like_count) || 0,
@@ -451,8 +456,8 @@ function competitorFixtureFallback(
   fixturesOk: boolean,
 ): FeedPost[] {
   if (fixturesOk) return fixtureCompetitors;
-  if (scraperOn) return [];
-  return fixtureCompetitors;
+  void scraperOn;
+  return [];
 }
 
 /**
@@ -495,7 +500,7 @@ export async function fetchCarouselLiveFeed(
   const fixturesOk = allowFeedFixtures();
   const scraperOn = isIgScraperConfigured();
 
-  let ours: FeedPost[] = fixture.ours;
+  let ours: FeedPost[] = fixturesOk ? fixture.ours : [];
   let competitors: FeedPost[] = competitorsFromScoutSnapshot(
     "carousel-engine",
     topic,
@@ -557,21 +562,9 @@ export async function fetchCarouselLiveFeed(
 export async function fetchCustomReelsLiveFeed(
   topic?: string,
 ): Promise<FeedResponse> {
-  const competitors = competitorsFromScoutSnapshot(
-    "custom-reels",
-    topic,
-    [],
-    isIgScraperConfigured(),
-    allowFeedFixtures(),
-  );
-  if (competitors.length > 0) {
-    return {
-      ours: [],
-      competitors,
-      sourceMode: aggregateFeedSourceMode([], competitors),
-    };
-  }
-  return emptyFeed();
+  const competitors = competitorsFromScoutSnapshot("custom-reels", topic, [], isIgScraperConfigured(), false).filter(p => isPublishedReel(p) && Number.isFinite(Date.parse(p.postedAt ?? "")) && Date.now()-Date.parse(p.postedAt!) <= 30*86400000);
+  const ours = (readScoutSnapshot("custom-reels-ours")?.competitors ?? []).filter(p => isPublishedReel(p) && p.username?.toLowerCase() === "mosarmclub");
+  return { ours, competitors, sourceMode: aggregateFeedSourceMode(ours, competitors) };
 }
 
 /**
@@ -589,12 +582,12 @@ export async function resolveStudioFeed(
     return fetchCarouselLiveFeed(topic);
   }
 
-  if (moduleId === "custom-reels") {
+  if (isReelsModule(moduleId)) {
     return fetchCustomReelsLiveFeed(topic);
   }
 
   if (isFeedCoreModuleId(moduleId)) {
-    return withMockSourceMode(resolveFeed(moduleId, topic)!);
+    return allowFeedFixtures() ? withMockSourceMode(resolveFeed(moduleId, topic)!) : emptyFeed();
   }
 
   if (isCustomModuleId(moduleId)) {

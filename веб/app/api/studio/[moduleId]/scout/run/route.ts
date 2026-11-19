@@ -1,3 +1,5 @@
+import { timingSafeEqual } from "node:crypto";
+import { runReelsDiscovery } from "@/lib/studio/reels-scheduler";
 import { NextResponse } from "next/server";
 
 import { runScoutApify, type ScoutRunFilters } from "@/lib/studio/scout-run";
@@ -16,6 +18,14 @@ type RouteCtx = { params: Promise<{ moduleId: string }> };
  */
 export async function POST(req: Request, ctx: RouteCtx): Promise<Response> {
   const { moduleId } = await ctx.params;
+  // QA role/localStorage/header user IDs are not authentication. Never expose a paid trigger publicly.
+  const configured = process.env.GROWTH_ADMIN_SECRET?.trim();
+  const bearer = req.headers.get("authorization")?.replace(/^Bearer /, "");
+  if (!configured || !bearer || Buffer.byteLength(configured) !== Buffer.byteLength(bearer) || !timingSafeEqual(Buffer.from(configured),Buffer.from(bearer))) {
+    return NextResponse.json({ok:false,error:"owner_auth_required"},{status:401});
+  }
+  if (moduleId === "custom-reels") return NextResponse.json(await runReelsDiscovery());
+
 
   let body: ScoutRunFilters = {};
   try {

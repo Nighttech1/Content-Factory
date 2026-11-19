@@ -1,0 +1,2 @@
+# Guard
+node --import tsx scripts/test-reels-discovery.ts: allowed reservation, overflow/monthly usage/unknown cap rejection, >$5 reduction readback, active-run block, bad host no request, persisted reservation on failed call, account lock, billing-cycle reset,72h cadence, read-only feed no paid calls, unauthenticated POST401.43 assertions PASS with mocked provider; no real charges. Actual key/account cap/first collection not verified; activation pending.

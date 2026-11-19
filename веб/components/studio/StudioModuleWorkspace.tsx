@@ -1,4 +1,6 @@
 "use client";
+import { ReelsDiscoveryStatus, ReelAnalysisDialog } from "@/components/studio/reels/ReelsDiscoveryPanel";
+import { isReelsModule } from "@/lib/studio/reels-discovery";
 
 import {
   useCallback,
@@ -444,9 +446,9 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
                 ) : (
                   <GlowButton
                     data-testid="workspace-create-btn"
-                    onClick={openDraftEditor}
+                    onClick={isCustomReels ? () => { const el=document.getElementById("reels-workspace"); if(el instanceof HTMLDetailsElement) {el.open=true;el.scrollIntoView({behavior:"smooth"});} } : openDraftEditor}
                   >
-                    Создать
+                    {isCustomReels ? "Сценарии и монтаж" : "Создать"}
                   </GlowButton>
                 )}
               </div>
@@ -468,7 +470,7 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
 
         {!unknown ? (
           <>
-            {isCustomReels ? <ReelsFrameworkPanel /> : null}
+            {isReelsModule(moduleId) ? <ReelsDiscoveryStatus /> : null}
 
             {showDraft && committedTopic ? (
               <DraftEmptyBlock
@@ -492,7 +494,7 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
               {/* S50 CRITICAL: push dual-feed near window bottom — no thick black dead band */}
               <div
                 data-testid="workspace-dual-carousels"
-                className="grid min-h-[28rem] grid-cols-1 gap-3 lg:grid-cols-2 lg:h-[calc(100dvh-11rem)] lg:min-h-0 lg:items-stretch"
+                className={cn("grid min-h-[28rem] grid-cols-1 gap-3 lg:grid-cols-2 lg:min-h-0 lg:items-stretch", isReelsModule(moduleId) ? "lg:h-[calc(100dvh-20rem)]" : "lg:h-[calc(100dvh-11rem)]")}
               >
                 <VerticalPostCarousel
                   title="Наши"
@@ -536,11 +538,12 @@ export function StudioModuleWorkspace({ moduleId }: StudioModuleWorkspaceProps) 
                 />
               </div>
             </div>
+            {isCustomReels ? <details id="reels-workspace" className="rounded-xl border border-[var(--border-glass)] p-4"><summary className="cursor-pointer font-semibold">Сценарии и монтаж</summary><ReelsFrameworkPanel /></details> : null}
           </>
         ) : null}
       </motion.div>
       <GenerationDrawer />
-      {razborPost ? (
+      {razborPost && isReelsModule(moduleId) ? <ReelAnalysisDialog post={razborPost} onClose={closeRazbor} /> : razborPost ? (
         <RazborModal
           open
           post={razborPost}

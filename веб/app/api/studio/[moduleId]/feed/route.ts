@@ -2,10 +2,6 @@ import { NextResponse } from "next/server";
 
 import { emptyFeed, resolveFeed } from "@/lib/studio/feed-fixtures";
 import { resolveStudioFeed } from "@/lib/studio/ig-live-feed";
-import {
-  allowFeedFixtures,
-  isIgScraperConfigured,
-} from "@/lib/studio/ig-scraper-config";
 import { isCustomModuleId, isFeedCoreModuleId } from "@/lib/studio/feed-types";
 import type { FeedResponse } from "@/lib/studio/feed-types";
 
@@ -19,23 +15,8 @@ function fastFeedForModule(
   moduleId: string,
   topic: string | undefined,
 ): FeedResponse | null {
-  if (moduleId === "custom-reels") {
-    return emptyFeed();
-  }
-  const base = resolveFeed(moduleId, topic);
-  if (!base) return null;
-  if (
-    moduleId === "carousel-engine" &&
-    isIgScraperConfigured() &&
-    !allowFeedFixtures()
-  ) {
-    return {
-      ours: base.ours,
-      competitors: [],
-      sourceMode: "mock",
-    };
-  }
-  return base;
+  void topic;
+  return resolveFeed(moduleId) || moduleId === "custom-reels" ? emptyFeed() : null;
 }
 
 /**

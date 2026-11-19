@@ -16,7 +16,7 @@ export type IgScraperConfig = {
 };
 
 export function isIgScraperConfigured(): boolean {
-  return Boolean(process.env.IG_SCRAPER_API_KEY?.trim());
+  return Boolean(readApifyToken());
 }
 
 /**
@@ -32,7 +32,7 @@ export function allowFeedFixtures(): boolean {
  * Full config or null when key missing (caller soft-fails).
  */
 export function readIgScraperConfig(): IgScraperConfig | null {
-  const token = process.env.IG_SCRAPER_API_KEY?.trim();
+  const token = readApifyToken();
   if (!token) return null;
 
   const baseUrl =
@@ -41,3 +41,5 @@ export function readIgScraperConfig(): IgScraperConfig | null {
 
   return { token, baseUrl };
 }
+
+export function readApifyToken(): string | undefined { return (process.env.IG_SCRAPER_API_KEY || process.env.APIFY_TOKEN || process.env.APIFY_API_KEY)?.trim() || undefined; }
