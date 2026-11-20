@@ -81,3 +81,8 @@
 
 ## Mandatory one-table delivery format (owner decision 2026-11-17)
 After the owner approves a Reels idea, ALWAYS send exactly ONE consolidated Markdown shooting/storyboard table containing: timecode; who appears and shot framing / camera placement; actions; exact spoken dialogue and inner voice; overlay texts; cut/edit/sound; acting cues. Avoid separate or duplicated tables for the same reel. This is a presentation rule, not a replacement for files in jobs/<ID>/ or editorial gates. Supply a Gemini/Veo reference-video prompt separately as a copy-ready text block when required by existing instructions. Before approval, use brief pitch format.
+
+## Required mastering / Google Drive delivery (owner decision 2026-11-20)
+- Master: **2160x3840 vertical (9:16), constant 60 fps, MP4 H.264 video + AAC audio**. Prefer native 4K/60 source in future shoots. If source is 1080p/30, use high-quality upscaling (and 60 fps conversion when feasible), but report that real detail and real motion information were not recorded natively. Do not report a rescaled file as native.
+- Deliver video into the verified Drive folder `output`: https://drive.google.com/drive/folders/1c11_x2x6OgU2x0Vjm0cMhA3MsKf9P0-9 (folder ID: `1c11_x2x6OgU2x0Vjm0cMhA3MsKf9P0-9`). Provide the confirmed Drive file link to the owner; check metadata and the exported MP4 with ffprobe. Prefer Drive link over a sandbox link for user delivery.
+- Keep source videos, preview and rendered media off Git; only safe manifests/text in repo. Editorial gate and explicit owner approval remain necessary before public posting.
