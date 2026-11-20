@@ -111,3 +111,8 @@ Sputnik-команды из общей инструкции деплоера к 
 
 ## Presentation standard for approved Reels (owner decision 2026-11-17)
 Every approved Reels scenario must be delivered to the owner as ONE consolidated Markdown table (not separate shot lists, dialogue lists and camera lists). Include all steps in sequence with timecode, shot/framing, camera position, action, exact dialogue/voiceover, on-screen text, edit/sound and performer notes. If a Gemini/Veo reference prompt is requested or required, deliver it after the table as one copy-ready prompt, without a second storyboard table. Keep the table readable on mobile. Preserve all existing editor and publication gates.
+
+## Reels export and delivery default (owner decision 2026-11-20)
+- Every finished Vernatun Reels MP4 must target **vertical 2160x3840 (9:16), 60 fps**, H.264/AAC as a broadly compatible master, unless the owner explicitly changes this. Do not claim native 4K/60 when source footage has lower resolution or frame rate: label the upscale and interpolation clearly. When source is low resolution, prefer clarity and avoid artificial detail claims; do not force unsafe or excessively slow processing.
+- Final approved/proof exports are delivered to the existing Google Drive folder **Content Factory/reels/output**: https://drive.google.com/drive/folders/1c11_x2x6OgU2x0Vjm0cMhA3MsKf9P0-9 . Verify the upload with Drive metadata and provide the actual file URL. Never assume an upload succeeded.
+- Keep media outside Git. In Git save only text, links and manifests; after export, require playback/QA and owner approval before external publication. If Drive connection/upload is unavailable, disclose blocker and deliver a locally verified file only as fallback.
