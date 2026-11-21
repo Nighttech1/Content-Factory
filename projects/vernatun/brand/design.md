@@ -66,3 +66,6 @@
 - помещать текстовые карточки поверх главной героини;
 - использовать вложенные блоки или AI-подложки под HTML-текст;
 - использовать маленькую hook/final-типографику, незаметную в ленте.
+
+## Reels-only typography exception — owner-approved 2026-11-21
+Primary **color-accent text**: Measure by Iomaio / Measure Regular. Secondary **ordinary non-accent text**: AA Logotyper Regular. This overrides older single Bebas Neue prescriptions for Reels. The main Noto Serif Display Black brand font still governs carousels and non-Reels visual modules as already specified. Do not blindly apply Reel fonts to the website, graphics or carousel layouts. Both uploaded typefaces contain Cyrillic glyphs needed by the approved dance reel; manually verify every Armenian glyph if Armenian script is introduced. Refer to `projects/vernatun/departments/reel/README.md` for actual source file and licensing boundaries.
