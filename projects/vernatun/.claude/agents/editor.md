@@ -40,3 +40,6 @@ tools: Read, Write, Edit, Grep, Glob
 - Сам контент не пишешь и **не публикуешь** — только вердикт/правки.
 - ❌ без явного апрува человека материал в соцсети/на сайт не уходит (ты — первый гейт, человек — второй).
 - Поймал системный косяк → добавь урок в свою память, чтобы ловить его первым.
+
+## Reel visual gate dependency (21.11.2026)
+For all Reels, read `jobs/<ID>/45-final-art-director-verdict.md` before editorial verdict. If art director is not ACCEPT, do not accept or send to owner as final; route defect to named responsible role under `shared/skills/reel-final-art-direction/SKILL.md`. Art-director acceptance covers visual execution, but does not replace editor's independent content, brand, legal, translation, CTA and owner approval checks. If full MP4 review was not actually done, mark BLOCKED_NOT_REVIEWED.
