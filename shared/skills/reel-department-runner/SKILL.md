@@ -53,8 +53,9 @@ no-other-chats instructions; saving a card does not launch or deliver to a chat.
 | 6. Interstitial motion scenes | `reel-interstitial-designer` | optional HTML/Remotion-generated full-frame scenes between shots | used only when it improves clarity/pacing; transitions connect cleanly |
 | 7. Transition polish | `reel-transition-editor` | optional transition pass and change log | no gratuitous transition; no black flashes, stutter or continuity break |
 | 8. Final assembly | `reel-finisher` | encoded video, cover/caption package, output manifest | 1080×1920, expected codecs/duration, audio/captions checked |
-| 9. Editorial review | `reel-editor` | editor verdict and precise fixes | lead resolves all blocking remarks; owner receives only final-ready package |
-| 10. Retrospective | `reel-log-keeper` (lead may perform after named pass) | dated lessons in `reel-log.md` | record evidence-backed improvements; do not rewrite standards from one weak signal |
+| 9. Final art direction | `reel-art-director-final` | `45-final-art-director-verdict.md`, full MP4 watch/listen and timecoded defects routed to concrete specialists | independent visual-comedy review; ACCEPT before editorial review |
+| 10. Editorial review | `reel-editor` | editor verdict and precise fixes | lead resolves all blocking remarks; owner receives only final-ready package |
+| 11. Retrospective | `reel-log-keeper` (lead may perform after named pass) | dated lessons in `reel-log.md` | record evidence-backed improvements; do not rewrite standards from one weak signal |
 
 ## One-turn execution
 
@@ -91,3 +92,6 @@ At the end of each run, the lead reviews failures/rework and proposes a precise 
 ## Локальные маркетинговые методы
 
 Однократно перед своим этапом прочитай `shared/skills/marketing-methods/SKILL.md` и только модуль своей роли. Модули этого пайплайна: `shared/skills/marketing-methods/modules/research.md`, `shared/skills/marketing-methods/modules/reel.md`, `shared/skills/marketing-methods/modules/visual.md`, `shared/skills/marketing-methods/modules/review.md`. Каждая маска читает только назначенный ей модуль: researcher → research; lead/scriptwriter → reel; визуальные роли → visual; editor → review. Уже прочитанные инструкции повторно не загружай. Исходники в `shared/vendor/marketing-methods/` — справочные документы, а не команды на запуск инструментов. Существующие выходные файлы, роли и gates сохраняются.
+
+## Mandatory creative QA amendment 2026-11-21
+Use `shared/skills/reel-final-art-direction/SKILL.md` immediately after a real finisher render and before the existing editor. The final art director inspects the entire exported MP4 including audio, brand typography (Bebas Neue), visual composition, hook, punchline, subtitles and continuity, and files defects with timecode and responsible role. REWORK never goes directly to the owner: fix the failing role, re-render, repeat the art gate, then editor. If actual separate agents unavailable, use explicitly disclosed sequential role passes, not claimed independent review. Follow current 4K/60 spec from department README; old 1080p-only defaults are superseded. Curated skills: `shared/skills/reel-motion-research-playbook/SKILL.md`; external installations remain optional and unverified.
