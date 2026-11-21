@@ -52,9 +52,9 @@ no-other-chats instructions; saving a card does not launch or deliver to a chat.
 | 5. Motion inserts | `reel-motion-designer` | motion brief execution: text/graphic animation on footage with timing and safe zones | motion supports meaning, never hides faces/captions/CTA; brand check passes |
 | 6. Interstitial motion scenes | `reel-interstitial-designer` | optional HTML/Remotion-generated full-frame scenes between shots | used only when it improves clarity/pacing; transitions connect cleanly |
 | 7. Transition polish | `reel-transition-editor` | optional transition pass and change log | no gratuitous transition; no black flashes, stutter or continuity break |
-| 8. Final assembly | `reel-finisher` | encoded video, cover/caption package, output manifest | 1080×1920, expected codecs/duration, audio/captions checked |
+| 8. Final assembly | `reel-finisher` | encoded video, cover/caption package, output manifest | 2160×3840/60fps target, audio/captions checked; source upscaling clearly identified |
 | 9. Final art direction | `reel-art-director-final` | `45-final-art-director-verdict.md`, full MP4 watch/listen and timecoded defects routed to concrete specialists | independent visual-comedy review; ACCEPT before editorial review |
-| 10. Editorial review | `reel-editor` | editor verdict and precise fixes | lead resolves all blocking remarks; owner receives only final-ready package |
+| 10. Editorial review | `editor` | editor verdict and precise fixes | lead resolves all blocking remarks; owner receives only final-ready package |
 | 11. Retrospective | `reel-log-keeper` (lead may perform after named pass) | dated lessons in `reel-log.md` | record evidence-backed improvements; do not rewrite standards from one weak signal |
 
 ## One-turn execution
